@@ -1,382 +1,46 @@
 \addtocounter{wpno}{1}
 \begin{Workpackage}{\thewpno}
-\wplabel{wp:models}
+\wplabel{wp:XX}
 \WPTitle{\wpname{\thewpno}}
 \WPStart{Month 1}
-\WPParticipant{PRL}{26}
-\WPParticipant{INRIA}{23}
-\WPParticipant{SA}{6}
-\WPParticipant{SCCH}{6}
-\WPParticipant{IBM}{4}
-\WPParticipant{GOLEM}{4}
-\WPParticipant{CODEPLAY}{3}
-%\WPParticipant{AGH}{4}
-%\WPParticipant{JMOIC}{4}
+\WPParticipant{UOD}{1}
 
 
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
 %% Why just embedded? Are these domains correct? KH
-\item Define a block-diagram formalism for modelling and designing next generation parallel applications;
-%  from the \emph{avionics} and
-%   \emph{telecommunication} domains for massively-parallel low-power
-%   computational hardware.
-\item Develop methods to %i) integrate existing computational
-%  kernels, I/O services and external components into the high-level
-  %application model and ii) 
-  establish formal consistency between the modelling/design
-  and the implementation levels;
-\item Incorporate \emph{secure} and \emph{safe} patterns of computation, communication and data into the modelling formalism;
-\item Develop an interface for exposing extra-functional parameters of the patterns to the software-defined infrastructures in WP2 and multi-objective optimisation framework from WP5;
-\item Develop diagnostics mechanisms to determine compliance of block-diagram models to relevant industry standards such as \textbf{MISRA} and \textbf{AUTOSAR};
-%\item Expose the extra-functional parameters that are captured by the
-%  patterns to the multi-objective optimisation framework from WP5;
-%\item Develop refactorings for introducing parallel patterns into the
-%  application model, as well as for altering the parallel structure of
-%  the model, while maintaining consistency with the implementation-level refactorings
-%  from WP3;
-
-% %% This is a bit detailed!! And we are short on space. KH
-% \item Enable the \emph{correct-by-construction} synthesis of parallel
-%   C/C++ code from the high-level application model, providing hints to
-%   the compilation and runtime infrastructure from WP4 concerning
-%   mapping of the application components to the target hardware;
-%  and
-%   leveraging dynamic features of new generation embedded applications,
-%   dealing with statistical guarantees, fault tolerance and isolation
-%  for timing predictability and security.
-
-\item Implement these features in industry standard block-diagram
-  modelling environments, such as Mathworks \textbf{Simulink/Stateflow} and
-  ANSYS \textbf{Scade}, and produce prototype parallel pattern, synthesis and
-  refactoring extensions in \INRIAshort{}'s \textbf{Heptagon} language and compiler.
+\item Solve the world
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} addresses the modelling and synthesis of data-intensive applications for shared-memory and distributed target platforms. We will extend existing modelling
-languages with new building blocks and constructs to abstract over data, communication and computations and support the generation of efficient code for parallel and distributed computing systems. 
-We will also allow treatment of extra-functional properties of applications as first-class citizens, making them parts of building blocks and developing mechanisms to carry them through to the intermediate and binary code that is generated from these blocks and models. 
-This will further raise the level of abstraction at
-which the programmer will need to think, allowing high-level design of applications while still respecting all the business requirements and ensuring generation of efficient
-binary code. 
-% We will also develop
-% semi-automatic \emph{refactorings} (\textbf{T2.3}) that will allow
-% the programmer-guided insertion of suitable
-% parallel patterns at appropriate places within the application model.
-% They will also allow the parallel structure of the application to be altered, in terms of,
-% for example, the composition of multiple parallel patterns.
-% We will develop a model-level code generator (\textbf{T2.4})
-% to translate high-level patterned model code into
-% efficient C/C++ code.  Parts of this may be further transformed or optimised by the
-% tools from WP3/WP4. Finally, we will develop static code analysis mechanisms
-% that will ensure that the generated code is compliant with relevant industry standards, such as
-% MISRA C/C++, and reflect any problematic features back to the model (\textbf{T2.5}).
+\theWP{} addresses the problem of solving the world.
 \end{WPDescription}
 
 \begin{Task}
 %\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Building Blocks for Data-Intensive Parallel/Distributed Applications}
-\TaskParticipant{INRIA}{4}
-\TaskParticipant{SA}{1}
-%\TaskParticipant{IBM}{4}
-%\TaskParticipant{PRL}{26}
-%\TaskParticipant{INRIA}{4}
-%\TaskParticipant{SCCH}{6}
-\TaskParticipant{GOLEM}{1}
-%\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
+\TaskTitle{Solving the World}
+\TaskParticipant{UOD}{1}
 
 \TaskStart{1}
 \TaskEnd{27}
 \TaskResults{%
-\ref{del:model1}
-\ref{del:model2}
-\ref{del:model3}
+%\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:model}
+\tasklabel{task:solve}
 
-In \theTask, we will extend existing high-level modelling languages to include \emph{basic} constructs (building blocks) for modelling data-intensive applications. This will include new blocks for encapsulating data, communication of this data and computation that needs to be carried over it.
-The constructs will also be used  to specify the activation, communication and
-synchronisation of individual model-level components, that can be linked to form a potentially concurrent/parallel execution model
-for the software as a whole. We will also develop blocks that will encapsulate existing code components from C/C++, as prepared by mechanisms from WP3.
-Finally, we will produce extra-functional annotations and primitives that will provide requirements and hints to the compilation and  runtime infrastructure of WP3--WP4 
-concerning the mapping of the model-level
-components to the underlying parallel hardware. Collectively, these extensions
-will allow the development of
-the more abstract \emph{pattern building blocks} (\ref{task:model-patterns}) that we require, natively within the
-modelling languages. This will allow programmers/systems designers to produce parallel software both
-at a high level and at a low level of abstraction, depending on their knowledge/expertise
-with parallel programming and hardware, and on their specific needs. 
-%
-We will target the Mathworks
-\textbf{Simulink/Stateflow}, \textbf{SCADE} and Inria's \textbf{Heptagon} block-diagram modelling
-environments. This will allow us to support a wide range of real-world, economically important
-applications and domains, including key software applications in the automotive, AI and internet-of-things sectors.
-%The parallelism constructs will be used to specify the activation, communication and
-%synchronisation of individual model-level components, that can be linked to form a concurrent execution model
-%for the software as a whole.
-%These components may be written directly either in the modelling languages or in C/C++, as appropriate. 
-%This will allow programmers to design
-%and specify complex parallel applications in a natively concurrent and functionally
-%deterministic fashion at the model level. 
-This task will proceed in three phases. In the first phase,
-we will develop the initial version of the building blocks for data-intensive applications, targeting single-node shared-memory target platforms. The results of this will be reported
-in Deliverable~\ref{del:model1}. In the second phase, we will
-refine these block with additional information required for small-scale distributed architectures, also developing new building blocks for these architectures, as required. This will be reported
-in Deliverable~\ref{del:model2}. Finally, in the third stage, we will
-further extend the languages with the refined versions of the
-building blocks for large-scale distributed systems. This will be reported
-in Deliverable~\ref{del:model3}.
+In \theTask, we will solve the world. 
+This task will proceed in three phases. 
 \end{Task}
 
 
-\begin{Task}
-\TaskTitle{Building Block Patterns of Computation, Communication and Data}
-\TaskParticipant{SA}{5}
-%\TaskParticipant{IBM}{4}
-%\TaskParticipant{PRL}{26}
-\TaskParticipant{INRIA}{4}
-%\TaskParticipant{SCCH}{6}
-\TaskParticipant{GOLEM}{1}
-%\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
-
-
-\TaskStart{3}
-\TaskEnd{32}
-\TaskResults{
-\ref{del:model1}
-\ref{del:model2}
-\ref{del:model3}
-}
-\TaskHeader{}
-\tasklabel{task:model-patterns}
-
-\khcomment{This is vague in terms of the modelling languages.  Clarified.}
-In \theTask, we will define the \emph{pattern} building blocks that will be used throughout the \TheProject{} project,
-and integrate these into the  \textbf{Simulink/Stateflow}, \textbf{SCADE} and \textbf{Heptagon} modelling
-languages. These patterns will be built from the basic building blocks from~\ref{task:model} and will encapsulate compositions of these blocks that can commonly be found in the applications from the automotive, AI and internet-of-things domains. There will be a two-fold relationship between patterns and the modelling language:
-\begin{inparaenum}
-\item
-the patterns will be defined in terms of building blocks from the modelling language; and
-\item
-they will also be an integral part of
-the language itself. 
-\end{inparaenum}
-The patterns will expose the required extra-functional
-parameters, such as granularity of computations, data distribution and type of communication, to the multi-objective
-optimisation framework from WP3, and they will provide hints to the
-runtime infrastructure from WP4. This task will proceed
-in three phases. In the \emph{first} phase, we will develop instances of well-known generic
-patterns of computation and associated data distribution and communication, such as \emph{pipeline} and \emph{workflow}
-patterns. This will be reported in Deliverable~\ref{del:model1}. In the
-second phase, we will extend these patterns with relevant domain-specific patterns for the domains that we will consider in \TheProject,
-(automotive, AI and internet-of-things) and, furthermore, tailor these patterns to the small scale-distributed architectures.  This will be reported in Deliverable~\ref{del:model2}. Finally,
-in the third phase, we will refine these patterns, based on feedback from the evaluation in~\ref{task:evaluation}, and make necessary extensions to them for large-scale distributed systems. This will be reported in Deliverable~\ref{del:model3}.
-\end{Task}
-
-%%\begin{Task}
-%%\TaskTitle{Parallelism Integration at the Model and Implementation Levels}
-%%\TaskParticipant{INRIA}{3}
-%%\TaskStart{4}
-%%\TaskEnd{32}
-%%\TaskResults{\ref{del:modelGenericPatterns}, \ref{del:modelDSPatterns}, \ref{del:modelFinalPatterns}
-%%}
-%%TaskHeader{}
-%%\theTask{} will develop programmer-guided refactorings that will:
-%%\begin{inparaenum}
-%%\item
-%%semi-automatically introduce instances of parallel patterns into the original model definition;
-%%\item
-%%orchestrate the underlying components to form an equivalent, but concurrent, model;
-%  existing set of C++ components into parallel
-% application model,
-%%and
-%%\item
-%%subsequently alter the parallel structure of the model to
-%%accommodate possible changes in extra-functional requirements and/or the
-%%target hardware.
-%%\end{inparaenum}
-%%The refactorings that will be developed here will be closely
-%%based on the implementation-level refactorings from T3.2. There will be a tight correspondence
-%%between the model-level patterns and the implementation-level instances
-%% %  at the C++ level
-%%that will be generated from these patterns.
-%%We will ensure that any refactoring at either of these two levels is properly reflected in the other
-%%level, thereby enforcing consistency between the model and the generated parallel
-%%code. This will allow us to generate a structured parallel implementation directly from
-%%the application model.
-%%It will also allow any further transformations of
-%%the underlying implementation, that may be suggested by the tools from WP3, to be reflected
-%%to the application model. This will fulfill the requirement that
-%%the generated implementation cannot be changed without simultaneously changing the model
-%%itself. 
-%%This task will proceed in three phases. In the first phase, we
-%%will develop refactorings for the generic model patterns of~\ref{task:model}. This will be
-%%reported in Deliverable~\ref{del:modelGenericPatterns} (M10). In the second phase, we will
-%%develop refactorings for the domain-specific model patterns. This will be
-%%reported in Deliverable~\ref{del:modelDSPatterns} (M22). 
-%%Finally, in the third phase, we
-%%will further modify all the refactorings to reflect the changes
-%%to the parallel patterns that will be made in the third phase of~\ref{task:model-patterns}. This will be reported in %%Deliverable~\ref{del:modelFinalPatterns} (M34).
-%%\end{Task}
-
-
-\begin{Task}
-\TaskTitle{Correct-by-Construction Code Synthesis from Block-Diagram Models}
-%\TaskParticipant{SA}{1}
-\TaskParticipant{INRIA}{11}
-\TaskParticipant{SCCH}{6}
-\TaskParticipant{IBM}{4}
-%\TaskParticipant{PRL}{26}
-%\TaskParticipant{INRIA}{11}
-%\TaskParticipant{GOLEM}{1}
-\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
-
-\TaskStart{3}
-\TaskEnd{34}
-\TaskResults{
-\ref{del:model1}
-\ref{del:model2}
-\ref{del:model3}
-}
-\TaskHeader{}
-\tasklabel{task:synthesis}
-\khcomment{What do you do about Simulink?}
-\theTask{} will develop a code generator that will be able to synthesise C/C++/SYCL code directly from the high-level models of~\ref{task:model-patterns}.
-%The generation of efficient imperative code from high level block-diagram
-%models with parallel patterns remains a largely open compilation and
-%language integration problem. 
-%We will develop a code generator
-%that will be able to synthesise correct and efficient C/C++ code from the high-level
-%parallel model. 
-This will serve as an intermediate code for the back-end tools of
-the \TheProject{} tool-chain. The synthesised code will expose
-extra-functional parameters in order that the multiobjective
-optimisation infrastructure from WP4 will be able to statically and
-dynamically optimise it for given extra-functional metrics, such as
-performance, run-time predictability and security. In this context, we will leverage symbolic execution to verify the preservation of non-functional properties (security and safety) in the transition from high-level parallel models/application models to the C/C++/SYCL code based on symbolic representation of non-functional property semantics and on symbolic execution before and after running the code generator. The proof of equivalence of symbolic results is based on SMT solvers that are queried with constraints from results of symbolic execution on both sides.%Some parts
-%of the code will be flagged for static compilation while the others will
-%allow for dynamic (re-)compilation under control of the compiler from WP4
-%and multiobjective optimiser from WP5. 
-The synthesis flow will
-consistently manage the patterns at the model level and those
-expressed at the implementation level in WP3.  This task will proceed in three phases. In the first phase, we will develop a basic version of the code generator targeting basic building blocks and generic patterns for shared-memory target architectures. This will be reported in~\ref{del:model1}.
-In the second phase we will extend the code generator to deal with domain-specific
-patterns and generate code that can be orchestrated by the software-defined infrastructures from WP3 on small-scale distributed architectures. This will be reported in~\ref{del:model2}. Finally, in the third phase, we will further extend the code generator to synthesise code for large-scale distributed architectures. This will be reported in~\ref{del:model3}.
-\end{Task}
-
-\begin{Task}
-\TaskTitle{Interface Between Models, Code and Software-Defined Infrastructures}
-%\TaskParticipant{SA}{1}
-%\TaskParticipant{IBM}{4}
-%\TaskParticipant{PRL}{26}
-\TaskParticipant{INRIA}{4}
-%\TaskParticipant{SCCH}{6}
-\TaskParticipant{GOLEM}{1}
-%\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
-
-\TaskStart{5}
-\TaskEnd{29}
-\TaskResults{
-\ref{del:model1}
-\ref{del:model2}
-\ref{del:model3}
-}
-\TaskHeader{}
-The \TheProject{} approach allows for manual intervention at 3 levels -- block diagram application model, implementation code, and system specification -- while at the same time requiring that the three representation levels remain consistent, thus allowing the establishing of bidirectional traceability. To this end, \theTask{} defines two types of properties. First, we define code/model {\em well-formed structuring rules} that will apply at each of the three representation levels. For instance, recursive C functions cannot be used to implement block diagrams, and must therefore be excluded. Second, we define consistency properties that relate well-formed specifications or components of different representation levels. These properties must ensure that the structure and semantics is preserved between the different representation levels.
-Consistency properties cover both functional and non-functional aspects.
-This task will proceed in three phases, closely following the phases of development of basic and pattern building blocks from~\ref{task:model}. 
-% Results will be reported in  \ref{del:model1}, \ref{del:model2}, and \ref{del:model3}.
-\tasklabel{task:interface}
-\end{Task}
-
-\begin{Task}
-\TaskTitle{Categorisation of Diagnostics}
-%\TaskParticipant{SA}{1}
-%\TaskParticipant{IBM}{4}
-\TaskParticipant{PRL}{8}
-%\TaskParticipant{INRIA}{4}
-%\TaskParticipant{SCCH}{6}
-%\TaskParticipant{GOLEM}{1}
-%\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
-\TaskStart{5}
-\TaskEnd{31}
-\TaskResults{
-\ref{del:initialCompliance}
-\ref{del:model2}
-\ref{del:finalCompliance}
-\ref{del:model3}
-}
-\TaskHeader{}
-\theTask{} will develop mechanisms for reviewing the model and code and to categorise the diagnostics that relate to the model level or building blocks and those that relate to the code generator itself, grouping related diagnostics within the specific category. It will include the mapping between diagnostics and corresponding category (code generator, application model, or building blocks). It will also provide mechanism to deliver this information to the visualization tool. This is a very important part of the project since if we are unable to rectify the non-compliance because it is caused not by the model or building blocks but by the code generator, then this information needs to be made available for the users. This work will include advance analysis of the diagnostics including samples and recommendations as in many cases the code that is acceptable for code generator may not be acceptable from a compliance point of view. The results of this task will directly feed into the tasks~\ref{task:synthesis} and \ref{task:compliance} and will be reported in~\ref{del:initialCompliance}, \ref{del:model2}, \ref{del:finalCompliance} and \ref{del:model3}, reporting on categorisation on different model constructs as they are developed. 
-% Results of this task will be reported in D2.2, D2.3, D2.4, and D2.5
-\end{Task}
-
-\begin{Task}
-\khcomment{DSL made no sense}
-%\TaskTitle{DSL from Compliance Diagnostics}
-\TaskTitle{Model-Level Compliance and Diagnostics Support}
-%\TaskParticipant{SA}{1}
-%\TaskParticipant{IBM}{4}
-\TaskParticipant{PRL}{18}
-%\TaskParticipant{INRIA}{4}
-%\TaskParticipant{SCCH}{6}
-\TaskParticipant{GOLEM}{1}
-%\TaskParticipant{CODEPLAY}{3}
-%\TaskParticipant{AGH}{4}
-%\TaskParticipant{JMOIC}{4}
-\TaskStart{3}
-\TaskEnd{35}
-\TaskResults{
-\ref{del:initialCompliance}
-\ref{del:finalCompliance}
-}
-\TaskHeader{}
-\tasklabel{task:compliance}
-\khcomment{Why is this necessary?  Shouldn't the correct-by-construction generated code be correct?  Some motivation is required!}
-\theTask{} will develop mechanisms for determining compliance of model-generated
-code with relevant industrial standards, such as the MISRA and AUTOSAR standards for C and C++.
-It will also provide diagnostics that will enable any violations to be corrected at the
-model level. We will build on and extend \PRLshort{}'s existing commercial static analysis mechanisms for C/C++,
-as integrated into their widely-used QA-Verify tools for C/C++ so that they can diagnose compliance issues that may arise
-from the use of the parallel models.  These analyses will be applied to the
-implementations that are synthesized from the high-level parallel model using our tool from~\ref{task:synthesis}.
-By exploiting the tight correspondence between the C++ code and the model,
-we will be able to pinpoint those parts of the model that caused a violation of the coding
-standards and suggest an appropriate amendment.
-% come from and their semi-automatic amendment. 
-%\taskbreak
-In this way, we will be able to exploit our existing tools for checking compliance to
-industrially-relevant coding standards (MISRA C++, AUTOSAR, HIC++ etc.) and achieve
-acceptable compliance levels for the models themselves. This task will proceed
-in two phases. In the first phase, we will extend our existing
-static analyses to cover patterned code that uses the new \TheProject{} generic and domain-specific patterns. This will be reported
-in~\ref{del:initialCompliance} (M18). In the second phase, we will develop
-mechanisms to reflect the results of the diagnostics from the first phase
-back to the model level and to semi-automatically make amendments of the
-code to satisfy the required standards. This will be reported
-in Deliverable~\ref{del:finalCompliance} (M35).
-\end{Task}
 
 \begin{WPDeliverables}
-\begin{compactitem}
-\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
-\item \ref{del:initialCompliance} (Month 18): Report on Initial Model-Level Compliance and Diagnostics Support
-\item \ref{del:model2} (Month 22): Report on Intermediate Block-Diagram Modelling, Patterns and Code Synthesis
-\item \ref{del:model3} (Month 34):  Final Software for Block-Diagram Modelling, Pattern and Code Synthesis
-\item \ref{del:finalCompliance} (Month 35): Report on Final Model-Level Compliance and Diagnostics Support
+  \begin{compactitem}
+    \item XX
+%\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
 \end{compactitem}
 \end{WPDeliverables}
 \end{Workpackage}
