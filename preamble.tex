@@ -1,0 +1,165 @@
+%% Included Packages
+%\usepackage{a4wide}
+\usepackage[cm]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{txfonts}
+\usepackage{path}
+\usepackage{url}
+%\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lscape} % for landscape
+\usepackage[official,right]{eurosym}
+\usepackage{numbering}
+\usepackage{array}
+\usepackage{paralist} % for compactitem/compactenum/... environments
+\usepackage{xspace} % to allow automatic spacing of the project acronym but still observing punctuation.
+% \usepackage{hyperref}
+\usepackage{natbib} % squeeze biblio entries
+\setlength{\bibsep}{0.0pt}
+\usepackage{titlesec}
+\usepackage{wrapfig} % Wrap text around figures
+\usepackage{microtype} % Fix underfull/overfull text boxes
+
+%% For file splitting
+\usepackage{pageslts} %  theCurrentPage
+\usepackage{calc} % theCurrentPage+1
+\usepackage{blindtext} % Lorem ipsum dolor ...
+
+\newcounter{FirstPage} % counter, for first page number
+\setcounter{FirstPage}{1} % Set FirstPage to page 1
+
+\newwrite\BatchFile% Batch-Datei
+\immediate\openout\BatchFile=split.sh
+
+\newcommand{\Split}[1]{%
+\immediate\write\BatchFile{pdftk\space \jobname.pdf\space cat \theFirstPage -\theCurrentPage\space output\space \jobname-#1.pdf dont_ask}% 
+\setcounter{FirstPage}{\theCurrentPage+1}% set FirstPage to new first page
+}
+
+% For for-loops
+\usepackage{pgffor}
+\usepackage{forloop}
+
+\usepackage{longtable}
+
+%% Format workpackage descriptions in a standard way
+\usepackage{Workpackage}
+
+
+%% Use the standard commenting package: change this to final in the submitted version to remove comments
+\ifdefined\final
+\usepackage[final]{comments}
+\else
+\usepackage[draft]{comments}
+\fi
+
+%\usepackage{ifthen}
+\usepackage{fp}
+
+\newcommand{\hl}[1]{\fcolorbox{red}{red}{#1}}
+
+% Euro symbol for financial information
+\newcommand{\euros}{\euro{}}
+
+%% Standard page formatting commands
+\renewcommand{\thesection}{\arabic{section}}
+
+% Set the page margins etc.  Superceded.
+% \advance\topmargin by -1.3cm
+% \advance\textheight by 1.3cm
+% \advance\leftmargin by -12mm
+% \advance\textwidth by 12mm
+% \advance\columnsep by 4mm
+\parindent= 0pt
+\parskip=0.125\medskipamount
+\raggedbottom
+\pagestyle{empty}
+
+% Fix awkward figures
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\floatpagefraction}{0.9}
+
+% Include images from the images directory
+\newcommand\includeimage[2][]{%
+\IfFileExists{images/#2.pdf}{%
+\includegraphics[#1]{images/#2.pdf}%
+}
+{
+\IfFileExists{images/#2}{%
+\includegraphics[#1]{images/#2}%
+}
+{%
+\vspace{3in}%
+}
+}
+}
+
+
+\newcommand{\mydate}{\today}
+\setcounter{page}{0}
+
+%% Control table of contents - depth 1 = section, 2 = subsection
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+%% Header and Footer
+\cfoot{\thepage}
+\lfoot{\TheProject}
+\rfoot{\mydate}
+
+\lhead{}
+\chead{}
+\rhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+
+\pagestyle{fancy}
+
+% Squeeze wasted space
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0.5\baselineskip  plus 0.1\baselineskip minus   0.1\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+\titlespacing{\subsubsection}{%
+  0pt}{%              left margin
+  0.5\baselineskip  plus 0.1\baselineskip minus   0.1\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+\titlespacing{\subsection}{%
+  0pt}{%              left margin
+  0.5\baselineskip  plus 0.1\baselineskip minus   0.1\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+\titlespacing{\section}{%
+  0pt}{%              left margin
+  0.5\baselineskip  plus 0.1\baselineskip minus   0.1\baselineskip}{% space before (vertical)
+  1em}%               space after (horizontal)
+\sloppy
+
+\renewcommand{\baselinestretch}{0.91}
+
+\usepackage{mdframed}
+\usepackage[dvipsnames]{xcolor}
+\newenvironment{commentary}[1]{%
+\begin{mdframed}[backgroundcolor=blue!15]
+% \noindent\fcolorbox{black}{boxgray}{%
+%    \parbox{\textwidth}{%
+\textbf{#1}%
+}%
+{%
+\end{mdframed}
+\bigskip\bigskip
+}
+
+\newcommand{\horizontallinedef}[1]{{\vspace{6pt}\color{ProcessBlue}\hrule height#1pt\vspace{6pt}}}
+
+%\newcommand{\horizontalline}{{\vspace{6pt}\color{ProcessBlue}\hrule height1pt\vspace{6pt}}}
+\newcommand{\horizontalline}{\horizontallinedef{1}}
+
+\newcommand{\boxpara}[1]{{#1}\newline{}\hspace*{\fill}\rule[0.4ex]{0.9\linewidth}{1pt}\hspace{\fill}{}}
+
+\hbadness=10000
+\hfuzz=8pt
+
+\usepackage{textcomp}  % Copyright symbol

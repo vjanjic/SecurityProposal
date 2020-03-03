@@ -1,0 +1,261 @@
+\addtocounter{wpno}{1}
+\begin{Workpackage}{\thewpno}
+\wplabel{wp:optimisation}
+\WPTitle{\wpname{\thewpno}}
+\WPStart{Month 1}
+\WPParticipant{SCCH}{24}
+\WPParticipant{USTAN}{7}
+\WPParticipant{CODEPLAY}{7}
+\WPParticipant{INRIA}{6}
+\WPParticipant{GOLEM}{2}
+
+
+\begin{WPObjectives}
+The objectives of \theWP{} are to provide:
+\begin{compactitem}
+\item an \emph{optimisation interface} that defines relevant parameters for optimisation
+\item a \emph{predictive modelling} interface that provides static and dynamic support for optimisation
+\item an \emph{optimisation} interface for static, dynamic and decentralised optimisation of user-defined and QoS/business requirements including performance, reliability and robustness
+\item a \emph{data-management interface} to support predictive modelling and optimisation
+\end{compactitem}
+
+\end{WPObjectives}
+
+%\begin{comment}
+%--Ralph Potter: Codeplay would like to apply this work to our current research work on modeling and optimizing neural networks (or more generally multi-dimensional array programming) across diverse hardware accelerators. This is a problem domain where optimization decisions depend upon an combination of the structure of the neural network, and hardware/system costs and constraints. Included below are some comments covering our use case, how it relates to the tasks listed below, and the sorts of outputs/requirements that would be valuable to us. \\
+%
+%The basic intended design of our current research work is:
+%\begin{compactitem}
+%\item Parse a model of a neural network, expressed in a simple array programming language. These models allow for symbolic hyper-parameters, allowing us to explore how performance is impacted by changes in the models parameters. 
+%\item Apply polyhedral/integer set compiler techniques to identify data dependencies/potential parallelizable regions.
+%\item Combine this with machine models to guide a set of code transformations.
+%\item Generate an executable version of our model via LLVM.
+%\item Execute the compiled model and gather performance metrics.
+%\item Use the gathered performance metrics to guide further optimization (potentially via machine learning).
+%\end{compactitem}
+%
+%This approach obviously has significant commonality with the work described in this work package, which we would like to take advantage of. \\
+%\end{comment}
+
+%% \begin{WPDescription}
+%% The goal of this work-package is the development of an infrastructure and tools that provide a 
+%% reduced-cost and low-complexity \emph{static} and \emph{dynamic} multi-objective optimisation 
+%% support for massively parallel applications on heterogeneous architectures. 
+%% % \textbf{T5.1} 
+%% % aims at retrieving and pre-processing all relevant (\emph{parallelisation-}, \emph{problem-} and 
+%% % \emph{run-time-}related) information as well as possible constraints. \textbf{T5.2} will build the prediction models for capturing the (extra-functional) properties of the application as a function of the relevant information defined in T5.1. Such predictive models will support both off-line prediction (using prior knowledge stored in a Knowledge-Base), as well as on-line prediction (using information retrieved during run-time). The cornerstone of the proposed methodology, \textbf{T5.3}, will develop static and dynamic techniques for optimising the relevant parameters of the application with respect to a multi-objective (user-defined) objective. Emphasis will be given at methodologies that minimise computational complexity, in particular decentralised learning techniques. Finally, \textbf{T5.4} will build all data interfaces required for the information exchange and decision-making functionality between the different tools. In parallel, a \emph{Knowledge-Base} tool will be developed for storing and retrieving relevant information for prediction (in T5.2) and optimisation (in T5.3). All above tasks progress gradually with respect to the involved complexity, evolving from \emph{static}, to \emph{dynamic}, and finally to 
+%% % \emph{decentralised} optimisation in massively parallel systems.
+
+%% \end{WPDescription}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Task}
+\TaskTitle{Optimisation Interface}
+\TaskParticipant{SCCH}{3}
+\TaskParticipant{CODEPLAY}{2}
+\TaskParticipant{GOLEM}{0.5}
+
+\TaskStart{5}
+\TaskEnd{32}
+\TaskResults{%
+\ref{del:staticMOO}
+\ref{del:dynamicMOO}
+\ref{del:distMOO}
+\ref{del:finalMOO}
+}
+\TaskHeader{}
+
+In \theTask, we will develop an \emph{optimisation interface} that retrieves and pre-processes all 
+relevant information for optimisation over application properties. This includes 
+i) the functional and extra-functional \emph{parameters} of the application that influence its run-time behaviour (e.g., parallelisation structure, power); ii) \emph{constraints} imposed by the static mapping and criticality requirements defined in WP4 (T4.3); iii) user-defined and QoS \emph{objectives} (such as completion time), iv) \emph{monitoring} information defined in WP4 (T4.4); v) the \emph{actuators} adjusting the run-time behaviour (e.g., thread-mapping and data-locality) defined in WP4 (T4.2); and v) \emph{software-defined  infrastructure} information defined in T3.3. The task will proceed in three phases and in collaboration with WP2 (T2.1), WP3 (T3.3, T3.4) and WP4 (T4.2, T4.3, T4.4). In the \emph{first} phase,  we will identify a basic set of parameters that are relevant for static or dynamic optimisation. Special emphasis will be given to monitoring and actuator parameters. An initial version of the \emph{Knowledge-Base} (KB) tool, developed in T5.4, will also be utilised to automatically retrieve (e.g., through annotations generated in T3.3) and store the optimisation relevant information. This will form part of software deliverable~\ref{del:staticMOO}.
+%
+%Typical parameters may include the parallelisation pattern, the sequencing of function calls into threads, the allocation of threads to processors, data locality and QoS-levels. %, the scheduling parameters controlling thread execution, {\em etc}. Sensors may allow the measuring of power consumption, memory usage, processing speed, or QoS-like parameters such as the number of frames dropped by a video decoder. Actuators may include internal software switches or OS parameters that control scheduling, but also HW actuators involved in power/energy control. \emph{Pre-processing} refers to the development of (offline) machine learning techniques that identify relevant parameters for optimisation (\emph{causal discovery}). Such pre-processing phase will also be supported by a \emph{Knowledge-Base Tool} (KBT) that stores information from any prior runs and supports the development of predictive models in (T5.2) and optimisation in (T5.3).
+%
+%In the \emph{first} phase, and in collaboration with WP2 (T2.1), WP3 (T3.3, T3.4) and WP4 (T4.2, T4.4) we will identify all relevant (extra-functional) parameters of patterned applications relevant for static optimisation and basic parallelisation patterns. %An interface will be developed for retrieving parallelisation- and problem-related parameters from the generated C++ code. An initial version of the KBT will be developed that automatically retrieves (e.g., through annotations) and stores defined optimisation related parameters.
+%
+%When mapping model-based specifications, all or part of the optimisation interface must be visible/provided at model level, with traceability towards C++ level. 
+%
+% In collaboration with T3.3, the generated C++ code will integrate the application-level optimisation parameters (e.g., through annotations). Such information will be retrieved by the Predictive Modeling Tool in T5.2 and/or directly by the MOO Tool in T5.3.
+%
+In the \emph{second} phase, we will identify a more advanced set of relevant optimisation parameters that expand to application- or domain-specific parameters, specifications and SDI information. This will form part of software deliverable~\ref{del:dynamicMOO}.
+%
+In the \emph{third} and final phase, we will develop Machine Learning tools 
+(such as Bayesian inference models) that exploit (offline) knowledge from earlier 
+runs of the code into identifying relevant parameters for optimisation (causal discovery). The intention here is to minimize complexity of the predictive models for massively parallel applications. This will form part of software deliverable~\ref{del:distMOO} and also reported in~\ref{del:finalMOO}.
+
+
+
+%\begin{compactitem}
+%\item Provide a characterization of the (extra-functional) parameters of a patterned application that can be used for optimisation. Parameters may also involve alternative compilations.
+%\item Develop machine learning techniques for identifying relevant parameters for optimisation (causal discovery). Such techniques should rely on offline runs of the code, however it might also be relevant for runtime implementation.
+%\item We should consider/develop techniques/tools (resulting from some form of static analysis of the code), which may provide hints for the subsequent dynamic optimisation. 
+%\end{compactitem}
+
+%\begin{comment}
+%--Ralph Potter: I think the text above is a pretty good fit for our base requirements. Ideally we would like to be able to express a number of different properties here. In our problem domains we see some hard constraints (i.e. maximum available memory/register counts). Other constraints are more akin to relationships (i.e. over-utilizing limited resources like shared memory usage will reduce parallelism in a predictable manner, but may still be acceptable). We also have some cases where the relationship is not well understood, which I hope the machine learning approach will capture. We potentially have multiple metrics to use as an optimization goal (execution time and energy usage being the most likely). For our use case, it is likely that  monitoring counters, actuators and objectives that we wish to use will evolve over time, and so a well-defined but extensible interface format would be valuable to us.
+%\end{comment}
+
+\end{Task}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Task}
+\TaskTitle{Predictive Modelling and Learning}
+\TaskParticipant{SCCH}{9}
+\TaskParticipant{USTAN}{3}
+\TaskParticipant{INRIA}{3}
+\TaskParticipant{CODEPLAY}{2}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{1}
+\TaskEnd{32}
+\TaskResults{%
+\ref{del:staticMOO}
+\ref{del:dynamicMOO}
+\ref{del:distMOO}
+\ref{del:finalMOO}
+}
+\TaskHeader{}
+
+In \theTask, we will develop predictive models that capture how application 
+parameters influence the run-time behaviour of patterned applications. The predictive 
+models will guide the search over relevant optimisation parameters (as defined in T5.1). 
+We will exploit a range of Machine Learning approaches that deal with structured 
+information from the Optimisation Interface (T5.1) and build a performance model 
+specifically tailored for the application at hand. Our models will further allow 
+for run-time training and support. The task will proceed in three phases. In the 
+\emph{first} phase, we will develop methodologies for off-line predictive 
+modelling of performance indicators as a function of the application's parameters. 
+Necessary information will be retrieved from the given structured information 
+received from the Optimization Interface (T5.1) and information gathered during 
+prior runs of the same or similar applications available at the Knowledge-Base (KB). We will focus
+ on Machine Learning methodologies that can exploit similarities between different applications. This will be %\taskbreak
+a part of software deliverable~\ref{del:staticMOO}. In the \emph{second} phase, we will improve our 
+predictive modelling tool to incorporate dynamic machine-learning methodologies that 
+are able to train and adapt predictions during run-time. This will form part of software deliverable~\ref{del:dynamicMOO}.
+\taskbreak
+In the \emph{third} and final phase, we will further advance our predictive 
+modelling tool to produce a finer grained machine-learning methodology that may accommodate 
+decentralised decision-making (as required by the corresponding phase in T5.3) for 
+domain-specific parallel patterns. We will further utilise the causal discovery methods developed in the third phase of T5.1 to reduce complexity with respect to the number of optimisation parameters. This will form part of software deliverable~\ref{del:distMOO} and also reported in~\ref{del:finalMOO}.
+
+
+
+%Possible sub-tasks include:
+%
+%\begin{compactitem}
+%\item Online predictive models. Development of predictive models for performance indicators as a function of the application's parameters. Such predictive models should be able to run/train online, therefore should be computationally efficient. To this end, recursive methods may be more appropriate.
+%\item Offline support. Development of an infrastucture for offline training and support. For example, in case an application runs repeatedly over time, we may consider the development of an archive that gathers runtime information and trains (offline) predictive models which may later assist the online implementation.
+%\item Uncertainty modeling. It would be worth exploring the possibility that predictive models are also accompanied with uncertainty modeling and statistical analysis.
+%\end{compactitem}
+
+%\begin{comment}
+%--Ralph Potter: This all seems a conceptually sound fit for our requirements. For our specific neural network optimization use case, high-quality offline prediction is more important than runtime prediction, but I do see value in runtime prediction for other application areas, potentially including SYCL itself.
+%\end{comment}
+
+\end{Task}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Task}
+\TaskTitle{Multi-Objective Optimisation}
+\TaskParticipant{SCCH}{8}
+\TaskParticipant{USTAN}{4}
+\TaskParticipant{INRIA}{3}
+\TaskParticipant{CODEPLAY}{2}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{3}
+\TaskEnd{33}
+\TaskResults{%
+\ref{del:staticMOO}
+\ref{del:dynamicMOO}
+\ref{del:distMOO}
+\ref{del:finalMOO}
+}
+\TaskHeader{}
+
+In \theTask, we will develop a Multi-Objective Optimisation (MOO) tool that adapts the optimisation parameters defined in T5.1 and the prediction models developed in T5.2 to achieve (user-defined and QoS) objectives. The goal is to optimally adjust \emph{application-level} parameters (i.e., pattern- and problem-specific parameters) as well as \emph{runtime-system-level} parameters (e.g., scheduling and data locality) using the actuators developed in WP4 (T4.2). An optimisation criterion should be able to accommodate possibly conflicting objectives (e.g., energy, performance and reliability). To this end, the developed optimisation tool will be designed to guarantee \emph{Pareto efficiency}. Furthermore, robustness and adaptivity to variations in resource availability, reliability of resources and time-predictability is a main concern, thus our tools will provide both \emph{off-line} (static) and \emph{on-line} (dynamic) optimisation support.
+%
+%In the first case, off-line analysis allows the pre-calculation of most decisions, which can then be applied at run time with negligible overhead. Off-line analysis is expensive, and analysis results (pre-calculated decision tables) must cover all situations that may occur during the system life-time. On-line optimisation does not require the pre-calculation of all possible decisions, and decisions in a given situation may evolve by exploiting system execution history. The drawback in this case is increased on-line complexity, which limits the extent of the practically-attainable optimisation. Decisions can exploit the available performance counters developed in T5.4. 
+%
+The task will proceed in three phases.
+In the \emph{first} phase, we will develop an optimisation tool that performs \emph{off-line} optimisation of (extra-functional) application properties by utilising the predictive models built in T5.2. Off-line optimisation allows for a close-to-optimal initialisation of the optimisation parameters, while it will also incorporate constraints imposed by the static mapping decisions in WP4 (T4.3). This will form part of software deliverable~\ref{del:staticMOO}. In the \emph{second} phase, we will develop dynamic optimisation strategies in order to better exploit the available resources as well as to minimise the impact from unpredictable irregularities. To support on-line optimisation, a learning-based algorithm will be developed that incorporates prior knowledge from the 
+Knowledge-Base (KB) and runtime performance indicators. This will form part of software deliverable~\ref{del:dynamicMOO}. In the \emph{third} and final phase, we will advance the dynamic MOO tool to accommodate massively parallel applications through the development of decentralised optimisation methods. The original optimisation problem will be decomposed into smaller (lower-level) optimisation tasks executed independently by parts of the application (e.g., components or threads). This will form part of software deliverable~\ref{del:distMOO} and also reported in~\ref{del:finalMOO}.
+
+
+%
+%Some further remarks:
+%\begin{compactitem}
+%\item Given the large number of parameters (and the massive parallelization targeted by the project), we should emphasize/focus on \emph{decentralised} optimisation techniques (e.g., optimisation over mappings to resources may be processed by each thread independently). 
+%\item We may address the problem as a two time-scale optimisation problem leading to a form of hierarchical optimisation. The first (slow-time-scale) is concerned with the adjustment of the application's parameters (e.g., pattern- or problem-specific parameters). The second (fast-time-scale) is concerned with scheduling decisions (mappings to underlying resources). This may lead to a natural hierarchical decomposition, and more computationally-efficient solutions.
+%\item Our focus on \emph{performance-based} and \emph{decentralised} optimisation techniques (able to handle massive parallelization) will distinguish this research from the RePhrase project.
+%\item We need to emphasize/remark on what new challenges/issues heterogeneity of the architecture brings into the optimisation formulation.
+%\item We need to discuss at what level of the optimisation steps, security issues may influence the decision making process.
+%\end{compactitem}
+
+%\begin{comment}
+%--Ralph Potter: As above, this all seems a conceptually sound fit for our requirements, with offline optimization still being of primary importance to our neural net work.
+%\end{comment}
+
+
+\end{Task}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Task}
+\TaskTitle{Data Interfaces, Acquisition and Storage}
+\TaskParticipant{SCCH}{4}
+\TaskParticipant{CODEPLAY}{1}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{6}
+\TaskEnd{33}
+\TaskResults{%
+\ref{del:staticMOO}
+%\ref{del:dynamicMOO}
+\ref{del:distMOO}
+\ref{del:finalMOO}
+}
+\TaskHeader{}
+
+This task will build a database of information (Knowledge-Base) about previous runs of applications, hardware systems on which the applications were run and the results in terms of the objective runtime metrics. We will define and implement interfaces for data storage and acquisition, decide which data to store and in which format and develop methods for checking data quality and for processing the data (aggregation, filtering, finger printing etc.). This database will be used by T5.2 and T5.3 to
+build and modify the performance model and to make optimisation decisions. This task will proceed 
+in two phases. In the \emph{first} phase, we will build an initial version of the knowledge base, 
+together with interfaces for storage and acquisition. This will form part of software deliverable~\ref{del:staticMOO}. In the 
+second phase, we will update the knowledge base with quality checking and data processing
+capabilities. This will form part of software deliverable~\ref{del:distMOO} and also reported in~\ref{del:finalMOO}.
+%The goal of this task is to build a knowledge base where we store monitoring information about previous runs of an application together with information about the system the application run on. This information will be used later by the MOO. 
+
+%\begin{compactitem}
+%\item[a)]Definition and implementation of interfaces for data acquisition 
+%\item[a)]Store data in knowledge base (data format, database, ...)
+%\item[a)]Data quality, data processing (aggregation, filtering, finger printing, ...)
+%\end{compactitem}
+
+%The goal of this task is the development of the necessary infrastructure to accommodate the run-time support for both T3.2 and T3.3 in heterogeneous architectures. This includes the development of tools/libraries for 
+%\begin{compactitem}
+%\item[a)] capturing/adjusting online the extra-functional parameters of the application, 
+%\item[b)] recording online of the performance indicators of the application (as defined in T3.1-T3.3), 
+%\item[c)] execute changes in the application parameters as requested by the optimizer in T3.3.
+%\end{compactitem}
+
+%The results of this task will be reported in a number of technical reports and software deliverables. 
+
+\end{Task}
+
+
+\vspace{-10pt}
+\begin{WPDeliverables}
+
+ \begin{compactitem}
+
+ \item \ref{del:staticMOO} (Month 10): Software for the static optimisation infrastructure for heterogeneous hardware architectures.
+
+ \item \ref{del:dynamicMOO} (Month 20): Software for the dynamic optimisation for heterogeneous hardware architectures.
+
+ \item \ref{del:distMOO} (Month 34): Software for the decentralised optimisation infrastructure for heterogeneous hardware architectures.
+
+ \item \ref{del:finalMOO} (Month 34): Combined report on the final optimisation infrastructure for heterogeneous hardware architectures.
+ 
+ \end{compactitem}
+
+\end{WPDeliverables}
+\end{Workpackage}

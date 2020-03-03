@@ -1,0 +1,383 @@
+\addtocounter{wpno}{1}
+\begin{Workpackage}{\thewpno}
+\wplabel{wp:security}
+\WPTitle{\wpname{\thewpno}}
+\WPStart{Month 1}
+\WPParticipant{IBM}{41}
+\WPParticipant{PRL}{23}
+\WPParticipant{USTAN}{5}
+\WPParticipant{CODEPLAY}{4}
+\WPParticipant{GOLEM}{3}
+\WPParticipant{SCCH}{1}
+
+\begin{WPObjectives}
+The objectives of \theWP{} are to:
+
+\begin{compactitem}
+\item Extend the existing  \emph{coding standards} for security and safety of code from the automotive, machine-learning and internet-of-things industries; 
+\item Provide static and dynamic code analyses to determine compliance to coding standards;
+\item Provide mechanisms to reflect the results of code analysis to the block-diagram model of the application;
+\item Develop semi-automatic code and block-diagram model \emph{transformations} to ensure compliance to standards, safety and security;
+\item Develop mechanisms to detect and address security vulnerabilities, both at compile and at runtime, of the code that is developed using the \TheProject{} tools;
+\item Provide methods for secure integration of third-party libraries into the \TheProject{} code;
+\end{compactitem}
+
+%% VJ: Old WP objectives
+%%\begin{compactitem}
+%%\item
+%%	Extend the best security code practices to better cover parallel programing, while also taking into account performance issues;
+%%\item
+%%	 Detect vulnerable libraries and check that our targeted parallel libraries are safe; 
+%%\item
+%%	Improve the refactoring algorithms by incorporating
+%%security code practices where applicable and validate the resiliency and security of the code after refactoring;
+%%\item
+%%	Find potential security vulnerabilities in code developed using the \TheProject{} tools;
+%%\item
+%%	Evaluate the trade off between performance and security in the context of \TheProject;
+%%\item
+%%	Develop  runtime protection mechanism for that will be able to mitigate any remaining security vulnerabilities. % left in the code
+%%\end{compactitem}
+
+
+\end{WPObjectives}
+
+
+%%\begin{WPDescription}
+%%In this workpackage, we are addressing the problem of ensuring reliability, safety and
+%%security of the data-intensive applications developed using the \TheProject{} methodology,
+%%focusing on the applications coming from the three domains that \TheProject{} is targeting -
+%%automotive, machine learning and internet-of-things. These are the most commonly encountered
+%%business requirements of the applications from the domains that we are considering and
+%%dealing with them is of the utmost importance for making the \TheProject{} methodology
+%%viable to be used in industry. In T6.1, we will explore and extend the existing code
+%%standards to identify the issues related to reliability, security and safety of the
+%%C/C++/SYCL code. In T6.2, we will develop static and dynamic code analyses to determine
+%%whether the C/C++/SYCL code complies to the standards, as well as whether there are any
+%%additional breaches of security (in terms of code vulnerabilities) or safety (in terms of
+%%deadlocks and race conditions that can produce incorrect results). In T6.3, we will develop
+%%mechanisms to reflect the results of analysis from T6.2 to the block-diagram model level
+%%of the \TheProject{} methodology and we will also develop semi-automatic transformations
+%%of the C/C++/SYCL code and the model itself to resolve the identified problems. Finally,
+%%tasks T6.4 and T6.5 focus on security aspects of the code, providing techniques for runtime
+%%protection of the code (T6.4) and for secure integration of the third-party code into the
+%%code base built using the \TheProject{} methodology.
+%%\end{WPDescription}
+
+ \begin{WPDescription}
+ In this workpackage we will develop technology to help the developer
+ avoid entering security vulnerabilities while working with the \TheProject
+ tools. The \theWP{} tools will check libraries,
+ % the libraries used in the development/refactoring process 
+and provide higher
+confidence in choosing the right implementation. Where the user
+ compromises security for performance, we will create predictive models that
+ can be used to add a dynamic protection layer. % that gives extra protection when there is an indication of compromise. 
+ In addition, we will also 
+ develop novel compliance diagnostics to verify that the code produced by the
+ \TheProject{} tools complies to the relevant security standards. Furthermore, we
+ will also address the \emph{safety} issues, ensuring that the code is free from 
+ potentially catastrophic runtime bugs such as deadlocks and race conditions. Safety and security represent some of the most important business requirements for distributed data-intensive applications.
+ %We will initially,
+% focus on secure re-factoring that allows performance penalties, then
+% explore the trade-offs between security and performance when using
+% parallel patterns. Based on our observations we will enable
+% refactoring with security compromises that includes dynamic protection
+% when vulnerabilities are left intentionally in the code.
+ \end{WPDescription}
+
+%%\begin{Task}
+%%\TaskTitle{Reliability, Safety and Security Coding Standards Standards}
+%%\TaskParticipant{IBM}{6.5}
+%%\TaskParticipant {PR}{6}
+%%\TaskStart{5}
+%%\TaskEnd{32}
+%%\TaskResults{
+%%\ref{del:codingstan1}
+%%\ref{del:codingstan2}
+%%}
+%%\TaskHeader{}
+%%In this task, we will develop new coding standards that will contain guidelines that the code needs to satisfy
+%%in order to be reliable, safe (in terms of lack of runtime bugs such as deadlocks and race conditions that
+%%are characteristic to the distributed parallel applications) and secure (in terms of lack of vulnerabilities
+%%that can be exploited by malicious code). We will identify parts of the existing coding standards from
+%%our target industries, such as MISRA and AutoSar, that are relevant to reliability, safety and security and
+%%extend these to address the specific issues that appear in data-intensive applications when executed on
+%%distributed, heterogeneous hardware systems. This task will proceed in two phases, developing an initial version
+%%of the coding standards and reporting it in~\ref{del:codingstand1} and later refining this standard based on
+%%the feedback from the other tasks in this workpackage that deal with specific issues related to
+%%reliability, security and safety, reporting this in~\ref{del:codingstand2}.
+%%\end{Task}
+
+%% VJ's old task, now removed
+%%\begin{Task}
+%%\TaskTitle{Analysis for Compliance to Standards, Safety and Security of Application Code and Software-Defined Infrastructures}
+
+%%\TaskParticipant{IBM}{6.5}
+%%\TaskParticipant {PR}{6}
+%%\TaskStart{5}
+%%\TaskEnd{32}
+%%\TaskResults{
+%%\ref{del:reliabilitySecuritySafety1}
+%%\ref{del:reliabilitySecuritySafety2}
+%%\ref{del:reliabilitySecuritySafety3}
+%
+%\ref{del:adaptinit},
+%\ref{del:adaptinitsoft},
+%\ref{del:adapt2},
+%\ref{del:adaptsoft2},
+%%\ref{del:adapt3},
+%\ref{del:adaptsoft3}
+%%}
+%%\TaskHeader{}
+%%In this task, we will build on our existing tools for static analysis of the C/C++ code to provide automatic
+%%checking for the compliance of the code both to the existing standard in the relevant industry areas, and
+%%for the newly-developed standards from T6.1. The analysis will cover both the code generated from the block-diagram
+%%models and the software-defined infrastructures, ensuring that both the application and the underlying software
+%%infrastructure comply to the required standards. In addition to this, we will also extend our existing techniques
+%%for checking the code for the most common parallelism bugs, such as deadlocks and race conditions. Furthermore,
+%%we will also address the analysis for security, especially focusing on analysis of software-defined infrastructures,
+%%as certain parts of it may need to be run under extended privileges, thus exposing potential additional vulnerabilities
+%%for side-channel attacks (similar to spectre and meltdown). In this way, we will provide additional layer of %%confidence
+%%for security and safety of the code, even in the cases where the code complies to the relevant standards. This
+%%task will proceed in three phases. In the first phase, we will develop initial version of the \TheProject{}
+%%static analysis infrastructure, focusing on the code and SDI for shared-memory heterogeneous systems and on
+%%compliance to industry standards such as MISRA, AutoSar, CERT and CWE. This will be reported
+%%in~\ref{del:reliabilitySecuritySafety1}. In the second phase, we will extend the tools to analyse code and
+%%SDIs for smaller-scale distributed systems and initial version of the \TheProject{} code standards from T6.1.
+%%This will be reported in~\ref{del:reliabilitySecuritySafety2}. In the third
+%%and final phase, we will further extend the tools and analsyses to the code and SDIs for large-scale
+%%distributed systems and the finial version of the \TheProject{} code standards from T6.1. This will be
+%%reported in~\ref{del:reliabilitySecuritySafety3}.
+%%\end{Task}
+
+\begin{Task}
+\TaskTitle{Security by Design for Software Defined Infrastructure}
+\TaskParticipant{IBM}{11.5}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{6}
+\TaskEnd{32}
+\TaskResults{
+\ref{del:securitySafety1}
+\ref{del:securitySafety2}
+\ref{del:securitySafety3}
+%
+%\ref{del:adaptinit},
+%\ref{del:adaptinitsoft},
+%\ref{del:adapt2},
+%\ref{del:adaptsoft2},
+%\ref{del:adapt3},
+%\ref{del:adaptsoft3}
+}
+\TaskHeader{}
+Current practice is for security to be ensured at runtime, using efficient monitoring
+techniques coupled with dynamic runtime checks such as ISR, ASLR
+and CFI. These methods are, however, expensive in terms of computational
+complexity and energy consumption. As most of the security vulnerabilities come from
+code defects, bugs and logic flaws, the most cost-effective way to ensure security is
+to follow the best practices for secure code and eliminate vulnerabilities
+before the code is deployed. In software defined infrastructure, special attention should be given to vulnerable code gadgets that may run with extended privileges. These vulnerable gadgets may be used to attack the infrastructure using side-channel attacks (similar to Spectre and Meltdown)
+In \theTask, we will make sure that the code that is generated using the  \TheProject{} technologies does not contain vulnerabilities. This will be done by analyzing for each code generation construct, the implementation details that should be checked on the libraries that implement them in order to guarantee that no new security vulnerability is introduced.
+ In addition, we will build a tool for identifying vulnerable gadgets that may be used on software defined infrastructure to identify potential risks. This task will proceed in three phases. In the first phase, we will develop secure-by-design infrastructure for shared-memory applications and \TheProject{} software-defined infrastructures. This will be reported in~\ref{del:securitySafety1}. In the second phase, we will extend this infrastructure to distributed applications and software-defined infrastructures for small-scale distributed systems. This will be reported in~\ref{del:securitySafety2}. In the third phase, we will further extend this infrastructure to software-defined infrastructures for large-scale distributed systems. This will be reported in~\ref{del:securitySafety3}.
+\end{Task}
+
+%% VJ's task (now removed)
+%%\begin{Task}
+%%\TaskTitle{Semi-Automatic Repairing of C/C++/SYCL Code and Block-Diagram Models for Reliability, Safety and Security}
+%%\TaskParticipant{IBM}{13}
+%%\TaskStart{10}
+%%\TaskEnd{35}
+%%\TaskResults{
+%%\ref{del:reliabilitySecuritySafety1}
+%%\ref{del:reliabilitySecuritySafety2}
+%%\ref{del:reliabilitySecuritySafety3}
+%%}
+%%\TaskHeader{}
+%%The objective of this task is twofold. Firstly, we will develop mechanisms to reflect the results of analyses from T6.2, which are performed on the
+%%C/C++/SYCL code, to the block-diagram model from which the code was generated. This will heavily rely on the established links between the building
+%%blocks in the model and the resulting C/C++/SYCL code, that will be developed in T2.X. It will allow identifying parts of the model that
+%%are responsible for the parts of generated C/C++/SYCL code that breaches security, safety or reliability. Secondly, we will provide
+%%hints about the appropriate transformations to fix the identified problem in code compliance, safety and security, both at the C/C++/SYCL
+%%code and block-diagram model level. This will allow semi-automatic repairing of the code or model to increase safety and security and
+%%ensure code compliance. Also, since all the changes if our methodology is used for block-diagram modelling will be suggested/made to the model
+%%itself, rather than to the C/C++/SYCL code generated from it, this will also mean that one of the main requirements for modelling is satisfied,
+%%namely that the code generated from the model can only be changed if the model itself is changed, giving confidence to the users in the generated
+%%code. The task will proceed in three phases, following the phases of T6.2. 
+%%\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Reconfigurable Runtime Protection}
+
+\TaskParticipant{IBM}{12.5}
+\TaskParticipant{SCCH}{1}
+\TaskParticipant{GOLEM}{0.5}
+
+\TaskStart{1}
+\TaskEnd{34}
+\TaskResults{
+\ref{del:securitySafety1}
+\ref{del:securitySafety2}
+\ref{del:securitySafety3}
+%
+%\ref{del:adaptinit},
+%\ref{del:adaptinitsoft},
+%\ref{del:adapt2},
+%\ref{del:adaptsoft2},
+%%\ref{del:adapt3},
+%\ref{del:adaptsoft3}
+}
+\TaskHeader{}
+There are cases in which it is not beneficial to fix a vulnerability in
+the software or in third party code that is integrated into the software, for
+example, where the patch is hard to deploy or where fixing the
+vulnerability has significant impact on performance. To protect the
+software in these cases, virtual patching may be used. A virtual patch is
+a set of rules that implements complex logic to prevent malicious
+transactions from reaching the application. The challenge is to devise
+a set of accurate rules that filter exactly the malicious inputs
+without blocking other inputs. This work is currently done manually.
+It would heavily benefit from integrating a predictive model to
+automatically detect inputs that may utilize the vulnerability.  %\taskbreak 
+In
+the \TheProject project, virtual patching can be used when the
+developer is not able to optimize their code either for security or for
+performance/energy consumption. In addition, because a developer may
+change the code after the code was generated, new vulnerabilities may be introduced
+at a later stage and only detected after code release. In these
+cases the developer may choose to use the vulnerable code while adding a
+reconfigurable virtual patch to protect it dynamically. The virtual patch
+may be turned on and off when the application is executed according to a runtime
+risk assessment.  We will develop mechanisms for runtime protection
+that will be able to mitigate security vulnerabilities
+that are left in the code. We will use quality assurance techniques to
+identify vulnerabilities, such as Fuzz testing and static code
+analysis, and to generate data that can be used for automatically creating
+predictive models for untrusted inputs. These models may be used by a
+virtual patch to filter out malicious behaviours when the application is
+not yet patched or contains vulnerabilities because of performance
+considerations. This task will proceed in three phases. In the first phase, we
+will develop reconfigurable runtime protection for applications executed on shared-memory
+systems. This will be reported in~\ref{del:securitySafety1}. In the second phase, we will extend this protection to applications executed on small-scale distributed systems. This will be reported in~\ref{del:securitySafety2}. In the third phase, we will further extend this to the applications executed on large-scale distributed systems. This will be reported in~\ref{del:securitySafety3}.
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Secure Integration of 3rd Party Libraries}
+\TaskParticipant{IBM}{10}
+\TaskParticipant{GOLEM}{1}
+\TaskStart{3}
+\TaskEnd{33}
+
+\TaskResults{
+\ref{del:securitySafety1}
+\ref{del:securitySafety2}
+\ref{del:securitySafety3}
+%
+%\ref{del:adaptinit},
+%\ref{del:adaptinitsoft},
+%\ref{del:adapt2},
+%\ref{del:adaptsoft2},
+%%\ref{del:adapt3},
+%\ref{del:adaptsoft3}
+}
+\TaskHeader{}
+Including third party libraries into the application code presents additional
+security risks, since these libraries may include intentional or unintentional
+vulnerabilities that could result in unwanted behaviour or data leakage of sensitive 
+information. For example, an open source JavaScript library used in a website 
+may contain malicious code that collects data and sends it to the third party. In many cases it
+is important to use the correct version of a library in order to avoid using vulnerable code that was already fixed.
+The state-of-the-art solutions to this problem use security  testing, static 
+analysis and dynamic analysis, such as sandboxing, or analysis of the libraries.
+These solutions miss many vulnerabilities or malicious dormant code as a result of 
+obfuscation, packing, and the ease in rebuilding new variants of the malicious code, 
+or just the rapid release of new buggy version of packages.
+In this task we will build tools and methods for detecting vulnerable
+libraries. Our methods will look for known blocks of malicious code or vulnerabilities already discovered in open source code and will exclude libraries that contain these blocks from being used in the code generation process. We will also  identify  when a vulnerable version of a library is used and issue an alert to upgrade to an updated version.
+In case we detect vulnerabilities in open source during the \TheProject project we will report them to the community to help prevent cyber-attacks on applications that use vulnerable libraries.
+This task will proceed in three phases. In the first phase, we will investigate secure integration of 3rd party libraries for shared-memory applications. This will be reported in~\ref{del:securitySafety1}. In the second phase, we will extend this to address integration of such libraries for applications that are executed on small-scale distributed systems. This will be reported in~\ref{del:securitySafety2}. In the third phase, we will investigate integration into applications executed on large-scale distributed systems. This will be reported in~\ref{del:securitySafety3}.
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Safety and Security Standards Compliance}
+\TaskParticipant{PRL}{11.5}
+\TaskParticipant{CODEPLAY}{4}
+\TaskParticipant{IBM}{3}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{7}
+\TaskEnd{30}
+\TaskResults{
+\ref{del:codingstan1}
+\ref{del:codingstan2}
+}
+\TaskHeader{}
+In \theTask, we will build on existing code standards and develop extensions for coding standards that will 
+contain guidelines that the code needs to satisfy in order to be safe (in terms of lack 
+of runtime bugs such as deadlocks and race conditions that
+are characteristic of distributed applications) and secure (in terms of lack of vulnerabilities
+that can be exploited by malicious code).
+Most existing coding standards only serve sequential programming and lack support for parallel, heterogeneous or distributed programming. Taking them to these levels is where this project will exceed the current state of the art.
+We will identify parts of the existing coding standards from
+our target industries, such as MISRA and AUTOSAR, as well as security standards such as the CERT and CW, C++ Core Guidelines 
+that are relevant to safety and security and extend these (if necessary) to address the specific issues that 
+appear in data-intensive applications when executed on distributed, heterogeneous hardware systems. 
+This task will proceed in two phases: i) developing an initial version
+of the coding standards extension and reporting it in~\ref{del:codingstan1}; and ii) later refining this extension based on
+feedback from the other tasks in this workpackage that deal with specific issues related to
+security and safety, reporting this in~\ref{del:codingstan2}.
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Static Analysis for Safety and Security}
+\TaskParticipant{PRL}{11.5}
+\TaskParticipant{USTAN}{5}
+\TaskParticipant{IBM}{4}
+\TaskParticipant{GOLEM}{0.5}
+\TaskStart{1}
+\TaskEnd{34}
+\TaskResults{
+\ref{del:securitySafety1}
+\ref{del:securitySafety2}
+\ref{del:securitySafety3}
+}
+ \TaskHeader{}
+In \theTask, we will build on our existing tools for static analysis of C/C++ code to provide compliance
+modules to both existing security standards, such as CERT and CWE, and
+new standards extension that will be developed in T6.4.
+The analysis will cover both the code generated that is from the block-diagram
+models and the software-defined infrastructures, ensuring that both the application and the underlying software
+infrastructure comply to the required standards. We will also consider integration with security software such as
+Checkmarx, for analysis of the third-party modules written in scripting languages.
+In addition, we will extend our existing techniques
+for checking the code for the most common concurrency and parallelism bugs, such as deadlocks and race conditions,
+to cover the issues that arise in distributed applications and as a result of using software-defined
+infrastructures for coordination of computations. The results of this analyses will be reflected back to the
+block-diagram model, using the mechanisms from WP2 for linking between the building blocks of the 
+application model and the C/C++ code that is generated from it. In this way, we will provide an additional layer of 
+confidence in the security and safety of the code, even in the cases where the code complies to the 
+relevant standards. This task will proceed in three phases. In the first phase, we will develop an initial 
+version of the \TheProject{} static analysis infrastructure, focusing on the code and SDIs for 
+shared-memory heterogeneous systems and on compliance to industry standards such as CERT and CWE. 
+This will be reported in~\ref{del:securitySafety1}. In the second phase, we will extend the tools 
+to analyse code and SDIs for smaller-scale distributed systems and the initial version of the \TheProject{} 
+code standards from T6.4. This will be reported in~\ref{del:securitySafety2}. In the third
+and final phase, we will further extend the tools and analyses to deal with code and SDIs for large-scale
+distributed systems and with the final version of the \TheProject{} code standards from T6.4. This will be
+reported in~\ref{del:securitySafety3}.
+%According to the NIST 64\% of security vulnerabilities related to the bugs in software. The quickets way to identify these vulnerabilities id to develop automatic analysis of compliance to the secirity standards like CERT and CWE. In this rtask we are going to develop compliance modules for CERT and CWE and expand the coverage of these standards to be able to identify potential vulnerabilities and safety issues in the original code as well as 3-rd party libraries and modules. Integration with security software like Checkmarx may required for 3-rd party modules written in scripting languages.
+  
+\end{Task}
+
+
+\vspace{-10pt}
+\begin{WPDeliverables}
+\begin{compactitem}
+\item \ref{del:securitySafety1} (Month 10): Initial Report on Security and Safety for Data-Intensive Applications.
+\item \ref{del:codingstan1} (Month 14): Initial Version of Coding Standards for Security and Safety.
+\item \ref{del:securitySafety2} (Month 22): Interim Report on Security and Safety for Data-Intensive Applications.
+\item \ref{del:codingstan2} (Month 30): Final Version of Coding Standards for Reliability, Security and Safety.
+\item \ref{del:securitySafety3} (Month 34): Final Report on Security and Safety for Data-Intensive Applications.
+\end{compactitem}
+\end{WPDeliverables}
+\end{Workpackage}
