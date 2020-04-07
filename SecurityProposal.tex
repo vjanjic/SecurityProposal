@@ -1,8 +1,8 @@
-% !TeX encoding = UTF-8
+    % !TeX encoding = UTF-8
 \documentclass[a4paper,11pt]{article}
 
 \newcommand{\project}[1]{\textbf{#1}\xspace}
-\newcommand{\SECURITY}{\project{Security}}
+\newcommand{\SECURITY}{\project{Security - Digital Fortress}}
 \newcommand{\TheProject}{\SECURITY}
 
 %\ifdefined\final
@@ -63,8 +63,92 @@ $Revision: 0.0$ $}\\[4ex]
 \setcounter{page}{2}
 
 \section{Excellence}
+"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that signifies the importance of data analytics in modern world. Dealing with and making sense of the vast amount of data available to us through the variety of sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitalisation of the modern world presents completely new challenges for cybersecurity. Highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
 
+%The emergence of big data, supported by distributed machine-learning based data analytics tools and techniques, presents new and unforeseen challenges for data security and privacy. Security vulnerabilities can come both from the individual components of the distributed data-analytics systems, as well as from the undeterministic way in which these components may interact. The Digital Fortress project aims to develop a novel methodology and the associated tool-chain for implementing secure distributed data processing applications. We will tackle the problem both from theoretical and practical aspect, implementing novel formally-verifiable security contracts that will specify security properties of the distributed code, and supporting this contracts with a novel code refactoring tools and dynamic vulnerability detection techniques. The focus on the project will be on machine-learning based analytics techniques, addressing the issues that come from both storage and processing of the data and learning models. As an additional layer of security, we will implement novel integrated behaviour-based user authentication schemes.
 
+\subsection{Contributions from the Partners}
+
+\subsubsection{University of St Andrews - Security Contracts}
+\begin{itemize}
+    \item Formal specification of security contracts for pieces of code
+    \item Refactoring to introduce secure code in the applications
+    \item Formal verification of properties of the code with regard to security contracts
+    \item Automated verification and reasoning (model checkers, constraint solvers and theorem provers, sometimes used in combination), logics including distributed temporal logics 
+\end{itemize}
+
+\subsubsection{Dundee - Security for Big Data}
+\begin{itemize}
+    \item Identifying and addressing security risks in large-scale distributed databases, both open- and closed-source ones.
+    \item Identifying and analysing security risks in distributed parallel processing.
+    \item Security for machine-learning based big data analysis
+    \item Security contracts for distributed parallel code
+    \item Dissemination
+\end{itemize}
+
+\subsubsection{IBM - Vulnerability Detection and Data Fabrication}
+\begin{itemize}
+\item  Vulnerability Detection
+   
+We propose to extend the ExpliSAT symbolic execution technology to discover known security vulnerability patterns in C/C++ code and combine it with the tailored fuzzing techniques in specific areas for the purpose of assisting the symbolic execution engine to consistently make progress and thus overcome a known "path explosion" problem of symbolic interpretation technologies.
+ 
+\item Data Fabrication for ML
+ 
+We have recently started to explore a new and very challenging direction of synthetic data fabrication for improving robustness of ML models and AI-based applications. It includes  use cases like data enrichment (missing or not sufficient training data), poisoned data (malicious data that is used as part of training data set to cause machine learning model malfunction) and evasion attack (malicious data that causes malfunction of a trained model).
+Most of the recent research work in academia in this field is done based on "unstructured data" like images, video or text. We believe that for real industry use cases fubrication of structured data to test and improve robustness of ML models is more relevant. Our idea is to combine our rule-based (CSP-based) data fabrication approach with machine learning techniques to fabricate synthetic data for ML use cases.
+ 
+\item Data Fabrication Platform
+ 
+It is actually our current DFP product that is used in SERUMS. It can be mentioned and used in the new proposal in combination with any of the two "new" direction listed above.
+\end{itemize}
+
+\subsubsection{SCCH - Privacy-Preserving AI}
+\begin{itemize}
+    \item Informational Privacy
+    
+    To constrain the information leakage from a data set, we motivate an information theoretic approach to  privacy where privacy is quantified by the mutual information between sensitive private information and the released public data.
+    \item Optimal Privacy Secured Data Release Mechanism 
+    
+    A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytic algorithm is adversely affected. We introduce a novel information theoretic approach for studying privacy-utility trade-off suitable for different data types (including high-dimensional data, signals, and images) and for the cases with unknown statistical distributions. 
+    
+    \item Privacy Secured Knowledge Sharing
+    
+    While sharing of knowledge extracted from a relatively large set of labelled data owned by an organization with another organization owning a few or no labelled data, it is intended that 
+    \begin{itemize}
+        \item privacy of data is preserved;
+        \item transferability of knowledge from source to target domain is evaluated for the design and analysis of transfer learning algorithms;
+        \item privacy-transferability trade-off is optimized. 
+    \end{itemize} 
+    We aim at the development of techniques and tools for the study and optimization of privacy and transferability aspects of machine learning based AI systems. 
+\end{itemize}
+\subsubsection{University of Cyprus}
+\begin{itemize}
+\item AI-driven and eye gaze-driven behavioral authentication (Topic C and D)
+
+We can bring in multi-factor authentication solutions and more specifically AI-driven behavioral authentication by adding another layer of security in the authentication process to verify the end-users based on their interaction behavior, and/or their eye gaze behavior. For doing so, we currently utilize and can also bring in the project a range of eye-tracking and wearable technologies.
+
+\item Authentication-as-a-Service (Topic C and D)
+We are interested to conduct research and extend our product (Cognitive Authentication), which offers an integrated user authentication solution that allows service providers to set their own password policies, authentication types, get insights from end-users' interaction data, etc.
+
+\item User experience and usability evaluations and activities
+\item System integration and testing
+\item Dissemination activities on Usable Security, HCI, Authentication, Eye-tracking, and Intelligent User Interfaces
+\end{itemize}
+
+\subsubsection{Sopra-Steria}
+
+As a commercial partner we want to start investigation into the following areas:
+\begin{itemize}
+    \item Finance (open banking for CMA9) as data source for a universal banking solution that supports a secure banking interaction with appropiate trust and privacy as expected.
+    \item Space-based open Internet capabilities using low Earth orbit satellites and therefor using an open meshed network for communication.
+    \item Distributed healthcare (IoT) to support remote healthcare and intervention via open network technology.
+\end{itemize}
+
+We propose three business areas to research the develop of automated tools for validating the security and privacy of data, underlying systems, exposed online services used to provision these services to citizens. We want to introduce a practical solution for zero-trust architecture of the system while preserving the ever-increasing use of open and common internet-based communication channels between businesses and citizens without losing the trust and security that each citizen wants.
+
+Sopra-Steria will supply a insight into the real-world case studies that we could use to prove the research is achieving the proposed outcomes.
+
+We also hold various advance technical capability that can be used to support the general project to ensure data engineering, machine learning and data science skills are available for use by the projects research life-cycle.
 
 \subsection{Aims and Objectives}
 \label{sect:objectives}
@@ -700,7 +784,7 @@ also have a training benefit. Young researchers, software
  project into their future work places in the ICT industry.
  In that way the \TheProject{} vision and the project
  results will disseminate into many research groups and
- companies working in the field of security.
+ companies working in the field of security. In order to disseminate security and the work of the consortium to the wider public a MOOC (massively open online course) will be developed to reach an audience far beyond the academic and industrial community.  
 
 % \paragraph{General Communication:} We will adopt a good general communication strategy
 % aimed at maximising the outreach of the \TheProject{} project to the public at large.  We will issue
@@ -1763,6 +1847,67 @@ In projects with partner companies state-of-the-art research results are applied
 \item TRESSPASS (H2020 SEC-2016-2017-2, Proposal Nr. 787120) - robusT Risk basEd Screening and alert System for PASSengers and luggage. SCCH's role: develop deep learning based methods for security applications
 
 \end{itemize}
+
+% ============================
+
+\Participant{SOPRA}{(\url{https://www.soprasteria.co.uk/)}}
+
+
+\begin{wrapfigure}{R}{6cm}
+\vspace{-2cm}
+\hfill \includeimage[width=6cm]{logos/Sopra-Steria-logo2.png}
+\vspace{-1cm}
+\end{wrapfigure}
+
+\ 
+
+%\vspace{24pt}
+
+Sopra-Steria, since 1968, supports the primary business areas of consulting services, systems integration, integration of ERP, implementation of applications, as well as providing technical support to users and application maintenance and outsourcing services and operation of professional processes.
+
+Has experience in:
+
+\begin{itemize}
+    \item Cyber Security via: (\url{https://www.soprasteria.com/services/cybersecurity})
+    \item Artificial Intelligence via:\\ (\url{https://www.soprasteria.com/services/technology-services/artificial-intelligence})
+    \item Internet of Things (IoT) via:\\ (\url{https://www.soprasteria.com/services/technology-services/internet-of-things})
+\end{itemize}
+
+Supports following industries:
+\begin{itemize}
+    \item Aerospace
+    \item Defense and Security
+    \item Energy Utilities
+    \item Financial Services
+    \item Insurance and Social
+    \item Government
+    \item Retail
+    \item Telecommunication, Media and Entertainment
+    \item Transport
+\end{itemize}
+
+
+
+\vspace{10pt}
+\textbf{Sopra-Steria leads work package WPXX}
+
+\vspace{10pt}
+
+\paragraph{Andreas Francois Vermeulen - Head of Analytics, Digital Consultancy Services within the United-Kingdom.
+}     
+
+\subsubsection*{List of Publications}
+
+\begin{itemize}
+\item The SERUMS tool-chain: ensuring security and privacy of medical data in smart patient-centric healthcare systems. (IEEE Big Data), Los Angeles, December 2019, IEEE Press. DOI: 10.1109/BigData47090.2019.9005600
+\end{itemize}
+
+\subsubsection*{Relevant Research Projects}
+\begin{itemize}
+\item SERUMS (\url{https://www.serums-h2020.org/})
+\end{itemize}
+
+% ============================
 
 
 \subsection{Third parties involved in the project (including use of third party resources)}
