@@ -162,44 +162,81 @@ We also hold various advance technical capability that can be used to support th
 The specific \emph{aims} and \emph{objectives} of the \TheProject{} project are:
 
 \begin{description}
-\item[Aim 1:]
+\item[Aim 1:] To produce novel ways for formal specification and verification of security properties of
+  distributed data analytics systems, addressing all aspects of the big-data management, from collection of
+  data and storage to the end analytics;
 
-\item[Aim 2:]
+\item[Aim 2:] To build on the existing and develop new efficient techniques for identifying generic code patterns that
+  represent known security vulnerabilities and data leakages in the distributed AI-based systems;
 
-\item[Aim 3:]
+\item[Aim 3:] To build additional security layers on top of the existing systems, based on novel secure authentication
+  techniques;
 
-\item[Aim 4:]
+\item[Aim 4:] To integrate the \TheProject{} tools and techniques into a coherent methodology for establishing
+  security properties of the existing distributed code, as well as for developing new provably-secure code;
 
-\item[Aim 5:]
- \noindent
- To demonstrate the applicability of the \TheProject{} tools and
- methodology on real-world use cases from the medical, aerospace and
- baking domains and to promote long-term uptake;
+\item[Aim 5:]  To demonstrate the applicability of the \TheProject{} tools and
+ methodology in building secure real-world application from the medical, aerospace and
+ baking domains and to promote their long-term uptake by building a sustainable user community,
+ covering both experts in security and normal application developers;
 
 \end{description}
 
 The corresponding concrete \emph{objectives} are: 
 \begin{description}
 
-\item[Objective 1:]
-
-\item[Objective 2:]
-
+\item[Objective 1:] To develop a novel concept of machine-readable \emph{security contracts}
+  that will be used to specify precisely security properties for parts of the C++ code, and to develop methods
+  for their formal specification and verification in the new and existing C/C++ code. \emph{This fulfils part of \textbf{Aim 1} and \textbf{Aim 4}}.
   
-\emph{This fulfils part of \textbf{Aim 1}, part of \textbf{Aim 2} and part of \textbf{Aim 3}.}
+%  \item[Objective 1:] To develop a novel techniques for verification of security properties of the application code,
+%  specified in a formal way by machine-readable \emph{security contracts}, giving strict guarantees about
+%  the safety of runtime behaviour of undeterministic large-scale distributed data analytics; \emph{This fulfils part of
+%    \textbf{Aim 1}}.
 
-\item[Objective 3:]
+\item[Objective 2:] To identify security and privacy risks and the methods for their mitigation
+  in the state-of-the-art distributed machine-learning-based
+  data analytics platforms, both in the storage of big data using distributed databases and in the data processing
+  frameworks, thus guiding the verification of security contracts in the distributed settings. \emph{This fulfils parts
+    of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+  
+\item[Objective 3:] To develop novel efficient technologies, based on combination of symbolic execution and fuzzing
+  techniques, for discovering known and identifying new security vulnerabilities in the C/C++ code. \emph{This fulfils
+    part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:]
+\item[Objective 4:] To develop new techniques for identifying and controling data leakage in distributed machine-learning
+  based data analytics algorithms, as well as techniques for secure transfer of knowledge from machine-learning models
+  built on big data sets. \emph{This fulfils parts of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 5:]
+\item[Objective 5:] To augment the existing security layer of distributed data analytics application with AI-driven
+  behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils
+    parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
+\item[Objective 6:] To develop a novel methodology, based on security contracts, vulnerability detection/mitigation,
+  privacy preserving and secure authentication, and supported by semi-automated code refactoring techniques for
+  increasing security of the existing and developing secure new distributed data-analytics algorithms. \emph{This fulfils
+    part of \textbf{Aim 4}}.
 
-\item[Objective 6:]
+\item[Objective 7:] To demonstrate that the \TheProject{} tools and techniques allows improved security and reduced
+  information leakage in distributed learning-based data analytics code, using a variety of real-world security-sensitive
+  use cases from healthcare, banking and aerosepace application domains. \emph{This fulfils part of \textbf{Aim 5}};
 
-\item[Objective 7:]
+\item[Objective 8:] To build a sustainable user community involving a variety of stakeholders that will ensure the long-term
+  uptake, development and commercial success of the tools and techniques developed over the course of the \TheProject{}
+  project. \emph{This fulfils part of \textbf{Aim 5}}.
+
 \end{description}
 
+\subsubsection{Provisional list of workpackages:}
+\begin{itemize}
+\item WP2: Specification and Verification of Security Contracts for Distributed Data Analytics (USTAN)
+\item WP3: Security and Privacy of Big Data Storage and AI-based Processing (UOD/SCCH)
+\item WP4: Vulnerability Detection (IBM)
+\item WP5: AI-Driven Behavioural Authentication (COGNITIVE AX)
+\item WP6: Refactoring-Based Methodology for Secure Application Development (USTAN)
+\item WP7: Use cases (SOPRA)
+\item WP8: Dissemination and Exploitation (UOD)
+\end{itemize}
 
 \label{sect:objs-detailed}
 
