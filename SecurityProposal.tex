@@ -227,16 +227,16 @@ The corresponding concrete \emph{objectives} are:
 
 \end{description}
 
-\subsubsection{Provisional list of workpackages:}
-\begin{itemize}
-\item WP2: Specification and Verification of Security Contracts for Distributed Data Analytics (USTAN)
-\item WP3: Security and Privacy of Big Data Storage and AI-based Processing (UOD/SCCH)
-\item WP4: Vulnerability Detection (IBM)
-\item WP5: AI-Driven Behavioural Authentication (COGNITIVE UX)
-\item WP6: Refactoring-Based Methodology for Secure Application Development (USTAN)
-\item WP7: Use cases (SOPRA)
-\item WP8: Dissemination and Exploitation (UOD)
-\end{itemize}
+%\subsubsection{Provisional list of workpackages:}
+%\begin{itemize}
+%\item WP2: Specification and Verification of Security Contracts for Distributed Data Analytics (USTAN)
+%\item WP3: Security and Privacy of Big Data Storage and AI-based Processing (UOD/SCCH)
+%\item WP4: Vulnerability Detection (IBM)
+%\item WP5: AI-Driven Behavioural Authentication (COGNITIVE UX)
+%\item WP6: Refactoring-Based Methodology for Secure Application Development (USTAN)
+%\item WP7: Use cases (SOPRA)
+%\item WP8: Dissemination and Exploitation (UOD)
+%\end{itemize}
 
 \label{sect:objs-detailed}
 
@@ -244,17 +244,21 @@ The corresponding concrete \emph{objectives} are:
 the objectives are defined above   We need about 1-2 paragraphs
 per objective, just to flesh it out.}
 
+\subsubsection{Detailed Description of the Objectives}
 
-\subsubsection*{Objective 1: XX}
+\subsubsection*{Objective 1: Security Contracts for Formal Specification of Security Properties}
 \vspace{-6pt}
 
+Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
 
 
-\subsubsection*{Objective 2: XX}
+\subsubsection*{Objective 2: Identification of Security and Privacy Risks in Machine-Learning Based Data Analytics}
 \vspace{-6pt}
 
+With the emergence of big data, many different technologies for both storing and processing this data have emerged. On the storage side, most commonly used tools are distributed databases and flat filesystems. While providing good reliability via fault tolerance, the security mechanisms used by databases and filesystems are still very basic, making them a security liability. On the data processing side, machine-learning has emerged as the prominent set of methods for making sense of and analysing the vast amount of data available. Distributed machine learning algorithms, however, present a whole set of new challenges, both in terms of security and in terms of privacy. Security risks and privacy leaks can come both from training and applying the machine learning models, as well as from the models themselves. In the \TheProject{} project, we will develop methods to identify known and unknown security risks coming both from the individual agents invovled in the process of storing and analysing big data, and from the interaction between different agents in distributed settings.
 
-\subsubsection*{Objective 3: XX}
+
+\subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
 \vspace{-6pt}
 
 \subsubsection*{Objective 4: XX}
@@ -263,8 +267,10 @@ per objective, just to flesh it out.}
 \subsubsection*{Objective 5: XX}
 \vspace{-6pt}
 
-\subsubsection*{Objective 6: XX}
+\subsubsection*{Objective 6: Methodology for Deveopment of Secure Applications}
 \vspace{-6pt}
+
+It will be necessary to bridge the gap between the relatively low-level techniques for verification of the security properties of the code, with the focus on machine-learning based analytics of big data and including the techniques for identification of vulnerabilities and high-level of abstraction that the end users want to have the code and security properties presented. In the \TheProject{}, we will build onto our previous work on \emph{software refactoring} as a part of tool-chains for software engineering of the parallel and distributed applications and develop a refactoring-based programming methodology for developing secure applications. Our methodology will integrate various tools developed over the course of the project, including analysis and automated proving technqiues, security vulnerabilities detection tools and analysis of security and privacy of machine learning models, into a coherent tool-chain that will be supported by the code refactoring technology. In this way, the programmer will be fully included in the development loop, having full control over the incremental transformations that will make their code more secure.
 
 \subsubsection*{Objective 7: XX}
 %  from automotive, machine learning and IoT domains.}
@@ -1034,7 +1040,7 @@ aiming to influence development and awareness of the \TheProject{} results.
 \vspace{-5mm}
 \begin{tabular}{ll}
 %\hspace{-0.75in}
-\%includeimage[scale=0.5]{RePhorm2Pert.pdf}
+%\includeimage[scale=0.5]{RePhorm2Pert.pdf}
 %\vspace{-25mm}
 \end{tabular}
 \caption{Overview of the \TheProject{} Workpackage Structure and Dependencies (PERT chart)}
@@ -1071,6 +1077,20 @@ Package List}
 
 \addtocounter{wp}{1}
 \workpackageentry{\thewp}{USTAN}{24}{1}{36}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{USTAN}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{SCCH}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{IBM}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{UCY}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{USTAN}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{SOPRA}{XX}{XX}{XX}
+\addtocounter{wp}{1}
+\workpackageentry{\thewp}{UOD}{XX}{XX}{XX}
 
 {\textbf{Total}} & & & &
 \textbf{\large XX}&
