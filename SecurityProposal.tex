@@ -23,8 +23,7 @@
 \end{center}
 
 \begin{tabular}{lp{5in}r}
-\textbf{Title of Proposal:} & \textbf{Intelligent Security and Privacy
-                              Management} & \\[4ex] 
+\textbf{Title of Proposal:} & \textbf{Intelligent Security and Privacy Management} & \\[4ex] 
 \textbf{Date of preparation:} & \textbf{\today} & \comment{}{$
 $Revision: 0.0$ $}\\[4ex]
 \textbf{List of participants} && \\[1ex]
@@ -141,14 +140,16 @@ As a commercial partner we want to start investigation into the following areas:
 
 We propose three business areas to research the develop of automated tools for validating the security and privacy of data, underlying systems, exposed online services used to provision these services to citizens. We want to introduce a practical solution for zero-trust architecture of the system while preserving the ever-increasing use of open and common internet-based communication channels between businesses and citizens without losing the trust and security that each citizen wants.
 
-Sopra-Steria Limited will supply a insight into the real-world case studies that we could use to prove the research is achieving the proposed outcomes.
+Sopra-Steria Limited will supply an insight into the real-world case studies that we could use to prove the research is achieving the proposed outcomes.
 
-We also hold various advance technical capability that can be used to support the general project to ensure data engineering, machine learning and data science skills are available for use by the projects research life-cycle.
+We also hold various advance technical capability that can be used to support 
+97
+ the general project to ensure data engineering, machine learning and data science skills are available for use by the projects research life-cycle.
 
 
 \pagebreak
 \section{Excellence}
-"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that signifies the importance of data analytics in modern world. Dealing with and making sense of the vast amount of data available to us through the variety of sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitalisation of the modern world presents completely new challenges for cybersecurity. Highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
+"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that signifies the importance of data analytics in modern world. Dealing with and making sense of the vast amount of data available to us through the variety of sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitisation of the modern world presents completely new challenges for cybersecurity. Highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
 
 %The emergence of big data, supported by distributed machine-learning based data analytics tools and techniques, presents new and unforeseen challenges for data security and privacy. Security vulnerabilities can come both from the individual components of the distributed data-analytics systems, as well as from the undeterministic way in which these components may interact. The Digital Fortress project aims to develop a novel methodology and the associated tool-chain for implementing secure distributed data processing applications. We will tackle the problem both from theoretical and practical aspect, implementing novel formally-verifiable security contracts that will specify security properties of the distributed code, and supporting this contracts with a novel code refactoring tools and dynamic vulnerability detection techniques. The focus on the project will be on machine-learning based analytics techniques, addressing the issues that come from both storage and processing of the data and learning models. As an additional layer of security, we will implement novel integrated behaviour-based user authentication schemes.
 
@@ -169,8 +170,7 @@ The specific \emph{aims} and \emph{objectives} of the \TheProject{} project are:
 \item[Aim 2:] To build on the existing and develop new efficient techniques for identifying generic code patterns that
   represent known security vulnerabilities and data leakages in the distributed AI-based systems;
 
-\item[Aim 3:] To build additional security layers on top of the existing systems, based on novel secure authentication
-  techniques;
+\item[Aim 3:] To build additional security layers on top of the existing systems, based on novel, intelligent and secure authentication methods;
 
 \item[Aim 4:] To integrate the \TheProject{} tools and techniques into a coherent self-healing methodology for establishing
   security properties of the existing distributed code, as well as for developing new provably-secure code;
@@ -188,6 +188,8 @@ The corresponding concrete \emph{objectives} are:
 \item[Objective 1:] To develop a novel concept of machine-readable \emph{security contracts}
   that will be used to specify precisely security properties for parts of the C++ code, and to develop methods
   for their formal specification and verification in the new and existing C/C++ code. \emph{This fulfils part of \textbf{Aim 1} and \textbf{Aim 4}}.
+  \comment{CB: It's not clear to me what machine-readable actually means, as, arguably, any arbitrary stream of bytes in a file is machine readable :D I think this needs clarified. There's a worry here that this is the same as what we have done on TeamPlay, where we also developed proofs, contracts and certificates for security, energy and time. What is the novelty here? There should probably be some tie-in, perhaps, to the work done on TeamPlay, CSL, for instance, or the proof system developed there. I think this needs to tie in with the refactoring tooling. One novel approach here is the refactorings... perhaps new refactorings that transform the application in such a way that it can meet a user-defined security specification or contract?  }
+  \comment{JB: If we are treating security contracts as a notion at several levels of abstraction and we can go between them, this would potentially be quite different from TeamPlay? It should not just be at the code level... }
   
 %  \item[Objective 1:] To develop a novel techniques for verification of security properties of the application code,
 %  specified in a formal way by machine-readable \emph{security contracts}, giving strict guarantees about
@@ -208,9 +210,7 @@ The corresponding concrete \emph{objectives} are:
   based data analytics algorithms, as well as techniques for secure transfer of knowledge from machine-learning models
   built on big data sets. \emph{This fulfils parts of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 5:] To augment the existing security layer of distributed data analytics application with AI-driven
-  behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils
-    parts of \textbf{Aim 3} and \textbf{Aim 4}}.
+\item[Objective 5:] To augment the existing security layer of distributed data analytics application with AI-driven behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
 \item[Objective 6:] To develop a novel methodology, based on security contracts, vulnerability detection/mitigation,
   privacy preserving and secure authentication, and supported by semi-automated code refactoring techniques for
@@ -250,6 +250,7 @@ per objective, just to flesh it out.}
 \vspace{-6pt}
 
 Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
+\comment{CB: See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
 
 
 \subsubsection*{Objective 2: Identification of Security and Privacy Risks in Machine-Learning Based Data Analytics}
@@ -264,13 +265,17 @@ With the emergence of big data, many different technologies for both storing and
 \subsubsection*{Objective 4: XX}
 \vspace{-6pt}
 
-\subsubsection*{Objective 5: XX}
+\subsubsection*{Objective 5: Intelligent User Authentication-as-a-Service}
 \vspace{-6pt}
+
+User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In the \TheProject{} project, we will develop an Authentication-as-a-Service technology allowing developers to easily integrate, deploy and manage their preferred authentication methods depending on custom requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behavior data allowing developers to deliver personalized security experience and thus increase user acceptance and trust.
 
 \subsubsection*{Objective 6: Methodology for Deveopment of Secure Applications}
 \vspace{-6pt}
 
 It will be necessary to bridge the gap between the relatively low-level techniques for verification of the security properties of the code, with the focus on machine-learning based analytics of big data and including the techniques for identification of vulnerabilities and high-level of abstraction that the end users want to have the code and security properties presented. In the \TheProject{}, we will build onto our previous work on \emph{software refactoring} as a part of tool-chains for software engineering of the parallel and distributed applications and develop a refactoring-based programming methodology for developing secure applications. Our methodology will integrate various tools developed over the course of the project, including analysis and automated proving technqiues, security vulnerabilities detection tools and analysis of security and privacy of machine learning models, into a coherent tool-chain that will be supported by the code refactoring technology. In this way, the programmer will be fully included in the development loop, having full control over the incremental transformations that will make their code more secure.
+
+\comment{CB: I wonder if the refactoring is downplayed too much. If the proposal focussed more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
 
 \subsubsection*{Objective 7: XX}
 %  from automotive, machine learning and IoT domains.}
