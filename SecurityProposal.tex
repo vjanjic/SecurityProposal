@@ -250,7 +250,7 @@ per objective, just to flesh it out.}
 \vspace{-6pt}
 
 Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
-\comment{CB: See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
+\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
 
 
 \subsubsection*{Objective 2: Identification of Security and Privacy Risks in Machine-Learning Based Data Analytics}
@@ -261,9 +261,11 @@ With the emergence of big data, many different technologies for both storing and
 
 \subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
 \vspace{-6pt}
+\vjcomment{IBM to write this part}
 
-\subsubsection*{Objective 4: XX}
+\subsubsection*{Objective 4: Identifying and Controlling Data Leakage in Distributed Machine Learning}
 \vspace{-6pt}
+\vjcomment{SCCH to write this part}
 
 \subsubsection*{Objective 5: Intelligent User Authentication-as-a-Service}
 \vspace{-6pt}
@@ -275,17 +277,22 @@ User authentication is a cornerstone of security in modern computing systems. Tw
 
 It will be necessary to bridge the gap between the relatively low-level techniques for verification of the security properties of the code, with the focus on machine-learning based analytics of big data and including the techniques for identification of vulnerabilities and high-level of abstraction that the end users want to have the code and security properties presented. In the \TheProject{}, we will build onto our previous work on \emph{software refactoring} as a part of tool-chains for software engineering of the parallel and distributed applications and develop a refactoring-based programming methodology for developing secure applications. Our methodology will integrate various tools developed over the course of the project, including analysis and automated proving technqiues, security vulnerabilities detection tools and analysis of security and privacy of machine learning models, into a coherent tool-chain that will be supported by the code refactoring technology. In this way, the programmer will be fully included in the development loop, having full control over the incremental transformations that will make their code more secure.
 
-\comment{CB: I wonder if the refactoring is downplayed too much. If the proposal focussed more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
+\cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focussed more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
 
-\subsubsection*{Objective 7: XX}
+\subsubsection*{Objective 7: Demonstrating \TheProject{} Tools and Technologies on Real-World Use Cases}
 %  from automotive, machine learning and IoT domains.}
 \vspace{-6pt}
+We will validate the \TheProject{} methodology for developing secure applications, together with the associated tools and technologies, on realistic use cases taken from our partners at XX, XX and XX.
+%In particular, the \TheProject{} technologies will be applied to the development
+%of a \emph{completely new} distributed data analytics application by XX.
+Consequently, all of the technologies that will be developed over the course of the \TheProject{} project will be extensively tested in a realistic setting, enabling us to identify new issues and security risks as they arise, and guiding our roadmap for future technological adoption. The use cases will demonstrate that we are able to deal with large-scale distributed data analytic in secure and privacy-preserving way, processing large volumes of data with increased trust in the safety of the operations.At the same time, by using user-guided refactoring-driven methodology, supported by a tool chain, we will reducing the cost of development, deployment and maintenance of the distributed systems.
+%Thanks to our \emph{data fabrication} technology, we will be able to test parts of the system
+%and a system as a whole on large volumes of synthetic, but realistic,
+%data, both during development and during deployment.
 
-We will validate the \TheProject{} approach using complex, real-world applications from a number of
-different domains, 
-including medical, aerospace and banking. 
-\newline
-\emph{This fulfils part of \textbf{Aim 1}, part of \textbf{Aim 5}, and part of \textbf{Aim 6}.}
+\subsubsection*{Objective 8: Long-Term Uptake of \TheProject{} Technologies} 
+\vspace{-7pt}
+\TheProject{} aims to ensure long-term uptake of the technologies that it will develop by engaging with relevant user, developer and adopter communities, by following an Open Science approach, and by providing a roadmap for the future development and exploitation of the \TheProject{} technologies. We have built in specific user community building activities, including workshops, tutorials, webinars and training sessions, that will serve to actively promote the use of the \TheProject{} technologies. Whenever feasible, our software and results will be made publicly available in open source/open data repositories. We will actively engage with potential users from the chosen domains through exhibitions, demonstrations and presentations at existing events and conferences such as XX, through the annual EU ICT conference, through exploiting our excellent high-level contacts with the XX. Innovation Centres and other relevant organisations, through contacts with national government agencies, including XX and through other relevant expert networks.
 
 \pagebreak
 \subsection{Relation to the Workprogramme}
