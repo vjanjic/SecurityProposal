@@ -1,4 +1,4 @@
-    % !TeX encoding = UTF-8
+ % !TeX encoding = UTF-8
 \documentclass[a4paper,11pt]{article}
 
 \newcommand{\project}[1]{\textbf{#1}\xspace}
@@ -136,6 +136,7 @@ As a commercial partner we want to start investigation into the following areas:
     \item Finance (open banking for CMA9) as data source for a universal banking solution that supports a secure banking interaction with appropriate trust and privacy as expected.
     \item Space-based open Internet capabilities using low Earth orbit satellites and therefor using an open meshed network for communication.
     \item Distributed healthcare (IoT) to support remote healthcare and intervention via open network technology.
+    \item Sovereign Identity Clearance House using a Self-sovereign identity (SSI) token for all communication.
 \end{itemize}
 
 We propose three business areas to research the develop of automated tools for validating the security and privacy of data, underlying systems, exposed online services used to provision these services to citizens. We want to introduce a practical solution for zero-trust architecture of the system while preserving the ever-increasing use of open and common internet-based communication channels between businesses and citizens without losing the trust and security that each citizen wants.
@@ -210,8 +211,7 @@ for developing secure distributed applications and providing formal guarantees a
   techniques, for discovering known and identifying new security vulnerabilities in the C/C++ code. \emph{This fulfils
     part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:] To develop new techniques for identifying and controling data leakage in distributed machine-learning
-  based data analytics algorithms, as well as techniques for secure transfer of knowledge from machine-learning models
+\item[Objective 4:] To develop new techniques for identifying and controlling information leakage in distributed machine-learning based data analytics algorithms, as well as techniques for privacy secured transfer of knowledge from machine-learning models
   built on big data sets. \emph{This fulfils parts of \textbf{Aim 2} and \textbf{Aim 4}}.
 
 \item[Objective 5:] To augment the existing security layer of distributed data analytics application with AI-driven behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
@@ -253,7 +253,7 @@ per objective, just to flesh it out.}
 \subsubsection*{Objective 1: Secure Patterns for Distributed Data Processing}
 %subsubsecton*{Security Contracts for Formal Specification of Security Properties}
 \vspace{-6pt}
-Parallel patterns are a well-established abstraction for programming complex parallel and distributed systems, adopted by a number of major IT companies such as Intel and Microsoft. They allow structuring of the end-user code at a high level and make formal reasoning about the code much easier, as they can provide additional information about the semantics of the code to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multilayer approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In the \TheProject{} project, we will develop novel \emph{secure} patterns for distributed large-scale data processing that will, in addition to performance considerations, give strict guarantees about their security properties. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to choose a security-certified patterns suitable for their data analytics tasks, and will be presented with guaranteed security properties of the resulting code in an easily-understandable way. 
+Parallel patterns are a well-established abstraction for programming complex parallel and distributed systems, adopted by a number of major IT companies such as Intel and Microsoft. They allow structuring of the end-user code at a high level and make formal reasoning about the code much easier, as they can provide additional information, such as a semantics of the expected behaviour of the about the application with respect to the underlying formal models. On the other hand, a formal treatment of the security properties of the code requires a multilayer approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In the \TheProject{} project, we will develop novel \emph{secure} patterns for distributed large-scale data processing that will, in addition to performance considerations, give strict guarantees about their security properties. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in a natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to choose a security-certified patterns suitable for their data analytics tasks, and will be presented with guaranteed security properties of the resulting code in an easily-understandable way. 
 %Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
 %\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
 
@@ -268,9 +268,14 @@ With the emergence of big data, many different technologies for both storing and
 \vspace{-6pt}
 \vjcomment{IBM to write this part}
 
-\subsubsection*{Objective 4: Identifying and Controlling Data Leakage in Distributed Machine Learning}
+\subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
 \vspace{-6pt}
-\vjcomment{SCCH to write this part}
+The datasets containing sensitive information can't be publicly shared as a privacy-risk posed by several types of attacks exists. A novel information theoretic framework is introduced for privacy-preserving distributed machine learning such that privacy-leakage is quantified by the mutual information between sensitive data and released data. At the core of privacy-preserving framework lies a stochastic model approximating the uncertain mapping between released noise added data and private data such that the model is employed for variational approximation of informational privacy. The suggested privacy-preserving framework consists of three components: 1) Optimal Noise Adding Mechanism; 2) Modeling of Uncertain Mapping Between Released Noise Added Data and Private Data; and 3) Variational Approximation of Information Privacy. 
+
+
+There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
+
+
 
 \subsubsection*{Objective 5: Intelligent User Authentication-as-a-Service}
 \vspace{-6pt}
