@@ -11,33 +11,82 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-%% Why just embedded? Are these domains correct? KH
-\item Solve the world
+\item Identify security risks in systems for distributed storage of big data, targetting both distributed NoSQL databases such as ScalaDB and plain distributed filesystems such as Hadoop HDFS;
+\item Identify security risks in big data processing systems based on distributed parallel patterns such as MapReduce;
+\item Develop novel secure and privacy-preserving mechanisms for data release in machine learning based big data processing; \vjcomment{SCCH part}
+\item Develop novel technqiues for privacy-secured knowledge sharing in machine learning based AI systems; \vjcomment{SCCH part}
+\item Integrate the self-healing mechanisms from WPXX into security diagnostics mechanisms for big data storage and analysis to allow dynamic user-controlled repairing of the identified security and privacy risks;  
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} addresses the problem of solving the world.
+  The goal of this workpackage is to provide mechanisms for identifying security problems in distributed big data storage and processing. It will exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In task \ref{task:storage} we will focus on the problem of identifying vulnerabilitie in storage of big data, for which distributed NoSQL databases or plain distributed filesystems, with very basic security mechanisms, are most often used. Complementary to that, task \ref{task:processing} focuses on distributed processing of big data. We restrict our attention to the systems that are based on parallel patterns (of which MapReduce is the most famous), as parallel patterns encapsulate all interaction between different distributed agents, therefore localising the possible source of vulnerabilities in the distributed systems. Tasks \ref{task:release} and \ref{task:sharing} narrow down the focus to the data processing that is based on machine learning, developing techniques for privacy-secured data release and knowledge sharing for this kind of analytics. Finally, task \ref{task:healing} integrates self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. 
 \end{WPDescription}
 
 \begin{Task}
-%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Solving the World}
-\TaskParticipant{SCCH}{1}
+\TaskTitle{Identifying Vulnerabilities in Distributed Data Storage}
+\TaskParticipant{UOD}{1}
 
 \TaskStart{1}
-\TaskEnd{27}
+\TaskEnd{36}
 \TaskResults{%
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:solve}
+\tasklabel{task:storage}
+ \end{Task}
 
-In \theTask, we will solve the world. 
-This task will proceed in three phases. 
+ \begin{Task}
+ \TaskTitle{Identifying Vulnerabilities in Distributed Pattern-Based Big Data Processing}
+ \TaskParticipant{UOD}{1}
+ 
+ \TaskStart{1}
+ \TaskEnd{36}
+ \TaskResults{%
+ %\ref{del:model1}
+ }
+ \TaskHeader{}
+ \tasklabel{task:processing}
 \end{Task}
+ 
+\begin{Task}
+  \TaskTitle{Secure and Privacy-Preserving Data Release in Machine Learning Based Distributed Data Processing}
+  \TaskParticipant{SCCH}{1}
+  
+  \TaskStart{1}
+  \TaskEnd{36}
+  \TaskResults{%
+  %\ref{del:model1}
+  }
+  \TaskHeader{}
+  \tasklabel{task:release}
+ \end{Task}
 
+ \begin{Task}
+  \TaskTitle{Knowledge Sharing in Distributed AI}
+  \TaskParticipant{SCCH}{1}
+  
+  \TaskStart{1}
+  \TaskEnd{36}
+  \TaskResults{%
+  %\ref{del:model1}
+  }
+  \TaskHeader{}
+  \tasklabel{task:sharing}
+ \end{Task}
 
+ \begin{Task}
+  \TaskTitle{Self-Healing in Distributed Data Processing Systems}
+  \TaskParticipant{SCCH}{1}
+  
+  \TaskStart{1}
+  \TaskEnd{36}
+  \TaskResults{%
+  %\ref{del:model1}
+  }
+  \TaskHeader{}
+  \tasklabel{task:healing}
+ \end{Task}
 
 \begin{WPDeliverables}
   \begin{compactitem}
