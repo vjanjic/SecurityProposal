@@ -266,7 +266,11 @@ With the emergence of big data, many different technologies for both storing and
 
 \subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
 \vspace{-6pt}
-\vjcomment{IBM to write this part}
+%\vjcomment{IBM to write this part}
+
+Symbolic execution is a way of executing a program abstractly, so that one abstract execution covers multiple possible inputs of the program that share a particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
+A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, feasible path through the program, and can be witnessed with a test case that illustrates the error.
+In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory aliasing, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
 
 \subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
 \vspace{-6pt}
@@ -446,8 +450,11 @@ The specific advances that will be made are described in more detail in Section~
 
 \vspace{-8pt}
 \paragraph{\teamplay (ICT-779882).}
-...
+The TeamPlay project aims to develop new, formally-motivated, techniques that will allow execution time, energy usage, security, and other important non-functional properties of parallel software to be treated effectively, and as first-class citizens. This methodology was built into a toolbox for developing highly parallel software for low-energy systems, as required by the internet of things, cyber-physical systems etc.
 
+The TeamPlay approach allows programs to reflect directly on their own time, energy consumption, security, etc., as well as enabling the developer to reason about both the functional and the non-functional properties of their software at the source code level.
+
+...
 \vspace{-8pt}
 \paragraph{\rephrase (ICT-644235).}
 %\vspace{-12pt}
@@ -471,6 +478,14 @@ heterogeneous multicore/manycore architectures, in which developers exploit a va
 parallel patterns to develop component based applications in Erlang and C++. These
 component based pattern-applications may then be re-mapped to meet the
 application requirements and hardware availability. 
+\vspace{-2pt}
+\paragraph{\grow (EU No.690199).}
+The \GROW project (funded from the European Union’s Horizon 2020 research and innovation programme under grant agreement No.690199) is the first continental-scale Citizens’ Observatory to monitor a key parameter for science, continuously over an extended period, and at an unmatched spatial density. GROW has, for the first time, used crowdsourced ground observations from low-cost sensors to validate soil moisture information from satellites, including the new generation of high-resolution satellites, Sentinel-1.
+
+24 GROW communities in 13 European countries create an unprecedented network of 6,502 ground-based soil sensors and a dataset of 516M rows of soil data. 
+
+\paragraph{\weobserve (EU No.776740).}
+Weobserve is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
 
 \subsubsection{Overall approach and methodology}
 
@@ -1951,6 +1966,10 @@ In projects with partner companies state-of-the-art research results are applied
 \item ALOHA (H2020 Grant Agreement 780788) - Software framework for runtime-Adaptive and secure deep Learning On Heterogeneous Architectures. SCCH's role: develop deep transfer learning based methods for surveillance applications
 
 \item TRESSPASS (H2020 SEC-2016-2017-2, Proposal Nr. 787120) - robusT Risk basEd Screening and alert System for PASSengers and luggage. SCCH's role: develop deep learning based methods for security applications
+
+\item GROW (H2020 Grant Agreement No.690199) Citizen Observatory that has ground-truthed Sentinel-1 to improve the accuracy of predictions on extreme events, such as flood, drought and wildfire. \url{https://growobservatory.org};
+
+\item WeObserve (H2020 Grant Agreement No.776740) An Ecosystem of Citizen Observatories for Environmental Monitoring. Umbrella for H2020 projects GROW Observatory, Landsense, Groundtruth 2.0 and Scent \url{https://growobservatory.org};
 
 \end{itemize}
 
