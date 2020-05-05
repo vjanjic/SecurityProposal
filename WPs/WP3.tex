@@ -11,20 +11,23 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-\item Identify security risks in systems for distributed storage of big data, targetting both distributed NoSQL databases such as ScyllaDB, MongoDb and plain distributed filesystems such as Hadoop HDFS; 
-\item Identify security risks in big data processing systems based on distributed parallel patterns such as MapReduce;
-\item Develop novel secure and privacy-preserving mechanisms for data release in machine learning based big data processing; \vjcomment{SCCH part}
-\item Develop novel techniques for privacy-secured knowledge sharing in machine learning based AI systems; \vjcomment{SCCH part}
-\item Integrate the self-healing mechanisms from WPXX into security diagnostics mechanisms for big data storage and analysis to allow dynamic user-controlled repairing of the identified security and privacy risks;  
+\item Identify security risks in systems for distributed storage that are used in large-scale distributed machine learning based on big data;
+%, targetting both distributed NoSQL databases such as ScyllaDB and MongoDb and plain distributed filesystems such as Hadoop HDFS; 
+\item Identify security risks in distributed machine-learning based processing of big data, targetting systems based on distributed parallel patterns such as MapReduce;
+\item Develop novel mechanisms for evaluating and reducing privacy leakage in distributed machine learning processing systems;
+%secure and privacy-preserving mechanisms for data release in machine learning based big data processing; \vjcomment{SCCH part}
+\item Develop a novel framework for privacy-preserving transfer of knowledge extracted from big private data sets to other parties;
+%techniques for privacy-secured knowledge sharing in machine learning based AI systems; \vjcomment{SCCH part}
+\item Support semi-automatic repairing of the user code by integrating the self-healing mechanisms from WPXX into security and privacy-leakage diagnostics mechanisms for machine-learning based big data storage and analysis;
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-  The goal of this workpackage is to provide mechanisms for identifying security problems in distributed big data storage and processing. It will exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In task \ref{task:storage} we will focus on the problem of identifying vulnerabilities in storage of big data, for which distributed NoSQL databases or plain distributed filesystems, with very basic security mechanisms, are most often used. Complementary to that, task \ref{task:processing} focuses on distributed processing of big data. We restrict our attention to the systems that are based on parallel patterns (of which MapReduce is the most famous), as parallel patterns encapsulate all interaction between different distributed agents, therefore localising the possible source of vulnerabilities in the distributed systems. Tasks \ref{task:release} and \ref{task:sharing} narrow down the focus to the data processing that is based on machine learning, developing techniques for privacy-secured data release and knowledge sharing for this kind of analytics. Finally, task \ref{task:healing} integrates self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. 
+  The goal of this workpackage is to provide mechanisms for identifying security problems in distributed big data storage and processing, focusing on machine-learning based data analytics. It will exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In task \ref{task:storage} we will focus on the problem of identifying vulnerabilities in systems for storage of big data used to train the machine-learning models. These systems most often use distributed NoSQL databases, such as ScyllaDB or MongoDB, or plain distributed filesystems such as HDFS that use very basic security mechanisms. Complementary to that, task \ref{task:processing} focuses on machine-learning based distributed analysis of big data. We restrict our attention to the systems that are based on parallel patterns (most of which being built on top of MapReduce paradigm), as parallel patterns encapsulate all interaction between different distributed agents, therefore localising the possible source of vulnerabilities in the distributed systems. This work will feed into WPXX, where security properties of such systems will be formally established and proved. Task \ref{task:privacyLeakage} focuses on evaluating and reducing privacy-leakage in distributed machine learning, by investigating optimal noise-adding mechanisms for that. Task \ref{task:knowledgeSharing} investigates knowledge sharing in distributed machine learning, developing techniques for privacy-preserving transfer of knowledge extrated from large data sets. Finally, task \ref{task:healing} investigates implementing self-healing mechanisms developed in WPXX into the security and privacy-leakage diagnostics techniques developed in this workpackage. Collectively, the diagnostics and repair mechanisms for security and privacy of machine learning data analytics from this work package will feed feed into the refactoring-based self-healing methodology from WP6. 
 \end{WPDescription}
 
 \begin{Task}
-\TaskTitle{Identifying Vulnerabilities in Distributed Data Storage}
+\TaskTitle{Identifying Vulnerabilities in Distributed Data Storage for Machine Learning}
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
@@ -38,7 +41,7 @@ In \theTask, we will define the methodology and conduct an analysis of vulnerabi
  \end{Task}
 
  \begin{Task}
- \TaskTitle{Identifying Vulnerabilities in Distributed Pattern-Based Big Data Processing}
+ \TaskTitle{Identifying Vulnerabilities in Distributed Pattern-Based Machine Learning Data Analytics}
  \TaskParticipant{UOD}{1}
  
  \TaskStart{1}
@@ -52,7 +55,7 @@ In \theTask, we will define the methodology and conduct an analysis of vulnerabi
 \end{Task}
  
 \begin{Task}
-  \TaskTitle{Secure and Privacy-Preserving Data Release in Machine Learning Based Distributed Data Processing}
+  \TaskTitle{Evaluation and Reduction in Data Leakage for Distributed Machine Learning Data Analytics}
   \TaskParticipant{SCCH}{1}
   
   \TaskStart{1}
@@ -61,7 +64,8 @@ In \theTask, we will define the methodology and conduct an analysis of vulnerabi
   %\ref{del:model1}
   }
   \TaskHeader{}
-  \tasklabel{task:release}
+  \tasklabel{task:privacyLeakage}
+  In this task, we will develop mechanisms to both evaluate and reduce information leakage in distributed machine learning data analytics systems. The methods for evaluation of privacy leakage will be investigated in terms of relationship between sensitive data and released public data. Our approach is to employ a stochastic model for approximating the uncertain mapping between released noise added data and private data. The stochastic model facilitates a variational approximation of privacy-leakage in-terms of mutual information between sensitive private data and released public data. For reducing information leakage, we will develop optimal noise adding mechanisms for preserving privacy in distributed machine learning. We will derive analytically the noise distribution that maximizes a given utility function or equivalently minimizes a given data distortion function. Different use cases may demand different utility functions and thus optimal noise adding mechanism is derived for each utility function separately.  
  \end{Task}
 
  \begin{Task}
@@ -74,7 +78,8 @@ In \theTask, we will define the methodology and conduct an analysis of vulnerabi
   %\ref{del:model1}
   }
   \TaskHeader{}
-  \tasklabel{task:sharing}
+  \tasklabel{task:knowledgeSharing}
+  This task will develop an analytical framework to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. The goal is to answer the question: how can a model be transferred from a source to a target domain while preserving privacy of both source and target domains? An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.
  \end{Task}
 
  \begin{Task}
