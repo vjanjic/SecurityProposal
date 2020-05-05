@@ -5,7 +5,7 @@ BIB=references.bib
 
 TEX_DIR=tex/
 VERB_DIR=verb/
-MAIN=RePhorm2
+MAIN=SecurityProposal
 
 .PHONY: clean veryclean
 
