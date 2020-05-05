@@ -10,19 +10,21 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-%% Why just embedded? Are these domains correct? KH
-\item Solve the world
+\item Define security metrics and policies for the authentication service;
+\item Design and develop the authentication service;
+\item Develop intelligent biometrics for continuous authentication;
+\item Design and develop an interactive dashboard for service integration and authentication analytics.
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} addresses the problem of solving the world.
+\theWP{} aims to address Objective 5 by designing and developing an AI-driven and user-centered authentication-as-a-service aiming to preserve security but at the same time provide a positive security experience to the end-users. The primary goals are to: i) provide high levels of security through 2FA and continuous authentication to confirm the identity of each end-user and accordingly authorize access to certain parts of data in the system; ii) improve the usability and user experience through easy-to-use and fluid authentication methods; and iii) enable developers and administrators to easily integrate, deploy and manage their preferred authentication method based on custom requirements and policies. We will initially adopt state-of-the-art security and usability metrics of token-based and biometric-based user authentication schemes and accordingly design various authentication policies (T5.1), we will design and develop working prototypes of the user authentication service (T5.2), we will develop intelligent biometrics for continuous authentication (T5.3), and design and develop an interactive dashboard for the authentication service integration and authentication analytics (5.4).
+
 \end{WPDescription}
 
 \begin{Task}
-%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Solving the World}
-\TaskParticipant{UOD}{1}
+\TaskTitle{Security Metrics and Authentication Policies Design}
+\TaskParticipant{COGNI}{1}
 
 \TaskStart{1}
 \TaskEnd{27}
@@ -30,10 +32,56 @@ The objectives of \theWP{} are to:
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:solve}
+\tasklabel{task:ua_metrics}
 
-In \theTask, we will solve the world. 
+In \theTask, we will define the methodology and conduct an analysis, elicitation and validation of the security measurements, metrics and policies of the user authentication service. It will include an extensive analysis on state-of-the-art research in the area of two-factor authentication (2FA) and intelligent biometric authentication aiming to identify important security metrics and authentication policies, as well as current best practices and guidelines in the area. We will further conduct an analysis of works on existing user authentication approaches within the aerospace, healthcare and banking domains in order to identify the peculiarities of user authentication in each domain. The task will also entail a series of semi-structured interviews that will be conducted with various stakeholders at the end-user organizations aiming to identify current user authentication practices, policies and procedures followed at each organization. This task will proceed in three phases. 
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Authentication Service Design and Development}
+\TaskParticipant{COGNI}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:ua_designdevelopment}
+
+In \theTask, we will design and develop the user authentication service. A User-Centered Design methodology will be adopted for developing and finalizing the user authentication scheme through multiple iterations (three releases are anticipated; initial, refined, final software) that will be used for evaluation studies. The developed user authentication system will be evaluated through experiments with synthetic data as well as actual users (as part of WP7) aiming to evaluate its security and usability aspects. In the context of conducting studies with actual users with the developed authentication service, we assure that all personal data collection and processing will be carried out according to EU and national legislation. This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality as well as paper prototypes based on users’ requirements analysis. In the second phase, the user authentication service will be further developed into an extended working prototype including almost all functional requirements, however that has not been optimized in terms of performance and user experience. A fully functional user authentication service will be developed in the third phase. Emphasis will be given to the interoperability of the components and maximizing the efficiency and effectiveness of the service running on different platforms (desktop, mobile, wearable devices). The service will be validated based on benchmarking software criteria and qualities ensuring the adequate performance, robustness, scalability, maintainability and security. This task will proceed in three phases. 
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Continuous Authentication based on Intelligent Biometrics}
+\TaskParticipant{COGNI}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:ua_biometrics}
+
+In \theTask, we will develop continuous authentication methods aiming to augment the existing security layer of distributed data analytics application with intelligent biometrics. Continuous authentication will be achieved with: i) behavior biometrics by analyzing the end-users' interaction behavior with the system; ii) eye-gaze biometrics by analyzing the end-users' eye gaze data and visual behavior during interaction; and iii) physiological biometrics by analyzing the end-users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands).
 This task will proceed in three phases. 
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Interactive Dashboard for Service Integration and Authentication Analytics}
+\TaskParticipant{COGNI}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:ua_dashboard}
+
+In \theTask, we will design and develop an interactive dashboard that will allow developers and administrators to setup their user authentication and policies, and compile and display users’ interaction and behavior data to monitor their experience and highlight any usability issues. Furthermore, the dashboard will provide easy and intuitive access to the users’ interaction data collected in different formats (e.g., data and information visualizations, and tabular representations). In addition, it will support various filtering and aggregation options to focus on a particular subset of the collected data based on, for e.g., time and threshold filters. The interactive dashboard will translate the raw data into inferred knowledge, which will be useful for the experimental evaluation in WP7. This task will proceed in three phases. 
 \end{Task}
 
 

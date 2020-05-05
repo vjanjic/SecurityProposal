@@ -11,16 +11,16 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-\item Identify security risks in systems for distributed storage of big data, targetting both distributed NoSQL databases such as ScalaDB and plain distributed filesystems such as Hadoop HDFS;
+\item Identify security risks in systems for distributed storage of big data, targetting both distributed NoSQL databases such as ScyllaDB, MongoDb and plain distributed filesystems such as Hadoop HDFS; 
 \item Identify security risks in big data processing systems based on distributed parallel patterns such as MapReduce;
 \item Develop novel secure and privacy-preserving mechanisms for data release in machine learning based big data processing; \vjcomment{SCCH part}
-\item Develop novel technqiues for privacy-secured knowledge sharing in machine learning based AI systems; \vjcomment{SCCH part}
+\item Develop novel techniques for privacy-secured knowledge sharing in machine learning based AI systems; \vjcomment{SCCH part}
 \item Integrate the self-healing mechanisms from WPXX into security diagnostics mechanisms for big data storage and analysis to allow dynamic user-controlled repairing of the identified security and privacy risks;  
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-  The goal of this workpackage is to provide mechanisms for identifying security problems in distributed big data storage and processing. It will exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In task \ref{task:storage} we will focus on the problem of identifying vulnerabilitie in storage of big data, for which distributed NoSQL databases or plain distributed filesystems, with very basic security mechanisms, are most often used. Complementary to that, task \ref{task:processing} focuses on distributed processing of big data. We restrict our attention to the systems that are based on parallel patterns (of which MapReduce is the most famous), as parallel patterns encapsulate all interaction between different distributed agents, therefore localising the possible source of vulnerabilities in the distributed systems. Tasks \ref{task:release} and \ref{task:sharing} narrow down the focus to the data processing that is based on machine learning, developing techniques for privacy-secured data release and knowledge sharing for this kind of analytics. Finally, task \ref{task:healing} integrates self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. 
+  The goal of this workpackage is to provide mechanisms for identifying security problems in distributed big data storage and processing. It will exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In task \ref{task:storage} we will focus on the problem of identifying vulnerabilities in storage of big data, for which distributed NoSQL databases or plain distributed filesystems, with very basic security mechanisms, are most often used. Complementary to that, task \ref{task:processing} focuses on distributed processing of big data. We restrict our attention to the systems that are based on parallel patterns (of which MapReduce is the most famous), as parallel patterns encapsulate all interaction between different distributed agents, therefore localising the possible source of vulnerabilities in the distributed systems. Tasks \ref{task:release} and \ref{task:sharing} narrow down the focus to the data processing that is based on machine learning, developing techniques for privacy-secured data release and knowledge sharing for this kind of analytics. Finally, task \ref{task:healing} integrates self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. 
 \end{WPDescription}
 
 \begin{Task}
@@ -34,6 +34,7 @@ The objectives of \theWP{} are to:
 }
 \TaskHeader{}
 \tasklabel{task:storage}
+In \theTask, we will define the methodology and conduct an analysis of vulnerabilities in big data storage such as NoSQL databases and file systems such as HDFS.  We will select examples of  NoSQL databases constructed in C++ or  based on the JVM ( Java and Scala for instance) and identify vulnerabilities in the source code that could lead to security risks. Open source projects will be selected so that we can exploit the technologies for the source-code level analysis using symbolic execution (WPXX) to identify security risks that appear both in the individual data storage and processing agents in isolation, as well as from the interaction of these agents in distributed setting. In particular, side projects (such as language drivers) will be examined as these provide a attack vector that may be outside the open source projects control. 
  \end{Task}
 
  \begin{Task}
@@ -47,6 +48,7 @@ The objectives of \theWP{} are to:
  }
  \TaskHeader{}
  \tasklabel{task:processing}
+ In \theTask, we will define the methodology and conduct an analysis of vulnerabilities in big data analysis systems.  These systems provide their own security challenges as data is distributed across a great many systems and whilst analysis is in process the data may be transferred across nodes.  We will not tackle the security of the data whilst it is on the move (on the wire and the network stack) as they are the subject of other research areas.  The task will follow a similar pattern to that of \ref{task:storage} selecting candidates systems from those written in C++ or based on the JVM (Hadood, Spark, Flink, Storm) exploiting source-code level analysis using symbolic execution (WPXX) to expose security vulnerabilities.
 \end{Task}
  
 \begin{Task}
@@ -86,6 +88,7 @@ The objectives of \theWP{} are to:
   }
   \TaskHeader{}
   \tasklabel{task:healing}
+  In \theTask, we will integrate self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. A sample use case from one of the technologies surveyed in \ref{task:storage}, \ref{task:processing}in  will be selected to demonstrate the application of self healing to that technology. 
  \end{Task}
 
 \begin{WPDeliverables}

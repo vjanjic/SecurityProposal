@@ -270,7 +270,7 @@ With the emergence of big data, many different technologies for both storing and
 
 Symbolic execution is a way of executing a program abstractly, so that one abstract execution covers multiple possible inputs of the program that share a particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
 A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, feasible path through the program, and can be witnessed with a test case that illustrates the error.
-In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory aliasing, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
+In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
 
 \subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
 \vspace{-6pt}
@@ -891,7 +891,9 @@ also have a training benefit. Young researchers, software
  project into their future work places in the ICT industry.
  In that way the \TheProject{} vision and the project
  results will disseminate into many research groups and
- companies working in the field of security. In order to disseminate security and the work of the consortium to the wider public a MOOC (massively open online course) will be developed to reach an audience far beyond the academic and industrial community.  
+ companies working in the field of security. 
+ \paragraph{MOOC:}In order to disseminate security and the work of the consortium to the wider public a MOOC (massively open online course) will be developed to reach an audience far beyond the academic and industrial community.  MOOCs provide access, often to hundreds or thousands of people at a time, to focused online courses with learning goals and paths that present the opportunity to learn together at a flexible pace. Participants start and complete the training course on the MOOC at the same time as a cohort, to create community and for peer learning. The provision of a MOOC will also be
+used to enthuse and educate citizens about security and in particular the work of the project.  Work packages will provide accessible materials (text, videos, audio clips) highlighting the work that is being carried out. UoD brings a long‐term, established partnership to a market leading MOOC, FutureLearn, which will be supported far beyond the funded period. The FutureLearn MOOC is free and open, and brings a highly scalable platform into the project ecosystem, capable of sustaining more than 100,000 learners at one time.
 
 % \paragraph{General Communication:} We will adopt a good general communication strategy
 % aimed at maximising the outreach of the \TheProject{} project to the public at large.  We will issue
@@ -1245,6 +1247,7 @@ MS1 & Initial Requirements Analysis Completed & \textbf{1 -- 8} \\
 \end{minipage}
 
 \input{WPs/WPs}
+\input{WPs/WP3_SCCH}
 
 
 % \TODO{Milestones need to be discussed and then described here.}
@@ -2033,6 +2036,66 @@ Supports following industries:
 \end{itemize}
 
 % ============================
+\Participant{FRQ}{(\url{https://www.frequentis.com/})}
+
+\begin{wrapfigure}{R}{6,2cm}
+\vspace{-3cm}
+\hfill \includeimage[width=7cm]{logos/FRQ_logo.png}
+\vspace{-1cm}
+\end{wrapfigure}
+\vspace{10pt}
+
+Established in 1947 Frequentis has grown to an international supplier of communication and information systems with an export quota of more than 95\%. The core market is focused on safety critical control room solutions in various domains. Over 2000 employees are working in the corporate headquarters in Vienna, and subsidiaries in more than 50 countries worldwide. Frequentis is a member of SESAR Joint Undertaking and an active participant in numerous researches, regulatory, industry and standardization communities.
+
+Frequentis contributes its expertise in international project and technology know-how as an industry partner in various safety critical domains. Particularly the knowledge as a system integrator in the ATM domain will help to integrate the different components developed by the partners in the project to have successful demonstration and validation in the end. The international knowledge and experience of Frequentis will assure that the consortium possesses the scientific and technological expertise required for Digital Fortress.
+
+%\vspace{10pt}
+%\textbf{Frequentis leads work package WPXX}
+\vspace{10pt}
+
+\textbf{Key Personnel:}
+
+Eduard Gringinger (male) (PhD, MSc, MSocEcSc, BSc), is senior lead scientist and project manager with more than 10 years of experience in the research areas of safety critical data and services with a business focus on the air traffic management domain. He has work experience in relation with information management, data and service modelling and is member in various EUROCAE, ICAO/AMO working groups. He received a PhD, MSc, and a MSocEcSc with distinctions from Vienna University of Technology.
+
+Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006, he worked in various roles in safety critical domains at Frequentis. He was consultant for 3 years at AI Informatics and Siemens and is now is chairman of OwnYourData. He received his PhD from the Vienna University of Technology in mathematics (also working at the Innovative Computing Laboratory/University of Tennessee) and an MBA from the Danube University Krems (1 semester at the Weatherhead School of Management in Cleveland, Ohio).
+
+\subsubsection*{List of Publications}
+
+\begin{itemize}
+\item C.G. Schuetz, B. Neumayr, M. Schrefl, E. Gringinger and S. Wilson, "Semantics-based summarisation of ATM information: Managing information overload in pilot briefings using semantic data containers", The Aeronautical Journal (2019), 1-27. \url{doi:10.1017/aer.2019.74}
+\item E.Gringinger, R.M,Keller, A.Vennesland, C.G.Schuetz, and B.Neumayr, "A Comparative Study of Two Complex Ontologies in Air Traffic Management", in Proc. of the 2019 AIAA/IEEE 38th Digital Avionics Systems Conference (DASC), IEEE, September 2019, in press.
+\item E. Gringinger, C. Fabianek, C. Schütz, B. Neumayr, M. Schrefl, A. Vennesland, S. Wilson, "The Semantic Container Approach: Techniques for ontology-based data description and discovery in a decentralized SWIM knowledge base", Proceedings of the SESAR Innovation Days 2018 (SID 2018), December 3-7, 2018, Salzburg, Austria. \url{https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs\_2018\_paper\_78.pdf}
+\item E. Gringinger, C. Fabianek, C. Schütz, J. Stöbich, B. Neumayr, M. Schrefl, "A Proof-of-Concept Implementation of a Semantic Container Management System for Air Traffic Management", Proceedings of the EDAW 2018 Posters and Demonstrations Session co-located with 21st International Conference on Knowledge Engineering and Knowledge Management (EKAW 2018), November 12-16, 2018, ISSN 1613-0073, pp. 69-72, Nancy, France. \url{https://dblp.org/rec/bib/conf/ekaw/GringingerFSNS18}
+\item E. Gringinger, C. Schuetz, B. Neumayr, M. Schrefl and S. Wilson, "Towards a value-added information layer for SWIM: The semantic container approach", 2018 Integrated Communications, Navigation, Surveillance Conference (ICNS), Herndon, VA, 2018, pp. 3G1-1-3G1-14. \url{https://doi.org/10.1109/ICNSURV.2018.8384870}
+\item C. Flachberger, E. Gringinger, "Decision Support for Networked Crisis \& Disaster Management - A Comparison with the Air Traffic Management Domain", Information Systems for Crisis Response and Management (ISCRAM), Rio de Janeiro, Brasil, May 22-25, 2016. \url{https://episecc.eu/sites/default/files/1332\_ChristianFlachberger\%2BEduardGringinger2016.pdf}
+\end{itemize}
+
+
+\subsubsection*{Relevant Research Projects, Products and Patents}
+
+\begin{itemize}
+
+\item SATIE (H2020-SU-INFRA-2018, Grant agreement ID: 832969) - Security of Air Transport Infrastructure of Europe, \url{https://cordis.europa.eu/project/id/832969};
+
+\item SAPIENT (H2020-SESAR-2015-1, Grant agreement ID: 699328) - Satellite and terrestrial architectures improving performance, security and safety in Air Traffic Management (ATM), \url{https://cordis.europa.eu/project/id/699328};
+
+\item PJ19 CI (H2020-SESAR-2015-2, Grant agreement ID: 731765) - Sesar2020 Pj19-03 - Air Traffic Management Systems and Services, \url{https://www.eurocontrol.int/articles/content-integration-sesar-2020-project-pj19-ci};
+
+\item BEST (H2020-Sesar-03-2015, Grant agreement ID: 699298) - Achieving the BEnefits of SWIM by making smart use of Semantic Technologies, \url{http://www.project-best.eu/};
+
+\item Engage (H2020-SESAR-2016-2, Grant agreement ID: 783287) - SESAR Knowledge Transfer Network, \url{https://www.engagektn.com/};
+
+\item SEMCON (ICT of the Future Call 2018 Data Market: 869781) - Semantic Containers for Data Mobility, \url{https://www.ownyourdata.eu/en/semcon/};
+
+\item Patent for prioritization information (EP3118839A1) could be relevant for Digital Fortress, \url{https://patents.google.com/patent/EP3118839A1/en};
+
+\item MosaiX SWIM, the Frequentis ATM informaiton integration platform, \url{https://www.frequentis.com/sites/default/files/support/2018-02/MosaiX\%20SWIM.pdf}; 
+
+\end{itemize}
+
+% ============================
+
+
 
 
 \subsection{Third parties involved in the project (including use of third party resources)}

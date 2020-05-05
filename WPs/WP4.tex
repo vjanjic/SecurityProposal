@@ -21,19 +21,21 @@ The objectives of \theWP{} are to:
 
 \begin{Task}
 %\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Solving the World}
+\TaskTitle{Advanced Vulnerability Detection in Source Code}
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
-\TaskEnd{27}
+\TaskEnd{34}
 \TaskResults{%
 %\ref{del:model1}
 }
 \TaskHeader{}
 \tasklabel{task:solve}
 
-In \theTask, we will solve the world. 
-This task will proceed in three phases. 
+In \theTask, we will develop advanced vulnerability detection technology for C/C++ code. We plan to apply IBM's ExpliSAT symbolic interpretation tool to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of symbolic execution, static code analysis and white box fuzzing to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress. For that end, the symbolic execution engine will query a fuzzer at run-time for information that would assist the symbolic interpreter make progress where it previously couldn't. Static code analysis will assist to find suspected vulnerability locations prior to the invocation of the ExpliSAT tool and to control "hard to execute" use cases.
+
+This task will proceed in three phases ...
+
 \end{Task}
 
 

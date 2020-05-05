@@ -1,0 +1,87 @@
+\addtocounter{wpno}{1}
+\begin{Workpackage}{\thewpno}
+\wplabel{wp:privacyBigData}
+\WPTitle{Privacy-Preserving Knowledge Sharing in Distributed AI}
+\WPStart{Month 1}
+\WPParticipant{SCCH}{1}
+\WPParticipant{UOD}{1}
+\WPParticipant{COGNI}{1}
+\begin{WPObjectives}
+The objectives of \theWP{} are to:
+\begin{compactitem}
+\item Identify use cases' privacy requirements for distributed machine learning and data analytics;
+\item Derive optimal noise adding mechanisms for privacy-preserving distributed machine learning; 
+\item Develop novel methods for privacy-secured knowledge sharing in distributed AI;
+\item Develop novel techniques for optimizing trade-off between privacy and knowledge-sharing.  
+\end{compactitem}
+\end{WPObjectives}
+
+\begin{WPDescription}
+  The goal of this workpackage is to provide methods and techniques for privacy-preserving knowledge sharing in distributed machine learning and AI. A novel information theoretic framework will be introduced to evaluate privacy-leakage while sharing knowledge across domains. The workpackage will provide analytical and computational tools for optimizing the trade-off between privacy-leakage and knowledge-sharing.        
+\end{WPDescription}
+
+\begin{Task}
+\TaskTitle{Use Cases Requirements and Benchmarking}
+\TaskParticipant{SCCH}{1}
+
+\TaskStart{1}
+\TaskEnd{6}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+In this task, the privacy requirements for use cases will be documented. Corresponding to each use case, associated threat model will be defined which will form the basis of defining privacy requirements. The state-of-art methods will be considered for serving as baseline to evaluate the performance of the new methods for privacy-preserving distributed machine learning and transfer learning.  
+\tasklabel{task:requirements_and_benchmarking}
+ \end{Task}
+
+ \begin{Task}
+ \TaskTitle{Optimal Noise Adding Mechanisms for Privacy Preservation}
+ \TaskParticipant{SCCH}{1}
+ 
+ \TaskStart{1}
+ \TaskEnd{12}
+ \TaskResults{%
+ %\ref{del:model1}
+ }
+ \TaskHeader{}
+ This task is dedicated to the development of optimal noise adding mechanisms for preserving privacy in distributed machine learning. We seek to derive analytically the noise distribution that maximizes a given utility function or equivalently minimizes a given data distortion function. Different use cases may demand different utility functions and thus optimal noise adding mechanism is derived for each utility function separately.  
+ \tasklabel{task:privacy_optimal_noise}
+\end{Task}
+ 
+\begin{Task}
+  \TaskTitle{Evaluation of Privacy-Leakage}
+  \TaskParticipant{SCCH}{1}
+  
+  \TaskStart{6}
+  \TaskEnd{18}
+  \TaskResults{%
+  %\ref{del:model1}
+  }
+  \TaskHeader{}
+  In this task, new methods will be developed to evaluate privacy-leakage in-terms of mutual information between sensitive data and released public data. Our approach is to employ a stochastic model for approximating the uncertain mapping between released noise added data and private data. The stochastic model facilitates a variational approximation of privacy-leakage in-terms of mutual information between sensitive private data and released public data.   
+  \tasklabel{task:evaluation_privacy_leakage}
+ \end{Task}
+
+ \begin{Task}
+  \TaskTitle{Knowledge Sharing in Distributed AI}
+  \TaskParticipant{SCCH}{1}
+  
+  \TaskStart{19}
+  \TaskEnd{36}
+  \TaskResults{%
+  %\ref{del:model1}
+  }
+  \TaskHeader{}
+  This task will develop an analytical framework to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. The goal is to answer the question: how can a model be transferred from a source to a target domain while preserving privacy of both source and target domains? An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.    
+  \tasklabel{task:sharing}
+ \end{Task}
+
+ 
+
+\begin{WPDeliverables}
+  \begin{compactitem}
+    \item XX
+%\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
+\end{compactitem}
+\end{WPDeliverables}
+\end{Workpackage}
