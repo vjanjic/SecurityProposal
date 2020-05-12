@@ -172,17 +172,18 @@ We also hold various advance technical capability that can be used to support
 The specific \emph{aims} and \emph{objectives} of the \TheProject{} project are:
 
 \begin{description}
-\item[Aim 1:] To produce novel ways for formal specification and verification of security properties of
-  distributed data analytics systems, addressing all aspects of the big-data management, from collection of
-  data and storage to the end analytics;
+\item[Aim 1:] To produce novel methods for formal specification and verification of security properties of
+  distributed machine-learning based data analytics systems, addressing security and privacy of both data storage and data processing;
 
 \item[Aim 2:] To build on the existing and develop new efficient techniques for identifying generic code patterns that
-  represent known security vulnerabilities and data leakages in the distributed AI-based systems;
+  represent known security vulnerabilities and data leakages in the distributed AI-based systems and to develop novel techniques for  
+  repairing of the identified vulnerabilities and leakages;
 
 \item[Aim 3:] To build additional security layers on top of the existing systems, based on novel, intelligent and secure authentication methods;
 
 \item[Aim 4:] To integrate the \TheProject{} tools and techniques into a coherent self-healing methodology for establishing
-  security properties of the existing distributed code, as well as for developing new provably-secure code;
+  security and privacy properties of the code and repairing any identified vulnerabilities and leakages, targetting both 
+  existing distributed machine-learning based data analytics code and new provably-secure code;
 
 \item[Aim 5:]  To demonstrate the applicability of the \TheProject{} tools and
  methodology in building secure real-world application from the medical, aerospace and
@@ -200,8 +201,8 @@ The corresponding concrete \emph{objectives} are:
 %  \comment{CB: It's not clear to me what machine-readable actually means, as, arguably, any arbitrary stream of bytes in a file is machine readable :D I think this needs clarified. There's a worry here that this is the same as what we have done on TeamPlay, where we also developed proofs, contracts and certificates for security, energy and time. What is the novelty here? There should probably be some tie-in, perhaps, to the work done on TeamPlay, CSL, for instance, or the proof system developed there. I think this needs to tie in with the refactoring tooling. One novel approach here is the refactorings... perhaps new refactorings that transform the application in such a way that it can meet a user-defined security specification or contract?  }
 %  \comment{JB: If we are treating security contracts as a notion at several levels of abstraction and we can go between them, this would potentially be quite different from TeamPlay? It should not just be at the code level... }
  
-\item[Objective 1:] To develop a novel concept of \emph{secure} patterns for distributed data processing and to support these
-patterns with strictly defined and formally verifiable multi-level \emph{security contracts}, raising the level of abstraction
+\item[Objective 1:] To develop a novel concept of \emph{secure} patterns for distributed machine-learning based data analytics to support these
+patterns with strictly-defined and formally-verifiable multi-level \emph{security contracts}, raising the level of abstraction
 for developing secure distributed applications and providing formal guarantees about their security properties; 
 \emph{This fulfils part of \textbf{Aim 1}}. 
 %  \item[Objective 1:] To develop a novel techniques for verification of security properties of the application code,
@@ -209,18 +210,11 @@ for developing secure distributed applications and providing formal guarantees a
 %  the safety of runtime behaviour of undeterministic large-scale distributed data analytics; \emph{This fulfils part of
 %    \textbf{Aim 1}}.
 
-\item[Objective 2:] To identify security and privacy risks and the methods for their mitigation
-  in the state-of-the-art distributed machine-learning-based
-  data analytics platforms, both in the storage of big data using distributed databases and in the data processing
-  frameworks, thus guiding the verification of security contracts in the distributed settings. \emph{This fulfils parts
-    of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 2:] To develop novel techniques for identifying security and privacy risks, based on symbolic execution supported by fuzzy logic and on code analysis, both in storage of big data used for training of machine-learning models and in pattern-based distributed data analytics based on machine learning, guiding the verification of security properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
   
-\item[Objective 3:] To develop novel efficient technologies, based on combination of symbolic execution and fuzzing
-  techniques, for discovering known and identifying new security vulnerabilities in the C/C++ code. \emph{This fulfils
-    part of \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 3:] To develop novel \emph{self-healing} techniques, based on XX and noise-adding for data privacy, for semi-automatic repairing of the code for distributed machine-learning based data analytics in which security vulnerabilities and/or private data leakages have been identified.\emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:] To develop new techniques for identifying and controlling information leakage in distributed machine-learning based data analytics algorithms, as well as techniques for privacy secured transfer of knowledge from machine-learning models
-  built on big data sets. \emph{This fulfils parts of \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 4:] To build on the existing and develop new security \emph{coding standards} for C++, providing guidance to developing new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
 
 \item[Objective 5:] To augment the existing security layer of distributed data analytics application with AI-driven behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
@@ -499,23 +493,29 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 
 \eucommentary{Describe and explain the overall approach and methodology, distinguishing, as appropriate, activities indicated in the relevant section of the work programme, e.g. for research, demonstration, piloting, first market replication, etc.;}
 
-\TheProject{} comprises XX technical work packages: WP2 on XX;
-WP3 on XX;
-The relationship between the project objectives and these workpackages is shown below
+\TheProject{} comprises 6 technical work packages: WP2 on secure patterns for distributed machine-learning based data analytics; WP3 on security and privacy of data storage and AI-based data analytics; WP4 on identifying security vulnerabilities and self-healing technology; WP5 on intelligent user authentication; WP6 on methodology for developing secure applications by end users; and WP7 on use cases and evaluation. The relationship between the project objectives and these workpackages is shown below
 
 \vspace{-8pt}
 \begin{center}
 \begin{tabular}{|l|l|l|}\hline
 \textbf{Objective} & \textbf{Purpose} & \textbf{Contributing WPs} \\\hline \hline
-Objective 1 & XX & \textbf{WPXX}, \textbf{WPXX} \\\hline
+Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{WP2}, \textbf{WP3}, \textbf{WP4} \\\hline
+Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
+Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP2}, \textbf{WP6} \\\hline
+Objective 5 & Behavioural Authentication Models & \textbf{WP5} \\\hline
+Objective 6 & Refactoring-Based Methodology for Secure Applications & \textbf{WP3}, \textbf{WP4}, \textbf{WP5}, \textbf{WP6} \\\hline
+Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP7}\\\hline
+Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
 \end{tabular}
 \end{center}
 
 \paragraph*{Work Programme for Objective 1.}
 
-Objective 1 aims to build XX.
+Objective 1 aims to build secure patterns for distributed AI-based data analytics and to develop methods for formal specification and verification of security properties of those patterns. In WP2, we will develop secure patterns for distributed AI-based data analytics, as well as the methods for formal specification and verification of security and privacy properties of pieces of C++ code, in form of \emph{security certificates} that will specify these properties at a high level and also \emph{security contracts} that will be machine readable and, therefore, amenable for formal proving. In WP4, we will develop tools that will identify security risks in the existing C++ code, which will then be used in WP2 in the process of developing secure patterns. In WP3, we will apply these techniques to identify security vulnerabilies in storage and processing of data in AI models, as well as to identify and control leakage of sensitive data in building and exploiting these models. 
 
 \paragraph*{Work Programme for Objective 2.}
+
+Objective 2 aims to develop novel techniques for repairing security vulnerabilities and data leakages in the C++ code. In WP4, we will develop techniques for repairing of the security vulnerabilities. These techniques will be based on XX, and their application will be under control of the end-user via semi-automated \emph{code refactoring}. In WP3, we will develop methods for optimal noise adding to control the leakage of sensitive data during building of machine-learning models, as well as the methods for secure knowledge exchange between machine-learning models and third parties. 
 
 \subsection{Ambition}
 
