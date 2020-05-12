@@ -9,13 +9,21 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-%% Why just embedded? Are these domains correct? KH
-\item Solve the world
+\item Develop new refactorings that repair security vulnerabilities.
+\item Develop new refactorings that rewrite source-code so that it conforms to a security-aware coding standard.
+\item Develop new refactorings that introduce security-aware patterns into the source-code.
+\item Develop new security-aware patterns.
+\item Develop a new security-aware software engineering methodology for the development of secure big-data applications.
+\item Develop a new C++ coding standard for the development of security-aware big-data applications.
+
+
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} aims to build a new methodology for the development of secure applications...
+This workpackage will investigate new software engineering techniques and tools for the development of security-aware big-data applications. We will develop new end-user refactoring tool support in \ref{task:refactoring}; new security-aware software development patterns in \ref{task:patterns}, that will be provided to the user in the form of a new software library, with refactoring tool-support for their introduction in \ref{task:refactoring}; a new security-aware software engineering methodology in \ref{task:methodology}, encapsulating new software engineering methods and techniques from all the tools developed as part of the \TheProject{} project. In \ref{task:standards}, we will develop a new C++ coding standard for the development of secure big-data applications in C++. Finally, in \ref{task:interoper}, we will enable interoperability between the tools developed in the other workpackages to form a coherent software tool-chain and methodology for the end-user.
+
+
 \end{WPDescription}
 
 \begin{Task}
@@ -29,10 +37,26 @@ The objectives of \theWP{} are to:
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:solve}
+\tasklabel{task:refactoring}
 
-In \theTask, we will solve the world. 
-This task will proceed in three phases. 
+In  \theTask{}, we will develop semi-automatic refactorings to support the end-user by providing tool-support through the  secure-aware programming methodology from \ref{task:methodology}. These refactorings will operate at the program source level, where a refactoring will be implemented as a source-to-source program transformation. 
+
+The refactorings themselves will be developed based on a set of formal refactoring rules (which will be defined in terms of the refactoring's pre- and post-conditions, together with a set of transformation rules). The output of the refactoring will be an equivalent application, with increased security, decreased vulnerability and higher conformance to the security-aware coding standards (from \ref{task:standards}).
+
+The refactoring tool will be integrated into the ParaFormance refactoring tool, supporting both Eclipse and Visual-Studio for C++ applications. A prototype implementation for Java-based applications will also be produced. The results of this task will be used to refactor the use-cases in \ref{wp:usecases}.
+
+This task will proceed in three phases. In the \emph{first} phase we will identify transformations for C++ applications that will introduce the patterns from \ref{task:patterns} into C++ applications, by defining their pre- and post-conditions, together with their formal transformations rules. In the \emph{second} phase, we will produce implementations of the refactorings defined in the first phase, implemented in the ParaFormance tool-chain, for C++. In this phase, we will consider the outputs from the Advanced Vulnerability Detection from \ref{task:vulnerability} and the Self-Healing from T XX (as defined in \ref{wp:vulnerability}) to provide the refactoring tool with the static analysis information required to discovery vulnerabilities and information on how to repair them.
+ In the \emph{third} phase, we will produce refactorings that further refactor the code so that it conforms to the standards outlined in \ref{task:standards}, where possible. We will also produce prototype implementations of a tractable set of the refactorings from all the phases for Java-like languages.
+
+
+%
+%In particular, in this task we will produce new refactorings that will:
+%
+%\begin{itemize}
+%	\item Repair vulnerable code, by taking the output of the Self Healing tooling from XX, 
+%	\item Introduce security-aware patterns, based on the implementation of the patterns in Task X.
+%	\item Rewrite source-code so that it conforms to the standard as defined in Task X.
+%\end{itemize}
 \end{Task}
 
 \begin{Task}
@@ -46,10 +70,25 @@ This task will proceed in three phases.
 		%\ref{del:model1}
 	}
 	\TaskHeader{}
-	\tasklabel{task:solve}
+	\tasklabel{task:patterns}
 	
-	In \theTask, we will solve the world. 
-	This task will proceed in three phases. 
+In \theTask{} we will formalise and implement patterns of security that arise in typical big-data applications. As part of this process, we will investigate the relationship between common security threats and their source-level solutions, producing a high-level domain-specific language (DSL) for describing a set of design patterns for the end-user. This DSL will be made available to the end-user developer as a library of security-aware patterns and will be used by the refactoring tooling from \ref{task:refactoring}.
+\end{Task}
+
+\begin{Task}
+	%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
+	\TaskTitle{New Coding Standards for Security-Aware Applications}
+	\TaskParticipant{UOD}{1}
+	
+	\TaskStart{1}
+	\TaskEnd{27}
+	\TaskResults{%
+		%\ref{del:model1}
+	}
+	\TaskHeader{}
+	\tasklabel{task:standards}
+	
+	In \theTask, we will develop new C++ coding and security standard to facilitate programming of secure big-data applications. The task will proceed in two phases. First, we will identify those properties that arise in security-aware applications, such as secrecy of variables, branching vulnerabilities, etc.; secondly, we will implement a new security-aware programming standard, encapsulating the properties from the first phase, to create a new C++ coding standard. 
 \end{Task}
 
 \begin{Task}
@@ -63,11 +102,37 @@ This task will proceed in three phases.
 		%\ref{del:model1}
 	}
 	\TaskHeader{}
-	\tasklabel{task:solve}
+	\tasklabel{task:methodology}
 	
-	In \theTask, we will solve the world. 
-	This task will proceed in three phases. 
+	In \theTask, we will produce a new software engineering methodology for the development of secure-aware big-data applications. In this task, we will look to assess the suitability of the tools and techniques developed within the project to support different software development models. 
+	In the first phase of this task, we will assess existing  software engineering methods and their applicability to develop secure-aware applications for big data.
+	In the second phase of this task, we will assess the applicability of the individual tools and techniques developed on the \TheProject{} project, and their applicability to a secure-aware software methodology. 
 \end{Task}
+
+\begin{Task}
+	%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
+	\TaskTitle{Interoperability of the \TheProject{} Tool-Chain}
+	\TaskParticipant{UOD}{1}
+	
+	\TaskStart{1}
+	\TaskEnd{27}
+	\TaskResults{%
+		%\ref{del:model1}
+	}
+	\TaskHeader{}
+	\tasklabel{task:interoper}
+	
+	In \theTask, we will ensure the interoperability of the tools produced in WP2, WP3, WP4, WP5 and WP6. 
+	
+	\begin{itemize}
+		\item verification tools
+		\item self-healing
+		\item end-users tools
+	\end{itemize}
+\end{Task}
+
+
+
 
 \begin{WPDeliverables}
   \begin{compactitem}
