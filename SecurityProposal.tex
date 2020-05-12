@@ -263,23 +263,27 @@ Parallel patterns are a well-established abstraction for programming complex par
 \subsubsection*{Objective 2: Identification of Security and Privacy Risks in Machine-Learning Based Data Analytics}
 \vspace{-6pt}
 
-With the emergence of big data, many different technologies for both storing and processing this data have emerged. On the storage side, most commonly used tools are distributed databases and flat filesystems. While providing good reliability via fault tolerance, the security mechanisms used by databases and filesystems are still very basic, making them a security liability. On the data processing side, machine-learning has emerged as the prominent set of methods for making sense of and analysing the vast amount of data available. Distributed machine learning algorithms, however, present a whole set of new challenges, both in terms of security and in terms of privacy. Security risks and privacy leaks can come both from training and applying the machine learning models, as well as from the models themselves. In the \TheProject{} project, we will develop methods to identify known and unknown security risks coming both from the individual agents invovled in the process of storing and analysing big data, and from the interaction between different agents in distributed settings.
+With the emergence of big data, many different technologies for both storing and processing this data have emerged. On the storage side, most commonly used tools are distributed databases and flat filesystems. While providing good reliability via fault tolerance, the security mechanisms used by databases and filesystems are still very basic, making them a security liability. On the data processing side, machine-learning has emerged as the prominent set of methods for making sense of and analysing the vast amount of data available. Distributed machine learning algorithms, however, present a whole set of new challenges, both in terms of security and in terms of privacy. Security risks and privacy leaks can come both from training the models and from using the built models, as well as from the models themselves. In the \TheProject{} project, we will develop methods to identify known and unknown security risks coming both from the individual agents invovled in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use both static source code analysis and dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code. We will also develop methods based on stochastic modelling for identifying and quantifying leakage of private information coming from building and applying of distributed machine learning models.
+
+\subsubsection*{Self-Healing Mechanisms for Repairing Vulnerabilities and Reducing Data Leakage}
+While identifying security risks and privacy leaks is critical for security of distributed data analytics, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as much transparent to the end user as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, the end user should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformation that aim to improve security and privacy. In the \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Privacy leaks will be addressed using optimal noise-adding mechanisms while security risks will be repaired using various code transformation techniques. We will also address the problem of knowledge transfer from the data owned by one party to another party while still respecting data privacy. All the code transformation will be supported by software refactoring, guiding the user step-by-step in the process of transforming their code and allowing its input at any stage.
 
 
-\subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
-\vspace{-6pt}
+%% We will move part of this to the background work & advancement beyond STOA
+%%\subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
+%%\vspace{-6pt}
 %\vjcomment{IBM to write this part}
+%%Particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
+%%A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, %%feasible path through the program, and can be witnessed with a test case that illustrates the error.
+%%In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
 
-Symbolic execution is a way of executing a program abstractly, so that one abstract execution covers multiple possible inputs of the program that share a particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
-A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, feasible path through the program, and can be witnessed with a test case that illustrates the error.
-In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
+%% VJ : Also move this to the background & advancement beyond STOA
+%\subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
+%\vspace{-6pt}
+%The datasets containing sensitive information can't be publicly shared as a privacy-risk posed by several types of attacks exists. A novel information theoretic framework is introduced for privacy-preserving distributed machine learning such that privacy-leakage is quantified by the mutual information between sensitive data and released data. At the core of privacy-preserving framework lies a stochastic model approximating the uncertain mapping between released noise added data and private data such that the model is employed for variational approximation of informational privacy. The suggested privacy-preserving framework consists of three components: 1) Optimal Noise Adding Mechanism; 2) Modeling of Uncertain Mapping Between Released Noise Added Data and Private Data; and 3) Variational Approximation of Information Privacy. 
+%There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
 
-\subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
-\vspace{-6pt}
-The datasets containing sensitive information can't be publicly shared as a privacy-risk posed by several types of attacks exists. A novel information theoretic framework is introduced for privacy-preserving distributed machine learning such that privacy-leakage is quantified by the mutual information between sensitive data and released data. At the core of privacy-preserving framework lies a stochastic model approximating the uncertain mapping between released noise added data and private data such that the model is employed for variational approximation of informational privacy. The suggested privacy-preserving framework consists of three components: 1) Optimal Noise Adding Mechanism; 2) Modeling of Uncertain Mapping Between Released Noise Added Data and Private Data; and 3) Variational Approximation of Information Privacy. 
-
-
-There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
+\subsubsection*{Objective 4: Security Coding Standards}
 
 
 
@@ -500,6 +504,7 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 \begin{tabular}{|l|l|l|}\hline
 \textbf{Objective} & \textbf{Purpose} & \textbf{Contributing WPs} \\\hline \hline
 Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{WP2}, \textbf{WP3}, \textbf{WP4} \\\hline
+Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
 Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
 Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP2}, \textbf{WP6} \\\hline
 Objective 5 & Behavioural Authentication Models & \textbf{WP5} \\\hline
@@ -515,7 +520,28 @@ Objective 1 aims to build secure patterns for distributed AI-based data analytic
 
 \paragraph*{Work Programme for Objective 2.}
 
-Objective 2 aims to develop novel techniques for repairing security vulnerabilities and data leakages in the C++ code. In WP4, we will develop techniques for repairing of the security vulnerabilities. These techniques will be based on XX, and their application will be under control of the end-user via semi-automated \emph{code refactoring}. In WP3, we will develop methods for optimal noise adding to control the leakage of sensitive data during building of machine-learning models, as well as the methods for secure knowledge exchange between machine-learning models and third parties. 
+Objective 2 aims to develop techniques for identifying security vulnerabilities and data leakages in the C++ code. In WP4, we will develop fundamental techniques for identifying security vulnerabilities. These techniques will be based on static code analysis, as well as on dynamic symbolic execution of the code. In WP3, we will apply these techniques to identifying security vulnerabilities in distributed databases and machine-learning based distributed data analytics applications. WP3 will also investigate privacy leakage in machine-learning, both when building models on the training data and when the models are actually applied. The developed diagnostics for identifying vulnerabilities and leakages will be integrated into the overall \TheProject{} methodology in WP6.
+
+\paragraph{Work Programme for Objective 3.}
+
+Objective 3 aims to develop self-healing mechanisms for repairing security vulnerabilities and privacy leakage. In WP4, we will develop a foundational code transformations for self-healing. These transformations will be based on the identified vulnerabilities, as well as on the known secure code patterns for distributed data analytics, as developed in WP2. In WP3, we will develop techniques for applying these transformations both to the end-user code that uses distributed databases for data storage and that uses common pattern-based data analytics frameworks such as XX. WP3 will also develop techniques for controlling data leakage using optimal noise-adding mechanisms. In WP6, the transformations will be integrated into the software-refactoring based methodology for deveoping secure pattern-based distributed data analytics applications. 
+
+\paragraph{Work Programme for Objective 4.}
+
+Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP2 and WP6, we will build on the existing C++ security standards, such as XX, extending them with the new rules identified over the course of the project. We will also develop static analysis techniques for verification that the given C++ code conforms to these extended security standards. This analysis will be integrated into the overall \TheProject{} methodology in WP6.
+
+\paragraph{Work Programme for Objective 5.}
+
+\paragraph{Work Programme for Objective 6.}
+
+\paragraph{Work Programme for Objective 7.} 
+
+Objective 7 is to demonstrate effectiveness of the \TheProject{} approach on the real-world use cases from the air traffic control, telecommunications, banking and medical domains. In WP6, we will develop a tool-chain that will integrate all different techniques developed in WP2 -- WP5. This will be used in WP7 to evaluate the \TheProject{} technology  on use cases from XX, XX and XX. We will apply our techniques both on analysing/repairing the existing and on developing completely new distrbuted code from the chosen domains. While our ultimate goal is to test the techniques in realistic setting, \emph{data fabrication} methods that will be developed as a part of the methodology will allow us to produce immediately produce arbitrary amount of realistic data for rapid development and testing of our techniques. We will demonstrate increased security of the end-user software while at the same time decreasing cost of the production, deployment and maintenance of such a system.
+
+\paragraph{Work Programme for Objective 8.}
+
+Objective 8 is to ensure long-term uptake and use of \TheProject{} concepts and technologies. In WP8, we will undertake a range of dissemination and communication activities, that will include producing publications, documents and other materials, giving presentations and demonstrations, running dedicated workshops and tutorials to encourage uptake of \TheProject{} technologies, establishing and maintaining a communication strategy, producing of user-level documentation and training material, including tutorials, webinars etc., production and distribution of promotional and informational materials, including press releases, flyers etc., and updating and managing the web portal with user-related material. Uptake and use will be assisted by the inclusion of the highly-relevant use cases from the air traffic control, telecommunications, banking and medical domains.
+
 
 \subsection{Ambition}
 
@@ -537,8 +563,21 @@ The \TheProject{} project will revolutionise XX by:
 \item XX
 \end{itemize}
 
-\subsubsection{Security}
+\subsubsection{Distributed Machine-Learning Based Data Analytics}
 \label{sect:background-first}
+\label{sect:distAnalytics}
+
+\subsubsection{Formal Specification and Proving of Security Properties}
+\label{sect:formal}
+
+\subsubsection{Parallel Patterns for Distributed Data Analytics}
+\label{sect:patterns}
+
+\subsubsection{Coding Standards for Security}
+\label{sect:codingStandards}
+
+
+\subsubsection{Identifying Security Vulnerabilities}
 \label{sect:security}
 
 Application security is becoming increasingly important in modern computer systems.
@@ -607,6 +646,9 @@ vulnerability.
 \begin{itemize}
 \item XX
 \end{itemize}
+
+\subsubsection{Authentication}
+\label{sect:auth}
 
 \subsubsection{Use Cases}
 \label{sect:applications}
