@@ -1,41 +1,80 @@
 \addtocounter{wpno}{1}
 \begin{Workpackage}{\thewpno}
-\wplabel{wp:vulnerability}
+\wplabel{wp:securityContracts}
 \WPTitle{\wpname{\thewpno}}
 \WPStart{Month 1}
-\WPParticipant{IBM}{1}
+\WPParticipant{USTAN}{1}
+\WPParticipant{UOD}{1}
 \WPParticipant{SCCH}{1}
-\WPParticipant{SOPRA}{1}
+\WPParticipant{IBM}{1}
+\WPParticipant{UC3M}{1}
+
 
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
 %% Why just embedded? Are these domains correct? KH
-\item Solve the world
+\item Develop a formal high-level multi-tier specification language; % able to capture different levels of abstraction; %and security contracts
+\item Define abstraction/refinement as a bidirectional transformation between specifications across tiers;
+% How is distribution considerd?
+%BOTH for source code and code patterns that represent known vulnerabilities 
+%and relate different levels of abstraction (from models to code)
+\item Define a notion of behavioural equivalence also suitable to formalise refactorings. Extend this to formalise security-preserving equivalences and certificates.
+\item Define a logic suitable to capture 
+properties of interest (e.g., distributed stochastic temporal logic) interpreted over (distributed) traces of execution 
+\item Define a framework combining theorem provers and SMT solvers to prove the correctness in all of the above, and search for a subset of traces of execution that satisfy certain parameters (meets a certain threshold for instance);
+\item Explore an interplay between runtime verification and exhaustive formal verification;
+\item Develop a novel mechanism for automated 
+vulnerability localisation, containment, recovery and repair.
+
 \end{compactitem}
+
+\vspace*{1cm}
+
+Still working on this... need some inspiration on what can be novel.
+Need to talk about privacy as well, not just security.
+
+self-healing
+
+static vs dynamic
+
+dynamic patching?
+
+All of the above need to be revised to include Flavio's work, proof-braids, and similar notions.
+
+Notes: very relevant paper on transaction controller TACTL over Abstract state machines - multi-level...
+It includes a handler that can deal with deadlock, recovery, commit abort... 
+
+
+%Needs to be related to WP4 and vulnerabilities 
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} addresses the problem of solving the world.
+%\theWP{} addresses the problem of solving the world.
+
+The goal of \theWP{} is to provide mechanisms for specifying and verifying code with respect to
+(security) properties in distributed big data storage and processing
+
 \end{WPDescription}
+
+
+
 
 \begin{Task}
 %\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Advanced Vulnerability Detection in Source Code}
+\TaskTitle{Solving the World}
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
-\TaskEnd{34}
+\TaskEnd{27}
 \TaskResults{%
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:vulnerability}
+\tasklabel{task:solve}
 
-In \theTask, we will develop advanced vulnerability detection technology for C/C++ code. We plan to apply IBM's ExpliSAT symbolic interpretation tool to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of symbolic execution, static code analysis and white box fuzzing to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress. For that end, the symbolic execution engine will query a fuzzer at run-time for information that would assist the symbolic interpreter make progress where it previously couldn't. Static code analysis will assist to find suspected vulnerability locations prior to the invocation of the ExpliSAT tool and to control "hard to execute" use cases.
-
-This task will proceed in three phases ...
-
+In \theTask, we will solve the world. 
+This task will proceed in three phases. 
 \end{Task}
 
 

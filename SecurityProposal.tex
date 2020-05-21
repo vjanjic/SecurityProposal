@@ -153,13 +153,16 @@ We also hold various advance technical capability that can be used to support
 \begin{itemize}
 \item C++ standardization process with 12 years of membership in the ISO C++ standards committee.
 \item Integration in the C++ programming language of contracts in the form of preconditions, postconditions, invariants, \ldots
-\item Identification and avoidance of software vulnerabilities (security and asafety) derived from programming language features 
+\item Identification and avoidance of software vulnerabilities (security and safety) derived from programming language features 
 \item Patterns for parallel programming.
 \end{itemize}
 
 \pagebreak
 \section{Excellence}
-"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that signifies the importance of data analytics in modern world. Dealing with and making sense of the vast amount of data available to us through the variety of sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitisation of the modern world presents completely new challenges for cybersecurity. Highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
+"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that highlights the importance of data analytics in the modern world. Dealing with and making sense of the vast amount of data available to us through rich and diverse %the variety of 
+sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitisation of the modern world presents completely new challenges for cybersecurity. A highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
+
+\jbcomment{JB:There is a slight disconnect above between data and code (that processes and/or generates data) - needs to be made clearer, as we address both. Code is only mentioned in the final two sentences...}
 
 %The emergence of big data, supported by distributed machine-learning based data analytics tools and techniques, presents new and unforeseen challenges for data security and privacy. Security vulnerabilities can come both from the individual components of the distributed data-analytics systems, as well as from the undeterministic way in which these components may interact. The Digital Fortress project aims to develop a novel methodology and the associated tool-chain for implementing secure distributed data processing applications. We will tackle the problem both from theoretical and practical aspect, implementing novel formally-verifiable security contracts that will specify security properties of the distributed code, and supporting this contracts with a novel code refactoring tools and dynamic vulnerability detection techniques. The focus on the project will be on machine-learning based analytics techniques, addressing the issues that come from both storage and processing of the data and learning models. As an additional layer of security, we will implement novel integrated behaviour-based user authentication schemes.
 
@@ -183,7 +186,7 @@ The specific \emph{aims} and \emph{objectives} of the \TheProject{} project are:
 \item[Aim 3:] To build additional security layers on top of the existing systems, based on novel, intelligent and secure authentication methods;
 
 \item[Aim 4:] To integrate the \TheProject{} tools and techniques into a coherent self-healing methodology for establishing
-  security and privacy properties of the code and repairing any identified vulnerabilities and leakages, targetting both 
+  security and privacy properties of the code and repairing any identified vulnerabilities and leakages, targeting both 
   existing distributed machine-learning based data analytics code and new provably-secure code;
 
 \item[Aim 5:]  To demonstrate the applicability of the \TheProject{} tools and
@@ -508,7 +511,7 @@ Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{
 Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
 Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
 Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP2}, \textbf{WP6} \\\hline
-Objective 5 & Behavioural Authentication Models & \textbf{WP5} \\\hline
+Objective 5 & Intelligent User Authentication-as-a-Service & \textbf{WP5} \\\hline
 Objective 6 & Refactoring-Based Methodology for Secure Applications & \textbf{WP3}, \textbf{WP4}, \textbf{WP5}, \textbf{WP6} \\\hline
 Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP7}\\\hline
 Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
@@ -532,6 +535,8 @@ Objective 3 aims to develop self-healing mechanisms for repairing security vulne
 Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP2 and WP6, we will build on the existing C++ security standards, such as XX, extending them with the new rules identified over the course of the project. We will also develop static analysis techniques for verification that the given C++ code conforms to these extended security standards. This analysis will be integrated into the overall \TheProject{} methodology in WP6.
 
 \paragraph{Work Programme for Objective 5.}
+
+Objective 5 aims to analyze, design, develop and evaluate an intelligent and user-centered authentication-as-a-service which will allow digital service providers to integrate, deploy and manage multi-factor authentication (MFA) and continuous user authentication by reducing the complexity of development. A User-Centered Design (UCD) methodology will be followed for the design and development of the authentication technology aiming to assure that the solution meets the users' needs and expectations in terms of usability and security. The development lifecycle of the authentication component will include multiple design iterations and a significant amount of evaluation, which will be largely based on studies with the active participation of real end-users. These studies will be both formative (during the project’s course, with the aim of validating/refining the initial design) and summative (towards the end of the project, aiming to measure the quality and effectiveness of the final project results). The UCD approach will embrace three iterative cycles leading to three different system prototype releases (low-fidelity, high-fidelity, final release). Each iteration entails an analysis, design, implementation and integration, ending with an evaluation of derived prototypes providing thus valuable feedback for designing the next release. 
 
 \paragraph{Work Programme for Objective 6.}
 
@@ -650,10 +655,42 @@ vulnerability.
 
 \subsubsection{Authentication}
 \label{sect:auth}
+Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication (MFA)} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) [REF]. With regards to \textit{continuous user authentication}, several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones [REF], physiological data analysis such as body signals (heart rate, skin conductance, etc.) [REF] and face biometrics [10, 11], and eye gaze data analytics [REF]. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security (https://duo.com), Futurae (https://futurae.com), Acceptto (https://acceptto.com), Auth0 (https://auth0.com), Saaspass (https://saaspass.com)), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. 
+
+\subsubsection{Security Patterns}
+\begin{itemize}
+	\item Design pattern
+	\item parallel patterns or skeletons
+	\item abstractions over low-level implementation
+	\item provided as a library
+	\item structured approach
+	\item extended for security
+	\item new patterns X Y Z
+\end{itemize}
+
+\subsubsection{Refactoring}
+\begin{itemize}
+	\item Refactoring history
+	\item program transformation
+	\item refactoring used as a software engineering strategy
+	\item structural changes to the code
+	\item refactoring to introduce parallel patterns
+	\item will be extended to introduce security patterns, fix vulnerabilities, adhere to standard
+	\item some aspects may be proved correct
+\end{itemize}
+
+In essence, refactoring is about changing the structure of a program's source code in such a way that the change does not alter the functional behaviour of the program. It is a software engineering practice that is used daily by developers, who restructure code to make it more amenable to maintenance and extension. Refactoring is also a technique that is usually practised \emph{manually} by developers. The downside of manual refactoring is that it becomes very error-prone over large code bases; it also requires the refactorer to be an expert in the particular structural change that is being implemented. Refactoring tools, on the other hand, automate the process, allowing machine-checkable pre- and post-conditions to automatically ensure that the refactored code is functionally correct to the original. 
+
+Automated refactoring has roots in a long history, with the original refactoring work going back to the \emph{fold/unfold} system proposed by Bustall and Darlington in 1977~\cite{cfs}{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{cfs}{Mens:2004:SSR:972215.972286}, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
 
 \subsubsection{Use Cases}
 \label{sect:applications}
 \label{sect:background-last}
+
+\paragraph{Aviation}
+\label{sec:swim}
+- Various stakeholders in aviation are facing two key challenges: the requirement to migrate from ATS Message Handling System (AMHS) to System Wide Information Management (SWIM), and the requirement to integrate Unmanned Traffic Management (UTM) with ATM. SWIM is an integral component of the digital transformation that is taking place in the Aviation industry. This digital transformation is having a major impact, as not only systems but also new processes and new staff expertise are required Today Air Navigation Services Providers (ANSPs) rely on closed systems with proprietary point-to-point communication for data exchange. SWIM will enable these systems to operate as an overlay to IP networks using open standards and Air Traffic Management (ATM)-defined data exchange models (Aeronautical Information Exchange Model (AIXM), ICAO Meteorological Information Exchange Model (IWXXM), Flight Information Exchange Model (FIXM). 
+Such a platform shall act as an information backbone for connecting all aviation stakeholders supporting all aviation exchange models and legacy protocols and data formats to facilitate transition to SWIM. It shall be specifically designed to assist the Aviation industry with its migration to SWIM and to facilitate the exchange of information between all industry stakeholders for better informed decision making and the creation of new applications and services.
 
 \subsubsection{Key Technologies Used in the \TheProject{} Project}
 \label{sect:key-technologies}
@@ -677,6 +714,15 @@ IBM developed vulnerability detection technologies based both on static and dyna
 
 The \paraformance Refactoring tool was originally developed for the EU FP7 \paraphrase{} project, and later extended and enhanced in both \rephrase{} and the Scottish Enterprise innovation project, \paraformance{}. 
 \paraformance is a tool-chain designed to \emph{democratise} parallel programming by allowing software developers to quickly and easily write parallel software. \paraformance enables software developers to find the sources of parallelism within their code, automatically (through user-controlled guidance) through a process of \emph{pattern discovery}. \paraformance also offers refactoring support to allow parallel patterns to be introduced directly into the source code of the application, inserting the parallel business logic. \paraformance also has integrated safety checking features, to not only enable  the parallelised code to be thread-safe, but also the checking of sequential code, eliminating potential sources of parallelism errors that occur, such as race conditions and deadlocks. Finally, \paraformance is able to repair some of the parallelism errors detected by the safety checking to automatically make the application thread safe. \paraformance will be extended in \TheProject{} by adding safety checks for the distributed code, in addition to the existing mechanisms for checking the code that is executed on shared-memory machines. We will also extend the tool with features to check for \emph{security} of the code. 
+
+\paragraph {\SAshort{} CSL: The Contract Specification Language}
+CSL (Contract Specification Language) was developed as part of the ongoing H2020 \teamplay{} project. It is designed to act both as an annotation library for C applications, allowing the developer to annotate their source code both to reflect non-functional properties of time, energy and security back into the source code, but also in order to express assertions ---or contracts--- about the non-functional properties. Such non-functional properties could be, for example, the worst-case execution time (or energy) of a block of code, the security vulnerability level of a variable, etc. The assertions themselves are expressed in terms of these properties and other normal variables within the source code. The properties can also be reflected back into the source-program as first-class citizens: normal programming variables with values in the source-level space.
+The assertions are then passed to an underlying proof system together with an abstract interpretation of the C program. This proof system (currently implemented using the dependently typed language, Idris) produces  a proof of whether or not the assertion can be met. CSL will be extended in \TheProject{} by adding ... 
+
+\paragraph{\FRQshort{} MosaiX SWIM: Aviation Integration Platform}
+\label{sec:swim}
+The Frequentis Integration Platform is an end-to-end solution that provides aviation stakeholders (ANSPs, airports, airlines, met offices) with tools required to unlock and monetize their data by offering new services to their customers (i.e. airlines). It allows aviation stakeholders to easily interface with legacy and third-party systems, enabling data to be freed from traditional storage silos and fused with different sources. MosaiX SWIM is designed around a microservices architecture and an open messaging system in which all software components exist as independent artefacts and communicate in a decoupled way. This reduces vendor lock-in by allowing customers to substitute components and incorporate new technologies in the future. The platform provides an efficient API Manager and tools for billing consumers of services using models such as hourly billing or consumption-based billing. In addition, it offers preconfigured and customisable metrics and dashboards, together with data-analysis tools.
+
 
 
 \subsubsection{Innovation Potential}
@@ -1394,19 +1440,29 @@ which provide suitable low-cost,  low-overhead solutions that all partners are
 familiar with.  Our technical reports will form the basis for
 the public deliverables that appear on the project web site.
 
-\begin{figure}[t!]
-%\begin{wrapfigure}{l}{0.7\textwidth}
-%\vspace{-0.75in}
-%\hspace{-1in}
+\begin{figure}[ht!]
+\vspace{-0.75in}
 \begin{center}
-\centerline{\hspace{1in} 
-\hbox to \columnwidth{\hss\includeimage[height=5.7in,trim={0 0 0 2.5cm},clip]{Management}\hss}
-}
+\centerline{\hspace{1in} \hbox to \columnwidth{\hss\includeimage[height=5.7in]{Management}\hss}}
 \end{center}
 \vspace{-1.8in}
 \caption{Management Structure}
 \label{fig:management}
 \end{figure}
+
+%\begin{figure}[t!]
+%\begin{wrapfigure}{l}{0.7\textwidth}
+%\vspace{-0.75in}
+%\hspace{-1in}
+%\begin{center}
+%\centerline{\hspace{1in} 
+%\hbox to \columnwidth{\hss\includeimage[height=5.7in,trim={0 0 0 2.5cm},clip]{Management}\hss}
+%}
+%\end{center}
+%\vspace{-1.8in}
+%\caption{Management Structure}
+%\label{fig:management}
+%\end{figure}
 %\end{wrapfigure}
 
 %\TODO{Update this to reflect the consortium.}
@@ -1552,7 +1608,7 @@ agreements.
 \subsubsection*{Project Administrator}
 \vspace{-6pt}
 
-The Project Coordinator will be supported in his management
+The Project Coordinator will be supported in her management
 duties by a part-time \emph{Project Administrator} (to be appointed
 from staff already employed by \SA{}) and located at \SA{}.  The Administrator
 must possess both strong organisational skills and a
@@ -2122,7 +2178,7 @@ Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006,
 \end{itemize}
 
 
-\subsubsection*{Relevant Research Projects, Products and Patents}
+\subsubsection*{Relevant Research Projects, Patents, and Products}
 
 \begin{itemize}
 
