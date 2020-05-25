@@ -61,103 +61,105 @@ $Revision: 0.0$ $}\\[4ex]
 \pagenumbering{arabic}
 \setcounter{page}{2}
 
-\subsection{Contributions from the Partners}
+%%\subsection{Contributions from the Partners}
 
-\subsubsection{University of St Andrews - Security Contracts and Verification}
-\begin{itemize}
-    \item Formal specification of security contracts for pieces of code
-    \item Refactoring to introduce secure code in the applications
-    \item Formal verification of properties of the code with regard to security contracts
-    \item Automated verification and reasoning (model checkers, constraint solvers and theorem provers, sometimes used in combination), logics including distributed temporal logics 
-\end{itemize}
+%%\subsubsection{University of St Andrews - Security Contracts and Verification}
+%%\begin{itemize}
+%%    \item Formal specification of security contracts for pieces of code
+%%    \item Refactoring to introduce secure code in the applications
+%%    \item Formal verification of properties of the code with regard to security contracts
+%%    \item Automated verification and reasoning (model checkers, constraint solvers and theorem provers, sometimes used in combination), logics including distributed temporal logics 
+%%\end{itemize}
 
-\subsubsection{Dundee - Security for Big Data}
-\begin{itemize}
-    \item Identifying and addressing security risks in large-scale distributed databases, both open- and closed-source ones.
-    \item Identifying and analysing security risks in distributed parallel processing.
-    \item Security for machine-learning based big data analysis
-    \item Security contracts for distributed parallel code
-    \item Dissemination
-\end{itemize}
+%%\subsubsection{Dundee - Security for Big Data}
+%%\begin{itemize}
+%%    \item Identifying and addressing security risks in large-scale distributed databases, both open- and closed-source ones.
+%%    \item Identifying and analysing security risks in distributed parallel processing.
+%%    \item Security for machine-learning based big data analysis
+%%    \item Security contracts for distributed parallel code
+%%    \item Dissemination
+%%\end{itemize}
 
-\subsubsection{IBM - Vulnerability Detection and Data Fabrication}
-\begin{itemize}
-\item  Vulnerability Detection
+%%\subsubsection{IBM - Vulnerability Detection and Data Fabrication}
+%%\begin{itemize}
+%%\item  Vulnerability Detection
    
-We propose to extend the ExpliSAT symbolic execution technology to discover known security vulnerability patterns in C/C++ code and combine it with the tailored fuzzing techniques in specific areas for the purpose of assisting the symbolic execution engine to consistently make progress and thus overcome a known "path explosion" problem of symbolic interpretation technologies.
+%%We propose to extend the ExpliSAT symbolic execution technology to discover known security vulnerability patterns in C/C++ code and combine it with the tailored fuzzing techniques in specific areas for the purpose of assisting the symbolic execution engine to consistently make progress and thus overcome a known "path explosion" problem of symbolic interpretation technologies.
  
-\item Data Fabrication for ML
+%%\item Data Fabrication for ML
  
-We have recently started to explore a new and very challenging direction of synthetic data fabrication for improving robustness of ML models and AI-based applications. It includes  use cases like data enrichment (missing or not sufficient training data), poisoned data (malicious data that is used as part of training data set to cause machine learning model malfunction) and evasion attack (malicious data that causes malfunction of a trained model).
-Most of the recent research work in academia in this field is done based on "unstructured data" like images, video or text. We believe that for real industry use cases fubrication of structured data to test and improve robustness of ML models is more relevant. Our idea is to combine our rule-based (CSP-based) data fabrication approach with machine learning techniques to fabricate synthetic data for ML use cases.
+%%We have recently started to explore a new and very challenging direction of synthetic data fabrication for improving robustness of ML models and AI-based applications. It includes  use cases like data enrichment (missing or not sufficient training data), poisoned data (malicious data that is used as part of training data set to cause machine learning model malfunction) and evasion attack (malicious data that causes malfunction of a trained model).
+%%Most of the recent research work in academia in this field is done based on "unstructured data" like images, video or text. We believe that for real industry use cases fubrication of structured data to test and improve robustness of ML models is more relevant. Our idea is to combine our rule-based (CSP-based) data fabrication approach with machine learning techniques to fabricate synthetic data for ML use cases.
  
-\item Data Fabrication Platform
+%%\item Data Fabrication Platform
  
-It is actually our current DFP product that is used in SERUMS. It can be mentioned and used in the new proposal in combination with any of the two "new" direction listed above.
-\end{itemize}
+%%It is actually our current DFP product that is used in SERUMS. It can be mentioned and used in the new proposal in combination with any of the two "new" direction listed above.
+%%\end{itemize}
 
-\subsubsection{SCCH - Privacy-Preserving AI}
-\begin{itemize}
-    \item Informational Privacy
+%%\subsubsection{SCCH - Privacy-Preserving AI}
+%%\begin{itemize}
+%%    \item Informational Privacy
     
-    To constrain the information leakage from a data set, we motivate an information theoretic approach to  privacy where privacy is quantified by the mutual information between sensitive private information and the released public data.
-    \item Optimal Privacy Secured Data Release Mechanism 
+%%    To constrain the information leakage from a data set, we motivate an information theoretic approach to  privacy where privacy is quantified by the mutual information between sensitive private information and the released public data.
+%%    \item Optimal Privacy Secured Data Release Mechanism 
     
-    A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytic algorithm is adversely affected. We introduce a novel information theoretic approach for studying privacy-utility trade-off suitable for different data types (including high-dimensional data, signals, and images) and for the cases with unknown statistical distributions. 
+%%    A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytic algorithm is adversely affected. We introduce a novel information theoretic approach for studying privacy-utility trade-off suitable for different data types (including high-dimensional data, signals, and images) and for the cases with unknown statistical distributions. 
     
-    \item Privacy Secured Knowledge Sharing
+%%    \item Privacy Secured Knowledge Sharing
     
-    While sharing of knowledge extracted from a relatively large set of labelled data owned by an organization with another organization owning a few or no labelled data, it is intended that 
-    \begin{itemize}
-        \item privacy of data is preserved;
-        \item transferability of knowledge from source to target domain is evaluated for the design and analysis of transfer learning algorithms;
-        \item privacy-transferability trade-off is optimized. 
-    \end{itemize} 
-    We aim at the development of techniques and tools for the study and optimization of privacy and transferability aspects of machine learning based AI systems. 
-\end{itemize}
-\subsubsection{Cognitive UX - Intelligent User Authentication-as-a-Service}
-\begin{itemize}
-\item AI-driven and eye gaze-driven behavioral authentication (Topic C and D)
+%%   While sharing of knowledge extracted from a relatively large set of labelled data owned by an organization with another organization owning a few or no labelled data, it is intended that 
+%%    \begin{itemize}
+%%        \item privacy of data is preserved;
+%%        \item transferability of knowledge from source to target domain is evaluated for the design and analysis of transfer learning algorithms;
+%%        \item privacy-transferability trade-off is optimized. 
+%%    \end{itemize} 
+%%    We aim at the development of techniques and tools for the study and optimization of privacy and transferability aspects of machine learning based AI systems. 
+%%\end{itemize}
+%%\subsubsection{Cognitive UX - Intelligent User Authentication-as-a-Service}
+%%\begin{itemize}
+%%\item AI-driven and eye gaze-driven behavioral authentication (Topic C and D)
 
-We can bring in multi-factor authentication solutions and more specifically AI-driven behavioral authentication by adding another layer of security in the authentication process to verify the end-users based on their interaction behavior, and/or their eye gaze behavior. For doing so, we currently utilize and can also bring in the project a range of eye-tracking and wearable technologies.
+%%We can bring in multi-factor authentication solutions and more specifically AI-driven behavioral authentication by adding another layer of security in the authentication process to verify the end-users based on their interaction behavior, and/or their eye gaze behavior. For doing so, we currently utilize and can also bring in the project a range of eye-tracking and wearable technologies.
 
-\item Authentication-as-a-Service (Topic C and D)
-We are interested to conduct research and extend our product (Cognitive Authentication), which offers an integrated user authentication solution that allows service providers to set their own password policies, authentication types, get insights from end-users' interaction data, etc.
+%%\item Authentication-as-a-Service (Topic C and D)
+%%We are interested to conduct research and extend our product (Cognitive Authentication), which offers an integrated user authentication solution that allows service providers to set their own password policies, authentication types, get insights from end-users' interaction data, etc.
 
-\item User experience and usability evaluations and activities
-\item System integration and testing
-\item Dissemination activities on Usable Security, HCI, Authentication, Eye-tracking, and Intelligent User Interfaces
-\end{itemize}
+%%\item User experience and usability evaluations and activities
+%%\item System integration and testing
+%%\item Dissemination activities on Usable Security, HCI, Authentication, Eye-tracking, and Intelligent User Interfaces
+%%\end{itemize}
 
-\subsubsection{Sopra-Steria Limited}
+%%\subsubsection{Sopra-Steria Limited}
 
-As a commercial partner we want to start investigation into the following areas:
-\begin{itemize}
-    \item Finance (open banking for CMA9) as data source for a universal banking solution that supports a secure banking interaction with appropriate trust and privacy as expected. Want to test existing and future code for security vulnerabilities.
+%%As a commercial partner we want to start investigation into the following areas:
+%%\begin{itemize}
+%%    \item Finance (open banking for CMA9) as data source for a universal banking solution that supports a secure banking interaction with appropriate trust and privacy as expected. Want to test existing and future code for security vulnerabilities.
     
-    \item Space-based Open Internet capabilities with low Earth orbit satellites using an open meshed network for communication. Investigate how Delay/Disruption Tolerant Networking (DTN) and Solar System Internet (SSI) will impact our communication security and enable citizen services like social care and healthcare. Want to include security by design into the code and indirectly the deployed systems.
+%%    \item Space-based Open Internet capabilities with low Earth orbit satellites using an open meshed network for communication. Investigate how Delay/Disruption Tolerant Networking (DTN) and Solar System Internet (SSI) will impact our communication security and enable citizen services like social care and healthcare. Want to include security by design into the code and indirectly the deployed systems.
     
-    \item Distributed healthcare (IoT) to support remote healthcare and intervention via open network technology. Test and repair the IoT code for vulnerability at the edge of the network.
+%%    \item Distributed healthcare (IoT) to support remote healthcare and intervention via open network technology. Test and repair the IoT code for vulnerability at the edge of the network.
     
-    \item Sovereign Identity Clearance House using a Self-sovereign identity (SSI) token for essential communication as a citizen with the citizen's digital twin.
-\end{itemize}
+%%    \item Sovereign Identity Clearance House using a Self-sovereign identity (SSI) token for essential communication as a citizen with the citizen's digital twin.
+%%\end{itemize}
 
-We propose three business areas to research the develop of automated tools for validating the security and privacy of data processing code, underlying systems' code and exposed online services used to provision these services to citizens. We want to introduce a practical solution for zero-trust architecture of the system while preserving the ever-increasing use of open and common internet-based communication channels between businesses and citizens without losing the trust and security that each citizen wants.
+%%We propose three business areas to research the develop of automated tools for validating the security and privacy of data processing code, underlying systems' code and exposed online services used to provision these services to citizens. We want to introduce a practical solution for zero-trust architecture of the system while preserving the ever-increasing use of open and common internet-based communication channels between businesses and citizens without losing the trust and security that each citizen wants.
 
-Sopra-Steria Limited will supply an insight into the real-world case studies that we could use to prove the research is achieving the proposed outcomes.
+%%Sopra-Steria Limited will supply an insight into the real-world case studies that we could use to prove the research is achieving the proposed outcomes.
 
-We also hold various advance technical capability that can be used to support the general project to ensure data engineering, machine learning and data science skills are available for use by the projects research life-cycle.
+%%We also hold various advance technical capability that can be used to support the general project to ensure data engineering, machine learning and data science skills are available for use by the projects research life-cycle.
 
-\subsubsection{University Carlos III of Madrid}
+%%\subsubsection{University Carlos III of Madrid}
 
-\begin{itemize}
-\item C++ standardization process with 12 years of membership in the ISO C++ standards committee.
-\item Integration in the C++ programming language of contracts in the form of preconditions, post conditions, invariants, \ldots
-\item Identification and avoidance of software vulnerabilities (security and safety) derived from programming language features 
-\item Patterns for parallel programming.
-\end{itemize}
+%%\begin{itemize}
+%%\item C++ standardization process with 12 years of membership in the ISO C++ standards committee.
+%%\item Integration in the C++ programming language of contracts in the form of preconditions, post conditions, invariants, \ldots
+%%\item Identification and avoidance of software vulnerabilities (security and safety) derived from programming language features 
+%%\item Patterns for parallel programming.
+%%\end{itemize}
 
-\pagebreak
+%%\pagebreak
+
+
 \section{Excellence}
 "The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist that highlights the importance of data analytics in the modern world. Dealing with and making sense of the vast amount of data available to us through rich and diverse %the variety of 
 sources is an imperative which made data analysts and statisticians the most desirable professions in 2019\footnote{Quote for data analysts and statisticians being the best professions in 2019}. Modern data analysis is necessarily distributed in nature and, for most of the part, based on advanced AI techniques such as deep learning. At the same time, digitisation of the modern world presents completely new challenges for cybersecurity. A highly-distributed world of AI-based big data analytics means there are plenty more possibilities from vulnerabilities, coming both from the way big data is stored (usually in flat files or distributed databases) and also in the way it is processed, with multiple distributed agents interacting and exchanging potentially sensitive information. Security mechanisms that protect the sensitive data in this settings are still not advanced enough to provide enough trust in the whole data analytics process. \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by combining formal and practical aspects of code development and analysis.} Our methodology will be based on formally specified, machine readable and verifiable \emph{security contracts} that will specify the security aspects of the sensitive parts of distributed code.
@@ -396,15 +398,25 @@ Type of Action: Research and Innovation Action
 
 \eucommentary{Describe and explain the overall concept underpinning the project. Describe the main ideas, models or assumptions involved. Identify any trans-disciplinary considerations;}
 
+%% Why do we need distributed data analytics?
+In modern world, data is everywhere around us. With the emergence of Internet-of-Things, the amount of data available from a variety of sources is increasing by orders of magnitude every XX years. It is estimated that in the year XX, there will be XX petabytes of data collected from various sources every day. Such a vast amount of data gives many opportunities for smarter decision making and improved services in many areas of industry. Because of this, AI-based data analytics have become one of the most prominent areas of computer science, with a variety of systems that support complex analytics techniques on raw data (e.g.~Spark ML, XX and XX). Many of these systems are \emph{parallel and distributed} by nature. The requirement for parallelism comes from the fact that performing data analytics on large volumes of data is usually computationally very expensive, and properly parallelising the analytics can significantly reduce response time and deliver results much faster. The disributed aspect of data analytics comes from both distributed nature of the soruces of data, and by the fact that distributed systems (such as clouds) offer much more computational power at relatively cheap price than even the high-end local highly-performance systems. 
+
+Distributed data analytics, however, present unforeseen security challenges for the users. In the distributed world, there are far more potential targets for cyber attacks. All of the potential security issues for local sites are present, as well as many additional risks that come from interaction of processing agents in the distributed world and movement of data between different distributed nodes. The security systems currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the code is currently lacking. There are very little systems that can guarantee security properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction betweeen data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
+
+
+
 \vspace{-6pt}
 
 \subsubsection{Challenges for Security and Privacy}
 % massively-parallel heterogeneous systems}
 
-
+Ensuring security of distributed AI-driven big data analytics presents a number of challenges:
 
 \begin{itemize}
-\item \textbf{XX.}
+\item \textbf{Security of Big Data Storage Systems.} Large volumes of raw data on which data analytics is performed are usually stored in distributed NoSQL databases (such as Cassandra) or simply as flat files in some form of distributed file system (such as Hadoop's HDFS). Primary issues in the design of such system are robustness, scalability, fault tolerance and the speed of access for reading. Due to that, security mechanisms that distributed databases and filesystems use are very rudimentary. In addition to the problem of security of data stored in the database, distirbuted data analytics presents additional security issues which occur when the data is on the move between different sites. We must ensure both that the data is safely stored in databases and that the movement of data does not expose potential security and/or privacy vulnerabilities that can be exploited in cyber attacks.
+\item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time - requirement for parallel processing comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. We must ensure that distributed paralell processing used in Ai-based data analytics does not leak sensitive information from the data it processes to the malicious users.
+\item    
+\item 
 \end{itemize}
 
 
