@@ -7,7 +7,7 @@
 \WPParticipant{UOD}{1}
 \WPParticipant{SCCH}{1}
 \WPParticipant{IBM}{1}
-\WPParticipant{UC3M}{1}
+\WPParticipant{UCM}{1}
 
 
 \begin{WPObjectives}
@@ -59,10 +59,42 @@ The goal of \theWP{} is to provide mechanisms for specifying and verifying code 
 
 
 
+\begin{Task}
+\TaskTitle{Security contracts support}
+\TaskParticipant{UCM}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:contracts}
+
+In \theTask, we will define the mechanisms to represent security contracts
+in such a way that they can be mapped to concrete syntax in different
+programming languages. We will also support the extraction of those contracts
+from existing source code allowing iterative approaches where contracts
+are refined by developers.
+\end{Task}
 
 \begin{Task}
-%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Solving the World}
+\TaskTitle{Formal verification of contracts}
+\TaskParticipant{SCHH}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:formalverif}
+
+In \theTask, we will 
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Dynamic analysis of contracts}
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
@@ -71,12 +103,12 @@ The goal of \theWP{} is to provide mechanisms for specifying and verifying code 
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:solve}
+\tasklabel{task:dyncontracts}
 
-In \theTask, we will solve the world. 
-This task will proceed in three phases. 
+In \theTask, we will focus on the dynamic analysis of contracts for
+those vulnerabilities that cannot be prooved by formal verification
+without running the software component.
 \end{Task}
-
 
 
 \begin{WPDeliverables}
