@@ -413,9 +413,9 @@ The digitisation of modern world, together with advances in the software systems
 Ensuring security of distributed AI-driven big data analytics presents a number of challenges:
 
 \begin{itemize}
-\item \textbf{Security of Big Data Storage Systems.} Large volumes of raw data on which data analytics is performed are usually stored in distributed NoSQL databases (such as Cassandra) or simply as flat files in some form of distributed file system (such as Hadoop's HDFS). Primary concerns in the systems for data storage are robustness, scalability, fault tolerance and the speed of access for reading. Because they are rarely designed with security in mind, security mechanisms that distributed databases and filesystems use are very rudimentary. In addition to the problem of protecting the data stored in the database, distirbuted data analytics presents additional security issues which occur when the data is on the move between different sites. \emph{We must ensure both safety of storage of data on local nodes in a distributed system and that the movement of data between nodes does not expose potential security and/or privacy vulnerabilities that can be exploited in cyber attacks.}
+\item \textbf{Security of Big Data Storage Systems.} Large volumes of raw data on which data analytics is performed are usually stored in distributed NoSQL databases (such as Cassandra) or simply as flat files in some form of distributed file system (such as Hadoop's HDFS). Primary concerns in the systems for data storage are robustness, scalability, fault tolerance and the speed of access for reading. Because they are rarely designed with security in mind, security mechanisms that distributed databases and filesystems use are very rudimentary. In addition to the problem of protecting the data stored in the database, distirbuted data analytics presents additional security issues which occur when the data is on the move between different sites. \textbf{We must ensure both safety of storage of data on local nodes in a distributed system and that the movement of data between nodes does not expose potential security and/or privacy vulnerabilities that can be exploited in cyber attacks.}
 
-\item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time. Requirement for parallel processing comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. \emph{We must ensure that distributed paralell processing used in Ai-based data analytics does not leak sensitive information from the data it processes to the malicious users.}
+\item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time. Requirement for parallel processing comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. \textbf{We must ensure that distributed paralell processing used in Ai-based data analytics does not leak sensitive information from the data it processes to the malicious users.}
 
 
 \item 
@@ -432,11 +432,33 @@ holistic way.
   \begin{center}
   \vspace{-5mm}
   \includeimage[scale=0.5]{DigitalFortress.pdf}
+  \vspace{-1cm}
   \caption{Overview of the \TheProject{} Methodology}
   \label{fig:overview}
   \end{center}
   \end{figure}
 
+Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodology for developing secure and privacy-preserving applications that use distributed AI-based data analytics. Our assumption is that the end user starts with their code that is based on data analytics, but for which safety properties have not been firmly established. The users will be presented with the \TheProject{} tool-chain, supported by the visual frontend developed by \USTANshort{} and \YAGshort{}. The code development will proceed in a number of phases.
+
+\begin{itemize}
+\item \emph{Vulnerabilities detection phase}, where the tool-chain will identify potential vulnerabilities in the code, both in terms of potential targets for cyber attacks (security) and in terms of potential leakage of information (privacy). The identification will combine static code analysis that will be developed by \YAGshort{} and \UCMshort{} with dynamic symbolic code execution mechanisms that will be developed by \IBMshort{}. Combining these two complementary methods will allow us to discover a wide range of potential vulnerabilities in the code, as well as to avoid false positives, that are common problem if only static code analysis is used. The general techniques for detecting vulnerabilities will be adapted to the specific problems of data storage and processing in distributed data analytics by \UODshort{} and \SCCHshort{}. 
+
+\item \emph{Self-healing phase}, where, after the potential vulnerabilities have been identified, the code will be transformed using semi-automatic code refactoring techniques that will be developed by \SAshort{}, which themselves will be driven by machine-learning techniques to identify what code repairing methods are needed. These methods will be developed by \DEMshort{} and \SCCHshort{}. The output of this phase is the repaired code, where the identified vulnerabilities have been patched.
+
+\item \emph{Formal verification of code properties}, where the resulting code conforms to the required security standards and that it satisfies the required security properties. The conformance to coding standards will be based on the static analysis of the code (using techniques that will be developed by \UCMshort{}), while the security properties will be verified using formal methods that will be developed by \SAshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital certificate} that will specify what standards the code conforms to and what security properties does it satisfy. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
+\end{itemize}
+
+
+\begin{figure}[tp]
+  \begin{center}
+  \vspace{-5mm}
+  \includeimage[scale=0.5]{DigitalFortress-WP2.pdf}
+  \vspace{-0.5cm}
+  \caption{Data Storage and Processing in \TheProject{}}
+  \label{fig:storageprocessing}
+  \end{center}
+  \end{figure}
+  
 \subsubsection*{Key assumptions}
 
 \vjcomment{This may not be necessary.}
