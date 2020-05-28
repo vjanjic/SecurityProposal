@@ -16,13 +16,13 @@ The objectives of \theWP{} are to:
 %% Why just embedded? Are these domains correct? KH
 \item Develop a formal high-level multi-tier specification language; % able to capture different levels of abstraction; %and security contracts
 \item Define abstraction/refinement as a bidirectional transformation between specifications across tiers;
-% How is distribution considerd?
+% How is distribution considered?
 %BOTH for source code and code patterns that represent known vulnerabilities 
 %and relate different levels of abstraction (from models to code)
-\item Define a notion of behavioural equivalence also suitable to formalise refactorings. Extend this to formalise security-preserving equivalences and certificates.
+\item Define a notion of behavioural equivalence also suitable to formalise refactorings. Extend this to formalise security-preserving equivalences over contracts and certificates.
 \item Define a logic suitable to capture 
 properties of interest (e.g., distributed stochastic temporal logic) interpreted over (distributed) traces of execution 
-\item Define a framework combining theorem provers and SMT solvers to prove the correctness in all of the above, and search for a subset of traces of execution that satisfy certain parameters (meets a certain threshold for instance);
+\item Define a framework combining theorem provers and SMT solvers to prove the correctness in all of the above, and search for a subset of traces of execution that satisfy certain parameters (meet a certain threshold for instance);
 \item Explore an interplay between runtime verification and exhaustive formal verification;
 \item Develop a novel mechanism for automated 
 vulnerability localisation, containment, recovery and repair.
@@ -31,8 +31,10 @@ vulnerability localisation, containment, recovery and repair.
 
 \vspace*{1cm}
 
-Still working on this... need some inspiration on what can be novel.
-Need to talk about privacy as well, not just security.
+%Still working on this... need some inspiration on what can be novel.
+%Need to talk about privacy as well, not just security.
+
+agree on: multi-level, multi-layer or multi-tier
 
 self-healing
 
@@ -40,10 +42,10 @@ static vs dynamic
 
 dynamic patching?
 
-All of the above need to be revised to include Flavio's work, proof-braids, and similar notions.
+%All of the above need to be revised to include Flavio's work, proof-braids, and similar notions.
 
-Notes: very relevant paper on transaction controller TACTL over Abstract state machines - multi-level...
-It includes a handler that can deal with deadlock, recovery, commit abort... 
+%Notes: very relevant paper on transaction controller TACTL over Abstract state machines - multi-level...
+%It includes a handler that can deal with deadlock, recovery, commit abort... 
 
 
 %Needs to be related to WP4 and vulnerabilities 
@@ -79,7 +81,7 @@ are refined by developers.
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Formal verification of contracts}
+\TaskTitle{Formal Verification of Contracts}
 \TaskParticipant{SCHH}{1}
 
 \TaskStart{1}
@@ -90,8 +92,26 @@ are refined by developers.
 \TaskHeader{}
 \tasklabel{task:formalverif}
 
-In \theTask, we will 
+In \theTask, we will formalise extracted contracts from source code using concurrent ASMs, and define a semantics over ASM runs using the true-concurrent model of event structures. 
+We will explore how combining theorem provers and SMT solvers allow us to prove the correctness of the traces amd search for a subset of traces of execution that satisfy certain criteria.
+
 \end{Task}
+
+
+\begin{Task}
+\TaskTitle{Formalising and reasoning about Refactorings}
+\TaskParticipant{USTAN}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:formalref}
+
+\end{Task}
+
 
 \begin{Task}
 \TaskTitle{Dynamic analysis of contracts}
@@ -106,8 +126,23 @@ In \theTask, we will
 \tasklabel{task:dyncontracts}
 
 In \theTask, we will focus on the dynamic analysis of contracts for
-those vulnerabilities that cannot be prooved by formal verification
+those vulnerabilities that cannot be proved by formal verification
 without running the software component.
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Attack Models and Security Repairability of Proof Obligations}
+\TaskParticipant{SCCH}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:attackmodels}
+
+The aim of \theTask\ is to (1) define classes of security contract requirements for distributed data analytics applications and (2) formalise repair proof obligations for ASMs with respect to these security contract requirements. In a first step towards (1) the industrial use cases will be analysed for security threats from two different angles concerning secrets in the data and processes that are to be protected, and anticipated actions of potential attackers. Regarding secrets this will be formalised through static and dynamic constraints, for which subformulae are identified that by themselves do not contain any secrets. Regarding potential attacks, attacker models for each of the security constraints will be developed. In a second step, the one-step logic for reasoning about concurrent systems of ASM specifications will be used to formalise the security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM.
 \end{Task}
 
 
