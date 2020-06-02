@@ -431,8 +431,8 @@ holistic way.
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.5]{DigitalFortress.pdf}
-  \vspace{-1cm}
+  \includeimage[scale=0.67]{DigitalFortress.pdf}
+  \vspace{-3cm}
   \caption{Overview of the \TheProject{} Methodology}
   \label{fig:overview}
   \end{center}
@@ -634,7 +634,16 @@ The concept of \emph{algorithmic parallel skeletons} dates back from 1989, where
 
 In the area of big data processing, parallel patterns have become very popular with the emergence of Google MapReduce~\cite{mapreduce} programming model. This model (which is, essentially, a parallel pattern) allows the development of large-scale, distributed, fault-tolerant data analytics applications without any knowledge of distributed systems. MapReduce model has been implemented in several popular big-data processing frameworks, such as Hadoop~\cite{hadoop} and XX. Being a generic model that allows many more specific classes of distributed computations to be implemented on top of it~\cite{bigdatabook}, MapReduce was used as a building block for several machine-learning based data analytics frameworks and libraries, such as SparkML~\cite{sparkml}, Keras~\cite{keras} and XX. These libraries also work on the principle of patterns - they provide generic parallel machine-learning methods that can be used in end-user data analytics applications, provided that the end user supplies their problem-specific parameters and operations.
 
-Big-data analysis patterns are designed mostly with scalability and fault-tolerance in mind, with the main goals of i) being able to implicitly scale to larger and larger datasets distributed over a large number of machines, possibly in different organisations; and, ii) accommodating for longer running computation by automatically restarting the parts of computation that fail. 
+Big-data analysis patterns are designed mostly with scalability and fault-tolerance in mind, with the main goals of i) being able to implicitly scale to larger and larger datasets distributed over a large number of machines, possibly in different organisations; and, ii) accommodating for longer running computation by automatically restarting the parts of computation that fail. Very little attention has been paid to the security issues. This is especially an issue for large-scale data analytics because typical applications for doing that need to combine several layers of functionality, possibly mixing several different libraries and systems. For example, a typical analytics application will use a machine-learning library such as Keras, which will in turn use more general frameworks for distributed machine learning, such as Tensorflow~\cite{tensorflow}. Tensorflow itself uses lower-level pattern-based frameworks, such as Hadoop MapReduce, which in turn operate on distributed filesystems and databases. While each of the individual layers may or may not have guarantees for safety, interaction between these different layers presents plethora of opportunities for potential cyber attacks. Coupled with the fact that the computations are performed in a distributed fashion, meaning there will possibly be data movement between different nodes and communication between processing agents running on different nodes, all of which can expose additional vulnerabilities that are not present in single-core or even locally-distributed settings, it is clear that ensuring security for distributed machine-learning based data analytics is a very complex problem.
+ 
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of security of distributed pattern-based data analytics in several ways:
+\begin{itemize}
+\item \emph{Security for data storage in big data analytics.} The current systems for storage of data that is used for data analytics use very basic security mechanisms such as XX. With the advanced security diagnostics that will be developed over the course of the project, we will identify what security vulnerabilities arise in using both distributed databases and distributed file systems in end-user data application, as well as identifying methods to mitigate these vulnerabilities by transforming (in static or dynamic way) the user code appropriately without changing its semantics. 
+\item \emph{Security of distributed data processing frameworks.} Similarly as for the distributed data storage, the security of distributed data processing frameworks such as Hadoop MapReduce, has never been established. These frameworks expose even more possible security vulnerabilities than the systems for data storage, as they need to move the data around between different distributed processing nodes, as well as to communicate between themselves. In \TheProject{}, we will identify security vulnerabilities coming from using the distributed pattern-based data processing frameworks in the end-user applications. As far as is practically possible, we will also analyse the source code of these frameworks and identify potential security vulnerabilities within them too.
+\item \emph{Interaction between machine learning libraries and distributed data storage/processing frameworks.} We will investigate the problem of identifying and repairing security vulnerabilities that can arise from the interaction of machine learning libraries and lower level mechanisms based on distributed data storage and processing. Using machine learning libraries introduces another layer in the hierarchy of data analytics applications, with its own set of potential vulnerabilities, making the overall problem even harder than if only data storage and processing is concerned. 
+\end{itemize}
+\end{mdframed}
 
 \subsubsection{Coding Standards for Security}
 \label{sect:codingStandards}
