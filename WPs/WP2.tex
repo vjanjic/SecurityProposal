@@ -61,6 +61,27 @@ Static code analysis will assist to find suspected vulnerability locations prior
 
 \end{Task}
 
+\begin{Task}
+\TaskTitle{Anomaly Detection and Adaptation for Self-Healing}
+\TaskParticipant{SCCH}{1}
+
+\TaskStart{1}
+\TaskEnd{34}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:scch}
+In a first step it will be analysed which run-time data has to be collected through monitoring machines that are needed for the detection of any anomaly, i.e. there are agents in the distributed concurrent system that interact with the other agents in a malicious way. This requires the specification of monitoring agents. The second step addresses the development of anomaly detection algorithms and their specification by further agents. The focus will be on discovery, whether the interaction sequence of any agent is in line with the specified system. The third step
+addresses adaptation algorithm in case a security violation is detected or a suspicious agents
+has been detected that should be removed from the system. Both cases require the partial interrupt of the distributed concurrent system, the rollback to a consistent state and the restart after some modifications. The last step undertaken in this task is the formulation of repairability proof obligations on the grounds of the research through which it will be specified, after how many steps a secure situation is expected to be restored.
+\end{Task}
+
+
+
+
+
+
 
 \begin{WPDeliverables}
   \begin{compactitem}

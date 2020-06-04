@@ -153,7 +153,9 @@ In the \emph{second} phase, we will provide implementations of the fundamental s
 	\TaskHeader{}
 	\tasklabel{task:SastToFeedRefactoring}
 	
-	In \theTask, we will produce new tool-support for the fabrication of security sensitive data in the context of big-data. The input of this tool will be based on X from WPX. 
+	In \theTask, we can investigate how our way of doing static analysis can feed the semi automated refactoring process and tool. For instance we can search and detect specific properties of the source code, be they certain or uncertain (code smells), correlate them to find if a certain pattern is met and feed the refactoring.
+	We also can provide decision making information out of static analysis on "which code to refactor", on detected pre conditions as well as providing potential different options, based on semantics, to feed the refactoring.
+	\color{blue} \textbf{Limitation:} It will not be possible to modify the static analysis intermediate representation to adapt to refactoring specific needs.
 \end{Task}
 
 
