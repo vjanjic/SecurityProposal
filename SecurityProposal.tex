@@ -768,6 +768,26 @@ Automated refactoring has roots in a long history, with the original refactoring
 \label{sect:background-last}
 \vjcomment{FREQUENTIS, DEMOCRITOS and SOPRA to write}
 
+\begin{table}
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}
+\hline \hline
+\multicolumn{5}{|c|}{Use Cases} \\ \hline
+Layer & \textbf{Air Traffic Management} & \textbf{Digital Banking} & \textbf{Healthcare} & \textbf{5G Networks} \\
+\hline \hline
+\emph{Environment} & Public Cloud & Public Cloud & Public Cloud & X \\
+\emph{Data Storage} & Azure DL, MySQL & Azure DL, Cassandra & Azure DL & X \\
+\emph{Data Processing} & Azure DL Analytics & Azure DL Analytics & Azure DL Analytics & X \\
+\emph{ML Framework} & Azure AI & Spark MLLib & Azure AI & X \\
+\emph{Prog. Language} & Java, JavaScript, Python & C++ & C++ & X \\
+\hline \hline
+\end{tabular}
+\caption{Technologies Used in \TheProject{} Use Cases}
+\label{tab:usecases}
+\end{center}
+\end{table}
+
+
 \paragraph{Air Traffic Management}
 \label{sec:atm}
 - Air Traffic Management (ATM) is an aviation term for the amalgamation of various systems that supports an aircraft to depart from an aerodrome, transit required airspace, and land at a destination aerodrome. The system includes the following sub-systems Air Traffic Services (ATS), Airspace Management (ASM), and Air Traffic Flow and Capacity Management (ATFCM). With the rise of drones, it becomes essential to integrate Unmanned Traffic Management (UTM) with ATM. The increasing emphasis of modern ATM is on inter-operable and harmonised systems permitting an aircraft to operate with the minimum of performance change from one airspace to another. With the increase use of Internet-of-Things via sensors and on-board monitoring of the aircraft and required ground support infrastructure the ATM/UTM effectiveness and efficiency are now critical. The introductions of other new unmanned aircraft and drones into the airspace is requiring a rethink of the system and security required to enable the exchange of relevant information with the ATM/UTM without introducing any data breath issues. 
