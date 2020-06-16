@@ -29,7 +29,7 @@ This workpackage will investigate new software engineering techniques and tools 
 
 \begin{Task}
 %\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-\TaskTitle{Refactorings for Secure Big-Data Applications}
+\TaskTitle{Dashboard for Security-Aware Big-Data Computing}
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
@@ -40,14 +40,11 @@ This workpackage will investigate new software engineering techniques and tools 
 \TaskHeader{}
 \tasklabel{task:refactoring}
 
-In  \theTask{}, we will develop semi-automatic refactorings to support the end-user by providing tool-support through the  secure-aware programming methodology from \ref{task:methodology}. These refactorings will operate at the program source level, where a refactoring will be implemented as a source-to-source program transformation. 
 
-The refactorings themselves will be developed based on a set of formal refactoring rules (which will be defined in terms of the refactoring's pre- and post-conditions, together with a set of transformation rules). The output of the refactoring will be an equivalent application, with increased security, decreased vulnerability and higher conformance to the security-aware coding standards (from \ref{task:standards}).
 
 The refactoring tool will be integrated into the ParaFormance refactoring tool, supporting both Eclipse and Visual-Studio for C++ applications. A prototype implementation for Java-based applications will also be produced. The results of this task will be used to refactor the use-cases in \ref{wp:usecases}.
 
-This task will proceed in three phases. In the \emph{first} phase we will identify transformations for C++ applications that will introduce the patterns from \ref{task:patterns} into C++ applications, by defining their pre- and post-conditions, together with their formal transformations rules. In the \emph{second} phase, we will produce implementations of the refactorings defined in the first phase, implemented in the ParaFormance tool-chain, for C++. In this phase, we will consider the outputs from the Advanced Vulnerability Detection from \ref{task:vulnerability} and the Self-Healing from T XX (as defined in \ref{wp:vulnerability}) to provide the refactoring tool with the static analysis information required to discovery vulnerabilities and information on how to repair them.
- In the \emph{third} phase, we will produce refactorings that further refactor the code so that it conforms to the standards outlined in \ref{task:standards}, where possible. We will also produce prototype implementations of a tractable set of the refactorings from all the phases for Java-like languages.
+
 
 
 %

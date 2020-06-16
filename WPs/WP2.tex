@@ -82,6 +82,13 @@ In this task we will extend the vulnerability detection technology with the mech
 }
 \TaskHeader{}
 \tasklabel{task:statichealing}
+
+In \theTask{}, we will develop a number of program transformations to support the end-user by providing tool-support through the  secure-aware programming methodology from \ref{task:methodology} in WPX. These program transformations will be implemented as source-to-source program \emph{refactorings} in T6.1 WP6 and will operate at the program source level. The transformations will be proved correct in Task XX WPX. 
+
+These refactorings themselves will be developed based on a set of formal refactoring rules (which will be defined in terms of the refactoring's pre- and post-conditions, together with a set of transformation rules). The output of the refactoring will be an equivalent application, with increased security, decreased vulnerability and higher conformance to the security-aware coding standards (from \ref{task:standards}). In this task we will develop a number of program transformation rules based on transforming the C++ target language. Prototype rules will also be developed for other languages, such as Java and Python. 
+
+This task will proceed in three phases. In the \emph{first} phase we will identify transformations for C++ applications that will introduce the patterns from \ref{task:patterns} into C++ applications, by defining their pre- and post-conditions, together with their formal transformations rules. In the \emph{second} phase, we will produce implementations of the refactorings defined in the first phase, implemented in the ParaFormance tool-chain, for C++. In this phase, we will consider the outputs from the Advanced Vulnerability Detection from \ref{task:vulnerability} and the Self-Healing from T XX (as defined in \ref{wp:vulnerability}) to provide the refactoring tool with the static analysis information required to discovery vulnerabilities and information on how to repair them.
+ In the \emph{third} phase, we will produce refactorings that further refactor the code so that it conforms to the standards outlined in \ref{task:standards}, where possible. We will also produce prototype implementations of a tractable set of the refactorings from all the phases for Java-like languages.
 \end{Task}
 
 \begin{Task}
