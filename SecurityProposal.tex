@@ -655,13 +655,14 @@ A relevant optimization problem here is to minimize the privacy-leakage quantifi
 \item Finally, a curve between $E_{q(v)}[\|z(v;y) - y \|^2 ]$ and $\hat{I}(x;z)$ is plotted via varying the noise entropy level $h$.             
 \end{enumerate} 
 The aforementioned approach to study and optimize privacy-utility tradeoff is novel. The are three significant features of the proposed framework. First is its generality for any unknown data distribution $P_{X,Y}$, the second is deriving optimal noise adding mechanism analytically, and the third is to compute privacy-leakage analytically without relying on the training of black-box models (e.g. adversarial networks~\cite{8919758}) for approximating distributions. 
-
+\cbcomment{I think this is too detailed and technical for this section.}
 
 
 
 \subsubsection{Formal Specification and Proving of Security Properties}
 \label{sect:formal}
 \vjcomment{USTAN to write}
+\cbcomment{Should build on what we've done for teamplay here? Might want to just pick a tractable subset: secret variables?}
 
 \subsubsection{Security of Pattern-Based Big-Data Processing Frameworks}
 \label{sect:patterns}
@@ -779,6 +780,18 @@ Researchers and practitioners have attempted to provide various \textit{solution
 	\item structured approach
 	\item extended for security
 	\item new patterns X Y Z
+\end{itemize}
+
+\subsubsection{Security Contracts}
+\cbcomment{USTAN to write - we can build on what we've done for teamplay here}
+\begin{itemize}
+    \item Contract
+    \item CSL system
+    \item Proving properties of security
+    \item Reflecting proofs back to the programmer
+    \item Vulnerabilities
+    \item Secret variables
+    \item Branching and side channel attacks?
 \end{itemize}
 
 \subsubsection{Refactoring}
@@ -1495,6 +1508,7 @@ MS1 & Initial Requirements Analysis Completed & \textbf{1 -- 8} \\
 
 
 \comment{JB}{Should we assume that there will be only one review in M18 rather than a yearly one?}
+\comment{CB}{Yes, I think so. In H2020 there are two periods. But the PO might want yearly reviews, negotiated on funding stage.}
 
 \input{WPs/WPs}
 \input{WPs/WP3_SCCH}

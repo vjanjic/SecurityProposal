@@ -1,0 +1,199 @@
+\addtocounter{wpno}{1}
+\begin{Workpackage}{\thewpno}
+\wplabel{wp:securityContracts}
+\WPTitle{\wpname{\thewpno}}
+\WPStart{Month 1}
+\WPParticipant{USTAN}{1}
+\WPParticipant{UOD}{1}
+\WPParticipant{SCCH}{1}
+\WPParticipant{IBM}{1}
+\WPParticipant{UCM}{1}
+\WPParticipant{YAG}{1}
+
+
+\begin{WPObjectives}
+The objectives of \theWP{} are to:
+\begin{compactitem}
+%% Why just embedded? Are these domains correct? KH
+\item Develop a formal high-level multi-tier specification language; % able to capture different levels of abstraction; %and security contracts
+\item Define abstraction/refinement as a bidirectional transformation between specifications across tiers;
+% How is distribution considered?
+%BOTH for source code and code patterns that represent known vulnerabilities 
+%and relate different levels of abstraction (from models to code)
+\item Define a notion of behavioural equivalence also suitable to formalise refactorings. Extend this to formalise security-preserving equivalences over contracts and certificates.
+\item Define a logic suitable to capture 
+properties of interest (e.g., distributed stochastic temporal logic) interpreted over (distributed) traces of execution 
+\item Define a framework combining theorem provers and SMT solvers to prove the correctness in all of the above, and search for a subset of traces of execution that satisfy certain parameters (meet a certain threshold for instance);
+\item Explore an interplay between runtime verification and exhaustive formal verification;
+\item Develop a novel mechanism for automated 
+vulnerability localisation, containment, recovery and repair.
+
+\end{compactitem}
+
+%\vspace*{1cm}
+
+%Still working on this... need some inspiration on what can be novel.
+%Need to talk about privacy as well, not just security.
+
+%agree on: multi-level, multi-layer or multi-tier
+
+%self-healing
+
+%static vs dynamic
+
+%dynamic patching?
+
+%All of the above need to be revised to include Flavio's work, proof-braids, and similar notions.
+
+%Notes: very relevant paper on transaction controller TACTL over Abstract state machines - multi-level...
+%It includes a handler that can deal with deadlock, recovery, commit abort... 
+
+
+%Needs to be related to WP4 and vulnerabilities 
+\end{WPObjectives}
+
+\begin{WPDescription}
+%\theWP{} addresses the problem of solving the world.
+
+The goal of \theWP{} is to provide mechanisms for specifying and verifying code with respect to
+(security) properties in distributed big data storage and processing
+
+\end{WPDescription}
+
+
+
+\begin{Task}
+\TaskTitle{Security contracts support}
+\TaskParticipant{UCM}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:contracts}
+
+In \theTask, we will define the mechanisms to represent security contracts
+in such a way that they can be mapped to concrete syntax in different
+programming languages. We will also support the extraction of those contracts
+from existing source code allowing iterative approaches where contracts
+are refined by developers.
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Formal Verification of Contracts}
+\TaskParticipant{SCHH}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:formalverif}
+
+In \theTask, we will formalise extracted contracts from source code using concurrent ASMs, and define a semantics over ASM runs using the true-concurrent model of event structures. 
+We will explore how combining theorem provers and SMT solvers allow us to prove the correctness of the traces amd search for a subset of traces of execution that satisfy certain criteria.
+
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Formalising and reasoning about Refactorings}
+\TaskParticipant{USTAN}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:formalref}
+
+In \theTask, we will formalise the refactorings from TX.X showing proof sketches of their correctness. We will identify a well-formed semantics for a subset of the target language and show an equivalence relation for a selected number of refactorings over this language. The proof sketches will be mechanised, using a theorem prover such as COQ or Isabelle, or by using a dependent typed approach, such as Idris. The proofs of correctness will show that the refactored program is (functionally) equivalent to the original, w.r.t. to the functional semantics defined. 
+
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Dynamic analysis of contracts}
+\TaskParticipant{UOD}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:dyncontracts}
+
+In \theTask, we will focus on the dynamic analysis of contracts for
+those vulnerabilities that cannot be proved by formal verification
+without running the software component.
+\end{Task}
+
+\begin{Task}
+\TaskTitle{Attack Models and Security Repairability of Proof Obligations}
+\TaskParticipant{SCCH}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:attackmodels}
+
+The aim of \theTask\ is to (1) define classes of security contract requirements for distributed data analytics applications and (2) formalise repair proof obligations for ASMs with respect to these security contract requirements. In a first step towards (1) the industrial use cases will be analysed for security threats from two different angles concerning secrets in the data and processes that are to be protected, and anticipated actions of potential attackers. Regarding secrets this will be formalised through static and dynamic constraints, for which subformulae are identified that by themselves do not contain any secrets. Regarding potential attacks, attacker models for each of the security constraints will be developed. In a second step, the one-step logic for reasoning about concurrent systems of ASM specifications will be used to formalise the security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM.
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Assessment, via static analysis, of the risks that a source code breaks security contracts}
+\TaskParticipant{YAG}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:ContractsSastAssessment}
+
+As a complementary approach to extend formal verification of security contracts, in \theTask, we will provide a novel way to assess the risk that a security contract is not met by an application. This will include:
+\item The parsing and analysis of the security contracts resulting from present \theWP / T4.XX and T4.YY
+\begin{itemize}
+    \item Mapping of the security contracts with the potentially impacted source code
+    \item Designing an interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms
+    \item Explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties.
+    \item Providing remediation proposals to fix vulnerabilities
+\end{itemize}
+
+\end{Task}
+
+
+\begin{Task}
+\TaskTitle{Assessment of security requirements based on CVSS metrics}
+\TaskParticipant{YAG}{1}
+
+\TaskStart{1}
+\TaskEnd{27}
+\TaskResults{%
+%\ref{del:model1}
+}
+\TaskHeader{}
+\tasklabel{task:RequirementsSastAssessment}
+
+As another approach to extend formal verification of security contracts, in \theTask we can prototype a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability.
+We will develop a domain specific language to capture the functionalities description, allocate requirements and map with the source code. Each vulnerability which breaks a requirement will be identified and allocated decision making information for the user.
+\end{Task}
+
+
+\begin{WPDeliverables}
+  \begin{compactitem}
+    \item XX
+%\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
+\end{compactitem}
+\end{WPDeliverables}
+\end{Workpackage}
