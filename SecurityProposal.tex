@@ -434,8 +434,8 @@ holistic way.
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.67]{DigitalFortress.pdf}
-  \vspace{-3cm}
+  \includeimage[scale=0.6]{DigitalFortress.pdf}
+%  \vspace{-3cm}
   \caption{Overview of the \TheProject{} Methodology}
   \label{fig:overview}
   \end{center}
@@ -444,14 +444,16 @@ holistic way.
 Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodology for developing secure and privacy-preserving applications that use distributed AI-based data analytics. Our assumption is that the end user starts with their code that is based on data analytics, but for which safety properties have not been firmly established. The users will be presented with the \TheProject{} tool-chain, supported by the visual frontend developed by \USTANshort{} and \YAGshort{}. The code development will proceed in a number of phases.
 
 \begin{itemize}
-\item \emph{Vulnerabilities detection phase}, where the tool-chain will identify potential vulnerabilities in the code, both in terms of potential targets for cyber attacks (security) and in terms of potential leakage of information (privacy). The identification will combine static code analysis that will be developed by \YAGshort{} and \UCMshort{} with dynamic symbolic code execution mechanisms that will be developed by \IBMshort{}. Combining these two complementary methods will allow us to discover a wide range of potential vulnerabilities in the code, as well as to avoid the common problems when each of them is used alone (false positives for static code analysis and time complexity for symbolic execution). The general techniques for detecting vulnerabilities will be adapted to the specific problems of data storage and processing in distributed data analytics by \UODshort{} and \SCCHshort{}. 
+\item \emph{Vulnerabilities detection phase}, where the tool-chain will identify potential vulnerabilities in the code, both in terms of potential targets for cyber attacks (security) and in terms of potential leakage of information (privacy). The identification will combine static code analysis that will be developed by \YAGshort{} and \UCMshort{}, dynamic symbolic code execution mechanisms that will be developed by \IBMshort{} and machine-learning based runtime monitoring that will be developed by \SCCHshort{}. Combining these three complementary methods will allow us to discover a wide range of potential vulnerabilities in the code, as well as to avoid the common problems when each of them is used alone (such false positives, time complexity and vulnerabilities that arise at runtime). The general techniques for detecting vulnerabilities will be adapted to the specific problems of data storage and processing in distributed data analytics by \UODshort{} and \SCCHshort{}. 
 
-\item \emph{Self-healing phase}, where the identified vulnerabilities will be repaired using semi-automatic code refactoring techniques that will be developed by \SAshort{}, which themselves will be driven by machine-learning techniques (that will be developed by \DEMshort{} and \SCCHshort{}) to identify what code transformations are necessary. Our aim here is to provide source-to-source code transformations, the output of which will be the repaired code that is semantically equivalent to the original code, but with the identified vulnerabilities patched. In the process of self-healing, we will also apply novel methods and techniques for optimizing the privacy-preserving data release mechanisms to address the issue of privacy-leakage in distributed machine learning data analytics.
+\item \emph{Self-healing phase}, where the identified vulnerabilities will be repaired using a combination of semi-automatic code refactoring techniques that will be developed by \SAshort{} and runtime adaptation based on runtime monitoring that will be developed by \DEMshort{} and \SCCHshort{}. Our aim here is to provide both source-to-source code transformations, the output of which will be the repaired code that is semantically equivalent to the original code, but with the identified (static) vulnerabilities patched and also runtime patching that will, over a series of steps, restore the system into a stable and secure state where cyberattacks are happening at runtime (e.g. man-in-the-middle attacks). In the process of self-healing, we will also apply novel methods and techniques for optimising the privacy-preserving data release mechanisms to address the issue of privacy-leakage. The developed core methods will be adapted to the problem of AI-based distributed data analytics by \DEMshort{} and \UODshort{}. 
 
-\item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on the existing security standards such as XX and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SAshort{}, while the analysis for the conformance to standards will be developed by \UCMshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital certificate} that will specify what standards the code conforms to and the security properties that it satisfies. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
+\item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on the existing security standards such as XX and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SAshort{}, while the analysis for the conformance to standards will be developed by \UCMshort{}, \YAGshort{} and \SCCHshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital security contract} that will specify what standards the code conforms to and the security properties that it satisfies. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
 \end{itemize}
 
-Finally, to add the additional layer of security, we will integrate the novel secure authentication mechanisms built by \COGNIshort{} that specifically target the end users and allow much more secure authentication to the systems than in the state-of-the-art techniques. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic control (\FRQshort{}), network analysis (\DEMshort{}), open banking (\SOPRAshort{}), space technologies (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
+In addition to security vulnerabilities, the goal of the \TheProject{} is to address the \emph{privacy} concerns too. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. articles 20, 25, 33 and 37). 
+
+Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these part will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic control (\FRQshort{}), network analysis (\DEMshort{}), open banking (\SOPRAshort{}), space technologies (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
 
 
 \begin{figure}[tp]
@@ -509,14 +511,18 @@ The specific advances that will be made are described in more detail in Section~
 
 \eucommentary{Describe any national or international research and innovation activities which will be linked with the project, especially where the outputs from these will feed into the project;}
 
-\vspace{-8pt}
+%\vspace{-8pt}
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\teamplay (ICT-779882).}
 The TeamPlay project aims to develop new, formally-motivated, techniques that will allow execution time, energy usage, security, and other important non-functional properties of parallel software to be treated effectively, and as first-class citizens. This methodology was built into a toolbox for developing highly parallel software for low-energy systems, as required by the internet of things, cyber-physical systems etc.
 
 The TeamPlay approach allows programs to reflect directly on their own time, energy consumption, security, etc., as well as enabling the developer to reason about both the functional and the non-functional properties of their software at the source code level.
+\end{mdframed}
 
-...
-\vspace{-8pt}
+%...
+%\vspace{-8pt}
+
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\rephrase (ICT-644235).}
 %\vspace{-12pt}
 
@@ -529,8 +535,11 @@ multicore/manycore machines, and involves major industry players such as IBM.
 \begin{inparaenum}[i)]
 \item XX
 \end{inparaenum}}
+\end{mdframed}
 
-\vspace{-2pt}
+%\vspace{-2pt}
+
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\paraphrase (ICT-288570).}
 %\vspace{-12pt}
 % \TOWRITE{CB,VJ}{Write about ParaPhrase} 
@@ -539,27 +548,44 @@ heterogeneous multicore/manycore architectures, in which developers exploit a va
 parallel patterns to develop component based applications in Erlang and C++. These
 component based pattern-applications may then be re-mapped to meet the
 application requirements and hardware availability. 
-\vspace{-2pt}
+\end{mdframed}
+
+%\vspace{-2pt}
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\grow (EU No.690199).}
 The \grow project (funded from the European Union’s Horizon 2020 research and innovation programme under grant agreement No.690199) is the first continental-scale Citizens’ Observatory to monitor a key parameter for science, continuously over an extended period, and at an unmatched spatial density. \grow has, for the first time, used crowdsourced ground observations from low-cost sensors to validate soil moisture information from satellites, including the new generation of high-resolution satellites, Sentinel-1.
 
 24 \grow communities in 13 European countries create an unprecedented network of 6,502 ground-based soil sensors and a dataset of 516M rows of soil data. 
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\weobserve (EU No.776740).}
 \weobserve is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\satie (EU No.832969).}
 \satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an interoperable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\blogdas (FWF: [P26452-N15]).} 
 The project Behavioural Theory and Logics for Distributed Adaptive Systems (\blogdas) was supported by the Austrian Science Fund. The first key result of the project is a behavioural theory of such distributed adaptive systems. The theory comprises (1) a general language-independent characterisation by a set of intuitive postulates that are satisfied by all known system formalisms, (2) an abstract machine model that provably satisfies the postulates, and (3) the mathematical proof that all systems stipulated by the postulates can be faithfully represented by the abstract machine model. The behavioural theory enables system specifications in general using a concrete language for the abstract machine model. The second key result is a logic for such distributed adaptive systems that is based on the abstract machine model. The logic allows system developers to formally characterise desirable properties that system specifications must meet and to mathematically verify these properties. In particular, static verification with this logic permits to give assertions for states that result after many adaptations of the system.
 The results of this project overcome the imminent restriction of using interleaving to circumvent true asynchronous behaviour, providing better suited theoretical foundations and tools (concurrent ASMs and logics) to formalise and verify contracts for distributed systems as required for WP4 as well as to specify anomaly detection algorithms and associated repairability proof obligations within the context of WP2.  
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\primal (FFG: 873979).}
 The \primal project, supported by the Austrian Research Promotion Agency, is concerned with the development of privacy-preserving machine learning industrial applications. The project focuses on the development of algorithms and a software framework for differentially private distributed deep learning, transfer learning, and multi-task learning with applications to industrial use cases. While the results of \primal regarding differential privacy in distributed machine learning has a synergy with the privacy theme of \TheProject{}, information theoretic approach to study and optimize privacy-leakage in distributed AI is one of the novelties of \TheProject{}.
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\sthreeai (FFG: 872172).} The Austrian Research Promotion Agency supported \sthreeai project for building secure collaborative artificial intelligence systems ensuring privacy, protection against hostile attacks and guaranteeing for the intended performance of the system. \sthreeai will develop theoretical frameworks and analysis tools at the interface of mathematics, deep learning and information security regarding new deep model architectures and related privacy learning strategies, new defence strategies against enemy attacks, and new methods for assessing trustworthiness. \sthreeai has synergy with \TheProject{} regarding privacy-preserving deep learning, however, unlike \TheProject{}, \sthreeai does not consider an information theoretic approach to study the concepts of privacy-leakage and knowledge-transferrability across distributed parties in a rigorous and unified manner.    
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\serums (EU 826278).} \serums is the EU H2020 funded project that is coordinated by \USTANshort{} and also includes \SOPRAshort{}, \IBMshort{} and \SCCHshort{} in the consortium. \serums aims to develop new smart, pateint-centric health-care systems that integrate home, workplace etc.~personal medical care with centralised hospital, special consultant and general practitioner provision. The goal of the \serums project is to put patients at the centre of future healthcare provision, enhancing their personal care and maximising the quality of treatment they can receive, while ensuring trust in the security and privacy of their confidential medical data. Like \TheProject{}, \serums also targets distributed systems where confidential data might be exchanged between different devices over untrusted networks. The focus of \serums is, however, on privacy of the data in the healthcare domain. The data analytics aspect is not very prominent there and it does not consider cloud environments. \emph{In contrast, \TheProject{} considers much larger scale of hardware, is focused on data analytics executed in cloud settings and also address the crucial problem of security in terms of cyber threats and attacks. \TheProject{} also considers a wider range of application domains, having use cases in banking, air traffic management and networking domains.}
+\end{mdframed}
 
 \subsubsection{Overall approach and methodology}
 
