@@ -73,8 +73,8 @@ In this task we will extend the vulnerability detection technology with the mech
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Code Transformations for Self Healing}
-\TaskParticipant{USTAN}{1}
+\TaskTitle{Refactoring for Self Healing}
+\TaskParticipant{USTAN}{24}
 \TaskStart{1}
 \TaskEnd{34}
 \TaskResults{%
@@ -83,13 +83,57 @@ In this task we will extend the vulnerability detection technology with the mech
 \TaskHeader{}
 \tasklabel{task:statichealing}
 
-In \theTask{}, we will develop a number of program transformations to support the end-user by providing tool-support through the  secure-aware programming methodology from \ref{task:methodology} in WPX. These program transformations will be implemented as source-to-source program \emph{refactorings} in T6.1 WP6 and will operate at the program source level. The transformations will be proved correct in Task XX WPX. 
+In \theTask{}, we will develop a number of refactorings that will transform C++ programs into equivalent forms with introduced security patterns (from~\ref{task:patterns}). The refactorings will be defined as source-to-source semi-automatic program transformations. 
 
-These refactorings themselves will be developed based on a set of formal refactoring rules (which will be defined in terms of the refactoring's pre- and post-conditions, together with a set of transformation rules). The output of the refactoring will be an equivalent application, with increased security, decreased vulnerability and higher conformance to the security-aware coding standards (from \ref{task:standards}). In this task we will develop a number of program transformation rules based on transforming the C++ target language. Prototype rules will also be developed for other languages, such as Java and Python. 
 
-This task will proceed in three phases. In the \emph{first} phase we will identify transformations for C++ applications that will introduce the patterns from \ref{task:patterns} into C++ applications, by defining their pre- and post-conditions, together with their formal transformations rules. In the \emph{second} phase, we will produce implementations of the refactorings defined in the first phase, implemented in the ParaFormance tool-chain, for C++. In this phase, we will consider the outputs from the Advanced Vulnerability Detection from \ref{task:vulnerability} and the Self-Healing from T XX (as defined in \ref{wp:vulnerability}) to provide the refactoring tool with the static analysis information required to discovery vulnerabilities and information on how to repair them.
- In the \emph{third} phase, we will produce refactorings that further refactor the code so that it conforms to the standards outlined in \ref{task:standards}, where possible. We will also produce prototype implementations of a tractable set of the refactorings from all the phases for Java-like languages.
+%In \theTask{}, we will develop a number of program transformations to support the end-user by providing tool-support through the  secure-aware programming methodology from \ref{task:methodology} in WPX. These program transformations will be implemented as source-to-source program \emph{refactorings} in T6.1 WP6 and will operate at the program source level. The transformations will be proved correct in Task XX WPX. 
+
+These refactorings themselves will be developed based on a set of formal refactoring rules (which will be defined in terms of the refactoring's pre- and post-conditions, together with a set of transformation rules). The output of the refactoring will be an equivalent application, with introduce security patterns, where the refactorings will focus on the introduction of such patterns into the source-code. The result will be a functionally equivalent program with increased security and decreased vulnerability. In this task we will develop a number of program transformation rules based on transforming the target language, together with their implementation, feeding in to~\ref{task:dashboard}. We will consider the outputs from the Static Source Code Analysis (\ref{task:staticanalysis})   and XX to provide the refactoring tool with the static analysis information required to discovery vulnerabilities and information on how to repair them.
+%Prototype rules will also be developed for other languages, such as Java and Python. 
+
+This task will proceed in three phases. In the \emph{first} phase we will identify transformations for C++  that will introduce the patterns from~\ref{task:patterns} into C++ applications and use-cases (from~\ref{wp:usecases}), by defining the refactoring's  pre- and post-conditions, together with their formal transformations rules. In the \emph{second} phase, we will produce implementations of the refactorings defined in the first phase, for C++. 
+ In the \emph{third} phase, we will integrate our implementations into the dashboard user-interface from~\ref{task:dashboard} and provide further refactorings for some of the advanced patterns identified in~\ref{task:patterns}.
+We will also explore prototype transformation rules for some of the simpler patterns for Java.
 \end{Task}
+
+\begin{Task}
+	\TaskTitle{Refactorings for Security Standard Conformance}
+	\TaskParticipant{USTAN}{24}
+	\TaskParticipant{SCCH}{1}
+	\TaskParticipant{IBM}{1}
+	\TaskStart{1}
+	\TaskEnd{34}
+	\TaskResults{%
+		%%\ref{del:model1}
+	}
+	\TaskHeader{}
+	\tasklabel{task:runtimehealing}
+In \theTask{} we will define refactorings that enable application to adhere to the coding standards as defined in~\ref{task:standards}. Similarly as in~\ref{task:statichealing}, we will define the refactorings as a set of formal rewrite rules, based on their pre-and post conditions and tranformation rules. The output of the refactoring will be a functionally equivalent C++ program, but with increased conformance to the C++ coding standards. We will also provide implementations of the refactorings that will feed into the end-user dashboard in~\ref{task:dashboard}. The refactorings defined in this task will work at a lower granularity than those defined in~\ref{task:statichealing}: in \theTask{}, the refactorings will rewrite specific structural features of the source-code that violate the coding standard. 
+
+This task will proceed in \emph{three} phases. In the \emph{first} phase, we will identify a set of transformation rules that will rewrite C++ programs in such a way that they conform to the C++ standards from~\ref{task:standards}. In the \emph{second} phase, we will produce implementations of the refactorings of the refactorings identified in the first phase, feeding into the end-user dashboard in~\ref{task:dashboard}.
+
+\end{Task}
+
+\begin{Task}
+	\TaskTitle{Correctness of Refactorings for Self-Healing}
+	\TaskParticipant{USTAN}{24}
+	\TaskParticipant{SCCH}{1}
+	\TaskParticipant{IBM}{1}
+	\TaskStart{1}
+	\TaskEnd{34}
+	\TaskResults{%
+		%%\ref{del:model1}
+	}
+	\TaskHeader{}
+	\tasklabel{task:runtimehealing}
+In \theTask, we will formalise the refactorings from~\ref{task:statichealing} that introduce the security patterns (from~\ref{task:patterns})  developing mechanised proofs of their functional correctness. This will improve confidence to the end-user that the refactorings will not change the functional behaviour of the programs being refactored. Proofs that the refactorings increase the security properties of the program will not be handled here, but instead given in T4.X.
+
+The mechanisations will focus on a tractable subset of the target language, in order to demonstrate functional  equivalence between the original program and the refactored output, based on the identified semantics representation. This will involve identifying a representation of the semantics for the subset of the target language and defining an equivalence relation between the original and refactored programs. We will provide mechanised proofs in the form of implementations in a dependently typed language, such as Idris.
+
+This task will proceed in a number of phases. In the \emph{first} phase, we will identify the formal semantics of a tractable subset of the target language. In the \emph{second} phase, we will define an equivalence relation between the original program and the refactored output w.r.t. to the semantics identified in the first phase. Finally, in the \emph{third} phase will produce mechanised proofs of functional correctness for number of the refactorings produced  in~\ref{task:statichealing}, w.r.t. to the semantics and equivlence relations from the previous phases.
+
+\end{Task}
+
 
 \begin{Task}
 \TaskTitle{Runtime Adaptation for Self Healing}
