@@ -601,12 +601,12 @@ The \primal project, supported by the Austrian Research Promotion Agency, is con
 \begin{tabular}{|l|l|l|}\hline
 \textbf{Objective} & \textbf{Purpose} & \textbf{Contributing WPs} \\\hline \hline
 Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{WP3}, \textbf{WP4}, \textbf{WP6} \\\hline
-Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
-Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP3}, \textbf{WP4} \\\hline
-Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP2}, \textbf{WP6} \\\hline
+Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
+Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
+Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP4}, \textbf{WP6} \\\hline
 Objective 5 & Intelligent User Authentication-as-a-Service & \textbf{WP5} \\\hline
 Objective 6 & Refactoring-Based Methodology for Secure Applications & \textbf{WP3}, \textbf{WP4}, \textbf{WP5}, \textbf{WP6} \\\hline
-Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP7}\\\hline
+Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP6}, \textbf{WP7}\\\hline
 Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
 \end{tabular}
 \end{center}
@@ -617,7 +617,7 @@ Objective 1 aims to build secure patterns for distributed AI-based data analytic
 
 \paragraph*{Work Programme for Objective 2.}
 
-Objective 2 aims to develop techniques for identifying security vulnerabilities and data leakages in the C++ code. In WP4, we will develop fundamental techniques for identifying security vulnerabilities. These techniques will be based on static code analysis, as well as on dynamic symbolic execution of the code. In WP3, we will apply these techniques to identifying security vulnerabilities in distributed databases and machine-learning based distributed data analytics applications. WP3 will also investigate privacy leakage in machine-learning, both when building models on the training data and when the models are actually applied. The developed diagnostics for identifying vulnerabilities and leakages will be integrated into the overall \TheProject{} methodology in WP6.
+Objective 2 aims to develop techniques for identifying security and privacy vulnerabilities in the C++ and Java code. In WP2, we will develop fundamental techniques for identifying security vulnerabilities, based on source code analysis, dynamic symbolic execution and runtime monitoring. In WP3, we will apply these techniques to identifying security vulnerabilities in distributed data storage frameworks (distributed databases and filesystems) and in machine-learning based distributed data analytics applications based on parallel pattern-based data processing frameworks. WP3 will also investigate quantifying potential privacy leakage in machine-learning applications and in exchange of knowledge built using these models. The developed diagnostics for identifying vulnerabilities and data leakages will be integrated into the overall \TheProject{} methodology in WP6.
 
 \paragraph{Work Programme for Objective 3.}
 
@@ -625,17 +625,19 @@ Objective 3 aims to develop self-healing mechanisms for repairing security vulne
 
 \paragraph{Work Programme for Objective 4.}
 
-Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP2 and WP6, we will build on the existing C++ security standards, such as XX, extending them with the new rules identified over the course of the project. We will also develop static analysis techniques for verification that the given C++ code conforms to these extended security standards. This analysis will be integrated into the overall \TheProject{} methodology in WP6.
+Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP4, we will build static analysis techniques that will check the compliance of the C++ code to the security standards such as XX. Based on the methodology for developing secure applications that will be developed in WP6, and in particular based on the secure patterns for composing distributed big-data analytics applications from different layers of abstraction, we will also aim to augment these standards extended them with new coding rules as identified over the course of the project. The outcome of this (in WP6) will be the extended security standards and guidelines for developing secure, large-scale data applications that will be developed in both private and public clouds.
 
 \paragraph{Work Programme for Objective 5.}
 
-Objective 5 aims to analyze, design, develop and evaluate an intelligent and user-centered authentication-as-a-service which will allow digital service providers to integrate, deploy and manage multi-factor authentication (MFA) and continuous user authentication by reducing the complexity of development. A User-Centered Design (UCD) methodology will be followed for the design and development of the authentication technology aiming to assure that the solution meets the users' needs and expectations in terms of usability and security. The development life-cycle of the authentication component will include multiple design iterations and a significant amount of evaluation, which will be largely based on studies with the active participation of real end-users. These studies will be both formative (during the project’s course, with the aim of validating/refining the initial design) and summative (towards the end of the project, aiming to measure the quality and effectiveness of the final project results). The UCD approach will embrace three iterative cycles leading to three different system prototype releases (low-fidelity, high-fidelity, final release). Each iteration entails an analysis, design, implementation and integration, ending with an evaluation of derived prototypes providing thus valuable feedback for designing the next release. 
+Objective 5 aims to analyse, design, develop and evaluate an intelligent and user-centered authentication-as-a-service which will allow digital service providers to integrate, deploy and manage multi-factor authentication (MFA) and continuous user authentication by reducing the complexity of development. In WP6, a User-Centered Design (UCD) methodology will be followed for the design and development of the authentication technology aiming to assure that the solution meets the users' needs and expectations in terms of usability and security. The development life-cycle of the authentication component will include multiple design iterations and a significant amount of evaluation, which will be largely based on studies with the active participation of real end-users. These studies will be both formative (during the project’s course, with the aim of validating/refining the initial design) and summative (towards the end of the project, aiming to measure the quality and effectiveness of the final project results). The UCD approach will embrace three iterative cycles leading to three different system prototype releases (low-fidelity, high-fidelity, final release). Each iteration entails an analysis, design, implementation and integration, ending with an evaluation of derived prototypes providing thus valuable feedback for designing the next release. 
 
-\paragraph{Work Programme for Objective 6.}
+\paragraph{Work Programme for Objective 6.} 
+
+Objective 6 is to tie up all the different techniques developed in other parts of the project into a coherent and tool-supported methodology for repairing the existing and developing new secure applications. In WP6 we will develop both the methodology, which will outline all the steps in the software engineering process of building secure large-scale distributed applications, and we will integrate the tools developed in WP2--WP5 into an user interface, allowing seamless access to the technologies for identification and repairing of security and privacy vulnerabilities, checking for compliance to the security standards, formal verification of the security properties, security contracts and user-centered authentication. The tool-chain will be based on our existing tools for code analysis (provided by \YAGshort{}) and software refactoring (provided by \SAshort{}), which will allow semi-automatic restructuring of the end-user code while keeping the end user in the loop and allowing him input in the transformation and verification process, where they could supply their domain-specific knowledge to drive the process. Finally, in WP6 we will also apply the data fabrication technology from \IBMshort{} to allow rapid generation of large volumes of synthetic data to stress-test the large-scale data analytics systems, helping in both the development of the technologies and methodology and in testing the end-user applications.
 
 \paragraph{Work Programme for Objective 7.} 
 
-Objective 7 is to demonstrate effectiveness of the \TheProject{} approach on the real-world use cases from the air traffic control, telecommunications, banking and medical domains. In WP6, we will develop a tool-chain that will integrate all different techniques developed in WP2 -- WP5. This will be used in WP7 to evaluate the \TheProject{} technology  on use cases from XX, XX and XX. We will apply our techniques both on analysing/repairing the existing and on developing completely new distributed code from the chosen domains. While our ultimate goal is to test the techniques in realistic setting, \emph{data fabrication} methods that will be developed as a part of the methodology will allow us to produce immediately produce arbitrary amount of realistic data for rapid development and testing of our techniques. We will demonstrate increased security of the end-user software while at the same time decreasing cost of the production, deployment and maintenance of such a system.
+Objective 7 is to demonstrate effectiveness of the \TheProject{} approach on the real-world use cases from the air traffic control, telecommunications, banking and medical domains. In WP6, we will develop a tool-chain that will integrate all different techniques developed in WP2 -- WP5. This will be used in WP7 to evaluate the \TheProject{} technology  on use cases from \SOPRAshort{}, \FRQshort{} and \DEMshort{}. We will apply our techniques both on analysing/repairing the existing and on developing completely new distributed code from the chosen domains. While our ultimate goal is to test the techniques in realistic setting, \emph{data fabrication} methods that will be developed as a part of the methodology will allow us to immediately produce arbitrary amount of realistic data for rapid development and testing of our techniques. We will demonstrate increased security of the end-user software while at the same time decreasing cost of the production, deployment and maintenance of such a system.
 
 \paragraph{Work Programme for Objective 8.}
 
@@ -646,10 +648,10 @@ Objective 8 is to ensure long-term uptake and use of \TheProject{} concepts and 
 
 \eucommentary{Describe the advance your proposal would provide beyond the state-of-the-art, and the extent the proposed work is ambitious. Your answer could refer to the ground-breaking nature of the objectives, concepts involved, issues and problems to be addressed, and approaches and methods to be used.}
 
-\subsubsection{Advances Beyond the State-of-the-Art}
-\label{sec:novelty}
-\label{sect:background}
-\label{sect:state-of-the-art}
+%\subsubsection{Advances Beyond the State-of-the-Art}
+%\label{sec:novelty}
+%\label{sect:background}
+%\label{sect:state-of-the-art}
 
 %\eucommentary{}
 
@@ -657,43 +659,38 @@ Objective 8 is to ensure long-term uptake and use of \TheProject{} concepts and 
 \TOWRITE{ALL}{Add sections on your own technologies/update
 what's here.}
 
-The \TheProject{} project will revolutionise XX by:
+The \TheProject{} project will revolutionise the development of secure and privacy-preserving big-data applications that are deployed on clouds. We will significantly advance the state of the art in different areas related to security of distributed applications, including identification of security vulnerabilities in large-scale distributed settings, semi-automatic repairing of vulnerabilities, privacy-preserving machine-learning, security of data storage and data processing frameworks, pattern-based design of secure applications, certification and assurance and authentication. Collectively, the advances that are made by the \TheProject{} will:
 \begin{itemize}
-\item XX
+\item \textbf{reduce the number and impact of cybersecurity incidents} through our advanced security and privacy vulnerabilities detection and semi-automatic repairing, as well as novel user-centered authentication schemes;
+\item \textbf{increase trust} in the security of big-data analytics applications by providing formal guarantees of the security properties of the code and certification for compliance to the security standards;
+\item \textbf{ensure privacy and allow safe knowledge exchange} in AI-based data analytics by quantifying and reducing privacy leaks and allowing safe transfer of learning;
+\item \textbf{reduce the effort} required for securing applications and services by developing a methodology and tool-chain to support the end user and guide them through the process of developing secure applications;
+
 \end{itemize}
 
-\subsubsection{Distributed Machine-Learning Based Data Analytics}
+\subsubsection{Identifying Security Vulnerabilities in Applications}
 \label{sect:background-first}
-\label{sect:distAnalytics}
-\vjcomment{UOD and SCCH to write}
-A machine learning or a data analytics algorithm operates on datasets which might contain private data or sensitive information. The data-owner might not be willing to share data even for machine learning purposes, as a privacy-risk posed by several types of attacks exists. Different methods such as k-anonymity~\cite{10.1142/S0218488502001648}, l-diversity~\cite{10.1145/1217299.1217302}, t-closeness~\cite{DBLP:conf/icde/LiLV07}, and differential privacy~\cite{10.1561/0400000042} have been developed to address the privacy issue. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, can't draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, doesn’t always adequately limit inference about participation of a single record in the database~\cite{10.1145/1989323.1989345}. Differential privacy requirement does not necessarily constrain the information leakage from a data set~\cite{Calmon_privacyagainst}. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism~\cite{DBLP:conf/ndss/LiuMC16}. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data~\cite{5288525,Calmon_privacyagainst,6482222,7888175,DBLP:journals/corr/abs-1710-09295}. 
+\label{sect:identifying}
 
-A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. Information theoretic privacy can be optimized theoretically using a prior knowledge about data statistics. However, in practice, a prior knowledge (such as joint distributions of public and private variables) is missing and therefore a data-driven approach based on generative adversarial networks has been suggested~\cite{Huang_2017}. The data-driven approach of \cite{Huang_2017} leverages recent advancements in generative adversarial networks to allow learning the parameters of the privatization mechanism. However, the framework of \cite{Huang_2017} is limited to only binary type of sensitive variables. A similar approach~\cite{8919758} applicable to arbitrary distributions (discrete, continuous, and/or multivariate) of variables employs adversarial training to perform a variational approximation of mutual information privacy. The approach of approximating mutual information via a variational lower bound was also used in~\cite{NIPS2016_6399}.         
+\paragraph{Static Code Analysis.}
+\vjcomment{\YAGshort{} and \IBMshort{} to write}
 
-\TheProject{} will introduce a novel information theoretic approach for studying privacy-utility tradeoff suitable for multivariate data and for the cases with unknown statistical distributions. The approach is to consider entropy of the noise as a design parameter for studying privacy of a data release mechanism. The privacy-utility tradeoff optimization problem is mathematically formulated where a sample of sensitive or private data $x$ ($x \in \mathcal{X} \subseteq \mathbb{R}^n$), corresponding observed data vector $y$ ($y \in \mathcal{Y} \subseteq \mathbb{R}^p$), and the released data vector $z$ ($z \in \mathcal{Z} \subseteq \mathbb{R}^p$) are modeled as random variables. A privacy-preserving mechanism to release data vector $z$ will add random noise $v \in \mathbb{R}^p$ (sampled from a density function, say $q(v)$) to the observed data vector $y$, i.e.,
-\begin{IEEEeqnarray}{rCl}
-\label{eq_first}z(v;y) & = & y + v.
-\end{IEEEeqnarray}     
-A relevant optimization problem here is to minimize the privacy-leakage quantified by the mutual information $I(x;z)$ while simultaneously minimizing the amount of data distortion quantified by $E_{q(v)}[\|z(v;y) - y \|^2 ]$ where $E_{q(v)}[\cdot]$ denotes expectation w.r.t. probability density function $q(v)$. The optimization of tradeoff between minimizing privacy-leakage $I(x;z)$ and minimizing data distortion $E_{q(v)}[\|z(v;y) - y \|^2 ]$ can be analytically solved for a known data distribution $P_{X,Y}(x,y)$ over the space $\mathcal{X} \times \mathcal{Y}$. The framework proposed in this study, without knowing data distribution, plots the optimized tradeoff curve between $I(x;z)$ and $E_{q(v)}[\|z(v;y) - y \|^2 ]$. This is done as follows:
-\begin{enumerate}
-\item The probability density function of noise (i.e. $q(v)$), that for a given noise entropy level $h$, minimizes $E_{q(v)}[\|z(v;y) - y \|^2 ]$ is analytically derived. In~\cite{10.1007/978-3-030-27684-3_15}, a similar optimization problem was solved where the scalar noise distribution minimizing expected magnitude value was derived.      
-\item The privacy of sensitive data is preserved via adding random noise (sampled from derived optimal distribution) to the data observations, i.e., eq.~(\ref{eq_first}). Only the noise added data observations are meant to be publicly released.        
-\item Given a finite set of private-public data pairs $\{(x^i,z^i)\;|\;i \in \{1,\cdots,N \} \}$, a stochastic fuzzy model $\mathcal{G}$ is built using variational Bayesian methodology such that $x^i = \mathcal{G}(z^i) + v^i$, where $v^i \in \mathbb{R}^n$ is the disturbance vector affecting the data model. 
-\item A lower bound on privacy-leakage is derived as a functional of distributions characterizing the data model, i.e., $I(x;z) \geq I_L(q(\alpha,\beta))$, where $q(\alpha,\beta)$ is an arbitrary probability density function on parameters $\alpha$ and $\beta$ which characterizes the distributions related to data model: $x = \mathcal{G}(z) + v$.  
-\item An approximation to $I(x;z)$ is provided via maximizing $I_L$ w.r.t. $q(\alpha,\beta)$, i.e., $\hat{I}(x;z) = \max_{q(\alpha,\beta)}I_L(q(\alpha,\beta))$. 
-\item Finally, a curve between $E_{q(v)}[\|z(v;y) - y \|^2 ]$ and $\hat{I}(x;z)$ is plotted via varying the noise entropy level $h$.             
-\end{enumerate} 
-The aforementioned approach to study and optimize privacy-utility tradeoff is novel. The are three significant features of the proposed framework. First is its generality for any unknown data distribution $P_{X,Y}$, the second is deriving optimal noise adding mechanism analytically, and the third is to compute privacy-leakage analytically without relying on the training of black-box models (e.g. adversarial networks~\cite{8919758}) for approximating distributions. 
-\cbcomment{I think this is too detailed and technical for this section.}
+\paragraph{Dynamic Analysis and Symbolic Execution.}
+\vjcomment{\IBMshort{} to write}
 
+\paragraph{Runtime Analysis}
+\vjcomment{\SCCHshort{} to write}
 
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of identification of security vulnerabilities in several ways:
+\begin{itemize}
+\item \emph{XX.} XX.
+\item \emph{XX} XX.
+\item \emph{XX} XX.
+\end{itemize}
+\end{mdframed}
 
-\subsubsection{Formal Specification and Proving of Security Properties}
-\label{sect:formal}
-\vjcomment{USTAN to write}
-\cbcomment{Should build on what we've done for teamplay here? Might want to just pick a tractable subset: secret variables?}
-
-\subsubsection{Security of Pattern-Based Big-Data Processing Frameworks}
+\subsubsection{Security in Pattern-Based Big Data Analytics}
 \label{sect:patterns}
 %\vjcomment{UOD to write}
 
@@ -718,13 +715,64 @@ One of the biggest issues in machine-learning based big data processing is that 
 \end{itemize}
 \end{mdframed}
 
+
+\subsubsection{Privacy in AI-based Data Analytics}
+\label{sect:privacy}
+%\vjcomment{UOD and SCCH to write}
+A machine learning or a data analytics algorithm operates on datasets which might contain private data or sensitive information. The data-owner might not be willing to share data even for machine learning purposes, as a privacy-risk posed by several types of attacks exists. Different methods such as k-anonymity~\cite{10.1142/S0218488502001648}, l-diversity~\cite{10.1145/1217299.1217302}, t-closeness~\cite{DBLP:conf/icde/LiLV07}, and differential privacy~\cite{10.1561/0400000042} have been developed to address the privacy issue. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, can't draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, doesn’t always adequately limit inference about participation of a single record in the database~\cite{10.1145/1989323.1989345}. Differential privacy requirement does not necessarily constrain the information leakage from a data set~\cite{Calmon_privacyagainst}. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism~\cite{DBLP:conf/ndss/LiuMC16}. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data~\cite{5288525,Calmon_privacyagainst,6482222,7888175,DBLP:journals/corr/abs-1710-09295}. 
+
+A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. Information theoretic privacy can be optimized theoretically using a prior knowledge about data statistics. However, in practice, a prior knowledge (such as joint distributions of public and private variables) is missing and therefore a data-driven approach based on generative adversarial networks has been suggested~\cite{Huang_2017}. The data-driven approach of \cite{Huang_2017} leverages recent advancements in generative adversarial networks to allow learning the parameters of the privatization mechanism. However, the framework of \cite{Huang_2017} is limited to only binary type of sensitive variables. A similar approach~\cite{8919758} applicable to arbitrary distributions (discrete, continuous, and/or multivariate) of variables employs adversarial training to perform a variational approximation of mutual information privacy. The approach of approximating mutual information via a variational lower bound was also used in~\cite{NIPS2016_6399}.         
+
+\TheProject{} will introduce a novel information theoretic approach for studying privacy-utility tradeoff suitable for multivariate data and for the cases with unknown statistical distributions. The approach is to consider entropy of the noise as a design parameter for studying privacy of a data release mechanism. The privacy-utility tradeoff optimization problem is mathematically formulated where a sample of sensitive or private data $x$ ($x \in \mathcal{X} \subseteq \mathbb{R}^n$), corresponding observed data vector $y$ ($y \in \mathcal{Y} \subseteq \mathbb{R}^p$), and the released data vector $z$ ($z \in \mathcal{Z} \subseteq \mathbb{R}^p$) are modeled as random variables. A privacy-preserving mechanism to release data vector $z$ will add random noise $v \in \mathbb{R}^p$ (sampled from a density function, say $q(v)$) to the observed data vector $y$, i.e.,
+\begin{IEEEeqnarray}{rCl}
+\label{eq_first}z(v;y) & = & y + v.
+\end{IEEEeqnarray}     
+A relevant optimization problem here is to minimize the privacy-leakage quantified by the mutual information $I(x;z)$ while simultaneously minimizing the amount of data distortion quantified by $E_{q(v)}[\|z(v;y) - y \|^2 ]$ where $E_{q(v)}[\cdot]$ denotes expectation w.r.t. probability density function $q(v)$. The optimization of tradeoff between minimizing privacy-leakage $I(x;z)$ and minimizing data distortion $E_{q(v)}[\|z(v;y) - y \|^2 ]$ can be analytically solved for a known data distribution $P_{X,Y}(x,y)$ over the space $\mathcal{X} \times \mathcal{Y}$. The framework proposed in this study, without knowing data distribution, plots the optimized tradeoff curve between $I(x;z)$ and $E_{q(v)}[\|z(v;y) - y \|^2 ]$. This is done as follows:
+\begin{enumerate}
+\item The probability density function of noise (i.e. $q(v)$), that for a given noise entropy level $h$, minimizes $E_{q(v)}[\|z(v;y) - y \|^2 ]$ is analytically derived. In~\cite{10.1007/978-3-030-27684-3_15}, a similar optimization problem was solved where the scalar noise distribution minimizing expected magnitude value was derived.      
+\item The privacy of sensitive data is preserved via adding random noise (sampled from derived optimal distribution) to the data observations, i.e., eq.~(\ref{eq_first}). Only the noise added data observations are meant to be publicly released.        
+\item Given a finite set of private-public data pairs $\{(x^i,z^i)\;|\;i \in \{1,\cdots,N \} \}$, a stochastic fuzzy model $\mathcal{G}$ is built using variational Bayesian methodology such that $x^i = \mathcal{G}(z^i) + v^i$, where $v^i \in \mathbb{R}^n$ is the disturbance vector affecting the data model. 
+\item A lower bound on privacy-leakage is derived as a functional of distributions characterizing the data model, i.e., $I(x;z) \geq I_L(q(\alpha,\beta))$, where $q(\alpha,\beta)$ is an arbitrary probability density function on parameters $\alpha$ and $\beta$ which characterizes the distributions related to data model: $x = \mathcal{G}(z) + v$.  
+\item An approximation to $I(x;z)$ is provided via maximizing $I_L$ w.r.t. $q(\alpha,\beta)$, i.e., $\hat{I}(x;z) = \max_{q(\alpha,\beta)}I_L(q(\alpha,\beta))$. 
+\item Finally, a curve between $E_{q(v)}[\|z(v;y) - y \|^2 ]$ and $\hat{I}(x;z)$ is plotted via varying the noise entropy level $h$.             
+\end{enumerate} 
+The aforementioned approach to study and optimize privacy-utility tradeoff is novel. The are three significant features of the proposed framework. First is its generality for any unknown data distribution $P_{X,Y}$, the second is deriving optimal noise adding mechanism analytically, and the third is to compute privacy-leakage analytically without relying on the training of black-box models (e.g. adversarial networks~\cite{8919758}) for approximating distributions. 
+\cbcomment{I think this is too detailed and technical for this section.}
+
+
+
+\subsubsection{Formal Specification and Proving of Properties}
+\label{sect:formal}
+\vjcomment{USTAN to write}
+\cbcomment{Should build on what we've done for teamplay here? Might want to just pick a tractable subset: secret variables?}
+
+\vjcomment{Definitely we need to elaborate on what is done in TeamPlay and how we go beyond that}
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of formal specification and verification of security properties in several ways:
+\begin{itemize}
+\item \emph{XX.} XX.
+\item \emph{XX} XX.
+\item \emph{XX} XX.
+\end{itemize}
+\end{mdframed}
+
 \subsubsection{Coding Standards for Security}
 \label{sect:codingStandards}
 \vjcomment{UC3M to write}
 
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of security standards and static analysis to conformance to standards in several ways:
+\begin{itemize}
+\item \emph{XX.} XX.
+\item \emph{XX} XX.
+\item \emph{XX} XX.
+\end{itemize}
+\end{mdframed}
+
 \subsubsection{Identifying Security Vulnerabilities}
 \label{sect:security}
-\vjcomment{IBM and DEMOCRITOS to write}
+\vjcomment{This is the material for one of the old proposals. We need to check this and move the relevant stuff to the other sections (there seems to be lots of relevant stuff here).}
 
 Application security is becoming increasingly important in modern computer systems.
 Current practice is for security to be ensured at runtime, using efficient monitoring
@@ -799,8 +847,20 @@ vulnerability.
 
 Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication (MFA)} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) [REF]. With regards to \textit{continuous user authentication}, several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones [REF], physiological data analysis such as body signals (heart rate, skin conductance, etc.) [REF] and face biometrics [10, 11], and eye gaze data analytics [REF]. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security (https://duo.com), Futurae (https://futurae.com), Acceptto (https://acceptto.com), Auth0 (https://auth0.com), Saaspass (https://saaspass.com)), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. 
 
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
+\begin{itemize}
+\item \emph{XX.} XX.
+\item \emph{XX} XX.
+\item \emph{XX} XX.
+\end{itemize}
+\end{mdframed}
+
 \subsubsection{Security Patterns}
 \vjcomment{USTAN and UOD to write -- possibly merge with the previous subsections?}
+
+\vjcomment{I think this can be integrated into the section \ref{sect:patterns}}
+
 \begin{itemize}
 	\item Design pattern
 	\item parallel patterns or skeletons
@@ -813,6 +873,9 @@ Researchers and practitioners have attempted to provide various \textit{solution
 
 \subsubsection{Security Contracts}
 \cbcomment{USTAN to write - we can build on what we've done for teamplay here}
+
+\vjcomment{Let us move this to \ref{sect:formal}}
+
 \begin{itemize}
     \item Contract
     \item CSL system
@@ -838,6 +901,15 @@ Researchers and practitioners have attempted to provide various \textit{solution
 In essence, refactoring is about changing the structure of a program's source code in such a way that the change does not alter the functional behaviour of the program. It is a software engineering practice that is used daily by developers, who restructure code to make it more amenable to maintenance and extension. Refactoring is also a technique that is usually practised \emph{manually} by developers. The downside of manual refactoring is that it becomes very error-prone over large code bases; it also requires the refactorer to be an expert in the particular structural change that is being implemented. Refactoring tools, on the other hand, automate the process, allowing machine-checkable pre- and post-conditions to automatically ensure that the refactored code is functionally correct to the original. 
 
 Automated refactoring has roots in a long history, with the original refactoring work going back to the \emph{fold/unfold} system proposed by Bustall and Darlington in 1977~\cite{cfs}{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{cfs}{Mens:2004:SSR:972215.972286}, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of refactoring for security in several ways:
+\begin{itemize}
+\item \emph{XX.} XX.
+\item \emph{XX} XX.
+\item \emph{XX} XX.
+\end{itemize}
+\end{mdframed}
 
 \subsubsection{Use Cases}
 \label{sect:applications}

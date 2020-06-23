@@ -58,7 +58,7 @@ also adapt the self-healing mechanisms from WP2 to the specific problem of big d
  }
  \TaskHeader{}
  \tasklabel{task:processing}
- In \theTask, we will define the methodology and conduct analysis of vulnerabilities in usage of pattern-based frameworks for big data processing. These systems are usually built on top of distributed filesystems and databases and are presented to the end users in the form of a library that encapsulates data and computations distributions. They provide their own security challenges beyond those in data storage systems, as the location where the data is processed can be different to where it is stored, resulting in possibly very frequent data transfers across nodes (or even organisations). We will not tackle the security of the data whilst it is on the move (on the wire and the network stack) as that are the subject of other research areas.  The task will follow a similar pattern to that of \ref{task:storage} selecting candidates systems from those written in C++ or based on the JVM (Hadoop, Spark, Flink, Storm) exploiting source-code level analysis using symbolic execution (WPXX) to expose security vulnerabilities.
+ In \theTask, we will define the methodology and conduct analysis of vulnerabilities in usage of pattern-based frameworks for big data processing. These systems are usually built on top of distributed filesystems and databases and are presented to the end users in the form of a library that encapsulates data and computations distributions. They provide their own security challenges beyond those in data storage systems, as the location where the data is processed can be different to where it is stored, resulting in possibly very frequent data transfers across nodes (or even organisations). We will not tackle the security of the data whilst it is on the move (on the wire and the network stack) as that are the subject of other research areas.  The task will follow a similar pattern to that of \ref{task:storage} selecting candidates systems from those written in C++ or based on the JVM (Hadoop, Spark, Flink, Storm) exploiting source-code level analysis and using symbolic execution and runtime monitoring (WP2) to expose security vulnerabilities. In addition to that, we will also adapt the technologies for self-healing to the usage of big data processing framework, feeding into the refactoring and runtime transformations in WP2 as applied to the big data analysis problem.
 \UCM will perform vulnerability analysis of C++ processing software components.
 \end{Task}
  
@@ -90,23 +90,24 @@ also adapt the self-healing mechanisms from WP2 to the specific problem of big d
   This task will develop an analytical framework to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. The goal is to answer the question: how can a model be transferred from a source to a target domain while preserving privacy of both source and target domains? An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.
  \end{Task}
 
- \begin{Task}
-  \TaskTitle{Self-Healing in Distributed Data Processing Systems}
-  \TaskParticipant{SCCH}{1}
+ %%\begin{Task}
+  %%\TaskTitle{Self-Healing in Distributed Data Processing Systems}
+  %%\TaskParticipant{SCCH}{1}
   
-  \TaskStart{1}
-  \TaskEnd{36}
-  \TaskResults{%
+  %%\TaskStart{1}
+  %%\TaskEnd{36}
+  %%\TaskResults{%
   %\ref{del:model1}
-  }
-  \TaskHeader{}
-  \tasklabel{task:healing}
-  In \theTask, we will integrate self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. A sample use case from one of the technologies surveyed in \ref{task:storage}, \ref{task:processing}in  will be selected to demonstrate the application of self healing to that technology. 
- \end{Task}
+ %% }
+  %%\TaskHeader{}
+  %%\tasklabel{task:healing}
+  %%In \theTask, we will integrate self-healing mechanisms developed in WPXX into the tools and techniques developed in this work package. Collectively, the diagnostics and repairs of security vulnerabilities developed in this work package will feed into the refactoring-based self-healing methodology from WP6. A sample use case from one of the technologies surveyed in \ref{task:storage}, \ref{task:processing}in  will be selected to demonstrate the application of self healing to that technology. 
+ %%\end{Task}
  
  
  \begin{Task}
-  \TaskTitle{Privacy-preserving Biometric Data}
+  %\TaskTitle{Privacy-preserving Biometric Data}
+  \TaskTitle{Privacy-Preserving Biometric Data in Authentication for Big Data Systems}
   \TaskParticipant{COGNI}{1}
    \TaskParticipant{SCCH}{1}
   
@@ -122,9 +123,9 @@ also adapt the self-healing mechanisms from WP2 to the specific problem of big d
  
  
 \begin{Task}
-\TaskTitle{Privacy vulnerability detection in Source Code from static analysis}
+\TaskTitle{Integration into \TheProject{} Front End User Interface}
 \TaskParticipant{YAG}{1}
-
+\TaskParticipant{SA}{1}
 \TaskStart{1}
 \TaskEnd{36}
 \TaskResults{%
@@ -132,13 +133,34 @@ also adapt the self-healing mechanisms from WP2 to the specific problem of big d
 }
 \TaskHeader{}
 \tasklabel{task:PrivacyFromSAST}
-In \theTask, we will improve the static analysis tool and its post-processing algorithms to extend vulnerability detection to distributed data specific vulnerabilities, with a particular focus on privacy and anonymization leaks. We will use as an input the description of the specific security and privacy vulnerabilities of distributed Machine learning to be identified in the task XX. We will integrate them in the static analysis detection and qualification algorithms. Programming languages to be scanned will be JAVA and C/C++.
+In \theTask, we will improve the static analysis tool and its post-processing algorithms to extend vulnerability detection to distributed data specific vulnerabilities, with a particular focus on privacy and anonymisation leaks. We will use as an input the description of the specific security and privacy vulnerabilities of distributed Machine learning to be identified in the task XX. We will integrate them in the static analysis detection and qualification algorithms. Programming languages to be scanned will be JAVA and C/C++.
 
 The SAST and post processing algorithms will be developed to support design flaws in order to detect anonymization vulnerabilities and risks.
 
 The vulnerability detection will include a business oriented semantics approach in order to support multilevel privacy and sensitive data requirements.
 
- \end{Task}
+\end{Task}
+
+ 
+ 
+%%\begin{Task}
+%%\TaskTitle{Privacy vulnerability detection in Source Code from static analysis}
+%%\TaskParticipant{YAG}{1}
+
+%%\TaskStart{1}
+%%\TaskEnd{36}
+%%\TaskResults{%
+%\ref{del:model1}
+%%}
+%%\TaskHeader{}
+%%\tasklabel{task:PrivacyFromSAST}
+%%In \theTask, we will improve the static analysis tool and its post-processing algorithms to extend vulnerability detection to distributed data specific vulnerabilities, with a particular focus on privacy and anonymization leaks. We will use as an input the description of the specific security and privacy vulnerabilities of distributed Machine learning to be identified in the task XX. We will integrate them in the static analysis detection and qualification algorithms. Programming languages to be scanned will be JAVA and C/C++.
+
+%%The SAST and post processing algorithms will be developed to support design flaws in order to detect anonymization vulnerabilities and risks.
+
+%%The vulnerability detection will include a business oriented semantics approach in order to support multilevel privacy and sensitive data requirements.
+
+%% \end{Task}
 
 
 \begin{WPDeliverables}
