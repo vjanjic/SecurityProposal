@@ -408,9 +408,21 @@ In modern world, data is everywhere around us. With the emergence of Internet-of
 {\color{blue} \YAGshort{} update Proposal} In the meantime, software production have been tremendously increasing over the last decades, reaching up to 110 billion lines of code written every year. The growing needs to bring new digital functionalities as well as the modern software development processes contribute to the production of huger and more complex applications. As a consequence, application security testing activities, such as vulnerabilities check or privacy data flaws detection, become more complex and subject to combinatory explosions.
 }
 
-The digitisation of modern world, together with advances in the software systems, has had one undesirable consequence - the prevalence of cybersecurity problems. As more and more devices are connected to the internet, there are more and more potential targets for cyber attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the code is completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction betweeen data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
+The digitisation of modern world, together with advances in the software systems, has had one undesirable consequence - the prevalence of cybersecurity problems. As more and more devices are connected to the internet, there are more and more potential targets for cyber attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the code is completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction between data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
 
 
+{\color{blue} \SOPRAshort{} update CI/CD proposal}
+As the solutions in the distributed data processing ecosystem is an amalgamation of a diverse assembly of various components. As Continuous Integration (CI) and Continuous Deployment (CD) enables the development of new or changes code for the system to enable continuous improvement of the functionality of the solution. To ensure success in the deployment of each integration requires verification by an automated build and automated tests suite. The security assessment build by our research will act as a critical test before deployment and integration. The reason been that the introduction in the processing pipeline could cause security vulnerabilities in other parts of the pipeline. The CI/CD process will ensure this vulnerabilities do not enter the live ecosystem because of the testing rules introduce new functionality. During the automatic run-time monitor process the CI/CD enables an auto-healing of the code base.
+
+\begin{figure}[tp]
+  \begin{center}
+  \vspace{-5mm}
+  \includeimage[scale=0.4]{Digital-Fortress-CD-CI.jpg}
+%  \vspace{-3cm}
+  \caption{Continuous Integration (CI) / Continuous Deployment (CD) for \TheProject{} Methodology}
+  \label{fig:ci:cd}
+  \end{center}
+  \end{figure}
 
 %\vspace{-6pt}
 
@@ -428,6 +440,10 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 
 \item {\color{blue} \textbf{\YAGshort{} Proposal: Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
 \textbf{We must ensure that static code analysis provides relevant and qualified decision making information to optimize self healing and vulnerability detection.} 
+
+\item \textbf{Vulnerability detection and self-healing.}
+The project will investigate three mutually dependent challenges: (1) the formulation of constraints (contracts) that should be satisfied (2) the specification of detection algorithms that uncover any constraint violation, and (3) the specification of repair and adaptation algorithms that restore the constraints (self-healing). The capture of security requirements in distributed AI-based data analytics systems is still neglected, but in general, security in computing systems is  well-studied. The common state-of-the-art approach is to start from an attacker model and system vulnerabilities. With respect to possible attacks the project will focus on unauthorised intrusion with the potential of causing (planned or carelessly) damage to the system, i.e. identity management and access control are primary objects of interest. For this the project will take an approach based on anomaly detection and counter-measures based on the adaptation of the security controllers. The anomaly detection will be based on the learning of the protocol language used in the interaction with the system, and the counter-measures will change the rules of the identity manager and the access control. Then the verification of security requires proofs that an anomaly, once it has been detected, will be removed by the counter-measures after a pre-determined maximum number of steps. The challenge is to investigate such novel class of self-healing proof obligations concerning security requirements, which goes beyond the current capabilities of the rigorous methods and their supporting tools. Furthermore, the research on anomaly detection will not only focus on the recognition of anomalies that may indicate unauthorised and potentially malicious intrusion and the adequate countermeasures that repair a violation, but also on the early anticipation of damaging activities and the start of counter-measures before any damage has occurred. For instance, components may produce incorrect Byzantine behaviour or not react anymore, or components may simply be jammed. In order to cope with such vulnerabilities, the challenge is to identify also states that are close to states that will require counter-measures and sequences of update sets by individual agents that led to these states, such that the combination of both indicate the potential creation of a non-acceptable state within a small number of steps. 
+
 
 \end{itemize}
 
@@ -927,10 +943,15 @@ The Frequentis Integration Platform is an end-to-end solution that provides avia
 
 
 
-\paragraph{\YAGshort{} Machine learning augmented Static Analysis.}
+\paragraph{\YAGshort{} : Machine learning augmented Static Analysis.}
 
-YAGAAN developed vulnerability detection technologies based both on static and dynamic methods. IBM developed Beam for static analysis of C/C++ code and extended it to look in particular for security vulnerabilities with a low ratio of false positive. In addition, IBM developed the ExpliSAT tool which uses symbolic interpretation for more precise program analysis including checks for security vulnerabilities such as buffer overflow detection. During the \rephrase{} project, ExpliSAT was extended to analyse parallel programs. To complement the static methods IBM uses also Fuzz testing technology that detects security vulnerabilities dynamically using genetic algorithms. In order to achieve accurate and scalable security vulnerability detection, IBM is now working on combining the static and dynamic analysis vulnerability detection tools.     
-
+YAGAAN developed source code vulnerability scanning technologies based on static analysis and machine learning, with a strong focus to remediate the state of the art limitations of Static Analysis Security Testing such as false positives or duplicate warnings. YAGAAN developed the YAG-Suite product which is a suite of tools that use static analysis to scan source code and raise a warning when a suspicious sequence of code is detected as well as machine learning to automate warnings qualification with supervised training and provide decision making information to the user such as vulnerability diagnostics and remediation options, Machine learning is also used to handle uncertain information, contextualize the analysis and estimate relevancy (likeliness of being a true positive) and criticality (CVSS score
+\footnote{CVSS: Common Vulnerability Scoring System v3.1 Specification Document (\url{https://www.first.org/cvss/})}
+) metrics for each individual warnings.
+In order to detect sensitive data leaks, and in particular privacy violation risks, the YAG-Suite also integrates business oriented semantics to detect vulnerabilities.
+YAGAAN also developed code mining technology to support deep and expert investigation of applications, allowing the user to query specific properties  of interest and analyse corresponding areas of the source code, be they certain like database queries for instance or uncertain (known as "code smells"
+\footnote{Code smell: symptoms of poor design and implementation choices - M. Fowler, K. Beck, J. Brant, W. Opdyke, and D. Roberts, Refactoring: Improving the Design of Existing Code. Addison-Wesley, 1999.}
+).
 
 
 \subsubsection{Innovation Potential}
@@ -1263,6 +1284,21 @@ unless their own IPR is directly involved.
 \hfill \includeimage{logos/st-andrews-logo.jpg}
 \vspace{-0.9cm}
 \end{wrapfigure}
+
+
+\horizontalline
+
+\subsection*{Draft Exploitation Plan for \YAGshort{}}
+
+\begin{wrapfigure}{R}{2cm}
+\vspace{-1.4cm}
+\hfill \includeimage{logos/yagaan.jpg}
+\vspace{-0.9cm}
+\end{wrapfigure}
+
+
+\horizontalline
+
 
 \subsubsection{Knowledge Management and Protection}
 \vspace{-12pt}
