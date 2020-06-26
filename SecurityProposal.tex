@@ -695,12 +695,17 @@ The \TheProject{} project will revolutionise the development of secure and priva
 
 \paragraph{Static Code Analysis.}
 \vjcomment{\YAGshort{} and \IBMshort{} to write}
+Static code checkers, such as Appscan Source~\cite{AppScan} and Coverity~\cite{Coverity} are based on techniques for quality checking that have been extended to cover security vulnerabilities in the code. The main drawback of  these methods is their high rate of false positives they produce. 
 
 \paragraph{Dynamic Analysis and Symbolic Execution.}
 \vjcomment{\IBMshort{} to write}
 
 \paragraph{Runtime Analysis}
 \vjcomment{\SCCHshort{} to write}
+Current practice is for security to be ensured at runtime, using efficient monitoring techniques coupled with dynamic runtime checks such as ISR~\cite{isr}, ASLR~\cite{aslr} and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational complexity and energy consumption. 
+
+\paragraph{Security of Multi-Library Applications}
+Including third party libraries into the application code presents additional security risks, as these libraries may include intentional or unintentional vulnerabilities resulting in unwanted behaviour or data leakage of sensitive  information. For example, an open source JavaScript library used in a website may contain malicious code that collects data and sends it to the third party. This is especially problematic for large-scale big data analysis applications, as they are typically composed of calls to several different libraries, as outlined in Section~\ref{sec:XX}. The state of the art solutions to this problem is to use security testing, static analysis and dynamic analysis, such as sandboxing~\cite{jsand}, to detect vulnerabilities and malicious packages before integrating them into the application code. In~\cite{Cova}, a combination of anomaly detection and emulation systems is built to detect malicious code. OWASP~\cite{OWASP} presents the risks in using third party  packages, how to determine if these packages are vulnerable or contain malicious code and how to deploy these packages. Other possible solutions to the problem of integrating third party libraries are based on analysis of the libraries, building control flow graph, looking for copies of buggy code, and profiling packages~\cite{Hanna, XinSun}. These solutions miss many vulnerabilities or malicious dormant code as a result of obfuscation, packing, and the ease in rebuilding new variants of the malicious code, or just the rapid release of new buggy version of packages. There are cases in which it is not beneficial to fix a vulnerability in the software or in a third party code integrated into the software. For example, in cases where the patch is hard to deploy or where fixing the vulnerability has significant impact on performance. In fact, 99\% of attacks are believed to exploit known and fixed vulnerability~\cite{GartnerVulnerability} for which the fix was not deployed. One famous example is the WannaCry attack that was based on a fixed and updated CVE. To protect the software in these cases, \emph{virtual patching} may be used. A virtual patch is a set of rules that implements complex logic to prevent malicious traffic from reaching the application. The challenge is to come up with a set of accurate rules that filter exactly the malicious inputs without blocking other inputs. This work is currently done manually, and it would heavily benefit from integrating a predictive model to automatically detect inputs that may utilise the vulnerability.
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of identification of security vulnerabilities in several ways:
@@ -769,6 +774,8 @@ The aforementioned approach to study and optimize privacy-utility tradeoff is no
 
 \vjcomment{Definitely we need to elaborate on what is done in TeamPlay and how we go beyond that}
 
+Techniques based on formal methods, such as model checking and symbolic interpretation, do not report false  positives, but have potential problem with scaling. AFL~\cite{AFL} uses use fuzz testing to dynamically profile the code to expose potential security vulnerabilities.
+
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of formal specification and verification of security properties in several ways:
 \begin{itemize}
@@ -791,76 +798,76 @@ The aforementioned approach to study and optimize privacy-utility tradeoff is no
 \end{itemize}
 \end{mdframed}
 
-\subsubsection{Identifying Security Vulnerabilities}
-\label{sect:security}
-\vjcomment{This is the material for one of the old proposals. We need to check this and move the relevant stuff to the other sections (there seems to be lots of relevant stuff here).}
-
-Application security is becoming increasingly important in modern computer systems.
-Current practice is for security to be ensured at runtime, using efficient monitoring
-techniques coupled with dynamic runtime checks such as ISR~\cite{isr}, ASLR~\cite{aslr}
-and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational
-complexity and energy consumption. As most of the security vulnerabilities come from
-code defects, bugs and logic flaws, the most cost-effective way to ensure security is
-to follow the secure code best practices~\cite{OWASP} and eliminate vulnerabilities
-before code is deployed. This is usually done with static and dynamic code analysers.
-Static code checkers, such as Appscan Source~\cite{AppScan} and Coverity~\cite{Coverity}
-%and Klocwork~\cite{Klocwork}, 
-are based on techniques for quality checking that
-have been extended to cover security vulnerabilities in the code. The main drawback of 
-these methods is their high rate of false positives they produce. Techniques based on
-formal methods, such as model checking and symbolic interpretation, do not report false 
-positives, but have potential problem with scaling. AFL~\cite{AFL} uses use fuzz testing 
-to dynamically profile the code to expose potential security vulnerabilities. 
-None of the above tools includes special algorithms for detecting vulnerabilities 
-resulting from parallel execution. Parallelism, due to undeterministic nature of the
-application execution, presents many additional problems from the security perspective. These problems have to be dealt with efficiently
-in future systems.
-
-
-Including third party libraries into the application code presents additional
-security risks, as these libraries may include intentional or unintentional
-vulnerabilities resulting in unwanted behavior or data leakage of sensitive 
-information. For example, an open source JavaScript library used in a website 
-may contain malicious code that collects data and sends it to the third party. 
-%Another example is binary packages which contain vulnerability which is detected by crackers and compromise users??? machines. 
-The state of the art solutions to this problem is to use security testing, static 
-analysis and dynamic analysis, such as sandboxing~\cite{jsand}, to detect 
-vulnerabilities and malicious packages before integrating them into 
-the application code. % is proposed to detect malicious JavaScript code, in addition, they 
-%suggest wrapping the components to control access to security sensitive operations. 
-In~\cite{Cova}, a combination of anomaly detection and emulation systems is built to detect malicious code. OWASP~\cite{OWASP} presents the risks in using third party 
-packages, how to determine if these packages are vulnerable or contain malicious code 
-and how to deploy these packages. %This problem is not met only in JavaScript packages, it is in many other 3rd party packages, especially, Android 3rd party libraries. 
-Other possible solutions to the problem of integrating third party libraries are
-based on analysis of the libraries, building control flow graph, looking for 
-copies of buggy code, and profiling packages~\cite{Hanna, XinSun}.%~\cite{Hanna, XinSun, Nora, Backes}.
-These solutions miss many vulnerabilities or malicious dormant code as a result of 
-obfuscation, packing, and the ease in rebuilding new variants of the malicious code, 
-or just the rapid release of new buggy version of packages.
-
-There are cases in which it is not beneficial to fix a vulnerability in the 
-software or in a third party code integrated into the software. For example, 
-in cases where the patch is hard to deploy or where fixing the vulnerability 
-has significant impact on performance. In fact, 99\% of attacks are believed to exploit known and fixed vulnerability~\cite{GartnerVulnerability} for which the fix was not deployed. One famous example is the WannaCry attack that was based on a fixed and updated CVE.
-To protect the software in these cases,
-\emph{virtual patching} may be used. %Virtual patching is a security policy 
-%enforcement layer which prevents the exploitation of a known vulnerability. 
-A virtual patch is a set of rules that implements complex logic to prevent 
-malicious traffic from reaching the application. 
-%The virtual patching mechanism will usually be integrated in the organization firewall. 
-The challenge is to come up with a set of accurate rules that filter 
-exactly the malicious inputs without blocking other inputs. This work is 
-currently done manually, and it would heavily benefit from integrating a 
-predictive model to automatically detect inputs that may utilize the 
-vulnerability.
-
-
-
-
-\TheProject{} will advance the state-of-the-art of security of parallel code in the following directions:
-\begin{itemize}
-\item XX
-\end{itemize}
+%\subsubsection{Identifying Security Vulnerabilities}
+%\label{sect:security}
+%\vjcomment{This is the material for one of the old proposals. We need to check this and move the relevant stuff to the other sections (there seems to be lots of relevant stuff here).}
+%
+%Application security is becoming increasingly important in modern computer systems.
+%Current practice is for security to be ensured at runtime, using efficient monitoring
+%techniques coupled with dynamic runtime checks such as ISR~\cite{isr}, ASLR~\cite{aslr}
+%and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational
+%complexity and energy consumption. As most of the security vulnerabilities come from
+%code defects, bugs and logic flaws, the most cost-effective way to ensure security is
+%to follow the secure code best practices~\cite{OWASP} and eliminate vulnerabilities
+%before code is deployed. This is usually done with static and dynamic code analysers.
+%Static code checkers, such as Appscan Source~\cite{AppScan} and Coverity~\cite{Coverity}
+%%and Klocwork~\cite{Klocwork}, 
+%are based on techniques for quality checking that
+%have been extended to cover security vulnerabilities in the code. The main drawback of 
+%these methods is their high rate of false positives they produce. Techniques based on
+%formal methods, such as model checking and symbolic interpretation, do not report false 
+%positives, but have potential problem with scaling. AFL~\cite{AFL} uses use fuzz testing 
+%to dynamically profile the code to expose potential security vulnerabilities. 
+%None of the above tools includes special algorithms for detecting vulnerabilities 
+%resulting from parallel execution. Parallelism, due to undeterministic nature of the
+%application execution, presents many additional problems from the security perspective. These problems have to be dealt with efficiently
+%in future systems.
+%
+%
+%Including third party libraries into the application code presents additional
+%security risks, as these libraries may include intentional or unintentional
+%vulnerabilities resulting in unwanted behavior or data leakage of sensitive 
+%information. For example, an open source JavaScript library used in a website 
+%may contain malicious code that collects data and sends it to the third party. 
+%%Another example is binary packages which contain vulnerability which is detected by crackers and compromise users??? machines. 
+%The state of the art solutions to this problem is to use security testing, static 
+%analysis and dynamic analysis, such as sandboxing~\cite{jsand}, to detect 
+%vulnerabilities and malicious packages before integrating them into 
+%the application code. % is proposed to detect malicious JavaScript code, in addition, they 
+%%suggest wrapping the components to control access to security sensitive operations. 
+%In~\cite{Cova}, a combination of anomaly detection and emulation systems is built to detect malicious code. OWASP~\cite{OWASP} presents the risks in using third party 
+%packages, how to determine if these packages are vulnerable or contain malicious code 
+%and how to deploy these packages. %This problem is not met only in JavaScript packages, it is in many other 3rd party packages, especially, Android 3rd party libraries. 
+%Other possible solutions to the problem of integrating third party libraries are
+%based on analysis of the libraries, building control flow graph, looking for 
+%copies of buggy code, and profiling packages~\cite{Hanna, XinSun}.%~\cite{Hanna, XinSun, Nora, Backes}.
+%These solutions miss many vulnerabilities or malicious dormant code as a result of 
+%obfuscation, packing, and the ease in rebuilding new variants of the malicious code, 
+%or just the rapid release of new buggy version of packages.
+%
+%There are cases in which it is not beneficial to fix a vulnerability in the 
+%software or in a third party code integrated into the software. For example, 
+%in cases where the patch is hard to deploy or where fixing the vulnerability 
+%has significant impact on performance. In fact, 99\% of attacks are believed to exploit known and fixed vulnerability~\cite{GartnerVulnerability} for which the fix was not deployed. One famous example is the WannaCry attack that was based on a fixed and updated CVE.
+%To protect the software in these cases,
+%\emph{virtual patching} may be used. %Virtual patching is a security policy 
+%%enforcement layer which prevents the exploitation of a known vulnerability. 
+%A virtual patch is a set of rules that implements complex logic to prevent 
+%malicious traffic from reaching the application. 
+%%The virtual patching mechanism will usually be integrated in the organization firewall. 
+%The challenge is to come up with a set of accurate rules that filter 
+%exactly the malicious inputs without blocking other inputs. This work is 
+%currently done manually, and it would heavily benefit from integrating a 
+%predictive model to automatically detect inputs that may utilize the 
+%vulnerability.
+%
+%
+%
+%
+%\TheProject{} will advance the state-of-the-art of security of parallel code in the following directions:
+%\begin{itemize}
+%\item XX
+%\end{itemize}
 
 \subsubsection{Authentication}
 \label{sect:auth}
