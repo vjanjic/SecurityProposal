@@ -15,8 +15,8 @@
 The objectives of \theWP{} are to:
 \begin{compactitem}
 %% Why just embedded? Are these domains correct? KH
-\item Develop a formal high-level multi-layer specification language; % able to capture different levels of abstraction; %and security contracts
-\item Define abstraction/refinement as a bidirectional transformation between specifications across layers;
+\item Develop a formal high-level multi-level specification language; % able to capture different levels of abstraction; %and security contracts
+\item Define abstraction/refinement as a bidirectional transformation between specifications across levels;
 % How is distribution considered?
 %BOTH for source code and code patterns that represent known vulnerabilities 
 %and relate different levels of abstraction (from models to code)
@@ -30,18 +30,20 @@ including security properties and privacy norms;
 
 \end{compactitem}
 
-%Needs to be related to WP4 and vulnerabilities 
+%Needs to be related to WP2 and vulnerabilities 
 \end{WPObjectives}
 
 \begin{WPDescription}
-%\theWP{} addresses the problem of solving the world.
-\theWP{} explores how rigorous formal methods can  provide systematic guarantees of security and privacy in our software systems.
-Establishing whole-system security for end-user software is crucial but particularly challenging for distributed systems.
-The scale of distributed systems requires the development of methods for security assurance that are modular, compositional and 
-incremental. As these systems evolve over time, and are often built using existing service components exporting an API that can be used by components developed later,  
-security cannot be verified once but has to be done incrementally as the systems evolve.
-We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. 
-In this WP we define the abstractions to present to the programmer, provided by the operating system, and so on (Task~\ref{task:contracts}), and introduce a specification language to capture the assumptions and guarantees of abstraction layers to facilitate reasoning about security across  layers.
+\theWP{} explores how rigorous formal methods can %continuously 
+provide systematic guarantees of security and privacy in 
+software systems at different levels of abstraction.
+%our software systems.
+%Establishing whole-system security for end-user software is crucial but particularly challenging for distributed systems.
+%The scale of distributed systems requires the development of methods for security assurance that are modular, compositional and 
+%incremental. As these systems evolve over time, and are often built using existing service components exporting an API that can be used by components developed later,  
+%security cannot be verified once but has to be done incrementally as the systems evolve.
+%We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. 
+We define the abstractions to present to the programmer, provided by the operating system, architecture, and so on (Task~\ref{task:contracts}), and introduce a specification language to capture the assumptions and guarantees of abstraction layers to facilitate reasoning about security across abstraction levels.
 % (Task~\ref{task:formalverif}). 
 The abstractions should expose security properties in a form understandable to (non-security specialist) programmers. We adopt Abstract State Machines (ASMs), given our experience in extracting ASMs from source code automatically. 
 The ability to move between layers with this approach and target the extraction of vulnerabilities from code for verification at higher levels will be key.
@@ -50,15 +52,16 @@ Concerning privacy, complementary to the work on privacy-preserving machine lear
 By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove that the computer system is secure against all possible attacks (up to modelling assumptions). This provides high assurance of system security, even against as-yet-unknown attacks (Task~\ref{task:attackmodels}).
 %as formal approaches in practice with the use of tools such as the ones from IBM, static analyser from YAG and code extractor from SCCH. 
 \theWP{} explores the integration of formal methods with the practical techniques from WP2, supports the tools from WP6 and is evaluated throughout with the use cases described in WP7.
-We will further investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (Task~\ref{task:dyncontracts} and Task~\ref{task:ContractsSastAssessment}). 
-
+We will further investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (%Task~\ref{task:dyncontracts} and 
+Task~\ref{task:ContractsSastAssessment}). 
+For functional security requirements we will explore the use of metrics such as confidentiality, integrity and availability to assess them (Task~\ref{task:RequirementsSastAssessment}).
 
 
 \end{WPDescription}
 
 
 \begin{Task}
-\TaskTitle{Security Contracts support}
+\TaskTitle{Security Contracts support and specification}
 \TaskParticipant{UCM}{1}
 
 \TaskStart{1}
@@ -69,11 +72,19 @@ We will further investigate the gaps or intersections between some of these appr
 \TaskHeader{}
 \tasklabel{task:contracts}
 
-In \theTask, we will define the mechanisms to represent security contracts
+In \theTask, we define mechanisms to represent security contracts
 in such a way that they can be mapped to concrete syntax in different
 programming languages. We will also support the extraction of those contracts
 from existing source code allowing iterative approaches where contracts
 are refined by developers.
+In this task we will first add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
+%can be completed in a relatively short time. 
+We will then further develop the module to perform more sophisticated higher-level abstractions, taking into account the semantics of the libraries used in the targeted distributed data analytics systems as well as that of its common programming patterns. The security contracts can then be expressed in the logics for ASMs (and its planned temporal extension) over the extracted ASMs, at the different levels of abstraction required. This will give us a unifying formalism for the rigorous verification of the envisaged security contracts.  
+%In addition, we will focus on the dynamic analysis of security contracts for
+%vulnerabilities that cannot be formally verified without running the software component. 
+%Note that C++ and Java code will just be refinements of the extracted ASMs. Plus, given the abstraction mechanism used for the ASMs extraction, we will already have the mapping to the concrete syntax of the programming languages.
+
+
 \end{Task}
 
 \begin{Task}
@@ -117,27 +128,27 @@ The aim of \theTask\ is to define classes of security contract requirements for 
 \end{Task}
 
 
+%\begin{Task}
+%\TaskTitle{Dynamic Analysis of Security Contracts}%% Added to Task 1
+%\TaskParticipant{UOD}{1}
+%
+%\TaskStart{1}
+%\TaskEnd{27}
+%\TaskResults{%
+%%\ref{del:model1}
+%}
+%\TaskHeader{}
+%\tasklabel{task:dyncontracts}
+%
+%In \theTask, we will focus on the dynamic analysis of security contracts for
+%vulnerabilities that cannot be formally verified without running the software component.
+%%cannot be proved by formal verification without running the software component.
+%\end{Task}
+
+
+
 \begin{Task}
-\TaskTitle{Dynamic Analysis of Security Contracts}
-\TaskParticipant{UOD}{1}
-
-\TaskStart{1}
-\TaskEnd{27}
-\TaskResults{%
-%\ref{del:model1}
-}
-\TaskHeader{}
-\tasklabel{task:dyncontracts}
-
-In \theTask, we will focus on the dynamic analysis of security contracts for
-vulnerabilities that cannot be formally verified without running the software component.
-%cannot be proved by formal verification without running the software component.
-\end{Task}
-
-
-
-\begin{Task}
-\TaskTitle{Static Analysis based Risk Assessment for Source Code Security Breaches}
+\TaskTitle{Analysis-based Risk Assessment for Source Code Security Breaches}
 \TaskParticipant{YAG}{1}
 
 \TaskStart{1}
@@ -148,13 +159,16 @@ vulnerabilities that cannot be formally verified without running the software co
 \TaskHeader{}
 \tasklabel{task:ContractsSastAssessment}
 
-As a complementary approach to extend formal verification of security contracts, in \theTask, we will provide a novel way to assess the risk that a security contract is not met by an application. This will include:
+On the one side, we will use dynamic analysis of security contracts for
+vulnerabilities that cannot be formally verified without running the software component.
+As a complementary approach to extend formal verification of security contracts, %in \theTask, 
+we will provide a novel way to assess the risk that a security contract is not met by an application. This will include:
 
 \begin{itemize}
-\item The parsing and analysis of the security contracts resulting from present \theWP / T4.XX and T4.YY
-    \item Mapping of the security contracts with the potentially impacted source code
-    \item Designing an interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms
-    \item Explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties.
+\item The parsing and analysis of the security contracts; %resulting from present \theWP / T4.1 and T4.2
+    \item Mapping of the security contracts with the potentially impacted source code;
+    \item Designing an interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
+    \item Explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties;
     \item Provide remediation proposals to fix vulnerabilities.
 \end{itemize}
 
