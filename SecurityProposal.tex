@@ -803,12 +803,42 @@ Techniques based on formal methods, such as model checking and symbolic interpre
 \label{sect:codingStandards}
 \vjcomment{UC3M to write}
 
+There is an inherent impact from programming languages features in the
+emergence of vulnerabilities in software. Recognizing this issue ISO has
+recently revised its technical report ISO/IEC  TR 24772 series on Guidance to
+avoiding vulnerabilities in programming languages. This series consists of a
+language independent part~\cite{iso24772:1}, and a set of language specific
+annexes including Ada (2020), or C (2020). Other programming languages are
+under preparation such as Python, PHP, Spark, Ruby, Fortran, C++ or Java.
+Another very relevant source for identifying vulnerabilities are the SEI CERT
+secure coding standards for C~\cite{cert:c}, C++~\cite{cert:cpp}, and
+Java~\cite{cert:java}. In the context of C++ there are multiple relevant coding
+guidelines focused with different intensities in security and safety as
+HIC++~\cite{hicpp} , the C++ Core Guidelines~\cite{cpp:core-guidelines}, or the
+JSF C++~\cite{cpp:jsf}. Some rules of those guidelines are already supported by
+some proprietary tooling (e.g.  Perforce) as well as by open source components
+(e.g.  clang-tidy).  Other rules may be supported by library components as the
+GSL~\cite{cpp:gsl} or extensions to tools like ThreadSanitizer~\cite{dolz:2017}
+or by the use of contract based programming~\cite{lopez-gomez:2019}.
+
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of security standards and static analysis to conformance to standards in several ways:
 \begin{itemize}
-\item \emph{XX.} XX.
-\item \emph{XX} XX.
-\item \emph{XX} XX.
+\item \emph{Produce a security centric coding guideline} 
+Based on existing and ongoing coding guidelines for C++ we will develop a new
+integrated coding guideline completely focused on the security aspect and with
+a strong bias to specific characteristics of distributed storage and machine
+learning data analytics.
+
+\item \emph{Provide tooling for enforcing guideline conformance} 
+We will develop a single interface to multiple tools that enforce different aspect
+of the new C++ coding guidelines, producing also new checks that need to be developed.
+
+\item \emph{Check and refactor for specific components} 
+We will check and enforce the security guidelines in software components identified
+in the project to validate that the approach is faeasible and useful to
+application and infrastructure developers. 
+
 \end{itemize}
 \end{mdframed}
 
@@ -1498,7 +1528,7 @@ Exploitation plan for SCCH.
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for Sopra Steria.
+Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solution the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality.
 
 \horizontalline
 
@@ -1620,13 +1650,34 @@ Exploitation plan for University of Dundee
 
 \subsection*{Draft Exploitation Plan for \UCMshort{}}
 
-\begin{wrapfigure}{R}{2cm}
-\vspace{-1.4cm}
-\hfill \includeimage[scale=0.25]{logos/UC3M-logo.png}
+\begin{wrapfigure}{R}{5.5cm}
+\vspace{-1cm}
+\hfill \includeimage[scale=0.2]{logos/UC3M-logo.png}
 \vspace{-0.9cm}
 \end{wrapfigure}
 
-Exploitation plan for UC3M.
+\UCMshort{} will exploit the results from the project in two main areas:
+the definition and tool support of coding standards and
+the C++ language extension for contract based programming.
+The new security centric codign guideline and the supporting toolset will
+open new market opportunities that will be investigated.
+Addtionally, the contract based programming insights for the project
+will enrich the feedback that \UCMshort{} will provide in the 
+ISO C++ standards committee and its study group on contracts which
+is currently targeting the ISO/IEC 14882:2023 standard.
+
+In addition, the participation in the project will strengthen the ability of
+\UCMshort{} to open new cooperations in the area of cybersecurity for big data
+analytics. On one hand, the support of coding guidelines may be of major
+interest in the financial sector, where they have had several cooperations with
+BBVA (one of the major banks in Spain).  On the other hand, a better suppor fo
+contract based programming also allow to reinforce \UCMshort's current position
+in the aerospace industry where it currently cooperates with major players in
+the Spanish market, including GMV or SENR. In both cases, \UCMshort{} will be
+able to improve its offerings with less effort devoted to security increasing
+its competitiveness.
+
+
 
 
 
