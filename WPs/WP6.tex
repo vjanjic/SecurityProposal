@@ -5,6 +5,7 @@
 \WPStart{Month 1}
 \WPParticipant{USTAN}{1}
 \WPParticipant{YAG}{1}
+\WPParticipant{UCM}{1}
 
 
 \begin{WPObjectives}
@@ -78,7 +79,7 @@ In the \emph{second} phase, we will provide implementations of the fundamental s
 \begin{Task}
 	%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
 	\TaskTitle{New Coding Standards for Security-Aware Applications}
-	\TaskParticipant{UOD}{1}
+	\TaskParticipant{UCM}{1}
 	
 	\TaskStart{1}
 	\TaskEnd{27}
@@ -88,18 +89,25 @@ In the \emph{second} phase, we will provide implementations of the fundamental s
 	\TaskHeader{}
 	\tasklabel{task:standards}
 	
-	In \theTask, we will develop new C++ coding and security standard to facilitate programming of secure big-data applications. The task will proceed in two phases. First, we will identify those properties that arise in security-aware applications, such as secrecy of variables, branching vulnerabilities, etc.; secondly, we will implement a new security-aware programming standard, encapsulating the properties from the first phase, to create a new C++ coding standard. 
-	\begin{itemize}
-		\item Identify the language-properties relating to security 
-		\item vulnerabilities, branching, etc.? non-functional properties?
-		\item create a new C++ coding style/standard.
-	\end{itemize}
+	In \theTask, we will develop new C++ coding and security standard to facilitate programming of secure big-data applications. The task will proceed in two phases. 
+First, we will start identifying those properties related to security from multiple existing coding standards and guidelines both those that are generic and those that are language specific. We will pay special attention to issues related to programming language features. A key issue in this context is the interaction with the C
+++ standard, as most guidelines and standard consider C++11 and 14 (with poor consideration to C++17 and none regarding the upcoming C++20). However, by the time this project has ended C++23 is expected to be published.
+
+Then, we will identify for each guideline the specific enforcement means that can be used with a focus in how much of the enforcement can be automated. As a result, we will produce a new set of C++ coding guidelines that will take into consideration the multiple editions of the C++ standard.
+
+\UCM will lead this task and will work in the development of the new set of C++ coding guidelines providing a link with the ISO C++ standards committee.
+
+%First, we will identify those properties that arise in security-aware applications, such as secrecy of variables, branching vulnerabilities, etc.; secondly, we will implement a new security-aware programming standard, encapsulating the properties from the first phase, to create a new C++ coding standard. 
+%	\begin{itemize}
+%		\item Identify the language-properties relating to security 
+%		\item vulnerabilities, branching, etc.? non-functional properties?
+%		\item create a new C++ coding style/standard.
+%	\end{itemize}
 \end{Task}
 
 \begin{Task}
-	%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
-	\TaskTitle{Secure Data Fabrication}
-	\TaskParticipant{UOD}{1}
+	\TaskTitle{Compliance to coding standards}
+	\TaskParticipant{USTAN}{1}
 	
 	\TaskStart{1}
 	\TaskEnd{27}
@@ -107,15 +115,22 @@ In the \emph{second} phase, we will provide implementations of the fundamental s
 		%\ref{del:model1}
 	}
 	\TaskHeader{}
-	\tasklabel{task:fabrication}
+	\tasklabel{task:compliance}
 	
-	In \theTask, we will produce new tool-support for the fabrication of security sensitive data in the context of big-data. The input of this tool will be based on X from WPX. 
+	In \theTask, we will provide a common interface to multiple tools
+        and components aiming to support the enforcement of the coding
+        guidelines developed in Task~\ref{task:standards}.
+
+        \UCMshort{} will contribute to this task with the implementation
+        of new specific checks that can be integrated in the open source
+        \texttt{clang-tidy} toolset. They will also contribute with specific
+        library solutions to mitigate other vulnerabilities. 
 \end{Task}
 
 \begin{Task}
 	%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
 	\TaskTitle{A Methodology for the Development of Secure Applications}
-	\TaskParticipant{UOD}{1}
+	\TaskParticipant{UCM}{1}
 	
 	\TaskStart{1}
 	\TaskEnd{27}
