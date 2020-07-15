@@ -1885,9 +1885,9 @@ Package List}
 
 
 %\vspace{-0.7in}
-%\centerline{\hbox to \columnwidth{\hss%
-  %  \includeimage[scale=0.9]{RePhorm2Gantt.pdf}
-%\hss}}
+\centerline{\hbox to \columnwidth{\hss%
+    \includeimage[scale=0.85]{Gantt.pdf}
+\hss}}
 \label{fig:gantt}
 \vspace{-1in} % Fool LaTeX into avoiding unnecessary page break
 \endlandscape
@@ -1909,12 +1909,37 @@ Package List}
 \renewcommand{\thems}{MS\arabic{ms}}
 \begin{minipage}{\textwidth}
 \begin{center}
- \begin{tabular*}{\textwidth}{|p{1.5cm}|p{8.3cm}|p{1.2cm}|p{0.6cm}|p{4.2cm}|}  \hline
- \textbf{MS No.} & \textbf{Milestone name} & \textbf{Related WPs} & \textbf{Est. date} & \textbf{Means of
+ \begin{tabular*}{\textwidth}{|p{1cm}|p{10.3cm}|p{1.2cm}|p{0.6cm}|p{2.7cm}|}  \hline
+ \textbf{MS} & \textbf{Milestone name} & \textbf{Related WPs} & \textbf{Est. date} & \textbf{Means of
    verification} \\ % (success criteria below)} \\ % (deliverables shown here + success criteria below) \\
 \hline
-MS1 & Initial Requirements Analysis & WP7 & M3 & D7.1 \\
+\ref{mil:req1} & Initial Requirements Analysis & WP7 & M3 & DXX \\
    \hline
+\ref{mil:auth1} & User Authentication Mechanisms for Private Clouds & WP5 & M9 & DXX \\
+   \hline
+   \ref{mil:vul1} & Initial Vulnerabilities Identification and Self-Healing Framework & WP2 & M10 & DXX \\
+   \hline
+   \ref{mil:bigdata1} & Formally-Verifiable Security and Privacy of Big Data Analytics for Private Clouds & WP3, WP4 & M11 & DXX,DXX \\
+   \hline
+   \ref{mil:met1} & \TheProject{} Methodology for AI-Based Big Data Analytics on Private Clouds & WP6 & M12 & DXX, DXX \\
+   \hline
+   \ref{mil:eval1} & Use Cases and Evaluation of \TheProject{} Technology for Private Clouds & WP7 & M13 & DXX, DXX \\
+   \hline
+   \ref{mil:req2} & Final Requirements Analysis & WP7 & M15 & DXX \\
+   \hline
+   \ref{mil:auth2} & User Authentication Mechanisms for Public Clouds & WP5 & M22 & DXX \\
+   \hline
+   \ref{mil:vulbigdata2} & Refined Vulnerabilities Identification and Self-Healing Framework, Formally-Verifiable Security and Privacy of Big Data Analytics for Public Clouds & WP2 -- WP4 & M24 & DXX, DXX, DXX \\
+   \hline
+   \ref{mil:met2} & \TheProject{} Methodology for AI-Based Big Data Analytics for Public Clouds & WP6 & M25 & DXX, DXX \\
+   \hline
+   \ref{mil:eval2} & Use Cases and Evaluation of \TheProject{} Technology for Public Clouds & WP7 & M26 & DXX, DXX \\
+   \hline
+   \ref{mil:auth3} & User Authentication Mechanisms for Hybrid Clouds & WP5 & M34 & DXX \\
+   \hline
+   \ref{mil:vulbigdatameteval3} & \TheProject{} Technologies and Methodology for Hybrid Clouds; Use Cases and Evaluation on Public Clouds; End of the Project & WP2 -- WP4, WP6, WP7 & M36 & DXX \\
+   \hline
+   
 \end{tabular*}
 \end{center}
 \end{minipage}
@@ -1926,8 +1951,33 @@ MS1 & Initial Requirements Analysis & WP7 & M3 & D7.1 \\
 \textbf{MS No.} & \textbf{Success Criteria} & \textbf{Contributes to
   Objective(s)} \\
   \hline
-MS1 & Initial Requirements Analysis Completed & \textbf{1 -- 8} \\
+\ref{mil:req1} & Initial Requirements and Dependencies for Tools and Use Cases Identified & \textbf{1 -- 8} \\
   \hline
+\ref{mil:auth1} & Initial Authentication Mechanisms for AI-Based Big Data Processing on Private Clouds Developed & \textbf{5} \\
+\hline
+\ref{mil:vul1} & Initial Static, Dynamic and Runtime Analysis and Self-Healing Methods Developed & \textbf{2, 3} \\
+\hline
+\ref{mil:bigdata1} & Vulnerabilities Detection and Self Healing Methods Applied and Verified for AI-Based Big Data Analytics on Private Clouds & \textbf{1 -- 3} \\
+\hline
+\ref{mil:met1} & \TheProject{} Methodology for Developing Secure AI-Based Data Analytics Code for Private Clouds Developed & \textbf{4, 6} \\
+\hline
+\ref{mil:eval1} & \TheProject{} Methodology Applied and Evaluated for Initial Versions of Use Cases for Private Clouds & \textbf{7, 8} \\
+\hline
+\ref{mil:req2} & Final Requirements and Dependencies for Tools and Use Cases Identified & \textbf{1 -- 8} \\
+  \hline
+\ref{mil:auth2} & Refined Authentication Mechanisms for AI-Based Big Data Processing on Public Clouds Developed & \textbf{5} \\
+\hline
+\ref{mil:vulbigdata2} & Different Analysis and Self-Healing Methods Combined, Applied and Verified for AI-Based Big Data Analysis on Public Clouds & \textbf{1 -- 3} \\
+\hline
+\ref{mil:met2} & \TheProject{} Methodology for Developing Secure AI-Based Data Analytics Code for Public Clouds Developed & \textbf{4, 6} \\
+\hline
+\ref{mil:eval2} & \TheProject{} Methodology Applied and Evaluated for Refined Versions of Use Cases for Public Clouds & \textbf{7, 8} \\
+\hline
+\ref{mil:auth3} & Final Authentication Mechanisms for AI-Based Big Data Processing on Hybrid Clouds Developed & \textbf{5} \\
+\hline
+\ref{mil:vulbigdatameteval3} & Final Technologies and \TheProject{} Methodology for AI-Based Big Data Analytics on Hybrid Clouds Developed, Applied the Final Versions of Use Cases and Evaluated; The Project Roadmap Produced; & \textbf{1 -- 8} \\
+\hline
+  
 \end{tabular*}
 \end{center}
 
@@ -1940,25 +1990,46 @@ MS1 & Initial Requirements Analysis Completed & \textbf{1 -- 8} \\
 
 \begin{minipage}{\textwidth}
 \begin{center}
-\begin{tabular}{|p{0.8cm}|p{9.25cm}|p{0.8cm}|p{1.15cm}|p{1.6cm}|p{0.8cm}|p{0.8cm}|}  \hline
+\begin{tabular}{|p{0.8cm}|p{9.65cm}|p{0.8cm}|p{1.15cm}|p{1.2cm}|p{0.8cm}|p{0.8cm}|}  \hline
 \textbf{Del. no.}              & \textbf{Deliverable name}        & \textbf{WP no.} & \textbf{Lead}
 & \textbf{Type}              & \textbf{Dis. level}   & \textbf{Del. date}
 \\ \hline
 
-%% Year 1
+
 
 \ref{mgt:mailinglists}           & Internal and public mailing lists
                                                                   & WP1 &\coordshort{} & OTHER & CO &  1 \\
-  \hline \ref{mgt:swrepository} & Internal software repository & WP1 & \coordshort{} & OTHER & CO & 1 \\
+\hline \ref{mgt:swrepository} & Internal software repository & WP1 & \coordshort{} & OTHER & CO & 1 \\
+\hline \ref{del:req1} & Report on Initial Requirements for \TheProject{} Techniques and Use Cases & WP7 & \YAGshort{} & R & PU & 3 \\
 \hline \ref{del:pressrelease1} & Press Release Announcing Start of \TheProject{} & \ref{wp:dissem} & \SAshort{} & DEC & PU & 3 \\
 \hline \ref{del:website1} & Initial Project Website / Presentation & \ref{wp:dissem} & \SAshort{} & DEC & PU & 3 \\
+\hline \ref{del:auth1} & Report on Initial User Authentication Techniques for Data Analytics on Private Clouds & WP5 & \COGNIshort{} & R & PU & 9 \\
+\hline \ref{del:vul1} & Report on Initial Techniques for Vulnerabilities Detection and Self Healing & WP2 & \IBMshort{} & R & PU & 10 \\
+\hline \ref{del:bigdata1} & Report on Vulnerabilities Detection and Self-Healing for AI-Based Big Data Analytics on Private Clouds & WP3 & \UODshort{} & R & PU & 11 \\
+\hline \ref{del:formal1} & Report on Formal Mechanisms for Verifying Security Properties on Private Clouds & WP4 & \SA{} & R & PU & 11 \\
 \hline \ref{mgt:periodic-rep-1} & Project Periodic Report (first year) & WP1 & \coordshort{} & R & CO & 12 \\
 \hline \ref{del:dissemplan1} & First Interim Report on Dissemination and Exploitation & \ref{wp:dissem} & \SAshort{} & R & PU & 12 \\
+\hline \ref{del:met1} & Report on \TheProject{} Methodology for Developing Secure Big Data Analytics on Private Clouds & WP6 & \SAshort{} & R & PU & 13 \\
+\hline \ref{del:cs1} & Initial \TheProject{} Coding Standards & WP6 & \UCMshort{} & R & PU & 13 \\
+\hline \ref{del:eval1} & Report on Initial Implementation and Evaluation of Use Cases & WP7 & \SOPRAshort{} & R & PU & 14 \\
+\hline \ref{del:req2} & Report on Final Requirements for \TheProject{} Techniques and Use Cases & WP7 & \YAGshort{} & R & PU & 15 \\
+\hline \ref{del:auth2} & Report on Refined User Authentication Techniques for Data Analytics on Public Clouds & WP5 & \COGNIshort{} & R & PU & 22 \\
 \hline \ref{mgt:periodic-rep-2} & Project Periodic Report (second year) & WP1 & \coordshort{} & R & CO & 24 \\
+\hline \ref{del:vul2} & Report on Refined Techniques for Vulnerabilities Detection and Self Healing & WP2 & \IBMshort{} & R & PU & 24 \\
+\hline \ref{del:bigdata2} & Report on Vulnerabilities Detection and Self-Healing for AI-Based Big Data Analytics on Public Clouds & WP3 & \SCCHshort{} & R & PU & 24 \\
+\hline \ref{del:formal2} & Report on Formal Mechanisms for Verifying Security Properties on Public Clouds & WP4 & \SA{} & R & PU & 24 \\
 \hline \ref{del:dissemplan2} & Second Interim Report on Dissemination and Exploitation & \ref{wp:dissem} & \SAshort{} & R & PU & 24 \\
+\hline \ref{del:met2} & Report on \TheProject{} Methodology for Developing Secure Big Data Analytics on Public Clouds & WP6 & \SAshort{} & R & PU & 25 \\
+\hline \ref{del:cs2} & Refined \TheProject{} Coding Standards & WP6 & \UCMshort{} & R & PU & 25 \\
+\hline \ref{del:eval2} & Report on Refined Implementation and Evaluation of Use Cases & WP7 & \SOPRAshort{} & R & PU & 26 \\
+\hline \ref{del:auth3} & Report on Final User Authentication Techniques for Data Analytics on Hybrid Clouds & WP5 & \COGNIshort{} & R & PU & 34 \\
 \hline \ref{mgt:periodic-rep-3} & Project Periodic Report (third year) & WP1 & \coordshort{} & R & CO & 36 \\
-\hline \ref{del:eval3} & Report on Final Implementation of Benchmarks and Use Cases and Evaluation & WP7 & \SAshort{} & R & PU & 36 \\
-\hline \ref{del:roadmapping} & Report on Technical Roadmap & WP7 & \SAshort{} & R & PU & 36 \\	
+\hline \ref{del:vul3} & Report on Final Techniques for Vulnerabilities Detection and Self Healing & WP2 & \IBMshort{} & R & PU & 36 \\
+\hline \ref{del:bigdata3} & Report on Vulnerabilities Detection and Self-Healing for AI-Based Big Data Analytics on Hybrid Clouds & WP3 & \SCCHshort{} & R & PU & 36 \\
+\hline \ref{del:formal3} & Report on Formal Mechanisms for Verifying Security Properties on Hybrid Clouds & WP4 & \SA{} & R & PU & 36 \\
+\hline \ref{del:met3} & Report on \TheProject{} Methodology for Developing Secure Big Data Analytics on Hybrid Clouds & WP6 & \SAshort{} & R & PU & 36 \\
+\hline \ref{del:cs3} & Final \TheProject{} Coding Standards & WP6 & \UCMshort{} & R & PU & 36 \\
+\hline \ref{del:eval3} & Report on Final Implementation and Evaluation of Use Cases and Project Roadmap & WP7 & \FRQshort{} & R & PU & 36 \\
 \hline \ref{del:pressrelease2} & Final Press Release Describing the \TheProject{} Results & \ref{wp:dissem} & \SAshort{} & DEC & PU & 36 \\
 \hline \ref{del:website2} & Final Project Website / Presentation & \ref{wp:dissem} & \SAshort{} & DEC & PU & 36 \\
 \hline \ref{del:dissemplan3} & Final Report on Dissemination and Exploitation & \ref{wp:dissem} & \SAshort{} & R & PU &  36 \\
