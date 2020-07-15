@@ -535,7 +535,7 @@ the case of key enabling technologies)'').
     \textbf{Key Enabling Technology} & \textbf{Current TRL} & \textbf{Final TRL} \\
     \hline
      &  & \\
-    \hline XX & TRL 5 & TRL 6 \\  
+    \hline Refactoring Tool Support & TRL x & TRL x \\  
     \hline Machine learning augmented SAST for Java & TRL x & TRL x \\  
     \hline Machine learning augmented SAST for C/C++ & TRL x & TRL x \\  
     \hline Machine learning augmented SAST for Python & TRL x & TRL x \\  
@@ -629,6 +629,11 @@ The \primal project, supported by the Austrian Research Promotion Agency, is con
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\serums (EU 826278).} \serums is the EU H2020 funded project that is coordinated by \USTANshort{} and also includes \SOPRAshort{}, \IBMshort{} and \SCCHshort{} in the consortium. \serums aims to develop new smart, patient-centric health-care systems that integrate home, workplace etc.~personal medical care with centralised hospital, special consultant and general practitioner provision. The goal of the \serums project is to put patients at the centre of future healthcare provision, enhancing their personal care and maximising the quality of treatment they can receive, while ensuring trust in the security and privacy of their confidential medical data. Like \TheProject{}, \serums also targets distributed systems where confidential data might be exchanged between different devices over untrusted networks. The focus of \serums is, however, on privacy of the data in the healthcare domain. The data analytics aspect is not very prominent there and it does not consider cloud environments. \emph{In contrast, \TheProject{} considers much larger scale of hardware, is focused on data analytics executed in cloud settings and also address the crucial problem of security in terms of cyber threats and attacks. \TheProject{} also considers a wider range of application domains, having use cases in banking, space technology, air traffic management and networking domains.}
+\end{mdframed}
+
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{YAG-Suite (\YAGshort{} R and D) } The YAG-Suite is product developed by \YAGshort{} and resulting from its research and development investments. The company has been labelled "Jeune Entreprise Innovante" (Young Innovative Company) and has been partially subsidised by BPI France for the prior research and feasibility (To be continued...)
 \end{mdframed}
 
 \subsubsection{Overall approach and methodology}
@@ -924,27 +929,56 @@ Researchers and practitioners have attempted to provide various \textit{solution
 \end{itemize}
 
 \subsubsection{Refactoring}
-\vjcomment{USTAN to write}
-\begin{itemize}
-	\item Refactoring history
-	\item program transformation
-	\item refactoring used as a software engineering strategy
-	\item structural changes to the code
-	\item refactoring to introduce parallel patterns
-	\item will be extended to introduce security patterns, fix vulnerabilities, adhere to standard
-	\item some aspects may be proved correct
-\end{itemize}
+%\vjcomment{USTAN to write}
+%\begin{itemize}
+%	\item Refactoring history
+%	\item program transformation
+%	\item refactoring used as a software engineering strategy
+%	\item structural changes to the code
+%	\item refactoring to introduce parallel patterns
+%	\item will be extended to introduce security patterns, fix vulnerabilities, adhere to standard
+%	\item some aspects may be proved correct
+%\end{itemize}
 
 In essence, refactoring is about changing the structure of a program's source code in such a way that the change does not alter the functional behaviour of the program. It is a software engineering practice that is used daily by developers, who restructure code to make it more amenable to maintenance and extension. Refactoring is also a technique that is usually practised \emph{manually} by developers. The downside of manual refactoring is that it becomes very error-prone over large code bases; it also requires the refactorer to be an expert in the particular structural change that is being implemented. Refactoring tools, on the other hand, automate the process, allowing machine-checkable pre- and post-conditions to automatically ensure that the refactored code is functionally correct to the original. 
+%
+Automated refactoring has roots in a long history, with the original refactoring work going back to the \emph{fold/unfold} system proposed by Bustall and Darlington in 1977~\cite{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{Mens:2004:SSR:972215.972286}, , and has been applied to a wide range of applications as an approach to program transformation~\cite{mens_refactoring}, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
 
-Automated refactoring has roots in a long history, with the original refactoring work going back to the \emph{fold/unfold} system proposed by Bustall and Darlington in 1977~\cite{cfs}{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{cfs}{Mens:2004:SSR:972215.972286}, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
+%There has been very little prior work on refactoring for improving energy consumption, with the exception of some preliminary refactorings for Erlang~\cite{Nagy:2019:TSG:3331542.3342570}. Previous work by Brown et al. on parallelisation \textit{via} refactoring has primarily focussed on the introduction and manipulation of parallel pattern libraries in C++~\cite{brownagricultural}, Haskell~\cite{kar30667} and Erlang~\cite{Brown:2014:CRP:2630180.2630190,DBLP:journals/cai/BarwellBHTB16, parco2015}. Another approach
+%has been the automated introduction of annotations in the form of C++ attributes~\cite{cfs}{rio:2018}.
 
+In previous work, refactoring has been used successfully to \emph{introduce parallel patterns and concurrency} into the code in C++~\cite{brownagricultural,DBLP:conf/pdp/JanjicBMHDAG16, grppirefactoring, mcts} and Erlang~\cite{hlpp,DBLP:journals/cai/BarwellBHTB16}. Another approach
+has been the automated introduction of annotations in the form of
+C++ attributes~\cite{rio:2018}. Dig \textit{et al.}~\cite{dig} use refactoring to introduce parallelism in Java.  
+%
+%Parallel design patterns, or algorithmic skeletons, were suggested as solution to the difficulties presented by low-level approaches~\cite{Asanovic:2009:VPC,DBLP:journals/spe/Gonzalez-VelezL10}.
+%A range of pattern/skeleton implementations have been developed for a number of programming languages; these include: RPL~\cite{DBLP:conf/pdp/JanjicBMHDAG16}; Feldspar~\cite{DBLP:conf/ifl/AxelssonCSSEP10}; FastFlow~\cite{fastflow:2017}; Microsoft's Parallel Patterns Library~\cite{ACM:book/msoft/CampbellM11}; and Intel's Threading Building Blocks (TBB) library~\cite{DBLP:reference/parallel/X11pz}.
+%Since patterns are well-defined, rewrites can be used to automatically explore the space of equivalent patterns, e.g.\ optimising for performance~\cite{DBLP:conf/europar/MatsuzakiKIHA04,DBLP:conf/ipps/GorlatchWL99} or generating optimised code as part of a DSL~\cite{DBLP:conf/dagstuhl/Gorlatch03}. Moreover, since patterns are architecture-agnostic, patterns have been similarly implemented for multiple architectures~\cite{DBLP:conf/cgo/HagedornSSGD18,DBLP:conf/parco/ReyesL15}.
+%
+%This introduces a level of specialisation, and the possibility of choice between pattern implementations. Conversely, GrPPI~\cite{DBLP:journals/concurrency/AstorgaD0G17} is capable of invoking other libraries, and is thereby able to take advantage of the specialisations that they present without potentially laborious reimplementation.
+%
+Elsewhere, approaches to automatic parallelisation have traditionally focussed on the transformation of loops. Examples include Lamport's early approaches in Fortran~\cite{DBLP:journals/cacm/Lamport74}, Artigas' approach for Java~\cite{kennedy}, on \textsc{doall} and \textsc{doacross} loops~\cite{DBLP:conf/pldi/BurkeC86,DBLP:conf/popl/LimL97}, the polyhedral model~\cite{DBLP:conf/ppopp/AncourtI91,DBLP:conf/IEEEpact/Bastoul04,DBLP:conf/IEEEpact/BouletF98} and more recently on the generation of pipelines~\cite{DBLP:conf/IEEEpact/TournavitisF10,DBLP:journals/taco/WangTFO14}. 
+%
+%The polyhedral model~\cite{DBLP:conf/ppopp/AncourtI91} also \textcolor{red}{looms large} (\cite{DBLP:conf/IEEEpact/Bastoul04,DBLP:journals/ijpp/GrieblFL00}).
+%
+Other approaches to automatic parallelism have included a focus on coarsely dividing programs into sections that can be run in parallel~\cite{DBLP:conf/pepm/LiT15,DBLP:conf/ppopp/RulVB08}; less-abstractly on exploiting potential parallelism at the instruction-level~\cite{DBLP:conf/europar/StefanovicM00}; and on exploiting specialised hardware such as GPUs for automatic parallelisation~\cite{DBLP:conf/popl/GuoTS11,DBLP:conf/pppj/LeungLL09}.
+% 
+%\textcolor{red}{Other approaches: slicing for concurrency \& Rul's Extracting coarse grain parallelism (\cite{DBLP:conf/ppopp/RulVB08}); instruction level parallelisation (??); GPUs (\cite{DBLP:conf/popl/GuoTS11,DBLP:conf/pppj/LeungLL09}).}
+%
+Whilst fully automatic approaches simplify the parallelisation process for the programmer by removing them from the process, such approaches can be very specific in both the parallelism they are able to introduce and the code to which they can be applied. Conversely, programmer-in-the-loop approaches, such as refactoring, allow the programmer to employ their knowledge about both code and parallelism.
+%
+There is only limited previous work on refactorings for increased security. This includes proposed refactorings to increase the protection level of sensitive information stored in the Java code~\cite{maru2007} and refactorings to also alert its impact on code vulnerabilities~\cite{maru2008}.
+Brown et al. proposed refactorings for removing \emph{anti-patterns} in Distributed Java Components~\cite{brown1998antipatterns}.  Improving software security using search-Based refactoring was proposed by Ghaith and Cinneide for Java programs, using the Code-Imp tooling~\cite{ghaith}. Finally, using refactoring rules to increase security for Object Oriented design was proposed by Khan and Khan~\cite{khan} . However, none of these proposed systems uses the concept of a \emph{security pattern}, static analysis for code vulnerabilities, formal reasoning or tool support for languages other than Java. 
+ 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of refactoring for security in several ways:
 \begin{itemize}
-\item \emph{XX.} XX.
-\item \emph{XX} XX.
-\item \emph{XX} XX.
+\item \emph{Refactoring to introduce security patterns.} XX.
+\item \emph{Refactorings targetting security of big-data applications.} XX.
+\item \emph{Verifiable refactorings using formal reasoning.} XX.
+\item \emph{Refactorings guided by static and dynamic analysis.} XX.
+\item \emph{Refactorings that will repair vulnerabilities in the code.} XX.
+\item \emph{Refactorings that will transform code to make it conform to security coding standards.} XX.
 \end{itemize}
 \end{mdframed}
 
@@ -1525,7 +1559,13 @@ XX
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for Yagan Software
+ \YAGshort{} will deliver \TheProject technologies into YAGAAN product and services, aiming to commercially benefit businesses across Europe. \TheProject technologies can be relevant to improve the YAGAAN product and services, such as:
+\begin{itemize}
+    \item YAG-Suite improvement for developers. The YAG-Suite is the \YAGshort{} product which supports developers in detecting vulnerabilities in their source code during the code reviews. The enhanced static code analysis and security/privacy breaches detection technologies combined with novel techniques for vulnerabilities remediation that will be developed in the \TheProject project will significantly enrich the YAG-suite level of service.
+    \item YAG-Suite improvement for code auditors.
+    \item YAG-Suite improvement for privacy assessment of applications: To support GDPR compliance, \TheProject technologies will significantly enrich the YAG-Suite for \YAGshort{} to offer new privacy dataleaks detection in the source code and support European businesses to deliver better privacy compliant applications to the EU citizens.
+    \item \YAGshort{} source code scanning SAAS services.
+\end{itemize}
 
 \horizontalline
 
