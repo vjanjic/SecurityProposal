@@ -536,10 +536,9 @@ the case of key enabling technologies)'').
     \hline
      &  & \\
     \hline Refactoring Tool Support & TRL x & TRL x \\  
-    \hline Machine learning augmented SAST for Java & TRL x & TRL x \\  
-    \hline Machine learning augmented SAST for C/C++ & TRL x & TRL x \\  
-    \hline Machine learning augmented SAST for Python & TRL x & TRL x \\  
-    \hline Code mining & TRL x & TRL x \\  
+    \hline Machine learning augmented SAST for security and privacy breaches detection in Java source code & TRL 6 & TRL 7 \\  
+    \hline Machine learning augmented SAST for security and privacy breaches in C/C++ and Python source code & TRL 5 & TRL 6 \\  
+    \hline Code mining (ability to extract high value technical, cybersecurity and end user business oriented information from source code) & TRL 5 & TRL 6 \\  
     \hline
   \end{tabular}
 \end{center}
@@ -633,7 +632,7 @@ The \primal project, supported by the Austrian Research Promotion Agency, is con
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{YAG-Suite (\YAGshort{} R and D) } The YAG-Suite a is product developed by \YAGshort{} and resulting from the company's research and innovation project. The project started from scratch and developed a new source code scanning technology which detects and identify vulnerabilities in the source code with SAST and bring new automation capabilities to qualify the warnings raising from SAST with machine learning, in a supervised training approach. The machine learning allows to better contextualize the vulnerability detection as well as it significantly reduces the false positive rates and provide decision making information to the user for cost efficient remediation.    
-The company has been labelled "Jeune Entreprise Innovante" (Young Innovative Company). Its project has been partially subsidised by BPI France for its feasibility phase, as well as from the Region of Brittany. 
+The company has been labelled "Jeune Entreprise Innovante" (Young Innovative Company). The project has been partially subsidised by BPI France for its feasibility phase, as well as from the Region of Brittany and Rennes Métropole. The project also received partial support with industry loans from TOTAL Développement Régional and AIRBUS Développement. 
 \end{mdframed}
 
 \subsubsection{Overall approach and methodology}
@@ -720,7 +719,21 @@ The \TheProject{} project will revolutionise the development of secure and priva
 
 \paragraph{Static Code Analysis.}
 \vjcomment{\YAGshort{} and \IBMshort{} to write}
+In the secure development life cycle, different complementary techniques make it possible to build and test the cyber security of software applications, from the writing of the first line of code during the development project to the stress of the application in production with ethical hacking. In order to minimize the overall costs of security testing, the first action to be implemented as early as possible in the development process is to analyze the source code on a regular basis to verify that the algorithms, the management of sensitive data and resources by the application will not generate vulnerabilities. The only technique which can produce results when the project is not yet ready for compiling is SAST (Static Analysis Security Testing). Source code scanners, such as Appscan Source~\cite{AppScan}, Checkmarx Source~\cite{Checkmarx} and Coverity~\cite{Coverity}, rely on SAST to detect suspicious sequences of code that may reveal a vulnerability. 
+\newline
+They all face the same dilemna: from a very huge volume of the analyzesource code they must ideally warn the user on each and every potential vulnerabilities and only when a vulnerability is detected. 
+
+
+of not missing any vulnerability while not raising a false alert
+
+(true negatives)   Detect all potential 
+
+Raising potentially irrelevant warnings (false positives) to the user, not to miss a potential vulnerability, versus 
+
+have the advantage of detecting a lot of information. However, they face a technological bottleneck: they generate a lot of false warnings (false positives or duplicates) and they are not able to deal with uncertain information. To be usefully exploited, they need to carry out additional manual investigations which can prove to be heavily time consuming. The current efficiency of static analysis is therefore limited and the induced HR costs can be very significant if all warnings are checked for their relevance.
+
 Static code checkers, such as Appscan Source~\cite{AppScan} and Coverity~\cite{Coverity} are based on techniques for quality checking that have been extended to cover security vulnerabilities in the code. The main drawback of  these methods is their high rate of false positives they produce. 
+
 
 \paragraph{Dynamic Analysis and Symbolic Execution.}
 \vjcomment{\IBMshort{} to write}
