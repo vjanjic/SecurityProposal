@@ -167,7 +167,7 @@ $Revision: 0.0$ $}\\[4ex]
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.42]{Vision.pdf}
+  \includeimage[scale=0.92]{DigitalFortress-Vision-v2.png}
 %  \vspace{-3cm}
   \caption{\TheProject{} Vision}
   \label{fig:vision}
@@ -472,7 +472,7 @@ holistic way.
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.6]{DigitalFortress.pdf}
+  \includeimage[scale=0.55]{DigitalFortress-ConceptualDesign-v3.png}
 %  \vspace{-3cm}
   \caption{Overview of the \TheProject{} Methodology}
   \label{fig:overview}
@@ -724,6 +724,15 @@ Static code checkers, such as Appscan Source~\cite{AppScan} and Coverity~\cite{C
 
 \paragraph{Dynamic Analysis and Symbolic Execution.}
 \vjcomment{\IBMshort{} to write}
+Software vulnerabilities pose serious risk of exploit and result in system compromise, information leaks, or denial of service. As mentioned in the previous section, various static analyzers are used to detect potential vulnerabilities in C/C++ code. Most of them suffer from high amount of false alarms mainly due to the fact that they don’t use a symbolic execution approach but rather a more simplistic syntactical and semantical analysis of code constructs. This simplistic approach has the advantage of being more scalable as opposed to the inherent scalability deficiencies of symbolic execution which exhaustively analyzes all potential execution paths given non-deterministic inputs. Furthermore the fact that real life programs call out to system functions and other functions residing in libraries, with no access to their source code, creates the need to generate abstractions or simulate their execution flows depending on the nature of the function. This entails a wide variety of challenges ranging from the mitigation of state explosion to simply being able to accurately simulate a large number operations. There are a number of symbolic execution tools such as JPF for Java and Otter for C, both with limited capabilities to scale up to real life programs.
+
+Dynamic analysis systems, such as “fuzzers” natively executes an application while providing ‘tailored’ inputs. When flaws are detected, these systems can provide these inputs and significantly assist in reproducing and mitigating the flaws. However, generating the tailored “input test cases” to drive execution, typically requires an exhaustive set of test cases that required manual effort to generate. 
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of software vulnerability detection by combining symbolic execution with fuzzing and advanced static analysis capabilities. The first direction uses a known analysis technique that is based on reachability analysis, and discard paths that cannot reach a target location ...
+
+\end{mdframed}
+
 
 \paragraph{run-time Analysis}
 \vjcomment{\SCCHshort{} to write}
@@ -1003,12 +1012,12 @@ Brown et al. proposed refactorings for removing \emph{anti-patterns} in Distribu
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of refactoring for security in several ways:
 \begin{itemize}
-\item \emph{Refactoring to introduce security patterns.} XX.
-\item \emph{Refactorings targetting security of big-data applications.} XX.
-\item \emph{Verifiable refactorings using formal reasoning.} XX.
-\item \emph{Refactorings guided by static and dynamic analysis.} XX.
-\item \emph{Refactorings that will repair vulnerabilities in the code.} XX.
-\item \emph{Refactorings that will transform code to make it conform to security coding standards.} XX.
+\item \emph{Refactorings to introduce security patterns.} We will develop new software refactorings that will rewrite source code to introduce security aware patterns. The results of which will be equivalent software in terms of functionality, but with increased security.
+%\item \emph{Refactorings targetting security of big-data applications.} XX.
+\item \emph{Verifiable refactorings using formal reasoning.} We will provide correctness and general soundness proofs for some of the refactorings developed, using abstract state machines and verification techniques. This will give confidence that the refactoring approach will not only increase the security level of the source code, but do it in such a way that the behaviour of the program will not change as a result.
+\item \emph{Refactorings that will repair vulnerabilities in the code.} We will take the results of the static analysis and self healing techniques and produce further refactorings and transformations that rewrite source-code making it more secure by eliminating or reducing code vulnerabilities. 
+\item \emph{Refactorings that will transform code to make it conform to security coding standards.} We will produce new refactorings and transformations that will rewrite the source code so that it conforms to a security standard, therefore increasing the confidence that the program is secure
+\item \emph{Refactorings guided by static and dynamic analysis.} The refactorings developed as part of \TheProject{} project will be guided by both static and dynamic analyses, finding the security vulnerabilities and ``hot spots'' within the source code as candidates for refactoring. 
 \end{itemize}
 \end{mdframed}
 
@@ -1078,7 +1087,10 @@ IBM developed vulnerability detection technologies based both on static and dyna
 
 
 The \paraformance Refactoring tool was originally developed for the EU FP7 \paraphrase{} project, and later extended and enhanced in both \rephrase{} and the Scottish Enterprise innovation project, \paraformance{}. 
-\paraformance is a tool-chain designed to \emph{democratise} parallel programming by allowing software developers to quickly and easily write parallel software. \paraformance enables software developers to find the sources of parallelism within their code, automatically (through user-controlled guidance) through a process of \emph{pattern discovery}. \paraformance also offers refactoring support to allow parallel patterns to be introduced directly into the source code of the application, inserting the parallel business logic. \paraformance also has integrated safety checking features, to not only enable  the parallelised code to be thread-safe, but also the checking of sequential code, eliminating potential sources of parallelism errors that occur, such as race conditions and deadlocks. Finally, \paraformance is able to repair some of the parallelism errors detected by the safety checking to automatically make the application thread safe. \paraformance will be extended in \TheProject{} by adding safety checks for the distributed code, in addition to the existing mechanisms for checking the code that is executed on shared-memory machines. We will also extend the tool with features to check for \emph{security} of the code. 
+\paraformance is a tool-chain designed to \emph{democratise} parallel programming by allowing software developers to quickly and easily write parallel software. \paraformance enables software developers to find the sources of parallelism within their code, automatically (through user-controlled guidance) through a process of \emph{pattern discovery}. \paraformance also offers refactoring support to allow parallel patterns to be introduced directly into the source code of the application, inserting the parallel business logic. \paraformance also has integrated safety checking features, to not only enable  the parallelised code to be thread-safe, but also the checking of sequential code, eliminating potential sources of parallelism errors that occur, such as race conditions and deadlocks. Finally, \paraformance is able to repair some of the parallelism errors detected by the safety checking to automatically make the application thread safe.
+\paraformance will be extended in \TheProject{} by adding new refactorings that aim to increase the security levels of an application, this will be done by new refactorings that introduce security-aware patterns into the source code, repair security vulnerabilities and refactor the code to ensure it conforms to a security standard. Further more, the refactorings will be verified increasing confidence in their implementation.
+%
+% \paraformance will be extended in \TheProject{} by adding safety checks for the distributed code, in addition to the existing mechanisms for checking the code that is executed on shared-memory machines. We will also extend the tool with features to check for \emph{security} of the code. 
 
 \paragraph {\SAshort{} CSL: The Contract Specification Language}
 CSL (Contract Specification Language) was developed as part of the ongoing H2020 \teamplay{} project. It is designed to act both as an annotation library for C applications, allowing the developer to annotate their source code both to reflect non-functional properties of time, energy and security back into the source code, but also in order to express assertions ---or contracts--- about the non-functional properties. Such non-functional properties could be, for example, the worst-case execution time (or energy) of a block of code, the security vulnerability level of a variable, etc. The assertions themselves are expressed in terms of these properties and other normal variables within the source code. The properties can also be reflected back into the source-program as first-class citizens: normal programming variables with values in the source-level space.
@@ -1589,12 +1601,12 @@ XX
 \vspace{-0.8cm}
 \end{wrapfigure}
 
- \YAGshort{} will deliver \TheProject technologies into YAGAAN product and services, aiming to commercially benefit businesses across Europe. \TheProject technologies can be relevant to improve the YAGAAN product and services, such as:
+ \YAGshort{} will deliver \TheProject technologies into YAGAAN product and services, aiming to commercially benefit businesses across Europe. The YAG-Suite is the \YAGshort{} product which supports developers in detecting vulnerabilities in their source code during their security and privacy by design development processes. \TheProject technologies can be relevant to improve YAG-Suite and the company services, such as:
 \begin{itemize}
-    \item YAG-Suite improvement for developers. The YAG-Suite is the \YAGshort{} product which supports developers in detecting vulnerabilities in their source code during the code reviews. The enhanced static code analysis and security/privacy breaches detection technologies combined with novel techniques for vulnerabilities remediation that will be developed in the \TheProject project will significantly enrich the YAG-suite level of service.
-    \item YAG-Suite improvement for code auditors.
-    \item YAG-Suite improvement for privacy assessment of applications: To support GDPR compliance, \TheProject technologies will significantly enrich the YAG-Suite for \YAGshort{} to offer new privacy dataleaks detection in the source code and support European businesses to deliver better privacy compliant applications to the EU citizens.
-    \item \YAGshort{} source code scanning SAAS services.
+    \item YAG-Suite improvement for developers. The enhanced static code analysis and security breaches detection technologies combined with novel techniques for vulnerabilities remediation that will be developed in the \TheProject project will enrich the YAG-suite capabilities.
+    \item YAG-Suite improvement for privacy assessment of big data related applications: To support GDPR compliance assessments, \TheProject technologies will significantly enrich the YAG-Suite for \YAGshort{} to offer new source code privacy breaches detection capabilities and support European businesses in delivering better privacy compliant applications to the EU citizens. Additionnally \TheProject will support \YAGshort{} in accessing the new market segment of big data application producers.
+    \item YAG-Suite improvement for code auditors: As YAG-Suite not only is used by developers but also by service providers who provide source code audits, the same new capabilities will also benefit to audit service providers.
+    \item It is also in the plans of \YAGshort{} to offer a source code scanning SAAS platform to the opensource community, that wil benefit from \TheProject technologies that will be integrated to YAG-Suite.
 \end{itemize}
 
 \horizontalline
@@ -1622,17 +1634,8 @@ Exploitation plan for Cognitive
 \vspace{-0.9cm}
 \end{wrapfigure}
 
-Exploitation plan for St Andrews
-
-XX
-
-XX
-
-XX
-
-XX
-
-XX
+\SAshort{} will work to actively exploit the foreground IPR that it produces in the course of the \TheProject{} project. During the course of the \TheProject{} project, we envisage the development and production of new and innovative refactorings for increasing the security level of big-data applications, together with new verification techniques to show general soundness and correctness of the refactorings. The intention is to release these tools as open-source software, allow their widespread exploitation by the community. We will also work with the industrial collaborators to further exploit these tools and other foreground intellectual property that we will produce in the course of the project. 
+Additionally, \SAshort{} will actively pursue avenues of commercial exploitation with the possible formation of a spinoff company to commercialse the project results, and apply for patents, etc. Christopher Brown has already startup experience, with the former spinout of ParaFormance technologies Ltd. from previous EU research on the H2020 RePhrase project. Scotland provides an excellent and vibrant base for commercial exploitation, with additional support available from the Scottish Enterprise and other sources.  Edinburgh alone, 162 start-up/spin-off companies have been formed from academic research since 2007, and two new science parks are currently being developed. Edinburgh TechnoPole is a new 126-acre science and technology park that offers flexible accommodation to new and growing high-technology businesses. At St Andrews, the new Eden business campus will provide an excellent base for growing the new startup company. USTAN has excellent connections within the UK and Scottish communities.
 
 \horizontalline
 

@@ -83,8 +83,6 @@ We will then further develop the module to perform more sophisticated higher-lev
 %In addition, we will focus on the dynamic analysis of security contracts for
 %vulnerabilities that cannot be formally verified without running the software component. 
 %Note that C++ and Java code will just be refinements of the extracted ASMs. Plus, given the abstraction mechanism used for the ASMs extraction, we will already have the mapping to the concrete syntax of the programming languages.
-
-
 \end{Task}
 
 \begin{Task}
@@ -105,8 +103,27 @@ security-preserving transformations as well as a notion of behavioural equivalen
 We will define a logic to capture properties of interest  including security properties (based on distributed stochastic temporal logics or separation
 logic) and privacy norms (FOL).
 We will explore how combining theorem provers and SMT solvers allows us to prove the correctness of behavioural equivalences on the one side, and search for a subset of traces of execution that satisfy certain criteria including security properties and privacy norms.
-
 \end{Task}
+
+%\begin{Task}
+%	\TaskTitle{Correctness of Refactorings for Self-Healing}
+%	\TaskParticipant{USTAN}{24}
+%	\TaskParticipant{SCCH}{1}
+%	\TaskParticipant{IBM}{1}
+%	\TaskStart{1}
+%	\TaskEnd{34}
+%	\TaskResults{%
+%		%%\ref{del:model1}
+%	}
+%	\TaskHeader{}
+%	\tasklabel{task:runtimehealing}
+%In \theTask, we will formalise the refactorings from~\ref{task:statichealing} that introduce the security patterns (from~\ref{task:patterns})  developing mechanised proofs of their functional correctness. This will improve confidence to the end-user that the refactorings will not change the functional behaviour of the programs being refactored. Proofs that the refactorings increase the security properties of the program will not be handled here, but instead given in T4.X.
+%
+%The mechanisations will focus on a tractable subset of the target language, in order to demonstrate functional  equivalence between the original program and the refactored output, based on the identified semantics representation. This will involve identifying a representation of the semantics for the subset of the target language and defining an equivalence relation between the original and refactored programs. We will provide mechanised proofs in the form of implementations in a dependently typed language, such as Idris.
+%
+%This task will proceed in a number of phases. In the \emph{first} phase, we will identify the formal semantics of a tractable subset of the target language. In the \emph{second} phase, we will define an equivalence relation between the original program and the refactored output w.r.t. to the semantics identified in the first phase. Finally, in the \emph{third} phase will produce mechanised proofs of functional correctness for number of the refactorings produced  in~\ref{task:statichealing}, w.r.t. to the semantics and equivlence relations from the previous phases.
+%
+%\end{Task}
 
 
 %Chris' text
