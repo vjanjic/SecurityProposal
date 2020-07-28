@@ -2075,13 +2075,77 @@ and updated as necessary during the project in order to minimise risk and so to 
 \textbf{Description of risk} & \textbf{WPs\newline involved} & \textbf{Proposed Risk-mitigation measures} \\ \hline
 \multicolumn{3}{l}{\ }
 \\\hline
-XX (Milestone XX). 
-\par\vspace{1ex}
-\textbf{Severity: Medium}
+
+Disagreement over task requirements/implementation.
 \par
-\textbf{Likelihood: Medium}&
-WP2--\ref{wp:eval}  &  
-This is an early milestone that defines the overall project direction.  
+(\textbf{Likelihood: Low}
+\par
+\textbf{Severity: Medium})
+& ALL &
+A conflict resolution mechanism has been defined that can be used to resolve
+problems as they arise (see Page~\pageref{conflict-resolution}).
+Most of the partners have worked together
+successfully in previous projects, there will be regular technical
+and management meetings, and the Project Coordinator
+is actively involved in all but one work package.  These measures will help ensure
+good working relationships between project partners.
+
+\\\hline
+Non-performance of a partner.
+\par
+(\textbf{Likelihood: Low}
+\par
+\textbf{Severity: High}
+)
+& ALL & 
+Where skills overlap, 
+effort will be redeployed to other partners;
+otherwise the tasks may be scaled back, if possible; or,
+if necessary, new partners with required competencies will be
+incorporated into the project.
+
+\\\hline
+Failure to achieve key project objectives.
+\par
+(\textbf{Likelihood: Low}
+\par
+\textbf{Severity: High}
+)
+& ALL & 
+In order to make the major progress that is required,
+\TheProject{} incorporates leading-edge
+research and complex software development, whose absolute success cannot be predicted. 
+All partners will, however, strive to achieve project objectives
+to the best of their ability.  Based on our results to date, and taking into account
+the excellent technical and research track records of each of
+the partners, it appears entirely feasible to achieve not only our general
+technical research objectives, but also all the specific objectives
+of the work packages.  In the event that it
+proves impossible to achieve some specific objective within the
+scope of the project, we will firstly attempt to reallocate
+resources to ensure that all objectives are obtained, then
+to prioritise objectives so that the most critical objectives are achieved,
+and finally, if absolutely necessary, we will scale down our technical objectives, by
+relaxing or deleting some part of those objectives as required
+to achieve success. 
+
+\\\hline
+Security and privacy vulnerabilities arise from the internals of the libraries for storage and processing of big data.
+\par
+({\textbf{Likelihood: Low}}
+\par
+{\textbf{Severity: Medium}})
+& WP3 &
+Using patter-based design and implementation approach, the main goal of \TheProject{} is to identify vulnerabilities arising from the interaction of different layers (end-user application layer, machine learning library layer, data processing layer and data storage layer) of a typical big-data analytics application. Therefore, we do not aim to extensively test the internals of libraries used at each layer due to complexity of their code, but rather to treat them as black boxes. It is, however, possible that the majority of vulnerabilities in the end-user application will come from the internal functioning of layers, rather than the interaction between libraries at different layers. This is, however, not likely as we will use tried-and-tested libraries that have been in use for long time. Should this still turn out to be the case, we will redeploy the effort into analysing internals of the considered libraries instead of their composition. This would likely result in us being able to detect and repair fewer vulnerabilities, but it would still allow us to make significant improvement in security compared to the state-of-the-art.
+ 
+\\\hline
+Inability of the generic tools for vulnerability detection and self-healing to detect/repair vulnerabilities in big-data analytics applications
+\par
+({\textbf{Likelihood: Low}}
+\par
+{\textbf{Severity: High}})
+& WP2, WP3 &
+WP2 will develop generic techniques for discovering and repairing security and privacy vulnerabilities in distributed applications, focusing on analysing the source code of such applications and profiling their execution. WP3 will apply these techniques for the problem of big-data analytics. It is possible that the techniques from WP2 will not be able to detect majority of vulnerabilities when applied to the specific problem that WP3 considers, due to sheer scale of the computations and unpredictability of the interactions between storage and processing agents. This is unlikely to happen, as the techniques in WP2 will be designed with the scaling in mind and will be adapted to the non-determinism that parallel computations exhibit. In the case that it still happens, we will redeploy effort from other work packages (specifically WP2 and WP3) to further adaptation of the core techniques. 
 \\\hline
 \end{longtable}
 %\newpage
