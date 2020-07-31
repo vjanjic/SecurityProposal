@@ -88,7 +88,6 @@ ToDo List:
 \item YAG for static code analysis in 1.4.1 (maybe add a picture of the tool in action too?)
 \item USTAN for formal methods in 1.4.4, including security contracts
 \item COGNI for authentication in 1.4.6
-\item SCCH for runtime analysis in 1.4.2
 \end{itemize}
 
 	
@@ -148,6 +147,14 @@ ToDo List:
 \end{itemize}
 
 DONE:
+
+\begin{itemize}
+\item Section 1.4 : Add the related work and advancement beyond state-of-the-art:
+\begin{itemize}
+\item SCCH for runtime analysis in 1.4.2. 
+\end{itemize}
+\end{itemize}
+
 
 \begin{itemize}
 \item Section 3: Write up WP3, make tasks consistent with the Gantt chart (UOD)
@@ -856,10 +863,17 @@ Dynamic analysis systems, such as “fuzzers” natively executes an application
 \end{mdframed}
 
 
-\paragraph{Run-time Analysis}
-\vjcomment{\SCCHshort{} to write}
-Current practice is for security to be ensured at run-time, using efficient monitoring techniques coupled with dynamic run-time checks such as ISR~\cite{isr}, ASLR~\cite{aslr} and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational complexity and energy consumption. 
+\paragraph{Run-time Analysis and Adaptation}
+%\vjcomment{\SCCHshort{} to write}
+%Current practice is for security to be ensured at run-time, using efficient monitoring techniques coupled with dynamic run-time checks such as ISR~\cite{isr}, ASLR~\cite{aslr} and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational complexity and energy consumption. 
+According to the general behavioural theory of concurrent systems~\cite{BorgerS16} concurrency can be captured by families of sequential ASMs indexed by agents, such that each agent proceeds stepwise evaluating its actions in a consistent virtual state and bringing in its updates into some later (not necessarily the next) virtual state. Extending the thesis such that families of parallel ASMs~\cite{FerrarottiSTW16}  are captured is rather straightforward. Reflective (self-adaptive) extensions~\cite{abs-2001-01873} should not cause serious problems to be integrated, as the concurrency model does only depend on integrating results of steps of the involved agents. This provides the necessary theoretical foundations  needed to formally specify the novel algorithms that we envisage for run-time analysis and adaptation based defence of modern distributed data analytics systems. Among others we can capture within this model the semantics of bulk synchronous parallel computations~\cite{FerrarottiGS19}, and thus the MapReduce algorithms which are prevalent in data analytics. 
 
+
+The common state-of-the-art approach for security analysis (also at runtime) is to start from an attacker model and system vulnerabilities~\cite{Biskup09}. With respect to possible attacks at run-time the project will focus on unauthorised intrusion with the potential of causing (planned or carelessly) damage to the system, i.e. identity management and access control are primary objects of interest. For this the project will take an approach based on anomaly detection (see~\cite{BaileyCL14} for an overview concerning security breaches) and counter-measures based on the adaptation of the security controllers. The anomaly detection will be based on the learning of the protocol language used in the interaction with the system~\cite{Lampesberger13}, and the counter-measures will change the rules of the identity manager and the access control~\cite{BaileyCL14}. Furthermore, the research on anomaly detection will not only focus on the recognition of anomalies that may indicate unauthorised and potentially malicious intrusion and the adequate countermeasures that repair a violation, but also on the early anticipation of damaging activities and the start of counter-measures before any damage has occurred. For instance, components may produce incorrect Byzantine behaviour or not react anymore. In order to cope with such vulnerabilities, the challenge is to identify also states that are close to states that will require counter-measures and sequences of update sets by individual agents that led to these states, such that the combination of both indicate the potential creation of a non-acceptable state within a small number of steps. 
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art by addressing means for interaction and synchronisation, by which desirable security properties of the concurrent system at run-time can be enforced. For instance, by means of transaction operators~\cite{BorgerSW16} strict serialisability and recoverability can be enforced, but there are weaker properties that might be applied to ensure exclusive or priority access to shared locations. Also messaging instead of location sharing will be exploited, for which it will be shown how to integrate the interface theory for concurrent systems developed in~\cite{BauerHW11}. By means of sharing, messaging and synchronisation monitoring algorithms (e.g., see~\cite{DiekertL14} for the handling of run-time verification and monitoring) for the detection of security risks situations will be integrated into the systems. \TheProject{} will further advance the state of the art concerning the handling of security requirements by adding preemptive counter-measures.
+\end{mdframed}
 
 
 
