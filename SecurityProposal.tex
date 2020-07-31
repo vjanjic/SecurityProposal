@@ -25,12 +25,12 @@
 \end{center}
 
 \begin{tabular}{lp{5in}r}
-\textbf{Title of Proposal:} & \textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics} & \\[4ex] 
+\textbf{Title of Proposal:} & \textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics } & \\[4ex] 
 \textbf{Date of preparation:} & \textbf{\today} & \comment{}{$
 $Revision: 0.0$ $}\\[4ex]
 \textbf{List of participants} && \\[1ex]
 
-
+https://www.overleaf.com/project/5e5e45121e493b000149fe20
 \end{tabular}
 
 %% Participants Table
@@ -850,9 +850,12 @@ Dynamic analysis systems, such as “fuzzers” natively executes an application
 \end{mdframed}
 
 
-\paragraph{run-time Analysis}
+\paragraph{Run-time Analysis}
 \vjcomment{\SCCHshort{} to write}
 Current practice is for security to be ensured at run-time, using efficient monitoring techniques coupled with dynamic run-time checks such as ISR~\cite{isr}, ASLR~\cite{aslr} and CFI~\cite{cfi}. These methods are, however, expensive in terms of computational complexity and energy consumption. 
+
+
+
 
 \paragraph{Security of Multi-Library Applications}
 Including third party libraries into the application code presents additional security risks, as these libraries may include intentional or unintentional vulnerabilities resulting in unwanted behaviour or data leakage of sensitive  information. For example, an open source JavaScript library used in a website may contain malicious code that collects data and sends it to the third party. This is especially problematic for large-scale big data analysis applications, as they are typically composed of calls to several different libraries, as outlined in Section~\ref{sec:XX}. The state of the art solutions to this problem is to use security testing, static analysis and dynamic analysis, such as sandboxing~\cite{jsand}, to detect vulnerabilities and malicious packages before integrating them into the application code. In~\cite{Cova}, a combination of anomaly detection and emulation systems is built to detect malicious code. OWASP~\cite{OWASP} presents the risks in using third party  packages, how to determine if these packages are vulnerable or contain malicious code and how to deploy these packages. Other possible solutions to the problem of integrating third party libraries are based on analysis of the libraries, building control flow graph, looking for copies of buggy code, and profiling packages~\cite{Hanna, XinSun}. These solutions miss many vulnerabilities or malicious dormant code as a result of obfuscation, packing, and the ease in rebuilding new variants of the malicious code, or just the rapid release of new buggy version of packages. There are cases in which it is not beneficial to fix a vulnerability in the software or in a third party code integrated into the software. For example, in cases where the patch is hard to deploy or where fixing the vulnerability has significant impact on performance. In fact, 99\% of attacks are believed to exploit known and fixed vulnerability~\cite{GartnerVulnerability} for which the fix was not deployed. One famous example is the WannaCry attack that was based on a fixed and updated CVE. To protect the software in these cases, \emph{virtual patching} may be used. A virtual patch is a set of rules that implements complex logic to prevent malicious traffic from reaching the application. The challenge is to come up with a set of accurate rules that filter exactly the malicious inputs without blocking other inputs. This work is currently done manually, and it would heavily benefit from integrating a predictive model to automatically detect inputs that may utilise the vulnerability.
@@ -1377,15 +1380,30 @@ XX
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{Expected Impact 5:}
 A stronger, more innovative and more competitive EU cybersecurity industry, thus reducing dependence on technology imports.
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=gray!10]
+\paragraph{How Will \TheProject{} Achieve This Impact:}
+XX
+\end{mdframed}
+\begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{Expected Impact 6:}
 A more competitive offering of secure products and services by European providers in the Digital Single Market.
-
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve These Impacts:}
+XX
+\end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{Expected Impact 7:}
+A wider understanding amongst developers of the issues involved in Code Security
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\paragraph{How Will \TheProject{} Achieve These Impacts:}
+Something about the education program and MOOC
 \end{mdframed}
 
 %\begin{mdframed}[backgroundcolor=blue!5]
