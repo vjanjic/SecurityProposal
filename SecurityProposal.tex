@@ -1,4 +1,4 @@
- % !TeX encoding = UTF-8
+     % !TeX encoding = UTF-8
 \documentclass[a4paper,11pt]{article}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -24,9 +24,9 @@
 {\Huge \textsc{\TheProject}}
 \end{center}
 
-\begin{tabular}{lp{5in}r}
-\textbf{Title of Proposal:} & \textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics } & \\[4ex] 
-\textbf{Date of preparation:} & \textbf{\today} & \comment{}{$
+\begin{tabular}{lp{5in}r} %something strange about the spacing...
+\textbf{Title of Proposal:}&\hspace*{-7cm}\textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics } & \\[4ex] 
+\textbf{Date of preparation:} &\hspace*{-3cm} \textbf{\today} & \comment{}{$
 $Revision: 0.0$ $}\\[4ex]
 \textbf{List of participants} && \\[1ex]
 
@@ -67,15 +67,12 @@ ToDo List:
 \item Section 1.3.1 : Add challenges for security and privacy of big data analytics (basically, a few sentences to motivate why we do the work we propose)
 
 \begin{itemize}
-\item IBM for symbolic execution
 \item USTAN for formal modelling and refactoring
-\item UC3M for security standards
 \item COGNI for authentication
 \end{itemize}
 
 \item Section 1.3.3 : Add the relevant technologies that will be developed over the course of the project, together with current and future TRLs
 \begin{itemize}
-\item IBM for ExpliSat
 \item USTAN for formal methods and refactoring
 \item SCCH for privacy-preserving AI
 \item YAG for source code analysis
@@ -149,6 +146,11 @@ ToDo List:
 DONE:
 
 \begin{itemize}
+\item Section 1.3.1 : Add challenges for security and privacy of big data analytics (basically, a few sentences to motivate why we do the work we propose)
+\begin{itemize}
+\item UC3M for security standards
+\end{itemize}
+
 \item Section 1.4 : Add the related work and advancement beyond state-of-the-art:
 \begin{itemize}
 \item SCCH for runtime analysis in 1.4.2. 
@@ -178,6 +180,17 @@ DONE:
 \end{itemize}
 
 \item Section 3.2: Write up tables of WTLs and PIs (UOD) -- EVERYONE TO CHECK
+
+\item Section 1.3.1 : Add challenges for security and privacy of big data analytics (basically, a few sentences to motivate why we do the work we propose)
+
+\begin{itemize}
+\item IBM for symbolic execution
+\end{itemize}
+
+\item Section 1.3.3 : Add the relevant technologies that will be developed over the course of the project, together with current and future TRLs
+\begin{itemize}
+\item IBM for ExpliSat
+\end{itemize}
 
 \end{itemize}
 
@@ -456,7 +469,7 @@ In \TheProject{} we will develop new coding standards that can help to mitigate 
 
 User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In the \TheProject{} project, we will develop an Authentication-as-a-Service technology allowing developers to easily integrate, deploy and manage their preferred authentication methods depending on custom requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behavior data allowing developers to deliver personalized security experience and thus increase user acceptance and trust.
 
-\subsubsection*{Objective 6: Methodology for Deveopment of Secure Applications}
+\subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
 
 In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end-user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In the \TheProject{}, we will develop a novel methodology for developing secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured rewriting of the end-user code, which will enable easily understandable step-by-step transformation of the initial code into its provably-secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification and properties proving techniques into tools for static analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure and avoid any privacy breach. 
@@ -579,12 +592,17 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 
 \item \textbf{Enforcement of Secure Coding.} Software components are continuously developed both at the infrastructure and application levels. During the development process introduction of unsecure code is a major hazard that may compromise the full system security. In this context coding guidelines play a key role to avoid the introduction of undesired vulnerabilities. Many of such vulnerabilities, specially in native languages as C or C++, are derived from the language definition itself. Moreover, programming languages are not static entities. For example, the C programming language has had three version ins the past 12 years, while the C++ programming language has had four versions during the last 9 years. \textbf{We must enforce that new and existing code adheres to coding standards that avoid the introduction of new vulenarabilties derived from programming languages features}. 
 
+\item \textbf{Vulnerability Detection in Source Code.} The importance of cyber security has become more and more signiﬁcant. The root cause of most cyber-attacks is vulnerabilities in applications source code. Vulnerabilities exploited by attackers compromise the conﬁdentiality, integrity, and availability of information systems. Early detection of vulnerabilities is an eﬀective way to reduce the loss and potential damage. Despite the eﬀorts of experts, vulnerabilities remain a huge problem and will continue to exist in the long term. This can be justiﬁed by the fact that an increasing number of vulnerabilities are published every year. Vulnerability detection is a method to discover vulnerabilities in software. \textbf{We must ensure that new and existing C/C++ code is free as much as possible from known vulnerabilities.}
+
 \item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time. Requirement for parallel processing comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. \textbf{We must ensure that distributed parallel processing used in AI-based data analytics does not leak sensitive information from the data it processes to the malicious users.}
 
 \item \textbf{Optimization of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive or private information. Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. 
 
 \item {\color{blue} \textbf{\YAGshort{} Proposal: Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
 \textbf{We must ensure that static code analysis provides relevant and qualified decision making information to optimize self healing and vulnerability detection.} 
+
+\item \textbf{Intelligent User Authentication.} 
+
 
 \end{itemize}
 
@@ -665,6 +683,8 @@ the case of key enabling technologies)'').
     \hline Machine learning augmented SAST for security and privacy breaches detection in Java source code & TRL 6 & TRL 7 \\  
     \hline Machine learning augmented SAST for security and privacy breaches in C/C++ and Python source code & TRL 5 & TRL 6 \\  
     \hline Code mining (ability to extract high value technical, cybersecurity and end user business oriented information from source code) & TRL 5 & TRL 6 \\  
+    \hline SCCH eKnows software analytics tool - Module for semi-automated extraction of ASMs from source code & TRL 4 & TRL 6 \\
+    \hline IBM ExpliSAT Symbolic Interpretation Tool for security vulnerability detection in C/C++ code & TRL 4 & TRL 6 \\
     \hline
   \end{tabular}
 \end{center}
@@ -858,7 +878,7 @@ Software vulnerabilities pose serious risk of exploit and result in system compr
 Dynamic analysis systems, such as “fuzzers” natively executes an application while providing ‘tailored’ inputs. When flaws are detected, these systems can provide these inputs and significantly assist in reproducing and mitigating the flaws. However, generating the tailored “input test cases” to drive execution, typically requires an exhaustive set of test cases that required manual effort to generate. 
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\TheProject{} will advance the state of the art in the area of software vulnerability detection by combining symbolic execution with fuzzing and advanced static analysis capabilities. The first direction uses a known analysis technique that is based on reachability analysis, and discard paths that cannot reach a target location ...
+\TheProject{} will advance the state of the art in the area of software vulnerability detection by combining symbolic execution with fuzzing and advanced static analysis capabilities. We will use a known analysis technique that is based on reachability analysis, and discard paths that cannot reach a target location. Then we plan to use static analysis augmented with heuristics to detect and abstract code segments that are deemed difficult for a symbolic execution and/or fuzzing to cope with, such as cryptographic code. A combination of symbolic execution and fuzzing approaches will help the symbolic execution engine to make progress in code segments that are difficult for symbolic interpretation due to the “path explosion” problem or missing source code. The overall goal is to create a combined tool with symbolic execution, fuzzing and static analysis capabilities that would outperform any other existing tool in the marketplace.
 
 \end{mdframed}
 
@@ -2960,7 +2980,7 @@ leads work packages WPXX and participates in WPXX on XX.}
 The University of Dundee is a leading Scottish institution and one of the world’s top universities. With 18,000 students from 145 countries, it is truly a global University. Re-
 search at Dundee delivers impact by harnessing expertise across disciplines to tackle some of the most challenging problems the world faces today. It promotes the sustainable use of global resources, shapes the future through innovative design and improve social, cultural and physical well-being. The University takes pride in delivering research with significant impact on global innovation and international policy. With 44\% of staff devoted solely to research, it continues to advance the lives of people across the world. Research in Dundee benefits from a wealth of experience from around the world, as international academics and external partners work closely together.
 
-The University of Dundee was the first university in the UK that had am MSc program for Big Data Analytics. It continues to be at the forefront of Big Data Science in the UK, collaborating with national and international companies such as XX and national bodies such as Data Lab to deliver research and training into Data Science. \UODshort{} also has an established collaboration with various institutions in the area of Health Informatics, including the Health Informatics Centre (HIC) of the University of Dundee, which is recognised as a leader in health data linkage. It was the first centre in Scotland to offer a Safe Haven, which is now Nationally Accredited and ISO27001 certified. Operating under tight data governance controls, the Safe Haven allows secure collaborative research using sensitive eHealth data. HIC also maintains a clinical data repository of eHealth data covering approximately 20\% of the Scottish population, with core datasets providing a continuous record extending back 30 years.
+The University of Dundee was the first university in the UK that had am MSc program for Big Data Analytics. It continues to be at the forefront of Big Data Science in the UK, collaborating with national and international companies such as Teradata, Microsoft,Yahoo and local companies such as Outplay, Ninja Kiwi and Waracle along national bodies such as DataLab to deliver research and training into Data Science. \UODshort{} also has an established collaboration with various institutions in the area of Health Informatics, including the Health Informatics Centre (HIC) of the University of Dundee, which is recognised as a leader in health data linkage. It was the first centre in Scotland to offer a Safe Haven, which is now Nationally Accredited and ISO27001 certified. Operating under tight data governance controls, the Safe Haven allows secure collaborative research using sensitive eHealth data. HIC also maintains a clinical data repository of eHealth data covering approximately 20\% of the Scottish population, with core datasets providing a continuous record extending back 30 years.
 
 \subsubsection*{Role in Serums}
 \textbf{\UODshort{} will lead the WP8 on Dissemination, Exploitation, Community Building and Communication activities, with the special focus on education program by delivering MOOCs. It will also contribute with its expertise on parallel programming, pattern-based application design and development, big data analytics and machine learning to WP2, WP3 and WP6.}  
@@ -2969,7 +2989,11 @@ The University of Dundee was the first university in the UK that had am MSc prog
 
 \paragraph{Dr Vladimir Janjic} is a lecturer in Data Science at the Division of Computing in the School of Science and Engineering at the University of Dundee. He received his PhD from the University of St Andrews in 2011. He has relevant expertise in distributed systems, parallel pattern-based programming, frameworks for big data analytics, machine learning, managing complexity and systems integration. His PhD work was undertaken in the context of the EU FP6 \textbf{SCIEnce} project, where he worked on mechanisms to ensure adaptivity on heterogeneous environments, which included building the SCALES simulator for work distribution policies on heterogeneous environments, and the implementation of dynamic scheduling mechanisms. Whilst at the University of St Andrews, he was also involved in several other EU projects, including H2020 RePhrase project, where he investigated software engineering techniques for developing pattern-based parallel applications, including application of machine learning techniques in managing system properties. He has published more than 25 research papers so far. He was one of the main authors and original contributors of the \textbf{SERUMS} EU project that investigates security and privacy of medical data in modern healthcare systems, and he is currently a principal investigator of the project for the University of Dundee.
 
-\paragraph{Andrew Cobley}
+\paragraph{Andrew Cobley} Andy Cobley is a senior lecturer at the school of Science and Engineering at the University of Dundee.    He is the program director for the MSc programs in Data Science and Data Engineering at the University.   Amongst his research interest is the NoSQL movement and applying these technologies to internet and games applications. He is currently working with the Horizon 2020 \textbf{WeObserve} project, which aims to improve our knowledge of how to build and operate citizen observatories. He has recently finished the highly successful Horizon 2020 \textbf{GROW} project investigating over seeing the technology work package on how to process and store large quantity of  soil moisture data  that is generated from Citizen Science.  He has supervised PHd students working with the Angus Lamond Lab in the University investigating Big Data approaches using Hadoop to analyze the large data that is generated during the study of Proteomics by the Lab.  Some of this work was carried out in co-operation with Teradata and Microsoft.
+
+
+He is the creator of the FutureLearn MOOC “Data Science in the Games Industry” for the Scottish DataLab, this program has run on more than four occasions attracting attention from around the world. In addition, he is a writer for the on-line computing magazine “The Register” specializing in Data Science, Devops and database technologies at scale. 
+
 
 \Participant{IBM}{(\url{http://www.research.ibm.com/labs/haifa/)}}
 
