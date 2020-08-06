@@ -330,7 +330,10 @@ is, however, also much more vulnerable and exposed to
 potential targets for cyber attacks then code running on single machines. Vulnerabilities arise %coming 
 %both 
 from the way big data is stored (usually in distributed filesystems or databases) and is processed (with multiple distributed agents interacting and exchanging potentially sensitive information). Security mechanisms that protect sensitive data in such settings are still fragile, and not advanced enough to provide sufficient trust in the whole data analytics process. 
+
+\begin{mdframed}[backgroundcolor=blue!5]
 \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by assisting the end-users in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for the verification of security and data privacy properties of the code.}
+\end{mdframed}
 
 
 
@@ -661,8 +664,7 @@ and which form the basis for a register of technical risk.  The most significant
 \end{enumerate}
 
 \subsubsection*{Transdisciplinary concerns}
- \vjcomment{Only if relevant}
-
+\TheProject{} will bring together many different fields in computing, such as security, code analysis, code transformations, formal methods, software engineering, parallel programming and artificial intelligence. The cooperation between these different areas will allow us to bring strengths of each of them into our technologies, e.g.~by combining rigorous methods for proving properties of the code with usually less formal code transformation techniques. Furthermore, the use cases that will be developed over the course of the project belong to significantly different domains and the application of our technologies to them will enable interdisciplinary research and applications, combining computer science with healthcare, telecommunications and economy (banking). Finally, all of our technologies will be user centred, with the main aim being the ease of use by non-experts in security and large-scale distributed and parallel processing, or non-experts in computer science altogether. Massive Open Online Courses (MOOCs) that we will develop will allow application of educational technology to promote the exchange of knowledge and to train the application domain experts in secure large-scale programming. 
 
 \subsubsection{Positioning of the project}
 \eucommentary{Describe the positioning of the project e.g. where it is situated in the spectrum from 'idea to application', or from 'lab to market'. Refer to Technology Readiness Levels where relevant.}
@@ -746,7 +748,7 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\weobserve (EU No.776740).}
-\weObserve is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
+\textbf{WeObserve} is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -782,6 +784,10 @@ The company has been labelled "Jeune Entreprise Innovante" (Young Innovative Com
 \subsubsection{Overall approach and methodology}
 
 \eucommentary{Describe and explain the overall approach and methodology, distinguishing, as appropriate, activities indicated in the relevant section of the work programme, e.g. for research, demonstration, piloting, first market replication, etc.;}
+
+The development of the \TheProject{} technologies will be user-driven, with a primary consideration being the applicability to the realistic use cases and usability by the end users, which are in our case developers of big data analytics applications. The project will start with a short requirements capturing phase, where we will make decisions about the storage, processing and machine-learning libraries that will be considered in the project, and we will scope out the plan for each of the technologies and their interaction in the overall methodology. These requirements will be revisited and refined after the first phase of the project, taking into account the experience and the results of that phase.
+
+The \TheProject{} technologies themselves will be developed and evaluated in three incremental phases. In the first phase, we will develop the initial versions of the tools and techniques, link them together in the initial version of the \TheProject{} methodology for developing secure big data analytics and evaluate them on the initial versions of the use cases. In this phase, we will limit ourselves to the security issues arising from deployment of applications on private clouds. This will allow us to develop initial versions of the tools in a more tractable setting, where fewer opportunities for cyber attacks may arise. In the second phase, we will extend the technologies, project methodology and use cases to target the deployment in public clouds, where far more cyberthreats are present. Finally, in the third and final phase, we will develop and evaluate the final versions of the techniques, methodology and use cases, targeting the deployment on a hybrid clouds that span both private and public clouds, therefore allowing more possible threats than either of these settings alone. With this in mind, we will aim to use the Agile development as our primary software-engineering methodology, allowing, however, for each technology to use its own methodology that is most suitable for development.
 
 \TheProject{} comprises 6 technical work packages: WP2 on foundational mechanisms for identifying security risks and self-healing; WP3 on security and privacy in the context of distributed AI-based big data analytics; WP4 on establishing security properties of the code, including formal verification and analysis for compliance to standards;  WP5 on intelligent user authentication; WP6 on methodology for developing secure applications by end users; and WP7 on use cases and evaluation. There are also WP8 on dissemination, exploitation and community building and WP1 on project management. The relationship between the project objectives and these work packages is shown below
 
@@ -1494,13 +1500,20 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 %\end{mdframed}
 
 
-\pagebreak
+%\pagebreak
 \paragraph*{Improving Innovation Capacity}
 \noindent
-\TheProject{} will significantly improve long-term innovation capacity by enabling European companies and individuals to develop complex and innovative new secure large-scale big data analytics applications for a variety of commercially-important and emerging markets, including healthcare, air traffic monitoring and digital banking. A combination of different methods for identifying and repairing security risks and privacy leaks, coupled with the formal methods for proving the security properties and continuously evolving security standards will allow identification and repairing of not only current, but also the future security threats, making the software developed using our technologies robust and resilient in future too. The \TheProject{} methodology, together with the associated tool chain, will significantly reduce the level of expertise required from the developers in developing secure code, allowing non-expert in this area to develop software that is provably secure and automatically checked for the conformance to standards. This will bring a major boost to the European markets in software, as the security and privacy will become the most important factors when designing and implementing the new software, especially in the light of the increased distribution of data across domains in parallel with more and more strict regulations governing privacy and ownership of the data. Section~\ref{sec:innovationpotential} (page \pageref{sec:innovationpotential}) describes the market opportunities and potential for innovation 
-in more detail.
+\TheProject{} will significantly improve long-term innovation capacity by enabling European companies and individuals to develop complex and innovative new secure large-scale big data analytics applications for a variety of commercially-important and emerging markets, including healthcare, air traffic monitoring and digital banking. A combination of different methods for identifying and repairing security risks and privacy leaks, coupled with the formal methods for proving the security properties and continuously evolving security standards will allow identification and repairing of not only current, but also the future security threats, making the software developed using our technologies robust and resilient in future too. The \TheProject{} methodology, together with the associated tool chain, will significantly reduce the level of expertise required from the developers in developing secure code, allowing non-expert in this area to develop software that is provably secure and automatically checked for the conformance to standards. This will bring a major boost to the European markets in software, as the security and privacy will become the most important factors when designing and implementing the new software, especially in the light of the increased distribution of data across domains in parallel with more and more strict regulations governing privacy and ownership of the data. SMEs involved in the project will use our software to create additional market opportunities and the project itself will support the growth of these companies by significantly extending their offer. Section~\ref{sec:innovationpotential} (page \pageref{sec:innovationpotential}) describes the market opportunities and potential for innovation in more detail.
 
 \paragraph*{Societal Impact.}
+\noindent
+\TheProject{} will have a major impact on society through its focus on delivering secure and privacy preserving data analytics code. Our methodology will allow for \emph{secure-by-design} application development, meeting the ever-growing societal needs for secure complex data analysis and promote ensuring of the privacy of the data in light of new and more strict regulations such as GDPR. One of our goals is to support companies in enforcing compliance to GDPR in their applications by developing privacy-by-design technologies and methodology. With the use cases from various domains, we will also deliver significant impact in the areas not directly related to computer science. By investigating mechanisms for secure knowledge transfer between geographical areas, we will allow faster and more secure cooperation between institutions which is especially important in the Healthcare domain, where there is a growing trend towards decentralisation of the data and diagnostics and for shared learning that breaks the boundaries between institutions and countries. Remote collaboration and knowledge sharing is of crucial importance to the world affected by the COVID-19 where crucial knowledge exchange will need to be facilitated in the presence of strict social distancing rules.
+
+\begin{mdframed}[backgroundcolor=blue!5]
+One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and underrepresentation of minorities. \vjcomment{We need to expand on this}. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to recude the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
+\end{mdframed}
+ 
+
 \noindent
 \subsubsection*{Possible Barriers to Achieving the Expected Impacts and Associated Mitigations}
 
@@ -1540,11 +1553,38 @@ XX
 
 %\draftpage
 \subsection{Measures to Maximise Impact}
-
 The impact of \TheProject{} will be maximised by:
 \begin{inparaenum}[i)]
 \item
-  XX
+demonstrating the applicability of the \TheProject{} technology in developing secure and privacy-preserving data analytics on real-world use cases taken from the domains of air traffic communication, healthcare, digital banking and telecommunications;
+\item
+incorporating security and privacy into the software development process from the design phase by using security design and implementation patterns;
+\item
+ensuring that security and privacy requirements are met, especially concerning the regulations for ownership and sharing of the personal data such as GDPR;
+\item
+engaging directly with and taking feedback from the user and developer community, including specific user community development activities;
+\item
+building on and using technologies that are used commercially in a large-scale data analytics, such as Hadoop MapReduce for big data processing, Azure AI for machine learning and distributed databases and filesystems for data storage, as well as extending the specific tooling offered by the industrial project partners from \IBMshort{}, \YAGshort{} and \COGNIshort{}.
+\item
+demonstrating the utility of the \TheProject{} technology and tools through deploying a variety of use case applications;
+\item
+extending the existing security coding standards to address the problems that appear in composition of big data analytics applications from different layers;
+\item
+deploying an exploitation plan that links with the strategic needs and internal development plans of the companies and other organisations that are involved in \TheProject;
+\item
+publishing results extensively, both in technical areas, and through press releases, radio interviews, news items and the general technical press;
+\item
+engaging with relevant networks of excellence, such as HiPEAC and XX to ensure widespread dissemination of
+project results and uptake by third parties;
+\item
+developing educational program to promote the uptake of the \TheProject{} technologies by wider audience of developers with diverse backgrounds in computing;
+\item
+exploiting nationally-funded opportunities for the formation of spin-off companies and for commercial exploitation of research results;
+\item
+utilising open development and dissemination mechanisms as far as is practically possible and consistent with the needs of good exploitation; 
+and
+\item
+teaching the achieved results in advanced Masters and PhD courses that are offered by the academic beneficiaries at \SAshort{}, \UODshort{} and \UCMshort{}. 
 \end{inparaenum}
 %
 The following section describes these measures in more detail.
@@ -1588,17 +1628,38 @@ The conferences that we propose to target include:
 \vjcomment{Update these.}
 
 \begin{quote}
+\textbf{IEEE S\& P:} International Symposium on Security and Privacy;
+\textbf{ACM CCS:} International Conference on Computer and Communications Security;
+\textbf{ICSIC:} International Cyber Security \& Intelligence Conference;
+\textbf{European Security Summit};
 \textbf{ICSE:} International Conference on Software Engineering;
 \textbf{ACM IUI:} International Conference on Intelligent User Interfaces;
 \textbf{ACM UMAP:} International Conference on User Modeling, Adaptation and Personalization;
-\textbf{USENIX SOUPS:} International Symposium on Usable Privacy an Security
+\textbf{USENIX SOUPS:} International Symposium on Usable Privacy an Security;
+\textbf{IEEE BigData:} International Conference on Big Data;
+\textbf{IEEE ICDE:} International Conference on Data Engineering;
+\textbf{IEEE IPDPS:} International Symposium on Parallel and Distributed Systems;
+\textbf{ACM PPOPP:} International Symposium on Practice and Principles of Parallel Programming;
+\textbf{ICML:} International Conference on Machine Learning;
+\textbf{IEEE CLOUD:} International Conference on Cloud Computing;
+\textbf{IEEE/ACM CCGRID:} International Symposium on Cloud Computing and Grid;
+\textbf{EUROPAR:} International European Conference on Parallel and Distributed Computing; 
+\textbf{HCC:} The Healthcare CyberSecurity Conference;
+\textbf{AIME:} International Conference on Artificial Intelligence in Medicine;
  \end{quote}
 
 \noindent
 We also propose to target relevant high-impact journals such as:
 \begin{quote}
-\emph{the ACM Transactions on Software Engineering and Methodology (TOSEM)},
-\emph{the ACM Transactions on Interactive Intelligent Systems (TiiS)}
+\textbf{TOPS:} ACM Transactions on Privacy and Security;
+\textbf{TDSC:} IEEE Transactions on Dependable and Secure Computing;
+\textbf{JISA:} Journal of Information Security and Applications;
+\textbf{CSIAC:} The Journal of Cyber Security and Information Systems;
+\textbf{TOSEM:} ACM Transactions on Software Engineering and Methodology;
+\textbf{TiiS:} ACM Transactions on Interactive Intelligent Systems;
+\textbf{JDSA:} International Journal of Data Science and Analytics;
+\textbf{TPDS:} IEEE Transactions on Parallel and Distributed Systems;
+\textbf{IJPP:} International Journal of Parallel Programming;
 \end{quote}
 
 \paragraph{Project Web site:}  
