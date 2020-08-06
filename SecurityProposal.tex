@@ -464,10 +464,10 @@ While identifying security risks and privacy leaks is critical for security of d
 Source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, as C or C++, where the source code is translated into a binariy excutable and there is direct access to the hardware plaform. Some of such vulnerabilities may be introduced becase of bad practices. However, there is also a category of vulnerabilities that are intrdocued due to specific features of the programming language itself.
 In \TheProject{} we will develop new coding standards that can help to mitigate vulenerabilities in typical big-data applications with special attention to vulnerabilities derived from  the programming language. Then we will apply those coding standards to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern based machine learning software components.
 
-\subsubsection*{Objective 5: Intelligent User Authentication-as-a-Service}
+\subsubsection*{Objective 5: Intelligent User Authentication}
 \vspace{-6pt}
 
-User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In the \TheProject{} project, we will develop an Authentication-as-a-Service technology allowing developers to easily integrate, deploy and manage their preferred authentication methods depending on custom requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behavior data allowing developers to deliver personalized security experience and thus increase user acceptance and trust.
+In the \TheProject{} project, we will develop an Authentication-as-a-Service technology allowing developers to easily integrate, deploy and manage their preferred authentication methods depending on custom requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behavior data allowing developers to deliver personalized security experience and thus increase user acceptance and trust.
 
 \subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
@@ -572,9 +572,7 @@ Type of Action: Research and Innovation Action
 In modern world, data is everywhere around us. With the emergence of Internet-of-Things, the amount of data available from a variety of sources is doubling less than every two years. It is estimated that in the year 2025, the amount of data collected from various sources will grow to 175 zetabytes\footnote{One zetabyte is $10^{21}$ bytes. If we were to store 175 zetabytes of data on DVDs and stack them together, this stack would be long enough to circle the Earth 222 times (\url{https://www.bernardmarr.com/default.asp?contentID=1846})}. Such a vast amount of data is crucial for making more informed decisions in many areas and improving services in many areas of industry and science. Because of this, AI-based data analytics have become one of the most prominent areas of computer science, with a wide variety of applications to the real world problems. With numerous applications in healthcare, e.g.~in training machine learning models for early detection of cancerous cells, it can be said that big data can save lives. As a consequence, a variety of systems that support complex analytics techniques on raw data have been developed, with some examples being Spark MLLib, Tensorflow and Azure AI. Many of these systems are \emph{parallel and distributed} by nature. The requirement for parallelism comes from the fact that performing data analytics on large volumes of data is usually computationally very expensive, and doing such computations in parallel on many-core systems can significantly reduce response time and deliver results much faster. The distributed aspect of data analytics comes from both distributed nature of the sources of data (where some data cannot be moved between different sites due to legal or practical reasons), and by the fact that distributed systems (such as clouds) offer much more computational power at relatively cheap price than even the high-end local highly-performance systems. 
 
 The digitisation of modern world, together with advances in the software systems, has had one undesirable consequence - the prevalence of cybersecurity attacks. As more and more devices are connected to the internet, there are more and more potential targets for cyber attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the distributed data analytics code is almost completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction between data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
-\textit{
-{\color{blue} \YAGshort{} update Proposal} In the meantime, software production have been tremendously increasing over the last decades, reaching up to 110 billion lines of code written every year. The growing needs to bring new digital functionalities as well as the modern software development processes contribute to the production of huger and more complex applications. As a consequence, application security testing activities, such as vulnerabilities check or privacy data flaws detection, become more complex and subject to combinatory explosions.
-}
+In the meantime, software production have been tremendously increasing over the last decades, reaching up to 110 billion lines of code written every year. The growing needs to bring new digital functionalities as well as the modern software development processes contribute to the production of huger and more complex applications. As a consequence, application security testing activities, such as vulnerabilities check or privacy data flaws detection, become more complex and subject to combinatory explosions.
 
 The digitisation of modern world, together with advances in the software systems, has had one undesirable consequence - the prevalence of cybersecurity problems. As more and more devices are connected to the internet, there are more and more potential targets for cyber attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the code is completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction betweeen data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
 
@@ -598,10 +596,11 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 
 \item \textbf{Optimization of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive or private information. Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. 
 
-\item {\textbf{\YAGshort{} Proposal: Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
+\item {\textbf{Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
 \textbf{We must ensure that static code analysis provides relevant and qualified decision making information to optimize self healing and vulnerability detection.} 
 
 \item \textbf{Intelligent User Authentication.} 
+User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In addition, there is an increased need for service providers to continuously verify, after successful login, the identity of the user to prevent fraudulence behavior, \textit{e.g.}, verifying that the voice of an online banking customer aligns to the authenticated customer. 
 
 
 \end{itemize}
@@ -681,7 +680,7 @@ the case of key enabling technologies)'').
      &  & \\
     \hline Refactoring Tool Support & TRL x & TRL x \\  
     \hline YAG YAG-Suite vulnerability detection tool - Machine learning augmented SAST for security and privacy breaches in Java, C/C++ and Python source code & TRL 4 & TRL 6 \\  
-    \hline YAG YAG-Suite vulnerability detection tool - Code mining (extraction of technical, security and end user business orientedhigh value information from source code) & TRL 5 & TRL 7 \\  
+    \hline YAG YAG-Suite vulnerability detection tool - Code mining & TRL 5 & TRL 7 \\  
     \hline SCCH eKnows software analytics tool - Module for semi-automated extraction of ASMs from source code & TRL 4 & TRL 6 \\
     \hline IBM ExpliSAT Symbolic Interpretation Tool for security vulnerability detection in C/C++ code & TRL 4 & TRL 6 \\
     \hline
@@ -747,12 +746,12 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\weobserve (EU No.776740).}
-\weobserve is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
+\weObserve is an umbrella project promoting the use of Citizen Observatories for environmental monitoring.  This innovative project aims at demonstrating the societal and economic benefits of involving citizens in environmental decision making and cooperative planning, supporting Europe’s leading role in integrating citizen science and building resilient communities. Together, these projects will empower and enable citizens to become the ‘eyes’ of the policy makers and to complement existing environmental monitoring systems.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\satie (EU No.832969).}
-\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an interoperable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.
+\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems from industry partners like \FRQshort{}, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an inter operable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.\emph{\TheProject will, however, substantially extend the work that has been done on a deeper technical level beginning with the information platform MosaiX.}
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -794,7 +793,7 @@ Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{
 Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
 Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
 Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP4}, \textbf{WP6} \\\hline
-Objective 5 & Intelligent User Authentication-as-a-Service & \textbf{WP5} \\\hline
+Objective 5 & Intelligent User Authentication & \textbf{WP5} \\\hline
 Objective 6 & Refactoring-Based Methodology for Secure Applications & \textbf{WP3}, \textbf{WP4}, \textbf{WP5}, \textbf{WP6} \\\hline
 Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP6}, \textbf{WP7}\\\hline
 Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
@@ -866,8 +865,30 @@ The \TheProject{} project will revolutionise the development of secure and priva
 \vjcomment{\YAGshort{} and \IBMshort{} to write}
 In the secure development life cycle, different complementary techniques make it possible to build and test the cyber security of software applications, from the writing of the first line of code during the project to stressing the application in production with ethical hacking. In order to minimize the overall costs of security testing, the first action to be implemented as early as possible in the development process is to analyze the source code on a regular basis to verify that the algorithms, the management of sensitive data and resources by the application will not generate vulnerabilities. The only technique which can produce results when the project is not yet ready for compiling is SAST (Static Application Security Testing). Source code scanners, such as HCL-Appscan Source~\cite{AppScan}, Checkmarx Source~\cite{Checkmarx} and Coverity~\cite{Coverity}, rely on SAST to detect suspicious sequences of code that may reveal a vulnerability. 
 
-State of the art source code scanners all face the same dilemna: from the very huge volume of analyzed source code they must ideally warn the user on each and every potential vulnerabilities but only when a relevant vulnerability is detected. In reality vulnerabilities are not so easy to find, because of the combinatory and complexity of vulnerability detection, and scanners will prefer to raise potentially irrelevant warnings (false positive) rather than missing real vulnerabilities (true negatives). As a result, state of the art scanners generate a lot of false positives. It's getting even more difficult when a single vulnerability may show up in several parts of the code, thus generating duplicate warnings. 
+State of the art source code scanners all face the same dilemna: from the very huge volume of analyzed source code they must ideally warn the user on each and every potential vulnerabilities but only when a relevant vulnerability is detected. In reality vulnerabilities are not so easy to find, because of the combinatory and complexity of vulnerability detection, and scanner editors will prefer to raise potentially irrelevant warnings (false positive) rather than missing real vulnerabilities (true negatives). As a result, state of the art scanners generate a lot of false positives. It's getting even more difficult when a single vulnerability may show up in several parts of the code, thus generating duplicate warnings. 
 To be usefully exploited, users need to carry out additional manual investigations which prove to be heavily time consuming. The current economical efficiency of static analysis is therefore limited and the induced HR costs can be very significant if all warnings are checked for their relevance.
+
+\YAGshort{} advanced the state of the art with its new source code vulnerability detection technology, which actually supports Java and PHP written applications. The technology uses SAST to analyze the source code properties, and machine learning to automatically process the amount of information generated by SAST. While SAST detects vulnerabilities and raise warnings based on specific vulnerability modeling and detection rules, the supervised machine learning qualifies each individual warning based on the users feedback and allocates them relevancy and criticality scores. In progress from the state of the art, it takes into account uncertain information, local and global context of the application and a first level of end user business semantics (especially for privacy vulnerabilities), while adapting to the end user context from users expertise. In addition, the technology supports a first level of \emph{code mining}, which represents the data mining concept applied to source code analysis. While data mining extracts valuable information from huge sets of data, code mining extracts high value technical, security and end user business oriented information from huge amount of source code to feed vulnerability detection and automated qualification.
+
+\begin{figure}[tp]
+  \begin{center}
+  \vspace{-5mm}
+  \includeimage[scale=0.20]{Yag-Suite Dashboard.png}
+%  \vspace{-3cm}
+  \caption{Executive dashboard of the YAG-Suite}
+  \label{fig:overview}
+  \end{center}
+  \end{figure}
+
+
+\begin{mdframed}[backgroundcolor=gray!10]
+\TheProject{} will advance the state of the art in the area of identification of security vulnerabilities in several ways:
+\begin{itemize}
+\item \emph{Machine learning augmented SAST for security and privacy breaches detection in Java, C/C++ and Python source code.} with significantly extending the technology to detect, analyze and qualify big data analytics applications vulnerabilities in Java, as well as to analyze C/C++ and Python languages.
+
+\item \emph{Code mining} will be enhanced to apply to big data analytics applications in Java, to feed dynamic analysis and self healing, as well as to support C/C++ and Python languages.
+\end{itemize}
+\end{mdframed}
 
 
 \paragraph{Dynamic Analysis and Symbolic Execution.}
@@ -900,10 +921,9 @@ The common state-of-the-art approach for security analysis (also at runtime) is 
 Including third party libraries into the application code presents additional security risks, as these libraries may include intentional or unintentional vulnerabilities resulting in unwanted behaviour or data leakage of sensitive  information. For example, an open source JavaScript library used in a website may contain malicious code that collects data and sends it to the third party. This is especially problematic for large-scale big data analysis applications, as they are typically composed of calls to several different libraries, as outlined in Section~\ref{sec:XX}. The state of the art solutions to this problem is to use security testing, static analysis and dynamic analysis, such as sandboxing~\cite{jsand}, to detect vulnerabilities and malicious packages before integrating them into the application code. In~\cite{Cova}, a combination of anomaly detection and emulation systems is built to detect malicious code. OWASP~\cite{OWASP} presents the risks in using third party  packages, how to determine if these packages are vulnerable or contain malicious code and how to deploy these packages. Other possible solutions to the problem of integrating third party libraries are based on analysis of the libraries, building control flow graph, looking for copies of buggy code, and profiling packages~\cite{Hanna, XinSun}. These solutions miss many vulnerabilities or malicious dormant code as a result of obfuscation, packing, and the ease in rebuilding new variants of the malicious code, or just the rapid release of new buggy version of packages. There are cases in which it is not beneficial to fix a vulnerability in the software or in a third party code integrated into the software. For example, in cases where the patch is hard to deploy or where fixing the vulnerability has significant impact on performance. In fact, 99\% of attacks are believed to exploit known and fixed vulnerability~\cite{GartnerVulnerability} for which the fix was not deployed. One famous example is the WannaCry attack that was based on a fixed and updated CVE. To protect the software in these cases, \emph{virtual patching} may be used. A virtual patch is a set of rules that implements complex logic to prevent malicious traffic from reaching the application. The challenge is to come up with a set of accurate rules that filter exactly the malicious inputs without blocking other inputs. This work is currently done manually, and it would heavily benefit from integrating a predictive model to automatically detect inputs that may utilise the vulnerability.
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\TheProject{} will advance the state of the art in the area of identification of security vulnerabilities in several ways:
+\TheProject{} will advance the state of the art in the area of Security of Multi-Library Applications in several ways:
 \begin{itemize}
-\item \emph{Machine learning augmented SAST for security and privacy breaches detection in Java, C/C++ and Python source code} \YAGshort{ to complete}.
-\item \emph{Code mining (ability to extract high value technical, cybersecurity and end userbusiness oriented information from source code) } \YAGshort{ to complete}.
+
 \item \emph{XX} XX.
 \end{itemize}
 \end{mdframed}
@@ -1080,18 +1100,18 @@ application and infrastructure developers.
 %\item XX
 %\end{itemize}
 
-\subsubsection{Authentication}
+\subsubsection{Intelligent User Authentication}
 \label{sect:auth}
 \vjcomment{COGNITIVE to write}
 
-Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication (MFA)} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) [REF]. With regards to \textit{continuous user authentication}, several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones [REF], physiological data analysis such as body signals (heart rate, skin conductance, etc.) [REF] and face biometrics [10, 11], and eye gaze data analytics [REF]. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security (https://duo.com), Futurae (https://futurae.com), Acceptto (https://acceptto.com), Auth0 (https://auth0.com), Saaspass (https://saaspass.com)), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. 
+Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication (MFA)} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) [REF]. With regards to \textit{continuous user authentication}, several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones [REF], physiological data analysis such as body signals (heart rate, skin conductance, etc.) [REF] and face biometrics [10, 11], and eye gaze data analytics [REF]. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security (https://duo.com), Futurae (https://futurae.com), Acceptto (https://acceptto.com), Auth0 (https://auth0.com), Saaspass (https://saaspass.com)), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. Existing state-of-the-art solutions such as Cisco’s Duo Security, Futurae, Acceptto, etc. work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA and continuous user authentication under a unified integration platform. 
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
 \begin{itemize}
-\item \emph{XX.} XX.
-\item \emph{XX} XX.
-\item \emph{XX} XX.
+\item \emph{The proposed solution to combine MFA and continuous user authentication} under a unified, agile system integration model represents a change of paradigm in today’s state-of-the-art which considers MFA and continuous identification as two independent approaches that do not co-exist under one unified solution; 
+\item \emph{The developed intelligent biometrics} based on a combined analysis of face and eye gaze data analytics will advance the state-of-the-art for seamlessly identifying users;
+\item \emph{Evaluation studies} will provide new insights and knowledge to practitioners for building more usable and agile authentication schemes, and researchers to understand human behavior within such tasks.
 \end{itemize}
 \end{mdframed}
 
@@ -1569,12 +1589,16 @@ The conferences that we propose to target include:
 
 \begin{quote}
 \textbf{ICSE:} International Conference on Software Engineering;
+\textbf{ACM IUI:} International Conference on Intelligent User Interfaces;
+\textbf{ACM UMAP:} International Conference on User Modeling, Adaptation and Personalization;
+\textbf{USENIX SOUPS:} International Symposium on Usable Privacy an Security
  \end{quote}
 
 \noindent
 We also propose to target relevant high-impact journals such as:
 \begin{quote}
-\emph{the ACM Transactions on Software Engineering and Methodology (TOSEM)}, 
+\emph{the ACM Transactions on Software Engineering and Methodology (TOSEM)},
+\emph{the ACM Transactions on Interactive Intelligent Systems (TiiS)}
 \end{quote}
 
 \paragraph{Project Web site:}  
@@ -1722,7 +1746,41 @@ IBM will aim to deliver \TheProject technologies into IBM cloud and analytics pr
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for SCCH.
+
+\SCCHlong{} is a non-profit independent research institution (RTO) with a focus on applied software science and the mission
+to transfer cutting edge research from academics to industry by running contract research projects. In its role as
+applied RTO, \SCCHshort{} pursues a strategy of closely collaborating with world-leading academic partners to establish
+and further develop key technologies together with its industrial partners. This is achieved by conducting common
+applied research with its industrial partners, and strategic research aiming at scientific publications, PhD theses and
+patents. Therefore \SCCHshort{} aims to exploit \TheProject{} project achievements as follows.
+
+Industrial Exploitation. SCCH runs application oriented projects with industrial partners in the area of intelligent
+data analysis. The scope of applications span: a) predictive control via advanced supervised and semi-supervised
+learning methods like deep learning or kernel methods; and b) decision support systems and causal reasoning by
+inductive rule extraction, regression models, Bayesian networks and automated reasoning techniques. 
+As an application oriented research institute, the Software Competence Centre Hagenberg commonly deals with very large and
+inhomogeneous data sources and has experience with data processing of big data and transfer learning techniques
+that enable the joint modelling from inhomogeneous data, collected from distributed sources. The \TheProject{} approach
+will enhance collaboration in ongoing and future multi-firm research projects, which would not be possible due to
+confidentiality of data of the project partners. SCCH will also exploit \TheProject{} technology in IoT projects, especially
+cyber-physical-systems, where personal data of humans in the loop needs to be kept confidential. Furthermore, SCCH
+will promote \TheProject{} technology as the basis for collaborative development of business clusters (e.g. Mechatronics)
+by a data driven approach: gain knowledge out of shared data while not compromising privacy. In the development of
+the Data Analytics Framework in work package 3 SCCH plans to extend established machine learning frameworks
+(TensorFlow, Keras, scikit-learn) to find early adopters and foster uptake of developed technologies in the
+community.
+
+Scientific Exploitation. In parallel to the contract research, SCCH has to conduct fundamental research to keep in
+contact with world-leading research. Furthermore SCCHs success is also measured by its scientific output like number
+of publications, PhD and master theses. SCCH plans to submit publications and articles in highly relevant conferences
+and journals like Neural Information Processing Systems, International Conference of Learning Representations,
+Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on
+Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and
+Confidentiality, Springer Journal of Big Data. The \TheProject{} approach will increase scientific output for SCCH since
+it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
+
+
+
 
 \horizontalline
 
@@ -1810,11 +1868,11 @@ XX
 \subsection*{Draft Exploitation Plan for \COGNIshort{}}
 \vspace{-6pt}
 
-%\begin{wrapfigure}{R}{3.6cm}
-%\vspace{-1.3cm}
-%\hfill \includeimage[width=4cm]{logos/YAG-logo.png}
-%\vspace{-0.8cm}
-%\end{wrapfigure}
+\begin{wrapfigure}{R}{3.6cm}
+\vspace{-1.3cm}
+\hfill \includeimage[width=4cm]{logos/COGNI-logo.png}
+\vspace{-0.8cm}
+\end{wrapfigure}
 
 Exploitation plan for Cognitive
 
@@ -3226,11 +3284,11 @@ Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006,
 
 \begin{itemize}
 \item C.G. Schuetz, B. Neumayr, M. Schrefl, E. Gringinger and S. Wilson, "Semantics-based summarisation of ATM information: Managing information overload in pilot briefings using semantic data containers", The Aeronautical Journal (2019), 1-27. \url{doi:10.1017/aer.2019.74}
-\item E.Gringinger, R.M,Keller, A.Vennesland, C.G.Schuetz, and B.Neumayr, "A Comparative Study of Two Complex Ontologies in Air Traffic Management", in Proc. of the 2019 AIAA/IEEE 38th Digital Avionics Systems Conference (DASC), IEEE, September 2019, in press.
-\item E. Gringinger, C. Fabianek, C. Schütz, B. Neumayr, M. Schrefl, A. Vennesland, S. Wilson, "The Semantic Container Approach: Techniques for ontology-based data description and discovery in a decentralized SWIM knowledge base", Proceedings of the SESAR Innovation Days 2018 (SID 2018), December 3-7, 2018, Salzburg, Austria. \url{https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs\_2018\_paper\_78.pdf}
-\item E. Gringinger, C. Fabianek, C. Schütz, J. Stöbich, B. Neumayr, M. Schrefl, "A Proof-of-Concept Implementation of a Semantic Container Management System for Air Traffic Management", Proceedings of the EDAW 2018 Posters and Demonstrations Session co-located with 21st International Conference on Knowledge Engineering and Knowledge Management (EKAW 2018), November 12-16, 2018, ISSN 1613-0073, pp. 69-72, Nancy, France. \url{https://dblp.org/rec/bib/conf/ekaw/GringingerFSNS18}
-\item E. Gringinger, C. Schuetz, B. Neumayr, M. Schrefl and S. Wilson, "Towards a value-added information layer for SWIM: The semantic container approach", 2018 Integrated Communications, Navigation, Surveillance Conference (ICNS), Herndon, VA, 2018, pp. 3G1-1-3G1-14. \url{https://doi.org/10.1109/ICNSURV.2018.8384870}
-\item C. Flachberger, E. Gringinger, "Decision Support for Networked Crisis \& Disaster Management - A Comparison with the Air Traffic Management Domain", Information Systems for Crisis Response and Management (ISCRAM), Rio de Janeiro, Brasil, May 22-25, 2016. \url{https://episecc.eu/sites/default/files/1332\_ChristianFlachberger\%2BEduardGringinger2016.pdf}
+\item E.Gringinger, R.M,Keller, A.Vennesland, C.G.Schuetz, and B.Neumayr, "A Comparative Study of Two Complex Ontologies in Air Traffic Management", Proc. of the AIAA/IEEE 38th Digital Avionics Systems Conference (DASC), IEEE, September 2019. \url{doi.org/10.1109/DASC43569.2019.9081790}
+\item E. Gringinger, C. Fabianek, C. Schütz, B. Neumayr, M. Schrefl, A. Vennesland, S. Wilson, "The Semantic Container Approach: Techniques for ontology-based data description and discovery in a decentralized SWIM knowledge base", Proc. of the SESAR Innovation Days 2018 (SID 2018), December 2018, Salzburg, Austria. \url{https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs\_2018\_paper\_78.pdf}
+%\item E. Gringinger, C. Fabianek, C. Schütz, J. Stöbich, B. Neumayr, M. Schrefl, "A Proof-of-Concept Implementation of a Semantic Container Management System for Air Traffic Management", Proceedings of the EDAW 2018 Posters and Demonstrations Session co-located with 21st International Conference on Knowledge Engineering and Knowledge Management (EKAW 2018), November 12-16, 2018, ISSN 1613-0073, pp. 69-72, Nancy, France. \url{https://dblp.org/rec/bib/conf/ekaw/GringingerFSNS18}
+%\item E. Gringinger, C. Schuetz, B. Neumayr, M. Schrefl and S. Wilson, "Towards a value-added information layer for SWIM: The semantic container approach", 2018 Integrated Communications, Navigation, Surveillance Conference (ICNS), Herndon, VA, 2018, pp. 3G1-1-3G1-14. \url{https://doi.org/10.1109/ICNSURV.2018.8384870}
+%\item C. Flachberger, E. Gringinger, "Decision Support for Networked Crisis \& Disaster Management - A Comparison with the Air Traffic Management Domain", Information Systems for Crisis Response and Management (ISCRAM), Rio de Janeiro, Brasil, May 22-25, 2016. \url{https://episecc.eu/sites/default/files/1332\_ChristianFlachberger\%2BEduardGringinger2016.pdf}
 \end{itemize}
 
 
@@ -3246,17 +3304,104 @@ Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006,
 
 \item BEST (H2020-Sesar-03-2015, Grant agreement ID: 699298) - Achieving the BEnefits of SWIM by making smart use of Semantic Technologies, \url{http://www.project-best.eu/};
 
-\item Engage (H2020-SESAR-2016-2, Grant agreement ID: 783287) - SESAR Knowledge Transfer Network, \url{https://www.engagektn.com/};
+%\item Engage (H2020-SESAR-2016-2, Grant agreement ID: 783287) - SESAR Knowledge Transfer Network, \url{https://www.engagektn.com/};
 
-\item SEMCON (ICT of the Future Call 2018 Data Market: 869781) - Semantic Containers for Data Mobility, \url{https://www.ownyourdata.eu/en/semcon/};
+%\item SEMCON (ICT of the Future Call 2018 Data Market: 869781) - Semantic Containers for Data Mobility, \url{https://www.ownyourdata.eu/en/semcon/};
 
-\item Patent for prioritization information (EP3118839A1) could be relevant for Digital Fortress, \url{https://patents.google.com/patent/EP3118839A1/en};
+%\item Patent for prioritization information (EP3118839A1) could be relevant for Digital Fortress, \url{https://patents.google.com/patent/EP3118839A1/en};
 
 \item MosaiX SWIM, the Frequentis ATM informaiton integration platform, \url{https://www.frequentis.com/sites/default/files/support/2018-02/MosaiX\%20SWIM.pdf}; 
 
 \end{itemize}
 
 % ============================
+\pagebreak
+\Participant{YAG}{(\url{https://www.yagaan.com/en})}
+
+
+\begin{wrapfigure}{R}{5cm}
+\vspace{-1.3cm}
+\hfill \includeimage[width=5cm]{logos/YAG-logo.png}
+\vspace{-0.8cm}
+\end{wrapfigure}
+\label{sec:participantYAG}
+
+%===============================================================================
+\YAGlong{} is a french cyber security product editor dedicated at managing cyber risk in software applications. The YAG-Suite, the company's product, equips security and privacy by design development processes as well as source code audit service providers. The company was established in January 2017 under the status of Simplified Joint Stock Company with a capital of 85,000 Eur.
+
+The YAG-Suite is a smart tool based on static analysis and machine learning to identify the vulnerability that matter in the source code of software applications. It supports the users to effectively detect security breaches and sensitive data protection breaches in an application, to understand their causes via detailed diagnostics, to identify the necessary and sufficient remediation actions as well as feeding managerial dashboards.The YAG-Suite supports the two phases vulnerability investigation processes:
+\begin{itemize}
+\item To equip code reviews and the "security and privacy by design" software development processes, the YAG-Suite offers automated scanning capabilities. Deployed on the developer's workstation, in continuous integration factory or in SAAS mode, the YAG-Suite comprehensively scans the source code of the project, without requiring that the project be "buildable", and without the need to document the code. 
+\item To facilitate the manual investigations driven by code auditors, the YAG-Suite provides unprecedented "code mining" capabilities. These advanced functionalities provide assistance in discovering and understanding an unknown application, in identifying the processed sensitive data and their protection mechanisms, in searching for specific properties of the application (not limited to security properties) and high interest zones (smells code, critical functionalities, business data), thanks to the crawling of relevant information in the source code.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{ \YAGlong{} participates in WPXX on XX.}
+
+\vspace{10pt}
+
+\textbf{Key Personnel involved in the project:}
+
+\paragraph{Hervé Le Goff} (male) (MSc), is Co-founder and CEO of \YAGlong{}. He has been working at the french ministry of defence for more than 25 years in the field of information systems, cybersecurity, procurement and management. He also gained experience in multinational relations during a three years post at an international organisation HQ in Brussels.
+
+\vspace{10pt}
+
+\paragraph{Dr Antoine FLOC'H} (male) (PhD), is Co-founder and CTO of \YAGlong{} with more than 13 years of experience in the research and innovation area of compiling, SAST, operational research and source code scanning. He is the author and technical lead of \YAGlong{} technology.
+
+\subsubsection*{Relevant publications}
+\begin{itemize}
+\item Martin Kevin J. M., Wolinski Christophe , Kuchcinski Krzysztof, Floch Antoine, Charot, François. (2012). Constraint Programming Approach to Reconfigurable Processor Extension Generation and Application Compilation. ACM Transactions on Reconfigurable Technology and Systems - TRETS. 5. 1-38. 10.1145/2209285.2209289.
+\item Wolinski Christophe , Kuchcinski Krzysztof , Martin Kevin J. M. , Floch Antoine , Raffin, Erwan , Charot, François. (2010). Graph Constraints in Embedded System Design. 
+\item Martin Kevin J. M. , Wolinski Christophe , Kuchcinski Krzysztof , Floch Antoine , Charot François. (2009). Constraint-Driven Identification of Application Specific Instructions in the DURASE System. 194-203. 10.1007/978-3-642-03138-0-21. 
+\end{itemize}
+
+\subsubsection*{Relevant Research and Technology Projects}
+
+\begin{itemize}
+\item YAG-Suite (2016-2020): Feasibility, design and development of a new technology for vulnerability detection in the source code of Java and PHP applications, diagnostics and remediation support. The technology detects and identify vulnerabilities in the source code with SAST and bring automation capabilities to qualify the warnings raising from SAST with machine learning, in a supervised training approach. The project led the company to be labelled ”Jeune Entreprise Innovante” (Young Innovative Company).
+\end{itemize}
+
+% ============================
+
+
+
+% ============================
+\Participant{COGNI}{(\url{https://cognitiveux.com/})}
+
+\begin{wrapfigure}{R}{6,2cm}
+\vspace{-3cm}
+\hfill \includeimage[width=7cm]{logos/COGNI-logo.png}
+\vspace{-1cm}
+\end{wrapfigure}
+\vspace{10pt}
+
+Cognitive UX LTD is an IT company aiming to develop AI-driven and human-centered cybersecurity and privacy systems. The Cognitive UX key team members have complementary expertise spanning the spectrum of business, academia, technology and research. 
+
+The company’s mission, as proven by the strong research and development track of the company, is to apply state-of-the-art and innovative developments in the domain of Cybersecurity for building and deploying products and services. The core team members have strong experience in implementing EU and National research projects (H2020, FP7, AAL, RIF), including awards of excellence (H2020 Seal of Excellence).
+
+%\vspace{10pt}
+%\textbf{Cognitive UX leads work package WP5}
+\vspace{10pt}
+
+\textbf{Key Personnel:}
+
+\paragraph{Marios Belk} (male, PhD, MSc, BSc) is CEO and co-founder of Cognitive UX LTD. He completed a Ph.D. degree in Computer Science, with focus on usable security and human-centered computing (2015) at the Department of Computer Science, University of Cyprus. His Ph.D. work was ranked in the finalists of the ERCIM 2016 Cor Baayen Young Researcher Award Competition. Recently he was appointed as a Marie Curie research fellow at IDMind Systems Engineering in Lisbon, Portugal. His research work has been published in accredited scientific journals and conferences, such as ACM CHI, ACM IUI. His publications include a best paper award at the SouthCHI 2013 conference and a best paper nomination award and honorable mention at the UMAP 2014 conference. He has professional experience for over ten years as a work package leader, technical manager and researcher in six EU projects (H2020 Serums, H2020 GrowMeUp, AAL Success, AAL CogniWin, FP7 Miraculous-Life, Marie Sklodowska-Curie SocialRobot) and three National projects.
+
+\paragraph{Argyris Constantinides} (male, MSc, BSc) is CTO and co-founder of Cognitive UX LTD, and a Ph.D. candidate at the Department of Computer Science, University of Cyprus. He holds a M.Sc. in Web Science and Big Data Analytics from the University College London (2015), and a B.Sc. in Computer Science from the University of Cyprus (2014). His research interests revolve around the areas of Human-Computer Interaction, Usable Security, and Intelligent User Interfaces and he has published scientific papers on accredited conferences (ACM IUI, ACM UMAP, ACM MobileHCI, IEEE/WIC/ACM Web Intelligence). Constantinides has professional experience as a researcher and software engineer in EU research projects (H2020 SERUMS, EU-AAL MEMENTO, EU-AAL SUCCESS) and National research projects. In the past, he has worked as a software engineer at Playtech BGT Sports, London, UK (2015-2017).
+
+\paragraph{Christos Fidas} (male, PhD, MSc, BSc) is Scientific Advisor of Cognitive UX LTD and an Assistant Professor at the University of Patras, Greece. He has a long-standing professional experience (since 2000) as an academic and entrepreneur in applying User-Centered Design methods in various application domains. As an academic, he has published more than 70 papers in accredited scientific journals and conferences. He has also professional experience in project management and human resource management in more than ten EU-funded and National research projects (H2020 Serums, FP7 CR-PLAY. As an entrepreneur, he was the co-founder, CEO and CTO of Instance LTD software development company (2002-2010), and patent owner that was acquired by an angel investor of the National Bank of Greece.
+
+\subsubsection*{List of Publications}
+
+\begin{itemize}
+\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2020). An eye gaze-driven metric for estimating the strength of graphical passwords based on image hotspots. ACM Intelligent User Interfaces (IUI 2020), ACM, 33-37 (16\% acceptance rate)
+\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2019). On the accuracy of eye gaze-driven classifiers for predicting image content familiarity in graphical passwords. ACM User Modeling, Adaptation and Personalization (UMAP 2019), ACM, 201-205
+\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., & Avouris, N. (2018). Influences of human cognition and visual behavior on password security during picture password composition. ACM SIGCHI Human Factors in Computing Systems (CHI 2018), ACM Press, paper 87.
+\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., & Avouris, N. (2018). Eye gaze-driven prediction of cognitive differences during graphical password composition. ACM SIGCHI Intelligent User Interfaces (IUI 2017), ACM Press, 147-152
+\item Belk, M., Fidas, C., Germanakos, P., & Samaras, G. (2017). The interplay between humans, technology and user authentication: a cognitive processing perspective. Computers in Human Behavior (Impact Factor: 4.252), 76, Elsevier, 184-200.
+
+
+\end{itemize}
 
 
 
