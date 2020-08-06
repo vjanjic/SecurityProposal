@@ -176,15 +176,12 @@ The aim of \theTask\ is to define classes of security contract requirements for 
 \TaskHeader{}
 \tasklabel{task:ContractsSastAssessment}
 
-On the one side, we will use dynamic analysis of security contracts for
-vulnerabilities that cannot be formally verified without running the software component.
-As a complementary approach to extend formal verification of security contracts, %in \theTask, 
-we will provide a novel way to assess the risk that a security contract is not met by an application. This will include:
+In \theTask, as a complementary approach to extend formal verification of security contracts, we will provide a novel way to assess the risk that a security contract is not met by an application, based on uncertain information. This will include:
 
 \begin{itemize}
 \item The parsing and analysis of the security contracts; %resulting from present \theWP / T4.1 and T4.2
     \item Mapping of the security contracts with the potentially impacted source code;
-    \item Designing an interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
+    \item Designing an application programming interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
     \item Explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties;
     \item Provide remediation proposals to fix vulnerabilities.
 \end{itemize}
@@ -204,7 +201,7 @@ we will provide a novel way to assess the risk that a security contract is not m
 \TaskHeader{}
 \tasklabel{task:RequirementsSastAssessment}
 
-As another approach to extend formal verification of security contracts, in \theTask\ we can prototype a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability.
+As another approach to extend formal verification of security contracts, in \theTask\ we will explore and prototype a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability.
 We will develop a domain specific language to capture the functionalities description, allocate requirements and map with the source code. Each vulnerability which breaks a requirement will be identified and allocated decision making information for the user.
 \end{Task}
 
