@@ -68,31 +68,32 @@ ToDo List:
 
 \begin{itemize}
 \item USTAN for formal modelling and refactoring
-\item COGNI for authentication
 \end{itemize}
 
 \item Section 1.3.3 : Add the relevant technologies that will be developed over the course of the project, together with current and future TRLs
 \begin{itemize}
 \item USTAN for formal methods and refactoring
-\item SCCH for privacy-preserving AI
-\item YAG for source code analysis
 \end{itemize}
 
 \item Section 1.3.4: Add how this project goes beyond what is done in the previous ones (EVERYONE)
 
 \item Section 1.4 : Add the related work and advancement beyond state-of-the-art:
 \begin{itemize}
-\item YAG for static code analysis in 1.4.1 (maybe add a picture of the tool in action too?)
 \item USTAN for formal methods in 1.4.4, including security contracts
-\item COGNI for authentication in 1.4.6
 \end{itemize}
 
 	
 \item Section 1.4.12 : Write Innovation Potential (UOD)
 
-\item Section 2.1 : Finish writing up the Impacts (UOD)
+\item Section 2.1 : Finish writing up the Impacts 
+\begin{itemize}
+\item Write an explanation of what we are doing to address the short-temp impact nr 7 (COGNI)
+\item Think about whether and how we are addressing the long term impact nr 2 (related to trust) (EVERYONE)
+\end{itemize}
 
-\item Section 2.1 : Write up Improving Innovation Capacity, Societal Impact and Barriers (UOD)
+\item Section 2.1 : Write up Barriers for Impact (UOD)
+
+\item Section 2.1 : Finish the gender balance box (SCCH and EVERYONE)
 
 \item Section 2.3.1 : Add security, ML, refactoring and formal methods conferences and journals (EVERYONE)
 
@@ -100,13 +101,14 @@ ToDo List:
 
 \item Section 2.3.2: Write up Draft Exploitation Plans:
 \begin{itemize}
-\item SCCH Exploitation Plan
-\item DEM Exploitation Plan
 \item FRQ Exploitation Plan
 \item COGNI Exploitation Plan
 \end{itemize}
 
 \item Section 2.3.2 : Write a joint exploitation plan (EVERYONE)
+
+\item Section 2.3.3 : Write up KPIs for Dissemination and Communication (USTAN and UC3M)
+
 
 \item Section 3: Write up WP5, make tasks consistent with the Gantt chart (COGNI)
 
@@ -126,7 +128,6 @@ ToDo List:
 
 \item Section 3.2 : Think about people to add to the Advisory Board and contact some of them (EVERYONE)
 
-\item Section 3.3: Draw a table of expertise (UOD)
 
 \item Section 3.4: Write the table for staff effort
 
@@ -149,12 +150,26 @@ DONE:
 \item Section 1.3.1 : Add challenges for security and privacy of big data analytics (basically, a few sentences to motivate why we do the work we propose)
 \begin{itemize}
 \item UC3M for security standards
+\item COGNI for authentication
+
+\end{itemize}
+
+\item Section 1.3.3 : Add the relevant technologies that will be developed over the course of the project, together with current and future TRLs
+\begin{itemize}
+\item SCCH for privacy-preserving AI
+\item YAG for source code analysis
 \end{itemize}
 
 \item Section 1.4 : Add the related work and advancement beyond state-of-the-art:
 \begin{itemize}
+\item YAG for static code analysis in 1.4.1 (maybe add a picture of the tool in action too?)
 \item SCCH for runtime analysis in 1.4.2. 
+\item COGNI for authentication in 1.4.6
 \end{itemize}
+
+\item Section 2.3.2: Write up exploitation plans
+\begin{itemize}
+\item SCCH Exploitation Plan
 \end{itemize}
 
 
@@ -191,6 +206,8 @@ DONE:
 \begin{itemize}
 \item IBM for ExpliSat
 \end{itemize}
+
+\item Section 3.3: Draw a table of expertise (UOD)
 
 \end{itemize}
 
@@ -1121,35 +1138,35 @@ Researchers and practitioners have attempted to provide various \textit{solution
 \end{itemize}
 \end{mdframed}
 
-\subsubsection{Security Patterns}
-\vjcomment{USTAN and UOD to write -- possibly merge with the previous subsections?}
+%\subsubsection{Security Patterns}
+%\vjcomment{USTAN and UOD to write -- possibly merge with the previous subsections?}
 
-\vjcomment{I think this can be integrated into the section \ref{sect:patterns}}
+%\vjcomment{I think this can be integrated into the section \ref{sect:patterns}}
 
-\begin{itemize}
-	\item Design pattern
-	\item parallel patterns or skeletons
-	\item abstractions over low-level implementation
-	\item provided as a library
-	\item structured approach
-	\item extended for security
-	\item new patterns X Y Z
-\end{itemize}
+%\begin{itemize}
+%	\item Design pattern
+%	\item parallel patterns or skeletons
+%	\item abstractions over low-level implementation
+%	\item provided as a library
+%	\item structured approach
+%	\item extended for security
+%	\item new patterns X Y Z
+%\end{itemize}
 
-\subsubsection{Security Contracts}
-\cbcomment{USTAN to write - we can build on what we've done for teamplay here}
+%\subsubsection{Security Contracts}
+%\cbcomment{USTAN to write - we can build on what we've done for teamplay here}
 
-\vjcomment{Let us move this to \ref{sect:formal}}
+%\vjcomment{Let us move this to \ref{sect:formal}}
 
-\begin{itemize}
-    \item Contract
-    \item CSL system
-    \item Proving properties of security
-    \item Reflecting proofs back to the programmer
-    \item Vulnerabilities
-    \item Secret variables
-    \item Branching and side channel attacks?
-\end{itemize}
+%\begin{itemize}
+%    \item Contract
+%    \item CSL system
+%    \item Proving properties of security
+%    \item Reflecting proofs back to the programmer
+%    \item Vulnerabilities
+%    \item Secret variables
+%    \item Branching and side channel attacks?
+%\end{itemize}
 
 \subsubsection{Refactoring}
 %\vjcomment{USTAN to write}
@@ -1298,6 +1315,7 @@ YAGAAN developed vulnerability detection technologies based both on static and d
 
 \eucommentary{Describe the innovation potential which the proposal represents. Where relevant, refer to products and services already available on the market. Please refer to the results of any patent search carried out.}
 
+It is by now a well-established fact that big data science is bringing another revolution in the world of software development. The World Economic Forum in their report on Data Science in the New Economy from July 2019 states that \textbf{"as the Fourth Industrial Revolution unfolds, led by advances in technologies such as data science and artificial intelligence, the labour market is again changing in a fundamental fashion"}. The economic potential of data science is enormous. An interim report of European Data Market study prepared by IDC \& Open Evidence claims that \textbf{"the overall data market (i.e. the aggregate value of data-related products and services exchanged within the European economy) is estimated at already more than 50 billion Euro and will get to 111 billion in 2020 under high-growth conditions"}. According to the same report, the data driven innovation in the EU contributes to \textbf{almost 5\% of the EU GDP}. In the recent times, and especially in the light of COVID-19 situation, data science has become even more important to facilitate extracting and exchanging information between remote organisations, and especially in situations where data cannot leave the place where it is stored. The growth of computation capabilities of computational clouds, together with possibilities to deploy applications that span multiple private and public clouds has offered potential to really achieve the promise of data science. This has, however, also come with a risk. A study published by IBM Security of 524 security breaches that occurred between August 2019 and April 2020 shows that \textbf{the average cost of a single breach is \$3.86 M}. The same study shows that the time required to identify and contain a data breach was \textbf{280 days}. This clearly shows the enormous economic costs of security vulnerabilities and how unprepared the state-of-the-art technologies are to deal with these breaches. But the things become even more complicated when we consider the increasingly strict regulations for ownership and sharing of the data, such as GDPR. In the UK, the companies can potentially be fined \textbf{4\% of their total turnover for each privacy breach.} It is clear that writing secure and privacy-preserving data analytics will be of the utmost importance in the near and long-term future. Using the \TheProject{} technologies and methodology will ensure \emph{security-by-design} and \emph{privacy-by-design} application development.  
 \clearpage
 \section{Impact}
 \label{sec:impact}
@@ -1681,11 +1699,12 @@ broader EC research framework.
 
 \paragraph{Project News Feed:}  We will set up open public mailing lists/twitter/facebook accounts that will
 be used to communicate project news and results to interested parties, whether they are scientists, academics, developers
-or the general public.  This news feed will be highlighted on the project web site.
+or the general public.  This news feed will be highlighted on the project web site. We will also create a LinkedIn project page to 
+communicate the project information to the business-oriented audience.
 
 \paragraph{Developer and User Community:} We will engage with the broader
-developer and user communities by a series of focused activities
-that will include the organisation of dedicated user community workshops, presentations at
+developer and user communities by a series of focused activities, the most important of which will be organisation of massive online courses via MOOCs, allowing us to engage with a huge base developers and to promote the \TheProject{} technologies.
+ We will also organise dedicated user community workshops, presentations at
  developer and other conferences, 
  the production of posters, delivering tutorials, staffing booths, and providing hands-on
  guidance in the use of our tools and technologies etc.  This direct engagement will be
@@ -1858,34 +1877,6 @@ Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the re
 
 \horizontalline
 
-\subsection*{Draft Exploitation Plan for \DEMshort{}}
-\vspace{-6pt}
-
-\begin{wrapfigure}{R}{3.6cm}
-\vspace{-1.3cm}
-\hfill \includeimage[width=4cm]{logos/DEM-logo.jpeg}
-\vspace{-0.8cm}
-\end{wrapfigure}
-
-Exploitation plan for Democritos.
-
-XX
-
-XX
-
-XX
-
-XX
-
-XX
-
-XX
-
-XX
-
-XX
-\horizontalline
-
 \subsection*{Draft Exploitation Plan for \FRQshort{}}
 \vspace{-6pt}
 
@@ -1924,8 +1915,6 @@ XX
 It is also in \YAGshort{} strategy to build business partnerships to support its partners in addressing new markets and disseminate \YAGshort{} technology, or to accelerate the growth of the startup, partnering with value added distributors or integrators.
 
 \horizontalline
-
-\pagebreak
 
 \subsection*{Draft Exploitation Plan for \COGNIshort{}}
 \vspace{-6pt}
@@ -2040,29 +2029,25 @@ Furthermore, and perhaps of most significance, the project website will provide 
 open and publicly searchable access to all the public deliverables, to technical reports, data and results, to software tools
 and libraries, to white papers and also to all
 the other non-confidential documents that are generated in the course of the project.  
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{Key Performance Indicators for Dissemination and Communication:}
+\begin{itemize}
+\item KPI 1
+\item KPI 2
+\end{itemize}
+\end{mdframed}
+
+
 % The material released in this way will represent the vast bulk of the scientific
 % and technical output of the project.
 
 %\subsubsection*{Intellectual Property Rights}
 
-\pagebreak
+%\pagebreak
 \paragraph{IP Ownership.}
 
-Results shall be owned by the project partner carrying out the work
-leading to such Results. If any Results are created jointly by at least
-two project partners and it is not possible to distinguish between the
-contributions of each of the project partners, such Results, including
-inventions and all related patent applications and patents, will be
-jointly owned by the contributing project partners. In order to further
-the competitiveness of the EU market, and to enhance exploitation of the
-Consortium Results, each contributing party shall have full own freedom
-of action to exploit the joint IP as it wishes, and further the goals of
-the consortium. To promote this effort the contributing party will have
-full own consideration regarding their use of such joint Results and will
-be able to exploit the joint IP without the need to account in any way to
-the other joint contributor(s).Further details concerning jointly owned
-Results, joint inventions and joint patent applications will be addressed
-in the Consortium Agreement.
+The project results will be owned by the project partner carrying out the work leading to such results. If any results are created jointly by at least two project partners and it is not possible to distinguish between the contributions of each of the project partners, such results, including inventions and all related patent applications and patents, will be jointly owned by the contributing project partners. In order to further the competitiveness of the EU market, and to enhance exploitation of the Consortium Results, each contributing party shall have full own freedom of action to exploit the joint IP as it wishes, and further the goals of the consortium. To promote this effort the contributing party will have full own consideration regarding their use of such joint results and will be able to exploit the joint IP without the need to account in any way to the other joint contributor(s). Further details concerning jointly owned results, joint inventions and joint patent applications will be addressed in the Consortium Agreement.
 
 \paragraph{Transfer of Results.}
 
@@ -2086,6 +2071,8 @@ The major validated project results  will be contributed to the key internationa
 
 
 \paragraph{Data Management Plan}
+\vjcomment{This needs to be fixed.}
+
 The primary research data that will be produced by the project will be the performance results that are reported in
 various research publications.  This data will predominantly be scientific,
 without confidentiality restrictions, and it will
@@ -2105,6 +2092,7 @@ and value, data will also be transferred to the \SAshort{} institutional data re
 
 \eucommentary{Describe the proposed communication measures for promoting the project and its findings during the period of the grant. Measures should be proportionate to the scale of the project, with clear objectives. They should be tailored to the needs of various audiences, including groups beyond the project's own community. Where relevant, include measures for public/societal engagement on issues related to the project.}
 
+\vjcomment{Fix this too...Add the Data Science, Security, AI and Healthcare related events}
 As described in the draft dissemination plan above, and in the description of~\ref{wp:dissem} (page~\pageref{wp:dissem}),
 the \TheProject{} project aims to communicate itself and its findings intensively to various communities.
 Research publications and presentations will aim to target various groups of academic and industrial researcher,
@@ -2840,7 +2828,7 @@ Other countries: If one or more of the participants requesting EU funding is bas
 
 \begin{figure}[t]
 \begin{center}
-%\includeimage[scale=0.6,angle=0]{BlessConsortium.pdf}
+\includeimage[scale=0.6,angle=0]{ElysianConsortium.pdf}
 \end{center}
 \vspace{-0.3in}
 \caption{Areas of Partner Expertise}
