@@ -328,25 +328,28 @@ DONE:
   \end{center}
   \end{figure}
 
-"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist\footnote{\url{https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data}} that highlights the importance of big data analytics in the modern world. Advances in the techniques for analysing the vast amount of data available today from a variety of sources are having %tremendous effects
-significant impact in a number of areas. Businesses use data to provide more personalised services to customers and improve their operation, and researchers use 
+Big-data analytics is quickly becoming one of the most important branches of computer science, with the great potential both for scientific breakthroughs and for economic impact on the way businesses are run. With a huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning a large quantity of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever more strict legislations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics applications is an objective of the extensive research nowadays~\cite{bigdataSecurityResearch}.
+
+
+%%"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist\footnote{\url{https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data}} that highlights the importance of big data analytics in the modern world. Advances in the techniques for analysing the vast amount of data available today from a variety of sources are having %tremendous effects
+%%significant impact in a number of areas. Businesses use data to provide more personalised services to customers and improve their operation, and researchers use 
 %analytics techniques 
-data exploration and analysis for scientific discovery made possible only due to %from
+%%data exploration and analysis for scientific discovery made possible only due to %from
 %to tackle 
-the ever-growing and detailed datasets being collected. 
+%%the ever-growing and detailed datasets being collected. 
 %coming from sensors and simulations. 
-It is hence not surprising 
+%%It is hence not surprising 
 %,Due to this, 
-that data analysts and statisticians are amongst the most desirable professions in 2019\footnote{\url{https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html}}. Modern data analytics is necessarily distributed in nature and, for the most part, based on advanced AI techniques such as deep learning.  This 
-introduces
+%%that data analysts and statisticians are amongst the most desirable professions in 2019\footnote{\url{https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html}}. Modern data analytics is necessarily distributed in nature and, for the most part, based on advanced AI techniques such as deep learning.  This 
+%introduces
 %presents 
-completely new challenges for establishing the security and privacy %properties 
-of the data itself and of the analytics techniques used for processing it. A highly-distributed world of AI-based big data analytics 
-is, however, also much more vulnerable and exposed to
+%completely new challenges for establishing the security and privacy %properties 
+%of the data itself and of the analytics techniques used for processing it. A highly-distributed world of AI-based big data analytics 
+%is, however, also much more vulnerable and exposed to
 %there are many more 
-potential targets for cyber attacks then code running on single machines. Vulnerabilities arise %coming 
-%both 
-from the way big data is stored (usually in distributed filesystems or databases) and is processed (with multiple distributed agents interacting and exchanging potentially sensitive information). Security mechanisms that protect sensitive data in such settings are still fragile, and not advanced enough to provide sufficient trust in the whole data analytics process. 
+%potential targets for cyber attacks then code running on single machines. Vulnerabilities arise %coming 
+%%both 
+%from the way big data is stored (usually in distributed filesystems or databases) and is processed (with multiple distributed agents interacting and exchanging potentially sensitive information). Security mechanisms that protect sensitive data in such settings are still fragile, and not advanced enough to provide sufficient trust in the whole data analytics process. 
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by assisting the end-users in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for the verification of security and data privacy properties of the code.}
