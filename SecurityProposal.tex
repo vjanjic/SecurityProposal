@@ -13,8 +13,12 @@
 %\newcommand{\final}{}
 %\fi
 
+\def \final {}
+
 \input{preamble}
 \input{participants}
+
+
 
 \begin{document}
 \pagenumbering{arabic} % for pageslts
@@ -339,7 +343,7 @@ ToDo List:
   \end{center}
   \end{figure}
 
-Big-data analytics is quickly becoming one of the most important branches of computer science, with the great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever more strict regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
+Big-data offers a great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever stricter regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
 
 %%"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist\footnote{\url{https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data}} that highlights the importance of big data analytics in the modern world. Advances in the techniques for analysing the vast amount of data available today from a variety of sources are having %tremendous effects
 %%significant impact in a number of areas. Businesses use data to provide more personalised services to customers and improve their operation, and researchers use 
@@ -365,10 +369,14 @@ Big-data analytics is quickly becoming one of the most important branches of com
 \emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by assisting software developers in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for verification of security and data privacy properties of the code.}
 \end{mdframed}
 
-\begin{mdframed}[backgroundcolor=blue!5]
-\paragraph{Note: Security in AI vs. AI for Security}
-The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques to analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. For example, static analysis for vulnerabilities detection will use XX while the framework for reducing privacy-leakage will be based on XX. So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
-\end{mdframed}
+
+%% VJ: Add this somewhere else
+%\begin{mdframed}[backgroundcolor=blue!5]
+%\paragraph{Note: Security in AI vs. AI for Security}
+%The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques to analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. For example, static analysis for vulnerabilities detection will use XX while the framework for reducing privacy-leakage will be based on XX. So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
+%\end{mdframed}
+%%
+
 
 
 %The emergence of big data, supported by distributed machine-learning based data analytics tools and techniques, presents new and unforeseen challenges for data security and privacy. Security vulnerabilities can come both from the individual components of the distributed data-analytics systems, as well as from the undeterministic way in which these components may interact. The Digital Fortress project aims to develop a novel methodology and the associated tool-chain for implementing secure distributed data processing applications. We will tackle the problem both from theoretical and practical aspect, implementing novel formally-verifiable security contracts that will specify security properties of the distributed code, and supporting this contracts with a novel code refactoring tools and dynamic vulnerability detection techniques. The focus on the project will be on machine-learning based analytics techniques, addressing the issues that come from both storage and processing of the data and learning models. As an additional layer of security, we will implement novel integrated behaviour-based user authentication schemes.
@@ -458,6 +466,11 @@ for developing secure distributed applications and providing formal guarantees a
 %\item WP8: Dissemination and Exploitation (UOD)
 %\end{itemize}
 
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{End-Users and Software Developers.}
+Most of the technologies that will be developed over the course of the \TheProject{} project are aimed at assisting \emph{software developers} in developing and deploying their code. This includes the \TheProject{} methodology, as well as the tools for detecting and repairing security vulnerabilities, verification of the properties of the code, code analysis for conformance to coding standards and authentication mechanisms. All this will increase the trust in the developed big data analytics systems. However, \TheProject{} will also benefit the \emph{end users} of the big data applications. This is most notable in the considered use cases, that will directly benefit the end-users by XX. Additionally, the authentication mechanisms will allow these users to XX. 
+\end{mdframed}
+
 \label{sect:objs-detailed}
 
 \TOWRITE{UOD and USTAN}{This needs to be done after
@@ -504,7 +517,7 @@ In \TheProject{} we will develop new coding standards that can help to mitigate 
 \subsubsection*{Objective 5: Intelligent User Authentication}
 \vspace{-6pt}
 
-In the \TheProject{} project, we will develop an Authentication-as-a-Service technology that will allow the developers to easily integrate, deploy and manage their preferred authentication methods depending on customer requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behaviour data allowing developers to deliver personalised security experience and thus increase user acceptance and trust.
+In the \TheProject{} project, we will develop an Authentication-as-a-Service technology that will allow the developers to easily integrate, deploy and manage their preferred authentication methods depending on customer requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction 	and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behaviour data allowing developers to deliver personalised security experience and thus increase user acceptance and trust.
 
 \subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
@@ -558,51 +571,52 @@ Section~\ref{sec:impact} describes in detail how \TheProject{} meets the expecte
 % explain how your proposal addresses the specific challenge and scope
 % of that topic, as set out in the work programme.}
 
-{\color{blue}{
-    Specific Challenge:
-    
- In order to minimise security risks, ICT systems need to integrate state-of-the-art approaches for security and privacy management in a holistic and dynamic way. Organisations must constantly forecast, monitor and update the security of their ICT systems, relying as appropriate on Artificial Intelligence and automation, and reducing the level of human intervention necessary.
 
-Security threats to complex ICT infrastructures, which are multi-tier and interconnected, computing architectures, can have multi-faceted and cascading effects. Addressing such threats requires organisations to collaborate and seamlessly share information related to security and privacy management.
-
-The increasing prevalence and sophistication of the Internet of Things (IoT) and Artificial Intelligence (AI) broadens the attack surface and the risk of propagation. This calls for tools to automatically monitor and mitigate security risks, including those related to data and algorithms. Moreover, storage and processing of data in different interconnected places may increase the dependency on trusted third parties to coordinate transactions.
-
-Advanced security and privacy management approaches include designing,
-developing and testing: (i) security/privacy management systems based
-on AI, including highly-automated analysis tools, and deceptive
-technology and counter-evasion techniques without necessary human
-involvement; (ii) AI-based static, dynamic and behaviour-based attack
-detection, information-hiding, deceptive and self-healing techniques;
-(iii) immersive and highly realistic, pattern-driven modelling and
-simulation tools, supporting computer-aided security design and
-evaluation, cybersecurity/privacy training and testing; and (iv)
-real-time, dynamic, accountable and secure trust, identity and access
-management in order to ensure secure and privacy-enabling
-interoperability of devices and systems.
-
-\begin{itemize}
-\item[(c)]: Advanced security and privacy solutions for end users or software developers
-
-Proposals should develop automated tools for checking the security and privacy of data, systems, online services and applications, in view to support end users or software developers (possibly including developers of AI solutions) in their efforts to select, use and create trustworthy digital services. Proposals should address real application cases and at least one of the following services: automatic code generation, code and data auditing, trustworthy data boxes, forensics, certification and assurance, cyber insurance, cyber and AI ethics, and penetration testing.
-
-The outcome of the proposal is expected to lead to development up to Technology Readiness level (TRL) 6; please see Annex G of the General Annexes.
-
-The Commission considers that proposals requesting a contribution from the EU of between EUR 2 and 5 million would allow this specific challenge to be addressed appropriately. Nonetheless, this does not preclude submission and selection of proposals requesting other amounts.
-
-Type of Action: Research and Innovation Action
-
-\item[(d)]: Distributed trust management and digital identity solutions
-
-With particular consideration to IoT contexts, applicants should propose and test/pilot innovative approaches addressing both of the following points: (i) distributed, dynamic and automated trust management and recovery solutions; and (ii) developing novel approaches to managing the identity of persons and/or objects, including self-encryption/decryption schemes with recovery ability. Proposals should address real application cases.
-
-The outcome of the proposal is expected to lead to development up to Technology Readiness level (TRL) 5-6; please see Annex G of the General Annexes.
-
-The Commission considers that proposals requesting a contribution from the EU of between EUR 3 and 6 million would allow this area to be addressed appropriately. Nonetheless, this does not preclude submission and selection of proposals requesting other amounts.
-
-Type of Action: Research and Innovation Action
-\end{itemize}
-
-}}
+%{\color{blue}{
+%    Specific Challenge:
+%    
+% In order to minimise security risks, ICT systems need to integrate state-of-the-art approaches for security and privacy management in a holistic and dynamic way. Organisations must constantly forecast, monitor and update the security of their ICT systems, relying as appropriate on Artificial Intelligence and automation, and reducing the level of human intervention necessary.
+%
+%Security threats to complex ICT infrastructures, which are multi-tier and interconnected, computing architectures, can have multi-faceted and cascading effects. Addressing such threats requires organisations to collaborate and seamlessly share information related to security and privacy management.
+%
+%The increasing prevalence and sophistication of the Internet of Things (IoT) and Artificial Intelligence (AI) broadens the attack surface and the risk of propagation. This calls for tools to automatically monitor and mitigate security risks, including those related to data and algorithms. Moreover, storage and processing of data in different interconnected places may increase the dependency on trusted third parties to coordinate transactions.
+%
+%Advanced security and privacy management approaches include designing,
+%developing and testing: (i) security/privacy management systems based
+%on AI, including highly-automated analysis tools, and deceptive
+%technology and counter-evasion techniques without necessary human
+%involvement; (ii) AI-based static, dynamic and behaviour-based attack
+%detection, information-hiding, deceptive and self-healing techniques;
+%(iii) immersive and highly realistic, pattern-driven modelling and
+%simulation tools, supporting computer-aided security design and
+%evaluation, cybersecurity/privacy training and testing; and (iv)
+%real-time, dynamic, accountable and secure trust, identity and access
+%management in order to ensure secure and privacy-enabling
+%interoperability of devices and systems.
+%
+%\begin{itemize}
+%\item[(c)]: Advanced security and privacy solutions for end users or software developers
+%
+%Proposals should develop automated tools for checking the security and privacy of data, systems, online services and applications, in view to support end users or software developers (possibly including developers of AI solutions) in their efforts to select, use and create trustworthy digital services. Proposals should address real application cases and at least one of the following services: automatic code generation, code and data auditing, trustworthy data boxes, forensics, certification and assurance, cyber insurance, cyber and AI ethics, and penetration testing.
+%
+%The outcome of the proposal is expected to lead to development up to Technology Readiness level (TRL) 6; please see Annex G of the General Annexes.
+%
+%The Commission considers that proposals requesting a contribution from the EU of between EUR 2 and 5 million would allow this specific challenge to be addressed appropriately. Nonetheless, this does not preclude submission and selection of proposals requesting other amounts.
+%
+%Type of Action: Research and Innovation Action
+%
+%\item[(d)]: Distributed trust management and digital identity solutions
+%
+%With particular consideration to IoT contexts, applicants should propose and test/pilot innovative approaches addressing both of the following points: (i) distributed, dynamic and automated trust management and recovery solutions; and (ii) developing novel approaches to managing the identity of persons and/or objects, including self-encryption/decryption schemes with recovery ability. Proposals should address real application cases.
+%
+%The outcome of the proposal is expected to lead to development up to Technology Readiness level (TRL) 5-6; please see Annex G of the General Annexes.
+%
+%The Commission considers that proposals requesting a contribution from the EU of between EUR 3 and 6 million would allow this area to be addressed appropriately. Nonetheless, this does not preclude submission and selection of proposals requesting other amounts.
+%
+%Type of Action: Research and Innovation Action
+%\end{itemize}
+%
+%}}
 
 
 \subsection{Concept and Approach}
@@ -610,9 +624,11 @@ Type of Action: Research and Innovation Action
 \eucommentary{Describe and explain the overall concept underpinning the project. Describe the main ideas, models or assumptions involved. Identify any trans-disciplinary considerations;}
 
 %% Why do we need distributed data analytics?
-In modern world, data is everywhere around us. It is estimated that in the year 2025, the amount of data collected from various sources will grow to 175 zetabytes\footnote{One zetabyte is $10^{21}$ bytes. If we were to store 175 zetabytes of data on DVDs and stack them together, this stack would be long enough to circle the Earth 222 times (\url{https://www.bernardmarr.com/default.asp?contentID=1846})}. There is a huge potential  that such a vast amount of data offers - businesses can analyse purchasing habits of their customers and offer personalised service and scientists can analyse ever increasing data sets to obtain groundbreaking results (e.g.~training machine learning models to predict the growth of cancer cells based on large volumes of training data). Because of this, AI-based data analytics have become one of the most prominent areas of computer science, with a wide variety of applications to the real world problems. As a consequence, a variety of systems that support complex analytics techniques on raw data have been developed, with some examples being Spark MLLib~\cite{mllib}, Tensorflow~\cite{tensorflow} and Azure AI~\cite{azureAI}. Many of these systems are \emph{parallel and distributed} by nature. The requirement for parallelism comes from the fact that performing data analytics on large volumes of data is usually computationally very expensive, and doing such computations in parallel on many-core systems can significantly reduce response time and deliver results much faster. The distributed aspect of data analytics comes from both distributed nature of the sources of data (where some data cannot be moved between different sites due to legal or practical reasons), and by the fact that distributed systems (such as clouds) offer much more computational power at relatively cheap price than even the high-end local highly-performance systems. 
+In modern world, data is everywhere around us. It is estimated that in the year 2025, the amount of data collected from various sources will grow to 175 zetabytes\footnote{One zetabyte is $10^{21}$ bytes.}. %If we were to store 175 zetabytes of data on DVDs and stack them together, this stack would be long enough to circle the Earth 222 times (\url{https://www.bernardmarr.com/default.asp?contentID=1846})}. 
+This volume of data offers a huge economic and scientific potential - businesses can analyse purchasing habits of their customers and offer personalised recommendationsq and scientists can analyse ever increasing data sets to obtain groundbreaking and sometimes life-saving results (e.g.~training machine learning models to predict the growth of cancer cells~\cite{bigdatacancer}). Because of this, AI-based data analytics have become one of the most prominent areas of computer science. As a consequence, a variety of systems that support complex analytics techniques on raw data have been developed, with some examples being Spark MLLib~\cite{mllib}, Tensorflow~\cite{tensorflow} and Azure AI\footnote{https://azure.microsoft.com/en-gb/resources/microsoft-ai-platform-whitepaper}. Many of these systems are \emph{parallel and distributed} by nature, requiring fast response from very expensive computations and having data distributed over numerous sources. Typical execution platforms are Computational Clouds that offer substantial computational and storage potential at relatively cheap price. 
+%. The requirement for parallelism comes from the fact that performing data analytics on large volumes of data is usually computationally very expensive, and doing such computations in parallel on many-core systems can significantly reduce response time and deliver results much faster. The distributed aspect of data analytics comes from both distributed nature of the sources of data (where some data cannot be moved between different sites due to legal or practical reasons), and by the fact that distributed systems (such as clouds) offer much more computational power at relatively cheap price than even the high-end local highly-performance systems. 
 
-The digitisation of modern world, with more and more devices connected to the internet, has increased the prevalence of cybersecurity attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the distributed data analytics code is almost completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction between data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. This is especially true in light of massive increase in software production over the last decades, with up to 110 billion lines of code being written each year. As applications become more complex, the detection and repairing of security and privacy vulnerabilities becomes more complicated and expensive. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
+The digitisation of modern world, with more and more devices connected to the internet, has increased the prevalence of cybersecurity attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, security risks come both from the operation of individual agents as well as from the interaction between these agents. At the same time, the mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic~\cite{basicSecurityBigData}. Moreover, \emph{formal} treatment of security properties of the distributed data analytics code is almost completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction between data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. This is especially true in light of massive increase in software production over the last decades, with up to 110 billion lines of code being written each year. As applications become more complex, the detection and repairing of security and privacy vulnerabilities becomes more complicated and expensive. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
 
 %The digitisation of modern world, together with advances in the software systems, has had one undesirable consequence - the prevalence of cybersecurity problems. As more and more devices are connected to the internet, there are more and more potential targets for cyber attacks. Rapid development of AI algorithms and techniques allowed these attacks to become more and more sophisticated and harder to detect and to deal with. Distributed nature of many of the data analytics techniques just exacerbates this problem. In the distributed world, all of the potential security issues for individual data storage/processing agents are present, as well as many additional risks that come from interaction of these agents in the distributed world and from movement of data between different distributed nodes. The mechanisms for ensuring security and preserving privacy that are currently used in the big data analytics systems are fairly basic. Moreover, \emph{formal} treatment of security properties of the code is completely lacking. Being able to formally guarantee that the data processing code satisfies certain security properties, in terms of not exposing security vulnerabilities and not accidentally allowing breaching of privacy of the data it works on is of paramount importance. Yet there are very few systems that can guarantee these kind of properties of the code and that can, moreover, automatically and strictly check that the end user code conforms to the security specification or one of the desired security standards. Lack of guarantees about security properties, coupled with very complex scheme of interaction betweeen data processing and data storage agents in distributed world makes establishing security of distributed data analytics one of the most complex and overlooked issues currently. The \TheProject{} project aims to tackle this crucial issue of security of AI-driven big data analytics systems.
 
@@ -635,7 +651,11 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 \item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time - the requirement for parallel processing also comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. %Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. 
 Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. Moreover, these frameworks usually need to interact with distributed filesystems/databases and higher-level domain-specific libraries, increasing the potential for vulnerabilities. \textbf{We must ensure that distributed parallel processing used in AI-based data analytics does not leak sensitive information from the data it processes to the malicious users.}
 
-\item \textbf{Optimisation of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data available while simultaneously limiting any revealed sensitive or private information. Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
+\item \textbf{Optimisation of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data %available 
+while simultaneously limiting any revealed sensitive or private information. %Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. 
+Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. Techniques such as data perturbation are used to add noise in order to preserve privacy, but can result in distortion of useful data. Therefore, an issue of finding an optimal privacy-utility tradeoff still remains. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
+
+%These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
 
 \item {\textbf{Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
 \textbf{We must ensure that static code analysis provides relevant and qualified decision making information to optimize self healing and vulnerability detection.} 
@@ -648,8 +668,7 @@ User authentication is a cornerstone of security in modern computing systems. Tw
 \end{itemize}
 
 
-The challenges identified above require a new and radical
-approach that tackles these issues in a coherent and
+The challenges identified above require a new approach that tackles these issues in a coherent and
 holistic way. 
 
 \subsubsection{Achieving The \TheProject{} Vision}
@@ -677,7 +696,7 @@ Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodo
 
 In addition to security vulnerabilities, the goal of the \TheProject{} is to also address \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
 
-Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these part will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}), space technologies (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
+Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these part will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
 
 
 
@@ -691,7 +710,19 @@ Finally, to add the additional layer of security, we will specifically address t
   \end{center}
   \end{figure}
 
-Figure~\ref{fig:storageprocessing} shows a more detailed view of the different software layers that a typical big data analytics applications is built on. Each of these layers presents its own potential security issues that have to be considered in the \TheProject{} project. At the lowest level, the data that needs to be analysed (as well as the machine learning models that are built) is usually stored in distributed data bases or filesystems that possibly span multiple sites and organisations. Each of the individual nodes that stores the data will have a local database/filesystem manager process through which the communication with other nodes commences. This will mostly be invisible to the actual end user application, but it has to be addressed as a source of potential security vulnerabilities. The lowest level accessible to the application is the level of language drivers and APIs to the distributed database/filesystem. Through the calls to this API, the application communicates with different nodes of the distributed database/filesystem. The examples of this layer are Hadoop HDFS~\cite{hdfs} distributed filesystem bindings for Java/C++ and Cassandra~\cite{cassandra} API. On top of this layer, in a typical data analytics application there will be a layer of parallel patterns for distributed computations. Parallel patterns are usually implemented as high-order functions that implement common parallel behaviour, with the most well-known example being Google MapReduce~\cite{mapreduce}. Parallel patterns allow the end users to specify just the problem-specific parts of their computation, while they get the benefits of its parallel execution (and, hence, faster response times) for free. Unfortunately, parallel patterns are another possible source of vulnerabilities, due to the fact that they involve intensive communication and exchange of data between different distributed nodes. On top of the parallel patterns, there are domain-specific machine learning libraries, that implement specific machine-learning techniques in terms of instances of parallel patterns. The examples of these libraries are Keras~\cite{keras} and XX. Finally, the end user application uses these machine-learning libraries to conduct specific data analysis that is needed. \TheProject{} aims to investigate sources of vulnerabilities and the transformations required to mitigate them in each of these different layers.
+Figure~\ref{fig:storageprocessing} shows a more detailed view of the different software layers that a typical big data analytics applications is built on. Each of these layers presents its own potential security issues that have to be considered in the \TheProject{} project: 
+\begin{itemize}
+\item At the lowest level, the data that needs to be analysed (as well as the machine learning models that are built) is usually stored in distributed data bases or filesystems that possibly span multiple sites and organisations. Each of the individual nodes that stores the data will have a local database/filesystem manager process through which the communication with other nodes commences. This will mostly be invisible to the actual end user application, but it has to be addressed as a source of potential security vulnerabilities. The lowest level accessible to the application is the level of language drivers and APIs to the distributed database/filesystem. Through the calls to this API, the application communicates with different nodes of the distributed database/filesystem. The examples of this layer are Hadoop HDFS~\cite{hdfs} distributed filesystem bindings for Java/C++ and Cassandra~\cite{cassandra} API. 
+\item On top of the data layer, in a typical data analytics application there will be a layer of parallel patterns for distributed computations. Parallel patterns are usually implemented as high-order functions that implement common parallel behaviour, with the most well-known example being Google MapReduce~\cite{mapreduce}. Parallel patterns allow the end users to specify just the problem-specific parts of their computation, while they get the benefits of its parallel execution (and, hence, faster response times) for free. Unfortunately, parallel patterns are another possible source of vulnerabilities, due to the fact that they involve intensive communication and exchange of data between different distributed nodes. 
+\item On top of the parallel patterns, there are domain-specific machine learning libraries, that implement specific machine-learning techniques in terms of instances of parallel patterns. The examples of these libraries are Keras~\cite{keras} and XX. These libraries abstract over the data processing and data storage frameworks, combining them together and thus exposing potentially additional security and privacy vulnerabilities. 
+\item Finally, the end user application uses these machine-learning libraries (and possibly any of the lower-level layers for specific purposes) to conduct specific data analysis that is needed. 
+\end{itemize}
+\TheProject{} aims to investigate sources of vulnerabilities and the transformations required to mitigate them in each of these different layers, as well as the vulnerabilities that arise from interactions between different layers. In addition to that, it will also develop \emph{secure software design patterns} that will give guidelines about secure combining of different layers of abstraction. These design patterns, together with analysis for conformance to the secure coding standards, formal verification of security properties and vulnerabilities detection and self-healing mechanisms will ensure trust into security properties of the end data analytics product.
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\textbf{Security in AI vs. AI for Security.}
+The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques to analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. For example, static analysis for vulnerabilities detection will use XX while the framework for reducing privacy-leakage will be based on XX. So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
+\end{mdframed}
 
 \subsubsection*{Key assumptions}
 
@@ -878,7 +909,7 @@ Objective 6 is to tie up all the different techniques developed in other parts o
 
 \paragraph{Work Programme for Objective 7.} 
 
-Objective 7 is to demonstrate effectiveness of the \TheProject{} approach on the real-world use cases from the air traffic management, space telecommunications, banking and medical domains. In WP6, we will develop a tool-chain that will integrate all different techniques developed in WP2 -- WP5. This will be used in WP7 to evaluate the \TheProject{} technology  on use cases from \SOPRAshort{}, \FRQshort{} and \DEMshort{}. We will apply our techniques both on analysing/repairing the existing and on developing completely new distributed code from the chosen domains. While our ultimate goal is to test the techniques in realistic setting, \emph{data fabrication} methods that will be developed as a part of the methodology will allow us to immediately produce arbitrary amount of realistic data for rapid development and testing of our techniques. We will demonstrate increased security of the end-user software while at the same time decreasing cost of the production, deployment and maintenance of such a system.
+Objective 7 is to demonstrate effectiveness of the \TheProject{} approach on the real-world use cases from the air traffic management, space telecommunications, banking and medical domains. In WP6, we will develop a tool-chain that will integrate all different techniques developed in WP2 -- WP5. This will be used in WP7 to evaluate the \TheProject{} technology  on use cases from \SOPRAshort{} and \FRQshort{}. We will apply our techniques both on analysing/repairing the existing and on developing completely new distributed code from the chosen domains. While our ultimate goal is to test the techniques in realistic setting, \emph{data fabrication} methods that will be developed as a part of the methodology will allow us to immediately produce arbitrary amount of realistic data for rapid development and testing of our techniques. We will demonstrate increased security of the end-user software while at the same time decreasing cost of the production, deployment and maintenance of such a system.
 
 \paragraph{Work Programme for Objective 8.}
 
@@ -903,6 +934,11 @@ what's here.}
 The \TheProject{} project will revolutionise the development of secure and privacy-preserving big-data applications that are deployed on clouds. We will significantly advance the state of the art in different areas related to security of distributed applications, including identification of security vulnerabilities in large-scale distributed settings, semi-automatic repairing of vulnerabilities, privacy-preserving machine-learning, security of data storage and data processing frameworks, pattern-based design of secure applications, certification and assurance and authentication. Collectively, the advances that are made by the \TheProject{} will:
 \begin{itemize}
 \item \textbf{reduce the number and impact of cybersecurity incidents} through our advanced security and privacy vulnerabilities detection and semi-automatic repairing, as well as novel user-centered authentication schemes;
+
+\begin{mdframed}[backgroundcolor=blue!5]
+The combination of different techniques for vulnerabilities detection will allow us both to identify a wider range of potential threats and to reduce false positives in vulnerabilities identification. It is well known that static analysis of the code is able to identify many of the potential threats in the code, but also that it returns a large number of false positives. Combining static analysis with symbolic execution, as outlined in Section~\ref{XX}, will contribute to the reduction of these false positives by focusing on the parts of the code where these potential threats lie and profiling them to established whether security is really breached. Additionally, runtime monitoring which focuses on the state of the running program as opposed to detection of particular types of threats will allow us to detect both current and future vulnerabilities and reinstate the running code in a safe state.
+\end{mdframed}
+
 \item \textbf{increase trust} in the security of big-data analytics applications by providing formal guarantees of the security properties of the code and certification for compliance to the security standards;
 \item \textbf{ensure privacy and allow safe knowledge exchange} in AI-based data analytics by quantifying and reducing privacy leaks and allowing safe transfer of learning;
 \item \textbf{reduce the effort} required for securing applications and services by developing a methodology and tool-chain to support the end user and guide them through the process of developing secure applications;
@@ -1267,16 +1303,16 @@ Brown et al. proposed refactorings for removing \emph{anti-patterns} in Distribu
 
 \begin{table}
 \begin{center}
-\begin{tabular}{|c||c|c|c|c|}
+\begin{tabular}{|c||c|c|c|}
 \hline \hline
-\multicolumn{5}{|c|}{Use Cases} \\ \hline
-Layer & \textbf{Air Traffic Management} & \textbf{Digital Banking} & \textbf{Healthcare} & \textbf{5G Networks} \\
+\multicolumn{4}{|c|}{Use Cases} \\ \hline
+Layer & \textbf{Air Traffic Management} & \textbf{Digital Banking} & \textbf{Healthcare} \\
 \hline \hline
-\emph{Environment} & Public/Private Cloud & Public Cloud & Public Cloud & X \\
-\emph{Data Storage} & Azure DL, MySQL & Azure DL, Cassandra & Azure DL & X \\
-\emph{Data Processing} & Azure DL Analytics & Azure DL Analytics & Azure DL Analytics & X \\
-\emph{ML Framework} & Azure AI & Spark MLLib & Azure AI & X \\
-\emph{Prog. Language} & Java, JavaScript, Python & C++ & C++ & X \\
+\emph{Environment} & Public/Private Cloud & Public/Private Cloud & Public/Private Cloud  \\
+\emph{Data Storage} & Azure DL, MySQL & Azure DL, Cassandra & Azure DL  \\
+\emph{Data Processing} & Azure DL Analytics & Azure DL Analytics & Azure DL Analytics  \\
+\emph{ML Framework} & Azure AI & Spark MLLib & Azure AI  \\
+\emph{Prog. Language} & Java, JavaScript, Python & C++ & C++ \\
 \hline \hline
 \end{tabular}
 \caption{Technologies Used in \TheProject{} Use Cases}
@@ -1353,7 +1389,61 @@ YAGAAN developed vulnerability detection technologies based both on static and d
 
 \eucommentary{Describe the innovation potential which the proposal represents. Where relevant, refer to products and services already available on the market. Please refer to the results of any patent search carried out.}
 
-It is by now a well-established fact that big data science is bringing another revolution in the world of software development. The World Economic Forum in their report on Data Science in the New Economy from July 2019 states that \textbf{"as the Fourth Industrial Revolution unfolds, led by advances in technologies such as data science and artificial intelligence, the labour market is again changing in a fundamental fashion"}. The economic potential of data science is enormous. An interim report of European Data Market study prepared by IDC \& Open Evidence claims that \textbf{"the overall data market (i.e. the aggregate value of data-related products and services exchanged within the European economy) is estimated at already more than 50 billion Euro and will get to 111 billion in 2020 under high-growth conditions"}. According to the same report, the data driven innovation in the EU contributes to \textbf{almost 5\% of the EU GDP}. In the recent times, and especially in the light of COVID-19 situation, data science has become even more important to facilitate extracting and exchanging information between remote organisations, and especially in situations where data cannot leave the place where it is stored. The growth of computation capabilities of computational clouds, together with possibilities to deploy applications that span multiple private and public clouds has offered potential to really achieve the promise of data science. This has, however, also come with a risk. A study published by IBM Security of 524 security breaches that occurred between August 2019 and April 2020 shows that \textbf{the average cost of a single breach is \$3.86 M}. The same study shows that the time required to identify and contain a data breach was \textbf{280 days}. This clearly shows the enormous economic costs of security vulnerabilities and how unprepared the state-of-the-art technologies are to deal with these breaches. But the things become even more complicated when we consider the increasingly strict regulations for ownership and sharing of the data, such as GDPR. In the UK, the companies can potentially be fined \textbf{4\% of their total turnover for each privacy breach.} It is clear that writing secure and privacy-preserving data analytics will be of the utmost importance in the near and long-term future. Using the \TheProject{} technologies and methodology will ensure \emph{security-by-design} and \emph{privacy-by-design} application development.  
+It is by now a well-established fact that big data science is bringing another revolution into the world of software development. The World Economic Forum in their report on Data Science in the New Economy from July 2019 states that \textbf{"as the Fourth Industrial Revolution unfolds, led by advances in technologies such as data science and artificial intelligence, the labour market is again changing in a fundamental fashion"}. The economic potential of data science is enormous. An interim report of European Data Market study prepared by IDC \& Open Evidence claims that \textbf{"the overall data market (i.e. the aggregate value of data-related products and services exchanged within the European economy) is estimated at already more than 50 billion Euro and will get to 111 billion in 2020 under high-growth conditions"}. According to the same report, the data driven innovation in the EU contributes to \textbf{almost 5\% of the EU GDP}. In the recent times, and especially in the light of COVID-19 situation, data science has become even more important to facilitate extracting and exchanging information between remote organisations, and especially in situations where data cannot leave the place where it is stored. The growth of computation capabilities of computational clouds, together with possibilities to deploy applications that span multiple private and public clouds has offered potential to really achieve the promise of data science. This has, however, also come with a risk. A study published by IBM Security of 524 security breaches that occurred between August 2019 and April 2020 shows that \textbf{the average cost of a single breach is \$3.86 M}. The same study shows that the time required to identify and contain a data breach was \textbf{280 days}. This clearly shows the enormous economic costs of security vulnerabilities and how unprepared the state-of-the-art technologies are to deal with these breaches. But the things become even more complicated when we consider the increasingly strict regulations for ownership and sharing of the data, such as GDPR. In the UK, the companies can potentially be fined \textbf{4\% of their total turnover for each privacy breach.} It is clear that writing secure and privacy-preserving data analytics will be of the utmost importance in the near and long-term future. It is equally important for the software developers of big data applications to be kept in a loop of a cycle of vulnerabilities identification and repairing, giving him better understanding of the security issues and the methods to mitigate them, hence increasing trust into the working of the systems. \TheProject{} innovation potential lies in bringing all these benefits to the table, with the technologies to identify and repair vulnerabilities that serve as a base of the whole high-level, pattern-supported \emph{secure software development methodology} that will guide the developer through the process of implementing and deploying their application. Formal verification of security properties, together with the verification of the conformance to the coding standards will provide additional assurance to the security of the code. Hence, our technologies aim for both \emph{guiding the user step-by-step through the process of securing their code} as well as \emph{providing security-and-privacy-by-design for the new applications}.  Additionally, significant innovation will come from the applications of the \TheProject{} technologies to the selected use cases from the air traffic management, healthcare and digital banking domains, allowing for XX. Last but not least, the \TheProject{} technologies for protecting privacy offer significant innovation potential in the area of preventing violation and abuse of rights in the digital age, as detailed in Section XX on page XX.
+
+\subsubsection*{Individual Innovation Potential}
+
+The anticipated partner-specific potential innovations are listed below and described in more detail in the individual exploitation plans in Section XX (page XX).
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\IBMshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\SOPRAshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\YAGshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\FRQshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\SCCHshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\COGNIshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\USTANshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\UODshort{}.}
+XX
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\UCMshort{}.}
+XX
+\end{mdframed}
+
+
+
+
+
 \clearpage
 \section{Impact}
 \label{sec:impact}
@@ -1516,7 +1606,7 @@ A more competitive offering of secure products and services by European provider
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-Industry partners involved in the \TheProject{} project, specifically \IBMshort{} and \YAGshort{}, aim to deliver the technologies that will be of the TRLs 6 and 7, which indicates the technologies or system prototypes demonstrated in industry relevant environment such as \SOPRAshort{} and \DEMshort{} use cases. This means that the \TheProject{} will produce technologies that will be close to being usable in practice. The technologies developed will be either open source, where feasible, or available as parts of commercial tool suites. This, coupled with the educational program using MOOCs to promote the \TheProject{} technologies, will contribute to the more competitive EU cybersecurity industry and reducing dependence on importing technologies from abroad.
+Industry partners involved in the \TheProject{} project, specifically \IBMshort{} and \YAGshort{}, aim to deliver the technologies that will be of the TRLs 6 and 7, which indicates the technologies or system prototypes demonstrated in industry relevant environment such as \SOPRAshort{} and \FRQshort{} use cases. This means that the \TheProject{} will produce technologies that will be close to being usable in practice. The technologies developed will be either open source, where feasible, or available as parts of commercial tool suites. This, coupled with the educational program using MOOCs to promote the \TheProject{} technologies, will contribute to the more competitive EU cybersecurity industry and reducing dependence on importing technologies from abroad.
 
 \emph{\TheProject{} aims and objectives related to these impacts: \textbf{Aim 5}; \textbf{Objectives 6} and \textbf{7}}
 \end{mdframed}
