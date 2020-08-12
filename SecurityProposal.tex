@@ -100,13 +100,10 @@ ToDo List:
 
 \item Section 2.3.1 : Add membership to the standardisation committees and general scientific and technical community (EVERYONE)
 
-\item Section 2.3.2: Write up Draft Exploitation Plans:
+\item Section 2.3.2: Write a joint exploitation plan (EVERYONE)
 \begin{itemize}
-\item FRQ Exploitation Plan
 \item COGNI Exploitation Plan
 \end{itemize}
-
-\item Section 2.3.2 : Write a joint exploitation plan (EVERYONE)
 
 \item Section 2.3.3 : Write up KPIs for Dissemination and Communication (USTAN and UC3M)
 
@@ -161,6 +158,11 @@ DONE:
 \item YAG for source code analysis
 \end{itemize}
 
+\item Section 1.3.4: Add how this project goes beyond what is done in the previous ones \begin{itemize}
+\item FRQ added text for SAPIENT and SINAPSE
+
+\end{itemize}
+
 \item Section 1.4 : Add the related work and advancement beyond state-of-the-art:
 \begin{itemize}
 \item YAG for static code analysis in 1.4.1 (maybe add a picture of the tool in action too?)
@@ -171,6 +173,7 @@ DONE:
 \item Section 2.3.2: Write up exploitation plans
 \begin{itemize}
 \item SCCH Exploitation Plan
+\item FRQ Exploitation Plan
 \end{itemize}
 
 
@@ -499,7 +502,7 @@ In order for the \TheProject{} technology to be usable by non-experts in securit
 \subsubsection*{Objective 7: Demonstrating \TheProject{} Tools and Technologies on Real-World Use Cases}
 %  from automotive, machine learning and IoT domains.}
 \vspace{-6pt}
-We will validate the \TheProject{} methodology for developing secure applications, together with the associated tools and technologies, on realistic use cases taken from our partners at \SOPRAshort{}, \FRQshort{} and \DEMshort{}.
+We will validate the \TheProject{} methodology for developing secure applications, together with the associated tools and technologies, on realistic use cases taken from our partners at \SOPRAshort{} and \FRQshort{}.
 %In particular, the \TheProject{} technologies will be applied to the development
 %of a \emph{completely new} distributed data analytics application by XX.
 Consequently, all of the technologies that will be developed over the course of the \TheProject{} project will be extensively tested in a realistic setting, enabling us to identify new issues and security risks as they arise, and guiding our road-map for future technological adoption. The use cases will demonstrate that we are able to deal with large-scale AI-based distributed data analytic in secure and privacy-preserving way, processing large volumes of data with increased trust in the safety of the operations. At the same time, by using user-guided refactoring-driven methodology, supported by a tool chain, we will reducing the cost of development, deployment and maintenance of the distributed systems.
@@ -648,17 +651,21 @@ Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodo
 \begin{itemize}
 \item \emph{Vulnerabilities detection phase}, where the tool-chain will identify potential vulnerabilities in the code, both in terms of potential targets for cyber attacks (security) and in terms of potential leakage of information (privacy). The identification will combine static code analysis that will be developed by \YAGshort{} and \UCMshort{}, dynamic symbolic code execution mechanisms that will be developed by \IBMshort{} and machine-learning based run-time monitoring that will be developed by \SCCHshort{}. Combining these three complementary methods will allow us to discover a wide range of potential vulnerabilities in the code, as well as to avoid the common problems when each of them is used alone (such false positives, time complexity and vulnerabilities that arise at run-time). The general techniques for detecting vulnerabilities will be adapted to the specific problems of data storage and processing in distributed data analytics by \UODshort{} and \SCCHshort{}. 
 
-\item \emph{Self-healing phase}, where the identified vulnerabilities will be repaired using a combination of semi-automatic code refactoring techniques that will be developed by \SAshort{} and run-time adaptation based on run-time monitoring that will be developed by \DEMshort{} and \SCCHshort{}. Our aim here is to provide both source-to-source code transformations, the output of which will be the repaired code that is semantically equivalent to the original code, but with the identified (static) vulnerabilities patched and also run-time patching that will, over a series of steps, restore the system into a stable and secure state where cyberattacks are happening at run-time (e.g. man-in-the-middle attacks). In the process of self-healing, we will also apply novel methods and techniques for optimising the privacy-preserving data release mechanisms to address the issue of privacy-leakage. The developed core methods will be adapted to the problem of AI-based distributed data analytics by \DEMshort{} and \UODshort{}. 
+\item \emph{Self-healing phase}, where the identified vulnerabilities will be repaired using a combination of semi-automatic code refactoring techniques that will be developed by \SAshort{} and run-time adaptation based on run-time monitoring that will be developed by % %\DEMshort{}
+and \SCCHshort{}. Our aim here is to provide both source-to-source code transformations, the output of which will be the repaired code that is semantically equivalent to the original code, but with the identified (static) vulnerabilities patched and also run-time patching that will, over a series of steps, restore the system into a stable and secure state where cyberattacks are happening at run-time (e.g. man-in-the-middle attacks). In the process of self-healing, we will also apply novel methods and techniques for optimising the privacy-preserving data release mechanisms to address the issue of privacy-leakage. The developed core methods will be adapted to the problem of AI-based distributed data analytics by 
+%\DEMshort{}
+and \UODshort{}. 
 
 \item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on the existing security standards such as XX and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SCCHshort{} and \SAshort{}, while the analysis for the conformance to standards will be developed by \UCMshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital certificate} that will specify what standards the code conforms to and the security properties that it satisfies. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
 \end{itemize}
 
 In addition to security vulnerabilities, the goal of the \TheProject{} is to also address \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
 
-Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these parts will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), network analysis (\DEMshort{}), open banking (\SOPRAshort{})
+Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these parts will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{})
+%, network analysis (\DEMshort{})
+, open banking (\SOPRAshort{})
 %, space technologies (\SOPRAshort{}
 ) and healthcare (\SOPRAshort{}). 
-
 
 \begin{figure}[tp]
   \begin{center}
@@ -773,12 +780,12 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\satie (EU No.832969).}
-\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems from industry partners like \FRQshort{}, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an inter operable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.\emph{\TheProject will, however, substantially extend the work that has been done on a deeper technical level beginning with the information platform MosaiX.
+\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems from industry partners like \FRQshort{}, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an inter operable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.\emph{\TheProject will substantially extend the work that has been done on a deeper technical level based on the information platform MosaiX.}
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\sinapse (EU No.892002).}
-\sinapse The SINAPSE project aims at proposing an intelligent and secured aeronautical datalink communications network architecture design based on the Software Defined Networking (SDN) architecture model augmented with Artificial Intelligence (AI) to predict and prevent safety services outages, to optimize available network resources and to implement cybersecurity functions protecting the network against digital attacks.
+ The \sinapse project aims at proposing an intelligent and secured aeronautical datalink communications network architecture design based on the Software Defined Networking (SDN) architecture model augmented with Artificial Intelligence (AI) to predict and prevent safety services outages, to optimize available network resources and to implement cybersecurity functions protecting the network against digital attacks. The SDN controller will be built on the existing \FRQshort{} NetBroker products. It is based on the open source ONOS SDN framework with some ATM-Grade Network specific applications added.\emph{Even if \TheProject has a different scope, it will track the results and lessons learned from \sinapse and record them if necessary.}
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1740,6 +1747,7 @@ melting pot for ideas and new technologies.
 % \khcomment{We should mention any committees that we are members of. Remove this section if not relevant.}
 This proposal is tied to Standards from the beginning, through the end and beyond. It leverages the key leadership position of several members, acting as senior leaders, officers, working group experts, proposal authors, collaboration with other industry and academic experts.
 \UCMshort{} is member of the ISO/IEC JTC1/SC22/WG21 (C++ standard committee) for more than a decade and they have contributed to the C++11, C++14, C++17 and C++20 standards. They also participate in the joint group with SC22/WG23 (Programming Language Vulnerabilities) where a specific guide for C++ vulnerabilities is under development.
+\FRQshort{} is member of the EUROCAE Working Group 114 - Artificial Intelligence. The primary scope of this group is to prepare technical standards, guides and any other material required to support the development of systems and the certification of aeronautical systems implementing AI-technologies. In addition \FRQshort{} is involved in SAE's G-34, Artificial Intelligence in Aviation.
 
 %% Doesn't make sense?
 % Current C++ Standards only support CPU, though it is adding parallel programming support starting with C++ 11, enhanced through C++ 17 with parallelSTL. Yet it is still lacking many things that can support Heterogeneous computing, which has been already explored by SYCL and OpenCL. 
@@ -1838,39 +1846,13 @@ IBM will aim to deliver \TheProject technologies into IBM cloud and analytics pr
 \end{wrapfigure}
 
 
-\SCCHlong{} is a non-profit independent research institution (RTO) with a focus on applied software science and the mission
-to transfer cutting edge research from academics to industry by running contract research projects. In its role as
-applied RTO, \SCCHshort{} pursues a strategy of closely collaborating with world-leading academic partners to establish
-and further develop key technologies together with its industrial partners. This is achieved by conducting common
-applied research with its industrial partners, and strategic research aiming at scientific publications, PhD theses and
-patents. Therefore \SCCHshort{} aims to exploit \TheProject{} project achievements as follows.
+\SCCHlong{} is a non-profit independent research institution (RTO) with a focus on applied software science and the mission to transfer cutting edge research from academics to industry by running contract research projects. In its role as applied RTO, \SCCHshort{} pursues a strategy of closely collaborating with world-leading academic partners to establish and further develop key technologies together with its industrial partners. This is achieved by conducting common applied research with its industrial partners, and strategic research aiming at scientific publications, PhD theses and patents. Therefore \SCCHshort{} aims to exploit \TheProject{} project achievements as follows.
 
-Industrial Exploitation. SCCH runs application oriented projects with industrial partners in the area of intelligent
-data analysis. The scope of applications span: a) predictive control via advanced supervised and semi-supervised
-learning methods like deep learning or kernel methods; and b) decision support systems and causal reasoning by
-inductive rule extraction, regression models, Bayesian networks and automated reasoning techniques. 
-As an application oriented research institute, the Software Competence Centre Hagenberg commonly deals with very large and
-inhomogeneous data sources and has experience with data processing of big data and transfer learning techniques
-that enable the joint modelling from inhomogeneous data, collected from distributed sources. The \TheProject{} approach
-will enhance collaboration in ongoing and future multi-firm research projects, which would not be possible due to
-confidentiality of data of the project partners. SCCH will also exploit \TheProject{} technology in IoT projects, especially
-cyber-physical-systems, where personal data of humans in the loop needs to be kept confidential. Furthermore, SCCH
-will promote \TheProject{} technology as the basis for collaborative development of business clusters (e.g. Mechatronics)
-by a data driven approach: gain knowledge out of shared data while not compromising privacy. In the development of
-the Data Analytics Framework in work package 3 SCCH plans to extend established machine learning frameworks
-(TensorFlow, Keras, scikit-learn) to find early adopters and foster uptake of developed technologies in the
-community.
+Industrial Exploitation. \SCCHshort{} runs application oriented projects with industrial partners in the area of intelligent data analysis. The scope of applications span: a) predictive control via advanced supervised and semi-supervised learning methods like deep learning or kernel methods; and b) decision support systems and causal reasoning by inductive rule extraction, regression models, Bayesian networks and automated reasoning techniques. As an application oriented research institute, the \SCCHlong{} commonly deals with very large and inhomogeneous data sources and has experience with data processing of big data and transfer learning techniques that enable the joint modelling from inhomogeneous data, collected from distributed sources. The \TheProject{} approach will enhance collaboration in ongoing and future multi-firm research projects, which would not be possible due to confidentiality of data of the project partners. \SCCHshort{} will also exploit \TheProject{} technology in IoT projects, especially cyber-physical-systems, where personal data of humans in the loop needs to be kept confidential. Furthermore, \SCCHshort{} will promote \TheProject{} technology as the basis for collaborative development of business clusters (e.g. Mechatronics) by a data driven approach: gain knowledge out of shared data while not compromising privacy. In the development of the Data Analytics Framework in work package 3 \SCCHshort{} plans to extend established machine learning frameworks (TensorFlow, Keras, scikit-learn) to find early adopters and foster uptake of developed technologies in the community.
 
-Scientific Exploitation. In parallel to the contract research, SCCH has to conduct fundamental research to keep in
-contact with world-leading research. Furthermore SCCHs success is also measured by its scientific output like number
-of publications, PhD and master theses. SCCH plans to submit publications and articles in highly relevant conferences
-and journals like Neural Information Processing Systems, International Conference of Learning Representations,
-Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on
-Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and
-Confidentiality, Springer Journal of Big Data. The \TheProject{} approach will increase scientific output for SCCH since
-it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
+Scientific Exploitation. In parallel to the contract research, \SCCHshort{} has to conduct fundamental research to keep in contact with world-leading research. Furthermore \SCCHshort{}s success is also measured by its scientific output like number of publications, PhD and master theses. \SCCHshort{} plans to submit publications and articles in highly relevant conferences and journals like Neural Information Processing Systems, International Conference of Learning Representations, Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and Confidentiality, Springer Journal of Big Data. The \TheProject{} approach will increase scientific output for \SCCHshort{} since it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
 
-
+Community and Networks. \SCCHshort{} regularly organizes workshops targeting industrial partners and customers where the \TheProject{} technology will be promoted and will aim to find early adopters. e.g. through its annual Software Research Day (http://www.scch.at/de/software-research-day). To foster a wider spread of the \TheProject{} technology, \SCCHshort{} will draw upon its network of industrial partners which also includes the health insurance companies (Upper Austrian health insurance - OOGKK), as well as local innovation management institutions such as CATT (www.catt.at), and technology clusters where \SCCHshort{} is a member (e.g. Medical Technology Cluster www.medizintechnikcluster.at, IT- Cluster: www.itcluster.at). Furthermore \SCCHshort{} will leverage its links to the national project DEXHELP (www.dexhelp.at) which develops methods, models and technologies based on health care data for decision support for health policy and planning and the “AI 4 Digital Health” initiative in Upper Austria to spread and disseminate the \TheProject{} results.
 
 
 \horizontalline
@@ -1897,14 +1879,9 @@ Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the re
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for Frequentis.
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+\FRQlong{} will broaden it's expertise and extend current products in the field of privacy-preserving data sharing platforms.
+\TheProject{} will be used to establish and strengthen important partnerships for cooperation in the creation of AI services and products to increase capacity in the aviation industry. Foster the transition of \FRQlong{} from a world leading voice communication provider to building the best safety-critical data communication solutions in ATM combination of emerging technology.
+\FRQlong{} safety-critical communication and information solutions leverage more than seventy years of experience showcasing true leadership in this market. With deep cross-industry experience in civil aviation, defence, public safety, maritime and public transportation markets; the company has built upon its initial control centre solutions in these five areas of core competence. The outcomes of \TheProject{} will also be extended to other domains as mentioned above.
 
 \horizontalline
 
