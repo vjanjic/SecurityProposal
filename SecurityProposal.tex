@@ -381,7 +381,7 @@ Big-data analytics is quickly becoming one of the most important branches of com
 The specific \emph{aims} of the \TheProject{} project are:
 
 \begin{description}
-\item[Aim 1:] To produce novel rigorous methods for \emph{formal specification and verification} of 
+\item[Aim 1:] To produce novel rigorous methods for the \emph{formal specification and verification} of 
 %security properties of
   distributed AI-based data analytics systems, addressing security and privacy of both data storage and data processing;
 
@@ -496,8 +496,8 @@ While identifying security risks and privacy leaks is critical for security of d
 %There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
 
 \subsubsection*{Objective 4: Security Coding Standards}
-Source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some of such vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
-In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big-data applications with special attention to vulnerabilities derived from  the programming language. Then we will apply those coding standards to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern based machine learning software components.
+The source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, such as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
+In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big-data applications with special attention to vulnerabilities derived from  the programming language. Then we will apply these coding standards to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern based machine learning software components.
 
 \subsubsection*{Objective 5: Intelligent User Authentication}
 \vspace{-6pt}
@@ -506,6 +506,7 @@ In the \TheProject{} project, we will develop an Authentication-as-a-Service tec
 
 \subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
+
 
 In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end-user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In the \TheProject{}, we will develop a novel methodology for developing secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured rewriting of the end-user code, which will enable easily understandable step-by-step transformation of the initial code into its provably-secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
 %cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focused more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
@@ -529,6 +530,7 @@ Consequently, all of the technologies that will be developed over the course of 
 \subsection{Relation to the Work programme}
 
 \TheProject{} directly addresses the challenge that is posted by \textbf{H2020-SU-DS-2020}. By exploiting the partners' expertise in security, privacy and AI-based distributed data analytics and by integrating the developed solutions into a semi-automated code analysis, refactoring and runtime adaptation based software development methodology, we aim to \textbf{integrate state-of-the-art approaches for security and privacy management in a holistic and dynamic way} while \textbf{relying on Artificial Intelligence and automation and reducing the level of human intervention necessary}. Our techniques for identifying and repairing security and privacy vulnerabilities, addressing both storage and processing of data in big-data analytics applications will address the problem of \textbf{storage and processing of data in different interconnected places}. Integration of all the methods into a coherent technology, comprising also run-time vulnerabilities detection and run-time adaptation to address the identified problems, will allow the end users to  \textbf{constantly forecast, monitor and update the security of their ICT systems}. Collectively, detecting and repairing security and privacy risks in data storage and processing will allow \textbf{monitoring and mitigation of security risks, including those related to data and algorithms}. Our inherent focus on distributed systems, with a particular focus on privacy and security of machine learning frameworks and models, both while they are trained and while they are used, will improve \textbf{collaboration and sharing of information related to security and privacy management}. 
+
 
 The specific focus of \TheProject{} is on on part \textbf{c) advanced security and privacy solutions for end users or software developers} of the proposal call. Within that, our main aim is to \textbf{develop automated tools for checking the security and privacy of data, systems, online services and applications}. By building on the well-established software engineering concept of \emph{patterns} for data processing, and by supporting the techniques that will be developed over the course of the project by semi-automated tools for analysing and transforming the user code, as well as the techniques of the secure authentication, we will \textbf{support end users or software developers (possibly including developers of AI solutions) in their efforts to select, use and create trustworthy digital services}. By evaluating the \TheProject{} techniques on real-world applications coming from aerospace, banking, healthcare and telecommunication domains, we will address \textbf{real application cases}. Refactoring-based programming methodology will contribute to \textbf{automatic code generation}. Supporting the secure patterns for distributed data processing by the techniques for the formal specification and verification of their security properties, we are contributing to creation of \textbf{trustworthy data boxes}, \textbf{certification and assurance} and \textbf{cyber insurance}.
 
@@ -670,9 +672,10 @@ Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodo
 \item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on the existing security standards such as XX and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SCCHshort{} and \SAshort{}, while the analysis for the conformance to standards will be developed by \UCMshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital certificate} that will specify what standards the code conforms to and the security properties that it satisfies. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
 \end{itemize}
 
-In addition to security vulnerabilities, the goal of the \TheProject{} is to address the \emph{privacy} concerns too. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. articles 20, 25, 33 and 37). 
+In addition to security vulnerabilities, the goal of the \TheProject{} is to also address \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
 
 Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these part will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}), space technologies (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
+
 
 
 \begin{figure}[tph!]
@@ -725,7 +728,7 @@ the case of key enabling technologies)'').
 \end{center}
 
 \noindent
-The specific advances that will be made are described in more detail in Section~\ref{sec:novelty} (page~\pageref{sec:novelty}).
+The specific advances that will be made are described in more detail in Section~\ref{sec:novelty} (Page~\pageref{sec:novelty}).
 
 
 \subsubsection{Linked research and innovation activities}
@@ -788,7 +791,12 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\satie (EU No.832969).}
-\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems from industry partners like \FRQshort{}, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an inter operable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.\emph{\TheProject will, however, substantially extend the work that has been done on a deeper technical level beginning with the information platform MosaiX.}
+\satie adopts a holistic approach about threat prevention, detection, response and mitigation in the airports, while guaranteeing the protection of critical systems from industry partners like \FRQshort{}, sensitive data and passengers. Critical assets are usually protected against individual physical or cyber threats, but not against complex scenarios combining both categories of threats. In order to handle it, SATIE develops an inter operable toolkit which improves cyber-physical correlations, forensics investigations and dynamic impact assessment at airports. Having a shared situational awareness, security practitioners and airport managers collaborate more efficiently to the crisis resolution. Emergency procedures can be triggered simultaneously through an alerting system in order to reschedule airside/landside operations, notify first responders, cybersecurity and maintenance teams towards a fast recovery.\emph{\TheProject will, however, substantially extend the work that has been done on a deeper technical level beginning with the information platform MosaiX.
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=blue!5]
+\paragraph{\sinapse (EU No.892002).}
+\sinapse The SINAPSE project aims at proposing an intelligent and secured aeronautical datalink communications network architecture design based on the Software Defined Networking (SDN) architecture model augmented with Artificial Intelligence (AI) to predict and prevent safety services outages, to optimize available network resources and to implement cybersecurity functions protecting the network against digital attacks.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1154,7 +1162,7 @@ application and infrastructure developers.
 \label{sect:auth}
 \vjcomment{COGNITIVE to write}
 
-Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication (MFA)} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) [REF]. With regards to \textit{continuous user authentication}, several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones [REF], physiological data analysis such as body signals (heart rate, skin conductance, etc.) [REF] and face biometrics [10, 11], and eye gaze data analytics [REF]. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security (https://duo.com), Futurae (https://futurae.com), Acceptto (https://acceptto.com), Auth0 (https://auth0.com), Saaspass (https://saaspass.com)), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. Existing state-of-the-art solutions such as Cisco’s Duo Security, Futurae, Acceptto, etc. work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA and continuous user authentication under a unified integration platform. 
+Multi-factor Authentication (MFA) has been introduced with the aim to provide a higher level of security and continuous protection of resources from unauthorized access through the use of more than two categories of credentials \cite{scheidt2005multiple, bhargav2007privacy}. Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) and voice recognition \cite{mare2016study, ometov2018multi, 10.1145/1053291.1053327}. \textit{Continuous user authentication} is an authentication technology aiming to verify the end-user's identity in real-time (after successfully authenticating), while  carrying out tasks. Several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones \cite{10.1145/2991079.2991097, 10.1145/2702123.2702252, gascon2014continuous}, physiological data analysis such as body signals (heart rate, skin conductance, etc.) \cite{ometov2018multi, rui2018survey}, Electrocardiographic (ECG) recognition \cite{silva2011clinical}, face biometrics \cite{bhattacharyya2009biometric, dabbah2007secure}, and eye gaze data analytics \cite{jain2004introduction, bulling2012increasing}. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security \cite{duo}, Futurae \cite{Futurae}, Acceptto \cite{Acceptto}, Auth0 \cite{Auth0}, Saaspass \cite{Saaspass}), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. Existing state-of-the-art solutions such as Cisco’s Duo Security, Futurae, Acceptto, etc. work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA and continuous user authentication under a unified integration platform. The strengths of the proposed unified integration platform are concentrated in the rapid deployment to existing online services and the agility to adapt to existing ecosystems, aiming to protect sensitive resources while at the same time provide a seamless security experience to the end-users.
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
@@ -1955,7 +1963,15 @@ It is also in \YAGshort{} strategy to build business partnerships to support its
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for Cognitive
+\COGNIshort{} will use the Elysian tools and technologies in its user authentication-related practice to help digital service providers to integrate, deploy and manage multi-factor authentication and continuous user identification solutions by reducing the complexity of development, and at the same time provide a positive security experience to the end-users. Example domains include the digital banking domain for customer identification and verification, the digital health domain for patient authentication, the digital education domain for online examination invigilation purposes. 
+
+Cognitive Authentication is \COGNIshort{}'s core authentication platform, which allows seamless integration of a variety of authentication methods for secure and usable multi-factor authentication (tokens, OTPs, QR codes, graphical passwords, intelligent eye gaze analytics). Main aim of \COGNIshort{} is to improve and extend the authentication methods of the Cognitive Authentication platform, specifically:
+
+\begin{itemize}
+    \item Eye gaze-driven user identification. 
+    \item Physiological-based authentication.
+    \item Usable two-factor authentication.
+\end{itemize}
 
 \horizontalline
 
@@ -3228,14 +3244,19 @@ Secure Hardware-Software Architectures for Robust Computing Systems (SHARCS, ICT
 \vspace{-1cm}
 \end{wrapfigure}
 
-\SCCH{} (\url{www.scch.at}) is an Austrian research and technology organisation, funded in 1999 by several institutes of Johannes Kepler University, Linz. Its primary focus is on applied research in the fields of software and data science. 
-In projects with partner companies state-of-the-art research results are applied to practical industrial projects to increase and maintain their competitiveness. One of the focus areas is Data Analysis Systems (DAS), specialising on the advancement and application of methods for the analysis and modelling of complex and massive sensor data in its (industrial) application context. Particular application domains include
+\SCCH{} (\url{www.scch.at}) is an Austrian research and technology organization founded in 1999 by mathematics and informatics institutes of the Johannes Kepler University, Linz, and is partially funded by the national programme COMET (Competence Centers for Excellent Technologies). Its primary focus is on research in the fields of data and software science as well as control, optimization, and machine learning. During the recent years, SCCH has focused on the research area: ``Privacy Secured Transferable AI'' under the framework of international and national projects including EU H2020 project: ``Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS)'' and national projects: ``Privacy Preserving Machine Learning for Industrial Applications (PRIMAL)'', ``Security and Safety for Shared Artificial Intelligence (S3AI)'', and ``Privacy Secured Explainable and Transferable AI for Healthcare Systems (PETAI)''.  
+
+SCCH strives toward leadership in the fields of digitalization and artificial intelligence (AI) and especially supports its (industrial) partners on their transition from contemporary (software) systems to AI-based cyber-physical systems (CPS). In projects with partner companies state-of-the-art research results are applied to practical industrial projects to increase and maintain their competitiveness. One of the focus areas is Data Analysis Systems (DAS), specialising on the advancement and application of methods for the analysis and modelling of complex and massive sensor data in its (industrial) application context. Particular application domains include
 \begin{inparaenum}[a)]
 \item modelling, prognosis, forecast and control of systems
 \item industrial fault detection, diagnosis and prognosis
 \item the discovery of knowledge and structure in industrial processes.
 \end{inparaenum}
-\SCCHshort{} is or was involved in the EU-funded projects H2020 ALOHA (Grant Agreement 780788), TRESSPASS (SEC-2016-2017-2, Proposal Nr. 787120) RePhrase (ICT-644235), ParaPhrase (IST-2011-288570), ADVANCE (IST-2010-248828), SECO, and FACETS, where in ALOHA and TRESSPASS SCCH contributes with its expertise in deep learning and the latter are concerned with parallel computation.  The participating investigators are project managers or researchers for relevant applied research projects in the fields of machine learning, parallelisation, and scheduling, and are active in the research community by publishing and reviewing for journals and conferences.
+SCCH has a long tradition of company partnerships in the manufacturing industry, like KEBA AG, Siemens AG, STIWA Holding, RUBBLE MASTER HMH, Fronius International GmbH, ENGEL AUSTRIA GmbH, TRUMPF Maschinen Austria GmbH and voestalpine Stahl GmbH, also in the energy domain and increasingly also in the healthcare sector, where, e.g., a COMET project (ARProSys) together with B. Braun from Hungary was carried out for research on the implementation of adaptive and robust software support for industrial processes in the area of electronic medical devices. 
+
+\SCCHshort{} is or was involved in the EU-funded projects COGNIPLANT (H2020-DT-SPIRE-06-2019), SERUMS (SU-TDS-02-2018), ALOHA (H2020-ICT-05-2017), TRESSPASS (SEC-2016-2017-2), RePhrase (ICT-644235), ParaPhrase (IST-2011-288570), ADVANCE (IST-2010-248828), SECO (FP7-216593), and FACETS (FP6-15879) as well as the Interreg projects KI-Net (AB292) and SmartVillages (ASP623).
+
+The participating investigators are researchers and project managers with expertise in the relevant areas and are active in the research community by publishing and reviewing for top-rated journals and conferences.
 
 \vspace{10pt}
 \textbf{\SCCHshort{} leads WPXX}
@@ -3244,14 +3265,21 @@ In projects with partner companies state-of-the-art research results are applied
 \subsubsection*{List of Publications}
 
 \begin{itemize}
-
-\item XX
-  
+\item M. Kumar, M. Rossbory, B. A. Moser, B. Freudenthaler, ``An Optimal $(\epsilon,\delta)-$Differentially Private Learning of Distributed Deep Fuzzy Models,
+Information Sciences,'' \emph{Information Sciences}, 2020.
+\item M. Kumar, M. Rossbory, B. A. Moser, and B. Freudenthaler, ``Differentially Private Learning of Distributed Deep Models,'' in \emph{Proc. Adjunct Publication of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP ’20 Adjunct)}, (Association for Computing Machinery, New York, NY, USA, 193–200), July 2020. 
+\item M. Kumar, M. Rossbory, B. A. Moser, B. Freudenthaler, ``Deriving an Optimal Noise Adding Mechanism for Privacy-Preserving Machine Learning,'' in \emph{Proc. Database and Expert Systems Applications (DEXA 2019)}, (Linz, Austria), Aug. 2019.   
+\item M. Kumar and B. Freudenthaler, ``Fuzzy Membership Functional Analysis for Nonparametric Deep Models of Image Features,'' \emph{IEEE Transactions on Fuzzy Systems}, {\href{https://doi.org/10.1109/TFUZZ.2019.2950636}{https://doi.org/10.1109/TFUZZ.2019.2950636}}.
 \end{itemize}
 
 \subsubsection*{Relevant Research Projects}
 
 \begin{itemize}
+\item SERUMS (H2020, SU-TDS-02-2018) on privacy-preserving distributed data analytics for securing medical data in smart patient-centric healthcare 
+
+\item PRIMAL (FFG IKT der Zukunft 2018) on privacy-preserving machine learning on industrial applications
+
+\item S3AI: Austrian COMET Module on fundamental research on deep collaborative learning, since Jan 2020; coord. SCCH 
 
 \item RePhrase (H2020, ICT-644235) - Refactoring Parallel Heterogeneous Resource-Aware Applications. SCCH's role: reinforcement learning based dynamic scheduling and industrial use cases
 
@@ -3378,9 +3406,11 @@ Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006,
 
 \begin{itemize}
 
+\item SINAPSE (H2020-SESAR-2019-2, Grant agreement ID: 892002) - Software defined networking architecture augmented with Artificial Intelligence to improve aeronautical communications performance, security and efficiency, \url{https://cordis.europa.eu/project/id/892002};
+
 \item SATIE (H2020-SU-INFRA-2018, Grant agreement ID: 832969) - Security of Air Transport Infrastructure of Europe, \url{https://cordis.europa.eu/project/id/832969};
 
-\item SAPIENT (H2020-SESAR-2015-1, Grant agreement ID: 699328) - Satellite and terrestrial architectures improving performance, security and safety in Air Traffic Management (ATM), \url{https://cordis.europa.eu/project/id/699328};
+%\item SAPIENT (H2020-SESAR-2015-1, Grant agreement ID: 699328) - Satellite and terrestrial architectures improving performance, security and safety in Air Traffic Management (ATM), \url{https://cordis.europa.eu/project/id/699328};
 
 \item PJ19 CI (H2020-SESAR-2015-2, Grant agreement ID: 731765) - Sesar2020 Pj19-03 - Air Traffic Management Systems and Services, \url{https://www.eurocontrol.int/articles/content-integration-sesar-2020-project-pj19-ci};
 
