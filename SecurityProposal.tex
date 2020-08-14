@@ -660,6 +660,10 @@ Differential privacy is a formal framework to quantify the degree to which the p
 \item {\textbf{Optimization of vulnerability detection in the source code with static analysis.}} Detection of vulnerabilities in the source code of applications is achieved though static analysis. This approach generates a huge amount of information to the user. On one hand, a single vulnerability can be detected in different sequences of code, each of which will generate a warning to the user and result in duplicate warnings. On the other hand, when there is a doubt that a code sequence is suspicious a warning will also be raised to the user, and possibly generate a false positive. A manual step is then needed to analyse the local context of each potential vulnerability and qualify the warnings before they can be used to fix real security issues. When it comes to self healing and big data analytics applications, this manual phase must be automated and additional information is required from static analysis to feed the self healing process with relevant qualified decision making information.
 \textbf{We must ensure that static code analysis provides relevant and qualified decision making information to optimize self healing and vulnerability detection.} 
 
+\item \textbf{Refactoring Tool-Support for Security Programming.}
+Writing applications that are inherently secure is a challenging problem for the average developer, who typically lacks the required skill-set to ensure code is secure. This usually requires not only in-depth knowledge about the code itself, but also in-depth knowledge about security techniques. Manually rewriting applications to make them secure means that there is more risk for things to go wrong: key algorithmic properties of security may be missed, or worse, may be implemented incorrectly, resulting in code that is even less secure than its starting point with more vulnerabilities. Providing the developer with refactoring tool-support means that they can rely on the tool to aid them in rewriting the application to be more secure, where the refactorings abstract away the low-level complexities of writing secure algorithms. 
+\textbf{We must provide new techniques and tools to enable the developer to refactoring their source-code to make it more secure.}
+
 \item \textbf{Intelligent User Authentication.} 
 User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In addition, there is an increased need for service providers to continuously verify, after successful login, the identity of the user to prevent fraudulence behavior, \textit{e.g.}, verifying that the voice of an online banking customer aligns to the authenticated customer. \textbf{We must, therefore XX}
 
@@ -752,7 +756,7 @@ the case of key enabling technologies)'').
     \textbf{Key Enabling Technology} & \textbf{Current TRL} & \textbf{Final TRL} \\
     \hline
      &  & \\
-    \hline Refactoring Tool Support & TRL x & TRL x \\  
+    \hline USTAN ParaFormance refactoring tool-suite & TRL 4-5 & TRL 5-6 \\  
     \hline YAG YAG-Suite vulnerability detection tool - Machine learning augmented SAST for security and privacy breaches in Java, C/C++ and Python source code & TRL 4 & TRL 6 \\  
     \hline YAG YAG-Suite vulnerability detection tool - Code mining & TRL 5 & TRL 7 \\  
     \hline SCCH eKnows software analytics tool - Module for semi-automated extraction of ASMs from source code & TRL 4 & TRL 6 \\
@@ -777,6 +781,9 @@ The specific advances that will be made are described in more detail in Section~
 The TeamPlay project aims to develop new, formally-motivated, techniques that will allow execution time, energy usage, security, and other important non-functional properties of parallel software to be treated effectively, and as first-class citizens. This methodology was built into a toolbox for developing highly parallel software for low-energy systems, as required by the internet of things, cyber-physical systems etc.
 
 The TeamPlay approach allows programs to reflect directly on their own time, energy consumption, security, etc., as well as enabling the developer to reason about both the functional and the non-functional properties of their software at the source code level.
+
+\emph{Instead, \TheProject{} takes a different direction, focusing on refactorings that transform the source-code to make it more secure. Also, \TheProject{} focuses purely on security issues, specifically aimed at AI and big-data, rather than the embedded domain. Furthermore \TheProject{} aims to address wider issues in security, by also developing new tools and techniques that apply at different levels of the software development cycle pertaining to security. Finally, \TheProject{} will produce new formal techniques for reasoning about aspects of the security transformations.  }
+
 \end{mdframed}
 
 %...
@@ -791,10 +798,7 @@ a whole for heterogeneous parallel machines
 using C++.  It considers neglected, but important, issues such as
 effective testing, debugging, maintenance and quality assurance for
 multicore/manycore machines, and involves major industry players such as IBM.
-\emph{\TheProject will, however, substantially extend the work that has been done in \rephrase by:
-\begin{inparaenum}[i)]
-\item XX
-\end{inparaenum}}
+\emph{\TheProject will, however, substantially extend the work that has been done in \rephrase by developing new refactorings that transform the code in a way that makes it more secure; producing new tools and techniques that discovery security vulnerabilities; produce new formal techniques to reason about the general soundness and correctness of the refactorings and vulnerability methods.}
 \end{mdframed}
 
 %\vspace{-2pt}
@@ -807,7 +811,8 @@ The \paraphrase project introduced a new structured design and implementation pr
 heterogeneous multicore/manycore architectures, in which developers exploit a variety of
 parallel patterns to develop component based applications in Erlang and C++. These
 component based pattern-applications may then be re-mapped to meet the
-application requirements and hardware availability. 
+application requirements and hardware availability.
+\emph{Unlike \TheProject{}, \paraphrase did not develop new tools or techniques for any aspect of security, only focussing on multi-core development instead.}
 \end{mdframed}
 
 %\vspace{-2pt}
@@ -1795,6 +1800,19 @@ The conferences that we propose to target include:
 \textbf{EUROPAR:} International European Conference on Parallel and Distributed Computing; 
 \textbf{HCC:} The Healthcare CyberSecurity Conference;
 \textbf{AIME:} International Conference on Artificial Intelligence in Medicine;
+\textbf{PLDI: } ACM International Conference on Programming Languages, Design and Implementation;
+\textbf{POPL: } ACM Conference on Principles of Programming Languages;
+\textbf{CC: } ACM International Conference on Compiler Construction;
+\textbf{ICFP: } ACM International Conference on Functional Programming;
+\textbf{ESOP: } International Conference on Programming;
+\textbf{SPLASH/OOPSLA: } ACM SIGPLAN Conference on Systems, Programming, Languages and Applications
+\textbf{CGO: } International Symposium on Code Generation and Optimization;
+\textbf{ ECOOP: } European Conference on Object-Oriented Programming;
+\textbf{HLPP: } International Symposium on High-Level Parallel Programming and Applications;
+\textbf{HiPEAC: } High-Performance Embedded Architectures and Compilation Conference;
+\textbf{PPDP: } International Symposium on
+Principles and Practice of Declarative Programming;
+\textbf{ICSE: } International Conference on Software Engineering;
  \end{quote}
 
 \noindent
@@ -1809,6 +1827,11 @@ We also propose to target relevant high-impact journals such as:
 \textbf{JDSA:} International Journal of Data Science and Analytics;
 \textbf{TPDS:} IEEE Transactions on Parallel and Distributed Systems;
 \textbf{IJPP:} International Journal of Parallel Programming;
+\textbf{TOPLAS: } ACM Transactions on Programming Languages and Systems;
+\textbf{CC-PE: } Concurrency and Computation: Practice \& Experience;
+\textbf{FGCS: } Future Generation Computing Systems;
+\textbf{PPL: } Parallel Processing Letters; 
+\textbf{SP\&E: } Software: Practice \& Experience; 
 \end{quote}
 
 \paragraph{Project Web site:}  
@@ -2049,6 +2072,8 @@ Cognitive Authentication is \COGNIshort{}'s core authentication platform, which 
 \SAshort{} will work to actively exploit the foreground IPR that it produces in the course of the \TheProject{} project. During the course of the \TheProject{} project, we envisage the development and production of new and innovative refactorings for increasing the security level of big-data applications, together with new verification techniques to show general soundness and correctness of the refactorings. The intention is to release these tools as open-source software, allow their widespread exploitation by the community. We will also work with the industrial collaborators to further exploit these tools and other foreground intellectual property that we will produce in the course of the project. 
 Additionally, \SAshort{} will actively pursue avenues of commercial exploitation with the possible formation of a spinoff company to commercialse the project results, and apply for patents, etc. Christopher Brown has already startup experience, with the former spinout of ParaFormance technologies Ltd. from previous EU research on the H2020 RePhrase project. Scotland provides an excellent and vibrant base for commercial exploitation, with additional support available from the Scottish Enterprise and other sources.  Edinburgh alone, 162 start-up/spin-off companies have been formed from academic research since 2007, and two new science parks are currently being developed. Edinburgh TechnoPole is a new 126-acre science and technology park that offers flexible accommodation to new and growing high-technology businesses. At St Andrews, the new Eden business campus will provide an excellent base for growing the new startup company. USTAN has excellent connections within the UK and Scottish communities.
 
+\textbf{Teaching.} USTAN aims to exploit the results of the \TheProject{} project throughout its teaching profile. It offers advanced undergraduate, MSc, and PhD level courses in parallel programming, programming language design and implementation, concurrency, image processing, data analytics, artificial intelligence and verification. All of these courses will be able to benefit from the \TheProject{} results on refactoring, analysis tools, security, formalisation, security patterns and coding standards. Results will be integrated into the material that is taught, they will be used to inform and adapt the curriculum, and they will be used to design practical coursework exercises, essays and other forms of assessment. In addition, large-scale full-year individual and/or group projects will be offered on topics that are relevant to \TheProject{}. These topics will include, for example, refactoring, formal reasoning and logic,  code-level security analysis, use of the YAG-Suite, etc., and will be available at either undergraduate or MSc level or both. We will also seize opportunities to direct PhD and EngD student research towards areas that are of interest to \TheProject{}. The proposed work is a close fit to the research interests of several academic staff at University of St Andrews, and we have already started to explore how e.g. formal reasoning for refactoring of security can be further integrated into research on modeling semantics and soundness via dependant types and logic. Finally, where relevant, we will give open seminars and run courses for industry on e.g. energy and timing analysis, type systems for energy and time contracts. Finally, we will assist \UODshort{} in the preperation of MOOCs for focussed online courses on aspects of the \TheProject{} project.
+
 \horizontalline
 
 \subsection*{Draft Exploitation Plan for \UODshort{}}
@@ -2142,8 +2167,13 @@ the other non-confidential documents that are generated in the course of the pro
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{Key Performance Indicators for Dissemination and Communication:}
 \begin{itemize}
-\item KPI 1
-\item KPI 2
+\item KPI 1: 5 publications per year per academic partner, at least 1 conference paper and 1 journal paper.
+\item KPI 2: 30\% of accepted papers should be journal papers.
+\item KPI 3: 2 project press releases per year.
+\item KPI 4: At least 1 public project workshop per year.
+\item KPI 5: At least 100 followers on social media channels by Year 2; 200 followers by Year 3.
+\item KPI 6: At least 150 new visitors to the project website per project year.
+\item KPI 7: Project brochure produced by Month 18.
 \end{itemize}
 \end{mdframed}
 
@@ -3193,6 +3223,8 @@ leads work packages WPXX and participates in WPXX on XX.}
 
 \paragraph{Dr Juliana Bowles} \url{http://www.}
 
+\paragraph{Dr Christopher Brown (male)} is a lecturer in the School of Computer Science and has a background in refactoring and program transformation. Dr Brown is the PI on the \euro{}5.4M EU H2020 \emph{TeamPlay} project, leading WP1 on contracts and formalisation for contracts of non-functional properities (including time, energy and security),
+and is the PI on a newly funded EPSRC project, \emph{Energise}. He has undertaken work on automated refactoring for parallelism in Haskell, Erlang and C++, including developing new ideas of program shaping and pattern discovery. He received his PhD from the University of Kent in 2008, with a thesis on Tool Support for Refactoring Haskell Programs, and subsequently worked with Prof. Simon Thompson on the Refactoring Functional Programs project. He worked on the \euro{}3.2M EU SCIence project, where he built domain-specific parallel skeletons for use in both Computer Algebra and Functional Programming. He was workpackage team leader on the \euro{}4.2M EU FP7 ParaPhrase project, which investigated the application of pattern-based refactoring in Erlang and C++. He was also workpackage team leader on the \euro{}3.6M EU Horizon 2020 RePhrase project, which was applying these refactoring techniques as part of a new software engineering approach to parallel programming using C++. He has previously led a technical team of six developers on the £537K Scottish Enterprise ParaFormance project, which was investigating commercial applications of refactoring for parallel programming, and which forms a key part of our longer-term exploitation plan. This approach is both effective and practical: using the ParaFormance tooling, we have successfully analysed million-line C++ programs, narrowing over 1,000 potential sites of potential parallelism to 29 effective sites. This task would take weeks or months of human effort, but our tool achieves it in less than 60 seconds. The ParaFormance tooling Dr Brown has developed will be exploited heavily in the \TheProject{} project. 
 
 \subsubsection*{Relevant publications}
 \begin{itemize}
@@ -3205,7 +3237,11 @@ leads work packages WPXX and participates in WPXX on XX.}
 \begin{itemize}
 % \item
 % Automatic Prediction of Resource Bounds for Embedded Systems (EmBounded, IST-2004-510255, 2005-2008, \url{http://www.embounded.org});
-\item XX
+\item Parallel Patterns for Adaptive Heterogeneous Multicore Systems (ParaPhrase, ICT-288570, 2011-2014, \url{paraphrase-ict.eu}).
+\item Refactoring Parallel Heterogeneous Resource-Aware Applications — a Software Engineering Approach(RePhrase, ICT-644235, 2015-2018).
+\item Parallel Pattern Discovery and Program Shaping for Heterogeneous Manycores (Discovery, UKEPSRCEP/P020631, 2017-2020).
+\item Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS, ICT-826278, 2019-2022, \url{https://www.serums-h2020.org/}
+\item Time, Energy and Security Analysis for Multi/Many-core heterogenerous PLAtforms (TeamPlay, ICT-779882, 2018-2021, \url{https://www.teamplay-h2020.eu/}
 \end{itemize}
 
 \Participant{UOD}{\url{http://www.dundee.ac.ul}}
