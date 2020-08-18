@@ -21,8 +21,7 @@ The objectives of \theWP{} are to:
 \end{WPObjectives}
 
 \begin{WPDescription}
-The purpose of this work package is to evaluate the \TheProject technology on real-world use cases from the air traffic, healthcare and banking domains. In all these domains, ensuring security of data analytics, privacy of data access, as well as ensuring the quality of data is of utmost importance. In this workpackage, we will i) define the requirements and success metrics that the \TheProject{} technologies and use cases will need to satisfy in order to achieve the desired results, as set out in project objectives, and to achieve the expected impacts (T7.1); ii) adapt the existing and develop new use cases that will demonstrate that the \TheProject{} tools and techniques can support development of secure and privacy preserving distributed data analytics application for end users (T7.2); iii)  evaluate the effectiveness and benefits that our techniques will bring in terms of the success metrics tidentified in T7.1 (T7.3); and, iv) provide a roadmap for addressing the issues that will arise from the usage of the \TheProject{} technology for future-generation
-secure distributed systems (T7.4).
+The purpose of this work package is to evaluate the \TheProject technology on real-world use cases from the air traffic, healthcare and banking domains. In all these domains, ensuring security of data analytics, privacy of data access, as well as ensuring the quality of data is of utmost importance. In this work package, we will i) define the requirements and success metrics that the \TheProject{} technologies and use cases will need to satisfy in order to achieve the desired results, as set out in project objectives, and to achieve the expected impacts (\ref{task:requirements}); ii) adapt the \emph{data fabrication} technique to the particular use cases considered, therefore providing the use cases with large volumes of synthetic but realistic data on which it is safe to develop and test the initial techniques (\ref{task:datafab}); iii) adapt the existing and develop new use cases that will demonstrate that the \TheProject{} tools and techniques can support development of secure and privacy preserving distributed data analytics application for end users (\ref{task:usecases}); and, iv)  evaluate the effectiveness and benefits that our techniques will bring in terms of the success metrics identified in~\ref{task:requirements} and produce a roadmap for addressing the issues that will arise from the usage of the \TheProject{} technology for future-generation secure big data analytics systems (\ref{task:evaluation}). The adaptation of data fabrication techniques, use cases and evaluation will proceed in three phases. In the first phase, we will develop an initial version of use cases and fabricated data and evaluate these on private clouds. In the second phase, we will extend and evaluate these use cases and produce additional data for deployment on public clouds. In the third and final phase, the use cases and fabricated data will be adapted and evaluated for deployment on hybrid clouds.
 \end{WPDescription}
 
 \begin{Task}
@@ -31,201 +30,182 @@ secure distributed systems (T7.4).
 \TaskParticipant{UOD}{1}
 
 \TaskStart{1}
-\TaskEnd{27}
+\TaskEnd{15}
 \TaskResults{%
-%\ref{del:model1}
+\ref{del:req1},
+\ref{del:req2}
 }
 \TaskHeader{}
 \tasklabel{task:requirements}
-\theTask{} will determine the requirements of the \TheProject{} project as a whole.  It will identify the main technical and functional challenges that must be addressed by the \TheProject{} approach. The identified  requirements will be fed into each of the technical work packages, forming a foundation for the design and implementation of the associated methods and tools. Complementing the success criteria for the overall expected impacts (Section~\ref{sect:impacts}), application-specific success criteria for each already existing use case, plus the associated measurement criteria, will be defined as part of the task deliverables. This will be done by determining Key Performance Indicators, KPIs, creating clear definitions, undertaking baseline measurement of existing use cases in the first phase of the task, resulting in \ref{del:req1} (M3). This will later be refined in the second phase to take into account feedback from the initial implementations of the use cases, resulting in \ref{del:req2} (M14). This will allow a precise measure of success to be defined for each use case, without over-generalisation.
+\theTask{} will determine the requirements of the \TheProject{} project as a whole.  It will identify the main technical and functional challenges that must be addressed by the \TheProject{} approach. We will also identified the big-data analytics databases, filesystems, frameworks and libraries that will be targeted in the project.The identified  requirements will be fed into each of the technical work packages, forming a foundation for the design and implementation of the associated methods and tools. We will also determine KPIs for achieving the overall expected impacts (Section~\ref{sect:impacts}), application-specific success criteria for each already existing use case, plus the associated measurement criteria. As a part of this task, we will also devise a certain level of business oriented semantics for multilevel security requirements allocation, detecting potential sensitive business data leaks and planning for building the bridge between business views (e.g.~Air Traffic Management data vs Unmanned Traffic Management data) and programmatic views. This task will proceed in two phases. In the first phase, we will determine the KPIs, create clear definitions and undertake the baseline measurement of existing use cases. This will be reported in \ref{del:req1} (M3). This will later be refined in the second phase to take into account feedback from the initial implementations of the use cases, resulting in \ref{del:req2} (M15). This will allow a precise measure of success to be defined for each use case, without over-generalisation. Each of the project partners will contribute with an effort in this task.
 \end{Task}
 
 \begin{Task}
-  \TaskTitle{Use Case: Air Traffic Management}
-\TaskStart{1}
-\TaskEnd{27}
+%\TaskTitle{Parallel Computation and Control for High-Level Modelling Languages} % for Aerospace and Automotive Industries}
+\TaskTitle{Data Fabrication for Use Cases}
+\TaskParticipant{UOD}{1}
+
+\TaskStart{3}
+\TaskEnd{32}
 \TaskResults{%
+\ref{del:eval1},
+\ref{del:eval2},
+\ref{del:eval3}
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:usecase:airtrafficman}
-\theTask{} will develop the use case applications that will be used to evaluate the \TheProject{} technology in a realistic setting. They will be used to test our technology as a whole in realistic conditions, using both synthetic data produced using data fabrication, as well as realistic data coming from the use cases.
+\tasklabel{task:datafab}
+\theTask{} will adapt the \IBMshort{} Data Fabrication Platform to produce synthetic but realistic datasets for the use cases that will be considered. This will have a number of benefits, allowing evaluation of the \TheProject{} technologies from their early stages on realistic use cases without the privacy issues arising from the use of real data. It will also allow us to stress-test the system, as we will be able to generate arbitrarily large volumes of data and test the system on it. Therefore, while our aim is to eventually test the \TheProject{} technologies on big data applications working on real data, data fabrication will serve as a crucial technique for benchmarking the system.
+\end{Task}
 
-\textbf{Air Traffic Management.} 
+\begin{Task}
+\TaskTitle{Use Cases}
+\TaskStart{3}
+\TaskEnd{36}
+\TaskResults{%
+\ref{del:eval1},
+\ref{del:eval2},
+\ref{del:eval3}
+}
+\TaskHeader{}
+\tasklabel{task:usecases}
+\theTask{} will develop the use case applications that will be used to evaluate the \TheProject{} technology in a realistic setting. They will be used to test our technology as a whole in realistic conditions, using both synthetic data produced using data fabrication, as well as realistic data (where feasible). We will also support a certain level of business oriented semantics for multilevel security requirements allocation, detecting potential sensitive business data leaks and start building the bridge between business views (for instance Air Traffic Management data vs Unmanned Traffic Management data if it makes sense that they have different security requirements) and programmatic views.
 
-To address the use case described in section \ref{sec:atm} the Frequentis MosaiX SWIM aviation integration platform is used which provides tools and applications that ANSPs need to overcome these challenges and to facilitate the exchange of information between all industry stakeholders for better-informed decision making and shared situational awareness. It is specifically designed to assist the Aviation industry with its migration to SWIM and to facilitate the exchange of information between all industry stakeholders for better informed decision making and the creation of new applications and services. This reduces vendor lock-in by allowing customers to substitute components and incorporate new technologies in the future. The outcome of this project will ensure that one of the key benefits, is ensured in a comprehensive security solution.
+\textbf{Air Traffic Management (\FRQshort{}.} To address the use case described in section \ref{sec:atm} the Frequentis MosaiX SWIM aviation integration platform is used which provides tools and applications that ANSPs need to overcome these challenges and to facilitate the exchange of information between all industry stakeholders for better-informed decision making and shared situational awareness. It is specifically designed to assist the Aviation industry with its migration to SWIM and to facilitate the exchange of information between all industry stakeholders for better informed decision making and the creation of new applications and services. This reduces vendor lock-in by allowing customers to substitute components and incorporate new technologies in the future. The outcome of this project will ensure that one of the key benefits, is ensured in a comprehensive security solution.
 In addition, the customisable metrics and dashboards will be extended by the machine learning outcomes produced within this project including early-deviation-recognition and security pattern discovery. MosaiX SWIM represents a fundamental shift from today’s monolithic solutions where adopting new technologies requires re-engineering the whole system.
-The use case of drone deconfliction will be use for the use case. To perform strategic deconfliction the flight path of one of the conflicting drones needs to be altered at the leg between two way points at which the conflict takes place. One drone should climb, the other drone should descend. A conflict occurs if two or more drones flying along their planned flight paths come into close proximity with each other. To be able to perform 4D conflict detection the following information needs to be known: Drone flight path way points in 3D space and the planned time of arrival for each way point. For tactical conflict resolution the shortest vector of way from an approaching other drone shall be calculated and executed immediately. However, such capability is expected to be built into the drone itself, not requiring any external input or network.
-
-\emph{We want to prove that we can secure an distribute coding base ranging over several different domains without compromising the overall ecosystem.}
+The use case of drone deconfliction will be use for the use case. To perform strategic deconfliction the flight path of one of the conflicting drones needs to be altered at the leg between two way points at which the conflict takes place. One drone should climb, the other drone should descend. A conflict occurs if two or more drones flying along their planned flight paths come into close proximity with each other. To be able to perform 4D conflict detection the following information needs to be known: Drone flight path way points in 3D space and the planned time of arrival for each way point. For tactical conflict resolution the shortest vector of way from an approaching other drone shall be calculated and executed immediately. However, such capability is expected to be built into the drone itself, not requiring any external input or network. \emph{We want to prove that we can secure a distribute coding base ranging over several different domains without compromising the overall ecosystem.}
 
 
-\begin{itemize}
-    \item Languages
-        \begin{itemize}
-            \item Java
-            \item JavaScript
-			\item Python
-        \end{itemize}
-    \item Platform and Technology
-        \begin{itemize}
-            \item Elasticsearch
-            \item Azure Data Lake Analytics
-            \item Azure AI
-        \end{itemize}
-    \item Storage
-        \begin{itemize}
-            \item Azure Data Lake
-			\item Azure SQL Database
-            \item My-SQL
-        \end{itemize}
-\end{itemize}
+%\begin{itemize}
+%    \item Languages
+%        \begin{itemize}
+%            \item Java
+%            \item JavaScript
+%			\item Python
+%        \end{itemize}
+%    \item Platform and Technology
+%        \begin{itemize}
+%            \item Elasticsearch
+%            \item Azure Data Lake Analytics
+%            \item Azure AI
+%        \end{itemize}
+%    \item Storage
+%        \begin{itemize}
+%            \item Azure Data Lake
+%			\item Azure SQL Database
+%            \item My-SQL
+%        \end{itemize}
+%\end{itemize}
 
-\end{Task}
+\textbf{Digital Banking (\SOPRAshort{}).} \emph{Digital banking} is the digitisation or transferring online of all the traditional banking activities and processing services that were historically only available to customers when physically inside of a bank branch. Customers are now performing touch-less transactions with money deposits, withdrawals, and fund transfers executed on mobile devices. The transaction touch-point is now migrated to customers mobile phones and tablets. Merchants that traditionally would have had a fix address (place of business) are now mobile as their own mobile devices are now converted into card terminals. The traditional trusted end-point security model is now disrupted into a \emph{zero trust architecture}. The addition of Internet-of-Things transactions i.e. train access gates, unmanned shops and push button ordering devices the stable environment of banking is now open to the revolution in the information age. \emph{We want to secure each component to ensure the specific step in the digital banking process is secure and trusted. The core issue is that the different processing steps are no-longer solely under the control of the traditional banking ecosystem.}
 
-\begin{Task}
-  \TaskTitle{Use Case: Digital Banking}
-\TaskStart{1}
-\TaskEnd{27}
-\TaskResults{%
-%\ref{del:model1}
-}
-\TaskHeader{}
-\tasklabel{task:usecase:openbank}
-\theTask{} 
-\textbf{Digital Banking.}
+%\begin{itemize}
+%    \item Languages
+%        \begin{itemize}
+%            \item C++
+%            \item Python using C++ libraries
+%        \end{itemize}
+%    \item Platform and Technology
+%        \begin{itemize}
+%            \item Dask Cluster
+%            \item Azure Data Factory
+%            \item Azure Data Lake Analytics
+%            \item Azure Synapse Analytics
+%            \item Azure Databricks
+%            \item Azure AI
+%            \item AWS Fargate
+%            \item AWS Athena
+%        \end{itemize}
+%    \item Storage
+%        \begin{itemize}
+%            \item Samba File Storage
+%            \item Azure Data Lake
+%            \item Azure Databricks
+%            \item AWS Lake Formation
+%            \item AWS S3
+%            \item AWS Redshift
+%        \end{itemize}
+%\end{itemize}
 
-\theTask{} is Digital banking is the digitization or transferring online of all the traditional banking activities and processing services that were historically only available to customers when physically inside of a bank branch. Customers are now performing touch-less transactions with money deposits, withdrawals, and fund transfers executed on mobile devices. The transaction touch-point is now migrated to customers mobile phones and tablets. Merchants that traditionally would have had a fix address (place of business) are now mobile as their own mobile devices are now converted into card terminals. The traditional trusted end-point security model is now disrupted into a \emph{zero trust architecture}. The addition of Internet-of-Things transactions i.e. train access gates, unmanned shops and push button ordering devices the stable environment of banking is now open to the revolution in the information age.
+\textbf{Healthcare (\SOPRAshort{}).} Global healthcare is becoming a major impact on the global environment as related to economical impact, ease of travel between countries. The world is globalising at an ever-increasing rate. The rise in health care costs globally is causing a disruption of the traditional healthcare model as patient demographics is now evolving to a model of medical cover in home country with cover globally. This evolving consumer expectations is generating new market complexities. Complex health and technology ecosystems are forcing new data sharing agreements and requirements onto the global health care providers. People now invest in value-add care, advanced digital technologies and innovative care delivery requirements. At the core of this is a massive set of ever-increasing data interchange and processing requirements. Global healthcare needs a \emph{zero trust architecture} to support these uncertainties in security and build a smart health ecosystem that can meet the current and future healthcare model. \emph{We want to show that by securing the processing into the core healthcare ecosystem at the edge it indirectly secures the internal zero trust architecture security model.}
 
-\emph{We want to secure each component to ensure the specific step in the digital banking process is secure and trusted. The core issue is that the different processing steps are no-longer solely under the control of the traditional banking ecosystem.}
 
-\begin{itemize}
-    \item Languages
-        \begin{itemize}
-            \item C++
-            \item Python using C++ libraries
-        \end{itemize}
-    \item Platform and Technology
-        \begin{itemize}
-            \item Dask Cluster
-            \item Azure Data Factory
-            \item Azure Data Lake Analytics
-            \item Azure Synapse Analytics
-            \item Azure Databricks
-            \item Azure AI
-            \item AWS Fargate
-            \item AWS Athena
-        \end{itemize}
-    \item Storage
-        \begin{itemize}
-            \item Samba File Storage
-            \item Azure Data Lake
-            \item Azure Databricks
-            \item AWS Lake Formation
-            \item AWS S3
-            \item AWS Redshift
-        \end{itemize}
-\end{itemize}
+%\begin{itemize}
+%    \item Languages
+%        \begin{itemize}
+%            \item C++
+%            \item Python using C++ libraries
+%        \end{itemize}
+%    \item Platform and Technology
+%        \begin{itemize}
+%            \item Dask Cluster
+%            \item Azure Data Factory
+%            \item Azure Data Lake Analytics
+%            \item Azure Synapse Analytics
+%            \item Azure Databricks
+%            \item Azure AI
+%            \item Azure Bot Service
+%            \item Azure AI
+%            \item AWS Fargate
+%            \item AWS Athena
+%            \item Google Cloud Dataproc
+%            \item Google Cloud BigQuery
+%        \end{itemize}
+%    \item Storage
+%        \begin{itemize}
+%            \item Samba File Storage
+%            \item Azure Data Lake
+%            \item Azure Databricks
+%            \item AWS Lake Formation
+%            \item AWS S3
+%            \item AWS Redshift
+%            \item Google Cloud Data Lake
+%        \end{itemize}
+%\end{itemize}
 
-\end{Task}
-
-\begin{Task}
-  \TaskTitle{Use Case: Healthcare}
-\TaskStart{1}
-\TaskEnd{27}
-\TaskResults{%
-%\ref{del:model1}
-}
-\TaskHeader{}
-\tasklabel{task:usecase:healthcare}
-\theTask{} 
-\textbf{Healthcare.} 
-
-\theTask{} is Global healthcare is becoming a major impact on the global environment as related to economical impact, ease of travel between countries. The world is globalising at an ever-increasing rate. The rise in health care costs globally is causing a disruption of the traditional healthcare model as patient demographics is now evolving to a model of medical cover in home country with cover globally. This evolving consumer expectations is generating new market complexities. Complex health and technology ecosystems are forcing new data sharing agreements and requirements onto the global health care providers. People now invest in value-add care, advanced digital technologies and innovative care delivery requirements. At the core of this is a massive set of ever-increasing data interchange and processing requirements. Global healthcare needs a \emph{zero trust architecture} to support these uncertainties in security and build a smart health ecosystem that can meet the current and future healthcare model.
-
-\begin{itemize}
-    \item Languages
-        \begin{itemize}
-            \item C++
-            \item Python using C++ libraries
-        \end{itemize}
-    \item Platform and Technology
-        \begin{itemize}
-            \item Dask Cluster
-            \item Azure Data Factory
-            \item Azure Data Lake Analytics
-            \item Azure Synapse Analytics
-            \item Azure Databricks
-            \item Azure AI
-            \item Azure Bot Service
-            \item Azure AI
-            \item AWS Fargate
-            \item AWS Athena
-            \item Google Cloud Dataproc
-            \item Google Cloud BigQuery
-        \end{itemize}
-    \item Storage
-        \begin{itemize}
-            \item Samba File Storage
-            \item Azure Data Lake
-            \item Azure Databricks
-            \item AWS Lake Formation
-            \item AWS S3
-            \item AWS Redshift
-            \item Google Cloud Data Lake
-        \end{itemize}
-\end{itemize}
-
-This is a extension of the work we are completing for Europe via the SERUMS project (\url{https://www.serums-h2020.org/})
+%This is a extension of the work we are completing for Europe via the SERUMS project (\url{https://www.serums-h2020.org/})
 
 %% investigate (https://cordis.europa.eu/project/id/883335)
-
-\emph{We want to show that by securing the processing into the core healthcare ecosystem at the edge it indirectly secures the internal zero trust architecture security model.}
-
 \end{Task}
 
 \begin{Task}
-  \TaskTitle{Evaluation}
-\TaskStart{1}
-\TaskEnd{27}
+  \TaskTitle{Evaluation and Roadmapping}
+\TaskStart{3}
+\TaskEnd{36}
 \TaskResults{%
+\ref{del:eval1},
+\ref{del:eval2},
+\ref{del:eval3}
 %\ref{del:model1}
 }
 \TaskHeader{}
 \tasklabel{task:evaluation}
-\theTask{} will evaluate the \TheProject{} tools and technologies against the overall project requirements and success criteria that were identified in T7.1, using the representative metrics and use cases that were developed in T7.2. We aim to especially evaluate those aspects that contribute to the creation of impact by the industrial partners from the selected domains. We will evaluate both how much the security and privacy of the data and data analytics models is improved using the \TheProject{} techniques, using simulated cyber-attacks for testing, and how easy it is for end users to use the \TheProject{} methodology for developing secure distributed data analytics applications. The lessons learned from this task will provide feedback into different technical work packages, steering the development of \TheProject{} technologies in the subsequent phases of the project, as well as into the roadmapping task (T7.5). The task will proceed in three phases, evaluating initial (phase 1), refined (phase 2) and final use cases (phase 3). Results will be reported in \ref{del:eval1} (M12), \ref{del:eval2} (M25) and \ref{del:eval3} (M36), respectively. 
-\end{Task}
-
-\begin{Task}
-  \TaskTitle{Roadmapping}
-  \TaskParticipant{UOD}{1}
-  \TaskResults{
-  \ref{del:roadmap}.
-  }
-  \TaskHeader{}
-  \tasklabel{task:roadmapping}
-  \theTask{} will use the outcomes of T7.3 to undertake roadmapping activities that are aimed at situating future \TheProject{} technologies in the context of emerging technical developments in development of secure distributed data analytics applications and in broadening the long-term impact of the \TheProject{} project. This roadmap will consider new and emerging developments in security, deep-learning, data lakes, blockchains, cloud computing etc. as they relate to the secure analytics of big data. It will highlight possible future applications of the \TheProject{} technology, and indicate the further work that needs to be done to bring the \TheProject{} technologies to market. The result of this task will be a report describing the technical roadmap, highlighting the issues for future research and use of \TheProject{} technology, also being used as input for T8.2 (Exploitation and Use). 
+\theTask{} will evaluate the \TheProject{} tools and technologies against the overall project requirements and success criteria that were identified in~\ref{task:requirements} using the representative metrics and use cases that were developed in~\ref{task:usecases}. We aim to especially evaluate those aspects that contribute to the creation of impact by the industrial partners from the selected domains. We will evaluate both how much the security and privacy of the data and data analytics models is improved using the \TheProject{} techniques, using simulated cyber-attacks for testing, and how easy it is for end users to use the \TheProject{} methodology for developing secure distributed data analytics applications. The lessons learned from this task will provide feedback into different technical work packages, steering the development of \TheProject{} technologies in the subsequent phases of the project. We will also undertake roadmapping activities that are aimed at situating future \TheProject{} technologies in the context of emerging technical developments in development of secure distributed AI-based big data analytics applications and in broadening the long-term impact of the \TheProject{} project. This roadmap will consider new and emerging developments in security, privacy, AI, data lakes, cloud computing etc. as they relate to the analytics of big data. It will highlight possible future applications of the \TheProject{} technology, and indicate the further work that needs to be done to bring the \TheProject{} technologies to market (\ref{del:eval3}). 
+%The result of this task will be a report describing the technical roadmap, highlighting the issues for future research and use of \TheProject{} technology, also being used as input for T8.2 (Exploitation and Use). 
   \end{Task}
   
 
-\begin{Task}
-  \TaskTitle{What about Assessment of business oriented sensitive data protection ?}
-  \TaskParticipant{YAG}{1}
-  \TaskResults{
-  \ref{del:roadmap}.
-  }
-  \TaskHeader{}
-  \tasklabel{task:BusinessDataFlaws}
-  \color{blue} \textbf{(TBD)}
-  Dealing with data, the YAG-Suite could support a certain level of business oriented semantics for multilevel security requirements allocation, detecting potential sensitive business data leaks and start building the bridge between business views (for instance Air Traffic Management data vs Unmanned Traffic Management data if it makes sense that they have different security requirements) and programmatic views.
-  In \TheProject{} it would be interesting to include such customization in the use cases.
-  
-  \end{Task}
+%\begin{Task}
+%  \TaskTitle{What about Assessment of business oriented sensitive data protection ?}
+%  \TaskParticipant{YAG}{1}
+%  \TaskResults{
+%  \ref{del:roadmap}.
+%  }
+%  \TaskHeader{}
+%  \tasklabel{task:BusinessDataFlaws}
+%  \color{blue} \textbf{(TBD)}
+%  Dealing with data, the YAG-Suite could support a certain level of business oriented semantics for multilevel security requirements allocation, detecting potential sensitive business data leaks and start building the bridge between business views (for instance Air Traffic Management data vs Unmanned Traffic Management data if it makes sense that they have different security requirements) and programmatic views.
+%  In \TheProject{} it would be interesting to include such customization in the use cases.
+%  
+%  \end{Task}
 
 \begin{WPDeliverables}
   \begin{compactitem}
-    \item XX
-%\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
+\item \ref{del:req1} (Month 3) : Report on Initial Requirements for \TheProject{} Techniques
+\item \ref{del:eval1} (Month 14): Report on Initial Implementation and Evaluation of Use Cases
+\item \ref{del:req2} (Month 15) : Report on Final Requirements for \TheProject{} Techniques
+\item \ref{del:eval2} (Month 26) : Report on Refined Implementation and Evaluation of Use Cases
+\item \ref{del:eval3} (Month 36) : Report on Final Implementation and Evaluation of Use Cases and Project Roadmap
 \end{compactitem}
 \end{WPDeliverables}
 \end{Workpackage}

@@ -1596,7 +1596,7 @@ Availability of better standardisation and automated assessment frameworks for s
 \paragraph{How Will \TheProject{} Achieve This Impact:}
 Standardisation is one of the main goals of the \TheProject{} project. We will build the source code analytics tooling to ensure the conformance of the C++ and Java code to the state-of-the-art coding standards. We will also extend these standards over the course of the project, providing new rules and guidelines specifically aimed at composing the large-scale distributed applications from multiple layers of libraries. This will contribute to better standardisation of the network systems. Furthermore, the formal methods for proving the security properties of the systems will allow additional formal assurance for the security of software, further allowing better-informed investment decisions with respect to security and privacy.
 
-\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 1}; \textbf{Objectives 1} and \textbf{4}}
+\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 1}; \textbf{Objectives 1} and \textbf{4}.}
 
 \end{mdframed}
 
@@ -1607,7 +1607,9 @@ Availability and widespread adoption of distributed, enhanced trust management s
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-XX
+The \TheProject{} project will produce a coherent, tool-supported and transparent methodology for developing secure and privacy-preserving big data applications. The methodology will be founded on the principle of software engineering patterns for code design and implementation and supported by the rigorous formal methods for verifying security properties of the code, as well as on code analysis and refactoring for compliance to the security coding standards. These standards, as well as the tooling to detect and repair security and privacy vulnerabilities, will be continuously evolving over the course of the project and beyond, making sure they are up-to-date with the new threats that appear. All this will enhance trust of the software developers in the security of the code that will be produced.
+
+\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 4}; \textbf{Objectives 6} and \textbf{7}.}
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1718,7 +1720,6 @@ One of especially important areas for societal impact that the \TheProject{} pro
 {{\bfseries \tablename\ \thetable{} -- continued from previous
 page}} \\ \hline
  \textbf{Possible Barrier}&
-
 \textbf{Mitigation}\\ \hline
 \endhead
 
@@ -1732,11 +1733,49 @@ page}} \\ \hline
 \addtocounter{barrier}{1}
 \noindent
 \emph{Barrier \thebarrier.}
-\par \emph{Barrier 1:}
-
+\TheProject{} technologies are unable to significantly reduce incidence and/or impact of the cybersecurity incidents in AI-based big data applications.
 &
 \noindent
+The \TheProject{} consortium comprises a mix between the partners with long experience in developing technologies both for security (\IBMshort{}, \YAGshort{}, \COGNIshort{} \SCCHshort{} and \SAshort{}) and privacy (\SCCHshort{}, \SOPRAshort{} and \SAshort{}) and the partners with expertise in big data analytics (\UODshort{} and \SOPRAshort{}). Adding to this the realistic use cases that will be consider (\SOPRAshort{} and \FRQshort{}), as well as the expertise in conformance to standards and formal specification and verification of properties (\SAshort{} and \UCMshort{}), our consortium is ideally placed to tackle the problem presented. Therefore, the quantifiable benefits should be fully attainable.
+\\ \hline
+\addtocounter{barrier}{1}
+\noindent
+\emph{Barrier \thebarrier.}
+Self-Healing techniques developed over the course of the project cannot repair the identified security and privacy vulnerabilities.
+&
+\noindent
+The project partners, especially \SAshort{}, \SCCHshort{} and \SOPRAshort{}, already have academic and industrial experience from the previous successful EU projects with developing techniques for modifying the code to increase its security and privacy. Furthermore, \TheProject{} will develop two complementary methods for self-healing, one based on static code modification (code refactoring based on established secure code patterns) and the other one based on runtime adaptation. This will ensure that each vulnerability is treated by two different technologies, significantly increasing the chance of it being addressed successfully. 
+\\ \hline
+\addtocounter{barrier}{1}
+\noindent
+\emph{Barrier \thebarrier.}
+The \TheProject{} techniques are unable to deal with new threats that arise.
+&
+\noindent
+\TheProject{} will include self-healing methods that are based on monitoring the overall health of the system, rather than identifying any particular threat. This, combined with ensuring conformance to general security coding standards and formal methods to verify security properties that are both also independent of any particular threat, will allow for our technologies to address not only the existing, but also new threats that arise.
+\\ \hline
+\addtocounter{barrier}{1}
+\noindent
+\emph{Barrier \thebarrier.}
+Formal methods developed over the course of \TheProject{} cannot verify important security properties.
+&
 XX
+\ \hline
+\addtocounter{barrier}{1}
+\noindent
+\emph{Barrier \thebarrier.}
+\TheProject{} does not contribute to better understanding of security and privacy issues.
+&
+\TheProject{} methodology will include clear guidelines on developing secure and privacy preserving big data analytics. In particular, security patterns will include guidelines on how to compose such applications from components addressing different layers of abstraction, identifying issues arising from each of the components as well as from the interaction between components. This will lead to better understanding of the security and privacy issues involved in developing such complex applications. The use cases will be the first test of the understandability of our principles, as they will be developed by software developers that might not be experts in security and privacy.
+\\ \hline
+\addtocounter{barrier}{1}
+\noindent
+\emph{Barrier \thebarrier.}
+The \TheProject{} methodology is not adopted by a wider community.
+&
+\noindent
+The benefits of the \TheProject{} methodology will be explained clearly and supported by both mathematical (formal reasoning) and software engineering (design patterns) foundation. Evidence of the improvements in security and privacy will be communicated to the possible users and the \TheProject{} technologies and methodology will be promoted to wide audiences by MOOCs. Furthermore, the project consortium contains software developers who will be able to identify any barriers in the methodology itself to its more widespread adoption.
+
 \end{longtable}
 
 %\draftpage
@@ -2657,6 +2696,30 @@ relaxing or deleting some part of those objectives as required
 to achieve success. 
 
 \\\hline
+Inability to achieve interoperability between different techniques for detecting security vulnerabilities
+(\textbf{Likelihood: Medium}
+\par
+{\textbf{Severity: Low}})
+& WP2 &
+Due to the fact that we will consider three complementary methods for detecting security vulnerabilities (static analysis, dynamic analysis and runtime analysis), each with its own advantages and disadvantages, it might be proved infeasible to automatically link all three in a tool-chain, in terms of automatic converting of an output of one method to an input of another. In this case, we will not aim at full integration of the overall system and the associated development methodology will be extended with guidelines of how the interoperability can be achieved, i.e.~how do the outputs of one phase of detection need to be adapted to serve as inputs to the next one. 
+
+\\\hline
+Inability to adapt the generic vulnerability detection techniques to AI-based distributed big data analytics.
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: High}}
+& WP2, WP3 &
+XX
+
+\\\hline
+Self-Healing techniques cannot repair the identified vulnerabilities.
+(\textbf{Likelihood: Medium}
+\par
+{\textbf{Severity: Medium}})
+& WP2, WP3 &
+While implementing both code refactoring and runtime adaptation to deal with reparation of identified vulnerabilities will ensure we are able to repair a wide range of vulnerabilities, it is possible (and likely) that we will identify certain vulnerabilities that will require so substantial re-engineering of the code that it will be impossible to achieve it with either of these two methods. In such cases, we will aim to capture such code patterns and feed them into the extensions of security coding standards that will be developed over the course of the project, as well as to identify the code practices that lead to such threats and address them in more abstract way in the \TheProject{} methodology. In an unlikely event that this turn out to be the case for most of the security and privacy vulnerabilities, we will redeploy the effort from self-healing into developing coding standards and project methodology and deal with these threats there.
+
+\\\hline
 Security and privacy vulnerabilities arise from the internals of the libraries for storage and processing of big data.
 \par
 ({\textbf{Likelihood: Low}}
@@ -2689,6 +2752,49 @@ Unacceptable complexity
 {\textbf{Severity: Medium }})
 & WP2, WP4 &
 While the verification may prove that a system satisfies the required security contracts, the measures required to assess, recognise and mitigate critical situations may turn out to be too complex. In this case, the mitigation measure is to investigate, if the requirements can be weakened to lower complexity.
+
+\\\hline
+Inability to formalise security requirements in a form viable for automated reasoning
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: Medium}}
+& WP4 &
+XX
+
+\\\hline
+Something Related to Identity Management
+(\textbf{Likelihood: XX})
+\par
+{\textbf{Severity: XX}}
+& WP5 &
+XX
+
+\\\hline
+Something related to coding standards
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: Medium}}
+& WP4 &
+XX
+
+\\\hline
+Inability to design a coherent design patterns and the \TheProject{} methodology due to differences in systems and libraries at different levels of abstraction.
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: Medium}}
+& WP6 &
+There is a large number of systems, libraries and frameworks for different layers of a typical big data analytics application, including many different distributed databases (both SQL and NOSQL), processing frameworks and machine-learning libraries. There is no clear standard in any of these layers, which makes developing universal design patterns and methodology for combining them challenging. It is necessary, due to the length of the project and resources committed, to restrict ourselves to a relatively small subset of the systems/libraries. Should it prove difficult to develop patterns and methodology for the systems/libraries considered, we will further restrict ourselves to very particular systems (based on MS Azure that is used in most parts of the use cases), sacrificing the generality 
+
+\\\hline
+Adapting the \TheProject{} technologies to the considered use cases presents unforeseen difficulties.
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: Medium}}
+& WP7 &
+XX
+
+
+
 \\\hline
 \end{longtable}
 %\newpage
