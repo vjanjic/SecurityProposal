@@ -345,7 +345,7 @@ ToDo List:
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.92]{DigitalFortress-Vision-v2.png}
+  \includeimage[scale=0.92]{DigitalFortress-Vision-v3.png}
 %  \vspace{-3cm}
   \caption{\TheProject{} Vision}
   \label{fig:vision}
@@ -364,7 +364,7 @@ ensure security and privacy of data analytics at all times.
 There are known considerations on security and privacy in cloud computing~\cite{cloudSecurity}, and big data analytics adds two further dimensions through
 concerns over data storage and processing~\cite{bigdataSecurity}, and potential information leakages from machine learning models~\cite{mlSecurity}.
 In addition, data intensive applications are typically built from layers of different libraries, where each layer corresponds to a level of abstraction (e.g. data storage, data transfer, data processing) and has security and privacy issues on its own and with adjacent layers. Formal methods are the only currently-known approaches that 
-could provide strong end-to-end security guarantees throughout system execution and across layers of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
+could provide strong end-to-end security guarantees throughout system execution and across levels of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
 Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
 %Big-data offers a great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever stricter regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
 
@@ -389,7 +389,12 @@ Nonetheless, establishing security and privacy properties of big data analytics 
 %from the way big data is stored (usually in distributed filesystems or databases) and is processed (with multiple distributed agents interacting and exchanging potentially sensitive information). Security mechanisms that protect sensitive data in such settings are still fragile, and not advanced enough to provide sufficient trust in the whole data analytics process. 
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\emph{\TheProject's main goal is to significantly increase the trust in modern data analytics systems by assisting software developers in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for verification of security and data privacy properties of the code.}
+\emph{\TheProject's main goal is to significantly increase the trust in modern data analytics systems by 
+supporting the development of secure and privacy-preserving distributed code used in these systems, and 
+%assisting 
+%software developers in developing secure and privacy-preserving distributed data analysis code,
+offering a combination of %combining 
+tools for identifying and repairing security vulnerabilities with rigorous formal methods for verification of security and data privacy properties of the code.}
 \end{mdframed}
 
 
@@ -456,22 +461,31 @@ for developing secure distributed applications and providing formal guarantees a
 %  the safety of run-time behaviour of undeterministic large-scale distributed data analytics; \emph{This fulfils part of
 %    \textbf{Aim 1}}.
 
-\item[Objective 2:] To develop novel techniques based on a combination of static analysis, dynamic symbolic execution and run-time monitoring for identifying security and privacy vulnerabilities in multi-layer AI-based big data applications, addressing the complete software development stack from low-level distributed file system operations to high-level machine-learning, guiding the verification of security properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 2:] To develop novel techniques based on a combination of static analysis, dynamic symbolic execution and run-time monitoring for identifying security and privacy vulnerabilities across layers %in multi-layer AI-based 
+in big data applications, addressing the complete software development stack from low-level distributed file system operations to high-level machine-learning, guiding the verification of security and privacy properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
   
-\item[Objective 3:] To develop novel \emph{self-healing} techniques based on software refactoring and machine-learning based run-time adaptation for semi-automatic repairing of the identified security vulnerabilities in the code, together with the novel privacy-preserving mechanisms for data analytics and knowledge-sharing across parties, providing rigorous handling of information-leakage using information-theoretic mathematical analysis. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 3:] To develop novel \emph{self-healing} techniques based on software refactoring and machine-learning based run-time adaptation for semi-automatic repairing of the identified security vulnerabilities in the code. %, together with the 
+Investigate novel privacy-preserving and knowledge transfer mechanisms for data analytics 
+%and knowledge-sharing across parties, providing rigorous handling of information-leakage using information-theoretic
+using mathematical analysis to determine information leakage. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:] To build on the existing and develop new security \emph{coding standards} for C++ and to build the tools for automatic analysis of the code for conformance to these standards, providing guidance to developing new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+\item[Objective 4:] To build on existing and/or develop new security \emph{coding standards} for C++, and to build tools for automatic code analysis in accordance with %of the code for conformance to 
+these standards, providing guidance on how to develop new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
 
 \item[Objective 5:] To augment the existing security layer of distributed data analytics applications with AI-driven identity management schemes, implementing intelligent biometric technology for user authentication, and blockchain technology for user access control. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
-\item[Objective 6:] To develop a novel methodology based on security contracts, vulnerability detection \& mitigation,
-  privacy-preserving and secure authentication, and supported by semi-automated code refactoring techniques for
-  increasing security of the existing and developing secure new distributed data-analytics algorithms. \emph{This fulfils
+\item[Objective 6:] To develop a novel methodology based on formally verified security contracts, vulnerability detection \& mitigation, 
+  privacy-preserving and secure authentication, fully supported by semi-automated code refactoring techniques for
+  increasing the security of %the 
+  existing/new % and developing secure new 
+  distributed data-analytics algorithms. \emph{This fulfils
     part of \textbf{Aim 4}}.
 
-\item[Objective 7:] To demonstrate that the \TheProject{} technology allows for improved security and reduced
-  information leakage in distributed AI-based data analytics code, using a variety of real-world security-sensitive
-  use cases from healthcare, banking and aerospace application domains. \emph{This fulfils part of \textbf{Aim 5}};
+\item[Objective 7:] To demonstrate that \TheProject{}'s technology improves security and prevents %reduced
+  information leakage in %distributed AI-based 
+  data analytics code, through a variety of real-world security-sensitive
+  use cases from different domains. % from healthcare, banking and aviation application domains. 
+  \emph{This fulfils part of \textbf{Aim 5}}.
 
 \item[Objective 8:] To build a sustainable user community involving a variety of stakeholders that will ensure the long-term
   uptake, development and commercial success of the tools and techniques developed over the course of the \TheProject{}
@@ -491,8 +505,20 @@ for developing secure distributed applications and providing formal guarantees a
 %\end{itemize}
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\paragraph{End-Users and Software Developers.}
-Most of the technologies that will be developed over the course of the \TheProject{} project are aimed at assisting \emph{software developers} in developing and deploying their code. This includes the \TheProject{} methodology, as well as the tools for detecting and repairing security vulnerabilities, verification of the properties of the code, code analysis for conformance to coding standards and authentication mechanisms. All this will increase the trust in the developed big data analytics systems. However, \TheProject{} will also benefit the \emph{end users} of the big data applications. This is most notable in the considered use cases, that will directly benefit the end-users by XX. Additionally, the authentication mechanisms will allow these users to XX. 
+\paragraph{End Users \& Software Developers.}
+Most of the technologies to be developed within
+%that will be developed over the course of 
+\TheProject{}  aim to support \emph{software developers}
+%are aimed at assisting \emph{software developers} 
+with secure coding and deployment. %developing and deploying their code. 
+%This includes the 
+The \TheProject{} methodology envisages user-friendly secure authentication mechanisms as well as %, as well as the 
+tools to detect and repair security vulnerabilities, to formally verify properties of the code, and to analyse code for conformance to coding standards. % and authentication mechanisms. 
+\TheProject{} will benefit \emph{end users} by increasing their trust in big data analytics systems.
+%. However, \TheProject{} will also benefit the \emph{end users} of the big data applications. 
+The chosen use cases and their domains will provide evidence of the impact \TheProject{} can  have on both.
+%This is most notable in the considered use cases, that will directly benefit the end-users by XX. 
+%Additionally, the authentication mechanisms will allow these users to XX. 
 \end{mdframed}
 
 \label{sect:objs-detailed}
@@ -506,7 +532,7 @@ per objective, just to flesh it out.}
 \subsubsection*{Objective 1: Secure Patterns for Distributed Data Processing}
 %subsubsecton*{Security Contracts for Formal Specification of Security Properties}
 \vspace{-6pt}
-Code patterns are a well-established abstraction for designing and implementing complex software systems, including parallel and distributed applications.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the end-user code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In the \TheProject{} project, we will develop novel \emph{secure} design patterns for distributed large-scale data processing that will specify how to combine different layers of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end-user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in a natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate security certificates into security contracts and vice versa. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with guaranteed security properties of the resulting code in an easily-understandable way. 
+Code patterns are a well-established abstraction for designing and implementing complex software systems, including parallel and distributed applications.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the end user code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In \TheProject{} we will develop novel \emph{secure design patterns} for distributed large-scale data processing that will specify how to combine different levels of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in a natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate security certificates into security contracts and vice versa. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with formally guaranteed security properties of the resulting code in an easily-understandable way. 
 %Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
 %\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
 
@@ -514,10 +540,13 @@ Code patterns are a well-established abstraction for designing and implementing 
 \subsubsection*{Objective 2: Identification of Security and Privacy Risks in AI-Based Data Analytics}
 \vspace{-6pt}
 
-A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In the \TheProject{} project, we will develop methods to identify security risks coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use i) static source code analysis; ii) dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and, iii) run-time machine-learning based monitoring of the application execution. We will also develop methods based on stochastic modelling for identifying and quantifying leakage of private information coming from building and applying of distributed machine learning models.
+A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In \TheProject{}  we will develop methods to \emph{identify security risks} coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use \emph{static source code analysis}; dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and \emph{run-time} machine-learning based monitoring of the application \emph{execution}. We will also develop methods based on stochastic modelling for identifying and quantifying leakage of private information coming from building and applying distributed machine learning models.
 
 \subsubsection*{Objective 3: Self-Healing Mechanisms for Repairing Vulnerabilities and Addressing Privacy-Leakage}
-While identifying security risks and privacy leaks is critical for security of distributed data analytics and knowledge sharing across parties, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as transparent to the software developers as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, software developers user should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformation that aim to improve security and privacy. In the \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven \emph{code refactoring} of the source code and machine-learning based run-time adaptation mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of knowledge transfer from the data owned by one party to another party while still preserving privacy of sensitive information contained in the data. 
+While identifying security risks and privacy leaks is critical for security of distributed data analytics and knowledge sharing across parties, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as transparent to the software developers as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, software developers 
+using these novel repair methods
+%user 
+should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformations with the aim to improve security and information privacy. In \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven formally proven \emph{code refactorings} of the source code and machine-learning based \emph{run-time adaptation} mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of knowledge transfer from the data owned by one party to another party while still preserving privacy of sensitive information contained in the data. 
 
 
 %% We will move part of this to the background work & advancement beyond STOA
@@ -536,17 +565,19 @@ While identifying security risks and privacy leaks is critical for security of d
 
 \subsubsection*{Objective 4: Security Coding Standards}
 The source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, such as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
-In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big-data applications with special attention to vulnerabilities derived from  the programming language. Then we will apply these coding standards to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern based machine learning software components.
+In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big data applications with special attention to vulnerabilities derived from  the programming language. %Then we will apply 
+These coding standards will then be used to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern-based machine learning software components.
 
 \subsubsection*{Objective 5: Intelligent Identity Management and Trust}
 \vspace{-6pt}
 
-In the \TheProject{} project, we will develop an Identity-as-a-Service (IDaaS) technology that will allow the developers to easily integrate, deploy and manage methods for identity, authentication and access management depending on customer requirements and policies. In particular, we will develop and evaluate state-of-the-art multi-factor authentication, and intelligent biometrics based on a combined analysis of physiological, facial and eye gaze data analytics for continuously identifying the end-users. In addition, we will develop a blockchain solution for user access control, as well as data analytics and reporting services aiming to provide intelligent insights from users' biometric data allowing developers to deliver personalised security experience and thus increase user acceptance and trust. Finally, from the end-users’ point of view, the developed IDaaS technology will provide a fluid user experience based on state-of-the-art authentication and access control methods such as easy-to-use tokens, usable, single-touch user approvals, as well as intelligent biometrics based on users' physiological, facial and eye gaze data analytics.
+In \TheProject{}, we will develop an Identity-as-a-Service (IDaaS) technology that will allow developers to easily integrate, deploy and manage methods for identity, authentication and access management depending on customer requirements and policies. In particular, we will develop and evaluate state-of-the-art multi-factor authentication, and intelligent biometrics based on a combined analysis of physiological, facial and eye gaze data analytics for continuously identifying end users. In addition, we will develop a blockchain solution for user access control, as well as data analytics and reporting services aiming to provide intelligent insights from users' biometric data allowing developers to deliver a personalised security experience and thus increase user acceptance and trust. Finally, from an end users' point of view, the developed IDaaS technology will provide a fluid user experience based on state-of-the-art authentication and access control methods such as easy-to-use tokens, usable, single-touch user approvals, as well as intelligent biometrics based on users' physiological, facial and eye gaze data analytics.
 
 \subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
 
-In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end-user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In the \TheProject{}, we will develop a novel methodology for developing secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured rewriting of the end-user code, which will enable easily understandable step-by-step transformation of the initial code into its provably-secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
+In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In \TheProject{}, we will develop a novel methodology for developing proven secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured code rewriting, %of the %end user code, 
+which will enable easily understandable step-by-step transformation of the initial code into its provably secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
 %cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focused more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
 
 \subsubsection*{Objective 7: Demonstrating \TheProject{} Tools and Technologies on Real-World Use Cases}
@@ -701,7 +732,7 @@ holistic way.
 \begin{figure}[tph!]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.55]{DigitalFortress-ConceptualDesign-v3.png}
+  \includeimage[scale=0.55]{DigitalFortress-ConceptualDesign-v4.png}
 %  \vspace{-3cm}
   \caption{Overview of the \TheProject{} Methodology}
   \label{fig:overview}
@@ -1579,10 +1610,11 @@ Self–recovering, inter-operable, scalable, dynamic privacy-respecting identity
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\paragraph{How Will \TheProject{} Achieve This Impact:} \TheProject{} addresses core components of identity management by developing and evaluating methods and tools with the active participation of end-users to advance the state-of-the-art in: i) multi-factor user authentication based on usable and secure token-based and biometric-based authentication methods; ii) continuous user identification based on AI-driven methods for real-time analysis of physiological, facial and eye gaze data analytics; and iii) scalable and dynamic user access control based on blockchain technology. The aforementioned components will be incorporated under a unified system integration model that combines multi-factor authentication with continuous user identification and access control.
+\paragraph{How Will \TheProject{} Achieve This Impact:} Bearing in mind that almost every citizen who is connected online owns several authentication-protected accounts, it is evident that the identity management market represents nowadays one of the biggest Information Technology markets. \TheProject{} addresses core components of identity management by developing and evaluating methods and tools with the active participation of end-users to advance the state-of-the-art in: i) multi-factor authentication (MFA) with usable and secure token-based and biometric-based authentication methods; ii) continuous user identification based on AI-driven methods for real-time analysis of physiological, facial and eye gaze data analytics; and iii) scalable and dynamic user access control based on Blockchain technology.  
+By combining MFA, continuous user identification, and access management with a decentralized Blockchain approach, under a unified, scalable, and privacy-preserving identity management solution, we further enhance the security and privacy of identity managements systems. Simultaneously, given that the development methodology of the proposed solution will follow a User-Centered Design approach, the developed solution aims at improving the usability, user experience, acceptance and trust towards identity management systems.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 3-5}; \textbf{Objectives 5-7} }
-
+%The aforementioned components will be incorporated under a unified system integration model that combines multi-factor authentication with continuous user identification and access control.
 \end{mdframed}
 
 \subsubsection{Medium to Long Term Impacts}
@@ -1606,10 +1638,13 @@ Availability and widespread adoption of distributed, enhanced trust management s
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\paragraph{How Will \TheProject{} Achieve This Impact:}
-The \TheProject{} project will produce a coherent, tool-supported and transparent methodology for developing secure and privacy-preserving big data applications. The methodology will be founded on the principle of software engineering patterns for code design and implementation and supported by the rigorous formal methods for verifying security properties of the code, as well as on code analysis and refactoring for compliance to the security coding standards. These standards, as well as the tooling to detect and repair security and privacy vulnerabilities, will be continuously evolving over the course of the project and beyond, making sure they are up-to-date with the new threats that appear. All this will enhance trust of the software developers in the security of the code that will be produced.
+%\paragraph{How Will \TheProject{} Achieve This Impact:}
+%The \TheProject{} project will produce a coherent, tool-supported and transparent methodology for developing secure and privacy-preserving big data applications. The methodology will be founded on the principle of software engineering patterns for code design and implementation and supported by the rigorous formal methods for verifying security properties of the code, as well as on code analysis and refactoring for compliance to the security coding standards. These standards, as well as the tooling to detect and repair security and privacy vulnerabilities, will be continuously evolving over the course of the project and beyond, making sure they are up-to-date with the new threats that appear. All this will enhance trust of the software developers in the security of the code that will be produced.
 
-\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 4}; \textbf{Objectives 6} and \textbf{7}.}
+%\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 4}; \textbf{Objectives 6} and \textbf{7}.}
+\paragraph{How Will \TheProject{} Achieve This Impact:} Several technologies of \TheProject{} (e.g., multi-factor authentication, continuous user identification, intelligent user interface, etc.) will be designed and developed following a User-Centered Design approach with the active participation of developers and end-users in which evaluation feedback gathered through user studies will lead the development process. Such emphasis on an integrated human-centred design and evaluation philosophy is rarely found in European projects of this kind. Since the results target real-world use and aspire to ultimately improve work processes of certain industries, this user-centred design approach of evaluating the various technologies \emph{in their use} is considered essential. In addition, the proposed user-centered design approach will focus on improving the usability and user experience of security mechanisms, which is a cornerstone aspect within nowadays end-user interactive systems, and consequently enhance user acceptance and trust towards the developed technologies.
+
+\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 3-5}; \textbf{Objectives 5-7} }
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -3712,9 +3747,83 @@ The company’s mission, as proven by the strong research and development track 
 \end{wrapfigure}
 \vspace{10pt}
 
-\textbf{Key Personnel:}
+Founded in 1989, University Carlos III of Madrid (UC3M) is a public university characterized by its strong
+international focus, the quality of its faculty, excellence in research, and commitment to society. Despite being
+a young university, its achievements have placed it among the top universities in Spain. UC3M was one of
+the top five Spanish universities selected in 2009 for the Spanish Campus of International Excellence program.
+UC3M
+is listed in the QS World University ranking in position 311 universities in the world, in position 201-300 for
+Computer Science, and in position 35 in the top 50 universities under 50 years. 
+
+The Computer Architecture, Communication and Systems Group (ARCOS) is part of the School of Engineering. It was formed in 2001 and and has been able to attract as faculty members researchers from different
+universities from Spain and other countries as well as from the industry. ARCOS group focuses on research in
+parallel and distributed computing systems, and real-time embedded systems. ARCOS coordinated the NESUS COST Action (IC 1304). The ARCOS group coordinated the  FP7 REPARA project, and the H2020 ASPIDE project. Besides that, ARCOS is also a member of international networks as the HIPEAC (European Network of High Performance and Embedded Architecture and Compilation) and ETP4HPC (European
+Technology Platform for High Performance Computing) and actively particpates in the ISO C++ standardization effort through ISO/IEC JTC1/SC22/WG21 (C++ standards committee) representing the Spanish National
+Body (UNE).
+
+ARCOS cooperates with well-known international research centers such as Argonne National Laboratory, CERN, IMEC, European Space Agency, University of St. Andrews, IBM Research, University of Pisa, University of Torino, and Univeristy of Linkoping. Besides, UC3M has a good cooperation history with several members in this proposal.
+
+
+\subsubsection*{Key Personnel:}
+
+\textbf{Prof. J. Daniel GARCIA} (gender: male) is a Senior Member of the IEEE and a member of the ACM. He has worked in industry for major companies in Spain and Germany including Telefonica, British Telecom, ING Bank and SIEMENS, having the opportunity to participate in large scale international projects.
+He has published more than 80 journal and conference papers and has edited several special issues for the Journal of Supercomputing, International Journal of Parallel Programming, and Concurrency and Computation: Practice and Experience. He has participated in 14 technology transfer contracts and 22 publicly funded research projects, as well as many others before joining academia. He was the Project Coordinator of the FP7 project REPARA, and he also led UC3M participation in H2020 project RePhrase.
+He has been visiting researcher at University of Modena, Italy, and Visiting Faculty at University of
+Texas, A\&M. He was General Chair of IEEE ISPA 2012 and ICA3PP 2010 and has served in PC of
+more that 50 other related conferences. Since 2008 he is the Spanish Head of delegation in the ISO
+C++ Standards Committee where he actively participated in the development of the current C++11, C++14, C++17 and C++20 standards. He participates with special intensity in the C++ Evolution Working Group and the special Group on Concurrency and Parallelism. He is an
+Associate Professor of Computer Architecture at UC3M since 2006.
+
+\textbf{Prof. Jesus CARRETERO} (gender: male) is a Professor of Computer Architecture at University Carlos III of Madrid since 2002, where he has been involved in a wide range of real-time, embedded systems, and high-performance data management related research, ranging from computer systems (distributed and parallel storage solutions and file systems) to communications systems (wireless sensor networks routing, energy, and programming techniques). Prof. Jesus Carretero coordinated the NESUS. He has published in excess of 150 journal
+and conference papers, has edited conference proceedings (such as HPCC 2011, EuroMPI 2013 and ICA3PP 2016), and special issues of IoT journals, has supervised 18 PhD students in several European universities, and has co-authored 19 book chapters. He has taught in several universities (UPM, UC3M, Northwestern University) and he is Senior Member of the IEEE, member of the IEEE TPDS Committee,
+and member of the ACM.
+
+\textbf{Prof. Javier GARCIA} (gender: male) is an Associate Professor of the University Carlos III of Madrid since 2018. He received the MS degree in Computer Science in 2007 at the University Carlos III of Madrid. He also received a PhD in Computer Science from University Carlos III in 2010. He has cooperated in several
+projects with researchers from various high performance research institutions such as HLRS (funded by HPC-Europe program), DKRZ, and Argonne National Laboratory. 
+He is the coordinator of the H2020 ASPIDE project, a FET-HPC project focused on Exascale computing. He has been involved in other research projects funded by the European Union (such as FP7 REPARA or H2020 Rephrase). He has participated in many conference organization committees, including EuroMPI, ICA3PP, IUCC 2016 and CCGRID 2017.He currently counts with 80 publications in journal and conference papers.
+
 
 \subsubsection*{List of Publications}
+
+\begin{itemize}
+
+\item
+Brown, C., Janjic, V., Barwell, A.D., Garcia, J.D., MacKenzie, K. 
+Refactoring GrPPI: Generic Refactoring for GenericParallelism in C++. 
+International Journal of Parallel Programming. 2020. Springer, 
+ISSN: 1573-7640. 
+DOI: 10.1007/s10766-016-0425-6.
+
+
+\item 
+López-Gómez, J., Rio-Astorga, D., Dolz, M.F., Fernández, J., García, J.D.. 
+Detecting semantic violations of lock-free data structures through C++ contracts.
+Journal of Supercomputing 76:5057–5078, 2020. 
+ISSN: 0920-8542. 
+DOI: 10.1007/s11227-019-02827-4.
+
+\item
+Finding Parallel Patterns through Static Analysis in C++ Applications. 
+Rio, D., Dolz, M., Garcia, J.D., Torquati, M., Danelutto, M. 
+International Journal of High Performance Computing Applications, 32(6):779–788, 2018. 
+SAGE Publications, Ltd. Reino Unido. 
+ISSN: 1094-3420. 
+DOI:10.1177/1094342017695639.
+
+\item
+Dolz, M.F., Rio, D., Fernández, J., Garcia, J.D., Carretero, J.
+Towards Automatic Parallelization of Stream Processing Applications.
+IEEE Access. 6:39944–39961. 2018. 
+ISSN: 2169-3536. 
+DOI: 10.1109/ACCESS.2018.2855064
+
+\item
+Dos Reis, G., Garcia, J.D., Lakos, J., Meredith, A.,Myers, N., Stroustrup, B. 
+P0542R5: Support for contract based programming in C++. 
+ISO/IEC JTC1/SC22/WG21 (C++ standards committee). 2018
+
+
+\end{itemize}
 
 
 % ============================
