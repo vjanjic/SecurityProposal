@@ -10,21 +10,21 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-\item Define security metrics and policies for the authentication service;
-\item Design and develop the authentication service;
-\item Develop intelligent biometrics for continuous authentication;
-\item Design and develop an interactive dashboard for service integration and authentication analytics.
+\item Define security metrics and policies for identity, authentication and access control;
+\item Develop intelligent biometrics for continuous user identitification;
+\item Develop mechanisms for regulating access and tracking the lineage and provenance of data using a Blockchain-based approach;
+\item Design and develop an integrated identity management service, including an interactive dashboard for service integration and analytics;
 \item Design, develop and evaluate privacy-preserving methods of biometric data.
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} aims to address Objective 5 by designing and developing an AI-driven and user-centered authentication-as-a-service aiming to preserve security but at the same time provide a positive security experience to the end-users. The primary goals are to: i) provide high levels of security through 2FA and continuous authentication to confirm the identity of each end-user and accordingly authorize access to certain parts of data in the system; ii) improve the usability and user experience through easy-to-use and fluid authentication methods; and iii) enable developers and administrators to easily integrate, deploy and manage their preferred authentication method based on custom requirements and policies. We will initially adopt state-of-the-art security and usability metrics of token-based and biometric-based user authentication schemes and accordingly design various authentication policies (T5.1), we will design and develop working prototypes of the user authentication service (T5.2), we will develop intelligent biometrics for continuous authentication (T5.3), and design and develop an interactive dashboard for the authentication service integration and authentication analytics (5.4).
+\theWP{} aims to address Objective 5 by designing and developing an AI-driven and user-centered IDentity-as-a-Service (IDaaS) aiming to preserve security but at the same time provide a positive security experience to the end-users. The primary goals are to: i) provide high levels of security through multi-factor authentication, and continuous user identification to confirm the identity of each end-user and accordingly authorize access to certain parts of data in the system; ii) improve the usability and user experience through easy-to-use and fluid authentication and continuous user identification methods; and iii) enable developers and administrators to easily integrate, deploy and manage their preferred authentication method based on custom requirements and policies. We will initially adopt state-of-the-art security and usability metrics of token-based and biometric-based user authentication schemes and accordingly design various security metrics and policies (T5.1), we will design and develop working prototypes of multi-factor authentication and continuous user identification based on intelligent biometrics (T5.2), we will develop data access control mechanisms using on Blockchain-based approach (T5.3), design and develop an integrated identity management service, including an interactive dashboard for service integration and analytics (T5.4), and design, develop and evaluate privacy-preserving methods of biometric data (5.5).
 
 \end{WPDescription}
 
 \begin{Task}
-\TaskTitle{Security Metrics and Authentication Policies Design}
+\TaskTitle{Access Management, Security Metrics and Policies}
 \TaskParticipant{COGNI}{1}
 
 \TaskStart{1}
@@ -35,11 +35,11 @@ The objectives of \theWP{} are to:
 \TaskHeader{}
 \tasklabel{task:ua_metrics}
 
-In \theTask, we will define the methodology and conduct an analysis, elicitation and validation of the security measurements, metrics and policies of the user authentication service. It will include an extensive analysis on state-of-the-art research in the area of two-factor authentication (2FA) and intelligent biometric authentication aiming to identify important security metrics and authentication policies, as well as current best practices and guidelines in the area. We will further conduct an analysis of works on existing user authentication approaches within the aerospace, healthcare and banking domains in order to identify the peculiarities of user authentication in each domain. The task will also entail a series of semi-structured interviews that will be conducted with various stakeholders at the end-user organizations aiming to identify current user authentication practices, policies and procedures followed at each organization. This task will proceed in three phases. 
+In \theTask, we will define the methodology and conduct an analysis, elicitation and validation of the security measurements, metrics and policies of the identity management service. It will include an extensive analysis on state-of-the-art research in the area of multi-factor authentication and intelligent biometric authentication aiming to identify important security metrics and policies, as well as current best practices and guidelines in the area. We will further conduct an analysis of works on existing user authentication approaches within the aerospace, healthcare and banking domains in order to identify the peculiarities of identity management in each domain. The task will also entail a series of semi-structured interviews that will be conducted with various stakeholders at the end-user organizations aiming to identify current identity management and user authentication practices, policies and procedures followed at each organization. This task will proceed in three phases. 
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Authentication Service Design and Development}
+\TaskTitle{Multi-Factor Authentication and Continuous User Identification System Design and Development}
 \TaskParticipant{COGNI}{1}
 
 \TaskStart{1}
@@ -50,11 +50,11 @@ In \theTask, we will define the methodology and conduct an analysis, elicitation
 \TaskHeader{}
 \tasklabel{task:ua_designdevelopment}
 
-In \theTask, we will design and develop the user authentication service. A User-Centered Design methodology will be adopted for developing and finalizing the user authentication scheme through multiple iterations (three releases are anticipated; initial, refined, final software) that will be used for evaluation studies. The developed user authentication system will be evaluated through experiments with synthetic data as well as actual users (as part of WP7) aiming to evaluate its security and usability aspects. In the context of conducting studies with actual users with the developed authentication service, we assure that all personal data collection and processing will be carried out according to EU and national legislation. This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality as well as paper prototypes based on users’ requirements analysis. In the second phase, the user authentication service will be further developed into an extended working prototype including almost all functional requirements, however that has not been optimized in terms of performance and user experience. A fully functional user authentication service will be developed in the third phase. Emphasis will be given to the interoperability of the components and maximizing the efficiency and effectiveness of the service running on different platforms (desktop, mobile, wearable devices). The service will be validated based on benchmarking software criteria and qualities ensuring the adequate performance, robustness, scalability, maintainability and security. This task will proceed in three phases. 
+In \theTask, we will design and develop the core identification and authentication component. In particular, we will design and develop a series of multi-factor authentication (MFA) schemes, and continuous user identification methods aiming to augment the existing security layer of distributed data analytics application with intelligent biometrics. Continuous authentication will be achieved by combining: i) face biometrics through face recognition and analysis; ii) eye gaze behavior biometrics by analyzing the end-users' eye gaze data and visual behavior during interaction; and iii) physiological biometrics by analyzing the end-users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands). A User-Centered Design methodology will be adopted for developing and finalizing the MFA and continuous user identification scheme through multiple iterations (three releases are anticipated; initial, refined, final software) that will be used for evaluation studies. The developed schemes and methods will be evaluated through experiments with synthetic data as well as actual users (as part of WP7) aiming to evaluate its security and usability aspects. In the context of conducting studies with actual users with the developed service, we assure that all personal data collection and processing will be carried out according to EU and national legislation. This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality as well as paper prototypes based on users’ requirements analysis. In the second phase, the service will be further developed into an extended working prototype including almost all functional requirements, however that has not been optimized in terms of performance and user experience. A fully functional identity management service will be developed in the third phase. Emphasis will be given to the interoperability of the components and maximizing the efficiency and effectiveness of the service running on different platforms (desktop, mobile, wearable devices). The service will be validated based on benchmarking software criteria and qualities ensuring the adequate performance, robustness, scalability, maintainability and security. This task will proceed in three phases. 
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Continuous Authentication based on Intelligent Biometrics}
+\TaskTitle{Access Management with Blockchain}
 \TaskParticipant{COGNI}{1}
 
 \TaskStart{1}
@@ -63,15 +63,15 @@ In \theTask, we will design and develop the user authentication service. A User-
 %\ref{del:model1}
 }
 \TaskHeader{}
-\tasklabel{task:ua_biometrics}
+\tasklabel{task:ua_blockchain}
 
-In \theTask, we will develop continuous authentication methods aiming to augment the existing security layer of distributed data analytics application with intelligent biometrics. Continuous authentication will be achieved with: i) behavior biometrics by analyzing the end-users' interaction behavior with the system; ii) eye-gaze biometrics by analyzing the end-users' eye gaze data and visual behavior during interaction; and iii) physiological biometrics by analyzing the end-users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands).
+Develop mechanisms for regulating access and tracking the lineage and provenance of data using a Blockchain-based approach
 This task will proceed in three phases. 
 \end{Task}
 
 
 \begin{Task}
-\TaskTitle{User Authentication Analytics}
+\TaskTitle{User Interaction Analytics}
 \TaskParticipant{DEM}{1}
 \TaskParticipant{COGNI}{1}
 \TaskStart{1}
@@ -86,7 +86,7 @@ In \theTask, we will design and develop tools and methods aiming to provide easy
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Privacy-Preserving Biometric Data in Authentication for Big Data Systems}
+\TaskTitle{Privacy-Preserving Biometrics in Authentication for Big Data Systems}
 \TaskParticipant{UOD}{1}
 \TaskParticipant{COGNI}{1}
 \TaskStart{1}

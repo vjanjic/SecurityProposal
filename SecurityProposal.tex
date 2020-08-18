@@ -71,9 +71,11 @@ ToDo List:
 
 \item \textbf{Section 1}
 \begin{itemize} 
+\item Ensure consistent spelling throughout (e.g., optimisation vs optimization, words with - and without, etc
 \item 1.3.1 : Add challenges for security and privacy of big data analytics (basically, a few sentences to motivate why we do the work we propose)
 \begin{itemize}
 \item USTAN for formal modelling and refactoring
+
 \end{itemize}
 
 \item 1.3.3 : Add the relevant technologies that will be developed over the course of the project, together with current and future TRLs
@@ -99,13 +101,13 @@ ToDo List:
 \begin{itemize}
 \item 2.1 : Finish writing up the Impacts 
 \begin{itemize}
-\item Write an explanation of what we are doing to address the short-temp impact nr 7 (COGNI)
+\item \sout{Write an explanation of what we are doing to address the short-temp impact nr 7 (COGNI)}
 \item Think about whether and how we are addressing the long term impact nr 2 (related to trust) (EVERYONE)
 \end{itemize}
 
 \item 2.1 : Write up Barriers for Impact (UOD)
 
-\item 2.1 : Finish the gender balance box (\sout{SCCH} and EVERYONE)
+\item 2.1 : Finish the gender balance box (\sout{SCCH} and EVERYONE) \textcolor{red}{Where is this???}
 
 \item 2.3.1 : Add security, ML, refactoring and formal methods conferences and journals (EVERYONE)
 
@@ -113,7 +115,8 @@ ToDo List:
 
 \item 2.3.2: Write up Draft Exploitation Plans:
 \begin{itemize}
-\item COGNI Exploitation Plan
+\item \sout{COGNI Exploitation Plan}
+\item \textcolor{red}{Should be given in the order of participant number}
 \end{itemize}
 
 \item 2.3.2 : Write a joint exploitation plan (EVERYONE)
@@ -124,6 +127,8 @@ ToDo List:
 \item \textbf{Section 3}
 
 \begin{itemize}
+\item Check that the references at the end of this section are properly formatted. Webpages seem to have incomplete details! (EVERYONE)
+
 \item Write up WP5, make tasks consistent with the Gantt chart (COGNI)
 
 \item Write up WP6, make tasks consistent with the Gantt chart (UC3M)
@@ -145,12 +150,15 @@ ToDo List:
 
 \item \textbf{Section 4}
 \begin{itemize}
+\item 4.1 \textcolor{red}{Check that the descriptions are given consistently}
 
-\item 4.1 Write up USTAN description (USTAN)
+\item \sout{4.1 Write up USTAN description (USTAN)}
 
-\item 4.1: Write up UC3M description (UC3M)
+\item 4.1: \textcolor{red}{Write up UC3M description (UC3M)}
 
 \item 4.1: Write up UOD description (UOD)
+
+\item \sout{Make sure participants are listed in the same order as the table upfront!}
 \end{itemize}
 
 \item \textbf{Section 5}
@@ -159,6 +167,7 @@ ToDo List:
 \end{itemize}
 \end{itemize}
 
+\newpage
 %DONE:
 %
 %\begin{itemize}
@@ -342,8 +351,22 @@ ToDo List:
   \label{fig:vision}
   \end{center}
   \end{figure}
-
-Big-data offers a great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever stricter regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
+Today's technological advances are such that
+big data could be used to facilitate rapid discovery of scientific breakthroughs 
+and increase the economic impact of many businesses irrespective of their size. The complexity and critical nature of some data intensive systems, however,
+means that we are still far from reliably achieving such a potential and we need innovative solutions that can make a difference. The world has huge quantities and variety of
+data available, and their analytics is necessarily distributed with both data and computations spanning large quantities of distributed resources, some of which are on  the cloud. 
+Data analytics requires processing algorithms to prepare 
+and clean raw data, and is further reliant on advanced AI techniques, such as deep learning, for
+extracting knowledge from the data.
+There are huge economic and societal repercussions associated to data breaches in the light of regulations such as GDPR, and hence a fundamental need to
+ensure security and privacy of data analytics at all times.
+There are known considerations on security and privacy in cloud computing~\cite{cloudSecurity}, and big data analytics adds two further dimensions through
+concerns over data storage and processing~\cite{bigdataSecurity}, and potential information leakages from machine learning models~\cite{mlSecurity}.
+In addition, data intensive applications are typically built from layers of different libraries, where each layer corresponds to a level of abstraction (e.g. data storage, data transfer, data processing) and has security and privacy issues on its own and with adjacent layers. Formal methods are the only currently-known approaches that 
+could provide strong end-to-end security guarantees throughout system execution and across layers of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
+Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
+%Big-data offers a great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever stricter regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
 
 %%"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist\footnote{\url{https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data}} that highlights the importance of big data analytics in the modern world. Advances in the techniques for analysing the vast amount of data available today from a variety of sources are having %tremendous effects
 %%significant impact in a number of areas. Businesses use data to provide more personalised services to customers and improve their operation, and researchers use 
@@ -366,7 +389,7 @@ Big-data offers a great potential both for scientific breakthroughs and for econ
 %from the way big data is stored (usually in distributed filesystems or databases) and is processed (with multiple distributed agents interacting and exchanging potentially sensitive information). Security mechanisms that protect sensitive data in such settings are still fragile, and not advanced enough to provide sufficient trust in the whole data analytics process. 
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\emph{The main goal of the \TheProject{} project is to significantly increase the trust in modern data analytics systems by assisting software developers in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for verification of security and data privacy properties of the code.}
+\emph{\TheProject's main goal is to significantly increase the trust in modern data analytics systems by assisting software developers in developing secure and privacy-preserving distributed data analysis code, combining tools for identifying and repairing security vulnerabilities with rigorous formal methods for verification of security and data privacy properties of the code.}
 \end{mdframed}
 
 
@@ -400,16 +423,17 @@ enhance existing and develop new efficient techniques for \emph{identifying gene
   represent known security vulnerabilities and information leakages in distributed AI-based systems, and to develop novel techniques for  
   \emph{repairing the identified vulnerabilities and leakages};
 
-\item[Aim 3:] To build an additional security layer on top of the existing end-user applications that will be based on novel, intelligent and secure \emph{authentication methods};
+\item[Aim 3:] To build an additional security layer on top of the existing end-user applications that will be based on intelligent, secure and privacy-preserving \emph{identity management schemes};
 
-\item[Aim 4:] To integrate the \TheProject{} tools and techniques into a coherent \emph{self-healing methodology} for establishing
+\item[Aim 4:] To integrate the \TheProject{}'s tools and techniques into a coherent \emph{self-healing methodology} for establishing
   security and privacy properties of the code and repairing any identified vulnerabilities and leakages, targeting both 
   existing distributed AI-based data analytics code and new provably-secure code;
 
-\item[Aim 5:]  To demonstrate the applicability of the \TheProject{} tools and
- methodology in building secure real-world application from the medical, aerospace and
- banking domains and to promote their long-term uptake by building a sustainable user community,
- covering both experts in security and normal application developers;
+\item[Aim 5:]  To demonstrate the applicability of the \TheProject{}'s tools and
+ methodology in building secure real-world applications from 
+ several critical %the medical, aerospace and banking 
+ domains and to promote their long-term uptake by building a sustainable user community,
+ covering both experts in security and normal application developers.
 
 \end{description}
 
@@ -438,10 +462,10 @@ for developing secure distributed applications and providing formal guarantees a
 
 \item[Objective 4:] To build on the existing and develop new security \emph{coding standards} for C++ and to build the tools for automatic analysis of the code for conformance to these standards, providing guidance to developing new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 5:] To augment the existing security layer of distributed data analytics applications with AI-driven behavioural authentication models, implementing Authentication-as-a-Service (AAAS) technology. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
+\item[Objective 5:] To augment the existing security layer of distributed data analytics applications with AI-driven identity management schemes, implementing intelligent biometric technology for user authentication, and blockchain technology for user access control. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
-\item[Objective 6:] To develop a novel methodology, based on security contracts, vulnerability detection/mitigation,
-  privacy preserving and secure authentication, and supported by semi-automated code refactoring techniques for
+\item[Objective 6:] To develop a novel methodology based on security contracts, vulnerability detection \& mitigation,
+  privacy-preserving and secure authentication, and supported by semi-automated code refactoring techniques for
   increasing security of the existing and developing secure new distributed data-analytics algorithms. \emph{This fulfils
     part of \textbf{Aim 4}}.
 
@@ -514,14 +538,13 @@ While identifying security risks and privacy leaks is critical for security of d
 The source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, such as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
 In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big-data applications with special attention to vulnerabilities derived from  the programming language. Then we will apply these coding standards to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern based machine learning software components.
 
-\subsubsection*{Objective 5: Intelligent User Authentication}
+\subsubsection*{Objective 5: Intelligent Identity Management and Trust}
 \vspace{-6pt}
 
-In the \TheProject{} project, we will develop an Authentication-as-a-Service technology that will allow the developers to easily integrate, deploy and manage their preferred authentication methods depending on customer requirements and policies. From the users’ point of view, the authentication technology will provide a fluid authentication experience based on state-of-the-art authentication methods such as usable, single-touch user approvals, as well as intelligent and continuous authentication based on users' interaction 	and eye gaze data analysis. In addition, we will develop data analytics and reporting services aiming to provide intelligent insights from user interactions and eye gaze behaviour data allowing developers to deliver personalised security experience and thus increase user acceptance and trust.
+In the \TheProject{} project, we will develop an Identity-as-a-Service (IDaaS) technology that will allow the developers to easily integrate, deploy and manage methods for identity, authentication and access management depending on customer requirements and policies. In particular, we will develop and evaluate state-of-the-art multi-factor authentication, and intelligent biometrics based on a combined analysis of physiological, facial and eye gaze data analytics for continuously identifying the end-users. In addition, we will develop a blockchain solution for user access control, as well as data analytics and reporting services aiming to provide intelligent insights from users' biometric data allowing developers to deliver personalised security experience and thus increase user acceptance and trust. Finally, from the end-users’ point of view, the developed IDaaS technology will provide a fluid user experience based on state-of-the-art authentication and access control methods such as easy-to-use tokens, usable, single-touch user approvals, as well as intelligent biometrics based on users' physiological, facial and eye gaze data analytics.
 
 \subsubsection*{Objective 6: Methodology for Development of Secure Applications}
 \vspace{-6pt}
-
 
 In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end-user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In the \TheProject{}, we will develop a novel methodology for developing secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured rewriting of the end-user code, which will enable easily understandable step-by-step transformation of the initial code into its provably-secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
 %cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focused more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
@@ -624,7 +647,7 @@ Section~\ref{sec:impact} describes in detail how \TheProject{} meets the expecte
 \eucommentary{Describe and explain the overall concept underpinning the project. Describe the main ideas, models or assumptions involved. Identify any trans-disciplinary considerations;}
 
 %% Why do we need distributed data analytics?
-In modern world, data is everywhere around us. It is estimated that in the year 2025, the amount of data collected from various sources will grow to 175 zetabytes\footnote{One zetabyte is $10^{21}$ bytes.}. %If we were to store 175 zetabytes of data on DVDs and stack them together, this stack would be long enough to circle the Earth 222 times (\url{https://www.bernardmarr.com/default.asp?contentID=1846})}. 
+In the modern world, data is everywhere around us. It is estimated that in the year 2025, the amount of data collected from various sources will grow to 175 zetabytes\footnote{One zetabyte is $10^{21}$ bytes.}. %If we were to store 175 zetabytes of data on DVDs and stack them together, this stack would be long enough to circle the Earth 222 times (\url{https://www.bernardmarr.com/default.asp?contentID=1846})}. 
 This volume of data offers a huge economic and scientific potential - businesses can analyse purchasing habits of their customers and offer personalised recommendationsq and scientists can analyse ever increasing data sets to obtain groundbreaking and sometimes life-saving results (e.g.~training machine learning models to predict the growth of cancer cells~\cite{bigdatacancer}). Because of this, AI-based data analytics have become one of the most prominent areas of computer science. As a consequence, a variety of systems that support complex analytics techniques on raw data have been developed, with some examples being Spark MLLib~\cite{mllib}, Tensorflow~\cite{tensorflow} and Azure AI\footnote{https://azure.microsoft.com/en-gb/resources/microsoft-ai-platform-whitepaper}. Many of these systems are \emph{parallel and distributed} by nature, requiring fast response from very expensive computations and having data distributed over numerous sources. Typical execution platforms are Computational Clouds that offer substantial computational and storage potential at relatively cheap price. 
 %. The requirement for parallelism comes from the fact that performing data analytics on large volumes of data is usually computationally very expensive, and doing such computations in parallel on many-core systems can significantly reduce response time and deliver results much faster. The distributed aspect of data analytics comes from both distributed nature of the sources of data (where some data cannot be moved between different sites due to legal or practical reasons), and by the fact that distributed systems (such as clouds) offer much more computational power at relatively cheap price than even the high-end local highly-performance systems. 
 
@@ -653,7 +676,7 @@ Therefore, it is standard to have different processing agents on different distr
 
 \item \textbf{Optimisation of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data %available 
 while simultaneously limiting any revealed sensitive or private information. %Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. 
-Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. Techniques such as data perturbation are used to add noise in order to preserve privacy, but can result in distortion of useful data. Therefore, an issue of finding an optimal privacy-utility tradeoff still remains. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
+Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. Techniques such as data perturbation are used to add noise in order to preserve privacy, but can result in distortion of useful data. Therefore, an issue of finding an optimal privacy-utility tradeoff still remains. \textbf{We must, therefore, develop new \sout{differential} \textcolor{red}{informational} privacy mechanisms that add the optimal amount of noise to prevent privacy leakage while still allowing for extracting useful machine-learning models from the data.}
 
 %These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
 
@@ -664,10 +687,8 @@ Differential privacy is a formal framework to quantify the degree to which the p
 Writing applications that are inherently secure is a challenging problem for the average developer, who typically lacks the required skill-set to ensure code is secure. This usually requires not only in-depth knowledge about the code itself, but also in-depth knowledge about security techniques. Manually rewriting applications to make them secure means that there is more risk for things to go wrong: key algorithmic properties of security may be missed, or worse, may be implemented incorrectly, resulting in code that is even less secure than its starting point with more vulnerabilities. Providing the developer with refactoring tool-support means that they can rely on the tool to aid them in rewriting the application to be more secure, where the refactorings abstract away the low-level complexities of writing secure algorithms. 
 \textbf{We must provide new techniques and tools to enable the developer to refactoring their source-code to make it more secure.}
 
-\item \textbf{Intelligent User Authentication.} 
-User authentication is a cornerstone of security in modern computing systems. Two important quality dimensions of an effective authentication system relate to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, user authentication has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless authentication experience. In addition, there is an increased need for service providers to continuously verify, after successful login, the identity of the user to prevent fraudulence behavior, \textit{e.g.}, verifying that the voice of an online banking customer aligns to the authenticated customer. \textbf{We must, therefore XX}
-
-
+\item \textbf{Intelligent Identity Management.} 
+Idenetity management is a cornerstone of security in modern computing systems. Two important quality dimensions of effective identity management relates to its \textit{security} and \textit{usability aspects}. The security level determines its strength against adversary attacks, whereas usability levels are commonly determined by task execution efficiency and effectiveness. However, identity management has become a complex and time-consuming task for any organization today due to constant cybersecurity threats and strict regulatory and new directives such as PSD2 that require strong, multi-factor authentication solutions. At the same time, end-users demand a seamless security experience with regards to identity, authentication and access management. In addition, there is an increased need for service providers to continuously verify, after successful login, the identity of the user to prevent fraudulence behavior, \textit{e.g.}, verifying that the voice of an online banking customer aligns to the authenticated customer. \textbf{We must, therefore provide new methods and tools to enable the developer to easily integrate, deploy and manage multi-factor authentication, continuous user identification, and user access control solutions by reducing the complexity of development.}
 
 \end{itemize}
 
@@ -700,15 +721,14 @@ Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodo
 
 In addition to security vulnerabilities, the goal of the \TheProject{} is to also address \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation~\cite{gdpr} (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
 
-Finally, to add the additional layer of security, we will specifically address the problem of user authentication, by both developing and integrating the novel secure authentication mechanisms and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. Both these part will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
-
-
+Finally, to add the additional layer of security, we will specifically address the problem of identity management, by developing and integrating novel and secure authentication and continuous identification mechanisms, by developing and integrating blockchain-based user access control, and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. These parts will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
 
 \begin{figure}[tph!]
   \begin{center}
-  \vspace{-5mm}
-  \includeimage[scale=0.5]{DigitalFortress-WP2.pdf}
-  \vspace{-1.5cm}
+%  \vspace{-5mm}
+  \includeimage[scale=0.5]{Elysian-DataStorage-v1.pdf}
+  %DigitalFortress-WP2.pdf}
+  \vspace{-1.8cm}
   \caption{Data Storage and Processing in \TheProject{}}
   \label{fig:storageprocessing}
   \end{center}
@@ -724,8 +744,8 @@ Figure~\ref{fig:storageprocessing} shows a more detailed view of the different s
 \TheProject{} aims to investigate sources of vulnerabilities and the transformations required to mitigate them in each of these different layers, as well as the vulnerabilities that arise from interactions between different layers. In addition to that, it will also develop \emph{secure software design patterns} that will give guidelines about secure combining of different layers of abstraction. These design patterns, together with analysis for conformance to the secure coding standards, formal verification of security properties and vulnerabilities detection and self-healing mechanisms will ensure trust into security properties of the end data analytics product.
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\textbf{Security in AI vs. AI for Security.}
-The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques to analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. For example, static analysis for vulnerabilities detection will use XX while the framework for reducing privacy-leakage will be based on XX. So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
+\textbf{Security in AI \sout{vs.} \textcolor{red}{and} AI for Security.}
+The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques for analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. \textcolor{red}{For example, advanced machine learning techniques will be used for developing stochastic models governing the mappings between sensitive/private data and the released data. Additionally, information-theoretic machine learning techniques will be developed to quantify the privacy-leakage in-terms of mutual information between private data and released data.} So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
 \end{mdframed}
 
 \subsubsection*{Key assumptions}
@@ -761,6 +781,8 @@ the case of key enabling technologies)'').
     \hline YAG YAG-Suite vulnerability detection tool - Code mining & TRL 5 & TRL 7 \\  
     \hline SCCH eKnows software analytics tool - Module for semi-automated extraction of ASMs from source code & TRL 4 & TRL 6 \\
     \hline IBM ExpliSAT Symbolic Interpretation Tool for security vulnerability detection in C/C++ code & TRL 4 & TRL 6 \\
+    \hline COGNI Cognitive Authentication Platform - Integration and management of multi-factor authentication methods & TRL 4 & TRL 6 \\
+    \hline COGNI Facial and Eye Gaze Analytics - Intelligent facial and eye gaze data analytics for continuous user identification & TRL 3-4 & TRL 5-6 \\
     \hline
   \end{tabular}
 \end{center}
@@ -881,7 +903,7 @@ Objective 1 & Secure Patterns for Distributed AI-based Data Analytics & \textbf{
 Objective 2 & Identifying Vulnerabilities and Privacy Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
 Objective 3 & Self-Healing Techniques for Repairing Vulnerabilities and Leakage & \textbf{WP2}, \textbf{WP3} \\\hline
 Objective 4 & Coding Standards for Developing Secure Distributed Applications & \textbf{WP4}, \textbf{WP6} \\\hline
-Objective 5 & Intelligent User Authentication & \textbf{WP5} \\\hline
+Objective 5 & Intelligent Identity Management and Trust & \textbf{WP5} \\\hline
 Objective 6 & Refactoring-Based Methodology for Secure Applications & \textbf{WP3}, \textbf{WP4}, \textbf{WP5}, \textbf{WP6} \\\hline
 Objective 7 & Demonstrating the Tools and Techniques on Real-World Use Cases & \textbf{WP6}, \textbf{WP7}\\\hline
 Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
@@ -906,7 +928,7 @@ Objective 4 aims to extend the existing code standards for developing secure and
 
 \paragraph{Work Programme for Objective 5.}
 
-Objective 5 aims to analyse, design, develop and evaluate an intelligent and user-centered authentication-as-a-service which will allow digital service providers to integrate, deploy and manage multi-factor authentication (MFA) and continuous user authentication by reducing the complexity of development. In WP6, a User-Centered Design (UCD) methodology will be followed for the design and development of the authentication technology aiming to assure that the solution meets the users' needs and expectations in terms of usability and security. The development life-cycle of the authentication component will include multiple design iterations and a significant amount of evaluation, which will be largely based on studies with the active participation of real end-users. These studies will be both formative (during the project’s course, with the aim of validating/refining the initial design) and summative (towards the end of the project, aiming to measure the quality and effectiveness of the final project results). The UCD approach will embrace three iterative cycles leading to three different system prototype releases (low-fidelity, high-fidelity, final release). Each iteration entails an analysis, design, implementation and integration, ending with an evaluation of derived prototypes providing thus valuable feedback for designing the next release. 
+Objective 5 aims to analyse, design, develop and evaluate an intelligent and user-centered IDentity-as-a-Service (IDaaS) technology which will allow digital service providers to integrate, deploy and manage multi-factor authentication, continuous useridentification, and user access control solutions by reducing the complexity of development. In WP5, a User-Centered Design (UCD) methodology will be followed for the design and development of the IDaaS technology aiming to assure that the solution meets the users' needs and expectations in terms of usability and security. The development life-cycle of the identity, authentication and user access management components will include multiple design iterations and a significant amount of evaluation, which will be largely based on studies with the active participation of real end-users. These studies will be both formative (during the project’s course, with the aim of validating/refining the initial design) and summative (towards the end of the project, aiming to measure the quality and effectiveness of the final project results). The UCD approach will embrace three iterative cycles leading to three different system prototype releases (low-fidelity, high-fidelity, final release). Each iteration entails an analysis, design, implementation and integration, ending with an evaluation of derived prototypes providing thus valuable feedback for designing the next release. 
 
 \paragraph{Work Programme for Objective 6.} 
 
@@ -1202,17 +1224,20 @@ application and infrastructure developers.
 %\item XX
 %\end{itemize}
 
-\subsubsection{Intelligent User Authentication}
+\subsubsection{Identity Management}
 \label{sect:auth}
 \vjcomment{COGNITIVE to write}
+Identity management entails solutions for identity, authentication and access management functions. Core components of identity management are multi-factor authentication, continuous user identification, and user access control. \textit{Multi-Factor Authentication (MFA)} has been introduced with the aim to provide a higher level of security and continuous protection of resources from unauthorized access through the use of more than two categories of credentials \cite{scheidt2005multiple, bhargav2007privacy}. Researchers and practitioners have attempted to provide various solutions for multi-factor authentication such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) and voice recognition \cite{mare2016study, ometov2018multi, 10.1145/1053291.1053327}. \textit{Continuous user identification} is a technology aiming to verify the end-user's identity in real-time (after successfully authenticating), while carrying out tasks. Several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones \cite{10.1145/2991079.2991097, 10.1145/2702123.2702252, gascon2014continuous}, physiological data analysis such as body signals (heart rate, skin conductance, etc.) \cite{ometov2018multi, rui2018survey}, Electrocardiographic (ECG) recognition \cite{silva2011clinical}, face biometrics \cite{bhattacharyya2009biometric, dabbah2007secure}, and eye gaze data analytics \cite{jain2004introduction, bulling2012increasing}. \textit{User access control} is a mechanism that regulates access to the system resources. Current access control systems entail several challenges, such as third-party presence, lack of scalability, and lack of privacy \cite{10.1145/3350546.3352561, 10.1145/3316481}. In this context, blockchain technology has specific features that can address several of the existing challenges in access control, i.e., its distributed nature addresses the problem of single-point of failure, elimination of third-parties and potential privacy leakage, monitoring and access to trustable and unmodifiable history logs.
 
-Multi-factor Authentication (MFA) has been introduced with the aim to provide a higher level of security and continuous protection of resources from unauthorized access through the use of more than two categories of credentials \cite{scheidt2005multiple, bhargav2007privacy}. Researchers and practitioners have attempted to provide various \textit{solutions for multi-factor authentication} such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) and voice recognition \cite{mare2016study, ometov2018multi, 10.1145/1053291.1053327}. \textit{Continuous user authentication} is an authentication technology aiming to verify the end-user's identity in real-time (after successfully authenticating), while  carrying out tasks. Several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones \cite{10.1145/2991079.2991097, 10.1145/2702123.2702252, gascon2014continuous}, physiological data analysis such as body signals (heart rate, skin conductance, etc.) \cite{ometov2018multi, rui2018survey}, Electrocardiographic (ECG) recognition \cite{silva2011clinical}, face biometrics \cite{bhattacharyya2009biometric, dabbah2007secure}, and eye gaze data analytics \cite{jain2004introduction, bulling2012increasing}. Various organizations and companies also exist that are either adopting MFA, or continuous user authentication (e.g., Cisco’s Duo Security \cite{duo}, Futurae \cite{Futurae}, Acceptto \cite{Acceptto}, Auth0 \cite{Auth0}, Saaspass \cite{Saaspass}), however, these are far from fully adopting solutions that combine MFA and continuous user authentication. Existing state-of-the-art solutions such as Cisco’s Duo Security, Futurae, Acceptto, etc. work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA and continuous user authentication under a unified integration platform. The strengths of the proposed unified integration platform are concentrated in the rapid deployment to existing online services and the agility to adapt to existing ecosystems, aiming to protect sensitive resources while at the same time provide a seamless security experience to the end-users.
+Various organizations and companies also exist that are either adopting MFA, or continuous user identification (e.g., Cisco’s Duo Security \cite{duo}, Futurae \cite{Futurae}, Acceptto \cite{Acceptto}, Auth0 \cite{Auth0}, Saaspass \cite{Saaspass}), however, these are far from fully adopting solutions that combine MFA and continuous user identification. Existing state-of-the-art solutions such as Cisco’s Duo Security, Futurae, Acceptto, etc. work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA, continuous user identification and user access control under a unified integration platform. The strengths of the proposed unified integration platform are concentrated in the rapid deployment to existing online services and the agility to adapt to existing ecosystems, aiming to protect sensitive resources while at the same time provide a seamless security experience to the end-users.
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
 \begin{itemize}
 \item \emph{The proposed solution to combine MFA and continuous user authentication} under a unified, agile system integration model represents a change of paradigm in today’s state-of-the-art which considers MFA and continuous identification as two independent approaches that do not co-exist under one unified solution; 
-\item \emph{The developed intelligent biometrics} based on a combined analysis of face and eye gaze data analytics will advance the state-of-the-art for seamlessly identifying users;
+\item \emph{The developed intelligent biometrics} based on a combined analysis of physiological, face and eye gaze data analytics will advance the state-of-the-art for seamlessly identifying users;
+\item \emph{The developed blochchain solution} will provide novel methods for regulating data access to data as well as tracking the 
+lineage and provenance of data. 
 \item \emph{Evaluation studies} will provide new insights and knowledge to practitioners for building more usable and agile authentication schemes, and researchers to understand human behavior within such tasks.
 \end{itemize}
 \end{mdframed}
@@ -1357,7 +1382,8 @@ as Open Source (GPL license); paid licenses for commercial use will be provided
 with the first mature release.
 
 \paragraph{\SCCHshort{} eKNOWS - Reverse Engineering Formal Models from Source Code.}
-As part of application-oriented research projects, SCCH has built and applied reverse engineering and analysis tools with a strong focus on extracting knowledge from source code and related software engineering artifacts (http://codeanalytics.scch.at/). The results are made available via eKNOWS, a platform for the analysis and evolution of software systems, documentation generation, and quality assurance and automated testing. This tool was recently extended with semi-automated reverse engineering capabilities to extract formal ASM specifications (models) from Java source code. The extracted ASMs provide a consistent high-level view of systems, abstracting irrelevant details and providing a precise and complete description of the behaviour of the system. The approach enables us to prove that the original source code is a correct refinement of the extracted model. Given the multi-language reverse engineering technology (based on abstract syntax trees) used by eKNOWS, this capability can be extended to other programming languages such as C++ (as required by the project). We plan to extend this tool to extract formal ASM specifications of contracts from source code.    
+eKNOWS is a platform that integrated diverse reverse engineering and analysis tools developed by SCCH, with a strong focus on extracting knowledge from source code and related software engineering artifacts (http://codeanalytics.scch.at/). This platform is used at SCCH in diverse cutting-edge applied research projects concerning the analysis and evolution of software systems, documentation generation, and quality assurance and automated testing. 
+We plan to extend the capabilities of the eKNOWS module for the extraction of ASMs specifications, which currently deals only with generic/standard Java programs as described in \cite{FerrarottiMP20,FerrarottiPMB19}. The extension will include the extraction of ASMs from C++ code and improvements on the abstraction process by taking into account the semantics of the libraries that are key in the distributed data analytic system implementations considered in the proposal. These models will from the base for the specification and verification of security contracts expressed in logics for ASMs.  
 
 \paragraph{\IBM{} Security Vulnerability Detection Technology.}
 
@@ -1384,9 +1410,15 @@ The Frequentis Integration Platform is an end-to-end solution that provides avia
 
 \paragraph{\YAGshort{} Machine learning augmented Static Analysis.}
 
-YAGAAN developed vulnerability detection technologies based both on static and dynamic methods. IBM developed Beam for static analysis of C/C++ code and extended it to look in particular for security vulnerabilities with a low ratio of false positive. In addition, IBM developed the ExpliSAT tool which uses symbolic interpretation for more precise program analysis including checks for security vulnerabilities such as buffer overflow detection. During the \rephrase{} project, ExpliSAT was extended to analyse parallel programs. To complement the static methods IBM uses also Fuzz testing technology that detects security vulnerabilities dynamically using genetic algorithms. In order to achieve accurate and scalable security vulnerability detection, IBM is now working on combining the static and dynamic analysis vulnerability detection tools.     
+YAGAAN developed vulnerability detection technologies based both on static and dynamic methods. IBM developed Beam for static analysis of C/C++ code and extended it to look in particular for security vulnerabilities with a low ratio of false positive. In addition, IBM developed the ExpliSAT tool which uses symbolic interpretation for more precise program analysis including checks for security vulnerabilities such as buffer overflow detection. During the \rephrase{} project, ExpliSAT was extended to analyse parallel programs. To complement the static methods IBM uses also Fuzz testing technology that detects security vulnerabilities dynamically using genetic algorithms. In order to achieve accurate and scalable security vulnerability detection, IBM is now working on combining the static and dynamic analysis vulnerability detection tools.  
 
+\paragraph{\COGNIshort{} Multi-Factor Authentication.}
 
+\COGNIshort{} developed an integrated authentication platform which allows the seamless integration of a variety of authentication methods for secure and usable multi-factor authentication. The platform entails standalone authentication components and methods (i.e., usable tokens, OTPs, graphical passwords, intelligent eye gaze analytics), whose know-how will be used to implement and further improve the proposed authentication methods.
+
+\paragraph{\COGNIshort{} Facial and Eye Gaze Analytics.}
+
+\COGNIshort{} developed and evaluated an eye gaze-driven metric based on hotspot vs. non-hotspot segments of images for unobtrusively estimating the strength of user-created graphical passwords by analyzing the users' eye gaze behavior during password creation in real-time \cite{10.1145/3377325.3377537, 10.1145/3379336.3381460, 10.1145/3320435.3320474}. In addition, a prototype facial recognition mechanism has been developed and evaluated aiming to identify end-users based on real-time face analysis using low-cost Web-based cameras. \COGNIshort{} is currently working to further extend the eye gaze-based and facial features and combine these under a unified platform for continuous user identification.
 
 \subsubsection{Innovation Potential}
 \label{sec:innovationpotential}
@@ -1547,8 +1579,10 @@ Self–recovering, inter-operable, scalable, dynamic privacy-respecting identity
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\paragraph{How Will \TheProject{} Achieve This Impact:}
-\COGNI to write.
+\paragraph{How Will \TheProject{} Achieve This Impact:} \TheProject{} addresses core components of identity management by developing and evaluating methods and tools with the active participation of end-users to advance the state-of-the-art in: i) multi-factor user authentication based on usable and secure token-based and biometric-based authentication methods; ii) continuous user identification based on AI-driven methods for real-time analysis of physiological, facial and eye gaze data analytics; and iii) scalable and dynamic user access control based on blockchain technology. The aforementioned components will be incorporated under a unified system integration model that combines multi-factor authentication with continuous user identification and access control.
+
+\emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 3-5}; \textbf{Objectives 5-7} }
+
 \end{mdframed}
 
 \subsubsection{Medium to Long Term Impacts}
@@ -1661,10 +1695,10 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 \TheProject{} will have a major impact on society through its focus on delivering secure and privacy preserving data analytics code. Our methodology will allow for \emph{secure-by-design} application development, meeting the ever-growing societal needs for secure complex data analysis and promote ensuring of the privacy of the data in light of new and more strict regulations such as GDPR. One of our goals is to support companies in enforcing compliance to GDPR in their applications by developing privacy-by-design technologies and methodology. With the use cases from various domains, we will also deliver significant impact in the areas not directly related to computer science. By investigating mechanisms for secure knowledge transfer between geographical areas, we will allow faster and more secure cooperation between institutions which is especially important in the Healthcare domain, where there is a growing trend towards decentralisation of the data and diagnostics and for shared learning that breaks the boundaries between institutions and countries. Remote collaboration and knowledge sharing is of crucial importance to the world affected by the COVID-19 where crucial knowledge exchange will need to be facilitated in the presence of strict social distancing rules.
 
 \begin{mdframed}[backgroundcolor=blue!5]
-One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and under-representation of minorities.  
+One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and under-representation of minorities. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. 
 
-\vjcomment{We need to expand on this}. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. \textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework~\cite{51} for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12)~\cite{52}, the International Covenant on Civil and Political Rights (Article 17)
-~\cite{53}, the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7~\cite{54}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to recude the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
+\textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework~\cite{51} for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12)~\cite{52}, the International Covenant on Civil and Political Rights (Article 17)
+~\cite{53}, the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7~\cite{54}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
 \end{mdframed}
  
 
@@ -1813,6 +1847,9 @@ The conferences that we propose to target include:
 \textbf{PPDP: } International Symposium on
 Principles and Practice of Declarative Programming;
 \textbf{ICSE: } International Conference on Software Engineering;
+\textbf{IJCAI:} International Joint Conference on Artificial Intelligence;
+\textbf{AAAI:} Conference on Artificial Intelligence;
+\textbf{ETAPS:} European Joint Conferences on Theory \& Practice of Software.
  \end{quote}
 
 \noindent
@@ -1832,6 +1869,8 @@ We also propose to target relevant high-impact journals such as:
 \textbf{FGCS: } Future Generation Computing Systems;
 \textbf{PPL: } Parallel Processing Letters; 
 \textbf{SP\&E: } Software: Practice \& Experience; 
+\textbf{TCS:} Theoretical Computer Science;
+\textbf{FAC:} Formal Aspects of Computing.
 \end{quote}
 
 \paragraph{Project Web site:}  
@@ -1860,7 +1899,7 @@ communicate the project information to the business-oriented audience.
 developer and user communities by a series of focused activities, the most important of which will be organisation of massive online courses via MOOCs, allowing us to engage with a huge base developers and to promote the \TheProject{} technologies.
  We will also organise dedicated user community workshops, presentations at
  developer and other conferences, 
- the production of posters, delivering tutorials, staffing booths, and providing hands-on
+ the production of animation videos for the general community (which we have used in the EU H2020 project Serums), posters, delivering tutorials, staffing booths, and providing hands-on
  guidance in the use of our tools and technologies etc.  This direct engagement will be
  supported by the production of video demonstrations, training materials, tutorials and documentation that can
  be accessed through the project web site.  We will also aim to produce white papers and slide sets that
@@ -1871,7 +1910,7 @@ developer and user communities by a series of focused activities, the most impor
 In order to ensure good dissemination to the research and development
 community, including industrial researchers, we propose to disseminate
 our project results through the most relevant scientific/technological
-networks and working groups, including HiPeac,%  the TACLe Cost Action on Timing Analysis, the Ercim DES Working Group, 
+networks and working groups, including HiPeac, %  the TACLe Cost Action on Timing Analysis, the Ercim DES Working Group, 
 IFIP Working Groups 2.11 \& 10.3, and other EU and national projects,
 as well as national groups such as the UK's network on manycore computing.
 \SAshort{} is a full member of HiPeac and a charter member of IFIP working
@@ -1882,7 +1921,7 @@ melting pot for ideas and new technologies.
 \paragraph{Standardisation Committees:}
 % \khcomment{We should mention any committees that we are members of. Remove this section if not relevant.}
 This proposal is tied to Standards from the beginning, through the end and beyond. It leverages the key leadership position of several members, acting as senior leaders, officers, working group experts, proposal authors, collaboration with other industry and academic experts.
-\UCMshort{} is member of the ISO/IEC JTC1/SC22/WG21 (C++ standard committee) for more than a decade and they have contributed to the C++11, C++14, C++17 and C++20 standards. They also participate in the joint group with SC22/WG23 (Programming Language Vulnerabilities) where a specific guide for C++ vulnerabilities is under development.
+\UCMshort{} has been a member of the ISO/IEC JTC1/SC22/WG21 (C++ standard committee) for more than a decade and has contributed to the C++11, C++14, C++17 and C++20 standards. It also participates in the joint group with SC22/WG23 (Programming Language Vulnerabilities) where a specific guide for C++ vulnerabilities is under development.
 \FRQshort{} is member of the EUROCAE Working Group 114 - Artificial Intelligence. The primary scope of this group is to prepare technical standards, guides and any other material required to support the development of systems and the certification of aeronautical systems implementing AI-technologies. In addition \FRQshort{} is involved in SAE's G-34, Artificial Intelligence in Aviation.
 
 %% Doesn't make sense?
@@ -2049,15 +2088,23 @@ It is also in \YAGshort{} strategy to build business partnerships to support its
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-\COGNIshort{} will use the Elysian tools and technologies in its user authentication-related practice to help digital service providers to integrate, deploy and manage multi-factor authentication and continuous user identification solutions by reducing the complexity of development, and at the same time provide a positive security experience to the end-users. Example domains include the digital banking domain for customer identification and verification, the digital health domain for patient authentication, the digital education domain for online examination invigilation purposes. 
+\COGNIshort{} will broaden it’s expertise and extend its products and services in the field of usable security, intelligent user interfaces and artificial intelligence aiming to revolutionize the development and integration of human-centered cybersecurity systems in Europe. 
 
-Cognitive Authentication is \COGNIshort{}'s core authentication platform, which allows seamless integration of a variety of authentication methods for secure and usable multi-factor authentication (tokens, OTPs, QR codes, graphical passwords, intelligent eye gaze analytics). Main aim of \COGNIshort{} is to improve and extend the authentication methods of the Cognitive Authentication platform, specifically:
+Cognitive Authentication is \COGNIshort{}'s core authentication platform, which allows the seamless integration of a variety of authentication methods for secure and usable multi-factor authentication and continuous user identification in a variety of domains, including the digital banking domain for customer identification and verification, the digital health domain for patient authentication, the digital education domain for online examination invigilation purposes. Main aim of \COGNIshort{} is to improve and extend its current methods and components of the Cognitive Authentication platform, specifically:
 
 \begin{itemize}
-    \item Eye gaze-driven user identification. 
-    \item Physiological-based authentication.
-    \item Usable two-factor authentication.
+    \item Usable and secure multi-factor authentication. Improve and extend its current multi-factor authentication portfolio with novel authentication methods that will be developed in the \TheProject project.
+    \item Intelligent biometrics for continuous user identification. Improve and extend its currently developed and evaluated predictive models based on physiological, facial and eye gaze-driven metrics and features.
+    \item Scalability with Blockchain technology. Enhance its products
+    and services with benefits provided by Blockchain technology such as decentralized and security features.
+    \item Privacy-preserving biometrics. Enhance the continuous user identification methods for preserving the privacy of the users' biometric data used for continuous authentication.
 \end{itemize}
+
+Furthermore, one of \COGNIshort{}'s main goals is to create a working environment rich in opportunities for product impact. To do so, its activities are highly driven by basic research and fundamental applied research with active participation in accredited conferences and workshops of the relevant fields. \COGNIshort{} plans to submit publications and articles in conferences and journals like USENIX Usable Privacy an Security, ACM SIGCHI, ACM Intelligent User Interfaces, ACM User Modeling, Adaptation and Personalization, ACM Transactions on Interactive Intelligent Systems, etc.
+
+Finally, \COGNIshort{} organizes local and international workshops targeting industrial and research partners in which the Elysian tools and technologies will be promoted, e.g., through the International Workshop on Adaptive and Personalized Privacy and Security (co-located with the ACM Conference on User Modeling, Adaptation and Personalization) which is co-organized by members of COGNI and USTAN. \COGNIshort{} will also draw upon its network of connections with entrepreneurs, researchers and academics related to the specific topic of Usable Security, Artificial Intelligence, Human-Computer Interaction, e.g., University of Cyprus, University of Patras, Novartis Switzerland, Ludwig Maximilians University of Munich, SAP SE Germany, University of Leeds, Shanghai Jiao Tong University, Technion Israel Institute of Technology, etc.
+
+%In addition, the company will use the \TheProject tools and technologies in its identity management-related practice to help digital service providers across Europe to integrate, deploy and manage multi-factor authentication and continuous user identification solutions by reducing the complexity of development, but at the same time provide a positive security experience to the end-users. 
 
 \horizontalline
 
@@ -2287,7 +2334,7 @@ aiming to influence development and awareness of the \TheProject{} results.
 \subsubsection*{Overall Structure of the Work Plan}
 
 The work plan is broken down into 6 technical work packages as shown
-in \textbf{Figure~\ref{fig:wps}}: WP2 deals with fundamental techniques for vulnerabilities detection and self healing, WP3 deals with application of these techniques in multi-layer AI-based big data analysis applications, WP4 deals with formal specification and proving of the security and privacy properties, WP5 deals with intelligent user authentication, WP6 deals with the \TheProject{} methodology for development of secure and privacy preserving applications and WP7 deals with use cases and evaluation of the project tools, technologies and methodology. In addition, WP1 deals with the management of the project and WP8 deals with dissemination, exploitation, community building and promotion of the project.
+in \textbf{Figure~\ref{fig:wps}}: WP2 deals with fundamental techniques for vulnerabilities detection and self healing, WP3 deals with application of these techniques in multi-layer AI-based big data analysis applications, WP4 deals with formal specification and proving of the security and privacy properties, WP5 deals with intelligent identity management, WP6 deals with the \TheProject{} methodology for development of secure and privacy preserving applications and WP7 deals with use cases and evaluation of the project tools, technologies and methodology. In addition, WP1 deals with the management of the project and WP8 deals with dissemination, exploitation, community building and promotion of the project.
 
 \input{deliverables}
 
@@ -2627,11 +2674,27 @@ Inability of the generic tools for vulnerability detection and self-healing to d
 & WP2, WP3 &
 WP2 will develop generic techniques for discovering and repairing security and privacy vulnerabilities in distributed applications, focusing on analysing the source code of such applications and profiling their execution. WP3 will apply these techniques for the problem of big-data analytics. It is possible that the techniques from WP2 will not be able to detect majority of vulnerabilities when applied to the specific problem that WP3 considers, due to sheer scale of the computations and unpredictability of the interactions between storage and processing agents. This is unlikely to happen, as the techniques in WP2 will be designed with the scaling in mind and will be adapted to the non-determinism that parallel computations exhibit. In the case that it still happens, we will redeploy effort from other work packages (specifically WP2 and WP3) to further adaptation of the core techniques. 
 \\\hline
+Inability to ensure security due to lack of data
+\par
+({\textbf{Likelihood: Low }}
+\par
+{\textbf{Severity: Medium }})
+& WP2 &
+Security verification requires that the data that are necessary to detect or anticipate a safety-critical situation at run-time are available. This may not always be the case, in particular, as the project cannot consider all security preservation methods. If this should turn out to be the case, the mitigation measure is to investigate stronger security requirements that can be assessed on the grounds of available data, which may result in an overly cautious system, but guarantee security.
+\\\hline
+Unacceptable complexity
+\par
+({\textbf{Likelihood: Medium }}
+\par
+{\textbf{Severity: Medium }})
+& WP2, WP4 &
+While the verification may prove that a system satisfies the required security contracts, the measures required to assess, recognise and mitigate critical situations may turn out to be too complex. In this case, the mitigation measure is to investigate, if the requirements can be weakened to lower complexity.
+\\\hline
 \end{longtable}
 %\newpage
 
-%\vspace{-6pt}
-\subsection{Management Structure and Procedures (Figure~\ref{fig:management})}
+?e{-6p }
+\subsection{Management cture and Procedures (Figure~\ref{fig:management})}
 \label{sect:mgt}
 
 \eucommentary{Describe the organisational structure and the decision-making ( including a list of milestones (table 3.2a)).\\
@@ -2841,9 +2904,7 @@ They have been chosen for their technical expertise and experience of line manag
 \addtocounter{partic}{1}
 \thepartic & \participantshort{\thepartic} & Eduard Gringinger \\\hline
 \addtocounter{partic}{1}
-\thepartic & \participantshort{\thepartic} & XXX \\\hline
-\addtocounter{partic}{1}
-\thepartic & \participantshort{\thepartic} & Herve Le Goff \\\hline
+\thepartic & \participantshort{\thepartic} &  Herv\'e Le Goff \\\hline
 
 \end{tabular}
 \end{tabular}
@@ -3214,34 +3275,55 @@ parallel computing, software engineering, programming language design,
 software architectures, theoretical computer science and
 distributed/mobile systems.  This research expertise has been
 recognised through the award of numerous research grants and
-awards from the UK and the European Commission.
+awards from the UK and the European Commission. The School of Computer Science is a member of SICSA, the pan-Scottish pooling agreement for Informatics and Computer Science, which groups the 14 Scottish universities.
 
 \vspace{10pt}
-\textbf{The \SAlong{} coordinates the \TheProject{} project and
-leads work packages WPXX and participates in WPXX on XX.}
+\textbf{The \SAlong{} coordinates the \TheProject{} project, 
+leads work packages \ref{wp:management} and \ref{wp:securityContracts}, and participates in WPXX on XX.}
 \vspace{10pt}
 
-\paragraph{Dr Juliana Bowles} \url{http://www.}
+\paragraph{Dr Juliana Bowles (n\'ee K\"uster Filipe)} (female) 
+%was awarded her PhD at the Technical University Braunschweig, Germany, in 2000. After working as a postdoctoral researcher at the Laboratory for Foundations of Computer Science (LFCS), University of Edinburgh, she then took a lectureship position at the University of Birmingham in 2004. In 2007, Dr Bowles moved to the University of St Andrews in Scotland, where she 
+is  a Senior Lecturer in the School of Computer Science, leader of the Health Informatics group, and Director of Impact for Computer Science. 
+%She leads the Health Informatics and Formal Methods Groups. 
+Jointly with Dr Stephen Brown, Maynooth University, Ireland, and Professor Didier Galmiche, Universit\'e de Lorraine, Nancy, France, she proposed an Erasmus+ Joint Masters
+programme on Advanced Systems Dependability (DEPEND) which was awarded funding from the EACEA in July 2017. Bowles is the programme director at St Andrews since it started in September 2018.
+With over 20 years experience in teaching and research in formal methods, over 75 book chapters, journal papers and other refereed publications, her research interests lie in the development of automated techniques for dependable computer modelling and formal verification with a more recent focus on healthcare applications. She is particularly dedicated to using computational methods to maximise safety and medication effectiveness for patients undergoing multiple treatments. She was the PI in St Andrews on a recently completed \pounds 1.2M EPSRC grant on \emph{Automated Conflict Resolution in Clinical Pathways}, is a Co-Investigator on one of the research initiatives \emph{Precision Therapeutics} in the Health Data Research (HDR)-UK Scotland grant with over \pounds 6M, has held several consecutive grants funded by the Royal Academy of Engineering and the Scottish Funding Council for work on \emph{Global Health}, and is currently the PI and coordinator of the \euros{} 4.37M EU H2020 project SERUMS. 
+As Director of Impact for Computer Science at St Andrews, she has recently contributed to a SICSA response to the AI Strategy consultation for the Scottish Government. %documents to 
+She is a member of the Silver Digital Applications and Systems Group that advises the Health and Care Division of the Scottish Government.
 
-\paragraph{Dr Christopher Brown (male)} is a lecturer in the School of Computer Science and has a background in refactoring and program transformation. Dr Brown is the PI on the \euro{}5.4M EU H2020 \emph{TeamPlay} project, leading WP1 on contracts and formalisation for contracts of non-functional properities (including time, energy and security),
+%\url{http://www.}
+
+\paragraph{Dr Christopher Brown} (male) is a lecturer in the School of Computer Science and has a background in refactoring and program transformation. Dr Brown is the PI on the \euro{}5.4M EU H2020 \emph{TeamPlay} project, leading WP1 on contracts and formalisation for contracts of non-functional properities (including time, energy and security),
 and is the PI on a newly funded EPSRC project, \emph{Energise}. He has undertaken work on automated refactoring for parallelism in Haskell, Erlang and C++, including developing new ideas of program shaping and pattern discovery. He received his PhD from the University of Kent in 2008, with a thesis on Tool Support for Refactoring Haskell Programs, and subsequently worked with Prof. Simon Thompson on the Refactoring Functional Programs project. He worked on the \euro{}3.2M EU SCIence project, where he built domain-specific parallel skeletons for use in both Computer Algebra and Functional Programming. He was workpackage team leader on the \euro{}4.2M EU FP7 ParaPhrase project, which investigated the application of pattern-based refactoring in Erlang and C++. He was also workpackage team leader on the \euro{}3.6M EU Horizon 2020 RePhrase project, which was applying these refactoring techniques as part of a new software engineering approach to parallel programming using C++. He has previously led a technical team of six developers on the £537K Scottish Enterprise ParaFormance project, which was investigating commercial applications of refactoring for parallel programming, and which forms a key part of our longer-term exploitation plan. This approach is both effective and practical: using the ParaFormance tooling, we have successfully analysed million-line C++ programs, narrowing over 1,000 potential sites of potential parallelism to 29 effective sites. This task would take weeks or months of human effort, but our tool achieves it in less than 60 seconds. The ParaFormance tooling Dr Brown has developed will be exploited heavily in the \TheProject{} project. 
 
 \subsubsection*{Relevant publications}
 \begin{itemize}
-\item XX
+\item 
+V. Janjic, J.K.F. Bowles, A. Vermeulen, A. Silvina, M. Belk, C. Fidas, A. Pitsillides, M. Kumar, M. Rossborry, M. Vinov, T. Given-Wilson, A. Legay, E. Blackledge, R. Arredouani, G. Stylianou \& W. Huang.
+\emph{The SERUMS tool-chain: ensuring security and privacy of medical data in smart patient-centric healthcare systems}.  IEEE BigData. 9-12 December 2019, Los Angeles, USA. pp. 2726-2735, February 2020.
+\item J.K.F. Bowles and M.B. Caminati.
+\emph{Correct Composition in the Presence of Behavioural Conflicts and Dephasing}.  \emph{Science of Computer Programming}, 185:102323, January 2020. 
+\item 
+J.K.F. Bowles, M. B. Caminati, S. Cha and J. Mendoza.
+\emph{A Framework for Automated Conflict Detection and Resolution in Medical Guidelines},  \emph{Science of Computer Programming}, 182:42-63, August 2019. 
+%\item Modelling Concurrent Interactions. J. K\"uster-Filipe. Theoretical Computer Science 351(2), 203- 220, 2006. Elsevier B.V.
 \end{itemize}
 
-\pagebreak
+%pagebreak
 \subsubsection*{Relevant Research Projects}
 
 \begin{itemize}
+\item Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS, ICT-826278, 2019-2021), Coordinator and leader of work packages WP1 (Management), WP6 (Integration) and WP8 (dissemination). \url{https://www.serums-h2020.org/}
+\item Time, Energy and Security Analysis for Multi/Many-core heterogenerous PLAtforms (TeamPlay, ICT-779882, 2018-2020, \url{https://www.teamplay-h2020.eu/}
+\item Automated Conflict Resolution in Clinical Pathways
+(UK EPSRC EP/M014290/1, 2015-2018).
 % \item
 % Automatic Prediction of Resource Bounds for Embedded Systems (EmBounded, IST-2004-510255, 2005-2008, \url{http://www.embounded.org});
 \item Parallel Patterns for Adaptive Heterogeneous Multicore Systems (ParaPhrase, ICT-288570, 2011-2014, \url{paraphrase-ict.eu}).
-\item Refactoring Parallel Heterogeneous Resource-Aware Applications — a Software Engineering Approach(RePhrase, ICT-644235, 2015-2018).
-\item Parallel Pattern Discovery and Program Shaping for Heterogeneous Manycores (Discovery, UKEPSRCEP/P020631, 2017-2020).
-\item Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS, ICT-826278, 2019-2022, \url{https://www.serums-h2020.org/}
-\item Time, Energy and Security Analysis for Multi/Many-core heterogenerous PLAtforms (TeamPlay, ICT-779882, 2018-2021, \url{https://www.teamplay-h2020.eu/}
+\item Refactoring Parallel Heterogeneous Resource-Aware Applications - a Software Engineering Approach (RePhrase, ICT-644235, 2015-2018).
+\item Parallel Pattern Discovery and Program Shaping for Heterogeneous Manycores (Discovery, UK EPSRC EP/P020631, 2017-2020).
+
 \end{itemize}
 
 \Participant{UOD}{\url{http://www.dundee.ac.ul}}
@@ -3254,16 +3336,16 @@ and is the PI on a newly funded EPSRC project, \emph{Energise}. He has undertake
 The University of Dundee is a leading Scottish institution and one of the world’s top universities. With 18,000 students from 145 countries, it is truly a global University. Re-
 search at Dundee delivers impact by harnessing expertise across disciplines to tackle some of the most challenging problems the world faces today. It promotes the sustainable use of global resources, shapes the future through innovative design and improve social, cultural and physical well-being. The University takes pride in delivering research with significant impact on global innovation and international policy. With 44\% of staff devoted solely to research, it continues to advance the lives of people across the world. Research in Dundee benefits from a wealth of experience from around the world, as international academics and external partners work closely together.
 
-The University of Dundee was the first university in the UK that had am MSc program for Big Data Analytics. It continues to be at the forefront of Big Data Science in the UK, collaborating with national and international companies such as Teradata, Microsoft,Yahoo and local companies such as Outplay, Ninja Kiwi and Waracle along national bodies such as DataLab to deliver research and training into Data Science. \UODshort{} also has an established collaboration with various institutions in the area of Health Informatics, including the Health Informatics Centre (HIC) of the University of Dundee, which is recognised as a leader in health data linkage. It was the first centre in Scotland to offer a Safe Haven, which is now Nationally Accredited and ISO27001 certified. Operating under tight data governance controls, the Safe Haven allows secure collaborative research using sensitive eHealth data. HIC also maintains a clinical data repository of eHealth data covering approximately 20\% of the Scottish population, with core datasets providing a continuous record extending back 30 years.
+The University of Dundee was the first university in the UK that had an MSc program for Big Data Analytics. It continues to be at the forefront of Big Data Science in the UK, collaborating with national and international companies such as Teradata, Microsoft,Yahoo and local companies such as Outplay, Ninja Kiwi and Waracle along national bodies such as DataLab to deliver research and training into Data Science. \UODshort{} also has an established collaboration with various institutions in the area of Health Informatics, including the Health Informatics Centre (HIC) of the University of Dundee, which is recognised as a leader in health data linkage. It was the first centre in Scotland to offer a Safe Haven, which is now Nationally Accredited and ISO27001 certified. Operating under tight data governance controls, the Safe Haven allows secure collaborative research using sensitive eHealth data. HIC also maintains a clinical data repository of eHealth data covering approximately 20\% of the Scottish population, with core datasets providing a continuous record extending back 30 years.
 
 \subsubsection*{Role in Serums}
 \textbf{\UODshort{} will lead the WP8 on Dissemination, Exploitation, Community Building and Communication activities, with the special focus on education program by delivering MOOCs. It will also contribute with its expertise on parallel programming, pattern-based application design and development, big data analytics and machine learning to WP2, WP3 and WP6.}  
 
 \subsubsection*{Key Personnel Involved in the Project}
 
-\paragraph{Dr Vladimir Janjic} is a lecturer in Data Science at the Division of Computing in the School of Science and Engineering at the University of Dundee. He received his PhD from the University of St Andrews in 2011. He has relevant expertise in distributed systems, parallel pattern-based programming, frameworks for big data analytics, machine learning, managing complexity and systems integration. His PhD work was undertaken in the context of the EU FP6 \textbf{SCIEnce} project, where he worked on mechanisms to ensure adaptivity on heterogeneous environments, which included building the SCALES simulator for work distribution policies on heterogeneous environments, and the implementation of dynamic scheduling mechanisms. Whilst at the University of St Andrews, he was also involved in several other EU projects, including H2020 RePhrase project, where he investigated software engineering techniques for developing pattern-based parallel applications, including application of machine learning techniques in managing system properties. He has published more than 25 research papers so far. He was one of the main authors and original contributors of the \textbf{SERUMS} EU project that investigates security and privacy of medical data in modern healthcare systems, and he is currently a principal investigator of the project for the University of Dundee.
+\paragraph{Dr Vladimir Janjic} (male) is a lecturer in Data Science at the Division of Computing in the School of Science and Engineering at the University of Dundee. He received his PhD from the University of St Andrews in 2011. He has relevant expertise in distributed systems, parallel pattern-based programming, frameworks for big data analytics, machine learning, managing complexity and systems integration. His PhD work was undertaken in the context of the EU FP6 \textbf{SCIEnce} project, where he worked on mechanisms to ensure adaptivity on heterogeneous environments, which included building the SCALES simulator for work distribution policies on heterogeneous environments, and the implementation of dynamic scheduling mechanisms. Whilst at the University of St Andrews, he was also involved in several other EU projects, including H2020 RePhrase project, where he investigated software engineering techniques for developing pattern-based parallel applications, including application of machine learning techniques in managing system properties. He has published more than 25 research papers so far. He was one of the main authors and original contributors of the \textbf{SERUMS} EU project that investigates security and privacy of medical data in modern healthcare systems, and he is currently a principal investigator of the project for the University of Dundee.
 
-\paragraph{Andrew Cobley} Andy Cobley is a senior lecturer at the school of Science and Engineering at the University of Dundee.    He is the program director for the MSc programs in Data Science and Data Engineering at the University.   Amongst his research interest is the NoSQL movement and applying these technologies to internet and games applications. He is currently working with the Horizon 2020 \textbf{WeObserve} project, which aims to improve our knowledge of how to build and operate citizen observatories. He has recently finished the highly successful Horizon 2020 \textbf{GROW} project investigating over seeing the technology work package on how to process and store large quantity of  soil moisture data  that is generated from Citizen Science.  He has supervised PHd students working with the Angus Lamond Lab in the University investigating Big Data approaches using Hadoop to analyze the large data that is generated during the study of Proteomics by the Lab.  Some of this work was carried out in co-operation with Teradata and Microsoft.
+\paragraph{Andrew Cobley} (male) is a senior lecturer at the school of Science and Engineering at the University of Dundee.    He is the program director for the MSc programs in Data Science and Data Engineering at the University.   Amongst his research interest is the NoSQL movement and applying these technologies to internet and games applications. He is currently working with the Horizon 2020 \textbf{WeObserve} project, which aims to improve our knowledge of how to build and operate citizen observatories. He has recently finished the highly successful Horizon 2020 \textbf{GROW} project investigating over seeing the technology work package on how to process and store large quantity of  soil moisture data  that is generated from Citizen Science.  He has supervised PHd students working with the Angus Lamond Lab in the University investigating Big Data approaches using Hadoop to analyze the large data that is generated during the study of Proteomics by the Lab.  Some of this work was carried out in co-operation with Teradata and Microsoft.
 
 
 He is the creator of the FutureLearn MOOC “Data Science in the Games Industry” for the Scottish DataLab, this program has run on more than four occasions attracting attention from around the world. In addition, he is a writer for the on-line computing magazine “The Register” specializing in Data Science, Devops and database technologies at scale. 
@@ -3335,72 +3417,6 @@ Secure Hardware-Software Architectures for Robust Computing Systems (SHARCS, ICT
 
 \end{itemize}
 
-\Participant{SCCH}{(http://www.scch.at)}
-
-\begin{wrapfigure}{R}{4cm}
-\vspace{-2cm}
-\hfill \includeimage[width=4cm]{logos/SCCH.jpg}
-\vspace{-1cm}
-\end{wrapfigure}
-
-\SCCH{} (\url{www.scch.at}) is an Austrian research and technology organization founded in 1999 by mathematics and informatics institutes of the Johannes Kepler University, Linz, and is partially funded by the national programme COMET (Competence Centers for Excellent Technologies). Its primary focus is on research in the fields of data and software science as well as control, optimization, and machine learning. During the recent years, SCCH has focused on the research area: ``Privacy Secured Transferable AI'' under the framework of international and national projects including EU H2020 project: ``Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS)'' and national projects: ``Privacy Preserving Machine Learning for Industrial Applications (PRIMAL)'', ``Security and Safety for Shared Artificial Intelligence (S3AI)'', and ``Privacy Secured Explainable and Transferable AI for Healthcare Systems (PETAI)''. Also relevant for this project, SCCH has important experience with formal modelling and verification as per the deep fundamentals developed in the project ``Behavioural Theory and Logics for Distributed Adaptive Systems (BlogDAS)'' as well as extensive industrial experience in software analysis and knowledge-extraction from source code. 
-
-SCCH strives toward leadership in the fields of digitalization and artificial intelligence (AI) and especially supports its (industrial) partners on their transition from contemporary (software) systems to AI-based cyber-physical systems (CPS). In projects with partner companies state-of-the-art research results are applied to practical industrial projects to increase and maintain their competitiveness. One of the focus areas is Data Analysis Systems (DAS), specialising on the advancement and application of methods for the analysis and modelling of complex and massive sensor data in its (industrial) application context. Particular application domains include
-\begin{inparaenum}[a)]
-\item modelling, prognosis, forecast and control of systems
-\item industrial fault detection, diagnosis and prognosis
-\item the discovery of knowledge and structure in industrial processes.
-\end{inparaenum}
-SCCH has a long tradition of company partnerships in the manufacturing industry, like KEBA AG, Siemens AG, STIWA Holding, RUBBLE MASTER HMH, Fronius International GmbH, ENGEL AUSTRIA GmbH, TRUMPF Maschinen Austria GmbH and voestalpine Stahl GmbH, also in the energy domain and increasingly also in the healthcare sector, where, e.g., a COMET project (ARProSys) together with B. Braun from Hungary was carried out for research on the implementation of adaptive and robust software support for industrial processes in the area of electronic medical devices. 
-
-\SCCHshort{} is or was involved in the EU-funded projects COGNIPLANT (H2020-DT-SPIRE-06-2019), SERUMS (SU-TDS-02-2018), ALOHA (H2020-ICT-05-2017), TRESSPASS (SEC-2016-2017-2), RePhrase (ICT-644235), ParaPhrase (IST-2011-288570), ADVANCE (IST-2010-248828), SECO (FP7-216593), and FACETS (FP6-15879) as well as the Interreg projects KI-Net (AB292) and SmartVillages (ASP623).
-
-The participating investigators are researchers and project managers with expertise in the relevant areas and are active in the research community by publishing and reviewing for top-rated journals and conferences.
-
-\vspace{10pt}
-\textbf{\SCCHshort{} leads WPXX}
-\vspace{10pt}
-
-\subsubsection*{List of Publications}
-
-\begin{itemize}
-\item M. Kumar, M. Rossbory, B. A. Moser, B. Freudenthaler, ``An Optimal $(\epsilon,\delta)-$Differentially Private Learning of Distributed Deep Fuzzy Models,
-Information Sciences,'' \emph{Information Sciences}, 2020.
-\item M. Kumar, M. Rossbory, B. A. Moser, and B. Freudenthaler, ``Differentially Private Learning of Distributed Deep Models,'' in \emph{Proc. Adjunct Publication of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP ’20 Adjunct)}, (Association for Computing Machinery, New York, NY, USA, 193–200), July 2020. 
-\item M. Kumar, M. Rossbory, B. A. Moser, B. Freudenthaler, ``Deriving an Optimal Noise Adding Mechanism for Privacy-Preserving Machine Learning,'' in \emph{Proc. Database and Expert Systems Applications (DEXA 2019)}, (Linz, Austria), Aug. 2019.   
-\item M. Kumar and B. Freudenthaler, ``Fuzzy Membership Functional Analysis for Nonparametric Deep Models of Image Features,'' \emph{IEEE Transactions on Fuzzy Systems}, {\href{https://doi.org/10.1109/TFUZZ.2019.2950636}{https://doi.org/10.1109/TFUZZ.2019.2950636}}.
-\item F. Ferrarotti, M. Moser and J. Pichler: Stepwise abstraction of high-level system specifications from source code. Journal of Computer Languages. In press, journal pre-proof \url{https://doi.org/10.1016/j.cola.2020.100996} (2020).
-\item F. Ferrarotti, S. González and K.-D. Schewe: BSP abstract state machines capture bulk synchronous parallel computations. Sci. Comput. Program. 184 (2019)
-\item F. Ferrarotti, Klaus-Dieter Schewe, Loredana Tec and Qing Wang: A unifying logic for non-deterministic, parallel and concurrent abstract state machines. Ann. Math. Artif. Intell. 83(3-4): 321-349 (2018)
-
-\end{itemize}
-
-\subsubsection*{Relevant Research Projects}
-
-\begin{itemize}
-\item SERUMS (H2020, SU-TDS-02-2018) on privacy-preserving distributed data analytics for securing medical data in smart patient-centric healthcare 
-
-\item PRIMAL (FFG IKT der Zukunft 2018) on privacy-preserving machine learning on industrial applications
-
-\item S3AI: Austrian COMET Module on fundamental research on deep collaborative learning, since Jan 2020; coord. SCCH 
-
-\item RePhrase (H2020, ICT-644235) - Refactoring Parallel Heterogeneous Resource-Aware Applications. SCCH's role: reinforcement learning based dynamic scheduling and industrial use cases
-
-\item ParaPhrase (IST-2011-288570) - Parallel Patterns for Adaptive Heterogeneous Multicore Systems. SCCH's role: use cases in the area of machine learning
-
-\item ADVANCE (IST-2010-248828) - Asynchronous and Dynamic Virtualisation through performance ANalysis to support Concurrency Engineering, \url{http://www.project-advance.eu});
-
-\item ALOHA (H2020 Grant Agreement 780788) - Software framework for run-time-Adaptive and secure deep Learning On Heterogeneous Architectures. SCCH's role: develop deep transfer learning based methods for surveillance applications
-
-\item TRESSPASS (H2020 SEC-2016-2017-2, Proposal Nr. 787120) - robusT Risk basEd Screening and alert System for PASSengers and luggage. SCCH's role: develop deep learning based methods for security applications
-
-\item GROW (H2020 Grant Agreement No.690199) Citizen Observatory that has ground-truthed Sentinel-1 to improve the accuracy of predictions on extreme events, such as flood, drought and wildfire. \url{https://growobservatory.org};
-
-\item WeObserve (H2020 Grant Agreement No.776740) An Ecosystem of Citizen Observatories for Environmental Monitoring. Umbrella for H2020 projects GROW Observatory, Landsense, Groundtruth 2.0 and Scent \url{https://growobservatory.org};
-
-\item BLogDAS (FWF: [P26452-N15]) Behavioural Theory and Logics for Distributed Adaptive Systems. Supported by the Austrian Science Fund.
-
-\end{itemize}
 
 % ============================
 
@@ -3447,16 +3463,16 @@ Supports following industries:
 
 \vspace{10pt}
 
-\paragraph{Andreas Francois Vermeulen} - Head of Analytics, Digital Consultancy Services within the United-Kingdom.
+\paragraph{Andreas Francois Vermeulen} Head of Analytics, Digital Consultancy Services within the United Kingdom.
 
 Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United-Kingdom. Author of three international books on big data, data science and machine learning.
 
-\paragraph{Ian Kayne} - Head of Cyber Security Consulting within the United Kingdom.
+\paragraph{Ian Kayne}  Head of Cyber Security Consulting within the United Kingdom.
 
 Ian has over twenty-four+ years’ experience in cybersecurity and cloud ecosystems, leading global initiatives for FTSE100 and Fortune500 organizations as well as Government and Public Sector. Expert at penetration test and reverse engineering services. A published author and lectures on secure coding and reverse engineering modules at MSc level in cybersecurity.
 
 
-\paragraph{Rakhee Porter} - Cyber Resilience Lead within the United-Kingdom.
+\paragraph{Rakhee Porter}  Cyber Resilience Lead within the United Kingdom.
 
 Rakhee has ten plus years of experience delivering risk based resilience programs to secure ecosystems. Expert in business resilience services including Technology Resilience, Operational Resilience, Crisis Management and Business Continuity.
 
@@ -3470,6 +3486,130 @@ Rakhee has ten plus years of experience delivering risk based resilience program
 \begin{itemize}
 \item SERUMS (\url{https://www.serums-h2020.org/})
 \end{itemize}
+
+
+\Participant{SCCH}{(http://www.scch.at)}
+
+\begin{wrapfigure}{R}{4cm}
+\vspace{-2cm}
+\hfill \includeimage[width=4cm]{logos/SCCH.jpg}
+\vspace{-1cm}
+\end{wrapfigure}
+
+\SCCH{} (\url{www.scch.at}) is an Austrian research and technology organization founded in 1999 by mathematics and informatics institutes of the Johannes Kepler University, Linz, and is partially funded by the national programme COMET (Competence Centers for Excellent Technologies). Its primary focus is on research in the fields of data and software science as well as control, optimization, and machine learning. During the recent years, SCCH has focused on the research area: ``Privacy Secured Transferable AI'' under the framework of international and national projects including EU H2020 project: ``Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS)'' and national projects: ``Privacy Preserving Machine Learning for Industrial Applications (PRIMAL)'', ``Security and Safety for Shared Artificial Intelligence (S3AI)'', and ``Privacy Secured Explainable and Transferable AI for Healthcare Systems (PETAI)''. Also relevant for this project, SCCH has important experience with formal modelling and verification as per the deep fundamentals developed in the project ``Behavioural Theory and Logics for Distributed Adaptive Systems (BlogDAS)'' as well as extensive industrial experience in software analysis and knowledge-extraction from source code. 
+
+SCCH strives toward leadership in the fields of digitalization and artificial intelligence (AI) and especially supports its (industrial) partners on their transition from contemporary (software) systems to AI-based cyber-physical systems (CPS). In projects with partner companies state-of-the-art research results are applied to practical industrial projects to increase and maintain their competitiveness. One of the focus areas is Data Analysis Systems (DAS), specialising on the advancement and application of methods for the analysis and modelling of complex and massive sensor data in its (industrial) application context. Particular application domains include
+\begin{inparaenum}[a)]
+\item modelling, prognosis, forecast and control of systems
+\item industrial fault detection, diagnosis and prognosis
+\item the discovery of knowledge and structure in industrial processes.
+\end{inparaenum}
+SCCH has a long tradition of company partnerships in the manufacturing industry, like KEBA AG, Siemens AG, STIWA Holding, RUBBLE MASTER HMH, Fronius International GmbH, ENGEL AUSTRIA GmbH, TRUMPF Maschinen Austria GmbH and voestalpine Stahl GmbH, also in the energy domain and increasingly also in the healthcare sector, where, e.g., a COMET project (ARProSys) together with B. Braun from Hungary was carried out for research on the implementation of adaptive and robust software support for industrial processes in the area of electronic medical devices. 
+
+\SCCHshort{} is or was involved in the EU-funded projects COGNIPLANT (H2020-DT-SPIRE-06-2019), SERUMS (SU-TDS-02-2018), ALOHA (H2020-ICT-05-2017), TRESSPASS (SEC-2016-2017-2), RePhrase (ICT-644235), ParaPhrase (IST-2011-288570), ADVANCE (IST-2010-248828), SECO (FP7-216593), and FACETS (FP6-15879) as well as the Interreg projects KI-Net (AB292) and SmartVillages (ASP623).
+
+The participating investigators are researchers and project managers with expertise in the relevant areas and are active in the research community by publishing and reviewing for top-rated journals and conferences.
+
+\vspace{10pt}
+\textbf{\SCCHshort{} leads WPXX}
+\vspace{10pt}
+
+\textbf{Key Personnel:\\}
+\textcolor{red}{\textbf{Apl. Prof. Dr.-ing. habil. Mohit Kumar} is a key researcher in the ``Data Analysis Systems'' group at the SCCH. He served as Research Group Leader from 2008 to 2016 at the Center for Life Science Automation and Institute of Automation of University of Rostock. Since 2016, he is the professor for ``Computational Intelligence in Automation'' at the University of Rostock. He was awarded in 2016 the ``Thousands Talent Foreign Expert'' award of China. He served as Adjunct Research and Development Technical Director at Binhai Industrial Technology Research Institute of Zhejiang University, China from 2017 to 2018. He is also a Guest Lecturer at Georg-August-Universität Göttingen, Germany. His research area is Artificial Intelligence in Automation. He has published more than 45 journal articles in top-rated journals of his research field. He has an h-index of 17 and around 1200 citations. More information about his research is available at www.fuzzycomputing.com.}
+
+\subsubsection*{List of Publications}
+
+\begin{itemize}
+\item M. Kumar, M. Rossbory, B. A. Moser, B. Freudenthaler, ``An Optimal $(\epsilon,\delta)-$Differentially Private Learning of Distributed Deep Fuzzy Models,'' \emph{Information Sciences}, \url{https://doi.org/10.1016/j.ins.2020.07.044}{}. 
+\item M. Kumar and B. Freudenthaler, ``Fuzzy Membership Functional Analysis for Nonparametric Deep Models of Image Features,'' \emph{IEEE Transactions on Fuzzy Systems}, \url{https://doi.org/10.1109/TFUZZ.2019.2950636}{}.
+\item F. Ferrarotti, M. Moser and J. Pichler: Stepwise abstraction of high-level system specifications from source code. Journal of Computer Languages. In press, journal pre-proof \url{https://doi.org/10.1016/j.cola.2020.100996} (2020).
+\item F. Ferrarotti, S. González and K.-D. Schewe: BSP abstract state machines capture bulk synchronous parallel computations. Sci. Comput. Program. 184 (2019)
+\item F. Ferrarotti, Klaus-Dieter Schewe, Loredana Tec and Qing Wang: A unifying logic for non-deterministic, parallel and concurrent abstract state machines. Ann. Math. Artif. Intell. 83(3-4): 321-349 (2018)
+
+\end{itemize}
+
+\subsubsection*{Relevant Research Projects}
+
+\begin{itemize}
+\item SERUMS (H2020, SU-TDS-02-2018) on privacy-preserving distributed data analytics for securing medical data in smart patient-centric healthcare 
+
+\item PRIMAL (FFG IKT der Zukunft 2018) on privacy-preserving machine learning on industrial applications
+
+\item S3AI: Austrian COMET Module on fundamental research on deep collaborative learning, since Jan 2020; coord. SCCH 
+
+\item RePhrase (H2020, ICT-644235) - Refactoring Parallel Heterogeneous Resource-Aware Applications. SCCH's role: reinforcement learning based dynamic scheduling and industrial use cases
+
+\item ParaPhrase (IST-2011-288570) - Parallel Patterns for Adaptive Heterogeneous Multicore Systems. SCCH's role: use cases in the area of machine learning
+
+\item ADVANCE (IST-2010-248828) - Asynchronous and Dynamic Virtualisation through performance ANalysis to support Concurrency Engineering, \url{http://www.project-advance.eu});
+
+\item ALOHA (H2020 Grant Agreement 780788) - Software framework for run-time-Adaptive and secure deep Learning On Heterogeneous Architectures. SCCH's role: develop deep transfer learning based methods for surveillance applications
+
+\item TRESSPASS (H2020 SEC-2016-2017-2, Proposal Nr. 787120) - robusT Risk basEd Screening and alert System for PASSengers and luggage. SCCH's role: develop deep learning based methods for security applications
+
+\item GROW (H2020 Grant Agreement No.690199) Citizen Observatory that has ground-truthed Sentinel-1 to improve the accuracy of predictions on extreme events, such as flood, drought and wildfire. \url{https://growobservatory.org};
+
+\item WeObserve (H2020 Grant Agreement No.776740) An Ecosystem of Citizen Observatories for Environmental Monitoring. Umbrella for H2020 projects GROW Observatory, Landsense, Groundtruth 2.0 and Scent \url{https://growobservatory.org};
+
+\item BLogDAS (FWF: [P26452-N15]) Behavioural Theory and Logics for Distributed Adaptive Systems. Supported by the Austrian Science Fund.
+
+\end{itemize}
+
+
+
+
+% ============================
+\Participant{COGNI}{(\url{https://cognitiveux.com/})}
+
+\begin{wrapfigure}{R}{6,2cm}
+\vspace{-3cm}
+\hfill \includeimage[width=7cm]{logos/COGNI-logo.png}
+\vspace{-1cm}
+\end{wrapfigure}
+\vspace{10pt}
+
+Cognitive UX LTD is an IT company aiming to develop AI-driven and human-centered cybersecurity and privacy systems. The Cognitive UX key team members have complementary expertise spanning the spectrum of business, academia, technology and research. 
+
+The company’s mission, as proven by the strong research and development track of the company, is to apply state-of-the-art and innovative developments in the domain of Cybersecurity for building and deploying products and services. The core team members have strong experience in implementing EU and National research projects (H2020, FP7, AAL, RIF), including awards of excellence (H2020 Seal of Excellence).
+
+%\vspace{10pt}
+%\textbf{Cognitive UX leads work package WP5}
+\vspace{10pt}
+
+\textbf{Key Personnel:}
+
+\paragraph{Marios Belk} (male, PhD, MSc, BSc) is CEO and co-founder of Cognitive UX LTD. He completed a Ph.D. degree in Computer Science, with focus on usable security and human-centered computing (2015) at the Department of Computer Science, University of Cyprus. His Ph.D. work was ranked in the finalists of the ERCIM 2016 Cor Baayen Young Researcher Award Competition. Recently he was appointed as a Marie Curie research fellow at IDMind Systems Engineering in Lisbon, Portugal. His research work has been published in accredited scientific journals and conferences, such as ACM CHI, ACM IUI. His publications include a best paper award at the SouthCHI 2013 conference and a best paper nomination award and honorable mention at the UMAP 2014 conference. He has professional experience for over ten years as a work package leader, technical manager and researcher in six EU projects (H2020 Serums, H2020 GrowMeUp, AAL Success, AAL CogniWin, FP7 Miraculous-Life, Marie Sklodowska-Curie SocialRobot) and three National projects.
+
+\paragraph{Argyris Constantinides} (male, MSc, BSc) is CTO and co-founder of Cognitive UX LTD, and a Ph.D. candidate at the Department of Computer Science, University of Cyprus. He holds a M.Sc. in Web Science and Big Data Analytics from the University College London (2015), and a B.Sc. in Computer Science from the University of Cyprus (2014). His research interests revolve around the areas of Human-Computer Interaction, Usable Security, and Intelligent User Interfaces and he has published scientific papers on accredited conferences (ACM IUI, ACM UMAP, ACM MobileHCI, IEEE/WIC/ACM Web Intelligence). Constantinides has professional experience as a researcher and software engineer in EU research projects (H2020 SERUMS, EU-AAL MEMENTO, EU-AAL SUCCESS) and National research projects. In the past, he has worked as a software engineer at Playtech BGT Sports, London, UK (2015-2017).
+
+\paragraph{Christos Fidas} (male, PhD, MSc, BSc) is Scientific Advisor of Cognitive UX LTD and an Assistant Professor at the University of Patras, Greece. He has a long-standing professional experience (since 2000) as an academic and entrepreneur in applying User-Centered Design methods in various application domains. As an academic, he has published more than 70 papers in accredited scientific journals and conferences. He has also professional experience in project management and human resource management in more than ten EU-funded and National research projects (H2020 Serums, FP7 CR-PLAY. As an entrepreneur, he was the co-founder, CEO and CTO of Instance LTD software development company (2002-2010), and patent owner that was acquired by an angel investor of the National Bank of Greece.
+
+\subsubsection*{List of Publications}
+
+\begin{itemize}
+\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2020). An eye gaze-driven metric for estimating the strength of graphical passwords based on image hotspots. ACM Intelligent User Interfaces (IUI 2020), ACM, 33-37 (16\% acceptance rate)
+\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2019). On the accuracy of eye gaze-driven classifiers for predicting image content familiarity in graphical passwords. ACM User Modeling, Adaptation and Personalization (UMAP 2019), ACM, 201-205
+\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., \& Avouris, N. (2018). Influences of human cognition and visual behavior on password security during picture password composition. ACM SIGCHI Human Factors in Computing Systems (CHI 2018), ACM Press, paper 87.
+\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., \& Avouris, N. (2018). Eye gaze-driven prediction of cognitive differences during graphical password composition. ACM SIGCHI Intelligent User Interfaces (IUI 2017), ACM Press, 147-152
+\item Belk, M., Fidas, C., Germanakos, P., \& Samaras, G. (2017). The interplay between humans, technology and user authentication: a cognitive processing perspective. Computers in Human Behavior (Impact Factor: 4.252), 76, Elsevier, 184-200.
+
+
+\end{itemize}
+
+% =====================
+\Participant{UCM}{ }
+
+\begin{wrapfigure}{R}{6,2cm}
+\vspace{-3cm}
+\hfill \includeimage[width=7cm]{logos/UC3M-logo.png}
+\vspace{-1cm}
+\end{wrapfigure}
+\vspace{10pt}
+
+\textbf{Key Personnel:}
+
+\subsubsection*{List of Publications}
+
 
 % ============================
 \Participant{FRQ}{(\url{https://www.frequentis.com/})}
@@ -3562,14 +3702,21 @@ The YAG-Suite is a smart tool based on static analysis and machine learning whic
 
 \vspace{10pt}
 
-\paragraph{Dr Antoine FLOC'H} (male) (PhD), is Co-founder and CTO of \YAGlong{} with more than 13 years of experience in the research and innovation area of compiling, SAST, operational research and source code scanning. He is the author and technical lead of \YAGlong{} technology.
+\paragraph{Dr Antoine Floch} (male) (PhD), is Co-founder and CTO of \YAGlong{} with more than 13 years of experience in the research and innovation area of compiling, SAST, operational research and source code scanning. He is the author and technical lead of \YAGlong{} technology.
 
 \subsubsection*{Relevant publications}
 \begin{itemize}
-\item Martin Kevin J. M., Wolinski Christophe , Kuchcinski Krzysztof, Floch Antoine, Charot, François. (2012). Constraint Programming Approach to Reconfigurable Processor Extension Generation and Application Compilation. ACM Transactions on Reconfigurable Technology and Systems - TRETS. 5. 1-38. 10.1145/2209285.2209289.
-\item Wolinski Christophe , Kuchcinski Krzysztof , Martin Kevin J. M. , Floch Antoine , Raffin, Erwan , Charot, François. (2010). Graph Constraints in Embedded System Design. 
-\item Martin Kevin J. M. , Wolinski Christophe , Kuchcinski Krzysztof , Floch Antoine , Charot François. (2009). Constraint-Driven Identification of Application Specific Instructions in the DURASE System. 194-203. 10.1007/978-3-642-03138-0-21. 
+\item K. Martin, C. Wolinski, K. Kuchcinski, A. Floch and F. Charot. Constraint Programming Approach to Reconfigurable Processor Extension Generation and Application Compilation. ACM Transactions on Reconfigurable Technology and Systems - TRETS. 5 (2):1-38, 2012. 10.1145/2209285.2209289.
+\item C. Wolinski, K. Kuchcinski, K. Martin, A. Floch, E. Raffin and F. Charot. Graph Constraints in Embedded System Design, Workshop on Combinatorial Optimization for Embedded System Design, Bologna, Italy, 2010.
+%Wolinski, C., Kuchcinski, K., Martin, K., Floch, A., Raffin, E., & Charot, F. (Accepted/In press). Graph constraints in embedded system design. Paper presented at 
+
+\item K. Martin, C. Wolinski, K. Kuchcinski, A. Floch and F. Charot. Constraint-Driven Identification of Application Specific Instructions in the DURASE System. 
+In: Bertels K., Dimopoulos N., Silvano C., Wong S. (eds) Embedded Computer Systems: Architectures, Modeling, and Simulation (SAMOS 2009). LNCS 5657, pp 194-203, 2009. Springer, Berlin, Heidelberg.
+%194-203. 10.1007/978-3-642-03138-0-21. 
 \end{itemize}
+
+
+
 
 \subsubsection*{Relevant Research and Technology Projects}
 
@@ -3581,43 +3728,6 @@ The YAG-Suite is a smart tool based on static analysis and machine learning whic
 
 
 
-% ============================
-\Participant{COGNI}{(\url{https://cognitiveux.com/})}
-
-\begin{wrapfigure}{R}{6,2cm}
-\vspace{-3cm}
-\hfill \includeimage[width=7cm]{logos/COGNI-logo.png}
-\vspace{-1cm}
-\end{wrapfigure}
-\vspace{10pt}
-
-Cognitive UX LTD is an IT company aiming to develop AI-driven and human-centered cybersecurity and privacy systems. The Cognitive UX key team members have complementary expertise spanning the spectrum of business, academia, technology and research. 
-
-The company’s mission, as proven by the strong research and development track of the company, is to apply state-of-the-art and innovative developments in the domain of Cybersecurity for building and deploying products and services. The core team members have strong experience in implementing EU and National research projects (H2020, FP7, AAL, RIF), including awards of excellence (H2020 Seal of Excellence).
-
-%\vspace{10pt}
-%\textbf{Cognitive UX leads work package WP5}
-\vspace{10pt}
-
-\textbf{Key Personnel:}
-
-\paragraph{Marios Belk} (male, PhD, MSc, BSc) is CEO and co-founder of Cognitive UX LTD. He completed a Ph.D. degree in Computer Science, with focus on usable security and human-centered computing (2015) at the Department of Computer Science, University of Cyprus. His Ph.D. work was ranked in the finalists of the ERCIM 2016 Cor Baayen Young Researcher Award Competition. Recently he was appointed as a Marie Curie research fellow at IDMind Systems Engineering in Lisbon, Portugal. His research work has been published in accredited scientific journals and conferences, such as ACM CHI, ACM IUI. His publications include a best paper award at the SouthCHI 2013 conference and a best paper nomination award and honorable mention at the UMAP 2014 conference. He has professional experience for over ten years as a work package leader, technical manager and researcher in six EU projects (H2020 Serums, H2020 GrowMeUp, AAL Success, AAL CogniWin, FP7 Miraculous-Life, Marie Sklodowska-Curie SocialRobot) and three National projects.
-
-\paragraph{Argyris Constantinides} (male, MSc, BSc) is CTO and co-founder of Cognitive UX LTD, and a Ph.D. candidate at the Department of Computer Science, University of Cyprus. He holds a M.Sc. in Web Science and Big Data Analytics from the University College London (2015), and a B.Sc. in Computer Science from the University of Cyprus (2014). His research interests revolve around the areas of Human-Computer Interaction, Usable Security, and Intelligent User Interfaces and he has published scientific papers on accredited conferences (ACM IUI, ACM UMAP, ACM MobileHCI, IEEE/WIC/ACM Web Intelligence). Constantinides has professional experience as a researcher and software engineer in EU research projects (H2020 SERUMS, EU-AAL MEMENTO, EU-AAL SUCCESS) and National research projects. In the past, he has worked as a software engineer at Playtech BGT Sports, London, UK (2015-2017).
-
-\paragraph{Christos Fidas} (male, PhD, MSc, BSc) is Scientific Advisor of Cognitive UX LTD and an Assistant Professor at the University of Patras, Greece. He has a long-standing professional experience (since 2000) as an academic and entrepreneur in applying User-Centered Design methods in various application domains. As an academic, he has published more than 70 papers in accredited scientific journals and conferences. He has also professional experience in project management and human resource management in more than ten EU-funded and National research projects (H2020 Serums, FP7 CR-PLAY. As an entrepreneur, he was the co-founder, CEO and CTO of Instance LTD software development company (2002-2010), and patent owner that was acquired by an angel investor of the National Bank of Greece.
-
-\subsubsection*{List of Publications}
-
-\begin{itemize}
-\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2020). An eye gaze-driven metric for estimating the strength of graphical passwords based on image hotspots. ACM Intelligent User Interfaces (IUI 2020), ACM, 33-37 (16\% acceptance rate)
-\item Constantinides, A., Belk, M., Fidas, C., Pitsillides, A. (2019). On the accuracy of eye gaze-driven classifiers for predicting image content familiarity in graphical passwords. ACM User Modeling, Adaptation and Personalization (UMAP 2019), ACM, 201-205
-\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., & Avouris, N. (2018). Influences of human cognition and visual behavior on password security during picture password composition. ACM SIGCHI Human Factors in Computing Systems (CHI 2018), ACM Press, paper 87.
-\item Katsini, C., Fidas, C., Raptis, G., Belk, M., Samaras, G., & Avouris, N. (2018). Eye gaze-driven prediction of cognitive differences during graphical password composition. ACM SIGCHI Intelligent User Interfaces (IUI 2017), ACM Press, 147-152
-\item Belk, M., Fidas, C., Germanakos, P., & Samaras, G. (2017). The interplay between humans, technology and user authentication: a cognitive processing perspective. Computers in Human Behavior (Impact Factor: 4.252), 76, Elsevier, 184-200.
-
-
-\end{itemize}
 
 
 
