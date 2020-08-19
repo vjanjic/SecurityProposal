@@ -1037,7 +1037,7 @@ The combination of different techniques for vulnerabilities detection will allow
 
 \paragraph{Static Code Analysis.}
 \vjcomment{\YAGshort{} and \IBMshort{} to write}
-In the secure development life cycle, different complementary techniques make it possible to build and test the cyber security of software applications, from the writing of the first line of code during the project to stressing the application in production with ethical hacking. In order to minimize the overall costs of security testing, the first action to be implemented as early as possible in the development process is to analyze the source code on a regular basis to verify that the algorithms, the management of sensitive data and resources by the application will not generate vulnerabilities. The only technique which can produce results when the project is not yet ready for compiling is SAST (Static Application Security Testing). Source code scanners, such as HCL-Appscan Source~\cite{AppScan}, Checkmarx Source~\cite{Checkmarx} and Coverity~\cite{Coverity}, rely on SAST to detect suspicious sequences of code that may reveal a vulnerability. 
+In the secure development life cycle, different complementary techniques make it possible to build and test the cyber security of software applications, from the writing of the first line of code during the project to stressing the application in production with ethical hacking. In order to minimize the overall costs of security testing, the first action to be implemented as early as possible in the development process is to analyze the source code on a regular basis to verify that the algorithms, the management of sensitive data and resources by the application will not generate vulnerabilities. The only technique which can produce results when the project is not yet ready for compiling is SAST (Static Application Security Testing). Source code scanners, such as HCL-Appscan \footnote{https://www.hcltechsw.com/products/appscan}, Checkmarx \footnote{https://www.checkmarx.com/products/static-application-security-testing}, Kiuwan \footnote{https://www.kiuwan.com/code-security-sast/} and Coverity \footnote{https://scan.coverity.com/}, rely on SAST to detect suspicious sequences of code that may reveal a vulnerability. 
 
 State of the art source code scanners all face the same dilemna: from the very huge volume of analyzed source code they must ideally warn the user on each and every potential vulnerabilities but only when a relevant vulnerability is detected. In reality vulnerabilities are not so easy to find, because of the combinatory and complexity of vulnerability detection, and scanner editors will prefer to raise potentially irrelevant warnings (false positive) rather than missing real vulnerabilities (true negatives). As a result, state of the art scanners generate a lot of false positives. It's getting even more difficult when a single vulnerability may show up in several parts of the code, thus generating duplicate warnings. 
 To be usefully exploited, users need to carry out additional manual investigations which prove to be heavily time consuming. The current economical efficiency of static analysis is therefore limited and the induced HR costs can be very significant if all warnings are checked for their relevance.
@@ -2147,7 +2147,7 @@ As part of application-oriented research projects with partners companies, \SCCH
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solution the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality.
+Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solution the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is an safeguard against security breaches or privacy leaks for your customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way (\project{}) to ensure better and safer code is generated we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. \project{} is a step towards improvement of this situation.
 
 \horizontalline
 
@@ -2181,7 +2181,7 @@ Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the re
     \item YAG-Suite improvement for privacy assessment of big data related applications: To support GDPR compliance assessments, \TheProject technologies will significantly enrich the YAG-Suite for \YAGshort{} to offer new source code privacy breaches detection capabilities and support European businesses in delivering better privacy compliant applications to the EU citizens. Additionally \TheProject will support \YAGshort{} in accessing the new market segment of big data application producers.
     \item YAG-Suite improvement for code auditors: As YAG-Suite not only is used by developers but also by service providers who deliver source code audits, the same capabilities will also benefit to audit service providers.
 \end{itemize}
-It is also in \YAGshort{} strategy to build business partnerships to support its partners in addressing new markets and disseminate \YAGshort{} technology, or to accelerate the growth of the startup, partnering with value added distributors or integrators.
+It is also in \YAGshort{} strategy to build business partnerships to support its partners in addressing new markets and disseminate \YAGshort{} technology, or to accelerate the growth of the startup, partnering with value added distributors. It is finally in the company strategy to build business alliances with integrators or technology providers : potential cooperations with \TheProject{} partners will be discussed during the project.
 
 \horizontalline
 
@@ -3534,9 +3534,25 @@ He is the creator of the FutureLearn MOOC “Data Science in the Games Industry�
 
 \item 
 Masó , J., Cobley, A., Tsiakos, V., Tousert, N., Theodoropoulos, T., Jirka, S., Schade, S., Matheus, A., Tamascelli, S., Klan, F., & Padiya, T. (2020). \emph{OGC Citizen Science Interoperability Experiment Engineering Report. Open Geospatial Consortium.} http://docs.opengeospatial.org/per/19-083.html
+\item
+Hemment, Drew  ; Woods, Mel  ; Ajates Gonzalez, Raquel  ; Cobley, Andrew ; Xaver, Angelika .  \emph{Enhancing collective intelligence through citizen science : The case of the GROW citizens’ observatory.} Collective Intelligence 2019 Proceedings. Association for Computing Machinery (ACM), 2019. pp. 1-4
+\item Cobley, Andrew  ; Woods, Mel  ; Hemment, Drew ; Giesen, Rianne.  \emph{The GROW Project, Interoperability between In Situ Sensors, Citizen Science and Crowd Sourced Data.} 39th EARSeL Symposium: Book of Abstracts. editor / Barbara Riedler ; Stefan Lang ; Stefanie Lettner ; Dirk Tiede. 2019. pp. 24-25
+\item
+Cobley A. 2015. \emph{NoSQL: Injection vaccination for a new generation}. The Register.
+\item Hemment, Drew  ; Ajates Gonzalez, Raquel  ; Woods, Melanie  ; Long, Deborah ; Giesen, Rianne  ; Cobley, Andrew. \emph{GROW Citizens’ Observatory Framework : A reference and guidelines for community platforms to generate, share and utilise information to address community, science, policy and innovation challenges }. European Commission, 2017. 55 p.
+\item Hillman, Chris  ; Ahmad, Yasmeen  ; Whitehorn, Mark  ; Cobley, Andy. \emph{Near real-time processing of proteomics data using Hadoop}. In: Big Data. 2014 ; Vol. 2, No. 1. pp. 44-49.
+\item Boulon, Severine  ; Ahmad, Yasmeen  ; Trinkle-Mulcahy, Laura ; Verheggen, Celine  ; Cobley, Andy  ; Gregor, Peter ; Bertrand, Edouard  ; Whitehorn, Mark  ; Lamond, Angus I.  \emph{Establishment of a protein frequency library and its application in the reliable identification of specific protein interaction partners}. In: Molecular & Cellular Proteomics. 2010 ; Vol. 9, No. 5. pp. 861-879.
+\end{itemize}
+\subsubsection*{Relevant Research Projects}
+
+\begin{itemize}
+
+\item GROW Observatory (GROW, SC5-17-2015, funded as 690199, 2016-2019), . \url{https://growobservatory.org/}
+
+
+\item An Ecosystem of Citizen Observatories for Environmental Monitoring (WeObserve, SC5-19-2017, Grant no 776740, 2017-2020), . \url{https:www.weobserve.eu//}
 
 \end{itemize}
-
 \Participant{IBM}{(\url{http://www.research.ibm.com/labs/haifa/)}}
 
 
@@ -3696,7 +3712,7 @@ The participating investigators are researchers and project managers with expert
 
 \vspace{10pt}
 \subsubsection*{Role in Elysian}
-\textbf{\SCCH{} will lead WP3 on Security and Privacy of Distributed Machine Learning, with the special focus on privacy-preserving machine learning and knowledge sharing in distributed AI. SCCH will contribute in the development of advanced machine learning and information theory based tools for evaluating and reducing privacy leakage in distributed AI. \SCCH{} will also contribute to WP2 by working in the identification of vulnerabilities that arise from unexpected iteration of data processing agents during computation as well as in the development of related adaptation mechanisms for self-healing. In WP4, SCCH will provide theoretical background for the specification of security contracts, tool support for the extraction of the required formal models from source code, novel techniques for the verification of security properties on distributed systems and theoretical foundations for attack models and security repairablity of proof obligations.}
+\textbf{\SCCH{} will lead WP3 on Security and Privacy of Distributed Machine Learning, with the special focus on privacy-preserving machine learning and knowledge sharing in distributed AI. SCCH will contribute in the development of advanced machine learning and information theory based tools for evaluating and reducing privacy leakage in distributed AI. SCCH will further contribute to privacy-preserving biometrics and authentication in WP5. \SCCH{} will also contribute to WP2 by working in the identification of vulnerabilities that arise from unexpected iteration of data processing agents during computation as well as in the development of related adaptation mechanisms for self-healing. In WP4, SCCH will provide theoretical background for the specification of security contracts, tool support for the extraction of the required formal models from source code, novel techniques for the verification of security properties on distributed systems and theoretical foundations for attack models and security repairablity of proof obligations.}
 \vspace{10pt}
 
 \textbf{Key Personnel:\\}
