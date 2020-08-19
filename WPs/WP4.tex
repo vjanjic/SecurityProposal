@@ -3,12 +3,12 @@
 \wplabel{wp:securityContracts}
 \WPTitle{\wpname{\thewpno}}
 \WPStart{Month 1}
-\WPParticipant{USTAN}{1}
-\WPParticipant{UOD}{1}
-\WPParticipant{SCCH}{1}
-\WPParticipant{IBM}{1}
-\WPParticipant{UCM}{1}
-\WPParticipant{YAG}{1}
+\WPParticipant{USTAN}{17}
+\WPParticipant{UCM}{14}
+\WPParticipant{SCCH}{12}
+\WPParticipant{YAG}{6}
+\WPParticipant{IBM}{5}
+\WPParticipant{SOPRA}{2.5}
 
 
 \begin{WPObjectives}
@@ -62,11 +62,17 @@ For functional security requirements we will explore the use of metrics such as 
 
 \begin{Task}
 \TaskTitle{Security Contracts support and specification}
-\TaskParticipant{UCM}{1}
-
+\TaskParticipant{UCM}{8}
+\TaskParticipant{USTAN}{4}
+\TaskParticipant{SCCH}{4}
+\TaskParticipant{IBM}{1}
+\TaskParticipant{SOPRA}{1}
 \TaskStart{1}
-\TaskEnd{27}
+\TaskEnd{34}
 \TaskResults{%
+\ref{del:formal1},
+\ref{del:formal2},
+\ref{del:formal3}
 %\ref{del:model1}
 }
 \TaskHeader{}
@@ -87,11 +93,15 @@ We will then further develop the module to perform more sophisticated higher-lev
 
 \begin{Task}
 \TaskTitle{Formal Verification and Reasoning about Refactorings}
-\TaskParticipant{USTAN}{1}
-
-\TaskStart{1}
-\TaskEnd{27}
+\TaskParticipant{USTAN}{5}
+\TaskParticipant{SCCH}{4}
+\TaskParticipant{UCM}{3}
+\TaskStart{4}
+\TaskEnd{34}
 \TaskResults{%
+\ref{del:formal1},
+\ref{del:formal2},
+\ref{del:formal3}
 %\ref{del:model1}
 }
 \TaskHeader{}
@@ -131,11 +141,15 @@ We will explore how combining theorem provers and SMT solvers allows us to prove
 
 \begin{Task}
 \TaskTitle{Attack Models and Security Repairability of Proof Obligations}
-\TaskParticipant{SCCH}{1}
-
-\TaskStart{1}
-\TaskEnd{27}
+\TaskParticipant{USTAN}{5}
+\TaskParticipant{SCCH}{4}
+\TaskParticipant{IBM}{1}
+\TaskStart{3}
+\TaskEnd{34}
 \TaskResults{%
+\ref{del:formal1},
+\ref{del:formal2},
+\ref{del:formal3}
 %\ref{del:model1}
 }
 \TaskHeader{}
@@ -166,11 +180,18 @@ The aim of \theTask\ is to define classes of security contract requirements for 
 
 \begin{Task}
 \TaskTitle{Analysis-based Risk Assessment for Source Code Security Breaches}
-\TaskParticipant{YAG}{1}
+\TaskParticipant{UCM}{2}
+\TaskParticipant{IBM}{2}
+\TaskParticipant{YAG}{2}
+\TaskParticipant{USTAN}{1}
+\TaskParticipant{SOPRA}{1}
 
-\TaskStart{1}
-\TaskEnd{27}
+\TaskStart{3}
+\TaskEnd{30}
 \TaskResults{%
+\ref{del:formal1},
+\ref{del:formal2},
+\ref{del:formal3}
 %\ref{del:model1}
 }
 \TaskHeader{}
@@ -191,11 +212,20 @@ In \theTask, as a complementary approach to extend formal verification of securi
 
 \begin{Task}
 \TaskTitle{Assessment of security requirements based on CVSS metrics}
-\TaskParticipant{YAG}{1}
+\TaskStart{6}
+\TaskEnd{33}
+\TaskParticipant{YAG}{4}
+\TaskParticipant{USTAN}{2}
+\TaskParticipant{IBM}{1}
+\TaskParticipant{UCM}{1}
+\TaskParticipant{SOPRA}{0.5}
 
 \TaskStart{1}
 \TaskEnd{27}
 \TaskResults{%
+\ref{del:formal1},
+\ref{del:formal2},
+\ref{del:formal3}
 %\ref{del:model1}
 }
 \TaskHeader{}
@@ -208,8 +238,9 @@ We will develop a domain specific language to capture the functionalities descri
 
 \begin{WPDeliverables}
   \begin{compactitem}
-    \item XX
-%\item \ref{del:model1} (Month 10): Report on Initial Block-Diagram Modelling, Patterns and Code Synthesis
+  \item \ref{del:formal1} (Month 11) : Report on Formal Mechanisms for Verifying Security Properties on Private Clouds
+\item \ref{del:formal2} (Month 24) : Report on Formal Mechanisms for Verifying Security Properties on Public Clouds 
+\item \ref{del:formal3} (Month 34) : Software on Formal Mechanisms for Verifying Security Properties on Hybrid Clouds 
 \end{compactitem}
 \end{WPDeliverables}
 \end{Workpackage}
