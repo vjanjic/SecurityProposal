@@ -795,7 +795,7 @@ of the end data analytics product.
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \textbf{Security in AI \sout{vs.} \textcolor{red}{and} AI for Security.}
-The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques for analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. \textcolor{red}{For example, advanced machine learning techniques will be used for developing stochastic models governing the mappings between sensitive/private data and the released data. Additionally, information-theoretic machine learning techniques will be developed to quantify the privacy-leakage in terms of mutual information between private data and released data.} So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
+The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques for analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. \textcolor{red}{For example, advanced machine learning techniques will be used for developing stochastic models governing the mappings between sensitive/private data and the released data. Additionally, information-theoretic machine learning techniques will be developed to quantify the privacy-leakage in terms of mutual information between private data and released data. As well, machine learning techniques will be used to automate the post processing of the huge amount of information that static analysis raises. Until now this is mostly done manually, which generates either huge human resources costs or a rejection of source code vulnerability scanning by users. In particular, supervised machine learning will greatly automate the reduction of SAST false positives.} So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
 \end{mdframed}
 
 \subsubsection*{Key assumptions}
@@ -1537,7 +1537,14 @@ XX
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\UCMshort{}.}
-XX
+\UCMshort will increase their capabilities in ensuring correctness
+and finding software vulnerabilities related to programming language
+features. This will impact both course offerings and cooperation
+with industrial partners and other research institutions. The use
+of contracts to ensure correctness will be promoted in their future
+collaborations with partners as BBVA (banking), CENER (energy) or
+GMV (aerospace). In addition to that, \UCMshort has a strong track record
+in deliverin C++ in company trainings to these and other customers. 
 \end{mdframed}
 
 
@@ -2147,7 +2154,7 @@ As part of application-oriented research projects with partners companies, \SCCH
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solutions the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is an safeguard against security breaches or privacy leaks for your customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way (\project{}) to ensure better and safer code is generated we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. \project{} is a step towards improvement of this situation.
+Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solutions the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is an safeguard against security breaches or privacy leaks for your customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way (\project{}) to ensure better and safer code is generated we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. {\project{Elysian}} is a step towards improvement of this situation.
 
 \horizontalline
 
@@ -2776,7 +2783,7 @@ Inability to adapt the generic vulnerability detection techniques to AI-based di
 \par
 {\textbf{Severity: High}}
 & WP2, WP3 &
-XX
+\textcolor{red}{Adapting vulnerability detection techniques to a specific kind of application such as AI-based distributed big data analytics require to identify, model and develop mechanisms to detect vulnerable code sequences in the application. It may happen that \TheProject{} technologies won't be able to automatically detect some vulnerabilities because of technological limitations, combinatory explosion or because of the complexity of some vulnerabilities. In that case we will revise the ambition to support semi automated vulnerability detection instead of fully automated. Additional training of the machine learning algorithms or some of the technologies developed in the project, such as code mining and supervised self healing, will then be deployed.}
 
 \\\hline
 Self-Healing techniques cannot repair the identified vulnerabilities.
@@ -2859,6 +2866,22 @@ Inability to design a coherent design patterns and the \TheProject{} methodology
 {\textbf{Severity: Medium}}
 & WP6 &
 There is a large number of systems, libraries and frameworks for different layers of a typical big data analytics application, including many different distributed databases (both SQL and NOSQL), processing frameworks and machine-learning libraries. There is no clear standard in any of these layers, which makes developing universal design patterns and methodology for combining them challenging. It is necessary, due to the length of the project and resources committed, to restrict ourselves to a relatively small subset of the systems/libraries. Should it prove difficult to develop patterns and methodology for the systems/libraries considered, we will further restrict ourselves to very particular systems (based on MS Azure that is used in most parts of the use cases), sacrificing the generality 
+
+\\\hline
+Coding guidelines cannot be
+fully automated.
+(\textbf{Likelihood: Low})
+\par
+{\textbf{Severity: Medium}}
+& WP6 &
+Several partners have experience in different ways of analyzing and
+refactoring source code, which gives high confidence that both the
+identification and the refactoring will be successful.
+We will implement separately the coding guidelines violation detection
+from the corresponding refactorings and later we will make both
+processes interoperable. In case that for some specific rule the 
+interoperation cannot be integrated, still both the identification
+and the refactoring will be available.
 
 \\\hline
 Adapting the \TheProject{} technologies to the considered use cases presents unforeseen difficulties.
@@ -3533,7 +3556,7 @@ He is the creator of the FutureLearn MOOC “Data Science in the Games Industry�
 \begin{itemize}
 
 \item 
-Masó , J., Cobley, A., Tsiakos, V., Tousert, N., Theodoropoulos, T., Jirka, S., Schade, S., Matheus, A., Tamascelli, S., Klan, F., & Padiya, T. (2020). \emph{OGC Citizen Science Interoperability Experiment Engineering Report. Open Geospatial Consortium.} http://docs.opengeospatial.org/per/19-083.html
+Masó , J., Cobley, A., Tsiakos, V., Tousert, N., Theodoropoulos, T., Jirka, S., Schade, S., Matheus, A., Tamascelli, S., Klan, F., \& Padiya, T. (2020). \emph{OGC Citizen Science Interoperability Experiment Engineering Report. Open Geospatial Consortium.} http://docs.opengeospatial.org/per/19-083.html
 \item
 Hemment, Drew  ; Woods, Mel  ; Ajates Gonzalez, Raquel  ; Cobley, Andrew ; Xaver, Angelika .  \emph{Enhancing collective intelligence through citizen science : The case of the GROW citizens’ observatory.} Collective Intelligence 2019 Proceedings. Association for Computing Machinery (ACM), 2019. pp. 1-4
 \item Cobley, Andrew  ; Woods, Mel  ; Hemment, Drew ; Giesen, Rianne.  \emph{The GROW Project, Interoperability between In Situ Sensors, Citizen Science and Crowd Sourced Data.} 39th EARSeL Symposium: Book of Abstracts. editor / Barbara Riedler ; Stefan Lang ; Stefanie Lettner ; Dirk Tiede. 2019. pp. 24-25
@@ -3541,7 +3564,7 @@ Hemment, Drew  ; Woods, Mel  ; Ajates Gonzalez, Raquel  ; Cobley, Andrew ; Xaver
 Cobley A. 2015. \emph{NoSQL: Injection vaccination for a new generation}. The Register.
 \item Hemment, Drew  ; Ajates Gonzalez, Raquel  ; Woods, Melanie  ; Long, Deborah ; Giesen, Rianne  ; Cobley, Andrew. \emph{GROW Citizens’ Observatory Framework : A reference and guidelines for community platforms to generate, share and utilise information to address community, science, policy and innovation challenges }. European Commission, 2017. 55 p.
 \item Hillman, Chris  ; Ahmad, Yasmeen  ; Whitehorn, Mark  ; Cobley, Andy. \emph{Near real-time processing of proteomics data using Hadoop}. In: Big Data. 2014 ; Vol. 2, No. 1. pp. 44-49.
-\item Boulon, Severine  ; Ahmad, Yasmeen  ; Trinkle-Mulcahy, Laura ; Verheggen, Celine  ; Cobley, Andy  ; Gregor, Peter ; Bertrand, Edouard  ; Whitehorn, Mark  ; Lamond, Angus I.  \emph{Establishment of a protein frequency library and its application in the reliable identification of specific protein interaction partners}. In: Molecular & Cellular Proteomics. 2010 ; Vol. 9, No. 5. pp. 861-879.
+\item Boulon, Severine  ; Ahmad, Yasmeen  ; Trinkle-Mulcahy, Laura ; Verheggen, Celine  ; Cobley, Andy  ; Gregor, Peter ; Bertrand, Edouard  ; Whitehorn, Mark  ; Lamond, Angus I.  \emph{Establishment of a protein frequency library and its application in the reliable identification of specific protein interaction partners}. In: Molecular \& Cellular Proteomics. 2010 ; Vol. 9, No. 5. pp. 861-879.
 \end{itemize}
 \subsubsection*{Relevant Research Projects}
 
