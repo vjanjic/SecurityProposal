@@ -362,7 +362,7 @@ extracting knowledge from the data.
 There are huge economic and societal repercussions associated to data breaches in the light of regulations such as GDPR, and hence a fundamental need to
 ensure security and privacy of data analytics at all times.
 There are known considerations on security and privacy in cloud computing~\cite{cloudSecurity}, and big data analytics adds two further dimensions through
-concerns over data storage and processing~\cite{bigdataSecurity}, and potential information leakages from machine learning models~\cite{mlSecurity}.
+concerns over data storage and processing~\cite{bigdatasecurity}, and potential information leakages from machine learning models~\cite{mlSecurity}.
 In addition, data intensive applications are typically built from layers of different libraries, where each layer corresponds to a level of abstraction (e.g. data storage, data transfer, data processing) and has security and privacy issues on its own and with adjacent layers. Formal methods are the only currently-known approaches that 
 could provide strong end-to-end security guarantees throughout system execution and across levels of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
 Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
@@ -467,7 +467,7 @@ in big data applications, addressing the complete software development stack fro
 \item[Objective 3:] To develop novel \emph{self-healing} techniques based on software refactoring and machine-learning based run-time adaptation for semi-automatic repairing of the identified security vulnerabilities in the code. %, together with the 
 Investigate novel privacy-preserving and knowledge transfer mechanisms for data analytics \textcolor{red}{based on rigorous mathematical analysis of information leakage}. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:] To build on existing and/or develop new security \emph{coding standards} for C++, and to build tools for automatic code analysis in accordance with %of the code for conformance to 
+\item[Objective 4:] To build on existing and/or develop new security \emph{coding standards} for C++, and to build tools for automatic code analysis in accordance with 
 these standards, providing guidance on how to develop new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
 
 \item[Objective 5:] To augment the existing security layer of distributed data analytics applications with AI-driven identity management schemes, implementing intelligent biometric technology for multi-factor authentication and continuous user identitifcation, and blockchain technology for user access management. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
@@ -540,13 +540,13 @@ Code patterns are a well-established abstraction for designing and implementing 
 \subsubsection*{Objective 2: Identification of Security and Privacy Risks in AI-Based Data Analytics}
 \vspace{-6pt}
 
-A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In \TheProject{}  we will develop methods to \emph{identify security risks} coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use \emph{static source code analysis}; dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and \emph{run-time} machine-learning based monitoring of the application \emph{execution}. We will also develop methods based on stochastic modelling for identifying and quantifying leakage of private information coming from building and applying distributed machine learning models.
+A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In \TheProject{}  we will develop methods to \emph{identify security risks} coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use \emph{static source code analysis}; dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and \emph{run-time} machine-learning based monitoring of the application \emph{execution}. We will also develop methods based on stochastic modelling \textcolor{red}{and information theory} for identifying and quantifying leakage of private information coming from building and applying distributed machine learning models.
 
 \subsubsection*{Objective 3: Self-Healing Mechanisms for Repairing Vulnerabilities and Addressing Privacy-Leakage}
 While identifying security risks and privacy leaks is critical for security of distributed data analytics and knowledge sharing across parties, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as transparent to the software developers as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, software developers 
 using these novel repair methods
 %user 
-should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformations with the aim to improve security and information privacy. In \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven formally proven \emph{code refactorings} of the source code and machine-learning based \emph{run-time adaptation} mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of knowledge transfer from the data owned by one party to another party while still preserving privacy of sensitive information contained in the data. 
+should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformations with the aim to improve security and information privacy. In \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven formally proven \emph{code refactorings} of the source code and machine-learning based \emph{run-time adaptation} mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of transferring knowledge \textcolor{red}{(that has been extracted from the private data of a party)} from one party to another party while still preserving privacy of sensitive information contained in the data. 
 
 
 %% We will move part of this to the background work & advancement beyond STOA
@@ -711,7 +711,7 @@ Therefore, it is standard to have different processing agents on different distr
 
 \item \textbf{Optimisation of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data %available 
 while simultaneously limiting any revealed sensitive or private information. %Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. 
-Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. Techniques such as data perturbation are used to add noise in order to preserve privacy, but can result in distortion of useful data. Therefore, an issue of finding an optimal privacy-utility tradeoff still remains. \textbf{We must, therefore, develop new \sout{differential} \textcolor{red}{informational} privacy mechanisms that add the optimal amount of noise to prevent privacy leakage while still allowing for extracting useful machine-learning models from the data.}
+Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. \textcolor{red}{These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data}. \textcolor{red}{The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown}. \textbf{We must, therefore, develop new \sout{differential} \textcolor{red}{informational} privacy mechanisms that add the optimal amount of noise to prevent privacy leakage while still allowing for extracting useful machine-learning models from the data.}
 
 %These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
 
@@ -892,9 +892,9 @@ application requirements and hardware availability.
 %\vspace{-2pt}
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\grow (EU No.690199).}
-The \grow project (funded from the European Union’s Horizon 2020 research and innovation programme under grant agreement No.690199) is the first continental-scale Citizens’ Observatory to monitor a key parameter for science, continuously over an extended period, and at an unmatched spatial density. \grow has, for the first time, used crowdsourced ground observations from low-cost sensors to validate soil moisture information from satellites, including the new generation of high-resolution satellites, Sentinel-1.
+The \grow project (funded from the European Union’s Horizon 2020 research and innovation programme under grant agreement No.690199) is the first continental-scale Citizens’ Observatory to monitor a key parameter for science, continuously over an extended period, and at an unmatched spatial density. \grow has, for the first time, used crowd sourced ground observations from low-cost sensors to validate soil moisture information from satellites, including the new generation of high-resolution satellites, Sentinel-1.
 
-24 \grow communities in 13 European countries create an unprecedented network of 6,502 ground-based soil sensors and a dataset of 516M rows of soil data. The communitioe where supported by a MOOC educationla program and a series of workshops. \emph{\TheProject{} will learn from and build on the educational program of \grow, building on the concept of a MOOC and workshops for end users and the programming community at large.}
+24 \grow communities in 13 European countries create an unprecedented network of 6,502 ground-based soil sensors and a data set of 516M rows of soil data. The communities where supported by a MOOC educational program and a series of workshops. \emph{\TheProject{} will learn from and build on the educational program of \grow, building on the concept of a MOOC and workshops for end users and the programming community at large.}
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -916,16 +916,16 @@ The \grow project (funded from the European Union’s Horizon 2020 research and 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\blogdas (FWF: [P26452-N15]).} 
 The project Behavioural Theory and Logics for Distributed Adaptive Systems (\blogdas) was supported by the Austrian Science Fund. The first key result of the project is a behavioural theory of such distributed adaptive systems. The theory comprises (1) a general language-independent characterisation by a set of intuitive postulates that are satisfied by all known system formalisms, (2) an abstract machine model that provably satisfies the postulates, and (3) the mathematical proof that all systems stipulated by the postulates can be faithfully represented by the abstract machine model. The behavioural theory enables system specifications in general using a concrete language for the abstract machine model. The second key result is a logic for such distributed adaptive systems that is based on the abstract machine model. The logic allows system developers to formally characterise desirable properties that system specifications must meet and to mathematically verify these properties. In particular, static verification with this logic permits to give assertions for states that result after many adaptations of the system.
-The results of this project overcome the imminent restriction of using interleaving to circumvent true asynchronous behaviour, providing better suited theoretical foundations and tools (concurrent ASMs and logics) to formalise and verify contracts for distributed systems as required for WP4 as well as to specify anomaly detection algorithms and associated repairability proof obligations within the context of WP2.  
+\emph{The results of this project overcome the imminent restriction of using interleaving to circumvent true asynchronous behaviour, providing better suited theoretical foundations and tools (concurrent ASMs and logics) to formalise and verify contracts for distributed systems as required for WP4 as well as to specify anomaly detection algorithms and associated repairability proof obligations within the context of WP2.}  
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\primal (FFG: 873979).}
-The \primal project, supported by the Austrian Research Promotion Agency, is concerned with the development of privacy-preserving machine learning industrial applications. The project focuses on the development of algorithms and a software framework for differentially private distributed deep learning, transfer learning, and multi-task learning with applications to industrial use cases. While the results of \primal regarding differential privacy in distributed machine learning has a synergy with the privacy theme of \TheProject{}, information theoretic approach to study and optimize privacy-leakage in distributed AI is one of the novelties of \TheProject{}.
+The \primal project, supported by the Austrian Research Promotion Agency, is concerned with the development of privacy-preserving machine learning industrial applications. The project focuses on the development of algorithms and a software framework for differentially private distributed deep learning, transfer learning, and multi-task learning with applications to industrial use cases. \textcolor{red}{While the results of \primal regarding differential privacy in distributed machine learning has a synergy with the privacy theme of \TheProject{}, information theoretic approach to study and optimize privacy-leakage in distributed AI is one of the novelties of \TheProject{}}.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\paragraph{\sthreeai (FFG: 872172).} The Austrian Research Promotion Agency supported \sthreeai project for building secure collaborative artificial intelligence systems ensuring privacy, protection against hostile attacks and guaranteeing for the intended performance of the system. \sthreeai will develop theoretical frameworks and analysis tools at the interface of mathematics, deep learning and information security regarding new deep model architectures and related privacy learning strategies, new defence strategies against enemy attacks, and new methods for assessing trustworthiness. \sthreeai has synergy with \TheProject{} regarding privacy-preserving deep learning, however, unlike \TheProject{}, \sthreeai does not consider an information theoretic approach to study the concepts of privacy-leakage and knowledge-transferability across distributed parties in a rigorous and unified manner.    
+\paragraph{\sthreeai (FFG: 872172).} The Austrian Research Promotion Agency supported \sthreeai project for building secure collaborative artificial intelligence systems ensuring privacy, protection against hostile attacks and guaranteeing for the intended performance of the system. \sthreeai will develop theoretical frameworks and analysis tools at the interface of mathematics, deep learning and information security regarding new deep model architectures and related privacy learning strategies, new defence strategies against enemy attacks, and new methods for assessing trustworthiness. \textcolor{red}{\sthreeai has synergy with \TheProject{} regarding privacy-preserving deep learning, however, unlike \TheProject{}, \sthreeai does not consider an information theoretic approach to study the concepts of privacy-leakage and knowledge-transferability across distributed parties in a rigorous and unified manner}.    
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1188,7 +1188,8 @@ HIC++~\cite{hicpp} , the C++ Core Guidelines~\cite{cpp:core-guidelines}, or the
 JSF C++~\cite{cpp:jsf}. Some rules of those guidelines are already supported by
 some proprietary tooling (e.g.  Perforce) as well as by open source components
 (e.g.  clang-tidy).  Other rules may be supported by library components as the
-GSL~\cite{cpp:gsl} or extensions to tools like ThreadSanitizer~\cite{dolz:2017}
+GSL (\url{https://github.com/microsoft/GSL}) or extensions to tools like 
+ThreadSanitizer~\cite{dolz:2017}
 or by the use of contract based programming~\cite{lopez-gomez:2019}.
 
 \begin{mdframed}[backgroundcolor=gray!10]
@@ -1501,8 +1502,7 @@ XX
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\paragraph{\SOPRAshort{}.}
-XX
+\paragraph{\SOPRAshort{}.} will use the tools from this research and channel it into the massive software development capability to enhance the security of products they delivery into areas like government, transportation, public safety, banking, insurance. The consulting capability will transfer the tools into the extensive client base of the company across twenty-five countries. The tools enables the creation of various new innovative solutions for the customer base they serve.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1517,7 +1517,7 @@ XX
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{\SCCHshort{}.}
-XX
+\TheProject{} will enable SCCH to further extend its expertise in ``Privacy Secured Distributed AI'' via developing novel information theoretic tools for preserving privacy in distributed AI systems. The research on privacy by SCCH within \TheProject{} will enable providing 1) guidelines for technology assessment and, 2) certification on the trustworthiness of AI systems. SCCH will use its expertise on formal models and logics for distributed adaptive systems to introduce new techniques to capture and verify  security requirements. It will provide tool support through its eKNOWS platform for the extraction of (concurrent) ASMs models from source code, contribute to the effort to formalise and verify reparability proof obligations for (run-time adaptive) self-healing, and develop algorithms for run-time detection of damaging activities and the start of countermeasures before any damage has occurred. 
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -2133,7 +2133,7 @@ IBM will aim to deliver \TheProject technologies into IBM cloud and analytics pr
 
 As part of application-oriented research projects with partners companies, \SCCHshort{} has built and applied reverse engineering and analysis tools with a strong focus on extracting knowledge from source code and related software engineering artifacts (http://codeanalytics.scch.at/). The results are available via eKNOWS, a platform for the analysis and evolution of software systems, documentation generation, and quality assurance and automated testing. The innovative approach to extract formal specifications from source code proposed in the \TheProject{} project will be integrated in the eKNOWS platform. This will give us a solid platform for the exploitation of \TheProject{} envisioned results in the area of formal specification of refactorings for increasing the security and privacy level of big-data applications, together with new verification techniques to show general soundness and correctness of such refactorings. More generally, we will be able to expand the applicability of software engineering tools developed within the eKNOWS platform for standard software systems, to big distributed data analytics systems. Given the expertise of \SCCHshort{} on applied research projects with company partners in the area of data sciences, as well as the increasing importance that security and privacy plays in that area, there is plenty of potential to exploit these innovations working together with our current and future company partners in Austria and Europe.
 
- \paragraph{Scientific Exploitation.} In parallel to common applied research, \SCCHshort{} has to conduct fundamental research to keep in contact with world-leading research. Furthermore \SCCHshort{}s success is also measured by its scientific output like number of publications, PhD and master theses. \SCCHshort{} plans to submit publications and articles in highly relevant conferences and journals like Neural Information Processing Systems, International Conference of Learning Representations, Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and Confidentiality, Springer Journal of Big Data. The \TheProject{} approach will increase scientific output for \SCCHshort{} since it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
+ \paragraph{Scientific Exploitation.} In parallel to common applied research, \SCCHshort{} has to conduct fundamental research to keep in contact with world-leading research. Furthermore \SCCHshort{}'s success is also measured by its scientific output like number of publications, PhD and master theses. \SCCHshort{} plans to submit publications and articles in highly relevant conferences and journals like Neural Information Processing Systems, International Conference of Learning Representations, Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and Confidentiality, Springer Journal of Big Data, Science of Computer Programming, Theoretical Computer Science, Journal of Computer and Systems Sciences,  International Conference on Formal Engineering Methods, International Conference on Rigorous State Based Methods, International Conference on Software Engineering. The \TheProject{} approach will increase scientific output for \SCCHshort{} since it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
 
 
 \horizontalline
@@ -2866,16 +2866,15 @@ Adapting the \TheProject{} technologies to the considered use cases presents unf
 \par
 {\textbf{Severity: Medium}}
 & WP7 &
-XX
 
-
+In the unlikely event that the use cases does not match the systems under development \SOPRAlong{} will take actions to adapt the use cases to assist the research. The use cases presented is part of our core business and \SOPRAshort{} has several installation with these types of applications. In event of total miss-match \SOPRAshort{} will offer alternative use cases for approval by the consortium to assist with the success of the project.
 
 \\\hline
 \end{longtable}
 %\newpage
 
 ?e{-6p }
-\subsection{Management cture and Procedures (Figure~\ref{fig:management})}
+\subsection{Management Culture and Procedures (Figure~\ref{fig:management})}
 \label{sect:mgt}
 
 \eucommentary{Describe the organisational structure and the decision-making ( including a list of milestones (table 3.2a)).\\
@@ -3530,7 +3529,13 @@ The University of Dundee was the first university in the UK that had an MSc prog
 
 
 He is the creator of the FutureLearn MOOC “Data Science in the Games Industry” for the Scottish DataLab, this program has run on more than four occasions attracting attention from around the world. In addition, he is a writer for the on-line computing magazine “The Register” specializing in Data Science, Devops and database technologies at scale. 
+\subsubsection*{Relevant publications}
+\begin{itemize}
 
+\item 
+Masó , J., Cobley, A., Tsiakos, V., Tousert, N., Theodoropoulos, T., Jirka, S., Schade, S., Matheus, A., Tamascelli, S., Klan, F., & Padiya, T. (2020). \emph{OGC Citizen Science Interoperability Experiment Engineering Report. Open Geospatial Consortium.} http://docs.opengeospatial.org/per/19-083.html
+
+\end{itemize}
 
 \Participant{IBM}{(\url{http://www.research.ibm.com/labs/haifa/)}}
 
@@ -3691,7 +3696,7 @@ The participating investigators are researchers and project managers with expert
 
 \vspace{10pt}
 \subsubsection*{Role in Elysian}
-\textbf{\SCCH{} will lead the WPX}
+\textbf{\SCCH{} will lead WP3 on Security and Privacy of Distributed Machine Learning, with the special focus on privacy-preserving machine learning and knowledge sharing in distributed AI. SCCH will contribute in the development of advanced machine learning and information theory based tools for evaluating and reducing privacy leakage in distributed AI. \SCCH{} will also contribute to WP2 by working in the identification of vulnerabilities that arise from unexpected iteration of data processing agents during computation as well as in the development of related adaptation mechanisms for self-healing. In WP4, SCCH will provide theoretical background for the specification of security contracts, tool support for the extraction of the required formal models from source code, novel techniques for the verification of security properties on distributed systems and theoretical foundations for attack models and security repairablity of proof obligations.}
 \vspace{10pt}
 
 \textbf{Key Personnel:\\}
