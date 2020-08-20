@@ -26,7 +26,8 @@ including security properties and privacy norms;
 \item Develop an integrated verification framework, including theorem provers and SMT solvers, to prove the correctness of the above and 
 %, and capable of searching for (a subset of) traces of execution that satisfy certain parameters (meet a certain threshold for instance);
  explore an interplay between runtime verification and exhaustive formal verification;
-\item Develop a novel mechanism for automated vulnerability localisation, containment, recovery and repair.
+ \item Apply the framework to verify the correctness of the mechanisms developed in WP2 for vulnerability detection and self-healing.
+%\item Develop a novel mechanism for automated vulnerability localisation, containment, recovery and repair.
 
 \end{compactitem}
 
@@ -48,7 +49,7 @@ We define the abstractions to present to the programmer, provided by the operati
 The abstractions should expose security properties in a form understandable to (non-security specialist) programmers. We adopt Abstract State Machines (ASMs), given our experience in extracting ASMs from source code automatically. 
 The ability to move between layers with this approach and target the extraction of vulnerabilities from code for verification at higher levels will be key.
 Similarly, we will define this as a model for our functionally equivalent code, aka refactorings, and automatically search for alternative refactorings such that their security guarantees are preserved, or conversely, detected vulnerabilities are avoided (Task~\ref{task:formalverif}).
-Concerning privacy, complementary to the work on privacy-preserving machine learning algorithms of WP3, we will consider privacy expectations expressed using context-relative informational norms, formalised in logic (e.,g., FOL) and automatically checked across traces of execution (Task~\ref{task:formalverif}).  
+Concerning privacy, complementary to the work on privacy-preserving machine learning algorithms of WP3, we will consider privacy expectations expressed using context-relative informational norms, formalised in logic (e,g. FOL) and automatically checked across traces of execution (Task~\ref{task:formalverif}).  
 By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove that the computer system is secure against all possible attacks (up to modelling assumptions). This provides high assurance of system security, even against as-yet-unknown attacks (Task~\ref{task:attackmodels}).
 %as formal approaches in practice with the use of tools such as the ones from IBM, static analyser from YAG and code extractor from SCCH. 
 \theWP{} explores the integration of formal methods with the practical techniques from WP2, supports the tools from WP6 and is evaluated throughout with the use cases described in WP7.
@@ -83,7 +84,8 @@ in such a way that they can be mapped to concrete syntax in different
 programming languages. We will also support the extraction of those contracts
 from existing source code allowing iterative approaches where contracts
 are refined by developers.
-In this task we will first add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
+This task will proceed in three phases.
+In the first phase will first add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
 %can be completed in a relatively short time. 
 We will then further develop the module to perform more sophisticated higher-level abstractions, taking into account the semantics of the libraries used in the targeted distributed data analytics systems as well as that of its common programming patterns. The security contracts can then be expressed in the logics for ASMs (and its planned temporal extension) over the extracted ASMs, at the different levels of abstraction required. This will give us a unifying formalism for the rigorous verification of the envisaged security contracts.  
 %In addition, we will focus on the dynamic analysis of security contracts for
