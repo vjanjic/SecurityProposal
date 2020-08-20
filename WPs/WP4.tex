@@ -56,8 +56,6 @@ By explicitly modelling the computer system and the abilities of adversaries, fo
 We will further investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (%Task~\ref{task:dyncontracts} and 
 Task~\ref{task:ContractsSastAssessment}). 
 For functional security requirements we will explore the use of metrics such as confidentiality, integrity and availability to assess them (Task~\ref{task:RequirementsSastAssessment}).
-
-
 \end{WPDescription}
 
 
@@ -81,13 +79,22 @@ For functional security requirements we will explore the use of metrics such as 
 
 In \theTask, we define mechanisms to represent security contracts
 in such a way that they can be mapped to concrete syntax in different
-programming languages. We will also support the extraction of those contracts
-from existing source code allowing iterative approaches where contracts
-are refined by developers.
+programming languages. Conversely, we will enable the extraction of those contracts
+from existing source code and  allow developers to refine them iteratively. The contract extraction will be formalised with ASMs.
+%approaches where contracts can be refined by developers. 
 This task will proceed in three phases.
-In the first phase will first add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
+The first phase will focus on the representation of security contracts and add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
+We will provide initial formalisation of the security contracts in (temporal) logics for ASMs and interpreted over the code extracted ASMs (\ref{del:formal1}).
+%(\ref{del:formal1}).
 %can be completed in a relatively short time. 
-We will then further develop the module to perform more sophisticated higher-level abstractions, taking into account the semantics of the libraries used in the targeted distributed data analytics systems as well as that of its common programming patterns. The security contracts can then be expressed in the logics for ASMs (and its planned temporal extension) over the extracted ASMs, at the different levels of abstraction required. This will give us a unifying formalism for the rigorous verification of the envisaged security contracts.  
+The second phase will focus on more sophisticated higher-level abstractions
+for the different programming languages considered and identified programming patterns. The formalisation and logics used will be adapted to the new abstractions as required (\ref{del:formal2}).
+The third phase will refine the previous approach to
+take into account the semantics of the libraries used in the targeted distributed data analytics systems.
+%as well as that of its common programming patterns. 
+The logics should be such that reasoning across levels of abstraction is supported.
+%The security contracts can then be expressed in the logics for ASMs (and its planned temporal extension) over the extracted ASMs, at the different levels of abstraction required. 
+This will give us a unifying formalism for the rigorous verification of the envisaged security contracts across multiple layers (\ref{del:formal3}).  
 %In addition, we will focus on the dynamic analysis of security contracts for
 %vulnerabilities that cannot be formally verified without running the software component. 
 %Note that C++ and Java code will just be refinements of the extracted ASMs. Plus, given the abstraction mechanism used for the ASMs extraction, we will already have the mapping to the concrete syntax of the programming languages.
