@@ -33,7 +33,7 @@
 \textbf{Title of Proposal:}&\hspace*{-7cm}\textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics } & \\[4ex] 
 \textbf{Date of preparation:} &\hspace*{-3cm} \textbf{\today} & \comment{}{$
 $Revision: 0.0$ $}\\[4ex]
-\textbf{List of participants} && \\[1ex]
+\textbf{List of participants} & & \\[1ex]
 
 https://www.overleaf.com/project/5e5e45121e493b000149fe20
 \end{tabular}
@@ -47,7 +47,8 @@ https://www.overleaf.com/project/5e5e45121e493b000149fe20
 \forloop{p}{2}{\value{p} < \theparticipant}{%
 \thep & {\sc \longparticipant{\thep}} \hfill  (\shortparticipant{\thep}) & \country{\thep}  \\ \hline}%
 \theparticipant & {\sc \longparticipant{\theparticipant}} \hfill  (\shortparticipant{\theparticipant})& \country{\theparticipant}  \\ \hline
-\end{tabular}\end{center}https://www.overleaf.com/project/5e5e45121e493b000149fe20
+\end{tabular}\end{center}
+%https://www.overleaf.com/project/5e5e45121e493b000149fe20
 
 \tableofcontents
 
@@ -345,14 +346,14 @@ https://www.overleaf.com/project/5e5e45121e493b000149fe20
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.92]{DigitalFortress-Vision-v3.png}
+  \includeimage[scale=0.75]{DigitalFortress-Vision-v3.png}
 %  \vspace{-3cm}
   \caption{\TheProject{} Vision}
   \label{fig:vision}
   \end{center}
   \end{figure}
 Today's technological advances are such that
-big data could be used to facilitate rapid discovery of scientific breakthroughs 
+big data can be used to facilitate rapid scientific breakthroughs 
 and increase the economic impact of many businesses irrespective of their size. The complexity and critical nature of some data intensive systems, however,
 means that we are still far from reliably achieving such a potential and we need innovative solutions that can make a difference. The world has huge quantities and variety of
 data available, and their analytics is necessarily distributed with both data and computations spanning large quantities of distributed resources, some of which are on  the cloud. 
@@ -363,9 +364,11 @@ There are huge economic and societal repercussions associated to data breaches i
 ensure security and privacy of data analytics at all times.
 There are known considerations on security and privacy in cloud computing~\cite{cloudSecurity}, and big data analytics adds two further dimensions through
 concerns over data storage and processing~\cite{bigdatasecurity}, and potential information leakages from machine learning models~\cite{mlSecurity}.
-In addition, data intensive applications are typically built from layers of different libraries, where each layer corresponds to a level of abstraction (e.g. data storage, data transfer, data processing) and has security and privacy issues on its own and with adjacent layers. Formal methods are the only currently-known approaches that 
-could provide strong end-to-end security guarantees throughout system execution and across levels of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
-Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
+In addition, data intensive applications are typically built from layers of different libraries, where each layer corresponds to a level of abstraction (e.g. data storage, data transfer, data processing) and has security and privacy issues on its own and with adjacent layers. This has been identified as a problem by the EU Agency for Network and Information Security\footnote{\url{https://www.enisa.europa.eu/publications/bigdata-threat-landscape/at_download/fullReport}}. Furthermore, formal treatment of security properties of the applications, despite some success in reasoning about correctness of cryptographic algorithms~\cite{FM-crypto} and in specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}, is still lacking. All this makes establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration.
+
+%Formal methods are the only currently-known approaches that 
+%could provide strong end-to-end security guarantees throughout system execution and across levels of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
+%Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
 %Big-data offers a great potential both for scientific breakthroughs and for economic impact on businesses. With huge quantities of data available in the modern world, modern data analytics is necessarily distributed in nature (with data and computations spanning large quantities of distributed resources, usually on Clouds) and, for the most part, based on advanced AI techniques such as deep learning for extracting knowledge from raw data. In such setting, ensuring security and privacy of the analytics becomes a critical issue, due to huge economic and societal impacts of data breaches in the light of ever stricter regulations such as GDPR. In addition to the security and privacy issues that are present in Cloud Computing setting~\cite{cloudSecurity}, big data analytics presents numerous additional issues due to the way data is stored and processed~\cite{bigdataSecurity}, and machine learning adds still another layer of potential problems with potential information leakage from the learning models themselves~\cite{mlSecurity}. In addition, data analytics applications are typically built from layers of different libraries, each of which deals with one level of abstraction (data storage, data transfer, data processing) and each of which presents security issues both in its own and in combination with other layers. It is, therefore, not surprising that establishing security and privacy properties of big data analytics is extremely hard and an objective for extensive research and industrial effort recently.
 
 %%"The world's most valuable resource is no longer oil, but data" is the now world-famous quote from The Economist\footnote{\url{https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data}} that highlights the importance of big data analytics in the modern world. Advances in the techniques for analysing the vast amount of data available today from a variety of sources are having %tremendous effects
@@ -443,7 +446,7 @@ enhance existing and develop new efficient techniques for \emph{identifying gene
 \end{description}
 
 The corresponding concrete \emph{objectives} are: 
-\begin{description}
+%\begin{description}
 
 %\item[Objective 1:] To develop a novel concept of machine-readable \emph{security contracts}
 %  that will be used to specify precisely security properties for parts of the C++ code, and to develop methods
@@ -451,57 +454,146 @@ The corresponding concrete \emph{objectives} are:
 %  \comment{CB: It's not clear to me what machine-readable actually means, as, arguably, any arbitrary stream of bytes in a file is machine readable :D I think this needs clarified. There's a worry here that this is the same as what we have done on TeamPlay, where we also developed proofs, contracts and certificates for security, energy and time. What is the novelty here? There should probably be some tie-in, perhaps, to the work done on TeamPlay, CSL, for instance, or the proof system developed there. I think this needs to tie in with the refactoring tooling. One novel approach here is the refactorings... perhaps new refactorings that transform the application in such a way that it can meet a user-defined security specification or contract?  }
 %  \comment{JB: If we are treating security contracts as a notion at several levels of abstraction and we can go between them, this would potentially be quite different from TeamPlay? It should not just be at the code level... }
  
-\item[Objective 1:] To develop a novel concept of \emph{secure} code patterns for distributed AI-based data analytics and to support these
-patterns with strictly-defined and formally verifiable multi-level 
-\emph{security contracts}, raising the level of abstraction
-for developing secure distributed applications and providing formal guarantees about their security properties. 
-\emph{This fulfils part of \textbf{Aim 1}}. 
-%  \item[Objective 1:] To develop a novel techniques for verification of security properties of the application code,
-%  specified in a formal way by machine-readable \emph{security contracts}, giving strict guarantees about
-%  the safety of run-time behaviour of undeterministic large-scale distributed data analytics; \emph{This fulfils part of
-%    \textbf{Aim 1}}.
+ 
+ 
+ 
+%\item[Objective 1:] To develop a novel concept of \emph{secure} code patterns for distributed AI-based data analytics and to support these
+%patterns with strictly-defined and formally verifiable multi-level 
+%\emph{security contracts}, raising the level of abstraction
+%for developing secure distributed applications and providing formal guarantees about their security properties. 
+%\emph{This fulfils part of \textbf{Aim 1}}. 
 
-\item[Objective 2:] To develop novel techniques based on a combination of static analysis, dynamic symbolic execution and run-time monitoring for identifying security and privacy vulnerabilities across layers %in multi-layer AI-based 
-in big data applications, addressing the complete software development stack from low-level distributed file system operations to high-level machine-learning, guiding the verification of security and privacy properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+%\item[Objective 2:] To develop novel techniques based on a combination of static analysis, dynamic symbolic execution and run-time monitoring for identifying security and privacy vulnerabilities across layers %in multi-layer AI-based 
+%in big data applications, addressing the complete software development stack from low-level distributed file system operations to high-level machine-learning, guiding the verification of security and privacy properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
   
-\item[Objective 3:] To develop novel \emph{self-healing} techniques based on software refactoring and machine-learning based run-time adaptation for semi-automatic repairing of the identified security vulnerabilities in the code. %, together with the 
-Investigate novel privacy-preserving and knowledge transfer mechanisms for data analytics \textcolor{red}{based on rigorous mathematical analysis of information leakage}. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
+%\item[Objective 3:] To develop novel \emph{self-healing} techniques based on software refactoring and machine-learning based run-time adaptation for semi-automatic repairing of the identified security vulnerabilities in the code. %, together with the 
+%Investigate novel privacy-preserving and knowledge transfer mechanisms for data analytics based on rigorous mathematical analysis of information leakage. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 4:] To build on existing and/or develop new security \emph{coding standards} for C++, and to build tools for automatic code analysis in accordance with 
-these standards, providing guidance on how to develop new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+%\item[Objective 4:] To build on existing and/or develop new security \emph{coding standards} for C++, and to build tools for automatic code analysis in accordance with 
+%these standards, providing guidance on how to develop new secure distributed data analytics applications. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
 
-\item[Objective 5:] To augment the existing security layer of distributed data analytics applications with AI-driven identity management schemes, implementing intelligent biometric technology for multi-factor authentication and continuous user identitifcation, and blockchain technology for user access management. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
+%\item[Objective 5:] To augment the existing security layer of distributed data analytics with AI-driven identity management schemes, implementing intelligent biometric technology for multi-factor authentication and continuous user identification, and blockchain technology for user access management. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
 
-\item[Objective 6:] To develop a novel methodology based on formally verified security contracts, vulnerability detection \& mitigation, 
-  privacy-preserving and secure authentication, fully supported by semi-automated code refactoring techniques for
-  increasing the security of %the 
-  existing/new % and developing secure new 
-  distributed data-analytics algorithms. \emph{This fulfils
-    part of \textbf{Aim 4}}.
+%\item[Objective 6:] To develop a novel methodology based on formally verified security contracts, vulnerability detection \& mitigation, 
+ % privacy-preserving and secure authentication, fully supported by semi-automated code refactoring techniques for
+  %increasing the security of %the 
+ % existing/new % and developing secure new 
+ % distributed data-analytics code. \emph{This fulfils
+%    part of \textbf{Aim 4}}.
 
-\item[Objective 7:] To demonstrate that \TheProject{}'s technology improves security and prevents %reduced
-  information leakage in %distributed AI-based 
-  data analytics code, through a variety of real-world security-sensitive
-  use cases from different domains
-  such as healthcare, banking and air-traffic management. % from healthcare, banking and aviation application domains. 
-  \emph{This fulfils part of \textbf{Aim 5}}.
+%\item[Objective 7:] To demonstrate that \TheProject{}'s technology improves security and prevents %reduced
+  %information leakage in %distributed AI-based 
+  %data analytics code, through a variety of real-world security-sensitive
+  %use cases from different domains
+  %such as healthcare, banking and air-traffic management. % from healthcare, banking and aviation application domains. 
+  %\emph{This fulfils part of \textbf{Aim 5}}.
 
-\item[Objective 8:] To build a sustainable user community involving a variety of stakeholders that will ensure the long-term
-  uptake, development and commercial success of the tools and techniques developed over the course of the \TheProject{}
-  project. \emph{This fulfils part of \textbf{Aim 5}}.
+%\item[Objective 8:] To build a sustainable user community involving a variety of stakeholders that will ensure the long-term
+ % uptake, development and commercial success of the tools and techniques developed over the course of the \TheProject{}
+ % project. \emph{This fulfils part of \textbf{Aim 5}}.
 
-\end{description}
+%\end{description}
 
-%\subsubsection{Provisional list of workpackages:}
-%\begin{itemize}
-%\item WP2: Specification and Verification of Security Contracts for Distributed Data Analytics (USTAN)
-%\item WP3: Security and Privacy of Big Data Storage and AI-based Processing (UOD/SCCH)
-%\item WP4: Vulnerability Detection (IBM)
-%\item WP5: AI-Driven Behavioural Authentication (COGNITIVE UX)
-%\item WP6: Refactoring-Based Methodology for Secure Application Development (USTAN)
-%\item WP7: Use cases (SOPRA)
-%\item WP8: Dissemination and Exploitation (UOD)
-%\end{itemize}
+%\begin{mdframed}[backgroundcolor=blue!5]
+%\paragraph{End Users \& Software Developers.}
+%Most of the technologies to be developed within
+%%that will be developed over the course of 
+%\TheProject{}  aim to support \emph{software developers}
+%%are aimed at assisting \emph{software developers} 
+%with secure coding and deployment. %developing and deploying their code. 
+%%This includes the 
+%The \TheProject{} methodology envisages user-friendly secure authentication mechanisms as well as %, as well as the 
+%tools to detect and repair security vulnerabilities, to formally verify properties of the code, and to analyse code for conformance to coding standards. % and authentication mechanisms. 
+%\TheProject{} will benefit \emph{end users} by increasing their trust in big data analytics systems.
+%%. However, \TheProject{} will also benefit the \emph{end users} of the big data applications.
+%The secure software will enhances the end-users experience for citizens' services by improvement of the systems used for air traffic management, digital banking, healthcare, open banking and citizen services uses daily in Europe. The \TheProject{} improvements in code directly improves the systems they integrate into to form better solutions.
+%The chosen use cases and their domains will provide evidence of the impact \TheProject{} can  have on both.
+%%This is most notable in the considered use cases, that will directly benefit the end-users by XX. 
+%%Additionally, the authentication mechanisms will allow these users to XX. 
+%\end{mdframed}
+
+%\label{sect:objs-detailed}
+
+\TOWRITE{UOD and USTAN}{This needs to be done after
+the objectives are defined above   We need about 1-2 paragraphs
+per objective, just to flesh it out.}
+
+%\subsubsection{Detailed Description of the Objectives}
+
+\subsubsection*{Objective 1: Develop new \emph{secure code patterns} supported by formally-verifiable \emph{security contracts}.}
+% Secure Patterns for Distributed Data Processing
+\vspace{-6pt}
+Code patterns are a well-established abstraction for designing and implementing complex software systems, including parallel and distributed applications.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the end user code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In \TheProject{} we will develop novel \emph{secure design patterns} for distributed large-scale data processing that will specify how to combine different levels of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in a natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate security certificates into security contracts and vice versa. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with formally guaranteed security properties of the resulting code in an easily-understandable way. \emph{This fulfils part of \textbf{Aim 1}}.
+%Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
+%\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
+
+
+%\subsubsection*{Objective 2: Identification of Security and Privacy Risks in AI-Based Data Analytics}
+%To develop novel techniques based on a combination of static analysis, dynamic symbolic execution and run-time monitoring for identifying security and privacy vulnerabilities across layers %in multi-layer AI-based 
+%in big data applications, addressing the complete software development stack from low-level distributed file system operations to high-level machine-learning, guiding the verification of security and privacy properties in large-scale distributed settings. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+\subsubsection*{Objective 2: Develop a novel infrastructure for identifying security and privacy vulnerabilities.}
+\vspace{-6pt}
+
+A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In \TheProject{}  we will develop methods to \emph{identify security risks} coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use \emph{static source code analysis}; dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and \emph{run-time} machine-learning based monitoring of the application \emph{execution}. We will also develop methods based on stochastic modelling and information theory for identifying and quantifying leakage of private information coming from building and applying distributed machine learning models. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+
+\subsubsection*{Objective 3: Self-Healing Mechanisms for Repairing Vulnerabilities and Addressing Privacy-Leakage.}
+While identifying security risks and privacy leaks is critical for security of distributed data analytics and knowledge sharing across parties, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as transparent to the software developers as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, software developers 
+using these novel repair methods
+%user 
+should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformations with the aim to improve security and information privacy. In \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven formally proven \emph{code refactorings} of the source code and machine-learning based \emph{run-time adaptation} mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of transferring knowledge (that has been extracted from the private data of a party) from one party to another party while still preserving privacy of sensitive information contained in the data. \emph{This fulfils part of \textbf{Aim 2} and \textbf{Aim 4}.}
+
+%% We will move part of this to the background work & advancement beyond STOA
+%%\subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
+%%\vspace{-6pt}
+%\vjcomment{IBM to write this part}
+%%Particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
+%%A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, %%feasible path through the program, and can be witnessed with a test case that illustrates the error.
+%%In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
+
+%% VJ : Also move this to the background & advancement beyond STOA
+%\subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
+%\vspace{-6pt}
+%The datasets containing sensitive information can't be publicly shared as a privacy-risk posed by several types of attacks exists. A novel information theoretic framework is introduced for privacy-preserving distributed machine learning such that privacy-leakage is quantified by the mutual information between sensitive data and released data. At the core of privacy-preserving framework lies a stochastic model approximating the uncertain mapping between released noise added data and private data such that the model is employed for variational approximation of informational privacy. The suggested privacy-preserving framework consists of three components: 1) Optimal Noise Adding Mechanism; 2) Modeling of Uncertain Mapping Between Released Noise Added Data and Private Data; and 3) Variational Approximation of Information Privacy. 
+%There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
+
+\subsubsection*{Objective 4: New Security Coding Standards and Analysis for Conformance to These Standards.}
+The source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, such as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
+In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big data applications with special attention to vulnerabilities derived from  the programming language. %Then we will apply 
+These coding standards will then be used to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern-based machine learning software components. \emph{This fulfils parts of \textbf{Aim 1}, \textbf{Aim 2} and \textbf{Aim 4}}.
+
+\subsubsection*{Objective 5: New Intelligent Identity Management and Trust Schemes}
+\vspace{-6pt}
+
+In \TheProject{}, we will develop an Identity-as-a-Service (IDaaS) technology that will allow software developers to easily integrate, deploy and manage methods for identity, authentication and access management depending on customer requirements and policies. In particular, we will develop and evaluate state-of-the-art multi-factor authentication, and intelligent biometrics based on a combined analysis of physiological, face and eye gaze data analytics for continuously identifying end users. In addition, we will develop a blockchain solution for user access management, as well as data analytics and reporting services aiming to provide intelligent insights from users' biometric data allowing software developers to deliver a personalised security experience and thus increase user acceptance and trust. Finally, from an end users' point of view, the developed IDaaS technology will provide a fluid user experience based on state-of-the-art authentication and access control methods such as easy-to-use tokens, usable, single-touch user approvals, as well as intelligent biometrics based on users' physiological, face and eye gaze behaviour features. \emph{This fulfils parts of \textbf{Aim 3} and \textbf{Aim 4}}.
+
+\subsubsection*{Objective 6: Methodology for Development of Secure Applications}
+\vspace{-6pt}
+
+In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In \TheProject{}, we will develop a novel methodology for developing proven secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured code rewriting, %of the %end user code, 
+which will enable easily understandable step-by-step transformation of the initial code into its provably secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
+%cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focused more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
+\emph{This fulfils part of \textbf{Aim 4}}.
+
+\subsubsection*{Objective 7: Demonstrating \TheProject{} Tools and Technologies on Real-World Use Cases.}
+%  from automotive, machine learning and IoT domains.}
+\vspace{-6pt}
+We will validate the \TheProject{} methodology for developing secure applications, together with the associated tools and technologies, on realistic use cases taken from our partners at \SOPRAshort{} and \FRQshort{}.
+%In particular, the \TheProject{} technologies will be applied to the development
+%of a \emph{completely new} distributed data analytics application by XX.
+Consequently, all of the technologies that will be developed over the course of the \TheProject{} project will be extensively tested in a realistic setting, enabling us to identify new issues and security risks as they arise, and guiding our road-map for future technological adoption. The use cases will demonstrate that we are able to deal with large-scale AI-based distributed data analytics in a secure and privacy-preserving way, processing large volumes of data with increased trust in the safety of the operations. In addition, \TheProject{}'s tool chain supporting
+%by using 
+a user-guided refactoring-driven methodology %, supported by a tool chain, we will 
+will help to reduce the cost of development, deployment and maintenance of distributed AI-based solutions. 
+%distributed systems.
+%Thanks to our \emph{data fabrication} technology, we will be able to test parts of the system
+%and a system as a whole on large volumes of synthetic, but realistic,
+%data, both during development and during deployment.
+\emph{This fulfils part of \textbf{Aim 5}}.
+
+\subsubsection*{Objective 8: Long-Term Uptake of \TheProject{} Technologies} 
+\vspace{-7pt}
+\TheProject{} aims to ensure long-term uptake of the technologies that it will develop by engaging with relevant users, developers and adopter communities, by following an Open Science approach, and by providing a road-map for the future development and exploitation of the \TheProject{} technologies. We have built in specific user community building activities, including  workshops, tutorials, webinars and training sessions, that will serve to actively promote the use of the \TheProject{} technologies. Whenever feasible, our software and results will be made publicly available in open source/open data repositories. We will actively engage with potential users from the chosen domains through exhibitions, demonstrations, video animations and presentations at existing events and conferences such as XX, through the annual EU ICT conference, through exploiting our excellent high-level contacts with the XX. Innovation Centres and other relevant organisations, through contacts with national government agencies, including XX and through other relevant expert networks.
+\emph{This fulfils part of \textbf{Aim 5}}.
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \paragraph{End Users \& Software Developers.}
@@ -521,83 +613,6 @@ The chosen use cases and their domains will provide evidence of the impact \TheP
 %Additionally, the authentication mechanisms will allow these users to XX. 
 \end{mdframed}
 
-\label{sect:objs-detailed}
-
-\TOWRITE{UOD and USTAN}{This needs to be done after
-the objectives are defined above   We need about 1-2 paragraphs
-per objective, just to flesh it out.}
-
-\subsubsection{Detailed Description of the Objectives}
-
-\subsubsection*{Objective 1: Secure Patterns for Distributed Data Processing}
-%subsubsecton*{Security Contracts for Formal Specification of Security Properties}
-\vspace{-6pt}
-Code patterns are a well-established abstraction for designing and implementing complex software systems, including parallel and distributed applications.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the end user code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In \TheProject{} we will develop novel \emph{secure design patterns} for distributed large-scale data processing that will specify how to combine different levels of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting these patterns with both \emph{security certificates}, which will describe in a natural way the properties of the code, and the associated lower-level, machine-readable \emph{security contracts} that will be appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate security certificates into security contracts and vice versa. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with formally guaranteed security properties of the resulting code in an easily-understandable way. 
-%Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
-%\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
-
-
-\subsubsection*{Objective 2: Identification of Security and Privacy Risks in AI-Based Data Analytics}
-\vspace{-6pt}
-
-A typical AI-based data analytics application is built from multiple layers, combining reliable and fault-tolerant data storage mechanisms (such as distributed databases and distributed file systems) with generic data processing frameworks such as MapReduce~\cite{mapreduce} and more specific libraries for machine learning, such as Spark MLLib~\cite{mllib}. Many of these libraries are open source and do not have well-established security properties. Security risks and privacy leaks can come from either of the layers, as well as from the interaction between different layers. In addition to that, machine learning presents additional difficulties, as the security risks can arise both from training the models and from using the built models, as well as from the models themselves. In \TheProject{}  we will develop methods to \emph{identify security risks} coming both from the individual agents involved in the process of storing and analysing big data, and from the interaction between different agents in distributed settings. For identifying security risks, we will use \emph{static source code analysis}; dynamic \emph{symbolic execution}, where a program is executed abstractly, covering multiple possible inputs of the program that share a particular execution path through the code; and \emph{run-time} machine-learning based monitoring of the application \emph{execution}. We will also develop methods based on stochastic modelling \textcolor{red}{and information theory} for identifying and quantifying leakage of private information coming from building and applying distributed machine learning models.
-
-\subsubsection*{Objective 3: Self-Healing Mechanisms for Repairing Vulnerabilities and Addressing Privacy-Leakage}
-While identifying security risks and privacy leaks is critical for security of distributed data analytics and knowledge sharing across parties, it is equally important to develop methods for \emph{repairing} the identified risks and leaks. These methods should be as transparent to the software developers as is practically possible, not requiring them to be security experts while still allowing them to develop efficient and secure code. At the same time, software developers 
-using these novel repair methods
-%user 
-should be aware of the changes made to the code, allowing them to intervene and apply their domain-specific knowledge to the code transformations with the aim to improve security and information privacy. In \TheProject{}, we will develop novel \emph{self-healing} techniques for semi-automatic transformation of the code to eliminate security risks and privacy leaks. Self-healing will be based on both incremental, developer-driven formally proven \emph{code refactorings} of the source code and machine-learning based \emph{run-time adaptation} mechanisms. Any potential privacy-leakage will be quantified and addressed using optimal data release mechanisms. We will also address the problem of transferring knowledge \textcolor{red}{(that has been extracted from the private data of a party)} from one party to another party while still preserving privacy of sensitive information contained in the data. 
-
-
-%% We will move part of this to the background work & advancement beyond STOA
-%%\subsubsection*{Objective 3: Symbolic Execution for Discovering Security Vulnerabilities}
-%%\vspace{-6pt}
-%\vjcomment{IBM to write this part}
-%%Particular execution path through the code. The execution treats these inputs symbolically, “returning” a result that is expressed in terms of symbolic constants that represent those input values.
-%%A known advantage of the symbolic execution technique is its ability to avoid giving false warnings; any error found by symbolic execution represents a real, %%feasible path through the program, and can be witnessed with a test case that illustrates the error.
-%%In the \TheProject{} project, we will extend the ExpliSAT symbolic execution technology of IBM to discover known security vulnerability patterns in C/C++code. Moreover, to avoid known limitations of the symbolic execution approach (e.g. path explosion, memory growth, etc.), we will develop a technology that leverages the combination of white box fuzzing and symbolic execution to find exploitable bugs. The idea is to perform symbolic execution as the main technique to discover vulnerabilities combined with tailored fuzzing techniques in specific small areas for the purpose of assisting the symbolic execution engine to consistently make progress.
-
-%% VJ : Also move this to the background & advancement beyond STOA
-%\subsubsection*{Objective 4: Identifying and Controlling Privacy-Leakage in Distributed Machine Learning}
-%\vspace{-6pt}
-%The datasets containing sensitive information can't be publicly shared as a privacy-risk posed by several types of attacks exists. A novel information theoretic framework is introduced for privacy-preserving distributed machine learning such that privacy-leakage is quantified by the mutual information between sensitive data and released data. At the core of privacy-preserving framework lies a stochastic model approximating the uncertain mapping between released noise added data and private data such that the model is employed for variational approximation of informational privacy. The suggested privacy-preserving framework consists of three components: 1) Optimal Noise Adding Mechanism; 2) Modeling of Uncertain Mapping Between Released Noise Added Data and Private Data; and 3) Variational Approximation of Information Privacy. 
-%There is an interest in sharing knowledge extracted from the data owned by a party with another party while simultaneously preserving the privacy of private data of both parties. An analytical framework is introduced to study and optimize the privacy-preserving transfer of knowledge extracted from a large set of labelled private data owned by a party to another party owning a few labelled data samples. An information theoretic approach is considered to quantify transferability of knwoledge from source to target domain in-terms of mutual information between source and target data. The privacy secured knowledge sharing framework facilitates development of transfer and multi-task machine learning algorithm while optimizing the privacy-transferability tradeoff.                
-
-\subsubsection*{Objective 4: Security Coding Standards}
-The source code of infrastructure software and applications is a major vector to introduce security vulnerabilities. This is specially relevant in native languages, such as C or C++, where the source code is translated into a binary executable and there is direct access to the hardware platform. Some vulnerabilities may be introduced because of bad practices. However, there is also a category of vulnerabilities that are introduced due to specific features of the programming language itself.
-In \TheProject{} we will develop new coding standards that can help to mitigate vulnerabilities in typical big data applications with special attention to vulnerabilities derived from  the programming language. %Then we will apply 
-These coding standards will then be used to identify vulnerabilities that may be found in distributed data storage components and in distributed pattern-based machine learning software components.
-
-\subsubsection*{Objective 5: Intelligent Identity Management and Trust}
-\vspace{-6pt}
-
-In \TheProject{}, we will develop an Identity-as-a-Service (IDaaS) technology that will allow software developers to easily integrate, deploy and manage methods for identity, authentication and access management depending on customer requirements and policies. In particular, we will develop and evaluate state-of-the-art multi-factor authentication, and intelligent biometrics based on a combined analysis of physiological, face and eye gaze data analytics for continuously identifying end users. In addition, we will develop a blockchain solution for user access management, as well as data analytics and reporting services aiming to provide intelligent insights from users' biometric data allowing software developers to deliver a personalised security experience and thus increase user acceptance and trust. Finally, from an end users' point of view, the developed IDaaS technology will provide a fluid user experience based on state-of-the-art authentication and access control methods such as easy-to-use tokens, usable, single-touch user approvals, as well as intelligent biometrics based on users' physiological, face and eye gaze behavior features.
-
-\subsubsection*{Objective 6: Methodology for Development of Secure Applications}
-\vspace{-6pt}
-
-In order for the \TheProject{} technology to be usable by non-experts in security, it will be necessary to bridge the gap between the relatively low-level techniques for identification and repairing of the security and privacy vulnerabilities and verification of the security properties of the code on one side, and the high-level of abstraction at which the end user wants to have the code and security properties presented in. It is essential to develop a structured methodology, accompanied by the associated tool chain, that will provide guidance to the end user to help them develop their code and provide trust in its security properties. In \TheProject{}, we will develop a novel methodology for developing proven secure distributed AI-based data analytics applications. The cornerstone of our methodology will be \emph{software refactoring} as a method for user-guided semi-automatic structured code rewriting, %of the %end user code, 
-which will enable easily understandable step-by-step transformation of the initial code into its provably secure semantically-equivalent version. We will also integrate authentication, vulnerabilities identification, self-healing and properties proving techniques into tools for static and dynamic analysis of the code and develop a common easily-accessible front end that will be tailored to domain experts who might not be experts in security. In this way, the programmer will be fully included in the development loop, having full control over the analysis and transformations that will be performed to make their code more secure. %and avoid any privacy breach. 
-%cbcomment{I wonder if the refactoring is downplayed too much. If the proposal focused more on the idea of the end-user, refactoring becomes vital to that. Also the idea of refactorings to transform programs to make them more secure. Perhaps meeting the specifications/contracts that are described in Objective 1. Also, maybe the refactoring use some kind of security pattern in the rewriting, which would be a novelty. }
-
-\subsubsection*{Objective 7: Demonstrating \TheProject{} Tools and Technologies on Real-World Use Cases}
-%  from automotive, machine learning and IoT domains.}
-\vspace{-6pt}
-We will validate the \TheProject{} methodology for developing secure applications, together with the associated tools and technologies, on realistic use cases taken from our partners at \SOPRAshort{} and \FRQshort{}.
-%In particular, the \TheProject{} technologies will be applied to the development
-%of a \emph{completely new} distributed data analytics application by XX.
-Consequently, all of the technologies that will be developed over the course of the \TheProject{} project will be extensively tested in a realistic setting, enabling us to identify new issues and security risks as they arise, and guiding our road-map for future technological adoption. The use cases will demonstrate that we are able to deal with large-scale AI-based distributed data analytics in a secure and privacy-preserving way, processing large volumes of data with increased trust in the safety of the operations. In addition, \TheProject{}'s tool chain supporting
-%by using 
-a user-guided refactoring-driven methodology %, supported by a tool chain, we will 
-will help to reduce the cost of development, deployment and maintenance of distributed AI-based solutions. 
-%distributed systems.
-%Thanks to our \emph{data fabrication} technology, we will be able to test parts of the system
-%and a system as a whole on large volumes of synthetic, but realistic,
-%data, both during development and during deployment.
-
-\subsubsection*{Objective 8: Long-Term Uptake of \TheProject{} Technologies} 
-\vspace{-7pt}
-\TheProject{} aims to ensure long-term uptake of the technologies that it will develop by engaging with relevant users, developers and adopter communities, by following an Open Science approach, and by providing a road-map for the future development and exploitation of the \TheProject{} technologies. We have built in specific user community building activities, including  workshops, tutorials, webinars and training sessions, that will serve to actively promote the use of the \TheProject{} technologies. Whenever feasible, our software and results will be made publicly available in open source/open data repositories. We will actively engage with potential users from the chosen domains through exhibitions, demonstrations, video animations and presentations at existing events and conferences such as XX, through the annual EU ICT conference, through exploiting our excellent high-level contacts with the XX. Innovation Centres and other relevant organisations, through contacts with national government agencies, including XX and through other relevant expert networks.
 
 %\pagebreak
 \subsection{Relation to the Work programme}
@@ -605,7 +620,7 @@ will help to reduce the cost of development, deployment and maintenance of distr
 \TheProject{} directly addresses the challenge that is posted by \textbf{H2020-SU-DS-2020}. By exploiting the partners' expertise in formal methods, authentication, security, privacy and AI-based distributed data analytics and by integrating the developed solutions into a semi-automated code analysis, refactoring and runtime adaptation based software development methodology, we aim to \textbf{integrate state-of-the-art approaches for security and privacy management in a holistic and dynamic way} while \textbf{relying on Artificial Intelligence and automation to reduce the level of human intervention necessary}. Our techniques for identifying and repairing security and privacy vulnerabilities, addressing both storage and processing of data in big-data analytics applications will address the problem of \textbf{storage and processing of data in different interconnected places}. Integration of all the methods into a coherent technology, comprising also run-time vulnerabilities detection and run-time adaptation to address the identified problems, will allow the end users to  \textbf{constantly forecast, monitor and update the security of their ICT systems}. Collectively, detecting and repairing security and privacy risks in data storage and processing will allow \textbf{monitoring and mitigation of security risks, including those related to data and algorithms}. Our inherent focus on distributed systems, with a particular focus on privacy and security of machine learning frameworks and models, both while they are trained and while they are used, will improve \textbf{collaboration and sharing of information related to security and privacy management}. 
 
 
-The specific focus of \TheProject{} is on part \textbf{c) advanced security and privacy solutions for end users or software developers} of the proposal call. Within that, our main aim is to \textbf{develop automated tools for formally checking the security and privacy of data, systems, online services and applications}. By building on the well-established software engineering concept of \emph{patterns} for data processing, and by supporting the techniques that will be developed over the course of the project by semi-automated tools for analysing and transforming the user code, as well as the techniques of the secure authentication, we will \textbf{support end users or software developers (possibly including developers of AI solutions) in their efforts to select, use and create trustworthy digital services}. By evaluating the \TheProject{} techniques on real-world applications coming from \textcolor{red}{aerospace, banking, healthcare and telecommunication domains}, we will address \textbf{real application cases}. Our refactoring-based programming methodology will contribute to \textbf{automatic code generation}. Supporting the secure patterns for distributed data processing by techniques for the formal specification and verification of their security properties, we are contributing to the creation of \textbf{trustworthy data boxes}, \textbf{certification and assurance} and \textbf{cyber insurance}.
+The specific focus of \TheProject{} is on part \textbf{c) advanced security and privacy solutions for end users or software developers} of the proposal call. Within that, our main aim is to \textbf{develop automated tools for formally checking the security and privacy of data, systems, online services and applications}. By building on the well-established software engineering concept of \emph{patterns} for data processing, and by supporting the techniques that will be developed over the course of the project by semi-automated tools for analysing and transforming the user code, as well as the techniques of the secure authentication, we will \textbf{support end users or software developers (possibly including developers of AI solutions) in their efforts to select, use and create trustworthy digital services}. By evaluating the \TheProject{} techniques on real-world applications coming from aerospace, banking and healthcare domains, we will address \textbf{real application cases}. Our refactoring-based programming methodology will contribute to \textbf{automatic code generation}. Supporting the secure patterns for distributed data processing by techniques for the formal specification and verification of their security properties, we are contributing to the creation of \textbf{trustworthy data boxes}, \textbf{certification and assurance} and \textbf{cyber insurance}.
 
 Section~\ref{sec:impact} describes in detail how \TheProject{} meets the expected impacts that have been defined for the \textbf{H2020-SU-DS-2020} proposal call.
 
