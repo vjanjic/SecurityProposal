@@ -1457,9 +1457,9 @@ The \paraformance Refactoring tool was originally developed for the EU FP7 \para
 %
 % \paraformance will be extended in \TheProject{} by adding safety checks for the distributed code, in addition to the existing mechanisms for checking the code that is executed on shared-memory machines. We will also extend the tool with features to check for \emph{security} of the code. 
 
-\paragraph {\SAshort{} CSL: The Contract Specification Language}
-CSL (Contract Specification Language) was developed as part of the ongoing H2020 \teamplay{} project. It is designed to act both as an annotation library for C applications, allowing the developer to annotate their source code both to reflect non-functional properties of time, energy and security back into the source code, but also in order to express assertions ---or contracts--- about the non-functional properties. Such non-functional properties could be, for example, the worst-case execution time (or energy) of a block of code, the security vulnerability level of a variable, etc. The assertions themselves are expressed in terms of these properties and other normal variables within the source code. The properties can also be reflected back into the source-program as first-class citizens: normal programming variables with values in the source-level space.
-The assertions are then passed to an underlying proof system together with an abstract interpretation of the C program. This proof system (currently implemented using the dependently typed language, Idris) produces  a proof of whether or not the assertion can be met. CSL will be extended in \TheProject{} by adding ... 
+%\paragraph {\SAshort{} CSL: The Contract Specification Language}
+%CSL (Contract Specification Language) was developed as part of the ongoing H2020 \teamplay{} project. It is designed to act both as an annotation library for C applications, allowing the developer to annotate their source code both to reflect non-functional properties of time, energy and security back into the source code, but also in order to express assertions ---or contracts--- about the non-functional properties. Such non-functional properties could be, for example, the worst-case execution time (or energy) of a block of code, the security vulnerability level of a variable, etc. The assertions themselves are expressed in terms of these properties and other normal variables within the source code. The properties can also be reflected back into the source-program as first-class citizens: normal programming variables with values in the source-level space.
+%The assertions are then passed to an underlying proof system together with an abstract interpretation of the C program. This proof system (currently implemented using the dependently typed language, Idris) produces  a proof of whether or not the assertion can be met. CSL will be extended in \TheProject{} by adding ... 
 
 \paragraph{\FRQshort{} MosaiX SWIM: Aviation Integration Platform}
 \label{sec:swim}
@@ -1963,6 +1963,9 @@ Principles and Practice of Declarative Programming;
 \textbf{IJCAI:} International Joint Conference on Artificial Intelligence;
 \textbf{AAAI:} Conference on Artificial Intelligence;
 \textbf{ETAPS:} European Joint Conferences on Theory \& Practice of Software.
+\textbf{IEEE/ICNS:} Integrated Communications Navigation and Surveillance Conference;
+\textbf{IEEE/DASC:} Digital Avionics Systems Conference;
+
  \end{quote}
 
 \noindent
@@ -3521,6 +3524,19 @@ V. Janjic, J.K.F. Bowles, A. Vermeulen, A. Silvina, M. Belk, C. Fidas, A. Pitsil
 J.K.F. Bowles, M. B. Caminati, S. Cha and J. Mendoza.
 \emph{A Framework for Automated Conflict Detection and Resolution in Medical Guidelines},  \emph{Science of Computer Programming}, 182:42-63, August 2019. 
 %\item Modelling Concurrent Interactions. J. K\"uster-Filipe. Theoretical Computer Science 351(2), 203- 220, 2006. Elsevier B.V.
+\item 
+C. Brown, V. Janjic, A.D. Barwell, J.D. Garcia, K. MacKenzie
+\emph{Refactoring GrPPI: generic refactoring for generic parallelism in C++},
+\emph{International Journal of Parallel Programming}, 1-23, July 2020.
+\item 
+C. Brown, V. Janjic, M. Gohli, J. McCall
+\emph{Programming Heterogeneous Parallel Machines Using Refactoring and Monte–Carlo Tree Search},
+\emph{International Journal of Parallel Programming}. 48:583–602. July 2020. 
+\item
+V. Janjic, C. Brown, K. MacKenzie, K. Hammond, M. Danelutto, M. Aldinucci, J. Daniel Garcia
+\emph{RPL: A Domain-Specific Language for Designing and Implementing Parallel C++ Applications},
+\emph{24th Euromicro International Conference on Parallel, Distributed, and Network-Based Processing}
+Euro-Micro. 2016.
 \end{itemize}
 
 %pagebreak
@@ -3620,14 +3636,15 @@ To facilitate a comprehensive offering IBM is continuously investing in emerging
 In recent years, IBM has acquired several cyber security start-ups in Israel increasing its R\&D presence in the region. IBM has recently also announced the establishment of a Cyber Center of Excellence (CCoE) in Beer-Sheva, Israel. The IBM Haifa Research Lab, as a well recognized IBM research facility and the largest one outside of the US, is collaborating with European research facilities to support the buildup of the CCoE as well as the acquired cyber security start-ups.
 
 \vspace{10pt}
-\textbf{IBM leads work package WP2 on}
+\subsubsection*{Role in Elysian}
+\textbf{IBM leads work package WP2 on Vulnerability Detection and Self-Healing. It also contributes to the development of privacy preserving ML models, formal verification of security, use cases evaluation and provides the Data Fabrication Platform to produce synthetic but realistic data for the project use cases.}
 
 \vspace{10pt}
 \subsubsection*{Key Personnel Involved in the Project}
 
-\paragraph{Michael Vinov} (male) is the manager of the Security and Data Quality group at the IBM Haifa Research Lab. He has been at IBM for more than 20 years where he has held a variety of development and management positions. He has rich experience in computer architectures, hardware and software verification, performance optimization and leading international projects inside IBM.He has a degree in Computer Engineering from Moscow Institute of Radio Technology and Electronics (MIREA), and M.S. degree in Electrical Engineering from The Technion -- Israel Institute of Technology.
+\paragraph{Michael Vinov} (male) is the manager of the Security and Data Quality group at the IBM Haifa Research Lab. He has been at IBM for more than 20 years where he has held a variety of development and management positions. He has rich experience in computer architectures, hardware and software verification, performance optimization, cyber security and leading international projects inside IBM. He has a degree in Computer Engineering from Moscow Institute of Radio Technology and Electronics (MIREA), and M.S. degree in Electrical Engineering from The Technion -- Israel Institute of Technology.
 
-\paragraph{Omer Boehm} (Male) is a software engineer and researcher in the Security and Data Quality group at the IBM Haifa Research Lab. He has rich experience in compilers, binary file analysis, code optimization, sampling tools and rule-based test data generation. He has been at IBM for 15 years where he has participated in various projects that included the full life cycle of complex software systems. Among the main projects are:
+\paragraph{Omer Boehm} (male) is a software engineer and researcher in the Security and Data Quality group at the IBM Haifa Research Lab. He has rich experience in compilers, binary file analysis, code optimization, sampling tools and rule-based test data generation. He has been at IBM for 15 years where he has participated in various projects that included the full life cycle of complex software systems. Among the main projects are:
 \begin{itemize}
 \item Data Fabrication Platform (DFP) – state-of-the-art rule-based test data generation platform.
 \item Anti ROP – load time x86 binary instruction-level randomization tool to mitigate ROP attacks.
@@ -3646,8 +3663,13 @@ Omer has a degree in Computer Science from the Technion -- Israel Institute of T
 \item
 Y. Richter, Y. Naveh, D. L. Gresh, and D. P. Connors (2007), \emph{Optimatch: Applying Constraint Programming to Workforce Management of Highly-skilled Employees}, International Journal of Services Operations and Informatics (IJSOI), Vol 3, No. 3/4, pp. 258 - 270.
 \item
-Y. Naveh, M. Rimon, I. Jaeger, Y. Katz, M. Vinov, E. Marcus, and G. Shurek (2006), \emph{Constraint-Based Random Stimuli Generation for Hardware Verification}, AI magazine Vol 28 Number 3.
-
+A. Goldsteen, S. Garion, S. Nadler, N. Razinkov, Y. Moatti and P. Ta-Shma, \emph{Brief Announcement: A Consent Management Solution for Enterprises}, International Symposium on Cyber Security Cryptography and Machine Learning (CSCML 2017).
+\item
+M. Abadi, S. Keidar\-Barner, D. Pidan, T. Veksler, \emph{Verifying Parallel Code After Refactoring Using Equivalence Checking}, Int. J. Parallel Program, volume 47, pages 59--73, (2019)
+\item
+H. Chockler, D. Pidan, S. Ruah, \emph{Improving Representative Computation in ExpliSAT}, 9th International Haifa Verification Conference, Haifa, Israel, November 5-7, 2013
+\item
+S. Barner, C. Eisner, Z. Glazberg, D. Kroening, I. Rabinovitz, \emph{ExpliSAT: Guiding SAT-Based Software Verification with Explicit States}, Second International Haifa Verification Conference, 2006, Haifa, Israel, October 23-26, 2006.
 \end{itemize}
 
 \subsubsection*{Relevant Research Projects}
