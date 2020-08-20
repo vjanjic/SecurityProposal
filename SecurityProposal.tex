@@ -2745,6 +2745,16 @@ if necessary, new partners with required competencies will be
 incorporated into the project.
 
 \\\hline
+Brexit or COVID-19 pandemic impact the achievement of the project objectives.
+\par
+(\textbf{Likelihood: Low}
+\par
+\textbf{Severity: Medium}
+)
+& ALL & 
+It is possible that the external events, such as administrative problems due to Brexit or required social distancing due to the ongoing COVID-19 pandemics, can impact the communication and collaboration between the project partners. The \TheProject{} will take all the measures to minimise the impact of Brexit, by using computational clouds (with the actual machines situated in Europe) for processing and storage of the project data, therefore avoiding potential administrative problems with data ownership and sharing. The project partners are well used to online collaboration, being members of various EU project consortiums that have switched to online meetings during the ongoing COVID-19 pandemics, therefore continuing social distancing measures will not impact the progress of the project.
+
+\\\hline
 Failure to achieve key project objectives.
 \par
 (\textbf{Likelihood: Low}
@@ -2783,7 +2793,7 @@ Inability to adapt the generic vulnerability detection techniques to AI-based di
 \par
 {\textbf{Severity: High}}
 & WP2, WP3 &
-\textcolor{red}{Adapting vulnerability detection techniques to a specific kind of application such as AI-based distributed big data analytics require to identify, model and develop mechanisms to detect vulnerable code sequences in the application. It may happen that \TheProject{} technologies won't be able to automatically detect some vulnerabilities because of technological limitations, combinatory explosion or because of the complexity of some vulnerabilities. In that case we will revise the ambition to support semi automated vulnerability detection instead of fully automated. Additional training of the machine learning algorithms or some of the technologies developed in the project, such as code mining and supervised self healing, will then be deployed.}
+Adapting vulnerability detection techniques to a specific kind of application such as AI-based distributed big data analytics require to identify, model and develop mechanisms to detect vulnerable code sequences in the application. It may happen that \TheProject{} technologies won't be able to automatically detect some vulnerabilities because of technological limitations, combinatory explosion or because of the complexity of some vulnerabilities. In that case we will revise the ambition to support semi automated vulnerability detection instead of fully automated. Additional training of the machine learning algorithms or some of the technologies developed in the project, such as code mining and supervised self healing, will then be deployed.
 
 \\\hline
 Self-Healing techniques cannot repair the identified vulnerabilities.
@@ -2827,13 +2837,13 @@ Unacceptable complexity
 & WP2, WP4 &
 While the verification may prove that a system satisfies the required security contracts, the measures required to assess, recognise and mitigate critical situations may turn out to be too complex. In this case, the mitigation measure is to investigate, if the requirements can be weakened to lower complexity.
 
-\\\hline
-Inability to formalise security requirements in a form viable for automated reasoning
-(\textbf{Likelihood: Low})
-\par
-{\textbf{Severity: Medium}}
-& WP4 &
-XX
+%\\\hline
+%Inability to formalise security requirements in a form viable for automated reasoning
+%(\textbf{Likelihood: Low})
+%\par
+%{\textbf{Severity: Medium}}
+%& WP4 &
+%XX
 
 \\\hline
 Continuous user identification not accurate 
@@ -2851,21 +2861,21 @@ Identity and authentication prototypes not acceptable for user evaluation
 & WP5 &
 User-centered design approach, involving key stakeholders in the design should prevent this, as issues would be caught early. Will involve UX/IT/technical staff.
 
-\\\hline
-Something related to coding standards
-(\textbf{Likelihood: Low})
-\par
-{\textbf{Severity: Medium}}
-& WP4 &
-XX
+%\\\hline
+%Something related to coding standards
+%(\textbf{Likelihood: Low})
+%\par
+%{\textbf{Severity: Medium}}
+%& WP4 &
+%XX
 
 \\\hline
-Inability to design a coherent design patterns and the \TheProject{} methodology due to differences in systems and libraries at different levels of abstraction.
+Inability to design a coherent design patterns and the \TheProject{} methodology.% due to differences in systems and libraries. at different levels of abstraction.
 (\textbf{Likelihood: Low})
 \par
 {\textbf{Severity: Medium}}
 & WP6 &
-There is a large number of systems, libraries and frameworks for different layers of a typical big data analytics application, including many different distributed databases (both SQL and NOSQL), processing frameworks and machine-learning libraries. There is no clear standard in any of these layers, which makes developing universal design patterns and methodology for combining them challenging. It is necessary, due to the length of the project and resources committed, to restrict ourselves to a relatively small subset of the systems/libraries. Should it prove difficult to develop patterns and methodology for the systems/libraries considered, we will further restrict ourselves to very particular systems (based on MS Azure that is used in most parts of the use cases), sacrificing the generality 
+There is a large number of systems, libraries and frameworks for different layers of data analytics, including many different distributed databases, processing frameworks and machine-learning libraries. There is no clear standard in any of these layers, which makes developing universal design patterns and methodology for combining them challenging. It is necessary, due to the length of the project and resources committed, to restrict ourselves to a relatively small subset of the systems/libraries. Should it prove difficult to develop patterns and methodology for the systems/libraries considered, we will further restrict ourselves to very particular systems (based on MS Azure that is used in most parts of the use cases), sacrificing the generality 
 
 \\\hline
 Coding guidelines cannot be
@@ -2890,7 +2900,7 @@ Adapting the \TheProject{} technologies to the considered use cases presents unf
 {\textbf{Severity: Medium}}
 & WP7 &
 
-In the unlikely event that the use cases does not match the systems under development \SOPRAlong{} and \FRQlong{} will take actions to adapt the use cases to assist the research. The use cases presented is part of the core business and \SOPRAshort{} and \FRQshort{} have several installation with these types of applications. In event of total miss-match \SOPRAshort{} and \FRQshort{ }will offer alternative use cases for approval by the consortium to assist with the success of the project.
+In the unlikely event that the use cases does not match the systems under development \SOPRAshort{} and \FRQshort{} will take actions to adapt the use cases to assist the research. The use cases presented is part of the core business and \SOPRAshort{} and \FRQshort{} have several installation with these types of applications. In event of total miss-match \SOPRAshort{} and \FRQshort{ }will offer alternative use cases for approval by the consortium to assist with the success of the project.
 
 \\\hline
 Legal security of Machine Learning algorithms and applications 
@@ -2906,7 +2916,6 @@ Questions about liability, certification and data protection that are relevant f
 \end{longtable}
 %\newpage
 
-?e{-6p }
 \subsection{Management Culture and Procedures (Figure~\ref{fig:management})}
 \label{sect:mgt}
 
@@ -2963,7 +2972,7 @@ familiar with.  Our technical reports will form the basis for
 the public deliverables that appear on the project web site.
 
 \begin{figure}[ht!]
-\vspace{-0.75in}
+\vspace{-0.28in}
 \begin{center}
 \centerline{\hspace{1in} \hbox to \columnwidth{\hss\includeimage[height=5.7in]{Management}\hss}}
 \end{center}
@@ -3028,23 +3037,22 @@ consensus, if possible, otherwise by majority vote, with the
 Project Coordinator retaining the casting vote.
 
 \subsubsection*{Project Advisory Board}
-\vspace{-6pt}
+\vspace{-5pt}
 
 The Project Advisory Board comprises a small group of invited
 academics and industrialists who will provide input to the
 project on general technical trends and directions, and advise
 the steering committee where required.  The initial composition
 of the Advisory Board will be determined at the outset of the
-project, but we expect to include academic experts from the data-intensive, high-performance and cloud computing, as well as machine learning, compilation, software-defined infrastructures and optimisation domains. We also expect to include senior representatives from the automotive, AI and IoT industry domains. The Coordinator is authorized to 
+project, but we expect to include academic experts from cybersecurity, data science, formal methods, code analysis and artificial intelligence, as well as from the cloud computing, healthcare, banking and air traffic management domains. The Coordinator is authorised to 
 execute with each member of the EEAB a non-disclosure agreement, which 
 terms shall be not less stringent than those stipulated in this 
 Consortium Agreement, no later than 30 calendar days after their nomination 
 or before any confidential information will be exchanged, whichever date is earlier. 
-We have invited senior representatives from Aarhus University, SAP Institute for Digital Government, Ericsson, TypeSafe, British Telecom,
-the oil\&gas industries, the Cloud Competency Centre (Dublin),
-	and Scottish Enterprise.
+%We have invited senior representatives from Aarhus University, SAP Institute for Digital Government, Ericsson, TypeSafe, British Telecom,
+%the oil\&gas industries, the Cloud Competency Centre (Dublin),
+%	and Scottish Enterprise.
 
-\pagebreak
 \subsubsection*{Work Package Team Leaders}
 \vspace{-6pt}
 
@@ -3062,7 +3070,7 @@ commitment to the work package programmes. % , as shown below.
 \textbf{WP} & \textbf{WTL} \\ \hline
 WP1 &  Juliana Bowles (\coordshort{}) \\ \hline
 WP2 & Michael Vinov (\IBMshort{}) \\ \hline
-WP3 & Michael Rossbory (\SCCHshort{}) \\ \hline
+WP3 & Vladimir Janjic (\UODshort{}) \\ \hline
 WP4 & Juliana Bowles (\coordshort{}) \\ \hline
 \end{tabular}
 \quad\quad&\quad\quad
@@ -3071,7 +3079,7 @@ WP4 & Juliana Bowles (\coordshort{}) \\ \hline
 WP5 & Marios Belk (\COGNIshort{}) \\ \hline
 WP6 & Jose Daniel Garcia Sanchez (\UCMshort{}) \\ \hline
 WP7 & Andreas Vermeulen (\SOPRAshort{}) \\ \hline
-WP8 & Vladimir Janjic (\UODshort{}) \\ \hline
+WP8 & Andrew Cobley (\UODshort{}) \\ \hline
 \end{tabular}
 \end{tabular}
 \end{center}
@@ -3136,12 +3144,12 @@ to produce any required  project management reports, to ensure
 that deliverables are produced according to the planned
 schedule and delivered to the Commission and project reviewers
 as required, and to resolve disputes between project partners
-as and when these arise.  He will convene regular management
+as and when these arise.  She will convene regular management
 and technical meetings, monitor progress on each work package,
 collate deliverables, and maintain good contact with each site,
 in addition to producing the annual management reports, and
 ensuring that each site produces the required financial (audit)
-certificates.  He will also be responsible for ensuring that
+certificates.  She will also be responsible for ensuring that
 the Consortium Agreement (including IPR issues, voting rules and the conflict resolution procedures)
 and any other legal documents are properly prepared and managed. This will be
 done through \SAshort{} \emph{Research and Enterprise
@@ -3259,14 +3267,16 @@ comprises both academic and industrial expertise.
 %  from XX
 % highly-respected partners.
 The consortium links the world-leading technical expertise of
-the participating groups on XX.
+the participating groups on security, big data analytics, formal modelling, AI, privacy preserving etc.
+A combination of academic and industrial partners will ensure wide dissemination of the project results and ensure the best possible uptake of the project results.
+
 
 
 \paragraph*{Integration of the Consortium.}
 %\vspace{-6pt}
 
 Several of the partners already have close working relationships through
-recent and ongoing research projects (e.g. \rephrase).
+recent and ongoing research projects (e.g. \textbf{Serums}).
 The teams share common technical interests and several are active members in e.g. the
 HiPEAC network of excellence (\SAshort{};).
 Work Packages have been designed to foster close collaboration
@@ -3289,9 +3299,8 @@ the \TheProject{} partners.
 
 \paragraph{Industrial/Commercial Involvement.}
 
-\TheProject{} directly involves one large company (\IBMshort{}), 
-%% sloppy -- KH
-XX SMEs.
+\TheProject{} directly involves three large multinational companies (\IBMshort{}, \SOPRAshort{} and \FRQshort{}) and
+three SMEs (\COGNIshort{}, \SCCHshort{} and \YAGshort{}).
 These organisations have included draft exploitation plans that will directly use the results of the project
 as part of their ongoing business strategies and commercial development.
 % follows an industrially-inspired agenda and addresses a key and topical challenge in
@@ -3356,7 +3365,7 @@ a table showing 'other direct costs' (table 3.4b) for participants where those c
 \TODO{This needs to be updated in line with the rest of the
 project.}
 
-The project will employ XX person-months of effort over three
+The project will employ 501 person-months of effort over three
 years, comprising one or more full-time or part-time researchers at each site
 plus one part-time project administrator at \SAshort{}, % and one part-time web designer at \INRIAshort,  Not in PMs?
 20\% of the Project Coordinator and 10\% of the WTLs. The researchers will be supported by
@@ -3417,9 +3426,10 @@ the annual Advisory Board Meetings, where this cannot be met from other sources.
 \vspace{-6pt}
 
 \paragraph{Testbed systems and development servers.}
-\SAshort{} has budgeted \euros{} XX for a central
-server to support the various software and document repositories that are needed by the project, to run the project website and to provide access
-to the shared research data that will be generated by the project.
+\UODshort{} has budgeted \euros{} 13,500 for Azure cloud infrastructure for development and testing of the project technologies. This covers approximately 4 4-core machines and storage for the whole duration of the project. The infrastructure will be purchased on pay-as-you-go basis, allowing us to scale the volume of resources up and down, as needed in different phases. All of the project partners will have access to this infrastructure, allowing for simultaneous use of resources and collaboration. In addition to that, \UODshort{} has budgeted \euros{} 20,000 for the costs of developing and deploying MOOCs. This is in line with the final cost of the MOOCs that were developed by \UODshort{} in the previous EU projects and includes recording of all the material and organisation and promotion of the courses.  
+%\SAshort{} has budgeted \euros{} XX for a central
+%server to support the various software and document repositories that are needed by the project, to run the project website and to provide access
+%to the shared research data that will be generated by the project.
 
 \paragraph{Open Access Publication Fees.}
 Each academic partner has budgeted approximately \euros{5,000} to
@@ -3431,6 +3441,8 @@ other dissemination activities, as necessary to maximise the overall
 success of the project.  There will be no charge for green open access
 publication, which will be used for the remainder of the project
 publications.
+
+\paragraph{Audit Fees.} Where external auditing is necessary, each partner has budgeted approximately \euros{} 4,000 to cover the necessary costs of auditing the project.
 
 %\vspace{-12pt}
 \label{bibliography}
