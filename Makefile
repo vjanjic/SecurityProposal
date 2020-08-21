@@ -13,7 +13,7 @@ default:
 # Failing due to bib problems -- KH	
 #	latexmk -pdf  $(MAIN).tex
 	pdflatex $(MAIN).tex
-	-bibtex
+	-bibtex $(MAIN)
 	-pdflatex $(MAIN).tex
 	-pdflatex $(MAIN).tex
 
