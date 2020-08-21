@@ -14,18 +14,28 @@
 \begin{WPObjectives}
 The objectives of \theWP{} are to:
 \begin{compactitem}
-%% Why just embedded? Are these domains correct? KH
-\item Develop a formal high-level multi-level specification language; % able to capture different levels of abstraction; %and security contracts
+%\item Develop a formal high-level multi-level specification language; 
+\item Develop a formal high-level multi-level language for specification of security properties of the code; 
+
 \item Define abstraction/refinement as a bidirectional transformation between specifications across levels;
+
 % How is distribution considered?
 %BOTH for source code and code patterns that represent known vulnerabilities 
 %and relate different levels of abstraction (from models to code)
-\item Define a notion of behavioural equivalence between code fragments (within/between language(s)), able to capture refactorings, and suitable to formalise security and privacy-preserving equivalences;
-\item Define a logic to capture properties of interest  %interpreted over (distributed) traces of execution; 
-including security properties and privacy norms;
-\item Develop an integrated verification framework, including theorem provers and SMT solvers, to prove the correctness of the above and 
-%, and capable of searching for (a subset of) traces of execution that satisfy certain parameters (meet a certain threshold for instance);
- explore an interplay between runtime verification and exhaustive formal verification;
+
+%\item Define a notion of behavioural equivalence between code fragments (within/between language(s)), able to capture refactorings, and suitable to formalise security and privacy-preserving equivalences;
+\item Define a notion of behavioural equivalence (in terms of security and privacy-preserving properties) between code fragments;
+
+%\item Define a logic to capture properties of interest including security properties and privacy norms;
+% VJ: How is above different from the first point and can they be merged?
+
+%\item Develop an integrated verification framework, including theorem provers and SMT solvers, to prove the correctness of the equivalences and transformation and 
+%%, and capable of searching for (a subset of) traces of execution that satisfy certain parameters (meet a certain threshold for instance);
+% explore an interplay between runtime verification and exhaustive formal verification;
+\item Develop an integrated verification framework to prove the correctness of the equivalences and transformation and 
+%%, and capable of searching for (a subset of) traces of execution that satisfy certain parameters (meet a certain threshold for instance);
+explore an interplay between runtime verification and exhaustive formal verification;
+
  \item  Verify the correctness of the mechanisms from WP2 for vulnerability detection and self-healing.
 %\item Develop a novel mechanism for automated vulnerability localisation, containment, recovery and repair.
 
@@ -34,30 +44,36 @@ including security properties and privacy norms;
 %Needs to be related to WP2 and vulnerabilities 
 \end{WPObjectives}
 
-\begin{WPDescription}
-\theWP{} explores how rigorous formal methods can %continuously 
-provide systematic guarantees of security and privacy in 
-software systems at different levels of abstraction.
-%our software systems.
-%Establishing whole-system security for end-user software is crucial but particularly challenging for distributed systems.
-%The scale of distributed systems requires the development of methods for security assurance that are modular, compositional and 
-%incremental. As these systems evolve over time, and are often built using existing service components exporting an API that can be used by components developed later,  
-%security cannot be verified once but has to be done incrementally as the systems evolve.
-%We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. 
-We define the abstractions to present to the programmer, provided by the operating system, architecture, and so on (Task~\ref{task:contracts}), and introduce a specification language to capture the assumptions and guarantees of abstraction layers to facilitate reasoning about security across abstraction levels.
-% (Task~\ref{task:formalverif}). 
-The abstractions should expose security properties in a form understandable to (non-security specialist) programmers. We adopt Abstract State Machines (ASMs), given our experience in extracting ASMs from source code automatically. 
-The ability to move between layers with this approach and target the extraction of vulnerabilities from code for verification at higher levels will be key.
-Similarly, we will define this as a model for our functionally equivalent code, aka refactorings, and automatically search for alternative refactorings such that their security guarantees are preserved, or conversely, detected vulnerabilities are avoided (Task~\ref{task:formalverif}).
-Concerning privacy, complementary to the work on privacy-preserving machine learning algorithms of WP3, we will consider privacy expectations expressed using context-relative informational norms, formalised in logic (e,g. FOL) and automatically checked across traces of execution (Task~\ref{task:formalverif}).  
-By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove that the computer system is secure against all possible attacks (up to modelling assumptions). This provides high assurance of system security, even against as-yet-unknown attacks (Task~\ref{task:attackmodels}).
-%as formal approaches in practice with the use of tools such as the ones from IBM, static analyser from YAG and code extractor from SCCH. 
-\theWP{} explores the integration of formal methods with the practical techniques from WP2, supports the tools from WP6 and is evaluated throughout with the use cases described in WP7.
-We will further investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (%Task~\ref{task:dyncontracts} and 
-Task~\ref{task:ContractsSastAssessment}). 
-For functional security requirements we will explore the use of metrics such as confidentiality, integrity and availability to assess them (Task~\ref{task:RequirementsSastAssessment}).
-\end{WPDescription}
+%% Old WP Description
+%\begin{WPDescription}
+%\theWP{} explores how rigorous formal methods can %continuously 
+%provide systematic guarantees of security and privacy in 
+%software systems at different levels of abstraction.
+%%our software systems.
+%%Establishing whole-system security for end-user software is crucial but particularly challenging for distributed systems.
+%%The scale of distributed systems requires the development of methods for security assurance that are modular, compositional and 
+%%incremental. As these systems evolve over time, and are often built using existing service components exporting an API that can be used by components developed later,  
+%%security cannot be verified once but has to be done incrementally as the systems evolve.
+%%We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. 
+%We define the abstractions to present to the programmer, provided by the operating system, architecture, and so on (Task~\ref{task:contracts}), and introduce a specification language to capture the assumptions and guarantees of abstraction layers to facilitate reasoning about security across abstraction levels.
+%% (Task~\ref{task:formalverif}). 
+%The abstractions should expose security properties in a form understandable to (non-security specialist) programmers. We adopt Abstract State Machines (ASMs), given our experience in extracting ASMs from source code automatically. 
+%The ability to move between layers with this approach and target the extraction of vulnerabilities from code for verification at higher levels will be key.
+%Similarly, we will define this as a model for our functionally equivalent code, aka refactorings, and automatically search for alternative refactorings such that their security guarantees are preserved, or conversely, detected vulnerabilities are avoided (Task~\ref{task:formalverif}).
+%Concerning privacy, complementary to the work on privacy-preserving machine learning algorithms of WP3, we will consider privacy expectations expressed using context-relative informational norms, formalised in logic (e,g. FOL) and automatically checked across traces of execution (Task~\ref{task:formalverif}).  
+%By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove that the computer system is secure against all possible attacks (up to modelling assumptions). This provides high assurance of system security, even against as-yet-unknown attacks (Task~\ref{task:attackmodels}).
+%%as formal approaches in practice with the use of tools such as the ones from IBM, static analyser from YAG and code extractor from SCCH. 
+%\theWP{} explores the integration of formal methods with the practical techniques from WP2, supports the tools from WP6 and is evaluated throughout with the use cases described in WP7.
+%We will further investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (%Task~\ref{task:dyncontracts} and 
+%Task~\ref{task:ContractsSastAssessment}). 
+%For functional security requirements we will explore the use of metrics such as confidentiality, integrity and availability to assess them (Task~\ref{task:RequirementsSastAssessment}).
+%\end{WPDescription}
 
+%% New WP Description
+\begin{WPDescription}
+\theWP{} explores how rigorous formal methods can provide systematic guarantees of security and privacy in big data analytics applications at different levels of abstraction.
+We will define the abstractions for describing security properties of the code in a form understandable to the software developers and introduce a specification language to capture the security and privacy assumptions and guarantees (\ref{task:contracts}). We adopt the Abstract State Machines (ASMs) as an approach to move between the layers of abstraction and to extract vulnerabilities from the code for verification. ASMs will be used as a model for refactorings from WP2 and WP6, allowing us to automatically search for alternative refactorings that preserve security guarantees and avoid vulnerabilities (\ref{task:formalverif}). \ref{task:formalverif} will also consider privacy expectations expressed using context-relative informational norms, formalised in logic (e,g. FOL) and automatically checked across traces of execution. By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove (up to modelling assumptions) that the system is secure against all possible known and yet-unknown attacks (\ref{task:attackmodels}). Furthermore, we will investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (\ref{task:ContractsSastAssessment} ). For functional security requirements, we will explore the use of metrics such as confidentiality, integrity and availability to assess them (\ref{task:RequirementsSastAssessment}).
+\end{WPDescription}
 
 \begin{Task}
 \TaskTitle{Security Contracts support and specification}
@@ -77,32 +93,31 @@ For functional security requirements we will explore the use of metrics such as 
 \TaskHeader{}
 \tasklabel{task:contracts}
 
-In \theTask, we define mechanisms to represent security contracts
-in such a way that they can be mapped to concrete syntax in different
-programming languages. Conversely, we will enable the extraction of those contracts
-from existing source code and  allow developers to refine them iteratively. The contract extraction will be formalised with ASMs.
-%approaches where contracts can be refined by developers. 
-This task will proceed in three phases.
-The first phase will focus on the representation of security contracts and add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
-We will provide initial formalisation of the security contracts in (temporal) logics for ASMs and interpreted over the code extracted ASMs (\ref{del:formal1}).
-%(\ref{del:formal1}).
-%can be completed in a relatively short time. 
-The second phase will focus on more sophisticated higher-level abstractions
-for the different programming languages considered and identified programming patterns. The formalisation and logics used will be adapted to the new abstractions as required (\ref{del:formal2}).
-The third phase will refine the previous approach to
-take into account the semantics of the libraries used in the targeted distributed data analytics systems.
-%as well as that of its common programming patterns. 
-We envisage a set of hierarchical logics such that reasoning across levels of abstraction is supported.
-%The security contracts can then be expressed in the logics for ASMs (and its planned temporal extension) over the extracted ASMs, at the different levels of abstraction required. 
-This will give us a unifying formalism for the rigorous verification of the envisaged security contracts across multiple layers. This will be reported in \ref{del:formal3}.
-\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows} combining their expertise in semantics, distributed logics and ASMs. \IBMshort and \SOPRAshort will provide expertise on the identification of security vulnerabilities. % are identified in practice.
-%In addition, we will focus on the dynamic analysis of security contracts for
-%vulnerabilities that cannot be formally verified without running the software component. 
-%Note that C++ and Java code will just be refinements of the extracted ASMs. Plus, given the abstraction mechanism used for the ASMs extraction, we will already have the mapping to the concrete syntax of the programming languages.
+%% VJ: Old version
+%\theTask will define mechanisms to represent security contracts which will describe security properties of the code. The contracts will be mapped to concrete syntax in different
+%programming languages. Conversely, we will enable the extraction of those contracts
+%from existing source code and  allow developers to refine them iteratively. The contract extraction will be formalised with ASMs.
+%This task will proceed in three phases.
+%The first phase will focus on the representation of security contracts and add to the \textsf{eKnows} module for semi-automated extraction of ASMs from source code (which currently works for Java code) the capability to extract ASMs from C++ code. Since the module is based on abstract syntax trees and designed for multi-language reverse engineering, this first step is relatively straightforward.
+%We will provide initial formalisation of the security contracts in (temporal) logics for ASMs and interpreted over the code extracted ASMs (\ref{del:formal1}).
+%The second phase will focus on more sophisticated higher-level abstractions
+%for the different programming languages considered and identified programming patterns. The formalisation and logics used will be adapted to the new abstractions as required (\ref{del:formal2}).
+%The third phase will refine the previous approach to
+%take into account the semantics of the libraries used in the targeted distributed data analytics systems.
+%We envisage a set of hierarchical logics such that reasoning across levels of abstraction is supported.
+%This will give us a unifying formalism for the rigorous verification of the envisaged security contracts across multiple layers. This will be reported in \ref{del:formal3}.
+%\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows} combining their expertise in semantics, distributed logics and ASMs. \IBMshort and \SOPRAshort will provide expertise on the identification of security vulnerabilities.
+
+% VJ: New Version
+\theTask{} will define mechanisms to represent security contracts, which will describe security properties of the code. The contracts will be mapped to concrete syntax in different
+programming languages and, conversely, will be extracted using ASMs from the existing source code for further refinement. The task will proceed in three phases.
+The first phase will focus on the representation of security contracts and add to the C++ support to \textsf{eKnows} module for semi-automated extraction of ASMs from source code, which currently supports only Java. We will also provide initial formalisation of the security contracts in (temporal) logics for ASMs and interpreted over the code extracted ASMs (\ref{del:formal1}). The second phase will develop more sophisticated higher-level abstractions for identified programming patterns in C++ and Java and adapt the formalisation and logics to these new abstractions (\ref{del:formal2}). The third phase will refine the previous approach to take into account the semantics of the libraries used in the targeted distributed data analytics systems, using hierarchical logics to support reasoning across levels of abstraction(\ref{del:formal3}). This will give us a unifying formalism for the rigorous verification of the envisaged security contracts across multiple layers.
+\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows} combining their expertise in semantics, distributed logics and ASMs. \IBMshort and \SOPRAshort will provide expertise on the identification of security vulnerabilities and use cases.
 \end{Task}
 
 \begin{Task}
-\TaskTitle{Formal Verification and Reasoning about Refactorings}
+%\TaskTitle{Formal Verification and Reasoning about Refactorings}
+\TaskTitle{Formal Reasoning about Refactorings}
 \TaskParticipant{USTAN}{5}
 \TaskParticipant{SCCH}{4}
 \TaskParticipant{UCM}{3}
@@ -117,17 +132,26 @@ This will give us a unifying formalism for the rigorous verification of the envi
 \TaskHeader{}
 \tasklabel{task:formalverif}
 
-In \theTask, we will formalise extracted contracts from source code using concurrent ASMs, and define a semantics over ASM runs using the true-concurrent model of event structures. 
-We will formalise abstraction/refinement as a bidirectional transformation between ASM specifications across layers, and use them to define 
-security-preserving transformations as well as a notion of behavioural equivalence between code fragments (within/between languages), investigating how to formalise self-healing in this way.
-The formalisation and verification of the refactorings from~\ref{task:statichealing}, in particular when these introduce the security patterns from~\ref{task:patterns}, will enable developers to gain confidence that the
-refactorings do not change the intended behaviour and in addition are given the guarantee that these satisfy the security requirements imposed. We will initially focus on a tractable subset of the target language, in order to demonstrate functional  equivalence between the original program and the refactored output, based on the identified semantics representation. This will involve identifying a representation of the semantics for the subset of the target language and defining an equivalence relation between the original and refactored programs. 
-%We will use our experience with theorem provers for this task.
+% VJ : Old Version
+%In \theTask, we will formalise extracted contracts from source code using concurrent ASMs, and define a semantics over ASM runs using the true-concurrent model of event structures. 
+%We will formalise abstraction/refinement as a bidirectional transformation between ASM specifications across layers, and use them to define 
+%security-preserving transformations as well as a notion of behavioural equivalence between code fragments (within/between languages), investigating how to formalise self-healing in this way.
+%The formalisation and verification of the refactorings from~\ref{task:statichealing}, in particular when these introduce the security patterns from~\ref{task:patterns}, will enable developers to gain confidence that the
+%refactorings do not change the intended behaviour and in addition are given the guarantee that these satisfy the security requirements imposed. We will initially focus on a tractable subset of the target language, in order to demonstrate functional  equivalence between the original program and the refactored output, based on the identified semantics representation. This will involve identifying a representation of the semantics for the subset of the target language and defining an equivalence relation between the original and refactored programs. 
+%%We will use our experience with theorem provers for this task.
+%We will define a logic to capture properties of interest  including security properties (based on distributed (stochastic) temporal logics or similar separation
+%logics) and privacy norms (FOL). The stochastic element of such logics will be important to reason on measurable properties (see ~\ref{task:RequirementsSastAssessment}).
+%We will explore how combining theorem provers and SMT solvers allows us to prove the correctness of behavioural equivalences on the one side, and search for a subset of traces of execution that satisfy certain criteria including security properties and privacy norms.
+%This task will proceed in three phases. The first phase will concern the formal semantics of a tractable subset 
+%of the programming languages used, and will explore notions of behavioural equivalence, abstraction/refinement as bidirectional transformations between code at the same layer, and the required logic for verification (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
+%\SA leads this task given their expertise in refactoring, formal verification and distributed logics. \SA will work closely with \SCCHshort on the formal verification elements, and with \UCM on code refactorings.
+
+\theTask{} will formalise the security contracts from~\ref{task:contracts} and define their semantics using concurrent ASMs. We will formalise abstraction/refinement as a bidirectional transformation between ASM specifications across layers and define security-preserving transformations and a notion of behavioural equivalence between code fragments (within/between languages), investigating how to formalise self-healing in this way. This will then be used for verification of the refactorings from~\ref{task:statichealing}, adding confidence that the refactorings i) do not change the intended behaviour and ii) the resulting code satisfies the security requirements imposed. 
+% VJ: Why is defining logic to capture properties of interest done in this task and not in T4.1?
 We will define a logic to capture properties of interest  including security properties (based on distributed (stochastic) temporal logics or similar separation
-logics) and privacy norms (FOL). The stochastic element of such logics will be important to reason on measurable properties (see ~\ref{task:RequirementsSastAssessment}).
-We will explore how combining theorem provers and SMT solvers allows us to prove the correctness of behavioural equivalences on the one side, and search for a subset of traces of execution that satisfy certain criteria including security properties and privacy norms.
-This task will proceed in three phases. The first phase will concern the formal semantics of a tractable subset 
-of the programming languages used, and will explore notions of behavioural equivalence, abstraction/refinement as bidirectional transformations between code at the same layer, and the required logic for verification (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
+logics) and privacy norms (FOL). 
+We will combine theorem provers and SMT solvers to prove the correctness of behavioural equivalences on the one side, and search for a subset of traces of execution that satisfy certain criteria including security properties and privacy norms.
+This task will proceed in three phases. In the first phase, we will restrict ourself to a tractable subset of the programming languages used and define notions of behavioural equivalence and abstraction/refinement and develop the required logic for verification (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
 \SA leads this task given their expertise in refactoring, formal verification and distributed logics. \SA will work closely with \SCCHshort on the formal verification elements, and with \UCM on code refactorings.
 
 \end{Task}
