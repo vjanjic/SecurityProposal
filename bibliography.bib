@@ -1,3 +1,27 @@
+
+@inproceedings{freak2015, 
+author = {Beurdouche, Benjamin and Bhargavan, Karthikeyan and Delignat-Lavaud, Antoine and Fournet, C\'{e}dric and Kohlweiss, Markulf and Pironti, Alfredo and Strub, Pierre-Yves and Zinzindohoue, Jean Karim}, 
+title = {A Messy State of the Union: Taming the Composite State Machines of TLS}, 
+year = {2015}, isbn = {9781467369497}, 
+publisher = {IEEE Computer Society}, 
+address = {USA}, url = {https://doi.org/10.1109/SP.2015.39}, doi = {10.1109/SP.2015.39}, abstract = {Implementations of the Transport Layer Security (TLS) protocol must handle a variety of protocol versions and extensions, authentication modes, and key exchange methods. Confusingly, each combination may prescribe a different message sequence between the client and the server. We address the problem of designing a robust composite state machine that correctly multiplexes between these different protocol modes. We systematically test popular open-source TLS implementations for state machine bugs and discover several critical security vulnerabilities that have lain hidden in these libraries for years, and have now finally been patched due to our disclosures. Several of these vulnerabilities, including the recently publicized FREAK flaw, enable a network attacker to break into TLS connections between authenticated clients and servers. We argue that state machine bugs stem from incorrect compositions of individually correct state machines. We present the first verified implementation of a composite TLS state machine in C that can be embedded into OpenSSL and accounts for all its supported cipher suites. Our attacks expose the need for the formal verification of core components in cryptographic protocol libraries, our implementation demonstrates that such mechanized proofs are within reach, even for mainstream TLS implementations.}, 
+booktitle = {Proceedings of the 2015 IEEE Symposium on Security and Privacy}, pages = {535–552}
+}
+ 
+
+
+
+@article{needham1978,
+author= {Roger M. Needham and Michael D. Schroeder},
+title = {Using encryption for authentication in large networks of computers},
+journal = {Communications of the ACM},
+volume = {21},
+number = {12},
+pages = {993-999},
+year = {1978}
+
+}
+
 @article{FM-crypto,
 author= {B.~Blanchet},
 title = {{A Computationally Sound Mechanized Prover for Security Protocols}},

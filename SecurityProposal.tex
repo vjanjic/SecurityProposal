@@ -594,7 +594,7 @@ will help to reduce the cost of development, deployment and maintenance of distr
 
 \subsubsection*{Objective 8: Long-Term Uptake of \TheProject{} Technologies} 
 \vspace{-7pt}
-\TheProject{} aims to ensure long-term uptake of the technologies that it will develop by engaging with relevant users, developers and adopter communities, by following an Open Science approach, and by providing a road-map for the future development and exploitation of the \TheProject{} technologies. We have built in specific user community building activities, including  workshops, tutorials, webinars and training sessions, that will serve to actively promote the use of the \TheProject{} technologies. Whenever feasible, our software and results will be made publicly available in open source/open data repositories. We will actively engage with potential users from the chosen domains through exhibitions, demonstrations, video animations and presentations at existing events and conferences such as XX, through the annual EU ICT conference, through exploiting our excellent high-level contacts with the XX. Innovation Centres and other relevant organisations, through contacts with national government agencies, including XX and through other relevant expert networks.
+\TheProject{} aims to ensure long-term uptake of the technologies that it will develop by engaging with relevant users, developers and adopter communities, by following an Open Science approach, and by providing a road-map for the future development and exploitation of the \TheProject{} technologies. We have built in specific user community building activities, including  workshops, tutorials, webinars and training sessions, that will serve to actively promote the use of the \TheProject{} technologies. Whenever feasible, our software and results will be made publicly available in open source/open data repositories. We will actively engage with potential users from the chosen domains through exhibitions, demonstrations, video animations and presentations at existing events and conferences such as ApacheCon, through the annual EU ICT conference, through exploiting our excellent high-level contacts with the DataStax and MongoDb. Innovation Centres and other relevant organisations, through contacts with national government agencies, including XX and through other relevant expert networks.
 \emph{This fulfils part of \textbf{Aim 5}}.
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -728,7 +728,7 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 
 \item \textbf{Optimisation of Privacy-Preserving Data Release Mechanism.} A data release mechanism aims to provide useful data %available 
 while simultaneously limiting any revealed sensitive or private information. %Different methods such as k-anonymity, l-diversity, t-closeness, and differential privacy have been developed to address the privacy issue. 
-Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data.The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new \emph{informational} privacy mechanisms that add the optimal amount of noise to prevent privacy leakage while still allowing for extracting useful machine-learning models from the data.}
+Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. Differential privacy guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database. Differential privacy requirement does not necessarily constrain the information leakage from a data set. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimising privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new \emph{informational} privacy mechanisms that add the optimal amount of noise to prevent privacy leakage while still allowing for extracting useful machine-learning models from the data.}
 
 %These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. \textbf{We must, therefore, develop new differential privacy mechanisms that add the optimal amount of noise to prevent information leakage while still allowing for extracting useful machine-learning models from the data.}
 
@@ -743,7 +743,7 @@ Writing applications that are inherently secure is a challenging problem for the
 \item \textbf{Formal Methods.}
 Formal methods include a variety of approaches to reason about the behaviour
 of computational entities by modelling it logically or mathematically. For example, by modelling the behaviour of a piece of code and the abilities of adversaries, we can prove that the code is secure against all possible attacks (up to modelling assumptions). In the context of refactoring, we can prove that the (functional) behaviour of code refactorings
-is (observationally) equivalent. We can further verify refactorings against security requirements of interest, and identify a refactoring which satisfies a security property automatically in an approach towards correctness of self-healing.
+is (observationally) equivalent. We can further verify refactorings against security requirements of interest, and identify a refactoring which satisfies a security property automatically in an approach towards correct self-healing.
 %Given two pieces of code \textsf{A} and \textsf{B}  even though functional properties are satisfied by  and that the properties satisfied by them 
 Formal methods
 are the only currently-known approaches that can provide strong end-to-end security and privacy guarantees throughout system execution and across levels of abstraction. However, significant challenges remain to be able to
@@ -782,11 +782,14 @@ Figure~\ref{fig:overview} gives a high-level vision of the \TheProject{} methodo
 \item \emph{Self-healing phase}, where the identified vulnerabilities will be repaired using a combination of formally verified semi-automatic code refactoring techniques that will be developed by \SAshort{} and run-time adaptation based on run-time monitoring that will be developed by \SCCHshort{}. Our aim here is to provide both source-to-source code transformations, the output of which will be the repaired code that is semantically equivalent to the original code, but with the identified (static) vulnerabilities patched and also run-time patching that will, over a series of steps, restore the system into a stable and secure state where cyberattacks are happening at run-time (e.g. man-in-the-middle attacks). In the process of self-healing, we will also apply novel methods and techniques for optimising the privacy-preserving data release mechanisms to address the issue of privacy-leakage. The developed core methods will be adapted to the problem of AI-based distributed data analytics by \UODshort{}. 
 
 
-\item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on the existing security standards such as
-\textcolor{red}{XX} and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SCCHshort{} and \SAshort{}, based fundamentally on abstract state machines (ASMs) expanding available tools that automatically extract ASMs from source code, while the analysis for the conformance to standards will be developed by \UCMshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with some form of a \emph{digital certificate} that will specify what standards the code conforms to and the security properties that it satisfies. Depending on the results of this phase, the code might need to be fed back to the \emph{self-healing phase}, if further problems with conformance to standards and/or security properties have been identified.
+\item \emph{Formal verification phase}, where we will use formal methods on the resulting code to verify that the required security properties of the code are satisfied. We will also use static code analysis to verify that the code conforms to the required security standards. We will build on existing security standards 
+%such as \textcolor{red}{XX} 
+and extend them with new rules, as applicable to the problem of distributed data analytics. The formal verification models will be built by \SCCHshort{} and \SAshort{}, based fundamentally on abstract state machines (ASMs) expanding available tools that automatically extract ASMs from source code, while the analysis for the conformance to standards will be developed by \UCMshort{} and \YAGshort{}. The output of this phase will be the final secure code, together with a \emph{digital certificate} specifying what standards the code conforms to and the security properties that it satisfies. If a digital certificate cannot be obtained, either because there are problems with conformance to standards and/or security properties, then the code will be fed back to the \emph{self-healing phase} until it does.
 \end{itemize}
 
-In addition to security vulnerabilities, the goal of the \TheProject{} is to also address \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processing agents fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the end user code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
+In addition to security vulnerabilities, the goal of \TheProject{} includes addressing \emph{privacy} concerns. Distributed AI-based data analytics, with multiple processes % agents 
+fetching data from multiple storage sites and exchanging data between themselves, can easily lead to a leakage of confidential data. This is especially important in light of new EU regulations on protection and ownership of private data, such as the General Data Protection Regulation (GDPR). Our mechanisms for identifying and repairing vulnerabilities will ensure that the %end user 
+code conforms to the parts of the GDPR regulation that are relevant to data movement between sites (e.g. Articles 20, 25, 33 and 37). 
 
 Finally, to add the additional layer of security, we will specifically address the problem of \emph{identity management}, by developing and integrating novel and secure authentication and continuous user identification mechanisms, by developing and integrating blockchain-based user access control, and by providing diagnostics and repairing of the authentication mechanisms that are already a part of distributed data analytics. These parts will be led by \COGNIshort{}. All of the developed techniques will be demonstrated on the identified use cases in the areas of air traffic management (\FRQshort{}), digital banking (\SOPRAshort{}) and healthcare (\SOPRAshort{}). 
 
@@ -1127,7 +1130,8 @@ As discussed in Section~\ref{sect:elysian_vision}, one of the biggest issues in 
 %Very little attention has been paid to the security issues. This is especially an issue for large-scale data analytics because typical applications for doing that need to combine several layers of functionality, possibly mixing several different libraries and systems. For example, a typical analytics application will use a machine-learning library such as Keras, which will in turn use more general frameworks for distributed machine learning, such as Tensorflow~\cite{tensorflow}. Tensorflow itself uses lower-level pattern-based frameworks, such as Hadoop MapReduce, which in turn operate on distributed filesystems and databases. While each of the individual layers may or may not have guarantees for safety, interaction between these different layers presents plethora of opportunities for potential cyber attacks. Coupled with the fact that the computations are performed in a distributed fashion, meaning there will possibly be data movement between different nodes and communication between processing agents running on different nodes, all of which can expose additional vulnerabilities that are not present in single-core or even locally-distributed settings, it is clear that ensuring security for distributed machine-learning based data analytics is a very complex problem.
  
 \begin{mdframed}[backgroundcolor=gray!10]
-\TheProject{} will advance the state of the art in the area of security of distributed pattern-based data analytics in several ways:
+\TheProject{} will advance the state of the art in the area of 
+security of distributed pattern-based data analytics by:
 \begin{itemize}
 \item \emph{Security for data storage in big data analytics.} With the advanced security diagnostics based on combination of static analysis, dynamic analysis and runtime monitoring, we will identify a wider class of security vulnerabilities that arise in usage of distributed databases and filesystems in big data application, We will also implement methods to mitigate these vulnerabilities by appropriately transforming the code.
 \item \emph{Security of distributed data processing frameworks.} Data processing frameworks such as Hadoop MapReduce, expose even more possible security vulnerabilities than the systems for data storage, as they need to move the data around between different distributed processing nodes, as well as to communicate between themselves. In \TheProject{}, we will identify security vulnerabilities coming from using the distributed pattern-based data processing frameworks in the end-user applications. As far as is practically possible, we will also analyse the source code of these frameworks and identify potential security vulnerabilities within them too.
@@ -1166,14 +1170,40 @@ The optimisation of tradeoff between minimising privacy-leakage and minimising d
 
 \vjcomment{Definitely we need to elaborate on what is done in TeamPlay and how we go beyond that}
 
-Techniques based on formal methods, such as model checking and symbolic interpretation, do not report false  positives, but have potential problem with scaling. AFL~\cite{AFL} uses use fuzz testing to dynamically profile the code to expose potential security vulnerabilities.
+The need to ensure the dependability and correctness of data intensive applications has never been greater. 
+Formal methods include a variety of approaches to reason rigorously about the behaviour of computational entities and their application is particularly important in critical domains. 
+The use of formal methods to ensure security has been recommended since the 1970s, with for instance work by Needham and Schroeder on authentication protocols~\cite{needham1978} stressing the importance of formal analysis of detailed models of secure systems. Formal methods were key to many discoveries over the years, including
+a FREAK SSL/TLS vulnerability in 2015 \cite{freak2015} which may have affected a third of all deployed SSL/TLS servers.
+Formal methods can provide strong end-to-end security 
+and privacy guarantees throughout system execution and across layers of abstraction, but currently lack the expressive power to
+address a variety of concerns in the context of big data analytics applications.
+%However,significant challenges remain to be able to successfully use formal methods for security and privacy assurancein practice. Some security goals may be logically complex (e.g. non-interference) and hard to formulate (e.g.privacy concerns).We need scalable and flexible formal methods that can capture different abstractions inreal systems, can be used to prove the correctness of refactorings and self-healing, and can adapt to theenvironment, security and privacy goals of systems.
+%Recent advances to formal methods for security are enabling their application at a scale 
+%previously impossible. They are important because
+%irrefutable importance of the quality of secure systems and the 
+%Establishing whole-system security for end user software is crucial but particularly challenging for distributed systems.
+The scale of these applications requires  methods for security and privacy assurance that are modular, compositional and incremental. 
+%As these systems evolve over time, 
+%and are often built using existing service components exporting an API that can be used by components developed later,  
+%security cannot be verified once but has to be done incrementally as systems evolve.
+We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. Distributed temporal logics, such as {\sc{mdtl}} \cite{TSE-paper}, interpreted over (prime) event structures have been defined with the intention to capture complex systems at different levels of abstraction and enable reasoning across levels. The logic has been extended to a stochastic domain \cite{mdtl-2014}, but remains 
+underexplored for the context of systems considered in \TheProject{}. 
+Event structures have been widely used and studied in the literature, have been used to give a true-concurrent semantics to process calculi such as CCS, CSP, SCCS and ACP, and can be understood as unfoldings of models such as Petri nets or runs for concurrent ASMs. 
+%The advantages of prime event structures include their underlying simplicity and how they naturally describe fundamental notions present in behavioural models including sequential, parallel and iterative behaviour (or the unfoldings thereof) as well as nondeterminism. 
+%In this context, 
+
+%Techniques based on formal methods, such as model checking and symbolic interpretation, do not report false  positives, but have potential problem with scaling. AFL~\cite{AFL} uses use fuzz testing to dynamically profile the code to expose potential security vulnerabilities.
+
+%Develop a formal high-level multi-level language for specification of security properties of the code;•Define abstraction/refinement as a bidirectional transformation between specifications across levels;•Define a notion of behavioural equivalence (in terms of security and privacy-preserving properties) betweencode fragments;•Develop an integrated verification framework to prove the correctness of the equivalences and transformationand explore an interplay between runtime verification and exhaustive formal verification;
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\TheProject{} will advance the state of the art in the area of formal specification and verification of security properties in several ways:
+\TheProject{} will advance the state of the art in the area of formal specification \& verification of security properties by:
 \begin{itemize}
-\item \emph{XX.} XX.
-\item \emph{XX} XX.
-\item \emph{XX} XX.
+\item \emph{Define a uniform approach for specification of security patterns and properties } Based on ASMs~\cite{BorgerS16} (described earlier in \ref{sect:identifying} ) we will
+define a specification language able to capture security properties at different levels of abstraction in line with the run-time analysis and adaptation described    
+\item \emph{Define a Logic for Privacy Reasoning} XX.
+\item \emph{Provide an integrated verification framework} we will continue to  exploit the interface between Isabelle and Z3 to obtain a versatile tool for the specification, analysis and computation of the behaviour of distributed systems.
+%Exploring our experience in combining theorem provers with SMT solvers.
 \end{itemize}
 \end{mdframed}
 
@@ -1585,7 +1615,7 @@ Reduced number and impact of cybersecurity incidents.
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-\TheProject{} directly addresses this impact by developing tools to advance the state-of-the-art in identification of security threats in distributed big data analytics applications, as well as building the self-healing mechanisms to repair the identified vulnerabilities. Combining techniques of static analysis, dynamic analysis and runtime monitoring for identification of vulnerabilities we will ensure that we can identify a wide range of threats that are both inherent to the application design and that can arise from malicious behaviour at runtime. By using a combination of code transformation and runtime adaptation, we will be able to offer multilayer security to the end user applications, providing protection both at design/implementation time and at runtime.
+\TheProject{} directly addresses this impact by developing tools to advance the state-of-the-art in the identification of security threats for distributed big data analytics applications, as well as building  self-healing mechanisms to repair the identified vulnerabilities. By combining techniques such as static analysis, dynamic analysis and runtime monitoring for identification of vulnerabilities, we will ensure that we can identify a wide range of threats that are both inherent to the application design, and also threats that can arise from malicious behaviour at runtime. By using a combination of code refactoring and runtime adaptation, we will be able to offer multi-layer security to the end user applications, providing protection both at design/implementation time and at runtime.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 2, 3 } and \textbf{4}; \textbf{Objectives 1, 2, 3, 5} and \textbf{6}.}
 \end{mdframed}
@@ -1597,7 +1627,7 @@ Efficient and low-cost implementation of the NIS Directive and General Data Prot
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-\TheProject{} specifically looks into privacy of sensitive data in big data analytics. We will address multiple aspects of data privacy in this setting, considering privacy of not only data in transit but also of the machine learning models, using noise-adding mechanisms to further ensure that the models themselves do not accidentally reveal sensitive information. We will explicitly consider compliance of the tooling for big data analysis to the GDPR and other regulations, considering all the layers from low-level distributed filesystem/database access to the composition of end-user applications using high-level machine-learning libraries.
+\TheProject{} specifically looks into the privacy of sensitive data in big data analytics. We will address multiple aspects of data privacy in this setting, considering privacy of not only data in transit but also of the machine learning models, using noise-adding mechanisms to further ensure that the models themselves do not accidentally reveal sensitive information. We will explicitly consider compliance of the tooling for big data analysis to the GDPR and other regulations, considering all the layers from low-level distributed filesystem/database access to the composition of end-user applications using high-level machine-learning libraries.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 2}  and \textbf{3}; \textbf{Objectives 2, 3, 4} and \textbf{5} }
 \end{mdframed}
@@ -1609,7 +1639,7 @@ Effective and timely co-operation and information sharing between and within org
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-Self-recovery is one of the main themes of the \TheProject{} project, addressed by our self-healing technology based on code transformation and restructuring. We will, furthermore, integrate this technology into the overall software engineering methodology for developing secure and privacy-preserving AI-based big data analytic applications, making it transparent to the end user and therefore significantly easing the development of such applications. 
+Self-recovery is one of the main themes of the \TheProject{} project, addressed by our self-healing technology based on code refactoring and restructuring. We will, furthermore, integrate this technology into the overall software engineering methodology for developing secure and privacy-preserving AI-based big data analytic applications, making it transparent to the end user and therefore significantly easing the development of such applications. 
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1619,7 +1649,7 @@ Availability of comprehensive, resource-efficient, and flexible security analyti
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-\TheProject{} will combine several techniques for discovering and repairing security and privacy vulnerabilities in the distributed applications. In particular, we will develop a machine-learning based runtime monitoring mechanisms that will continually monitor the application execution for security threats. Together with the mechanisms for runtime adaptation that will ensure, over a number of steps, that the overall system is in stable and secure state, this will ensure that we can not only identify the known vulnerabilities, but also, by continuously updating the learning model, identify any new threats as they arise. \TheProject{} will also build on the existing security standards for C++ and Java programming and will continually extend them as the new types of threats and vulnerabilities are identified. This will ensure that the new vulnerabilities and threats are addressed in the upcoming coding standards. 
+\TheProject{} will combine several techniques for discovering and repairing security and privacy vulnerabilities in the distributed applications. In particular, we will develop machine-learning based runtime monitoring mechanisms that will continually monitor the application execution for security threats. Together with the mechanisms for runtime adaptation that will ensure, over a number of steps, that the overall system is in a stable and secure state, this will ensure that we can not only identify the known vulnerabilities, but also, by continuously updating the learning model, identify any new threats as they arise. \TheProject{} will also build on the existing security standards for C++ and Java programming and will continually extend them as the new types of threats and vulnerabilities are identified. This will ensure that the new vulnerabilities and threats are addressed in the upcoming coding standards. 
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 2, 3}  and \textbf{4}; \textbf{Objectives 2, 3, 4, 5} and \textbf{6} }
 
@@ -1633,7 +1663,7 @@ Availability of advanced tools and services to the CERTs/CSIRTs and networks of 
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-Parts of the \TheProject{} technology (such as secure authentication, formal methods for verifying security properties, refactoring tools and security standards) will be released as open source products, while the others will be integrated into the products and services offered by our commercial partners at \IBMshort{}, \YAGshort{} and \SOPRAshort{}. This will ensure the availability of the tools developed over the course of the projects to the security teams, the development teams and the security audit providers, that will be able to exploit them as a part of their security infrastructure. Furthermore, the \TheProject{} technologies will be promoted in numerous ways, including online courses for wide audiences (MOOCs), ensuring there is a wide outreach for the techniques we will develop.
+Parts of the \TheProject{} technology (such as secure authentication, formal methods for verifying security properties, refactoring tools and security standards) will be released as open source products, while the others will be integrated into the products and services offered by our commercial partners at \IBMshort{}, \YAGshort{} and \SOPRAshort{}. This will ensure the availability of the tools developed over the course of the project to the security teams, the development teams and the security audit providers, that will be able to exploit them as a part of their security infrastructure. Furthermore, the \TheProject{} technologies will be promoted in numerous ways, including online courses for wide audiences (MOOCs), ensuring there is a wide outreach for the techniques we will develop.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 5}; \textbf{Objective 8} }
 
@@ -1646,7 +1676,7 @@ An EU industry better prepared for the threats to IoT, ICS (Industrial Control S
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-\TheProject{} specifically targets distributed systems and the AI-based data analytics, aiming to intercept and eliminate threats in such systems. As such, our techniques will be applicable to the general IoT and edge-computing settings as well. By focusing both on core techniques for identification and elimination of security threats, and the user-centered interface and pattern-based methodology for the development of secure applications, we will allow non-experts in security to develop future-proof secure and privacy preserving data analytics applications. Furthermore, developing mechanisms for formal proving of security properties of applications and for compliance to coding standards will provide further trust in security of the developed applications.
+\TheProject{} specifically targets distributed systems and AI-based data analytics, aiming to intercept and eliminate threats in such systems. As such, our techniques will be applicable to the general IoT and edge-computing settings as well. By focusing both on core techniques for identification and elimination of security threats, and the user-centered interface and pattern-based methodology for the development of secure applications, we will allow non-experts in security to develop future-proof secure and privacy preserving data analytics applications. Furthermore, developing mechanisms for formal proving of security properties of applications and for compliance to coding standards will provide further trust in the security of the developed applications.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 1, 2}  and \textbf{3}; \textbf{Objectives 1--6} }
 
@@ -1658,8 +1688,8 @@ Self–recovering, inter-operable, scalable, dynamic privacy-respecting identity
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=gray!10]
-\paragraph{How Will \TheProject{} Achieve This Impact:} Bearing in mind that almost every citizen who is connected online owns several password-protected accounts, it is evident that the identity management market represents nowadays one of the biggest Information Technology markets. \TheProject{} addresses core components of identity management by developing and evaluating methods and tools with the active participation of end-users to advance the state-of-the-art in: i) multi-factor authentication (MFA) with usable and secure token-based and biometric-based authentication methods; ii) continuous user identification based on AI-driven methods for real-time analysis of physiological, face and eye gaze data analytics; and iii) scalable and dynamic user access management based on Blockchain technology.  
-By combining MFA, continuous user identification, and access management with a decentralized Blockchain approach, under a unified, scalable, and privacy-preserving identity management solution, we aim to further enhance the security and privacy of current identity managements systems. Simultaneously, given that the development methodology of the proposed solution will follow a User-Centered Design approach, the developed solution aims at improving the usability, user experience, acceptance and trust towards identity management systems.
+\paragraph{How Will \TheProject{} Achieve This Impact:} Bearing in mind that almost every citizen who is connected online owns several password-protected accounts, it is evident that identity management  represents nowadays one of the biggest Information Technology markets. \TheProject{} addresses core components of identity management by developing and evaluating methods and tools with the active participation of end-users to advance the state-of-the-art in: i) multi-factor authentication (MFA) with usable and secure token-based and biometric-based authentication methods; ii) continuous user identification based on AI-driven methods for real-time analysis of physiological, face and eye gaze data analytics; and iii) scalable and dynamic user access management based on Blockchain technology.  
+By combining MFA, continuous user identification, and access management with a decentralized Blockchain approach, under a unified, scalable, and privacy-preserving identity management solution, we aim to further enhance the security and privacy of current identity management systems. Simultaneously, given that the development methodology of the proposed solution will follow a User-Centered Design approach, the developed solution aims at improving the usability, user experience, acceptance and trust towards identity management systems.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aims 3-5}; \textbf{Objectives 5-7} }
 %The aforementioned components will be incorporated under a unified system integration model that combines multi-factor authentication with continuous user identification and access control.
@@ -1674,7 +1704,7 @@ Availability of better standardisation and automated assessment frameworks for s
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-Standardisation is one of the main goals of the \TheProject{} project. We will build the source code analytics tooling to ensure the conformance of the C++ and Java code to the state-of-the-art coding standards. We will also extend these standards over the course of the project, providing new rules and guidelines specifically aimed at composing the large-scale distributed applications from multiple layers of libraries. This will contribute to better standardisation of the network systems. Furthermore, the formal methods for proving the security properties of the systems will allow additional formal assurance for the security of software, further allowing better-informed investment decisions with respect to security and privacy.
+Standardisation is one of the main goals of the \TheProject{} project. We will build source code analytic tooling to ensure the conformance of the C++ and Java code with state-of-the-art coding standards. We will also extend these standards over the course of the project, providing new rules and guidelines specifically aimed at composing the large-scale distributed applications from multiple layers of libraries. This will contribute to better standardisation of the network systems. Furthermore, the formal methods for proving the security properties of the systems will allow additional formal assurance for the security of software, further allowing better-informed investment decisions with respect to security and privacy.
 
 \emph{\TheProject{} aims and objectives related to this impact: \textbf{Aim 1}; \textbf{Objectives 1} and \textbf{4}.}
 
@@ -1730,7 +1760,7 @@ A more competitive offering of secure products and services by European provider
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \paragraph{How Will \TheProject{} Achieve This Impact:}
-Industry partners involved in the \TheProject{} project, specifically \IBMshort{} and \YAGshort{}, aim to deliver the technologies that will be of the TRLs 6 and 7, which indicates the technologies or system prototypes demonstrated in industry relevant environment such as \SOPRAshort{} and \FRQshort{} use cases. This means that the \TheProject{} will produce technologies that will be close to being usable in practice. The technologies developed will be either open source, where feasible, or available as parts of commercial tool suites. This, coupled with the educational program using MOOCs to promote the \TheProject{} technologies, will contribute to the more competitive EU cybersecurity industry and reducing dependence on importing technologies from abroad.
+Industry partners involved in the \TheProject{} project, specifically \IBMshort{} and \YAGshort{}, aim to deliver the technologies that will be a TRL of 6 and 7, which indicates the technologies or system prototypes demonstrated in industry relevant environment such as \SOPRAshort{} and \FRQshort{} use cases. This means that the \TheProject{} will produce technologies that will be close to being usable in practice. The technologies developed will be either open source, where feasible, or available as parts of commercial tool suites. This, coupled with the educational program using MOOCs to promote the \TheProject{} technologies, will contribute to the more competitive EU cybersecurity industry and reducing dependence on importing technologies from abroad.
 
 \emph{\TheProject{} aims and objectives related to these impacts: \textbf{Aim 5}; \textbf{Objectives 6} and \textbf{7}}
 \end{mdframed}
@@ -1782,7 +1812,7 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 \begin{mdframed}[backgroundcolor=blue!5]
 One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and under-representation of minorities. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. 
 
-\textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework (\url{https://tinyurl.com/y3goybl4}) for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12)\footnote{https://tinyurl.com/ybqpqebq}, the International Covenant on Civil and Political Rights (Article 17) (\url{https://tinyurl.com/y85h68gf}) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7 (\url{https://tinyurl.com/yyfby497}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
+\textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework (\url{https://tinyurl.com/y3goybl4}) for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12) (\url{https://tinyurl.com/ybqpqebq}), the International Covenant on Civil and Political Rights (Article 17) (\url{https://tinyurl.com/y85h68gf}) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7 (\url{https://tinyurl.com/yyfby497}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
 \end{mdframed}
  
 
@@ -1848,7 +1878,7 @@ XX
 \emph{Barrier \thebarrier.}
 \TheProject{} does not contribute to better understanding of security and privacy issues.
 &
-\TheProject{} methodology will include clear guidelines on developing secure and privacy preserving big data analytics. In particular, security patterns will include guidelines on how to compose such applications from components addressing different layers of abstraction, identifying issues arising from each of the components as well as from the interaction between components. This will lead to better understanding of the security and privacy issues involved in developing such complex applications. The use cases will be the first test of the understandability of our principles, as they will be developed by software developers that might not be experts in security and privacy.
+The \TheProject{} methodology will include clear guidelines on developing secure and privacy preserving big data analytics. In particular, security patterns will include guidelines on how to compose such applications from components addressing different layers of abstraction, identifying issues arising from each of the components as well as from the interaction between components. This will lead to better understanding of the security and privacy issues involved in developing such complex applications. The use cases will be the first test of the understandability of our principles, as they will be developed by software developers that might not be experts in security and privacy.
 \\ \hline
 \addtocounter{barrier}{1}
 \noindent
@@ -1856,7 +1886,7 @@ XX
 The \TheProject{} methodology is not adopted by a wider community.
 &
 \noindent
-The benefits of the \TheProject{} methodology will be explained clearly and supported by both mathematical (formal reasoning) and software engineering (design patterns) foundation. Evidence of the improvements in security and privacy will be communicated to the possible users and the \TheProject{} technologies and methodology will be promoted to wide audiences by MOOCs. Furthermore, the project consortium contains software developers who will be able to identify any barriers in the methodology itself to its more widespread adoption.
+The benefits of the \TheProject{} methodology will be explained clearly and supported by both mathematical (formal reasoning) and software engineering (design patterns) foundations. Evidence of the improvements in security and privacy will be communicated to the possible users and the \TheProject{} technologies and methodology will be promoted to wide audiences by MOOCs. Furthermore, the project consortium contains software developers who will be able to identify any barriers in the methodology itself to its more widespread adoption.
 
 \end{longtable}
 
@@ -1886,7 +1916,7 @@ publishing results extensively, both in technical areas, and through press relea
 engaging with relevant networks of excellence, such as HiPEAC to ensure widespread dissemination of
 project results and uptake by third parties;
 \item
-developing educational program to promote the uptake of the \TheProject{} technologies by wider audience of developers with diverse backgrounds in computing;
+developing an educational program to promote the uptake of the \TheProject{} technologies by a wider audience of developers with diverse backgrounds in computing;
 \item
 exploiting nationally-funded opportunities for the formation of spin-off companies and for commercial exploitation of research results;
 \item
@@ -1919,10 +1949,10 @@ We will do this through a mixture of high-quality publication, presentations
 and direct engagement with the user community.
 %
 The main research communities that we expect to target are:
-XX
+cybersecurity, distributed systems, big data, AI, programming languages, parallel programming and formal methods and logic. 
 % 
-We anticipate that the primary users of our technology will be:
-XX.
+%We anticipate that the primary users of our technology will be:
+%XX.
 
 \paragraph{Scientific Publications:}  The main routes to good scientific dissemination are
 through peer-reviewed publication, and through presentation of results at key scientific events.
@@ -2034,10 +2064,10 @@ developer and user communities by a series of focused activities, the most impor
 In order to ensure good dissemination to the research and development
 community, including industrial researchers, we propose to disseminate
 our project results through the most relevant scientific/technological
-networks and working groups, including HiPeac, %  the TACLe Cost Action on Timing Analysis, the Ercim DES Working Group, 
+networks and working groups, including HiPEAC, %  the TACLe Cost Action on Timing Analysis, the Ercim DES Working Group, 
 IFIP Working Groups 2.11 \& 10.3, and other EU and national projects,
 as well as national groups such as the UK's network on manycore computing.
-\SAshort{} is a full member of HiPeac and a charter member of IFIP working
+\SAshort{} is a full member of HiPEAC and a charter member of IFIP working
 group 2.11, and has been heavily involved in activities organised by these and other expert groups.
 These provide a high-level interface between academic and industrial interests, and a valuable
 melting pot for ideas and new technologies. 
@@ -2082,8 +2112,8 @@ also have a training benefit. Young researchers, software
  In that way the \TheProject{} vision and the project
  results will disseminate into many research groups and
  companies working in the field of security. 
- \paragraph{MOOC:}In order to disseminate security and the work of the consortium to the wider public a MOOC (massively open online course) will be developed to reach an audience far beyond the academic and industrial community.  MOOCs provide access, often to hundreds or thousands of people at a time, to focused online courses with learning goals and paths that present the opportunity to learn together at a flexible pace. Participants start and complete the training course on the MOOC at the same time as a cohort, to create community and for peer learning. The provision of a MOOC will also be
-used to enthuse and educate citizens about security and in particular the work of the project.  Work packages will provide accessible materials (text, videos, audio clips) highlighting the work that is being carried out. UoD brings a long‐term, established partnership to a market leading MOOC, FutureLearn, which will be supported far beyond the funded period. The FutureLearn MOOC is free and open, and brings a highly scalable platform into the project ecosystem, capable of sustaining more than 100,000 learners at one time.
+ \paragraph{MOOC:}In order to disseminate security and the work of the consortium to the wider public a MOOC (massively open online course) will be developed to reach an audience far beyond the academic and industrial community.  MOOCs provide access ---often to hundreds or thousands of people at a time--- to focused online courses with learning goals and paths that present the opportunity to learn together at a flexible pace. Participants start and complete the training course on the MOOC at the same time as a cohort, to create community and for peer learning. The provision of a MOOC will also be
+used to enthuse and educate citizens about security and in particular the work of the project.  Work packages will provide accessible materials (text, videos, audio clips) highlighting the work that is being carried out. \UODshort{} brings a long‐term, established partnership to a market leading MOOC, FutureLearn, which will be supported far beyond the funded period. The FutureLearn MOOC is free and open, and brings a highly scalable platform into the project ecosystem, capable of sustaining more than 100,000 learners at one time.
 
 % \paragraph{General Communication:} We will adopt a good general communication strategy
 % aimed at maximising the outreach of the \TheProject{} project to the public at large.  We will issue
@@ -2165,7 +2195,7 @@ As part of application-oriented research projects with partners companies, \SCCH
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-\SOPRAlong{} will use the tools that we develop in \TheProject{} project, and deploy them against the various software development solutions the company develops for use in various private and public companies within Europe. \SOPRAshort{} has software installations spread over twenty-five countries. The company covers business domains such as Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. The new security methodology produced as part of \TheProject{} will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant enhancement to the speed we can generate new solutions, while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is a safeguard against security breaches or privacy leaks for our customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way to ensure better and safer code is generated, we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. {\project{Elysian}} is a step towards improvement of this situation.
+\SOPRAlong{} will use the tools that we develop in \TheProject{} project and deploy them against the various software development solutions the company develops for use in various private and public companies within Europe. \SOPRAshort{} has software installations spread over twenty-five countries. The company covers business domains such as Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. The new security methodology produced as part of \TheProject{} will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant enhancement to the speed we can generate new solutions, while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is a safeguard against security breaches or privacy leaks for our customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way to ensure better and safer code is generated, we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. {\project{Elysian}} is a step towards improvement of this situation.
 
 \horizontalline
 
@@ -2199,7 +2229,7 @@ As part of application-oriented research projects with partners companies, \SCCH
     \item YAG-Suite improvement for privacy assessment of big data related applications: To support GDPR compliance assessments, \TheProject technologies will significantly enrich the YAG-Suite for \YAGshort{} to offer new source code privacy breaches detection capabilities and support European businesses in delivering better privacy compliant applications to the EU citizens. Additionally \TheProject will support \YAGshort{} in accessing the new market segment of big data application producers.
     \item YAG-Suite improvement for code auditors: As YAG-Suite not only is used by developers but also by service providers who deliver source code audits, the same capabilities will also benefit to audit service providers.
 \end{itemize}
-It is also in \YAGshort{} strategy to build business partnerships to support its partners in addressing new markets and disseminate \YAGshort{} technology, or to accelerate the growth of the startup, partnering with value added distributors. It is finally in the company strategy to build business alliances with integrators or technology providers : potential cooperations with \TheProject{} partners will be discussed during the project.
+It is also in \YAGshort{} strategy to build business partnerships to support its partners in addressing new markets and disseminate \YAGshort{} technology, or to accelerate the growth of the startup, partnering with value added distributors. It is finally in the company strategy to build business alliances with integrators or technology providers: potential co-operations with \TheProject{} partners will be discussed during the project.
 
 \horizontalline
 
@@ -2281,18 +2311,18 @@ ecosystem, capable of sustaining more than 100,000 learners at one time. The Fut
 \UCMshort{} will exploit the results from the project in two main areas:
 the definition and tool support of coding standards and
 the C++ language extension for contract based programming.
-The new security centric codign guideline and the supporting toolset will
+The new security centric coding guideline and the supporting toolset will
 open new market opportunities that will be investigated.
-Addtionally, the contract based programming insights for the project
+Additionally, the contract based programming insights for the project
 will enrich the feedback that \UCMshort{} will provide in the 
 ISO C++ standards committee and its study group on contracts which
 is currently targeting the ISO/IEC 14882:2023 standard.
 
 In addition, the participation in the project will strengthen the ability of
-\UCMshort{} to open new cooperations in the area of cybersecurity for big data
+\UCMshort{} to open new co operations in the area of cybersecurity for big data
 analytics. On one hand, the support of coding guidelines may be of major
-interest in the financial sector, where they have had several cooperations with
-BBVA (one of the major banks in Spain).  On the other hand, a better suppor fo
+interest in the financial sector, where they have had several co operations with
+BBVA (one of the major banks in Spain).  On the other hand, a better support for
 contract based programming also allow to reinforce \UCMshort's current position
 in the aerospace industry where it currently cooperates with major players in
 the Spanish market, including GMV or SENR. In both cases, \UCMshort{} will be
@@ -2419,8 +2449,8 @@ community, who may not normally have access to academic papers and reports.
 We will disseminate information about our tools and standards directly to customers, aiming to
 increase engagement with an already motivated group of developers/users.
 We will run open technical workshops that will showcase our work to interested parties.
-These will generally be co-located with major networking events, such as the annual HiPeac
-conference and the HiPeac spring/autumn gatherings.
+These will generally be co-located with major networking events, such as the annual HiPEAC
+conference and the HiPEAC spring/autumn gatherings.
 We will also engage with relevant industrial/developer conferences, grass-roots meetings, workshops etc.,
 producing poster and demonstrations as necessary to communicate with the broader developer community
 and especially with project managers and decision makers.
@@ -2506,7 +2536,7 @@ Package List}
 
 \landscape
 
-\subsubsection*{Work Plan Timing: GANTT Chart showing Task Dependencies and Information Flows}
+\subsubsection*{Work Plan Timing: GANTT Chart showing Task Dependencies and Information Flows for Technical Tasks}
 
 
 %\vspace{-0.7in}
@@ -3752,11 +3782,11 @@ Sopra-Steria, a European leader in digital transformation, provides one of the m
 %\end{itemize}
 
 \vspace{10pt}
-\textbf{Sopra-Steria will lead work package \ref{wp:usecases} on Requirements, Use Cases and Evaluation}
+\textbf{Sopra-Steria will lead work package \ref{wp:usecases} on Requirements, Use Cases and Evaluation and will contribute to work packages WP2-6.}
 
 \vspace{10pt}
 
-\paragraph{Andreas Francois Vermeulen} Head of Analytics, Digital Consultancy Services within the United Kingdom.
+\paragraph{Andreas Francois Vermeulen} (male) Head of Analytics, Digital Consultancy Services within the United Kingdom.
 
 Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United-Kingdom. Andre received his bachelor degree at the North West University at Potchefstroom, his Master of Business Administration at University of Manchester, Master of Business Intelligence and Data Science degree at University of Dundee, and is busy undertaking a Doctor of Philosophy degree at the University of St Andrews. Andreas is a General Data Protection Regulation (GDPR) certified professional. He has designed and implemented data lakes, data warehouses and information systems for several industrial business solution on an international level using agile development methodology. Author of three international books on big data, data science and machine learning, including:
 \begin{itemize}
@@ -3765,12 +3795,12 @@ Andreas has been in information technology industry for forty plus years. He is 
 Assets.
 \end{itemize}
 
-\paragraph{Ian Kayne}  Head of Cyber Security Consulting within the United Kingdom.
+\paragraph{Ian Kayne} (male)  Head of Cyber Security Consulting within the United Kingdom.
 
 Ian has over twenty-four+ years’ experience in cybersecurity and cloud ecosystems, leading global initiatives for FTSE100 and Fortune500 organizations as well as Government and Public Sector. Expert at penetration test and reverse engineering services. A published author and lectures on secure coding and reverse engineering modules at MSc level in cybersecurity.
 
 
-\paragraph{Rakhee Porter}  Cyber Resilience Lead within the United Kingdom.
+\paragraph{Rakhee Porter}  (male) Cyber Resilience Lead within the United Kingdom.
 
 Rakhee has ten plus years of experience delivering risk based resilience programs to secure ecosystems. Expert in business resilience services including Technology Resilience, Operational Resilience, Crisis Management and Business Continuity.
 
