@@ -1186,9 +1186,11 @@ The scale of these applications requires  methods for security and privacy assur
 %As these systems evolve over time, 
 %and are often built using existing service components exporting an API that can be used by components developed later,  
 %security cannot be verified once but has to be done incrementally as systems evolve.
-We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. Distributed temporal logics, such as {\sc{mdtl}} \cite{TSE-paper}, interpreted over (prime) event structures have been defined with the intention to capture complex systems at different levels of abstraction and enable reasoning across levels. The logic has been extended to a stochastic domain \cite{mdtl-2014}, but remains 
+We need  to specify and ensure the security of the whole system and not just individual components or abstraction layers within a system. Distributed temporal logics, such as {\sc{mdtl}} \cite{Kue-TCS2006}, 
+%are similar to separation logics, 
+interpreted over (prime) event structures, have been defined with the intention to capture complex systems at different levels of abstraction and enable reasoning across levels. The logic (comparable to separation logic) has been extended to a stochastic domain \cite{BowVia14}, but remains 
 underexplored for the context of systems considered in \TheProject{}. 
-Event structures have been widely used and studied in the literature, have been used to give a true-concurrent semantics to process calculi such as CCS, CSP, SCCS and ACP, and can be understood as unfoldings of models such as Petri nets or runs for concurrent ASMs. 
+Event structures have been widely used and studied in the literature, have been used to give a true-concurrent semantics to process calculi such as CCS, CSP, SCCS and ACP, and can be understood as unfoldings of models such as Petri nets or runs for concurrent ASMs. We will explore this later combination further in \TheProject{}.
 %The advantages of prime event structures include their underlying simplicity and how they naturally describe fundamental notions present in behavioural models including sequential, parallel and iterative behaviour (or the unfoldings thereof) as well as nondeterminism. 
 %In this context, 
 
@@ -1199,10 +1201,14 @@ Event structures have been widely used and studied in the literature, have been 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of formal specification \& verification of security properties by:
 \begin{itemize}
-\item \emph{Define a uniform approach for specification of security patterns and properties } Based on ASMs~\cite{BorgerS16} (described earlier in \ref{sect:identifying} ) we will
-define a specification language able to capture security properties at different levels of abstraction in line with the run-time analysis and adaptation described    
-\item \emph{Define a Logic for Privacy Reasoning} XX.
-\item \emph{Provide an integrated verification framework} we will continue to  exploit the interface between Isabelle and Z3 to obtain a versatile tool for the specification, analysis and computation of the behaviour of distributed systems.
+\item \emph{Defining a uniform approach for specification of security patterns and properties} Based on concurrent ASMs~\cite{BorgerS16} (described earlier in \ref{sect:identifying}), we will
+define a specification language able to capture security properties at different levels of abstraction, and will formalise notions of behavioural equivalence to enable us to prove the equivalence between specifications and hence formalise refactorings.
+
+\item \emph{Providing an integrated verification framework} we will continue to  exploit the interface between Isabelle and Z3 (e.g. \cite{BowCam2020}) to obtain a versatile tool for the specification, analysis, composition, and computation of the behaviour of distributed applications, and search for the optimal solution (e.g. a refactoring) that satisfies certain criteria (e.g. security guarantee) 
+%which could be obtained automatically 
+hence conforming with self-healing.
+\item \emph{Defining a family of logics for security and privacy reasoning} Based on {\sc{mdtl}} and stochastic extensions, we will define a logic expressive enough to capture and reason about security properties for our applications, and with a  fragment (e.g., FOL) suitable for capturing
+information flow and privacy constraints. %first order logic for capturing privacy information flow.
 %Exploring our experience in combining theorem provers with SMT solvers.
 \end{itemize}
 \end{mdframed}
@@ -1332,8 +1338,8 @@ Various organizations and companies also exist that are either adopting MFA, or 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
 \begin{itemize}
-\item \emph{The proposed solution to combine MFA and continuous user authentication} under a unified, agile system integration model represents a change of paradigm in today’s state-of-the-art which considers MFA and continuous user identification as two independent approaches that do not co-exist under one unified solution; 
-\item \emph{The developed intelligent biometrics} based on a combined analysis of physiological, face and eye gaze data analytics will advance the state-of-the-art for seamlessly identifying end users;
+\item \emph{The proposed solution to combine MFA and continuous user authentication} under a unified, agile system integration model represents a change of paradigm in today’s state-of-the-art which considers MFA and continuous user identification as two independent approaches that do not co-exist under one unified solution.
+\item \emph{The developed intelligent biometrics} based on a combined analysis of physiological, face and eye gaze data analytics will advance the state-of-the-art for seamlessly identifying end users.
 \item \emph{The developed Blockchain solution} will provide novel methods for regulating data access to data as well as tracking the lineage and provenance of data. 
 \item \emph{Evaluation studies} will provide new insights and knowledge to practitioners for building more usable and agile identity management schemes, and researchers to understand human behavior within such tasks.
 \end{itemize}
