@@ -525,7 +525,7 @@ per objective, just to flesh it out.}
 \subsubsection*{Objective 1: Develop new \emph{secure code patterns} supported by formally-verifiable \emph{security contracts}.}
 % Secure Patterns for Distributed Data Processing
 \vspace{-6pt}
-Code patterns are a well-established abstraction for designing and implementing complex software systems.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In \TheProject{} we will develop novel \emph{secure design patterns} for distributed large-scale data processing that will specify how to combine different levels of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting the patterns with \emph{security contracts} at different levels of abstraction - both describing the properties of a code in natural language and in machine-readable lower-level language suitable for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate between different representations of security contracts. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with formally guaranteed security properties of the resulting code in an easily-understandable way. \emph{This fulfils part of \textbf{Aim 1}}.
+Code patterns are a well-established abstraction for designing and implementing complex software systems.  They have been endorsed by a number of major IT companies such as Intel and Microsoft. Patterns allow structuring of the code at a high level of abstraction and make formal reasoning about the code much easier, as they can provide additional information to the underlying formal models. On the other hand, formal treatment of the security properties of the code requires a multi-level approach, where a high-level human-understandable description of the properties of the code is transformed into precise, machine-readable description that can be used for formal reasoning. In \TheProject{} we will develop novel \emph{secure design patterns} for distributed large-scale data processing that will specify how to combine different levels of abstraction in distributed applications (from low-level libraries for distributed filesytems and databases to high-level machine-learning libraries and end user code). These patterns will give strict guarantees about the security properties of the underlying code. This will be achieved by supporting the patterns with \emph{security contracts} at different levels of abstraction - both describing the properties of a code in natural language and in machine-readable lower-level language suitable for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for C++ and Java applications, and also mechanisms to translate between different representations of security contracts. Software developers will then be able to choose a security-certified patterns suitable for their data analytics task, and will be presented with formally guaranteed security properties of the resulting code in an easily-understandable way. \emph{This fulfils part of \textbf{Aim 1} and \textbf{Aim 2}}.
 %Formal treatment of the security properties of the code requires a multilayer approach. On one hand, end users want to see a description of the security properties in a clear, high-level and human-understandable way. On the other hand, formal reasoning, including automatic proving of the properties, requires significantly lower-level approach. The language for formal reasoning needs to be concise and machine-readable. This necessitates different approach to describing properties at different levels. In the \TheProject{} project, we will develop a strict and precise notion of security properties at different levels of abstraction. We will develop a concept of \emph{security certificates}, which will describe in natural way the properties of the code. We will also develop \emph{security contracts}, which will be specified in low-level, machine-readable way appropriate for automated reasoning. We will also develop mechanisms to automatically prove the properties specified in the security contracts for pieces of C++ and Java code and also mechanisms to translate security certificates into security contracts and vice versa. The end users will then be able to specify the required properties using high-level language, and these properties will be automatically checked by lower-level mechanisms.
 %\cbcomment{See above comments about similarities with teamplay. CSL is a source-level annotation language that allows the programmer to describe security propoerties in a clear high-level human-understandable way with certificates. Idris provides the proofs and formal reasoning and contracts. I'm also not keen on multiple languages. Is there a reason for both C++ and Java?}
 
@@ -979,7 +979,7 @@ Objective 8 & Building a Sustainable User Community & \textbf{WP8}\\\hline
 
 \paragraph*{Work Programme for Objective 1.}
 
-Objective 1 aims to build secure patterns for distributed AI-based data analytics and to develop methods for formal specification and verification of security properties of those patterns. In WP3, we will develop methods for identifying and repairing security and privacy vulnerabilities for distributed AI-based data analytics (based on foundational techniques that will be developed in WP2). This will serve as a basis for the development of secure patterns that will be done in WP6 as a part of the \TheProject{} methodology for developing secure end-user applications. In WP5 we will develop the methods for formal specification and verification of security and privacy properties of pieces of C++ code, in form of \emph{security certificates} that will specify these properties at a high level and also \emph{security contracts} that will be machine readable and, therefore, amenable for formal proving. 
+Objective 1 aims to build secure patterns for distributed AI-based data analytics and to develop methods for formal specification and verification of security properties of those patterns. In WP3, we will develop methods for identifying and repairing security and privacy vulnerabilities for distributed AI-based data analytics (based on foundational techniques that will be developed in WP2). This will serve as a basis for the development of secure patterns that will be done in WP6 as a part of the \TheProject{} methodology for developing secure end-user applications. In WP4 we will develop the methods for formal specification and verification of security and privacy properties of the underlying source-code, in the form of \emph{security certificates} that will specify these properties at a high level and also \emph{security contracts} that will be machine readable and, therefore, amenable for formal proving. 
 
 \paragraph*{Work Programme for Objective 2.}
 
@@ -991,7 +991,7 @@ Objective 3 aims to develop self-healing mechanisms for repairing security vulne
 
 \paragraph{Work Programme for Objective 4.}
 
-Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP4, we will build static analysis techniques that will check the compliance of the C++ code to the security standards such as CERT SEI C++ Coding Standard, but we will also consider other coding standards such as CppCore Guidelines and High Integrity C++. Based on the methodology for developing secure applications that will be developed in WP6, and in particular based on the secure patterns for composing distributed big-data analytics applications from different layers of abstraction, we will also aim to augment these standards extended them with new coding rules as identified over the course of the project. The outcome of this (in WP6) will be the extended security standards and guidelines for developing secure, large-scale data applications that will be developed in both private and public clouds.
+Objective 4 aims to extend the existing code standards for developing secure and privacy-preserving distributed applications. In WP6, we will build static analysis techniques that will check the compliance of the C++ code to the security standards such as CERT SEI C++ Coding Standard, but we will also consider other coding standards such as CppCore Guidelines and High Integrity C++. Based on the methodology for developing secure applications that will be developed in WP6, and in particular based on the secure patterns for composing distributed big-data analytics applications from different layers of abstraction, we will also aim to augment these standards extended them with new coding rules as identified over the course of the project. The outcome of this (in WP6) will be the extended security standards and guidelines for developing secure, large-scale data applications that will be developed in both private and public clouds.
 
 \paragraph{Work Programme for Objective 5.}
 
@@ -1030,7 +1030,7 @@ The \TheProject{} project will revolutionise the development of secure and priva
 \item \textbf{reduce the number and impact of cybersecurity incidents} through our advanced security and privacy vulnerabilities detection and semi-automatic repairing, as well as novel user-centered authentication schemes;
 
 \begin{mdframed}[backgroundcolor=blue!5]
-The combination of different techniques for vulnerabilities detection will allow us both to identify a wider range of potential threats and to reduce false positives in vulnerabilities identification. It is well known that static analysis of the code is able to identify many of the potential threats in the code, but also that it returns a large number of false positives. Combining static analysis with symbolic execution, as outlined in Section~\ref{XX}, will contribute to the reduction of these false positives by focusing on the parts of the code where these potential threats lie and profiling them to established whether security is really breached. Additionally, runtime monitoring which focuses on the state of the running program as opposed to detection of particular types of threats will allow us to detect both current and future vulnerabilities and reinstate the running code in a safe state.
+The combination of different techniques for vulnerabilities detection will allow us both to identify a wider range of potential threats and to reduce false positives in vulnerabilities identification. It is well known that static analysis of the code is able to identify many of the potential threats in the code, but also that it returns a large number of false positives. Combining static analysis with symbolic execution, as outlined in Section~\ref{sect:identifying}, will contribute to the reduction of these false positives by focusing on the parts of the code where these potential threats lie and profiling them to established whether security is really breached. Additionally, runtime monitoring which focuses on the state of the running program as opposed to detection of particular types of threats will allow us to detect both current and future vulnerabilities and reinstate the running code in a safe state.
 \end{mdframed}
 
 \item \textbf{increase trust} in the security of big-data analytics applications by providing formal guarantees of the security properties of the code and certification for compliance to the security standards;
@@ -1358,7 +1358,7 @@ Automated refactoring has roots in a long history, with the original refactoring
 %There has been very little prior work on refactoring for improving energy consumption, with the exception of some preliminary refactorings for Erlang~\cite{Nagy:2019:TSG:3331542.3342570}. Previous work by Brown et al. on parallelisation \textit{via} refactoring has primarily focussed on the introduction and manipulation of parallel pattern libraries in C++~\cite{brownagricultural}, Haskell~\cite{kar30667} and Erlang~\cite{Brown:2014:CRP:2630180.2630190,DBLP:journals/cai/BarwellBHTB16, parco2015}. Another approach
 %has been the automated introduction of annotations in the form of C++ attributes~\cite{cfs}{rio:2018}.
 
-In previous work, refactoring has been used successfully to \emph{introduce parallel patterns and concurrency} into the code in C++~\cite{brownagricultural,DBLP:conf/pdp/JanjicBMHDAG16, grppirefactoring, mcts} and Erlang~\cite{hlpp,DBLP:journals/cai/BarwellBHTB16}. Another approach
+In previous work, refactoring has been used successfully to \emph{introduce parallel patterns and concurrency} into the code in C++~\cite{brownagricultural,DBLP:conf/pdp/JanjicBMHDAG16, mcts} and Erlang~\cite{hlpp,DBLP:journals/cai/BarwellBHTB16}. Another approach
 has been the automated introduction of annotations in the form of
 C++ attributes~\cite{rio:2018}. Dig \textit{et al.}~\cite{dig} use refactoring to introduce parallelism in Java.  
 %
@@ -1504,7 +1504,7 @@ Last but not least, the \TheProject{} technologies for protecting privacy offer 
 
 \subsubsection*{Individual Innovation Potential}
 
-The anticipated partner-specific potential innovations are listed below and described in more detail in the individual exploitation plans in Section XX (page XX).
+The anticipated partner-specific potential innovations are listed below and described in more detail in the individual exploitation plans in Section \ref{sect:exploitation-plan} (Page \pageref{sect:exploitation-plan}).
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \IBMshort{} will extend its expertise in Code Vulnerability Detection technologies. This expertise combined with novel techniques for repairing the identified vulnerabilities that will be developed in the \TheProject{} project will significantly enrich the ability to develop secure and robust AI-driven big data applications. The IBM Cloud Pak for Data platform will benefit from the results of \TheProject{} project in the areas of security and protection of Big Data analytics. In addition, we will enrich the existing IBM security solutions and products by exploiting the advanced vulnerability detection and code repairing technologies of the \TheProject{} project to commercially benefit businesses across Europe.
@@ -1572,7 +1572,7 @@ o the expected impacts set out in the work programme, under the relevant topic;\
 o improving innovation capacity and the integration of new knowledge (strengthening the competitiveness and growth of companies by developing innovations meeting the needs of European and global markets; and, where relevant, by delivering such innovations to the markets;\\
 o any other environmental and socially important impacts (if not already covered above).}
 
-\TheProject{} aims to achieve significant impact in most of the areas outlined in the XX call, providing a tool-supported methodology for developing and deploying secure and privacy-preserving large-scale distributed AI-based data analytic applications. It will allow the end users to develop their complex data analytics applications using high-level programming models based on design patterns, supporting them in the process of making these applications secure and reducing the number of security and privacy vulnerabilities.  
+\TheProject{} aims to achieve significant impact in most of the areas outlined in the \textbf{H2020-SU-DS-2020} proposal call, providing a tool-supported methodology for developing and deploying secure and privacy-preserving large-scale distributed AI-based data analytic applications. It will allow the end users to develop their complex data analytics applications using high-level programming models based on design patterns, supporting them in the process of making these applications secure and reducing the number of security and privacy vulnerabilities.  
 
 \subsection{Expected Impacts}
 
@@ -1773,7 +1773,7 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 %\pagebreak
 \paragraph*{Improving Innovation Capacity}
 \noindent
-\TheProject{} will significantly improve long-term innovation capacity by enabling European companies and individuals to develop complex and innovative new secure large-scale big data analytics applications for a variety of commercially-important and emerging markets, including healthcare, air traffic management and digital banking. A combination of different methods for identifying and repairing security risks and privacy leaks, coupled with the formal methods for proving the security properties and continuously evolving security standards will allow identification and repairing of not only current, but also the future security threats, making the software developed using our technologies robust and resilient in future too. The \TheProject{} methodology, together with the associated tool chain, will significantly reduce the level of expertise required from the developers in developing secure code, allowing non-expert in this area to develop software that is provably secure and automatically checked for the conformance to standards. This will bring a major boost to the European markets in software, as the security and privacy will become the most important factors when designing and implementing the new software, especially in the light of the increased distribution of data across domains in parallel with more and more strict regulations governing privacy and ownership of the data. SMEs involved in the project will use our software to create additional market opportunities and the project itself will support the growth of these companies by significantly extending their offer. Section~\ref{sec:innovationpotential} (page \pageref{sec:innovationpotential}) describes the market opportunities and potential for innovation in more detail.
+\TheProject{} will significantly improve long-term innovation capacity by enabling European companies and individuals to develop complex and innovative new secure large-scale big data analytics applications for a variety of commercially-important and emerging markets, including healthcare, air traffic management and digital banking. A combination of different methods for identifying and repairing security risks and privacy leaks, coupled with the formal methods for proving the security properties and continuously evolving security standards will allow identification and repairing of not only current, but also the future security threats, making the software developed using our technologies robust and resilient in future too. The \TheProject{} methodology, together with the associated tool chain, will significantly reduce the level of expertise required from the developers in developing secure code, allowing non-expert in this area to develop software that is provably secure and automatically checked for the conformance to standards. This will bring a major boost to the European markets in software, as the security and privacy will become the most important factors when designing and implementing the new software, especially in the light of the increased distribution of data across domains in parallel with more and more strict regulations governing privacy and ownership of the data. SMEs involved in the project will use our software to create additional market opportunities and the project itself will support the growth of these companies by significantly extending their offer. Section~\ref{sec:innovationpotential} (Page \pageref{sec:innovationpotential}) describes the market opportunities and potential for innovation in more detail.
 
 \paragraph*{Societal Impact.}
 \noindent
@@ -1782,7 +1782,7 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 \begin{mdframed}[backgroundcolor=blue!5]
 One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and under-representation of minorities. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. 
 
-\textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework(\url{https://tinyurl.com/y3goybl4}) for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12)\footnote{https://tinyurl.com/ybqpqebq}, the International Covenant on Civil and Political Rights (Article 17)(\url{https://tinyurl.com/y85h68gf}) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7(\url{https://tinyurl.com/yyfby497}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
+\textcolor{red}{\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework (\url{https://tinyurl.com/y3goybl4}) for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12)\footnote{https://tinyurl.com/ybqpqebq}, the International Covenant on Civil and Political Rights (Article 17) (\url{https://tinyurl.com/y85h68gf}) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7 (\url{https://tinyurl.com/yyfby497}) has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''. By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.} \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?}. \vjcomment{We also need a reference to the Stanford paper about equality.}
 \end{mdframed}
  
 
@@ -1883,7 +1883,7 @@ deploying an exploitation plan that links with the strategic needs and internal 
 \item
 publishing results extensively, both in technical areas, and through press releases, radio interviews, news items and the general technical press;
 \item
-engaging with relevant networks of excellence, such as HiPEAC and XX to ensure widespread dissemination of
+engaging with relevant networks of excellence, such as HiPEAC to ensure widespread dissemination of
 project results and uptake by third parties;
 \item
 developing educational program to promote the uptake of the \TheProject{} technologies by wider audience of developers with diverse backgrounds in computing;
@@ -2149,7 +2149,7 @@ IBM will aim to deliver \TheProject technologies into IBM cloud and analytics pr
 
 \paragraph{Industrial Exploitation.} \SCCHshort{} runs application-oriented projects with industrial partners (e.g. voestalpine Stahl GmbH, Rubble Master HMH GmbH, STIWA Holding GmbH, Siemens, KEBA AG) in the area of intelligent data analysis. The scope of applications span: a) predictive control via advanced supervised and semi-supervised learning methods like deep learning or kernel methods; and b) decision support systems and causal reasoning by inductive rule extraction, regression models, Bayesian networks and automated reasoning techniques. As an application oriented research institute, the \SCCHshort{} commonly deals with very large and inhomogeneous data sources and has experience with data processing of big data and transfer learning techniques that enable the joint modelling from inhomogeneous data, collected from distributed sources. The \TheProject{} approach will enhance collaboration in ongoing and future multi-firm research projects, which would not be possible due to confidentiality of data of the project partners. \SCCHshort{} will also exploit \TheProject{} technology in IoT projects, especially cyber-physical-systems, where personal data of humans in the loop needs to be kept confidential. Furthermore, \SCCHshort{} will promote \TheProject{} technology as the basis for collaborative development of business clusters (e.g. Mechatronics) by a data driven approach: gain knowledge out of shared data while not compromising privacy. In the development of the Data Analytics Framework \SCCHshort{} plans to extend established machine learning frameworks (TensorFlow, Keras, scikit-learn) to find early adopters and foster uptake of developed technologies in the community. 
 
-As part of application-oriented research projects with partners companies, \SCCHshort{} has built and applied reverse engineering and analysis tools with a strong focus on extracting knowledge from source code and related software engineering artifacts (http://codeanalytics.scch.at/). The results are available via eKNOWS, a platform for the analysis and evolution of software systems, documentation generation, and quality assurance and automated testing. The innovative approach to extract formal specifications from source code proposed in the \TheProject{} project will be integrated in the eKNOWS platform. This will give us a solid platform for the exploitation of \TheProject{} envisioned results in the area of formal specification of refactorings for increasing the security and privacy level of big-data applications, together with new verification techniques to show general soundness and correctness of such refactorings. More generally, we will be able to expand the applicability of software engineering tools developed within the eKNOWS platform for standard software systems, to big distributed data analytics systems. Given the expertise of \SCCHshort{} on applied research projects with company partners in the area of data sciences, as well as the increasing importance that security and privacy plays in that area, there is plenty of potential to exploit these innovations working together with our current and future company partners in Austria and Europe.
+As part of application-oriented research projects with partners companies, \SCCHshort{} has built and applied reverse engineering and analysis tools with a strong focus on extracting knowledge from source code and related software engineering artifacts (\url{http://codeanalytics.scch.at/}). The results are available via eKNOWS, a platform for the analysis and evolution of software systems, documentation generation, and quality assurance and automated testing. The innovative approach to extract formal specifications from source code proposed in the \TheProject{} project will be integrated in the eKNOWS platform. This will give us a solid platform for the exploitation of \TheProject{} envisioned results in the area of formal specification of refactorings for increasing the security and privacy level of big-data applications, together with new verification techniques to show general soundness and correctness of such refactorings. More generally, we will be able to expand the applicability of software engineering tools developed within the eKNOWS platform for standard software systems, to big distributed data analytics systems. Given the expertise of \SCCHshort{} on applied research projects with company partners in the area of data sciences, as well as the increasing importance that security and privacy plays in that area, there is plenty of potential to exploit these innovations working together with our current and future company partners in Austria and Europe.
 
  \paragraph{Scientific Exploitation.} In parallel to common applied research, \SCCHshort{} has to conduct fundamental research to keep in contact with world-leading research. Furthermore \SCCHshort{}'s success is also measured by its scientific output like number of publications, PhD and master theses. \SCCHshort{} plans to submit publications and articles in highly relevant conferences and journals like Neural Information Processing Systems, International Conference of Learning Representations, Journal of Machine Learning Research, IEEE Symposium on Security and Privacy, IEEE European Symposium on Security and Privacy, Theory and Practice on Differential Privacy co-located with ICML, Journal of Privacy and Confidentiality, Springer Journal of Big Data, Science of Computer Programming, Theoretical Computer Science, Journal of Computer and Systems Sciences,  International Conference on Formal Engineering Methods, International Conference on Rigorous State Based Methods, International Conference on Software Engineering. The \TheProject{} approach will increase scientific output for \SCCHshort{} since it allows for publications that would not be possible due to confidentiality of the data the publications are based on.
 
@@ -2165,7 +2165,7 @@ As part of application-oriented research projects with partners companies, \SCCH
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the research and deploy it against the various software development solutions the company develop for use in various private and public companies within Europe. \SOPRAshort{} has software installation spread over twenty-five counties. The company covers the business domains like Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. This new security methodology will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant disputer in the speed we can generate new solutions while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is an safeguard against security breaches or privacy leaks for your customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way (\project{}) to ensure better and safer code is generated we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. {\project{Elysian}} is a step towards improvement of this situation.
+\SOPRAlong{} will use the tools that we develop in \TheProject{} project, and deploy them against the various software development solutions the company develops for use in various private and public companies within Europe. \SOPRAshort{} has software installations spread over twenty-five countries. The company covers business domains such as Aerospace, Defence plus Security, Energy plus Utilities, Financial Services, Insurance plus Social, Government, Retail, Telecommunication, Media plus Entertainment, Transport and IT consulting via our 40K+ consultants. The new security methodology produced as part of \TheProject{} will enhance the future delivery capability of \SOPRAshort{} plus customers our consultants support within the customers own systems. The outcome of this research will generate a significant enhancement to the speed we can generate new solutions, while ensuring the code is secure and of good quality. The improvement of the security of the software that \SOPRAlong{} uses and creates is a safeguard against security breaches or privacy leaks for our customers’ applications. These customers are critical cornerstones of the economy as they are responsible for services like banking, healthcare, public safety and in some cases the governments itself. If we had a way to ensure better and safer code is generated, we will mitigate these risks by improvement of the code base itself. This is a significant advance for the whole of Europe. Privacy Rights Clearinghouse published these figures via Forbes, reported over 4.8 billion in 2016, 2 billion in 2017 and nearly 1.4 billion in 2018. The issues is these are only the reported incidents. The true numbers are unknown and suspected to be factors more as companies are either not seeing the issues or not reporting them. {\project{Elysian}} is a step towards improvement of this situation.
 
 \horizontalline
 
@@ -2178,7 +2178,7 @@ Exploitation plan for \SOPRAlong{} is to use the tools that we develop in the re
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-\FRQlong{} will broaden it's expertise and extend current products in the field of privacy-preserving data sharing platforms.
+\FRQlong{} will broaden its expertise and extend current products in the field of privacy-preserving data sharing platforms.
 \TheProject{} will be used to establish and strengthen important partnerships for cooperation in the creation of AI services and products to increase capacity in the aviation industry. Foster the transition of \FRQlong{} from a world leading voice communication provider to building the best safety-critical data communication solutions in ATM combination of emerging technology.
 \FRQlong{} safety-critical communication and information solutions leverage more than seventy years of experience showcasing true leadership in this market. With deep cross-industry experience in civil aviation, defence, public safety, maritime and public transportation markets; the company has built upon its initial control centre solutions in these five areas of core competence. The outcomes of \TheProject{} will also be extended to other domains as mentioned above.
 
@@ -2212,7 +2212,7 @@ It is also in \YAGshort{} strategy to build business partnerships to support its
 \vspace{-0.8cm}
 \end{wrapfigure}
 
-\COGNIshort{} will broaden it’s expertise and extend its products and services in the field of usable security, intelligent user interfaces and artificial intelligence aiming to help businesses in Europe to design, develop and integrate human-centered cybersecurity systems.
+\COGNIshort{} will broaden its expertise and extend its products and services in the field of usable security, intelligent user interfaces and artificial intelligence aiming to help businesses in Europe to design, develop and integrate human-centered cybersecurity systems.
 
 Cognitive Identity is \COGNIshort{}'s core identity management platform, which allows the seamless integration of a variety of authentication methods for secure and usable multi-factor authentication and continuous user identification in a variety of domains, including the digital banking domain for customer identification and verification, the digital health domain for patient authentication, the digital education domain for online examination invigilation purposes. Main aim of \COGNIshort{} is to improve and extend its current methods and components of the platform, specifically:
 
@@ -2304,6 +2304,7 @@ its competitiveness.
 
 
 \subsubsection{Knowledge Management and Protection}
+\label{knowledgeprotection}
 \vspace{-12pt}
 
 \eucommentary{Outline the strategy for knowledge management and protection. Include measures to provide open access (free on-line access, such as the 'green' or 'gold' model) to peer-reviewed scientific publications which might result from the project}
@@ -2374,9 +2375,7 @@ and opening up the markets for the Consortium's Results in all markets.
 A central aim of this consortium is to provide benefit to the European community.  Some of the project partners may be either using Open Source code in their deliverables or contributing their deliverables to the Open
 Source communities. Alternatively, some of the partners may be contributing to Standards, be they open standards or other. Details concerning open source code use and standard contributions will be
 addressed in the Consortium Agreement.
-
 The base technologies being developed by the academic partners within the duration of the project will be published under Open Source Licenses except where specified under Intellectual Property Management to allow the broader community to benefit from the outcome of this project.
-
 The major validated project results  will be contributed to the key international standardisation bodies  such as ISO, ITU and others where the consortium members take part in. 
 
 
@@ -2403,7 +2402,7 @@ and value, data will also be transferred to the \SAshort{} institutional data re
 \eucommentary{Describe the proposed communication measures for promoting the project and its findings during the period of the grant. Measures should be proportionate to the scale of the project, with clear objectives. They should be tailored to the needs of various audiences, including groups beyond the project's own community. Where relevant, include measures for public/societal engagement on issues related to the project.}
 
 \vjcomment{Fix this too...Add the Data Science, Security, AI and Healthcare related events}
-As described in the draft dissemination plan above, and in the description of~\ref{wp:dissem} (page~\pageref{wp:dissem}),
+As described in the draft dissemination plan above, and in the description of~\ref{wp:dissem} (Page~\pageref{wp:dissem}),
 the \TheProject{} project aims to communicate itself and its findings intensively to various communities.
 Research publications and presentations will aim to target various groups of academic and industrial researcher,
 including parallel programmers, big data researchers, and programming language
@@ -2776,7 +2775,7 @@ Brexit and the free flow of personal data.
 
 Should the UK leave the EU %European Union (“the EU”) 
 without an adequacy agreement with the European Commission whereby the Commission do not recognise the Data Protection Act 2018 to provide the same feel of protection for the personal data of EU citizens as provided for by the General Data Protection Regulation, then the transfer of personal data from partner institutions in member states or the European Economic Area (EEA) may experience some level of disruption.
- The UK Government have noted that they intend to recognise the GDPR, and to allow for the free transfer of personal data from the UK to the EU and the EEA. The University will work with partners to implement EC Standard Contractual Clauses to allow for the free flow of personal data from the EU to the UK, for the purposes of this project, should the need arise.
+The UK Government have noted that they intend to recognise the GDPR, and to allow for the free transfer of personal data from the UK to the EU and the EEA. The University will work with partners to implement EC Standard Contractual Clauses to allow for the free flow of personal data from the EU to the UK, for the purposes of this project, should the need arise.
 
 \\\hline
 Failure to achieve key project objectives.
@@ -2998,9 +2997,9 @@ the public deliverables that appear on the project web site.
 \begin{figure}[ht!]
 \vspace{-0.28in}
 \begin{center}
-\centerline{\hspace{1in} \hbox to \columnwidth{\hss\includeimage[height=5.7in]{Management}\hss}}
+\centerline{\hspace{0.6in} \hbox to \columnwidth{\hss\includeimage[height=4.7in]{Management}\hss}}
 \end{center}
-\vspace{-1.8in}
+\vspace{-1.4in}
 \caption{Management Structure}
 \label{fig:management}
 \end{figure}
@@ -3519,8 +3518,9 @@ recognised through the award of numerous research grants and
 awards from the UK and the European Commission. The School of Computer Science is a member of SICSA, the pan-Scottish pooling agreement for Informatics and Computer Science, which groups the 14 Scottish universities.
 
 \vspace{10pt}
-\textbf{The \SAlong{} coordinates the \TheProject{} project, 
-leads work packages \ref{wp:management} and \ref{wp:securityContracts}, and participates in WPXX on XX.}
+\textbf{The \SAlon{} will coordinate the \TheProject{} project, and lead work packages \ref{wp:management} on project management, \ref{wp:securityContracts} on Formal Verification of Security and Privacy for Distributed Data Analytics. It will also contribute with its expertise on refactoring, formal methods, parallel programming, pattern-based design and development to WP2, WP3, WP5 and WP6.}
+
+
 \vspace{10pt}
 
 \paragraph{Dr Juliana Bowles (n\'ee K\"uster Filipe)} (female) 
@@ -3726,39 +3726,44 @@ Secure Hardware-Software Architectures for Robust Computing Systems (SHARCS, ICT
 
 %\vspace{24pt}
 
-Sopra-Steria, since 1968, supports the primary business areas of consulting services, systems integration, integration of ERP, implementation of applications, as well as providing technical support to users and application maintenance and outsourcing services and operation of professional processes.
+Sopra-Steria, a European leader in digital transformation, provides one of the most comprehensive portfolios of end-to-end service offerings on the market: consulting, systems integration, software development, infrastructure management and business process services. Sopra-Steria is trusted by leading private and public-sector organisations to deliver successful transformation programmes that address their most complex and critical business challenges. Combining high quality and performance services, added value and innovation, Sopra Steria enables its clients to make the best use of digital technology. With nearly 42,000 employees in more than 20 countries, Sopra Steria generated revenue of e3.8 billion in 2017.
 
-Has experience in:
+ %Sopra-Steria, since 1968, supports the primary business areas of consulting services, systems integration, integration of ERP, implementation of applications, as well as providing technical support to users and application maintenance and outsourcing services and operation of professional processes.
 
-\begin{itemize}
-    \item Cyber Security via: (\url{https://www.soprasteria.com/services/cybersecurity})
-    \item Artificial Intelligence via:\\ (\url{https://www.soprasteria.com/services/technology-services/artificial-intelligence})
-    \item Internet of Things (IoT) via:\\ (\url{https://www.soprasteria.com/services/technology-services/internet-of-things})
-\end{itemize}
+%Has experience in:
 
-Supports following industries:
-\begin{itemize}
-    \item Aerospace
-    \item Defense and Security
-    \item Energy Utilities
-    \item Financial Services
-    \item Insurance and Social
-    \item Government
-    \item Retail
-    \item Telecommunication, Media and Entertainment
-    \item Transport
-\end{itemize}
+%\begin{itemize}
+ %   \item Cyber Security via: (\url{https://www.soprasteria.com/services/cybersecurity})
+ %   \item Artificial Intelligence via:\\ (\url{https://www.soprasteria.com/services/technology-services/artificial-intelligence})
+ %   \item Internet of Things (IoT) via:\\ (\url{https://www.soprasteria.com/services/technology-services/internet-of-things})
+%\end{itemize}
 
-
+%Supports following industries:
+%\begin{itemize}
+ %   \item Aerospace
+  %  \item Defense and Security
+  %  \item Energy Utilities
+  %  \item Financial Services
+  %  \item Insurance and Social
+  %  \item Government
+  %  \item Retail
+  %  \item Telecommunication, Media and Entertainment
+  %  \item Transport
+%\end{itemize}
 
 \vspace{10pt}
-\textbf{Sopra-Steria leads work package WPXX}
+\textbf{Sopra-Steria will lead work package \ref{wp:usecases} on Requirements, Use Cases and Evaluation}
 
 \vspace{10pt}
 
 \paragraph{Andreas Francois Vermeulen} Head of Analytics, Digital Consultancy Services within the United Kingdom.
 
-Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United-Kingdom. Author of three international books on big data, data science and machine learning.
+Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United-Kingdom. Andre received his bachelor degree at the North West University at Potchefstroom, his Master of Business Administration at University of Manchester, Master of Business Intelligence and Data Science degree at University of Dundee, and is busy undertaking a Doctor of Philosophy degree at the University of St Andrews. Andreas is a General Data Protection Regulation (GDPR) certified professional. He has designed and implemented data lakes, data warehouses and information systems for several industrial business solution on an international level using agile development methodology. Author of three international books on big data, data science and machine learning, including:
+\begin{itemize}
+\item Practical Hive - A Guide to Hadoop’s Data Warehouse System;
+\item Practical Data Science - A Guide to Building the Technology Stack for Turning Data Lakes into Business
+Assets.
+\end{itemize}
 
 \paragraph{Ian Kayne}  Head of Cyber Security Consulting within the United Kingdom.
 
