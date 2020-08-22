@@ -24,7 +24,8 @@ The objectives of \theWP{} are to:
 %and relate different levels of abstraction (from models to code)
 
 %\item Define a notion of behavioural equivalence between code fragments (within/between language(s)), able to capture refactorings, and suitable to formalise security and privacy-preserving equivalences;
-\item Define a notion of behavioural equivalence (in terms of security and privacy-preserving properties) between code fragments;
+%\item Define a notion of behavioural equivalence (in terms of security and privacy-preserving properties) between code fragments;
+\item Define a \emph{behavioural equivalence} (in terms of security and privacy properties) between code fragments;
 
 %\item Define a logic to capture properties of interest including security properties and privacy norms;
 % VJ: How is above different from the first point and can they be merged?
@@ -71,8 +72,8 @@ explore an interplay between runtime verification and exhaustive formal verifica
 
 %% New WP Description
 \begin{WPDescription}
-\theWP{} explores how rigorous formal methods can provide systematic guarantees of security and privacy in big data analytics applications at different levels of abstraction.
-We will define the abstractions for describing security properties of the code in a form understandable to software developers and introduce a specification language to capture the security and privacy assumptions and guarantees (\ref{task:contracts}). We adopt Abstract State Machines (ASMs) as an approach to move between the layers of abstraction and to extract vulnerabilities from the code for verification. ASMs will be used as a model for refactorings from WP2 and WP6, allowing us to automatically search for alternative refactorings that preserve security guarantees and avoid vulnerabilities (\ref{task:formalverif}). \ref{task:formalverif} will also consider privacy expectations expressed using context-relative informational norms, formalised in logic (e.g. FOL) and automatically checked across traces of execution. By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove (up to modelling assumptions) that the system is secure against all possible known and yet-unknown attacks (\ref{task:attackmodels}). Furthermore, we will investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (\ref{task:ContractsSastAssessment}). For functional security requirements, we will explore the use of metrics such as confidentiality, integrity and availability to assess them (\ref{task:RequirementsSastAssessment}).
+\theWP{} aims to use formal methods to systematically guarantee security and privacy of big data analytics.
+We will define the abstractions for describing security properties of the code in a form understandable to software developers and introduce a specification language to capture the security and privacy assumptions and guarantees (\ref{task:contracts}). We will adopt Abstract State Machines (ASMs) as an approach to move between the layers of abstraction and to extract vulnerabilities from the code for verification. ASMs will be used as a model for refactorings from WP2 and WP6, allowing us to automatically search for alternative refactorings that preserve security guarantees and avoid vulnerabilities (\ref{task:formalverif}). \ref{task:formalverif} will also consider privacy expectations expressed using context-relative informational norms, formalised in logic (e.g. FOL) and automatically checked across traces of execution. By explicitly modelling the computer system and the abilities of adversaries, formal methods can prove (up to modelling assumptions) that the system is secure against all possible known and yet-unknown attacks (\ref{task:attackmodels}). Furthermore, we will investigate the gaps or intersections between some of these approaches, enable their interoperability and hence avoid missing potential vulnerabilities at different layers of abstraction (\ref{task:ContractsSastAssessment}). For functional security requirements, we will explore the use of metrics such as confidentiality, integrity and availability to assess them (\ref{task:RequirementsSastAssessment}).
 \end{WPDescription}
 
 \begin{Task}
@@ -109,10 +110,10 @@ We will define the abstractions for describing security properties of the code i
 %\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows} combining their expertise in semantics, distributed logics and ASMs. \IBMshort and \SOPRAshort will provide expertise on the identification of security vulnerabilities.
 
 % VJ: New Version
-\theTask{} will define mechanisms to represent security contracts, which will describe security properties of the code. The contracts will be mapped to concrete syntax in different
-programming languages and, conversely, will be extracted using ASMs from the existing source code for further refinement. The task will proceed in three phases.
-The first phase will focus on the representation of security contracts and add to the C++ support to \textsf{eKnows} module for semi-automated extraction of ASMs from source code, which currently supports only Java. We will also provide initial formalisation of the security contracts in (temporal) logics for ASMs and interpreted over the code extracted ASMs (\ref{del:formal1}). The second phase will develop more sophisticated higher-level abstractions for identified programming patterns in C++ and Java and adapt the formalisation and logics to these new abstractions (\ref{del:formal2}). The third phase will refine the previous approach to take into account the semantics of the libraries used in the targeted distributed data analytics systems, using hierarchical logics to support reasoning across levels of abstraction(\ref{del:formal3}). This will give us a unifying formalism for the rigorous verification of the envisaged security contracts across multiple layers.
-\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows} combining their expertise in semantics, distributed logics and ASMs. \IBMshort and \SOPRAshort will provide expertise on the identification of security vulnerabilities and use cases.
+\theTask{} will define \emph{security contracts} which will describe security properties of the code. The contracts will be mapped to concrete syntax in different
+programming languages and, conversely, will be extracted using ASMs from the existing source code. The task will proceed in three phases.
+The first phase will focus on the representation of security contracts and will i) extend the \textsf{eKnows} module for semi-automated extraction of ASMs from source code with C++ support; and, ii) provide initial formalisation of the security contracts in (temporal) logics for ASMs (\ref{del:formal1}). The second phase will develop more sophisticated abstractions for identified programming patterns in C++ and Java and adapt the formalisation and logics to these new abstractions (\ref{del:formal2}). The third phase will refine this approach to take into account the semantics of the libraries used in the targeted distributed data analytics systems, using hierarchical logics to support reasoning across levels of abstraction(\ref{del:formal3}). This will give us a unifying formalism for the rigorous verification of the security contracts across multiple layers.
+\UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows}. \IBMshort and \SOPRAshort will provide expertise in identification of security vulnerabilities and use cases.
 \end{Task}
 
 \begin{Task}
@@ -146,12 +147,12 @@ The first phase will focus on the representation of security contracts and add t
 %of the programming languages used, and will explore notions of behavioural equivalence, abstraction/refinement as bidirectional transformations between code at the same layer, and the required logic for verification (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
 %\SA leads this task given their expertise in refactoring, formal verification and distributed logics. \SA will work closely with \SCCHshort on the formal verification elements, and with \UCM on code refactorings.
 
-\theTask{} will formalise the security contracts from~\ref{task:contracts} and define their semantics using concurrent ASMs. We will formalise abstraction/refinement as a bidirectional transformation between ASM specifications across layers and define security-preserving transformations and a notion of behavioural equivalence between code fragments (within/between languages), investigating how to formalise self-healing in this way. This will then be used for verification of the refactorings from~\ref{task:statichealing}, adding confidence that the refactorings i) do not change the intended behaviour and ii) the resulting code satisfies the security requirements imposed. 
+\theTask{} will formalise the security contracts from~\ref{task:contracts} and define their semantics using concurrent ASMs. We will formalise abstraction/refinement as a bidirectional transformation between ASM specifications across layers and define security-preserving transformations. We will also define a notion of behavioural equivalence between code fragments (within/between languages).
+\taskbreak
+Theorem provers and SMT solvers will then be combined to prove the correctness of these equivalences. 
+This will then be used for verification of the refactorings from~\ref{task:statichealing}, adding confidence that the refactorings i) do not change the intended behaviour and ii) the resulting code satisfies the security requirements imposed. 
 % VJ: Why is defining logic to capture properties of interest done in this task and not in T4.1?
-We will define a logic to capture properties of interest  including security properties (based on distributed (stochastic) temporal logics or similar separation
-logics) and privacy norms (FOL). 
-We will combine theorem provers and SMT solvers to prove the correctness of behavioural equivalences on the one side, and search for a subset of traces of execution that satisfy certain criteria including security properties and privacy norms.
-This task will proceed in three phases. In the first phase, we will restrict ourself to a tractable subset of the programming languages used and define notions of behavioural equivalence and abstraction/refinement and develop the required logic for verification (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
+We will define a logic (based on e.g.~distributed stochastic temporal logics) to capture security properties and privacy norms (FOL) and search for execution traces that satisfy these properties and norms. This task will proceed in three phases. In the first phase, we will define notions of behavioural equivalence and abstraction/refinement and develop the required logic for verification of a tractable subset of the programming languages used (\ref{del:formal1}). In the second phase we will expand the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, logic and satisfaction in this way  (\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns.
 \SA leads this task given their expertise in refactoring, formal verification and distributed logics. \SA will work closely with \SCCHshort on the formal verification elements, and with \UCM on code refactorings.
 
 \end{Task}
@@ -181,7 +182,8 @@ This task will proceed in three phases. In the first phase, we will restrict our
 %In \theTask, we will formalise the refactorings from TX.X showing proof sketches of their correctness. We will identify a well-formed semantics for a subset of the target language and show an equivalence relation for a selected number of refactorings over this language. The proof sketches will be mechanised, using a theorem prover such as COQ or Isabelle, or by using a dependent typed approach, such as Idris. The proofs of correctness will show that the refactored program is (functionally) equivalent to the original, w.r.t. to the functional semantics defined. 
 
 \begin{Task}
-\TaskTitle{Attack Models and Security Repairability of Proof Obligations}
+%\TaskTitle{Attack Models and Security Repairability of Proof Obligations}
+\TaskTitle{Proof Obligations}
 \TaskParticipant{SCCH}{5}
 \TaskParticipant{USTAN}{5}
 \TaskParticipant{IBM}{1}
@@ -196,10 +198,13 @@ This task will proceed in three phases. In the first phase, we will restrict our
 \TaskHeader{}
 \tasklabel{task:attackmodels}
 
-The aim of \theTask\ is to define classes of security contract requirements for distributed data analytics applications, and formalise repair proof obligations for ASMs with respect to these security contract requirements. In a first step towards this, the industrial use cases will be analysed for security threats from two different angles concerning secrets in the data and processes that are to be protected, and anticipated actions of potential attackers. Regarding secrets this will be formalised through static and dynamic constraints, for which subformulae are identified that by themselves do not contain any secrets. Regarding potential attacks, attacker models for each of the security constraints will be developed. In a second step, the one-step logic for reasoning about concurrent systems of ASM specifications will be used to formalise the security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM. This task will proceed in phases: the first phase will look at security threats on processes (\ref{del:formal1}),
-the second phase will look at security threats on data (\ref{del:formal2}) and the third phase will explore
-more complex security and privacy threats affecting multiple layers, data and processes.
-\SCCHshort will lead this task working closely with  \SA on all aspects. \IBMshort will provide their expertise on how to identify and repair vulnerabilities.
+%\theTask\ will define classes of security contract requirements for distributed data analytics applications, and formalise repair proof obligations for ASMs with respect to these requirements. In a first step towards this, the industrial use cases will be analysed for security threats from two different angles concerning secrets in the data and processes that are to be protected, and anticipated actions of potential attackers. Regarding secrets this will be formalised through static and dynamic constraints, for which subformulae are identified that by themselves do not contain any secrets. Regarding potential attacks, attacker models for each of the security constraints will be developed. In a second step, the one-step logic for reasoning about concurrent systems of ASM specifications will be used to formalise the security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM. This task will proceed in phases: the first phase will look at security threats on processes (\ref{del:formal1}),
+%the second phase will look at security threats on data (\ref{del:formal2}) and the third phase will explore
+%more complex security and privacy threats affecting multiple layers, data and processes.
+%\SCCHshort will lead this task working closely with  \SA on all aspects. \IBMshort will provide their expertise on how to identify and repair vulnerabilities.
+
+\theTask{} will define classes of security contract requirements for distributed data analytics applications, and formalise repair proof obligations for ASMs with respect to these requirements. We will two kinds of threats: \emph{secrets in the data and processes that are to be protected}, for which proof obligations will be formalised through static and dynamic constraints and identification of secret-free subformulae and \emph{anticipated actions of potential attackers}, developing attacker models for each of the security constraints. After that, the one-step logic for reasoning about concurrent systems of ASM specifications will be used to formalise the security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM. This task will proceed in three phases. The first phase will look at security threats on processes (\ref{del:formal1}), the second phase will look at security threats on data (\ref{del:formal2}) and the third phase will explore more complex security and privacy threats affecting multiple layers, data and processes. \SCCHshort will lead this task working closely with \SA on all aspects. \IBMshort will provide their expertise on identifying vulnerabilities.
+
 \end{Task}
 
 
@@ -241,21 +246,17 @@ more complex security and privacy threats affecting multiple layers, data and pr
 \TaskHeader{}
 \tasklabel{task:ContractsSastAssessment}
 
-Complementing the formal verification of security contracts, \theTask, will provide a novel way to assess the risk that a security contract is not met by an application in the presence of 
-uncertainty. %, based on uncertain information. This will include:
-Risk assessment under uncertainty will require i) the parsing and analysis of security contracts; ii) the mapping of the security contracts with the potentially impacted source code;
-iii) designing an application programming interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
-iv) explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties. 
-The task will proceed in phases according to the steps above and in increasing complexity on the security contracts and levels of uncertainty in \ref{del:formal1} and \ref{del:formal2}, and explored with the use cases extensively in 
-\ref{del:formal3}.
-\UCM will lead the task given their expertise in security contracts.  \IBMshort, \YAGshort and \SOPRAshort will provide their practical experience and security expertise. \SA will help with the formal verification.
-%begin{itemize}
-%\item The parsing and analysis of the security contracts; %resulting from present \theWP / T4.1 and T4.2
- %   \item Mapping of the security contracts with the potentially impacted source code;
-  %  \item Designing an application programming interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
-  %  \item Explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties;
-%\end{itemize}
+%Complementing the formal verification of security contracts, \theTask, will provide a novel way to assess the risk that a security contract is not met by an application in the presence of 
+%uncertainty. %, based on uncertain information. This will include:
+%Risk assessment under uncertainty will require i) the parsing and analysis of security contracts; ii) the mapping of the security contracts with the potentially impacted source code;
+%iii) designing an application programming interface between formal verification and static analysis to collect and include formally verified properties of the source code in the vulnerability assessment algorithms;
+%iv) explore overall risk assessment that a security contract is not met, integrating formally proven properties to static analysis outputs and machine learning detected uncertain security properties. 
+%The task will proceed in phases according to the steps above and in increasing complexity on the security contracts and levels of uncertainty in \ref{del:formal1} and \ref{del:formal2}, and explored with the use cases extensively in 
+%\ref{del:formal3}.
+%\UCM will lead the task given their expertise in security contracts.  \IBMshort, \YAGshort and \SOPRAshort will provide their practical experience and security expertise. \SA will help with the formal verification.
 
+\theTask{} will complement the formal verification of security contracts with mechanisms to assess the risk of a security contract not being met in the presence of uncertainty. 
+This assessment will be done by parsing the security contracts and comparing their formally proven properties to the output of static analysis for vulnerabilities and machine-learning based methods to detect uncertain security properties. The task will proceed in three phases, with each phase considering security contracts of increasing complexity as developed in T4.1, and resulting in deliverables~\ref{del:formal1},~\ref{del:formal2} and \ref{del:formal3}. \UCM will lead the task given their expertise in security contracts.  \IBMshort, \YAGshort and \SOPRAshort will provide their practical experience and security expertise. \SA will help with the formal verification.
 \end{Task}
 
 
@@ -279,11 +280,16 @@ The task will proceed in phases according to the steps above and in increasing c
 }
 \TaskHeader{}
 \tasklabel{task:RequirementsSastAssessment}
-As another approach to extend formal verification of security contracts, in \theTask\ we will explore and prototype a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability.
-We will develop a domain specific language to capture the functionalities description, allocate requirements and map with the source code. Each vulnerability which breaks a requirement will be identified and allocated decision making information for the user.
-The use cases will provide realistic examples to explore the assessment of the CVSS metrics.
-The task will proceed in phases similarly to others in this WP. The first phase will consider security contracts and vulnerability assessment within one layer only (\ref{del:formal1}). The second phase will add more complex contracts and vulnerabilities across layers (\ref{del:formal2}). The third phase will focus specifically on vulnerabilities over distributed data analytics systems (\ref{del:formal3}).
-\YAGshort will lead this task given their expertise in security assessment. \SA will contribute with their expertise in the verification of stochastic properties, and \UCM with their expertise in C++ and contracts. \IBMshort and \SOPRAshort will provide advice with their  practical experience in security vulnerability detection.
+
+%As another approach to extend formal verification of security contracts, in \theTask\ we will explore and prototype a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability.
+%We will develop a domain specific language to capture the functionalities description, allocate requirements and map with the source code. Each vulnerability which breaks a requirement will be identified and allocated decision making information for the user.
+%The use cases will provide realistic examples to explore the assessment of the CVSS metrics.
+%The task will proceed in phases similarly to others in this WP. The first phase will consider security contracts and vulnerability assessment within one layer only (\ref{del:formal1}). The second phase will add more complex contracts and vulnerabilities across layers (\ref{del:formal2}). The third phase will focus specifically on vulnerabilities over distributed data analytics systems (\ref{del:formal3}).
+%\YAGshort will lead this task given their expertise in security assessment. \SA will contribute with their expertise in the verification of stochastic properties, and \UCM with their expertise in C++ and contracts. \IBMshort and \SOPRAshort will provide advice with their  practical experience in security vulnerability detection.
+
+\theTask{} will further complement formal verification of security contracts by developing a semi-automated assessment of functional security requirements, using the CVSS metrics such as confidentiality, integrity and availability. We will develop a domain specific language to capture the functionalities description, allocate requirements and map to the source code. Each vulnerability which breaks a requirement will be identified and allocated decision making information for the user.
+The task will proceed in three phases, considering security contracts and vulnerability assessment within one layer only (\ref{del:formal1}), more complex contracts and vulnerabilities across layers (\ref{del:formal2}) and focusing specifically on vulnerabilities over distributed data analytics systems (\ref{del:formal3}).
+\YAGshort will lead this task given their expertise in security assessment. \SA will contribute with their expertise in the verification of stochastic properties, and \UCM with their expertise in C++ and contracts. \IBMshort and \SOPRAshort will provide advice with their practical experience in security vulnerability detection.
 
 \end{Task}
 
