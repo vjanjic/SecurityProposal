@@ -1608,7 +1608,7 @@ in delivering training in C++ in companies such as these and other customers.
 
 
 
-%\clearpage
+\clearpage
 \section{Impact}
 \label{sec:impact}
 
@@ -2768,12 +2768,12 @@ Critical Risks for Implementation
 \end{center}
 \end{minipage}}
 
-\bigskip
+\vspace{0.2cm}
 Steps have already been taken to reduce the level of risk within the overall implementation plan.  The table below
 identifies the main residual risks that are foreseen.  This register will be maintained
 and updated as necessary during the project in order to minimise risk and so to maximise its successful completion.
 
-\bigskip
+%\bigskip
 
 %\begin{tabular}{| p{3.2cm} | p{1.8cm} | p{1.5cm} | p{10.3cm}  |}  \hline
 %\begin{longtable}{| p{3.2cm} | p{1.8cm} | p{1.5cm} | p{10.3cm}  |}  \hline
@@ -2811,17 +2811,14 @@ if necessary, new partners with required competencies will be
 incorporated into the project.
 
 \\\hline
-Brexit or COVID-19 pandemic impact the achievement of the project objectives.
+COVID-19 pandemic negatively impacts the progress of the project.
 \par
 (\textbf{Likelihood: Low}
 \par
 \textbf{Severity: Medium}
 )
 & ALL & 
-It is possible that external events, such as administrative problems due to Brexit or required social distancing due to the ongoing COVID-19 pandemic, can impact the communication and collaboration between the project partners. \TheProject{} will take all measures to minimise the impact of Brexit, by using computational clouds (with the actual machines situated in Europe) for processing and storage of the project data, therefore avoiding potential administrative problems with data ownership and sharing. The project partners are well used to online collaboration, being members of various EU project consortiums that have switched to online meetings during the ongoing pandemic, and are thus able to continue to do so
-%the continuation of such %social distancing 
-%measures will not 
-without impacting the progress of the project.
+The ongoing COVID-19 pandemics might impose severe restrictions on physical meetings and dissemination activities (such as project workshops). The project partners are, however, well used to online collaboration, being members of various EU project consortiums that have switched to online meetings during the ongoing pandemic, and are thus able to continue to do so without impacting the progress of the project. Project workshops will, should this be necessary, also switch to virtual delivery.
 
 \\\hline
 Brexit and the free flow of personal data.
@@ -2834,7 +2831,7 @@ Brexit and the free flow of personal data.
 
 Should the UK leave the EU %European Union (“the EU”) 
 without an adequacy agreement with the European Commission whereby the Commission do not recognise the Data Protection Act 2018 to provide the same feel of protection for the personal data of EU citizens as provided for by the General Data Protection Regulation, then the transfer of personal data from partner institutions in member states or the European Economic Area (EEA) may experience some level of disruption.
-The UK Government have noted that they intend to recognise the GDPR, and to allow for the free transfer of personal data from the UK to the EU and the EEA. The University will work with partners to implement EC Standard Contractual Clauses to allow for the free flow of personal data from the EU to the UK, for the purposes of this project, should the need arise.
+The UK Government have noted that they intend to recognise the GDPR, and to allow for the free transfer of personal data from the UK to the EU and the EEA. \SAshort{} will work with partners to implement EC Standard Contractual Clauses to allow for the free flow of personal data from the EU to the UK, for the purposes of this project, should the need arise.
 
 \\\hline
 Failure to achieve key project objectives.
@@ -2847,27 +2844,24 @@ Failure to achieve key project objectives.
 In order to make the major progress that is required,
 \TheProject{} incorporates leading-edge
 research and complex software development, whose absolute success cannot be predicted. 
-All partners will, however, strive to achieve project objectives
-to the best of their ability.  Based on our results to date, and taking into account
-the excellent technical and research track records of each of
+Taking into account the excellent technical and research track records of each of
 the partners, it appears entirely feasible to achieve not only our general
 technical research objectives, but also all the specific objectives
 of the work packages.  In the event that it
 proves impossible to achieve some specific objective within the
 scope of the project, we will firstly attempt to reallocate
 resources to ensure that all objectives are obtained, then
-to prioritise objectives so that the most critical objectives are achieved,
-and finally, if absolutely necessary, we will scale down our technical objectives, by
+to prioritise the most critical objectives and finally, if absolutely necessary, we will scale down our technical objectives, by
 relaxing or deleting some part of those objectives as required
 to achieve success. 
 
 \\\hline
-Inability to achieve interoperability between different techniques for detecting security vulnerabilities
+Inability to achieve interoperability between techniques for detecting security vulnerabilities
 (\textbf{Likelihood: Medium}
 \par
 {\textbf{Severity: Low}})
 & WP2 &
-Due to the fact that we will consider three complementary methods for detecting security vulnerabilities (static analysis, dynamic analysis and runtime analysis), each with its own advantages and disadvantages, it might be proved infeasible to automatically link all three in a tool-chain, in terms of automatic converting of an output of one method to an input of another. In this case, we will not aim at full integration of the overall system and the associated development methodology will be extended with guidelines of how the interoperability can be achieved, i.e.~how do the outputs of one phase of detection need to be adapted to serve as inputs to the next one. 
+It might prove infeasible to provide automatic linking of all three methods for detecting security vulnerabilities (static analysis, dynamic analysis and runtime monitoring) in a tool-chain. In this case, we will not aim for full integration of the overall system and the \TheProject{} methodology will be extended with guidelines of how the interoperability can be achieved, i.e.~how do the outputs of one phase of detection need to be adapted to serve as inputs to the next one. 
 
 \\\hline
 Inability to adapt the generic vulnerability detection techniques to AI-based distributed big data analytics.
@@ -2875,7 +2869,7 @@ Inability to adapt the generic vulnerability detection techniques to AI-based di
 \par
 {\textbf{Severity: High}}
 & WP2, WP3 &
-Adapting vulnerability detection techniques to a specific kind of application such as AI-based distributed big data analytics require to identify, model and develop mechanisms to detect vulnerable code sequences in the application. It may happen that \TheProject{} technologies won't be able to automatically detect some vulnerabilities because of technological limitations, combinatory explosion or because of the complexity of some vulnerabilities. In that case we will revise the ambition to support semi automated vulnerability detection instead of fully automated. Additional training of the machine learning algorithms or some of the technologies developed in the project, such as code mining and supervised self healing, will then be deployed.
+Adapting vulnerability detection techniques to AI-based distributed big data analytics requires us to identify, model and develop mechanisms to detect vulnerable code sequences such applications. It may happen that \TheProject{} technologies won't be able to automatically detect some vulnerabilities because of technological limitations, combinatory explosion or because of the complexity of some vulnerabilities. In that case we will revise the ambition to support semi automated vulnerability detection instead of fully automated. Additional training of the machine learning algorithms, code mining and supervised self healing, will then be deployed.
 
 \\\hline
 Self-Healing techniques cannot repair the identified vulnerabilities.
@@ -2883,7 +2877,7 @@ Self-Healing techniques cannot repair the identified vulnerabilities.
 \par
 {\textbf{Severity: Medium}})
 & WP2, WP3 &
-While implementing both code refactoring and runtime adaptation to deal with reparation of identified vulnerabilities will ensure we are able to repair a wide range of vulnerabilities, it is possible (and likely) that we will identify certain vulnerabilities that will require so substantial re-engineering of the code that it will be impossible to achieve it with either of these two methods. In such cases, we will aim to capture such code patterns and feed them into the extensions of security coding standards that will be developed over the course of the project, as well as to identify the code practices that lead to such threats and address them in more abstract way in the \TheProject{} methodology. In an unlikely event that this turn out to be the case for most of the security and privacy vulnerabilities, we will redeploy the effort from self-healing into developing coding standards and project methodology and deal with these threats there.
+While implementing both code refactoring and runtime adaptation as means for self-healing will ensure that we are able to repair a wide range of vulnerabilities, it is possible (and likely) that we will identify certain vulnerabilities that will require so substantial re-engineering of the code that it will be impossible to achieve it with either of these two methods. In such cases, we will aim to capture such code patterns and feed them into the extensions of security coding standards that will be developed, as well as to identify the code practices that lead to such threats and address them in more abstract way in the \TheProject{} methodology. In an unlikely event that this turn out to be the case for most of the security and privacy vulnerabilities, we will redeploy the effort from self-healing into developing coding standards and project methodology.
 
 \\\hline
 Security and privacy vulnerabilities arise from the internals of the libraries for storage and processing of big data.
@@ -2892,16 +2886,18 @@ Security and privacy vulnerabilities arise from the internals of the libraries f
 \par
 {\textbf{Severity: Medium}})
 & WP3 &
-Using patter-based design and implementation approach, the main goal of \TheProject{} is to identify vulnerabilities arising from the interaction of different layers (end-user application layer, machine learning library layer, data processing layer and data storage layer) of a typical big-data analytics application. Therefore, we do not aim to extensively test the internals of libraries used at each layer due to complexity of their code, but rather to treat them as black boxes. It is, however, possible that the majority of vulnerabilities in the end-user application will come from the internal functioning of layers, rather than the interaction between libraries at different layers. This is, however, not likely as we will use tried-and-tested libraries that have been in use for long time. Should this still turn out to be the case, we will redeploy the effort into analysing internals of the considered libraries instead of their composition. This would likely result in us being able to detect and repair fewer vulnerabilities, but it would still allow us to make significant improvement in security compared to the state-of-the-art.
- 
-\\\hline
-Inability of the generic tools for vulnerability detection and self-healing to detect/repair vulnerabilities in big-data analytics applications
-\par
-({\textbf{Likelihood: Low}}
-\par
-{\textbf{Severity: High}})
-& WP2, WP3 &
-WP2 will develop generic techniques for discovering and repairing security and privacy vulnerabilities in distributed applications, focusing on analysing the source code of such applications and profiling their execution. WP3 will apply these techniques for the problem of big-data analytics. It is possible that the techniques from WP2 will not be able to detect majority of vulnerabilities when applied to the specific problem that WP3 considers, due to sheer scale of the computations and unpredictability of the interactions between storage and processing agents. This is unlikely to happen, as the techniques in WP2 will be designed with the scaling in mind and will be adapted to the non-determinism that parallel computations exhibit. In the case that it still happens, we will redeploy effort from other work packages (specifically WP2 and WP3) to further adaptation of the core techniques. 
+\TheProject{} aims to identify vulnerabilities arising from the interaction between different layers (data storage, data processing etc.) of a typical big-data analytics application, as well as from the use of libraries at each layer in the data analysis code. It is, however, possible that majority of vulnerabilities will come from the \emph{internals} of these libraries, which we do not aim to extensively analyse (due to complexity of their code). This is, however,  not likely as we will use tried-and-tested libraries. Should this still turn out to be the case, we will redeploy the effort into analysing internals of the considered libraries instead of their composition. This would likely result in us being able to detect and repair fewer vulnerabilities, but it would still allow us to make significant improvement in security compared to the state-of-the-art.
+
+%\\\hline
+%Inability of the generic tools for vulnerability detection and self-healing to detect/repair vulnerabilities in big-data analytics applications
+%\par
+%({\textbf{Likelihood: Low}}
+%\par
+%{\textbf{Severity: High}})
+%& WP2, WP3 &
+%It is possible that generic techniques for discovering and repairing vulnerabilities in WP2 will not be able to detect majority of vulnerabilities 
+%WP2 will develop generic techniques for discovering and repairing security and privacy vulnerabilities in distributed applications, focusing on analysing the source code of such applications and profiling their execution. WP3 will apply these techniques for the problem of big-data analytics. It is possible that the techniques from WP2 will not be able to detect majority of vulnerabilities when applied to the specific problem that WP3 considers, due to sheer scale of the computations and unpredictability of the interactions between storage and processing agents. This is unlikely to happen, as the techniques in WP2 will be designed with the scaling in mind and will be adapted to the non-determinism that parallel computations exhibit. In the case that it still happens, we will redeploy effort from other work packages (specifically WP2 and WP3) to further adaptation of the core techniques. 
+%
 \\\hline
 Inability to ensure security due to lack of data
 \par
@@ -2966,13 +2962,12 @@ fully automated.
 \par
 {\textbf{Severity: Medium}}
 & WP6 &
-Several partners have experience in different ways of analyzing and
+Several partners have experience in analysing and
 refactoring source code, which gives high confidence that both the
 identification and the refactoring will be successful.
-We will implement separately the coding guidelines violation detection
-from the corresponding refactorings and later we will make both
-processes interoperable. In case that for some specific rule the 
-interoperation cannot be integrated, still both the identification
+We will independently implement the coding guidelines violation detection
+and the corresponding refactorings and later make them interoperable.
+In case that for some specific rule the  interoperation cannot be integrated, still both the identification
 and the refactoring will be available.
 
 \\\hline
@@ -3081,7 +3076,7 @@ the public deliverables that appear on the project web site.
 %\TODO{Update this to reflect the consortium.}
 
 \subsubsection*{Technical Steering Committee}
-\vspace{-6pt}
+\vspace{-5pt}
 
 The \emph{Technical Steering Committee} comprises the WTLs, plus the
 Project Coordinator (who will act as chair).  Its purpose is to ensure
@@ -3103,7 +3098,7 @@ with the
 Project Coordinator retaining the casting vote.
 
 \subsubsection*{Project Steering Committee}
-\vspace{-6pt}
+\vspace{-5pt}
 
 The \emph{Project Steering Committee} comprises one representative from each partner
 (usually the PI), and is chaired by the Project Coordinator.  
@@ -3362,8 +3357,10 @@ recent and ongoing research projects (e.g. \textbf{Serums}).
 The teams share common technical interests and several are active members in e.g. the
 HiPEAC network of excellence (\SAshort{}).
 Work Packages have been designed to foster close collaboration
-between teams at different organisations, with multiple groups involved in all of
-the technical and evaluation work packages. The tasks in 
+between teams at different organisations.
+%, with multiple groups involved in all of
+%the technical and evaluation work packages. 
+The tasks in 
 each work package have been allocated on the basis of
 technical expertise and ability. All tasks have been designed to involve multi-site
 collaboration and/or the exchange of information, which is
@@ -3412,9 +3409,7 @@ Members of the team have been heavily involved in running
 various national and international research projects.  The
 Project Coordinator, Dr Juliana Bowles, has obtained numerous
 research grants and awards from national and international
-bodies...
-
-As described in the partner descriptions below,
+bodies XX. As described in the partner descriptions below,
 %% Should add activities for INRIA, CodePlay etc.
 most of the other partners have been extensively involved in previous and
 ongoing EU projects at both technical and managerial
