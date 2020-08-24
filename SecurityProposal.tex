@@ -368,6 +368,8 @@ In addition, data intensive applications are typically built from layers of diff
 establishing security and privacy properties of big data analytics remains 
 a hard challenge which requires urgent attention, extensive research and industrial collaboration.
 
+
+
 %Formal methods are the only currently-known approaches that 
 %could provide strong end-to-end security guarantees throughout system execution and across levels of abstraction. They have indeed had significant success over the years  in tackling security related problems, such as reasoning about the correctness of cryptographic algorithms~\cite{FM-crypto} or specifying and enforcing privacy guarantees~\cite{FM-priv-guarantee}. 
 %Nonetheless, establishing security and privacy properties of big data analytics remains a hard challenge which requires urgent attention, extensive research and industrial collaboration. % recently.
@@ -424,9 +426,10 @@ tools for identifying and repairing security vulnerabilities with rigorous forma
 The specific \emph{aims} of the \TheProject{} project are:
 
 \begin{description}
-\item[Aim 1:] To produce novel rigorous methods for the \emph{formal specification and verification} of 
+\item[Aim 1:] To produce a novel discipline for the development of distributed AI-based big-data analytics systems, spanning different software engineering layers, from new \emph{security coding standards}, new structured high-level \emph{security patterns}, new software development tool-support, in the form of \emph{refactoring} and \emph{vulnerability detection}, to rigorous methods for the \emph{formal specification and verification} of security properties, addressing security and privacy of both data storage and data processing;
+%\item[Aim 1:] To produce novel rigorous methods for the \emph{formal specification and verification} of 
 %security properties of
-  distributed AI-based data analytics systems, addressing security and privacy of both data storage and data processing;
+ % distributed AI-based data analytics systems, addressing security and privacy of both data storage and data processing;
 
 \item[Aim 2:] To %build on the 
 enhance existing and develop new efficient techniques for \emph{identifying generic code patterns} that
@@ -618,7 +621,7 @@ The chosen use cases and their domains will provide evidence of the impact \TheP
 
 %\pagebreak
 \subsection{Relation to the Work programme}
-
+%% SU-DS02-2020 Need to check this...
 \TheProject{} directly addresses the challenge that is posted by \textbf{H2020-SU-DS-2020}. By exploiting the partners' expertise in formal methods, authentication, security, privacy and AI-based distributed data analytics and by integrating the developed solutions into a semi-automated code analysis, refactoring and runtime adaptation based software development methodology, we aim to \textbf{integrate state-of-the-art approaches for security and privacy management in a holistic and dynamic way} while \textbf{relying on Artificial Intelligence and automation to reduce the level of human intervention necessary}. Our techniques for identifying and repairing security and privacy vulnerabilities, addressing both storage and processing of data in big-data analytics applications will address the problem of \textbf{storage and processing of data in different interconnected places}. Integration of all the methods into a coherent technology, comprising also run-time vulnerabilities detection and run-time adaptation to address the identified problems, will allow the end users to  \textbf{constantly forecast, monitor and update the security of their ICT systems}. Collectively, detecting and repairing security and privacy risks in data storage and processing will allow \textbf{monitoring and mitigation of security risks, including those related to data and algorithms}. Our inherent focus on distributed systems, with a particular focus on privacy and security of machine learning frameworks and models, both while they are trained and while they are used, will improve \textbf{collaboration and sharing of information related to security and privacy management}. 
 
 
@@ -822,7 +825,7 @@ The main target of the \TheProject{} project are AI-based big data analytics app
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \textbf{Programming Languages Support.} \TheProject{} mainly targets big data analytics applications written in C++, which is heavily used in many of the infrastructures for  big data processing, including state-of-the-art distributed databases such as MongoDB and is known to deliver excellent performance on parallel hardware. %Furthermore, two out of three 
-Two of our use cases considered in the project are based on C++. However, taking into account the popularity of Java and Python in big data analytics, \TheProject{}  will also target Java, and to a smaller extent Python. 
+Two of our proposed use-cases are based on C++. However, taking into account the popularity of Java and Python in big data analytics, \TheProject{}  will also target Java, and to a smaller extent Python. 
 Our formal approach is mostly language independent.
 %will cover all languages. 
 The table below lists the languages that different technologies in  \TheProject{} will support. % over the course of
@@ -1172,7 +1175,8 @@ security of distributed pattern-based data analytics by:
 %\vjcomment{UOD and SCCH to write}
 Protecting privacy of the data is a key issue for data analytics, especially when it is based on machine learning as it poses several types of security risks. Different methods such as k-anonymity~\cite{10.1142/S0218488502001648}, l-diversity~\cite{10.1145/1217299.1217302}, t-closeness~\cite{DBLP:conf/icde/LiLV07}, and differential privacy~\cite{10.1561/0400000042} have been developed to address these issues. Differential privacy is a formal framework to quantify the degree to which the privacy for each individual in the dataset is preserved while releasing the output of a data analysis algorithm. It guarantees that an adversary, by virtue of presence or absence of an individual's data in the dataset, cannot draw any conclusions about an individual from the released output of the analysis algorithm. Differential privacy, however, does not always adequately limit inference about participation of a single record in the database~\cite{10.1145/1989323.1989345}. Differential privacy requirement does not necessarily constrain the information leakage from a data set~\cite{Calmon_privacyagainst}. Correlation among records of a dataset would degrade the expected privacy guarantees of differential privacy mechanism~\cite{DBLP:conf/ndss/LiuMC16}. These limitations of differential privacy motivate an information theoretic approach to privacy where privacy is quantified by the mutual information between sensitive information and the released data~\cite{5288525,Calmon_privacyagainst,6482222,7888175,DBLP:journals/corr/abs-1710-09295}. 
 
-A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. Information theoretic privacy can be optimized theoretically using a prior knowledge about data statistics. However, in practice, a prior knowledge (such as joint distributions of public and private variables) is missing and therefore a data-driven approach based on generative adversarial networks has been suggested~\cite{Huang_2017}. The data-driven approach of \cite{Huang_2017} leverages recent advancements in generative adversarial networks to allow learning the parameters of the privatization mechanism. However, the framework of \cite{Huang_2017} is limited to only binary type of sensitive variables. A similar approach~\cite{8919758} applicable to arbitrary distributions (discrete, continuous, and/or multivariate) of variables employs adversarial training to perform a variational approximation of mutual information privacy. The approach of approximating mutual information via a variational lower bound was also used in~\cite{NIPS2016_6399}.         
+A data release mechanism aims to provide useful data available while simultaneously limiting any reveled sensitive information. The data perturbation approach uses a random noise adding mechanism to preserve privacy, however, results in distortion of useful data and thus utility of any subsequent machine learning and data analytics algorithm is adversely affected. There remains the challenge of studying and optimizing privacy-utility tradeoff especially in the case when statistical distributions of data are unknown. Information theoretic privacy can be optimized theoretically using a prior knowledge about data statistics. However, in practice, a prior knowledge (such as joint distributions of public and private variables) is missing and therefore a data-driven approach based on generative adversarial networks has been suggested~\cite{Huang_2017}. The data-driven approach of \cite{Huang_2017} leverages recent advancements in generative adversarial networks to allow learning the parameters of the privatization mechanism. However, the framework of \cite{Huang_2017} is limited to only binary type of sensitive variables. 
+%A similar approach~\cite{8919758} applicable to arbitrary distributions (discrete, continuous, and/or multivariate) of variables employs adversarial training to perform a variational approximation of mutual information privacy. The approach of approximating mutual information via a variational lower bound was also used in~\cite{NIPS2016_6399}.         
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of privacy-preserving data analytics by:
@@ -1358,9 +1362,9 @@ application and infrastructure developers.
 \subsubsection{Identity Management}
 \label{sect:auth}
 \vjcomment{COGNITIVE to write}
-Identity management entails solutions for user identity, authentication and authorization functions. Core components of identity management are multi-factor authentication, continuous user identification, and access control. \textit{Multi-Factor Authentication (MFA)} has been introduced with the aim to provide a higher level of security and continuous protection of resources from unauthorized access through the use of more than two categories of credentials \cite{scheidt2005multiple, bhargav2007privacy}. Researchers and practitioners have attempted to provide various solutions for multi-factor authentication such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) and voice recognition \cite{mare2016study, ometov2018multi, 10.1145/1053291.1053327}. \textit{Continuous user identification} is a technology aiming to verify the end user's identity in real-time (after successfully authenticating), while carrying out tasks. Several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones \cite{10.1145/2991079.2991097, 10.1145/2702123.2702252, gascon2014continuous}, physiological data analysis such as body signals (heart rate, skin conductance, etc.) \cite{ometov2018multi, rui2018survey}, Electrocardiographic (ECG) recognition \cite{silva2011clinical}, face biometrics \cite{bhattacharyya2009biometric, dabbah2007secure}, and eye gaze data analytics \cite{jain2004introduction, bulling2012increasing}. \textit{Access control} is a mechanism that regulates access to the system resources. Current access control systems entail several challenges, such as third-party presence, lack of scalability, and lack of privacy \cite{10.1145/3350546.3352561, 10.1145/3316481}. In this context, Blockchain technology has specific features that can address several of the existing challenges in access control, i.e., its distributed nature addresses the problem of single-point of failure, elimination of third-parties and potential privacy leakage, monitoring and access to trustable and unmodifiable history logs.
+Identity management entails solutions for user identity, authentication and authorisation functions. Core components of identity management are multi-factor authentication, continuous user identification, and access control. \textit{Multi-Factor Authentication (MFA)} has been introduced with the aim to provide a higher level of security and continuous protection of resources from unauthorized access through the use of more than two categories of credentials \cite{scheidt2005multiple, bhargav2007privacy}. Researchers and practitioners have attempted to provide various solutions for multi-factor authentication such as tokens based on push notifications on smartphones, Time-based One Time Passwords (TOTP), Quick Response (QR) codes, graphical Transaction Authentication Numbers (PhotoTANs) and voice recognition \cite{mare2016study, ometov2018multi, 10.1145/1053291.1053327}. \textit{Continuous user identification} is a technology aiming to verify the end user's identity in real-time (after successfully authenticating), while carrying out tasks. Several works proposed solutions based on users’ interaction behavior analysis on both desktop computers and smartphones \cite{10.1145/2991079.2991097, 10.1145/2702123.2702252, gascon2014continuous}, physiological data analysis such as body signals (heart rate, skin conductance, etc.) \cite{ometov2018multi, rui2018survey}, Electrocardiographic (ECG) recognition \cite{silva2011clinical}, face biometrics \cite{bhattacharyya2009biometric, dabbah2007secure}, and eye gaze data analytics \cite{jain2004introduction, bulling2012increasing}. \textit{Access control} is a mechanism that regulates access to the system resources. Current access control systems entail several challenges, such as third-party presence, lack of scalability, and lack of privacy \cite{10.1145/3350546.3352561, 10.1145/3316481}. In this context, Blockchain technology has specific features that can address several of the existing challenges in access control, i.e., its distributed nature addresses the problem of single-point of failure, elimination of third-parties and potential privacy leakage, monitoring and access to trustable and unmodifiable history logs.
 %
-Various organizations and companies also exist that are either adopting MFA, or continuous user identification (e.g., Cisco’s Duo Security, Futurae, Acceptto, Auth0, Saaspass). However, these are far from fully adopting solutions that combine MFA, continuous user identification and access control. These existing systems work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA, continuous user identification and access control under a unified and usable integration system. The strengths of the proposed unified integration system are concentrated in the rapid deployment to existing online services and the agility to adapt to existing ecosystems, aiming to protect sensitive resources while at the same time provide a seamless security experience to the end users.
+Various organizations and companies also exist that are either adopting MFA, or continuous user identification (e.g., Cisco’s Duo Security, Futurae, Acceptto, Auth0, Saaspass). However, these are far from fully adopting solutions that combine MFA, continuous user identification and access control. These systems work towards providing different authentication options to users. However, these solutions are mostly dedicated and favor either the multi-factor aspect or the continuous user authentication aspect without providing a unified solution that combines the two under an agile system integration model. Despite sharing some similar second factors for authentication, our innovation lies on the combination of MFA, continuous user identification and access control under a unified and usable integration system. The strengths of the proposed unified integration system are concentrated in the rapid deployment to existing online services and the agility to adapt to existing ecosystems, aiming to protect sensitive resources and provide a seamless security experience to the end users.
 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of authentication for big data analytics systems by:
@@ -1416,7 +1420,7 @@ Various organizations and companies also exist that are either adopting MFA, or 
 
 In essence, refactoring is about changing the structure of a program's source code in such a way that the change does not alter the functional behaviour of the program. It is a software engineering practice that is used daily by developers, who restructure code to make it more amenable to maintenance and extension. Refactoring is also a technique that is usually practised \emph{manually} by developers. The downside of manual refactoring is that it becomes very error-prone over large code bases; it also requires the programmer to be an expert in the particular structural change that is being implemented. Refactoring tools, on the other hand, automate the process, allowing machine-checkable pre- and post-conditions to automatically ensure that the refactored code is functionally correct to the original. 
 %
-Refactoring has a long history, with the original refactoring work going back to the \emph{fold/unfold} system proposed by Bustall and Darlington in 1977~\cite{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{Mens:2004:SSR:972215.972286}, and has been applied to a wide range of applications as an approach to program transformation, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
+Refactoring has a long history, with the original refactoring work going back to the \emph{fold/unfold} system 1977~\cite{darlington77}. Since then, refactoring has been applied to a wide range of applications as an approach to program transformation~\cite{Mens:2004:SSR:972215.972286}, and has been applied to a wide range of applications as an approach to program transformation, with refactoring tools a feature of popular IDEs including, \textit{e.g.}, Eclipse and Visual Studio.
 %There has been very little prior work on refactoring for improving energy consumption, with the exception of some preliminary refactorings for Erlang~\cite{Nagy:2019:TSG:3331542.3342570}. Previous work by Brown et al. on parallelisation \textit{via} refactoring has primarily focussed on the introduction and manipulation of parallel pattern libraries in C++~\cite{brownagricultural}, Haskell~\cite{kar30667} and Erlang~\cite{Brown:2014:CRP:2630180.2630190,DBLP:journals/cai/BarwellBHTB16, parco2015}. Another approach
 %has been the automated introduction of annotations in the form of C++ attributes~\cite{cfs}{rio:2018}.
 In previous work, refactoring has been used successfully to \emph{introduce parallel patterns and concurrency} into the code in C++~\cite{brownagricultural,DBLP:conf/pdp/JanjicBMHDAG16, mcts} and Erlang~\cite{hlpp,DBLP:journals/cai/BarwellBHTB16}. %Another approach
@@ -1561,24 +1565,24 @@ In order to bring more automation to the process of application vulnerabilities 
 
 \eucommentary{Describe the innovation potential which the proposal represents. Where relevant, refer to products and services already available on the market. Please refer to the results of any patent search carried out.}
 
-It is by now a well-established fact that big data science is bringing another revolution into the world of software development. The World Economic Forum in their report on Data Science in the New Economy from July 2019 states that \textbf{"as the Fourth Industrial Revolution unfolds, led by advances in technologies such as data science and artificial intelligence, the labour market is again changing in a fundamental fashion"}. The economic potential of data science is enormous. An interim report of European Data Market study prepared by IDC \& Open Evidence claims that \textbf{"the overall data market (i.e. the aggregate value of data-related products and services exchanged within the European economy) is estimated at already more than 50 billion Euro and will get to 111 billion in 2020 under high-growth conditions"}. According to the same report, the data driven innovation in the EU contributes to \textbf{almost 5\% of the EU GDP}. In the recent times, and especially in the light of COVID-19 situation, data science has become even more important to facilitate extracting and exchanging information between remote organisations, and especially in situations where data cannot leave the place where it is stored. The growth of computation capabilities of computational clouds, together with possibilities to deploy applications that span multiple private and public clouds has offered potential to really achieve the promise of data science. This has, however, also come with a risk. A study published by IBM Security of 524 security breaches that occurred between August 2019 and April 2020 shows that \textbf{the average cost of a single breach is \$3.86 M}. The same study shows that the time required to identify and contain a data breach was \textbf{280 days}. This clearly shows the enormous economic costs of security vulnerabilities and how unprepared the state-of-the-art technologies are to deal with these breaches. But the things become even more complicated when we consider the increasingly strict regulations for ownership and sharing of the data, such as GDPR. In the UK, the companies can potentially be fined \textbf{4\% of their total turnover for each privacy breach.} It is clear that writing secure and privacy-preserving data analytics will be of the utmost importance in the near and long-term future. It is equally important for the software developers of big data applications to be kept in a loop of a cycle of vulnerabilities identification and repairing, giving him better understanding of the security issues and the methods to mitigate them, hence increasing trust into the working of the systems. \TheProject{} innovation potential lies in bringing all these benefits to the table, with the technologies to identify and repair vulnerabilities that serve as a base of the whole high-level, pattern-supported \emph{secure software development methodology} that will guide the developer through the process of implementing and deploying their application. Formal verification of security properties, together with the verification of the conformance to the coding standards will provide additional assurance to the security of the code. Hence, our technologies aim for both \emph{guiding the user step-by-step through the process of securing their code} as well as \emph{providing security and privacy by design for the new applications}.  %Additionally, significant innovation will come from the applications of the \TheProject{} technologies to the selected use cases from the air traffic management, healthcare and digital banking domains, allowing for XX. 
-Last but not least, the \TheProject{} technologies for protecting privacy offer significant innovation potential in the area of preventing violation and abuse of rights in the digital age, as detailed in Section~\ref{sect:expectedImpacts} on page~\pageref{box:gender}.
+It is by now a well-established fact that big data science is bringing another revolution into the world of software development. The World Economic Forum in their report on Data Science in the New Economy from July 2019 states that \textbf{"as the Fourth Industrial Revolution unfolds, led by advances in technologies such as data science and artificial intelligence, the labour market is again changing in a fundamental fashion"}. The economic potential of data science is enormous. An interim report of European Data Market study prepared by IDC \& Open Evidence claims that \textbf{"the overall data market (i.e. the aggregate value of data-related products and services exchanged within the European economy) is estimated at already more than 50 billion Euro and will get to 111 billion in 2020 under high-growth conditions"}. According to the same report, the data driven innovation in the EU contributes to \textbf{almost 5\% of the EU GDP}. In recent times, and especially in the light of COVID-19 situation, data science has become even more important to facilitate extracting and exchanging information between remote organisations, and especially in situations where data cannot leave the place where it is stored. The growth of computational clouds, together with possibilities to deploy applications that span multiple private and public clouds has offered potential to really achieve the promise of data science. This has, however, also come with a risk. A study published by IBM Security of 524 security breaches that occurred between August 2019 and April 2020 shows that \textbf{the average cost of a single breach is \$3.86 M}. The same study shows that the time required to identify and contain a data breach was \textbf{280 days}. This clearly shows the enormous economic costs of security vulnerabilities and how unprepared the state-of-the-art technologies are to deal with these breaches. But the situation is even more complicated when we consider the increasingly strict regulations for ownership and sharing of the data, such as GDPR. In the UK, companies can potentially be fined \textbf{4\% of their total turnover for each privacy breach.} It is clear that writing secure and privacy-preserving data analytics will be of the utmost importance in the near and long-term future. It is equally important for the software developers of big data applications to be kept in a loop of a cycle of vulnerabilities identification and repairing, giving her a better understanding of the security issues and the methods to mitigate them, hence increasing trust into the working of the systems. \TheProject{} innovation potential lies in bringing all these benefits to the table, with the technologies to identify and repair vulnerabilities that serve as a base of a high-level, pattern-supported \emph{secure software development methodology} that will guide the developer through the process of implementing and deploying their application. Formal verification of security properties, together with the verification of the conformance to the coding standards will provide additional assurance to the security of the code. Hence, our technologies aim for both \emph{guiding the user step-by-step through the process of securing their code} as well as \emph{providing security and privacy by design for the new applications}.  %Additionally, significant innovation will come from the applications of the \TheProject{} technologies to the selected use cases from the air traffic management, healthcare and digital banking domains, allowing for XX. 
+Furthermore, the \TheProject{} technologies for protecting privacy offer significant innovation potential in the area of preventing violation and abuse of rights in the digital age, as detailed in Section~\ref{sect:expectedImpacts} on Page~\pageref{box:gender}.
 
 \subsubsection*{Individual Innovation Potential}
 
 The anticipated partner-specific potential innovations are listed below and described in more detail in the individual exploitation plans in Section \ref{sect:exploitation-plan} (Page \pageref{sect:exploitation-plan}).
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\IBMshort{} will extend its expertise in Code Vulnerability Detection technologies. This expertise combined with novel techniques for repairing the identified vulnerabilities that will be developed for \TheProject{} will significantly enrich the ability to develop secure and robust AI-driven big data applications. The IBM Cloud Pak for Data platform will benefit from the results of \TheProject{} project in the areas of security and protection of Big Data analytics. In addition, we will enrich the existing IBM security solutions and products by exploiting the advanced vulnerability detection and code repairing technologies of the \TheProject{} project to commercially benefit businesses across Europe.
+\IBMshort{} will extend its expertise in Code Vulnerability Detection technologies, combined with novel techniques for repairing the identified vulnerabilities that will be developed for \TheProject{} will significantly enrich the ability to develop secure and robust AI-driven big data applications. The IBM Cloud Pak for Data platform will benefit from the results of the \TheProject{} project in the areas of security and protection of Big Data analytics. In addition, we will enrich the existing IBM security solutions and products by exploiting advanced vulnerability detection and code repairing technologies of the \TheProject{} project to commercially benefit businesses across Europe.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\SOPRAshort{} will feed the \TheProject{} tools into the massive software development capability to enhance the security of products they delivery into areas like government, transportation, public safety, banking, insurance. The consulting capability will transfer the tools into the extensive client base of the company across twenty-five countries. The tools enable the creation of various new innovative solutions for the customer base they serve.
+\SOPRAshort{} will feed \TheProject{} tools into a massive software development capability, enhancing the security of products delivered into areas such as government, transportation, public safety, banking and insurance. This capability will transfer the tools into the extensive client base of the company across twenty-five countries. The tools enable the creation of various new innovative solutions for the customer base they serve.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \YAGshort{} will build on the YAG-Suite existing capabilities that cover Java and PHP source code to extend its technology in two complementary directions: %Extension of the YAG-Suite 
-to detect in C , C++ and Python written applications the vulnerabilities that are currently detected in JAVA and PHP, and extend the YAG-Suite detectable vulnerabilities to address the specific vulnerabilities related to 
+to detect in C , C++ and Python written applications the vulnerabilities that are currently detected in JAVA and PHP; and also extend the YAG-Suite detectable vulnerabilities to address the specific vulnerabilities related to 
 %use case of 
 big data analytics applications.
 
@@ -1586,7 +1590,7 @@ big data analytics applications.
 
 \begin{mdframed}[backgroundcolor=blue!5]
 \FRQshort{} aims to %harden 
-improve the quality of software development, data analytics and services to a level that not only has them pass regulatory inspection but rises to the challenge faced by operating live services in an environment that no longer relies purely on closed networks to achieve secure operation. This ties in with industrialization efforts currently under way. It is envisioned that lessons learned and \TheProject{} tools will directly flow into the MosaiX data platform. This will ensure that our customers can benefit from the use of these technologies in a world where attacks are going to be far more sophisticated and wide-ranging than what is currently being probable. 
+improve the quality of software development, data analytics and services to a level that not only has them pass regulatory inspection, but rises to the challenge faced by operating live services in an environment that no longer relies purely on closed networks to achieve secure operation. This ties in with industrialization efforts currently under way. It is envisioned that lessons learned and \TheProject{} tools will directly flow into the MosaiX data platform, ensuring that our customers can benefit from the use of these technologies in a world where attacks are going to be far more sophisticated and wide-ranging than what is current. 
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1595,7 +1599,7 @@ improve the quality of software development, data analytics and services to a le
 %to further 
 will extend its expertise in ``Privacy Secured Distributed AI'' by developing novel information theoretic tools for preserving privacy in distributed AI systems. The research on privacy 
 %by \SCCHshort{} within \TheProject{} 
-will make it possible to provide 1) guidelines for technology assessment and, 2) certification on the trustworthiness of AI systems. \SCCHshort{} will use its expertise on formal models and logics for distributed adaptive systems to introduce new techniques to capture and verify  security requirements. It will provide tool support through its eKNOWS platform for the extraction of (concurrent) ASMs models from source code, contribute to the effort to formalise and verify reparability proof obligations for (run-time adaptive) self-healing, and develop algorithms for run-time detection of damaging activities and the start of countermeasures before any damage has occurred. 
+will make it possible to provide i) guidelines for technology assessment and, ii) certification on the trustworthiness of AI systems. \SCCHshort{} will use its expertise on formal models and logics for distributed adaptive systems to introduce new techniques to capture and verify  security requirements. It will provide tool support through its eKNOWS platform for the extraction of (concurrent) ASMs models from source code, contribute to the effort to formalise and verify reparability proof obligations for (run-time adaptive) self-healing, and develop algorithms for run-time detection of damaging activities and the start of countermeasures before any damage has occurred. 
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -1604,7 +1608,7 @@ will make it possible to provide 1) guidelines for technology assessment and, 2)
 
 \begin{mdframed}[backgroundcolor=blue!5]
 %\paragraph{\USTANshort{}.}
-\USTANshort{} will bring together its expertise in refactorings and formal verification and logics, and will explore the use of \SCCHshort{}'s tool to extract ASMs from code, as well as formalise novel notions of self-healing for security across layers of abstraction in the context of real applications. This will enrich some of the modules offered at undergraduate and postgraduate levels, notably the Erasmus+ Joint Masters programme on Advanced Systems Dependability, a joint programme with Ireland (Maynooth University) and France (Universit\'e de Lorraine). 
+\USTANshort{} has expertise in refactoring, formal verification and logics, and will explore \SCCHshort{}'s tool to extract ASMs from code, as well as formalise novel notions of self-healing for security across layers of abstraction for real applications. This will enrich some of the modules offered at undergraduate and postgraduate levels, notably the Erasmus+ Joint Masters programme on Advanced Systems Dependability, with Ireland (Maynooth University) and France (Universit\'e de Lorraine). 
 \USTANshort{} will promote the project via overseas collaborators from the healthcare domain in the USA and Brazil, and through events and initiatives within the Scottish Informatics and Computer Science Alliance (SICSA). \USTANshort{} contributes to health informatics research initiatives in Scotland such as  Health Data Research (HDR) UK and has close connections to the DataLab, the Health and Care Division of the Scottish Government and several NHS Health Boards which could benefit directly from our project results.
 \end{mdframed}
 
@@ -1855,7 +1859,8 @@ One of the objectives of the \TheProject{} project is to develop a methodology f
 \label{box:gender}
 One of especially important areas for societal impact that the \TheProject{} project is committed to is reducing the gender imbalance in Computer Science. By explicitly addressing the issues of preserving the privacy of data, we are hoping to help in reducing gender bias and under-representation of minorities. In addition, Data Science is one of the areas of Computer Science which has much better gender balance than the others. 
 %
-\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12), the International Covenant on Civil and Political Rights (Article 17) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7 has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''). By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.    \vjcomment{Evidence of this?}. Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?} \vjcomment{We also need a reference to the Stanford paper about equality.}
+\TheProject{} is concerned with the protection of personal data (such as gender, ethnicity, etc). The framework for examining the right to privacy from a gender perspective is found in the Universal Declaration of Human Rights (Article 12), the International Covenant on Civil and Political Rights (Article 17) the Resolutions of the United Nations' General Assembly and Human Rights Council, and the international human rights legal framework. The UN Human Rights Council (HRC Resolution 34/7 has noted that ``violations and abuses of the right to privacy in the digital age may affect all individuals, including with particular effects on women, as well as children and persons in vulnerable situations, or marginalized groups''). By protecting privacy, the \TheProject{} contributes to preventing violations and abuse of the right to privacy in the digital age.    %\vjcomment{Evidence of this?}. 
+Providing the educational program that will bring together Data Science with areas that are traditionally dominated by men (such as Cybersecurity), we are hopping to contribute to reduce the imbalance in the latter. Finally, by explicitly looking at the privacy-preserving methods for training the machine learning models, we are hoping to reduce the well known bias in training sets for ML towards white men. \vjcomment{How?} \vjcomment{We also need a reference to the Stanford paper about equality.}
 \end{mdframed}
  
 
@@ -3160,7 +3165,8 @@ execute with each member of the EEAB a non-disclosure agreement, which
 terms shall be not less stringent than those stipulated in this 
 Consortium Agreement, no later than 30 calendar days after their nomination 
 or before any confidential information will be exchanged, whichever date is earlier. 
-%We have invited senior representatives from Aarhus University, SAP Institute for Digital Government, Ericsson, TypeSafe, British Telecom,
+We have invited senior representatives from industry and academia including: Jonathan Cameron (Deputy director, Digital Health and Care, Scottish Government). 
+%Aarhus University, SAP Institute for Digital Government, Ericsson, TypeSafe, British Telecom,
 %the oil\&gas industries, the Cloud Competency Centre (Dublin),
 %	and Scottish Enterprise.
 
@@ -3413,9 +3419,9 @@ the \TheProject{} partners.
 \paragraph{Industrial/Commercial Involvement.}
 
 \TheProject{} directly involves three large multinational companies (\IBMshort{}, \SOPRAshort{} and \FRQshort{}) and
-three SMEs (\COGNIshort{}, \SCCHshort{} and \YAGshort{}).
-These organisations have included draft exploitation plans that will directly use the results of the project
-as part of their ongoing business strategies and commercial development.
+two SMEs (\COGNIshort{} and \YAGshort{}).
+These organisations have included draft exploitation plans that will  use the results of the project
+directly as part of their ongoing business strategies and commercial development.
 % follows an industrially-inspired agenda and addresses a key and topical challenge in
 The \TheProject{} project further engages directly with industry through its
 dissemination, user community and outreach activities 
@@ -3441,18 +3447,19 @@ by actively engaging with the C, C++communities, and by engaging with the ISO C+
 
 Members of the team have been heavily involved in running
 various national and international research projects.  The
-Project Coordinator, Dr Juliana Bowles, has obtained numerous
+Project Coordinator, Dr Juliana Bowles, has obtained several
 research grants and awards from national and international
-bodies XX. As described in the partner descriptions below,
+bodies. She currently coordinates the Horizon 2020 research project SERUMS (\euros 4.37M, SU-TDS 826278, 2019-2021).
+She was the principal investigator on various grants from the UK's Engineering and Physical Science Research Council (EPSRC), Royal Society, Royal Academy of Engineering, Scottish Funding Council, and is a Co-Investigator on one of the research initiatives in the Health Data Research (HDR)-UK Scotland grant with over \pounds 6M. She has worked and held invited  research positions in several European countries over many years. 
+As described in the partner descriptions below,
 %% Should add activities for INRIA, CodePlay etc.
-most of the other partners have been extensively involved in previous and
+most partners have been extensively involved in previous and
 ongoing EU projects at both technical and managerial
-levels, and have dedicated experienced senior staff on the \TheProject{} project.
+levels, and have dedicated experienced senior staff contributing to the \TheProject{} project.
 %XX
 %
-This experience will be called on as necessary to resolve any
-managerial problems that may arise during the course of the
-project.
+This experience will be called on as needed to resolve any
+managerial problems that may arise. % during the course of the project.
 
 
 %\bigskip
@@ -3519,7 +3526,7 @@ three conference fees per year at \euros{}~650 each.
 % \end{itemize}
 %
 \noindent
-In addition, \SAshort{} has budgeted \euros{}~1,500 per year to cover attendance at
+In addition, \SAshort{} has budgeted \euros{}~1,000 per year to cover attendance at
 IFIP Working Group meetings, visits to industrial concerns for dissemination purposes,
 attendance at developer conferences, demonstrations etc. to promote the project,
 and \euros~1,000 per year to support travel that is related to the management of the
@@ -3626,6 +3633,12 @@ She is a member of the Silver Digital Applications and Systems Group that advise
 \paragraph{Dr Christopher Brown} (male) is a lecturer in the School of Computer Science and has a background in refactoring and program transformation. Dr Brown is the PI on the \euro{}5.4M EU H2020 \emph{TeamPlay} project, leading WP1 on contracts and formalisation for contracts of non-functional properities (including time, energy and security),
 and is the PI on a newly funded EPSRC project, \emph{Energise}. He has undertaken work on automated refactoring for parallelism in Haskell, Erlang and C++, including developing new ideas of program shaping and pattern discovery. He received his PhD from the University of Kent in 2008, with a thesis on Tool Support for Refactoring Haskell Programs, and subsequently worked with Prof. Simon Thompson on the Refactoring Functional Programs project. He worked on the \euro{}3.2M EU SCIence project, where he built domain-specific parallel skeletons for use in both Computer Algebra and Functional Programming. He was workpackage team leader on the \euro{}4.2M EU FP7 ParaPhrase project, which investigated the application of pattern-based refactoring in Erlang and C++. He was also workpackage team leader on the \euro{}3.6M EU Horizon 2020 RePhrase project, which was applying these refactoring techniques as part of a new software engineering approach to parallel programming using C++. He has previously led a technical team of six developers on the £537K Scottish Enterprise ParaFormance project, which was investigating commercial applications of refactoring for parallel programming, and which forms a key part of our longer-term exploitation plan. This approach is both effective and practical: using the ParaFormance tooling, we have successfully analysed million-line C++ programs, narrowing over 1,000 potential sites of potential parallelism to 29 effective sites. This task would take weeks or months of human effort, but our tool achieves it in less than 60 seconds. The ParaFormance tooling Dr Brown has developed will be exploited heavily in the \TheProject{} project. 
 
+\paragraph{Dr Marco Caminati} (male) is a postdoctoral research fellow in the School of Computer Science. 
+His research explores new ways of combining logical tools to model and solve computational problems.
+To this end, he uses a variety of foundations and logical formalisms (e.g., first order logic, set theory, higher order logic) and of software tools (SAT and SMT solvers, proof assistants as Isabelle and Mizar).
+Besides contributing new and extensive verifications of (correct by construct) software and of mathematical results, he has worked on integrating different logical formalisms in order to be able to use them together according to the specific aspect of the computational problem being faced.
+Overall his research aims at improving theorem proving techniques. For example, his novel usage of the Mizar soft type system has inspired its developers to introducing new automation techniques in this particular proof assistant.
+
 \subsubsection*{Relevant publications}
 \begin{itemize}
 \item 
@@ -3656,8 +3669,8 @@ Euro-Micro. 2016.
 \subsubsection*{Relevant Research Projects}
 
 \begin{itemize}
-\item Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS, ICT-826278, 2019-2021), Coordinator and leader of work packages WP1 (Management), WP6 (Integration) and WP8 (dissemination). \url{https://www.serums-h2020.org/}
-\item Time, Energy and Security Analysis for Multi/Many-core heterogenerous PLAtforms (TeamPlay, ICT-779882, 2018-2020, \url{https://www.teamplay-h2020.eu/}
+\item Securing Medical Data in Smart Patient-Centric Healthcare Systems (SERUMS, SU-TDS 826278, 2019-2021), Coordinator and leader of work packages WP1 (Management), WP6 (Integration) and WP8 (dissemination). \url{https://www.serums-h2020.org/}
+\item Time, Energy and Security Analysis for Multi/Many-core heterogenerous PLAtforms (TeamPlay, ICT-779882, 2018-2020), \url{https://www.teamplay-h2020.eu/}
 \item Automated Conflict Resolution in Clinical Pathways
 (UK EPSRC EP/M014290/1, 2015-2018).
 % \item
@@ -3814,7 +3827,7 @@ Secure Hardware-Software Architectures for Robust Computing Systems (SHARCS, ICT
 
 %\vspace{24pt}
 
-Sopra-Steria, a European leader in digital transformation, provides one of the most comprehensive portfolios of end-to-end service offerings on the market: consulting, systems integration, software development, infrastructure management and business process services. Sopra-Steria is trusted by leading private and public-sector organisations to deliver successful transformation programmes that address their most complex and critical business challenges. Combining high quality and performance services, added value and innovation, Sopra Steria enables its clients to make the best use of digital technology. With nearly 42,000 employees in more than 20 countries, Sopra Steria generated revenue of e3.8 billion in 2017.
+Sopra Steria, a European leader in digital transformation, provides one of the most comprehensive portfolios of end-to-end service offerings on the market: consulting, systems integration, software development, infrastructure management and business process services. Sopra Steria is trusted by leading private and public-sector organisations to deliver successful transformation programmes that address their most complex and critical business challenges. Combining high quality and performance services, added value and innovation, Sopra Steria enables its clients to make the best use of digital technology. With nearly 42,000 employees in more than 20 countries, Sopra Steria generated revenue of \euros 3.8 billion in 2017.
 
  %Sopra-Steria, since 1968, supports the primary business areas of consulting services, systems integration, integration of ERP, implementation of applications, as well as providing technical support to users and application maintenance and outsourcing services and operation of professional processes.
 
@@ -3846,7 +3859,7 @@ Sopra-Steria, a European leader in digital transformation, provides one of the m
 
 \paragraph{Andreas Francois Vermeulen} (male) Head of Analytics, Digital Consultancy Services within the United Kingdom.
 
-Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United-Kingdom. Andre received his bachelor degree at the North West University at Potchefstroom, his Master of Business Administration at University of Manchester, Master of Business Intelligence and Data Science degree at University of Dundee, and is busy undertaking a Doctor of Philosophy degree at the University of St Andrews. Andreas is a General Data Protection Regulation (GDPR) certified professional. He has designed and implemented data lakes, data warehouses and information systems for several industrial business solution on an international level using agile development methodology. Author of three international books on big data, data science and machine learning, including:
+Andreas has been in information technology industry for forty plus years. He is the consulting delivery head for over hundred consultants in the United Kingdom. Andre received his bachelor degree at the North West University at Potchefstroom, his Master of Business Administration at University of Manchester, Master of Business Intelligence and Data Science degree at University of Dundee, and is busy undertaking a Doctor of Philosophy degree at the University of St Andrews. Andreas is a General Data Protection Regulation (GDPR) certified professional. He has designed and implemented data lakes, data warehouses and information systems for several industrial business solution on an international level using agile development methodology. Author of three international books on big data, data science and machine learning, including:
 \begin{itemize}
 \item Practical Hive - A Guide to Hadoop’s Data Warehouse System;
 \item Practical Data Science - A Guide to Building the Technology Stack for Turning Data Lakes into Business
@@ -3858,7 +3871,7 @@ Assets.
 Ian has over twenty-four+ years’ experience in cybersecurity and cloud ecosystems, leading global initiatives for FTSE100 and Fortune500 organizations as well as Government and Public Sector. Expert at penetration test and reverse engineering services. A published author and lectures on secure coding and reverse engineering modules at MSc level in cybersecurity.
 
 
-\paragraph{Rakhee Porter}  (male) Cyber Resilience Lead within the United Kingdom.
+\paragraph{Rakhee Porter}  (female) Cyber Resilience Lead within the United Kingdom.
 
 Rakhee has ten plus years of experience delivering risk based resilience programs to secure ecosystems. Expert in business resilience services including Technology Resilience, Operational Resilience, Crisis Management and Business Continuity.
 
@@ -4244,8 +4257,19 @@ No third parties are involved in the project.
 
 \subsection{Ethics}
 
-The proposal raises no specific ethical concerns.
+The proposal raises no specific ethical concerns. \textcolor{red}{However, for the work on authentication mechanisms, we will invite human participants to evaluate the technologies used....}\\
 
+\textbf{Ethics Form, question 2 HUMANS (YES)} - need to indicate a page in the portal where this gets discussed/described (here).
+
+Does your research involve human participants?\\
+
+\textbf{Ethics Form, question 4 PERSONAL DATA (YES)} - need to indicate a page in the portal where this gets discussed/described (here).\\
+
+Does your research involve personal data collection and/or processing? \\
+
+
+\textbf{Ethics Form, question 6 Third Countries}
+Do you plan to import any material - including personal data - from non-EU countries into the EU? (NO)??\\
 
 \subsection{Security}
 
