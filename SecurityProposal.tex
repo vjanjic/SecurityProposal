@@ -821,6 +821,25 @@ of the end data analytics product.
 The main target of the \TheProject{} project are AI-based big data analytics applications, where large volumes of data are analysed and the prediction machine-learning models are built. This is reflected in the use cases that we consider, each of which is an application of advanced machine-learning techniques for analysing distributed datasets. In this respect, \TheProject{} aims to develop and apply security and privacy vulnerabilities detection and repairing to the problems from the AI domain. At the same time, many of the technologies that we will develop for vulnerabilities detection and repairing will themselves use advanced machine learning techniques. For example, advanced machine learning techniques will be used for developing stochastic models governing the mappings between sensitive/private data and the released data. Additionally, information-theoretic machine learning techniques will be developed to quantify the privacy-leakage in terms of mutual information between private data and released data. As well, machine learning techniques will be used to automate the post processing of the huge amount of information that static analysis raises. Until now this is mostly done manually, which generates either huge human resources costs or a rejection of source code vulnerability scanning by users. In particular, supervised machine learning will greatly automate the reduction of SAST false positives. So, in the \TheProject{}, we are truly combining 'Security for AI' and 'AI for Security'.
 \end{mdframed}
 
+\begin{mdframed}[backgroundcolor=blue!5]
+\textbf{Programming Languages Support.} \TheProject{} mainly targets big data analytics applications written in C++. C++ is heavily used in many of the infrastructures for  big data processing, including state-of-the-art distributed databases such as MongoDB and is known to deliver excellent performance on parallel hardware. Furthermore, two out of three use cases considered in the project are based on C++. However, taking into account popularity of Java and Python in big data analytics, majority of \TheProject{} tool-chain will target Java, and to a smaller extent Python too. The table below lists the languages that different technologies will support over the course of \TheProject{}.
+
+\begin{tabular}{|c|c|c|c||c|c|c|c|}
+\hline \hline 
+\textbf{Technology} & \textbf{C++} & \textbf{Java} & \textbf{Python} & \textbf{Technology} & \textbf{C++} & \textbf{Java} & \textbf{Python}  \\
+\hline
+Static Vulnerability Detection & \checkmark & \checkmark & \checkmark & Identity Management & \checkmark & \checkmark & \checkmark \\
+Dynamic Vulnerability Detection & \checkmark & & & Security Patterns & \checkmark & \checkmark &  \\
+Runtime Monitoring & \checkmark & \checkmark & \checkmark & User Interface & \checkmark & \checkmark & \checkmark \\
+Refactoring for Self-Healing & \checkmark & \checkmark & & Coding Standards & \checkmark &  &  \\
+Runtime Self-Healing & \checkmark & \checkmark & \checkmark & \TheProject{} Methodology &\checkmark & \checkmark & \checkmark \\
+Informational Privacy & \checkmark & \checkmark & \checkmark & Formal Verification & \checkmark & \checkmark & \checkmark \\
+\hline \hline 
+\end{tabular}
+
+\end{mdframed}
+
+
 %\subsubsection*{Key assumptions}
 
 %\vjcomment{This may not be necessary.}
