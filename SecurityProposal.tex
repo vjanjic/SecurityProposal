@@ -352,8 +352,8 @@ https://www.overleaf.com/project/5e5e45121e493b000149fe20
   \label{fig:vision}
   \end{center}
   \end{figure}
-Technological advances in big data processing allow facilitating rapid scientific breakthroughs 
-and increasing the economic impact of many businesses irrespective of their size. The complexity and critical nature data intensive systems, however,
+  %% PLEASE DO NOT CHANGE THE ABSTRACT _ THANKS, Juliana
+Today's technological advances are such that big data processing can be used to facilitate rapid scientific breakthroughs and increase the economic impact of many businesses irrespective of their size. The complexity and critical nature of many data intensive systems, however,
 means that we are still far from reliably achieving such a potential and we need innovative solutions that can make a difference. The world has huge quantities and variety of
 data available, and their analytics is necessarily distributed with both data and computations spanning large quantities of distributed resources, some of which are on  the cloud. 
 Data analytics requires processing algorithms to prepare 
@@ -721,7 +721,7 @@ Ensuring security of distributed AI-driven big data analytics presents a number 
 
 \item \textbf{Enforcement of Secure Coding.} Software components are continuously developed at both infrastructure and application levels. Coding guidelines play a key role in avoiding the introduction of vulnerabilities in the code during the development process, which can compromise the systems security. Many such vulnerabilities, especially in native languages as C++, are derived from the language definition itself. Moreover, programming languages are not static entities. For example, the C++ programming language has had four versions during the last 9 years. \textbf{We must enforce that new and existing code adheres to coding standards that avoid the introduction of new vulnerabilities derived from programming languages features}. 
 
-\item \textbf{Vulnerability Detection in Source Code.} The importance of cyber security has become more and more signiﬁcant. The root cause of most cyber-attacks is vulnerabilities in applications source code. Vulnerabilities exploited by attackers compromise the conﬁdentiality, integrity, and availability of information systems. Early detection of vulnerabilities is an eﬀective way to reduce the loss and potential damage. Despite the eﬀorts of experts, vulnerabilities remain a huge problem and will continue to exist in the long term. This can be justiﬁed by the fact that an increasing number of vulnerabilities are published every year. Vulnerability detection is a method to discover vulnerabilities in software. \textbf{We must ensure that new and existing C/C++ code is free as much as possible from known vulnerabilities.}
+\item \textbf{Vulnerability Detection in Source Code.} The importance of cyber security has become more and more signiﬁcant. The root cause of most cyber-attacks is vulnerabilities in applications source code. Vulnerabilities exploited by attackers compromise the conﬁdentiality, integrity, and availability of information systems. Early detection of vulnerabilities is an eﬀective way to reduce the loss and potential damage. Despite the efforts of experts, vulnerabilities remain a huge problem and will continue to exist in the long term. This can be justiﬁed by the fact that an increasing number of vulnerabilities are published every year. Vulnerability detection is a method to discover vulnerabilities in software. \textbf{We must ensure that new and existing C/C++ code is free as much as possible from known vulnerabilities.}
 
 %\item \textbf{Security of Pattern-Based Distributed Parallel Processing.} In order to analyse large volumes of data and extract useful information and knowledge from it, it is essential to use parallel processing. This is not only in order to get the results in reasonable time - the requirement for parallel processing also comes from the way in which big data is stored. The space requirements for large data sets usually surpass the storage capabilities of individual machines and, therefore, this data has to be distributed. %Furthermore, bringing all data to one place for analysis is usually prohibitively expensive, even when it is theoretically possible. 
 %Therefore, it is standard to have different processing agents on different distributed nodes which work together in analysing large data sets. Parallel patterns, such as Google's MapReduce that is used in Hadoop, provide high-level framework for data analytics where parallelism is provided for free. However, for the same reasons as with data storage, these systems potentially expose many additional security risks, coming from their interaction over networks as well as from the individual processing agents. Moreover, these frameworks usually need to interact with distributed filesystems/databases and higher-level domain-specific libraries, increasing the potential for vulnerabilities. \textbf{We must ensure that distributed parallel processing used in AI-based data analytics does not leak sensitive information from the data it processes to malicious users.}
@@ -809,7 +809,7 @@ Figure~\ref{fig:storageprocessing} shows a more detailed view of the different s
 \item At the lowest level, the data that needs to be analysed (as well as the machine learning models that are built) is usually stored in distributed databases or filesystems that possibly span multiple sites and organisations. Each of the individual nodes that stores the data will have a local database/filesystem manager process through which the communication with other nodes commences. This will mostly be invisible to the actual end user application, but it has to be addressed as a source of potential security vulnerabilities. The lowest level accessible to the application is the level of language drivers and APIs to the distributed database/filesystem. Through the calls to this API, the application communicates with different nodes of the distributed database/filesystem. The examples of this layer are Hadoop HDFS(\url{https://hadoop.apache.org}) distributed filesystem bindings for Java/C++ and Cassandra API. 
 \item On top of the data layer, in a typical data analytics application there will be a layer of parallel patterns for distributed computations. Parallel patterns are usually implemented as high-order functions that implement common parallel behaviour, with the most well-known example being Google MapReduce~\cite{mapreduce}. Parallel patterns allow the end users to specify just the problem-specific parts of their computation, while they get the benefits of its parallel execution (and, hence, faster response times) for free. Unfortunately, parallel patterns are another possible source of vulnerabilities, due to the fact that they involve intensive communication and exchange of data between different distributed nodes. 
 \item On top of the parallel patterns, there are domain-specific machine learning libraries that implement specific %machine-learning 
-techniques in terms of instances of parallel patterns. The examples of these libraries are Keras(\url{\url{keras.io}}) and Spark MLLib. These libraries abstract over the data processing and data storage frameworks, combining them %together 
+techniques in terms of instances of parallel patterns. The examples of these libraries are Keras (\url{keras.io}) and Spark MLLib. These libraries abstract over the data processing and data storage frameworks, combining them %together 
 and thus exposing potentially additional security and privacy vulnerabilities. 
 \item Finally, the end user application uses these machine-learning libraries (and possibly any of the lower-level layers for specific purposes) to conduct specific data analysis that is needed. 
 \end{itemize}
@@ -1063,9 +1063,11 @@ State-of-the-art source code scanners all face the same problem - they must warn
 \begin{figure}[tp]
   \begin{center}
   \vspace{-5mm}
-  \includeimage[scale=0.20]{Yag-Suite Dashboard.png}
+%  \includeimage[scale=0.20]{Yag-Suite Dashboard.png Yagaan_Audit_center_screenshot.png}
+  \includeimage[scale=1.00]{Yagaan_Audit_center_screenshot.png}
 %  \vspace{-3cm}
-  \caption{Executive dashboard of the YAG-Suite}
+%  \caption{Executive dashboard of the YAG-Suite}
+  \caption{Java sensitive data exposure diagnostics in the YAG-Suite}
   \label{fig:yagoverview}
   \end{center}
   \end{figure}
@@ -1437,7 +1439,7 @@ Brown et al. proposed refactorings for removing \emph{anti-patterns} in Distribu
 \label{sect:background-last}
 \vjcomment{FREQUENTIS, DEMOCRITOS and SOPRA to write}
 
-\begin{table}
+\begin{table}[!htb]
 \begin{center}
 \begin{tabular}{|c||c|c|c|}
 \hline \hline
@@ -1562,8 +1564,8 @@ big data analytics applications.
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
-\paragraph{\FRQshort{}.}
-XX
+\FRQshort{} aims to %harden 
+improve the quality of software development, data analytics and services to a level that not only has them pass regulatory inspection but rises to the challenge faced by operating live services in an environment that no longer relies purely on closed networks to achieve secure operation. This ties in with industrialization efforts currently under way. It is envisioned that lessons learned and \TheProject{} tools will directly flow into the MosaiX data platform. This will ensure that our customers can benefit from the use of these technologies in a world where attacks are going to be far more sophisticated and wide-ranging than what is currently being probable. 
 \end{mdframed}
 
 \begin{mdframed}[backgroundcolor=blue!5]
@@ -2326,7 +2328,7 @@ security verification, type systems for security contracts. Finally, we will ass
 \vspace{-0.9cm}
 \end{wrapfigure}
 
-University of Dundee will actively work on promoting and exploiting the tools and techniques produced by the \TheProject{} project. School of Science and Engineering at the University of Dundee has a long experience in Data Science and Big Data Analytics, being the first school in the UK that had an MSc programme in Data Science. Over the course of the previous projects, \UOD has established an active collaboration with big data industry, collaborating with Teradata  on Proteomic research along with open source solutions such as Cassandra and Neo4j. In addition there are strong links to the games industry in Scotland with companies such as Ninja Kiwi and Outplay and also Find my Past which hosts over 4 billion searchable records of census, directory and historical record information. These links will be used to promote the results of the \TheProject{}. \UOD also has a long-standing collaboration with the Health Informatics Centre (also a part of the University of Dundee and tightly linked with National Health Service Scotland), which is recognised in Scotland as a leader in health data linkage. This is the area where ensuring security of access and protecting privacy of the data is absolutely crucial, and opens another avenue for testing and exploitation of the \TheProject{} technologies, both on a repository of anonymised sensitive eHealth data that HIC owns and which covers approximately 20\% of the Scottish population, and, where feasible, on real data in co-operation with local company Waracle who specialise in assisting the NHS in data collection. The School of Science and Engineering is also one of the main hubs in Scotland for Human-Computer Interaction and it operates a User Centre, which is used to test and evaluate research tools and technologies on various classes of users. This gives us a potentially large base of users to test e.g. authentication mechanisms developed over the course of the project. There are also numerous other projects currently running at the University of Dundee, especially in the area of application of machine learning to analyse medical images, where the output of \TheProject{} can be fed to further exploitation, providing additional assurance in security and privacy of the data. Finally, we will also look into creation of spin-off companies based on the technologies produced over the course of the project, seeing the \TheProject{} technologies as an essential layer of security for big data analytics in future.
+\UODshort{} will actively work on promoting and exploiting the tools and techniques produced by the \TheProject{} project. School of Science and Engineering at the University of Dundee has a long experience in Data Science and Big Data Analytics, being the first school in the UK that had an MSc programme in Data Science. Over the course of the previous projects, \UOD has established an active collaboration with big data industry, collaborating with Teradata  on Proteomic research along with open source solutions such as Cassandra and Neo4j. In addition there are strong links to the games industry in Scotland with companies such as Ninja Kiwi and Outplay and also Find my Past which hosts over 4 billion searchable records of census, directory and historical record information. These links will be used to promote the results of the \TheProject{}. \UOD also has a long-standing collaboration with the Health Informatics Centre (also a part of the University of Dundee and tightly linked with National Health Service Scotland), which is recognised in Scotland as a leader in health data linkage. This is the area where ensuring security of access and protecting privacy of the data is absolutely crucial, and opens another avenue for testing and exploitation of the \TheProject{} technologies, both on a repository of anonymised sensitive eHealth data that HIC owns and which covers approximately 20\% of the Scottish population, and, where feasible, on real data in co-operation with local company Waracle who specialise in assisting the NHS in data collection. \UODshort{} is also one of the main hubs in Scotland for Human-Computer Interaction and it operates a User Centre, which is used to test and evaluate research tools and technologies on various classes of users. This gives us a potentially large base of users to test e.g. authentication mechanisms developed over the course of the project. There are also numerous other projects currently running at the University of Dundee, especially in the area of application of machine learning to analyse medical images, where the output of \TheProject{} can be fed to further exploitation, providing additional assurance in security and privacy of the data. Finally, we will also look into creation of spin-off companies based on the technologies produced over the course of the project, seeing the \TheProject{} technologies as an essential layer of security for big data analytics in future.
 
 \textbf{Teaching.} There is a huge potential of incorporating the results of the \TheProject{} project into the teaching curriculum at \UOD. There are many undergraduate and postgraduate modules that teach data analytics, and we also have dedicated MSc programs on Data Engineering, Data Science and Health Data Science for Applied Precision Medicine which can be expanded with the research output and technologies developed in \TheProject{}. Furthermore, we will look into developing new MSc courses on Security of Big Data Analytics and new interdisciplinary courses on applications of Big Data technologies into other areas, such as Medicine Life Sciences and Citizen Science and Observatories and we will investigate feeding the results of \TheProject{} into these new programs. \TheProject{} also gives opportunities for new research at the PhD level, investigating particular topics that the project deals with.
 %
@@ -4046,6 +4048,44 @@ ISO/IEC JTC1/SC22/WG21 (C++ standards committee). 2018
 
 \end{itemize}
 
+\subsubsection*{Relevant Research Projects}
+
+\begin{itemize}
+
+\item
+\emph{\textbf{ASPIDE}: exAScale ProgramIng models for extreme Data procEssing}.
+FET-HPC-2017.
+Funded by European Commission.
+Coordinated by University Carlos III of Madrid.
+6/2018 -- 06/2021.
+
+\item
+\emph{\textbf{BigHPC}: Towards the unification of HPC and Big Data pardigms}.
+Funded by Spanish Ministry of Science and Innovation.
+Coordinated by University Carlos III of Madrid.
+01/2017 -- 12/2019.
+
+\item \emph{\textbf{eID@Cloud}: Integrating the eIdentification in European
+cloud platforms according to the eIDAS Regulation}.
+Funded by European Commission.
+CEF-2016: 2016-EU-IA-0064.
+Coordinated by University Carlos III of Madrid.
+05/2017 -- 05/2018.
+
+\item \emph{\textbf{RePhrase}: Refactoring Parallel Hetergeneous Resource-Aware Applications -- a Software Engineering Approach}.
+H2020 ICT-09-2014.
+Funded by European Commission.
+Coordinated by University of St. Andrews.
+01/2015 -- 12/2017.
+
+
+\item \emph{\textbf{REPARA} -- Reengineering and Enabling Performance And poweR of Applications},
+FP7-ICT-609666.
+Funded by European Commission.
+Coordinated by University Carlos III of Madrid.
+09/2013 -- 08/2016.
+
+\end{itemize}
 
 % ============================
 \Participant{FRQ}{(\url{https://www.frequentis.com/})}
