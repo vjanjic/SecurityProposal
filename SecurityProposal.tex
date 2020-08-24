@@ -33,9 +33,9 @@
 \textbf{Title of Proposal:}&\hspace*{-7cm}\textbf{Intelligent Security and Privacy for AI-Based Big Data Analytics } & \\[4ex] 
 \textbf{Date of preparation:} &\hspace*{-3cm} \textbf{\today} & \comment{}{$
 $Revision: 0.0$ $}\\[4ex]
-\textbf{List of participants} & & \\[1ex]
+\textbf{List of participants} & & \\[-1ex]
 
-https://www.overleaf.com/project/5e5e45121e493b000149fe20
+{{\textcolor{white}{https://www.overleaf.com/project/5e5e45121e493b000149fe20}}}
 \end{tabular}
 
 %% Participants Table
@@ -1064,7 +1064,7 @@ State-of-the-art source code scanners all face the same problem - they must warn
   \begin{center}
   \vspace{-5mm}
 %  \includeimage[scale=0.20]{Yag-Suite Dashboard.png Yagaan_Audit_center_screenshot.png}
-  \includeimage[scale=1.00]{Yagaan_Audit_center_screenshot.png}
+  \includeimage[scale=1.0]{Yagaan_Audit_center_screenshot.png}
 %  \vspace{-3cm}
 %  \caption{Executive dashboard of the YAG-Suite}
   \caption{Java sensitive data exposure diagnostics in the YAG-Suite}
@@ -1156,7 +1156,7 @@ A data release mechanism aims to provide useful data available while simultaneou
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of privacy-preserving data analytics by:
 \begin{itemize}
-\item \emph{Introducing a novel information theoretic approach for studying privacy-utility tradeoff} That will be suitable for multivariate data and for the cases with unknown statistical distributions. We will consider entropy of the noise as a design parameter for studying privacy of a data release mechanism. %A relevant optimisation problem here is to minimise the privacy-leakage quantified by the mutual information (between private and released data) while simultaneously minimising the amount of data distortion. 
+\item \emph{Introducing a novel information theoretic approach for studying privacy-utility tradeoff} that will be suitable for multivariate data and for the cases with unknown statistical distributions. We will consider entropy of the noise as a design parameter for studying privacy of a data release mechanism. %A relevant optimisation problem here is to minimise the privacy-leakage quantified by the mutual information (between private and released data) while simultaneously minimising the amount of data distortion. 
 The optimisation of tradeoff between minimising privacy-leakage and minimising data distortion can be analytically solved for a known data distribution, but this distribution may not be known in practical applications. Our framework will optimise the tradeoff curve \emph{without knowing data distribution}. The novelty of our approach lies in i) its generality for any unknown data distribution; ii) deriving optimal noise-adding mechanisms analytically; and, iii) computing privacy-leakage analytically without relying on the training of black-box models (e.g. adversarial networks~\cite{8919758}) for approximating distributions. 
 %This is done as follows: 1) The probability density function of noise, that for a given noise entropy level, minimizes data distortion is analytically derived. 2) The privacy of sensitive data is preserved via adding random noise (sampled from derived optimal distribution) to the data observations. Only the noise added data observations are meant to be publicly released. 3) A stochastic model is learned to model the relationships between private and public data. 4) A lower bound on privacy-leakage is derived as a functional of distributions characterizing the data model. 5) An approximation to privacy-leakage is provided via maximizing its lower bound w.r.t. distributions characterizing the data model.         
 \end{itemize}
@@ -1207,13 +1207,13 @@ Event structures have been widely used and studied in the literature, have been 
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of formal specification \& verification of security properties by:
 \begin{itemize}
-\item \emph{Defining a uniform approach for specification of security patterns and properties} Based on concurrent ASMs~\cite{BorgerS16} (described earlier in \ref{sect:identifying}), we will
+\item \emph{Defining a uniform approach for specification of security patterns and properties}. Based on concurrent ASMs~\cite{BorgerS16} (described earlier in \ref{sect:identifying}), we will
 define a specification language able to capture security properties at different levels of abstraction, and will formalise notions of behavioural equivalence to enable us to prove the equivalence between specifications and hence formalise refactorings.
 
-\item \emph{Providing an integrated verification framework} we will continue to  exploit the interface between Isabelle and Z3 (e.g. \cite{BowCam2020}) to obtain a versatile tool for the specification, analysis, composition, and computation of the behaviour of distributed applications, and search for the optimal solution (e.g. a refactoring) that satisfies certain criteria (e.g. security guarantee) 
+\item \emph{Providing an integrated verification framework}. We will continue to  exploit the interface between Isabelle and Z3 (e.g. \cite{BowCam2020}) to obtain a versatile tool for the specification, analysis, composition, and computation of the behaviour of distributed applications, and search for the optimal solution (e.g. a refactoring) that satisfies certain criteria (e.g. security guarantee) 
 %which could be obtained automatically 
 hence conforming with self-healing.
-\item \emph{Defining a family of logics for security and privacy reasoning} Based on {\sc{mdtl}} and stochastic extensions, we will define a logic expressive enough to capture and reason about security properties for our applications, and with a  fragment (e.g., FOL) suitable for capturing
+\item \emph{Defining a family of logics for security and privacy reasoning}. Based on {\sc{mdtl}} and stochastic extensions, we will define a logic expressive enough to capture and reason about security properties for our applications, and with a  fragment (e.g., FOL) suitable for capturing
 information flow and privacy constraints. %first order logic for capturing privacy information flow.
 %Exploring our experience in combining theorem provers with SMT solvers.
 \end{itemize}
@@ -1245,19 +1245,19 @@ or by the use of contract based programming~\cite{lopez-gomez:2019}.
 \begin{mdframed}[backgroundcolor=gray!10]
 \TheProject{} will advance the state of the art in the area of security standards and static analysis to conformance to standards in several ways:
 \begin{itemize}
-\item \emph{Produce a security centric coding guideline} 
+\item \emph{Produce a security centric coding guideline}. 
 Based on existing and ongoing coding guidelines for C++ we will develop a new
 integrated coding guideline completely focused on the security aspect and with
 a strong bias to specific characteristics of distributed storage and machine
 learning data analytics.
 
-\item \emph{Provide tooling for enforcing guideline conformance} 
+\item \emph{Provide tooling for enforcing guideline conformance}. 
 We will develop a single interface to multiple tools that enforce different aspect
 of the new C++ coding guidelines, producing also new checks that need to be developed.
 
-\item \emph{Check and refactor for specific components} 
+\item \emph{Check and refactor for specific components}. 
 We will check and enforce the security guidelines in software components identified
-in the project to validate that the approach is faeasible and useful to
+in the project to validate that the approach is feasible and useful to
 application and infrastructure developers. 
 
 \end{itemize}
