@@ -3,7 +3,7 @@
 \wplabel{wp:authentication}
 \WPTitle{\wpname{\thewpno}}
 \WPStart{Month 1}
-\WPParticipant{COGNI}{29}
+\WPParticipant{COGNI}{31}
 \WPParticipant{FRQ}{6}
 \WPParticipant{UOD}{5.5}
 \WPParticipant{SCCH}{4}
@@ -16,14 +16,14 @@ The objectives of \theWP{} are to:
 \item Define security metrics and policies for identity, authentication and access management;
 \item Develop multi-factor authentication schemes and %continuous 
 user identification methods based on intelligent biometrics;
-\item Develop mechanisms for regulating access and tracking the lineage and provenance of data using a Blockchain-based approach;
-\item Design and develop an integrated identity management service, including an interactive dashboard for service integration and analytics;
+\item Develop mechanisms for regulating access and tracking data lineage and provenance with Blockchain;
+\item Design and develop an integrated system with an interactive dashboard for service integration and analytics;
 \item Design, develop and evaluate privacy-preserving methods of biometric data.
 \end{compactitem}
 \end{WPObjectives}
 
 \begin{WPDescription}
-\theWP{} will design and develop an AI-driven and user-centered IDentity-as-a-Service (IDaaS) that will allow developers to integrate core identity management components in their applications, aiming to preserve security while providing a positive security experience to the end users. The primary goals are to: i) provide high levels of security through multi-factor authentication and continuous user identification to confirm the identity of each end-user and accordingly authorise access to parts of data in the system; ii) improve the usability and user experience through easy-to-use and fluid authentication and continuous user identification methods; and, iii) enable developers and administrators to easily integrate, deploy and manage their preferred authentication method based on custom requirements and policies. We will design security metrics and policies based on the state-of-the-art security and usability metrics of token- and biometric-based user authentication schemes (T5.1). We will also design and develop working prototypes of multi-factor authentication and continuous user identification based on intelligent biometrics (T5.2) and develop data access control mechanisms using a Blockchain-based approach (T5.3). In T5.4 we will design and develop an integrated identity management service, including an interactive dashboard for service integration and analytics and in T5.5 we will design, develop and evaluate privacy-preserving methods of biometric data.
+\theWP{} will design and develop an AI-driven and user-centered IDentity-as-a-Service (IDaaS) that will allow developers to integrate core identity management components in their applications, aiming to preserve security while providing a positive security experience to the end users. The primary goals are to: i) provide high levels of security through multi-factor authentication and continuous user identification to confirm the identity of each end user and accordingly authorise access to parts of data in the system; ii) improve the usability and user experience through easy-to-use and fluid authentication and continuous user identification methods; and, iii) enable developers and administrators to easily integrate, deploy and manage their preferred authentication method based on custom requirements and policies. We will design security metrics and policies based on the state-of-the-art security and usability metrics of token- and biometric-based user authentication schemes (T5.1). We will also design and develop working prototypes of multi-factor authentication and continuous user identification based on intelligent biometrics (T5.2) and develop data access management mechanisms using a Blockchain-based approach (T5.3). In T5.4 we will design and develop an integrated identity management service, including an interactive dashboard for service integration and analytics and in T5.5 we will design, develop and evaluate privacy-preserving methods of biometric data.
 
 \end{WPDescription}
 
@@ -45,16 +45,16 @@ user identification methods based on intelligent biometrics;
 %It will include an extensive analysis on state-of-the-art research in the area of multi-factor authentication and intelligent biometric authentication aiming to identify important security metrics and policies, as well as current best practices and guidelines in the area. We will further conduct an analysis of works on existing user authentication approaches within the aerospace, banking and healthcare domains in order to identify the peculiarities of identity management in each domain. The task will also entail a series of semi-structured interviews that will be conducted with various stakeholders at the use-case organizations aiming to identify current identity management and user authentication practices, policies and procedures followed at each organization. This task will proceed in three phases, developing access management, security metrics and policy designs tailored to the initial, refined and final versions of the use cases, respectively. This
 %will be reported in D5.1 (M6), D5.3 (M22) and D5.4 (M34). \COGNIshort{} will lead this task, contributing expertise in identity management mechanisms. \SOPRAshort{} will contribute feedback from the use cases.
 \theTask{} will define the methodology and conduct an analysis, elicitation and validation of the security measurements, metrics and policies of the identity management service. 
-We will identify important security metrics and policies, as well as the current best practices and guidelines in the area of multi-factor and intelligent biometric authentication. Through the series of semi-structured interviews with the stakeholders from our use case partners, we will identify the current authentication and identity management practices and their drawbacks in the air traffic management, banking and healthcare domains. This task will proceed in three phases, developing access management, security metrics and policy designs tailored to the initial (D5.1), refined (D5.2) and final versions (D5.3) of the use cases, respectively.  \COGNIshort{} will lead this task, contributing expertise in identity management mechanisms. \SOPRAshort{} will contribute feedback from the use cases.
+We will identify important security metrics and policies, as well as the current best practices and guidelines in the area of multi-factor and intelligent biometric authentication and identification. Through the series of semi-structured interviews with the stakeholders from our use case partners, we will identify the current authentication and identity management practices and their drawbacks in the air traffic management, banking and healthcare domains. This task will proceed in three phases, developing access management, security metrics and policy designs tailored to the initial (D5.1), refined (D5.2) and final versions (D5.3) of the use cases, respectively. \COGNIshort{} will lead this task, contributing expertise in identity management mechanisms. \SOPRAshort{} will contribute feedback from the use cases.
   
 \end{Task}
 
 \begin{Task}
 \TaskTitle{Multi-Factor Authentication and Continuous User Identification System Design and Development}
-\TaskParticipant{COGNI}{12}
+\TaskParticipant{COGNI}{14}
 \TaskParticipant{FRQ}{2}
 \TaskParticipant{SOPRA}{1}
-\WPParticipant{USTAN}{0.5}
+\TaskParticipant{USTAN}{0.5}
 \TaskStart{3}
 \TaskEnd{34}
 \TaskResults{%
@@ -66,18 +66,18 @@ We will identify important security metrics and policies, as well as the current
 \tasklabel{task:ua_designdevelopment}
 
 %\theTask will design and develop the core identification and authentication component. In particular, we will design and develop a series of multi-factor authentication (MFA) schemes, and continuous user identification methods aiming to augment the existing security layer of distributed data analytics applications with intelligent biometrics. Continuous authentication will be achieved by combining: i) face biometrics through face recognition and analysis; ii) eye gaze behavior biometrics by analyzing the end users' eye gaze data and visual behavior during interaction; and iii) physiological biometrics by analyzing the end users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands). 
-\theTask{} will design and develop the core identification and authentication component, comprising a series of multi-factor authentication (MFA) schemes and continuous user identification methods aiming to augment the existing security layer of distributed data analytics applications with intelligent biometrics. Continuous authentication will be achieved by combining: i) face biometrics through face recognition and analysis; ii) eye gaze behaviour biometrics by analysing the end users' eye gaze data and visual behaviour during interaction; and iii), physiological biometrics by analyzing the end users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands). 
+\theTask{} will design and develop the core identification and authentication component, comprising a series of multi-factor authentication schemes (MFA) and continuous user identification methods aiming to augment the existing security layer of distributed data analytics applications with intelligent biometrics. Continuous user identification will be achieved by combining: i) \textit{face biometrics} through face recognition and analysis; ii) \textit{eye gaze behaviour biometrics} by analysing the end users' eye gaze data and visual behaviour during interaction; and iii) \textit{physiological biometrics} by analyzing the end users' physiological data such as heart rate, skin conductance, accelerometer, etc. through non-intrusive wearable sensing devices (e.g., smartwatches, smartbands). 
 \taskbreak
 %A User-Centered Design methodology will be adopted for developing and finalising the MFA and continuous user identification scheme through multiple iterations (three releases are anticipated; initial, refined, final software) that will be used for evaluation studies. The developed schemes and methods will be evaluated through experiments with synthetic data as well as actual users (as part of WP7) aiming to evaluate its security and usability aspects. In the context of conducting studies with actual users with the developed service, we assure that all personal data collection and processing will be carried out according to EU and national legislation. This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality as well as paper prototypes based on users’ requirements analysis, resulting in deliverable D5.2 (M9). In the second phase, the service will be further developed into an extended working prototype including almost all functional requirements, however that has not been optimized in terms of performance and user experience. This will produce deliverable D5.3 (M22). A fully functional identity management service will be developed in the third phase, resulting in deliverable D5.4 (M34). Emphasis will be given to the interoperability of the components and maximizing the efficiency and effectiveness of the service running on different platforms (desktop, mobile, wearable devices). The service will be validated based on benchmarking software criteria and qualities ensuring the adequate performance, robustness, scalability, maintainability and security. \COGNIshort{} will lead this task, contributing their expertise in identity management. \USTANshort{} will contribute feedback from formal verification of security and privacy. \SOPRAshort{} will provide feedback from the use cases.
 A User-Centered Design methodology will be adopted for developing and finalising the MFA and continuous user identification scheme through multiple iterations that will be evaluated on both synthetic and real data (where feasible). 
 %Our methodology will ensure that all data collection and processing is carried out according to EU and national legislations. 
 % VJ: This is kinda important, but probably should be placed somewhere else
-This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality as well as paper prototypes based on users’ requirements analysis (D5.1). In the second phase, the service will be further developed into an extended working prototype including almost all functional requirements, but without optimisations in terms of performance and user experience (D5.2). A fully functional identity management service will be developed in the third phase (D5.3). 
+This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality based on users’ requirements analysis (D5.1). In the second phase, we will further develop an extended working prototype including almost all functional requirements, but without performance and user experience optimisations (D5.2). Fully functional components will be developed in the third phase (D5.3). 
 %Emphasis will be given to the interoperability of the components and maximising the efficiency and effectiveness of the service running on different platforms (desktop, mobile, wearable devices). 
 % VJ: we aren't really considering mobile and embedded devices here...
 %The service will be validated based on benchmarking software criteria and qualities ensuring the adequate performance, robustness, scalability, maintainability and security. 
 % VJ: Also, maybe put this somewhere else...
-\COGNIshort{} will lead this task, contributing their expertise in identity management. \USTANshort{} will contribute feedback from formal verification of security and privacy. \SOPRAshort{} will provide feedback from the use cases.
+\COGNIshort{} will lead this task, contributing their expertise in identity management. \USTANshort{} will contribute feedback on formal verification of security and privacy, and \SOPRAshort{} on the use cases.
 
 \end{Task}
 
@@ -85,7 +85,7 @@ This task will proceed in three phases. In the first phase, we will produce low-
 \TaskTitle{Access Management with Blockchain}
 \TaskParticipant{COGNI}{8}
 \TaskParticipant{SOPRA}{1}
-\WPParticipant{USTAN}{0.5}
+\TaskParticipant{USTAN}{0.5}
 
 
 \TaskStart{3}
@@ -98,12 +98,11 @@ This task will proceed in three phases. In the first phase, we will produce low-
 \TaskHeader{}
 \tasklabel{task:ua_blockchain}
 %We will design and develop a decentralized access control system based on Blockchain technology. In particular, the implemented system will store tamper-free data, such as auditing data, on the Blockchain network, in order to guarantee that the auditing records cannot be altered. In a similar way, access control rules will be stored on the Blockchain network and the owner of the data will be responsible for updating them. This will allow the authorization to be performed over the Blockchain network and will allow developers to seamlessly integrate it in the applications. When a certain component of the developer's application requires authorization of a user and verification of her access rights, it will send a transaction to the decentralized Blockchain network. Since there will not be any centralized authority responsible for validating the access rights, the risk of single point of failure will be eliminated. After the validation of access rights, the Blockchain will respond back to the requestor component. This will respect data privacy since the particular component will not be able to disclose any data without reaching the Blockchain network. This task will proceed in three phases. In the first phase, we will produce low-fidelity working prototypes with limited functionality. In the second phase, the access control system will be further developed into an extended working prototype including almost all functional requirements, however that has not been optimized in terms of performance and user experience. A fully functional access control system will be developed in the third phase. This will be reported respectively in D5.2 (M9), D5.3 (M22) and D5.4 (M34). \COGNIshort{} will develop the Blockchain mechanism.
-\theTask{} will design and develop a decentralised access control system based on Blockchain technology, storing tamper-free data (such as auditing data) on the Blockchain network, in order to guarantee immutability of the auditing records. Access control rules will also be stored on the Blockchain network and the owner of the data will be responsible for updating them. This will allow the authorisation to be performed over the Blockchain network.
+\theTask{} will design and develop a decentralised access control system based on Blockchain technology, storing tamper-free data (such as auditing data) on the Blockchain network, in order to guarantee immutability of the auditing records. Access control rules will also be stored on the Blockchain network and the owner of the data will be responsible for updating them, thus allowing the authorisation to be performed over the Blockchain network.
 % and will allow developers to seamlessly integrate it in the applications. 
 %% VJ: I think we mentioned this above.
 The risk of a single point of failure will be eliminated by decentralising the Blockchain network, avoiding having a centralised authority responsible for validating the access rights. %After the validation of access rights, the Blockchain will respond back to the requestor component. This will respect data privacy since the particular component will not be able to disclose any data without reaching the Blockchain network. 
-This task will proceed in three phases, producing an initial low-fidelity working prototypes with limited functionality (D5.1), the extended working prototype including almost all functional requirements, but without optimisation in terms of performance and user experience (D5.2) and a fully functional access control system (D5.3). 
-\COGNIshort{} will develop the Blockchain mechanism while \SOPRAshort{} will provide feedback from the use cases.
+This task will proceed in three phases, producing an initial low-fidelity working prototype with limited functionality (D5.1), the extended working prototype including almost all functional requirements (D5.2) and a fully functional access management system (D5.3). \COGNIshort{} will develop the Blockchain-based access management mechanism. \USTANshort{} will contribute feedback on formal verification of security and privacy, and \SOPRAshort{} on the use cases.
 \end{Task}
 
 
@@ -124,7 +123,7 @@ This task will proceed in three phases, producing an initial low-fidelity workin
 \theTask will develop an interactive dashboard to allow developers and administrators to setup their preferred authentication methods and policies, access control, and compile and display users’ interaction and behaviour data to monitor their experience and highlight any usability issues. In addition, we will design and develop tools and methods for providing easy and intuitive access to the users’ interaction data collected in different formats (e.g., data and information visualisations and tabular representations). %It will also support various filtering and aggregation options to focus on a particular subset of the collected data based on, for e.g., time and threshold filters. 
 The interactive dashboard will translate the raw data into inferred knowledge, which will be be useful for the experimental evaluation in WP7. It will be integrated in the overall system's intelligent user interface in WP6. This task will proceed in three phases, similar to the task T5.2 and T5.3.
 %producing respectively low-fidelity working prototypes with limited functionality, extended working prototypes including almost all functional requirements, and a fully functional analytics dashboard, resulting in D5.2 (M9), D5.3 (M22) and D5.4 (M34). 
-\COGNIshort{} will design and develop the analytics dashboard, with \SCCHshort{} and \FRQshort{} providing feedback on user interaction analytics features and the design of the dashboard.
+\COGNIshort{} will design and develop the analytics dashboard, with \FRQshort{} providing feedback on user interaction analytics features and the design of the dashboard.
 \end{Task}
 
 \begin{Task}
@@ -149,9 +148,9 @@ The interactive dashboard will translate the raw data into inferred knowledge, w
 
 \begin{WPDeliverables}
   \begin{compactitem}
-  \item \ref{del:auth1} (Month 9) : Report on Initial Identity Management Techniques for Data Analytics on Private Clouds
-	\item \ref{del:auth2} (Month 22) : Software on Refined Identity Management Techniques for Data Analytics on Public Clouds
-\item \ref{del:auth3} (Month 34) : Report on Final Identity Management Techniques for Data Analytics on Hybrid Clouds
+  \item \ref{del:auth1} (Month 9) : Report on Initial Identity Management Mechanisms for Data Analytics on Private Clouds
+	\item \ref{del:auth2} (Month 22) : Software on Refined Identity Management Mechanisms for Data Analytics on Public Clouds
+\item \ref{del:auth3} (Month 34) : Report on Final Identity Management Mechanisms for Data Analytics on Hybrid Clouds
 \end{compactitem}
 \end{WPDeliverables}
 \end{Workpackage}
