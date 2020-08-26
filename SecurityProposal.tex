@@ -808,7 +808,7 @@ Finally, to add an additional layer of security, we will specifically address th
 
 Figure~\ref{fig:storageprocessing} shows a more detailed view of the different software layers that a typical big data analytics application is built on. Each of these layers presents its own potential security issues that have to be considered in the \TheProject{} project: 
 \begin{itemize}
-\item At the lowest level, the data that needs to be analysed are usually stored in distributed databases or filesystems that can span multiple sites and organisations. Each of the individual nodes that stores the data will have a local database/filesystem manager process through which the communication with other nodes commences. This will mostly be invisible to the actual end user application, but it has to be addressed as a source of potential security vulnerabilities. The lowest level accessible to the application is the level of language drivers and APIs to the distributed database/filesystem. Through the calls to this API, the application communicates with different nodes of the distributed database/filesystem. The examples of this layer are Hadoop HDFS(\url{https://hadoop.apache.org}) distributed filesystem bindings for Java/C++ and Cassandra API. 
+\item At the lowest level, the data that needs to be analysed are usually stored in distributed databases or filesystems that can span multiple sites and organisations. Each of the individual nodes that stores the data will have a local database/filesystem manager process through which the communication with other nodes commences. This will mostly be invisible to the actual end user application, but it has to be addressed as a source of potential security vulnerabilities. The lowest level accessible to the application is the level of language drivers and APIs to the distributed database/filesystem. Through the calls to this API, the application communicates with different nodes of the distributed database/filesystem. The examples of this layer are Hadoop HDFS (\url{https://hadoop.apache.org}) distributed filesystem bindings for Java/C++ and Cassandra API. 
 \item On top of the data layer is a layer of parallel patterns for distributed computations. Parallel patterns are usually implemented as high-order functions that implement common parallel behaviour, with the most well-known example being Google MapReduce~\cite{mapreduce}. Parallel patterns allow the end users to specify just the problem-specific parts of their computation, while they get the benefits of its parallel execution (and, hence, faster response times) for free. Unfortunately, parallel patterns are another possible source of vulnerabilities, due to the fact that they involve intensive communication and exchange of data between different distributed nodes. 
 \item On top of the parallel patterns, there are domain-specific machine learning libraries (such as Keras (\url{keras.io}) and Spark MLLib) that implement specific %machine-learning 
 techniques in terms of instances of parallel patterns. These libraries combine the data processing and data storage frameworks and potentially expose additional vulnerabilities. 
@@ -1109,7 +1109,7 @@ State-of-the-art source code scanners all face the same problem - they must warn
 
 \paragraph{Dynamic Analysis and Symbolic Execution.}
 \vjcomment{\IBMshort{} to write}
-Software vulnerabilities pose serious risk of exploit and result in system compromise, information leaks, or denial of service. As mentioned in the previous section, various static analysers are used to detect potential vulnerabilities in C/C++ code. Most of them suffer from high amount of false alarms mainly due to the fact that they do not use a symbolic execution approach but rather a more simplistic syntactical and semantical analysis of code constructs. This simplistic approach has the advantage of being more scalable as opposed to the inherent scalability deficiencies of symbolic execution which exhaustively analyses all potential execution paths given non-deterministic inputs. Furthermore the fact that real life programs call out to system functions and other functions residing in libraries, with no access to their source code, creates the need to generate abstractions or simulate their execution flows depending on the nature of the function. This entails a wide variety of challenges ranging from the mitigation of state explosion to simply being able to accurately simulate a large number of operations. There are a number of symbolic execution tools such as JPF for Java and Otter for C, both with limited capabilities to scale up to real life programs.
+Software vulnerabilities pose serious risk of exploit and result in system compromise, information leaks, or denial of service. As mentioned in the previous section, various static analysers are used to detect potential vulnerabilities in C/C++ code. Most of them suffer from high amount of false alarms mainly due to the fact that they do not use a symbolic execution approach but rather a more simplistic syntactical and semantical analysis of code constructs. This simplistic approach has the advantage of being more scalable as opposed to the inherent scalability deficiencies of symbolic execution which exhaustively analyses all potential execution paths. Furthermore the fact that real life programs call out to system functions and other functions residing in libraries, with no access to their source code, creates the need to generate abstractions or simulate their execution flows depending on the nature of the function. This entails a wide variety of challenges ranging from the mitigation of state explosion to simply being able to accurately simulate a large number of operations. There are a number of symbolic execution tools such as JPF for Java and Otter for C, both with limited capabilities to scale up to real life programs.
 %
 Dynamic analysis systems, such as “fuzzers” natively executes an application while providing ‘tailored’ inputs when flaws are detected, and significantly assist in reproducing and mitigating the flaws. 
 %However, generating the tailored “input test cases” to drive execution, typically requires an exhaustive set of test cases that required manual effort to generate. 
@@ -2443,7 +2443,7 @@ the other non-confidential documents that are generated in the course of the pro
 \begin{itemize}
 \item KPI 1: 5 publications per year per academic partner, at least 1 conference paper and 1 journal paper.
 \item KPI 2: 30\% of accepted papers should be journal papers.
-\item KPI 3: 2 project press releases per year.
+\item KPI 3: 2 project press releases.
 \item KPI 4: At least 1 public project workshop per year.
 \item KPI 5: At least 100 followers on social media channels by Year 2; 200 followers by Year 3.
 \item KPI 6: At least 150 new visitors to the project website per project year.
@@ -3170,7 +3170,7 @@ execute with each member of the EEAB a non-disclosure agreement, which
 terms shall be not less stringent than those stipulated in this 
 Consortium Agreement, no later than 30 calendar days after their nomination 
 or before any confidential information will be exchanged, whichever date is earlier. 
-We have invited senior representatives from industry and academia including: Jonathan Cameron (Deputy director, Digital Health and Care, Scottish Government), Horacio Gonzalez-Velez (Head of the Cloud Competency Centre at National College of Ireland), Kenneth White (Head of Security at MongoDB), Scott Hirleman (Community Outreach at Datastax). 
+We have invited senior representatives from industry and academia including: Jonathan Cameron (Deputy director, Digital Health and Care, Scottish Government), Horacio Gonzalez-Velez (Head of the Cloud Competency Centre at National College of Ireland), Kenneth White (Head of Security at MongoDB), Scott Hirleman (Community Outreach at Datastax), Eric Dupuis (Director of Security of Orange Cyber Defence France).
 %Aarhus University, SAP Institute for Digital Government, Ericsson, TypeSafe, British Telecom,
 %the oil\&gas industries, the Cloud Competency Centre (Dublin),
 %	and Scottish Enterprise.
@@ -3488,7 +3488,7 @@ a table showing 'other direct costs' (table 3.4b) for participants where those c
 \TODO{This needs to be updated in line with the rest of the
 project.}
 
-The project will employ 501 person-months of effort over three
+The project will employ 512 Person-Months (PMs) of effort over three
 years, comprising one or more full-time or part-time researchers at each site
 plus one part-time project administrator at \SAshort{}, % and one part-time web designer at \INRIAshort,  Not in PMs?
 20\% of the Project Coordinator and 10\% of the WTLs. The researchers will be supported by
@@ -4084,7 +4084,7 @@ Body (UNE).
 ARCOS cooperates with well-known international research centers such as Argonne National Laboratory, CERN, IMEC, European Space Agency, University of St. Andrews, IBM Research, University of Pisa, University of Torino, and Univeristy of Linkoping. Besides, UC3M has a good cooperation history with several members in this proposal.
 
 \subsubsection*{Role in Elysian}
-\textbf{\UCM will lead WP6 ...}
+\textbf{\UCM will lead WP6 on the Refactoring-based Methodology with a particular focus on new coding standards, compliance and continuous deployment. It will also contribute specifically to WP4 for the work on security contracts, formalisation of refactorings and analysis of risk assessment, and WP3 for the work on identifying and repairing vulnerabilities. It will also contribute to WP2, WP7 and WP8. }
 
 
 
@@ -4200,7 +4200,9 @@ Coordinated by University Carlos III of Madrid.
 
 Established in 1947 Frequentis has grown to an international supplier of communication and information systems with an export quota of more than 95\%. The core market is focused on safety critical control room solutions in various domains. Over 2000 employees are working in the corporate headquarters in Vienna, and subsidiaries in more than 50 countries worldwide. Frequentis is a member of SESAR Joint Undertaking and an active participant in numerous researches, regulatory, industry and standardization communities.
 
-Frequentis contributes its expertise in international project and technology know-how as an industry partner in various safety critical domains. Particularly the knowledge as a system integrator in the Air Traffic Management (ATM) domain will help to integrate the different components developed by the partners in the project to have successful demonstration and validation in the end. The international knowledge and experience of Frequentis will assure that the consortium possesses the scientific and technological expertise required for Digital Fortress.
+\subsubsection*{Role in Elysian}
+\textbf{\FRQshort{} will mostly contribute to WP7. It has key expertise in international project and technology know-how as an industrial partner in various safety critical domains. Particularly the knowledge as a system integrator in the Air Traffic Management (ATM) domain, which is one of the considered use cases, will help to integrate the different components developed by the partners in the project to have successful demonstration and validation in the end. The international knowledge and experience of 
+\FRQshort{} will assure that the consortium possesses the scientific and technological expertise required for Elysian.}
 
 %\vspace{10pt}
 %\textbf{Frequentis leads work package WPXX}
@@ -4208,19 +4210,20 @@ Frequentis contributes its expertise in international project and technology kno
 
 \textbf{Key Personnel involved in the Project}
 
-Eduard Gringinger (male) (PhD, MSc, MSocEcSc, BSc), is senior lead scientist and project manager with more than 10 years of experience in the research areas of safety critical data and services with a business focus on the air traffic management domain. He has work experience in relation with information management, data and service modelling and is member in various EUROCAE, ICAO/AMO working groups. He received a PhD, MSc, and a MSocEcSc with distinctions from Vienna University of Technology.
+\paragraph{Eduard Gringinger} (male) (PhD, MSc, MSocEcSc, BSc), is senior lead scientist and project manager with more than 10 years of experience in the research areas of safety critical data and services with a business focus on the air traffic management domain. He has work experience in relation with information management, data and service modelling and is member in various EUROCAE, ICAO/AMO working groups. He received a PhD, MSc, and a MSocEcSc with distinctions from Vienna University of Technology.
 
-Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006, he worked in various roles in safety critical domains at Frequentis. He was consultant for 3 years at AI Informatics and Siemens and is now is chairman of OwnYourData. He received his PhD from the Vienna University of Technology in mathematics (also working at the Innovative Computing Laboratory/University of Tennessee) and an MBA from the Danube University Krems (1 semester at the Weatherhead School of Management in Cleveland, Ohio).
+\paragraph{Christoph Fabinaek} (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006, he worked in various roles in safety critical domains at Frequentis. He was consultant for 3 years at AI Informatics and Siemens and is now is chairman of OwnYourData. He received his PhD from the Vienna University of Technology in mathematics (also working at the Innovative Computing Laboratory/University of Tennessee) and an MBA from the Danube University Krems (1 semester at the Weatherhead School of Management in Cleveland, Ohio).
 
-\subsubsection*{List of Publications}
+\subsubsection*{Relevant Publications}
 
 \begin{itemize}
-\item C.G. Schuetz, B. Neumayr, M. Schrefl, E. Gringinger and S. Wilson, "Semantics-based summarisation of ATM information: Managing information overload in pilot briefings using semantic data containers", The Aeronautical Journal (2019), 1-27. \url{doi:10.1017/aer.2019.74}
-\item E.Gringinger, R.M,Keller, A.Vennesland, C.G.Schuetz, and B.Neumayr, "A Comparative Study of Two Complex Ontologies in Air Traffic Management", Proc. of the AIAA/IEEE 38th Digital Avionics Systems Conference (DASC), IEEE, September 2019. \url{doi.org/10.1109/DASC43569.2019.9081790}
-\item E. Gringinger, C. Fabianek, C. Schütz, B. Neumayr, M. Schrefl, A. Vennesland, S. Wilson, "The Semantic Container Approach: Techniques for ontology-based data description and discovery in a decentralized SWIM knowledge base", Proc. of the SESAR Innovation Days 2018 (SID 2018), December 2018, Salzburg, Austria. \url{https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs\_2018\_paper\_78.pdf}
+\item C.G. Schuetz, B. Neumayr, M. Schrefl, E. Gringinger and S. Wilson, \emph{Semantics-based summarisation of ATM information: Managing information overload in pilot briefings using semantic data containers}. The Aeronautical Journal (2019), 1-27. %\url{doi:10.1017/aer.2019.74}
+\item E. Gringinger, R.M. Keller, A. Vennesland, C.G. Schuetz, and B. Neumayr. \emph{A Comparative Study of Two Complex Ontologies in Air Traffic Management}, Proc. of the AIAA/IEEE 38th Digital Avionics Systems Conference (DASC), IEEE, September 2019. %\url{doi.org/10.1109/DASC43569.2019.9081790}
+\item E. Gringinger, C. Fabianek, C. Schütz, B. Neumayr, M. Schrefl, A. Vennesland, S. Wilson, \emph{The Semantic Container Approach: Techniques for ontology-based data description and discovery in a decentralized SWIM knowledge base}, Proc. of the SESAR Innovation Days 2018 (SID 2018), December 2018. %, Salzburg, Austria. %\url{https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs\_2018\_paper\_78.pdf}
 %\item E. Gringinger, C. Fabianek, C. Schütz, J. Stöbich, B. Neumayr, M. Schrefl, "A Proof-of-Concept Implementation of a Semantic Container Management System for Air Traffic Management", Proceedings of the EDAW 2018 Posters and Demonstrations Session co-located with 21st International Conference on Knowledge Engineering and Knowledge Management (EKAW 2018), November 12-16, 2018, ISSN 1613-0073, pp. 69-72, Nancy, France. \url{https://dblp.org/rec/bib/conf/ekaw/GringingerFSNS18}
-%\item E. Gringinger, C. Schuetz, B. Neumayr, M. Schrefl and S. Wilson, "Towards a value-added information layer for SWIM: The semantic container approach", 2018 Integrated Communications, Navigation, Surveillance Conference (ICNS), Herndon, VA, 2018, pp. 3G1-1-3G1-14. \url{https://doi.org/10.1109/ICNSURV.2018.8384870}
-%\item C. Flachberger, E. Gringinger, "Decision Support for Networked Crisis \& Disaster Management - A Comparison with the Air Traffic Management Domain", Information Systems for Crisis Response and Management (ISCRAM), Rio de Janeiro, Brasil, May 22-25, 2016. \url{https://episecc.eu/sites/default/files/1332\_ChristianFlachberger\%2BEduardGringinger2016.pdf}
+\item E. Gringinger, C. Schuetz, B. Neumayr, M. Schrefl and S. Wilson, \emph{Towards a value-added information layer for SWIM: The semantic container approach}, 2018 Integrated Communications, Navigation, Surveillance Conference (ICNS), Herndon, VA, 2018, pp. 3G1-1-3G1-14. 
+%\url{https://doi.org/10.1109/ICNSURV.2018.8384870}
+\item C. Flachberger, E. Gringinger, "Decision Support for Networked Crisis \& Disaster Management - A Comparison with the Air Traffic Management Domain", Information Systems for Crisis Response and Management (ISCRAM), Rio de Janeiro, Brasil, May 22-25, 2016. %\url{https://episecc.eu/sites/default/files/1332\_ChristianFlachberger\%2BEduardGringinger2016.pdf}
 \end{itemize}
 
 
@@ -4254,14 +4257,16 @@ Christoph Fabinaek (male) (PhD, MSc, MBA), is senior lead scientist. Since 2006,
 
 
 \begin{wrapfigure}{R}{5cm}
-\vspace{-1.3cm}
+\vspace{-2.8cm}
 \hfill \includeimage[width=5cm]{logos/YAG-logo.png}
 \vspace{-0.8cm}
 \end{wrapfigure}
 \label{sec:participantYAG}
 
+\vspace*{0.5cm}
+
 %===============================================================================
-\YAGlong{} is a french cyber security product editor dedicated at supporting cyber risks management in software applications. The company was established in January 2017 under the status of Simplified Joint Stock Company with a capital of 85,000 Eur. The company's product, named \textit{YAG-Suite}, equips security and privacy by design development processes as well as source code audit service provision. 
+\YAGlong{} is a french cybersecurity product editor dedicated at supporting cyber risks management in software applications. The company was established in January 2017 under the status of Simplified Joint Stock Company with a capital of 85,000 Eur. The company's product, named \textit{YAG-Suite}, equips security and privacy by design development processes as well as source code audit service provision. 
 
 The YAG-Suite is a smart tool based on static analysis and machine learning which supports identification of the vulnerabilities that matter in the source code of software applications. It assists the users to effectively detect security and sensitive data protection breaches in the target application, to understand their causes via detailed diagnostics, to identify the necessary and sufficient remediation actions as well as feeding managerial dashboards.The YAG-Suite supports the two phases vulnerability investigation processes:
 \begin{itemize}
@@ -4270,16 +4275,19 @@ The YAG-Suite is a smart tool based on static analysis and machine learning whic
 \end{itemize}
 
 \vspace{10pt}
+\subsubsection*{Role in Elysian}
+\textbf{\YAGshort{} will make its key contributions in  WP2 on Vulnerability Detection and Self-healing given its expertise in the use of static analysis methods for security. It will also contribute to WP4, in particular leading a metric-based assessment of security requirements task, WP3,and  WP6-WP8.
+ }
 
 \vspace{10pt}
 
-\textbf{Key Personnel involved in the project:}
+\textbf{Key Personnel involved in the project}
 
-\paragraph{Hervé Le Goff} (male) (MSc), is Co-founder and CEO of \YAGlong{}. He has been working at the french ministry of defence for more than 25 years in the field of information systems, cybersecurity, procurement and management. He also gained experience in multinational relations during a three years post at an international organisation HQ in Brussels.
+\paragraph{Hervé Le Goff} (male) (MSc) is Co-founder and CEO of \YAGlong{}. He has been working at the french ministry of defence for more than 25 years in the field of information systems, cybersecurity, procurement and management. He also gained experience in multinational relations during a three years post at an international organisation HQ in Brussels.
 
 \vspace{10pt}
 
-\paragraph{Dr Antoine Floc'h} (male) (PhD), is Co-founder and CTO of \YAGlong{} with more than 13 years of experience in the research and innovation area of compiling, SAST, operational research and source code scanning. He is the author and technical lead of \YAGlong{} technology.
+\paragraph{Dr Antoine Floc'h} (male)  is Co-founder and CTO of \YAGlong{} with more than 13 years of experience in the research and innovation area of compiling, SAST, operational research and source code scanning. He is the author and technical lead of \YAGlong{} technology.
 
 \subsubsection*{Relevant publications}
 \begin{itemize}
@@ -4295,7 +4303,7 @@ In: Bertels K., Dimopoulos N., Silvano C., Wong S. (eds) Embedded Computer Syste
 
 
 
-\subsubsection*{Relevant Research and Technology Projects}
+\subsubsection*{Relevant Technology Projects}
 
 \begin{itemize}
 \item YAG-Suite (2016-2020): Feasibility, design and development of a new technology for vulnerability detection in the source code of Java and PHP applications, diagnostics and remediation support. The technology detects and identify vulnerabilities in the source code with SAST and bring automation capabilities to qualify the warnings raising from SAST with machine learning, in a supervised training approach. The project led the company to be labelled ”Jeune Entreprise Innovante” (Young Innovative Company).
@@ -4323,21 +4331,24 @@ No third parties are involved in the project.
 
 \subsection{Ethics}
 
-The proposal raises no specific ethical concerns. Nonetheless, some technologies (i.e., identity management components, \textcolor{red}{intelligent user interface}) will be designed and developed following a User-Centered Design approach with the active participation of users. Hence, for these technologies, there is provision for user studies in which we will invite human participants to evaluate the technologies used. These are typical empirical studies, which are planned to involve adult healthy volunteers for the collection of experimental data within specific use case scenarios. These users will be monitored through logging their usage with the supported tools and devices. It is expected that users will be recorded on video, as well as their eye gaze behavior and physiological signals will be monitored and analyzed in order to establish efficiency, effectiveness and quality of the developed technologies. We also plan to collect the participants' opinions through semi-structured interviews, surveys and focus groups that will be based on accredited questionnaires for requirements' elicitation as well as for measuring the users’ perceived usability, security, and trust with regards to the developed technologies.
+The proposal raises no specific ethical concerns. Nonetheless, some of our technologies developed in \texbf{WP5} on Intelligent Identity Management and Trust (e.g. identity management components, intelligent user interface) will be designed and developed following a User-Centered Design approach with the active participation and evaluation of users. Hence, for these technologies, there is provision for user studies in which we will invite human participants to evaluate the technologies used. These are typical empirical studies, which are planned to involve adult volunteers for the collection of experimental data within specific use case scenarios. 
+These users will be monitored through logging their usage with the supported tools and devices. It is expected that users will be recorded on video, as well as their eye gaze behavior and physiological signals will be monitored and analyzed in order to establish efficiency, effectiveness and quality of the developed technologies. We also plan to collect the participants' opinions through semi-structured interviews, surveys and focus groups that will be based on accredited questionnaires for requirements' elicitation as well as for measuring the users’ perceived usability, security and trust with regards to the developed technologies.
 
-In this context, we will comply with research ethics' regulations and guidelines such as the Code of Professional Conduct of the User Experience Professionals Association (UXPA - https://uxpa.org/uxpa-code-of-professional-conduct), which is the most established set of guidelines for conducting usability studies. This foresees in §6 the rules that should be followed with respect to privacy, confidentiality and anonymity in any usability study. We will also comply with the relevant regulation, principles and legislation of the European Commission and particularly those involving the participation of adults in user studies (https://ec.europa.eu/programmes/horizon2020/en/h2020-section/ethics). The participants will be informed, and their consent will be required for participation. All data will be confidential, secure, anonymous, and the identification of individuals will not be possible.
+In this context, we will comply with research ethics' regulations and guidelines such as the Code of Professional Conduct of the User Experience Professionals Association (UXPA - https://uxpa.org/uxpa-code-of-professional-conduct), which is the most established set of guidelines for conducting usability studies. This foresees in §6 the rules that should be followed with respect to privacy, confidentiality and anonymity in any usability study. We will also comply with the relevant regulation, principles and legislation of the European Commission and particularly those involving the participation of adults in user studies (https://ec.europa.eu/programmes/horizon2020/en/h2020-section/ethics). The participants will be informed, and their consent will be required for participation. 
+Participants can decide to leave the study at any time.
+All data will be confidential, secure, anonymous, and the identification of individuals will not be possible.
 
-\textbf{Ethics Form, question 2 HUMANS (YES)} - need to indicate a page in the portal where this gets discussed/described (here).
+%\textbf{Ethics Form, question 2 HUMANS (YES)} - need to indicate a page in the portal where this gets discussed/described (here).
 
-Does your research involve human participants?\\
+%Does your research involve human participants?\\
 
-\textbf{Ethics Form, question 4 PERSONAL DATA (YES)} - need to indicate a page in the portal where this gets discussed/described (here).\\
+%\textbf{Ethics Form, question 4 PERSONAL DATA (YES)} - need to indicate a page in the portal where this gets discussed/described (here).\\
 
-Does your research involve personal data collection and/or processing? \\
+%Does your research involve personal data collection and/or processing? \\
 
 
-\textbf{Ethics Form, question 6 Third Countries}
-Do you plan to import any material - including personal data - from non-EU countries into the EU? (NO)??\\
+%\textbf{Ethics Form, question 6 Third Countries}
+%Do you plan to import any material - including personal data - from non-EU countries into the EU? (NO)??\\
 
 \subsection{Security}
 
@@ -4350,7 +4361,7 @@ activities or results raising security issues: NO
 'EU-classified information' as background or results: NO
 \end{itemize}
 
-Although \TheProject{} deals with use cases from the domains where privacy of the data is of paramount importance, such as banking and healthcare. the use cases will be developed and evaluated on synthetic but realistic data that will be produced using the data fabrication technology. Therefore, over the course of development and evaluation, the \TheProject{} technologies will not use real data and, therefore, will not present security and privacy concerns.    
+Although \TheProject{} deals with use cases from the domains where privacy of the data is of paramount importance, such as banking and healthcare, the use cases will be developed and evaluated on synthetic but realistic data that will be produced using the data fabrication technology from \IBMshort{}. Therefore, over the course of development and evaluation, the \TheProject{} technologies will not use real data and, therefore, will not present any security and/or privacy concerns.    
 %% Write macro to split Sections 4-5
 \Split{4-5}
 
