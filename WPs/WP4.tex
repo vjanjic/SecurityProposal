@@ -15,9 +15,9 @@
 The objectives of \theWP{} are to:
 \begin{compactitem}
 %\item Develop a formal high-level multi-level specification language; 
-\item Develop a formal high-level multi-level language for specification of security properties of the code; 
+\item Develop a formal high-level multi-level language for specification of security properties of the code. 
 
-\item Define abstraction/refinement as a bidirectional transformation between specifications across levels;
+\item Define abstraction/refinement as a bidirectional transformation between specifications across levels.
 
 % How is distribution considered?
 %BOTH for source code and code patterns that represent known vulnerabilities 
@@ -25,7 +25,7 @@ The objectives of \theWP{} are to:
 
 %\item Define a notion of behavioural equivalence between code fragments (within/between language(s)), able to capture refactorings, and suitable to formalise security and privacy-preserving equivalences;
 %\item Define a notion of behavioural equivalence (in terms of security and privacy-preserving properties) between code fragments;
-\item Define a \emph{behavioural equivalence} (in terms of security and privacy properties) between code fragments;
+\item Define a \emph{behavioural equivalence} (in terms of security and privacy properties) between code fragments.
 
 %\item Define a logic to capture properties of interest including security properties and privacy norms;
 % VJ: How is above different from the first point and can they be merged?
@@ -112,7 +112,7 @@ We will define the abstractions for describing security properties of the code i
 % VJ: New Version
 \theTask{} will define \emph{security contracts} describing security properties of the code. These are mapped to concrete syntax in different
 programming languages and, conversely, extracted using ASMs from source code. The task will proceed in three phases.
-The first phase focuses on the representation of security contracts;  extending \textsf{eKnows} for semi-automated extraction of ASMs from source code with C++ support; and providing an initial formalisation of the security contracts in (temporal) logics for ASMs (\ref{del:formal1}). The second phase develops more sophisticated abstractions for identified programming patterns in C++/Java, adapting the formalisation and logics to these new abstractions (\ref{del:formal2}). The third phase refines this approach to take into account the semantics of the libraries used in distributed data analytics systems, using hierarchical logics to support reasoning across levels of abstraction(\ref{del:formal3}). This will give us a unifying formalism for the rigorous verification of the security contracts across layers.
+The \emph{first} phase focuses on the representation of security contracts;  extending \textsf{eKnows} for semi-automated extraction of ASMs from source code with C++ support; and providing an initial formalisation of the security contracts in (temporal) logics for ASMs (\ref{del:formal1}). The \emph{second} phase develops more sophisticated abstractions for identified programming patterns in C++/Java, adapting the formalisation and logics to these new abstractions (\ref{del:formal2}). The \emph{third} phase refines this approach to take into account the semantics of the libraries used in distributed data analytics systems, using hierarchical logics to support reasoning across levels of abstraction(\ref{del:formal3}). This will give us a unifying formalism for the rigorous verification of the security contracts across layers.
 \UCM leads this task with their expertise in specifying contracts at different levels and programming languages. \SA and \SCCHshort will work closely on the formalisation and extension of \textsf{eKnows}. \IBMshort and \SOPRAshort will provide expertise in identification of security vulnerabilities and use cases.
 \end{Task}
 
@@ -155,11 +155,11 @@ from~\ref{task:statichealing}, adding confidence that the refactorings do not ch
 that we can find one that satisfies the security requirements imposed. 
 % VJ: Why is defining logic to capture properties of interest done in this task and not in T4.1?
 %%%%We will define a logic (based on e.g.~distributed stochastic temporal logics) to capture security properties and %%%%privacy norms (FOL) and search for execution traces that satisfy these properties and norms. 
-This task will proceed in three phases. In the first phase, we define notions of behavioural equivalence and abstraction/refinement 
+This task will proceed in three phases. In the \emnph{first} phase, we define notions of behavioural equivalence and abstraction/refinement 
 %and develop the required logic for verification of a tractable subset of the programming languages used 
-(\ref{del:formal1}). In the second phase we extend the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, and so on
+(\ref{del:formal1}). In the \emph{second} phase we extend the notion of transformations across layers, expanding all formal notions of equivalence, trace of execution, and so on
 %logic and satisfaction, 
-(\ref{del:formal2}). The final phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns with FOL.
+(\ref{del:formal2}). The \emph{final} phase will lead to an integrated approach and the verification of the correctness of the transformations in the context of our distributed data analytics systems (\ref{del:formal3}) focusing specifically on expressing and verifying privacy concerns with FOL.
 \SA leads this task given their expertise in refactoring, logics and formal verification, theorem provers and SMT solvers. 
 %and distributed logics. 
 \SA will work closely with \SCCHshort on formal verification, and with \UCM on code refactorings.
@@ -213,7 +213,7 @@ This task will proceed in three phases. In the first phase, we define notions of
 %\SCCHshort will lead this task working closely with  \SA on all aspects. \IBMshort will provide their expertise on how to identify and repair vulnerabilities.
 
 \theTask{} will define classes of security contract requirements for distributed data analytics applications, and formalise repair proof obligations for ASMs with respect to these requirements. We will address %two kinds of 
-threats such as \emph{secrets in the data and processes that are to be protected}, for which proof obligations will be formalised through static and dynamic constraints and identification of secret-free subformulae and \emph{anticipated actions of potential attackers}, developing attacker models for each of the security constraints. A one-step logic for reasoning about concurrent  ASMs will be used to formalise security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM. This task will proceed in three phases. The first phase will look at security threats on processes (\ref{del:formal1}), the second phase will look at security threats on data (\ref{del:formal2}) and the third phase will explore more complex security and privacy threats affecting multiple layers, data and processes. \SCCHshort will lead this task working closely with \SA on all aspects. \IBMshort will provide their expertise on identifying vulnerabilities.
+threats such as \emph{secrets in the data and processes that are to be protected}, for which proof obligations will be formalised through static and dynamic constraints and identification of secret-free subformulae and \emph{anticipated actions of potential attackers}, developing attacker models for each of the security constraints. A one-step logic for reasoning about concurrent  ASMs will be used to formalise security constraints. In addition, for each identified attack the anticipated approach of the attacker will be specified by a corresponding ASM. This task will proceed in three phases. The \emph{first} phase will look at security threats on processes (\ref{del:formal1}), the \emph{second} phase will look at security threats on data (\ref{del:formal2}) and the \emph{third} phase will explore more complex security and privacy threats affecting multiple layers, data and processes. \SCCHshort will lead this task working closely with \SA on all aspects. \IBMshort will provide their expertise on identifying vulnerabilities.
 
 \end{Task}
 
