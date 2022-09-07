@@ -34,7 +34,7 @@ title = {A Messy State of the Union: Taming the Composite State Machines of TLS}
 year = {2015}, isbn = {9781467369497}, 
 publisher = {IEEE Computer Society}, 
 address = {USA}, url = {https://doi.org/10.1109/SP.2015.39}, doi = {10.1109/SP.2015.39}, abstract = {Implementations of the Transport Layer Security (TLS) protocol must handle a variety of protocol versions and extensions, authentication modes, and key exchange methods. Confusingly, each combination may prescribe a different message sequence between the client and the server. We address the problem of designing a robust composite state machine that correctly multiplexes between these different protocol modes. We systematically test popular open-source TLS implementations for state machine bugs and discover several critical security vulnerabilities that have lain hidden in these libraries for years, and have now finally been patched due to our disclosures. Several of these vulnerabilities, including the recently publicized FREAK flaw, enable a network attacker to break into TLS connections between authenticated clients and servers. We argue that state machine bugs stem from incorrect compositions of individually correct state machines. We present the first verified implementation of a composite TLS state machine in C that can be embedded into OpenSSL and accounts for all its supported cipher suites. Our attacks expose the need for the formal verification of core components in cryptographic protocol libraries, our implementation demonstrates that such mechanized proofs are within reach, even for mainstream TLS implementations.}, 
-booktitle = {Proceedings of the 2015 IEEE Symposium on Security and Privacy}, pages = {535â552}
+booktitle = {Proceedings of the 2015 IEEE Symposium on Security and Privacy}, pages = {535–552}
 }
  
 
@@ -57,13 +57,13 @@ title = {{A Computationally Sound Mechanized Prover for Security Protocols}},
 journal = {IEEE TDSC}, 
 volume={5},
 number = {4},
-OPTpages = {193--207}, 
+%pages = {193--207}, 
 year = {2008}
 }
  
 @article{FM-priv-guarantee,
 author= {G.~Barthe, B.~K\"opf, F.~Olmedo and S.~Zanella-B\'eguelin},
-title = {{Probabilistic Relational Reasoning for Differential Privacy}}, 
+title = {{Probabilistic Relational Reasoning for Differential Privacy}, 
 journal = {ACM TOPLAS}, 
 volume = {35},
 number = {3},
@@ -73,7 +73,8 @@ year = {2013}
 }
 
 @article{DiekertL14,
-  author    = {V.~Diekert and M.~Leucker},
+  author    = {V.~Diekert and
+               M.~Leucker},
   title     = {{Topology, Monitorable Properties and Runtime Verification}},
   journal   = {Theor.~Comput.~Sci.},
   volume    = {537},
@@ -205,6 +206,7 @@ title = {{Algorithmic Skeletons: Structured Management of Parallel Computation}}
 year = {1991},
 isbn = {0262530864},
 publisher = {MIT Press}
+%address = {Cambridge, MA, USA}
 }
 
 @article{tbb,
@@ -213,9 +215,13 @@ title = {{Intel Threading Building Blocks}},
 year = {2008},
 issue_date = {April 2008},
 publisher = {Consortium for Computing Sciences in Colleges},
+%address = {Evansville, IN, USA},
 volume = {23},
 number = {4},
+%issn = {1937-4771},
 journal = {J.~Comp.~Sci.~Coll.}
+%pages = {298},
+%numpages = {1}
 }
 
 @misc{cassandra,
@@ -243,11 +249,12 @@ howpublished={\url{https://docs.microsoft.com/en-us/cpp/parallel/concrt/parallel
 author = {D.~Jeffrey and S.~Ghemawat},
 title = {{MapReduce: Simplified Data Processing on Large Clusters}},
 year = {2008},
+%issue_date = {January 2008},
 publisher = {ACM},
 volume = {51},
 number = {1},
 journal = {Commun. ACM},
-pages = {107â113},
+pages = {107–113},
 }
 
 @book{hadoop,
@@ -255,7 +262,7 @@ author = {White, Tom},
 title = {{Hadoop: The Definitive Guide}},
 year = {2009},
 isbn = {0596521979},
-publisher = {OâReilly Media, Inc.},
+publisher = {O’Reilly Media, Inc.},
 edition = {1st}
 }
 
@@ -293,14 +300,15 @@ howpublished={\url{keras.io}}
 }
 
 @article{bigdatasecurity,
-author = {P.~Derbeko et al.},
-OPTauthor = {P.~Derbeko and S.~Dolev and E.~Gudes and S.~Sharma},
+author = {P.~Derbeko and S.~Dolev and E.~Gudes and S.~Sharma},
 title = {{Security and Privacy Aspects in MapReduce on Clouds}},
 year = {2016},
+%issue_date = {May 2016},
 publisher = {Elsevier},
 volume = {20},
 number = {C},
-journal = {Comput. Sci. Rev.}
+journal = {Comput. Sci. Rev.},
+pages = {1–28}
 }
 
 @inproceedings{10.1145/1989323.1989345,
@@ -328,16 +336,24 @@ keywords = {privacy, differential privacy}
   booktitle = {Proc. NDSS 2016},
   publisher = {The Internet Society},
   year      = {2016}
+  %url       = {http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/dependence-makes-you-vulnerable-differential-privacy-under-dependent-tuples.pdf},
+  %timestamp = {Tue, 16 Jan 2018 13:23:48 +0100},
+  %biburl    = {https://dblp.org/rec/conf/ndss/LiuMC16.bib},
+  %bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
 @ARTICLE{5288525, 
-author={D.~{Rebollo-Monedero} and J.~{FornÃ©} and J.~{Domingo-Ferrer}}, 
+author={D.~{Rebollo-Monedero} and J.~{Forné} and J.~{Domingo-Ferrer}}, 
 journal={IEEE Trans.~Know.~and Data Eng.}, 
 title={{From t-Closeness-Like Privacy to Postrandomization via Information Theory}}, 
 year={2010}, 
 volume={22}, 
 number={11}, 
 pages={1623-1636}
+%keywords={data privacy;information theory;t-closeness-like privacy model;postrandomization method;information theory;data anonymization;confidential attribute;privacy measurement;Information theory;Data privacy;Phase change random access memory;Data engineering;Noise measurement;Rate-distortion;Data security;Information security;Cryptography;Remuneration;t-Closeness;microdata anonymization;information theory;rate-distortion theory;PRAM;noise addition.}, 
+%doi={10.1109/TKDE.2009.190}, 
+%ISSN={2326-3865}, 
+%month={Nov},
 }
 
 @ARTICLE{6482222, 
@@ -348,14 +364,22 @@ year={2013},
 volume={8}, 
 number={6}, 
 pages={838-852}
+%keywords={data analysis;data privacy;database management systems;information theory;utility-privacy tradeoff;database;information theoretic approach;electronic data source;privacy guarantee;personally identifiable information privacy;quantifiable benefit;information consumer;analytical model;stochastic data model;encoding scheme;Databases;Data privacy;Privacy;Data models;Distortion measurement;Encoding;Utility;privacy;databases;rate-distortion theory;equivocation;side information}, 
+%doi={10.1109/TIFS.2013.2253320}, 
+%ISSN={1556-6021}, 
+%month={June},
 }
 
 @INPROCEEDINGS{7888175, 
 author={Y.~O.~{Basciftci} and Y.~{Wang} and P.~{Ishwar}}, 
 booktitle={Proc.~ITA 2016},
 title={{On Privacy-Utility Tradeoffs for Constrained Data Release Mechanisms}}, 
-year={2016},
+year={2016}
 pages={1-6}
+%keywords={data privacy;constrained data release mechanisms;privacy-preserving data release mechanisms;information-leakage;rate-distortion problems;privacy-utility tradeoff region;sensitive data;Distortion;Measurement;Optimization;Privacy;Mutual information;Markov processes;Rate-distortion}, 
+%doi={10.1109/ITA.2016.7888175}, 
+%ISSN={null}, 
+%month={Jan},
 }
 
 @article{DBLP:journals/corr/abs-1710-09295,
@@ -366,6 +390,12 @@ pages={1-6}
   journal   = {CoRR},
   volume    = {abs/1710.09295},
   year      = {2017}
+  %url       = {http://arxiv.org/abs/1710.09295},
+  %archivePrefix = {arXiv},
+  %eprint    = {1710.09295},
+  %timestamp = {Thu, 17 Oct 2019 16:12:49 +0200},
+  %biburl    = {https://dblp.org/rec/journals/corr/abs-1710-09295.bib},
+  %bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
 @article{Huang_2017, 
@@ -390,9 +420,11 @@ pages={495-505}
 title = {{InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets}},
 author = {X.~Chen and Y.~Duan and R.~Houthooft and J.~Schulman and I.~Sutskever and P.~Abbeel},
 booktitle = {Advances in Neural Information Processing Systems 29},
+%editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
 pages = {2172--2180},
 year = {2016},
 publisher = {Curran Associates, Inc.}
+%url = {http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf}
 }
 
 @article{10.1142/S0218488502001648, 
@@ -402,24 +434,28 @@ year = {2002},
 publisher = {World Scientific Publishing Co., Inc.}, 
 volume = {10}, 
 number = {5}, 
-journal = {J.~Unc.~Fuz.~Knowl.-Bas.~Syst.}
+journal = {J.~Unc.~Fuz.~Knowl.-Bas.~Syst.},
+%pages = {557–570}
 }
 
 @article{10.1145/1217299.1217302,
-author = {A.~Machanavajjhala and et al.},
-OPTauthor = {A.~Machanavajjhala and D.~Kifer and J.~Gehrke and M.~Venkitasubramaniam},
+author = {A.~Machanavajjhala and D.~Kifer and J.~Gehrke and M.~Venkitasubramaniam},
 title = {{L-Diversity: Privacy beyond k-Anonymity}},
 year = {2007},
 publisher = {ACM},
 volume = {1},
 number = {1},
-journal = {ACM Tran. K. D. Data}
+journal = {ACM Trans. Knowl. Discov. Data}
 }
 
 @inproceedings{DBLP:conf/icde/LiLV07,
   author    = {N.~Li and
                T.~Li and
                S.~Venkatasubramanian},
+%  editor    = {Rada Chirkova and
+%               Asuman Dogac and
+%               M. Tamer {\"{O}}zsu and
+%               Timos K. Sellis},
   title     = {{t-Closeness: Privacy Beyond k-Anonymity and l-Diversity}},
   booktitle = {Proc.~ICDE 2007},
   pages     = {106--115},
@@ -433,9 +469,9 @@ title = {{The Algorithmic Foundations of Differential Privacy}},
 year = {2014},
 publisher = {Now Publishers Inc.},
 volume = {9},
-number = {3â4},
+number = {3–4},
 journal = {Found. Trends Theor. Comput. Sci.},
-pages = {211â407}
+pages = {211–407}
 }
 
 @ARTICLE{5447695, 
@@ -677,7 +713,7 @@ pages="108--118",
 	title = {{Type-Driven Verification of Non-functional Properties}},
 	booktitle = {Proc.~PPDP '19},
 	year = {2019},
-	pages = {1--15},
+	pages = {1--15}
 	publisher = {ACM}
 } 
 
@@ -851,7 +887,7 @@ pages="108--118",
 }
 
 @inproceedings{gotz,
-	author = {GÃ¶tz, Sebastian and Wilke, Claas and Richly, Sebastian and Assmann, Uwe},
+	author = {Götz, Sebastian and Wilke, Claas and Richly, Sebastian and Assmann, Uwe},
 	year = {2012},
 	month = {06},
 	pages = {},
@@ -1055,6 +1091,11 @@ pages="108--118",
 	booktitle = {Proc.~POPL 2009},
 	pages     = {127--139},
 	year      = {2009}
+%	url       = {https://doi.org/10.1145/1480881.1480898},
+%	doi       = {10.1145/1480881.1480898},
+%	timestamp = {Tue, 06 Nov 2018 11:07:42 +0100},
+%	biburl    = {https://dblp.org/rec/bib/conf/popl/GulwaniMC09},
+%	bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
 @article{DBLP:journals/toplas/0002AH12,
@@ -1791,7 +1832,7 @@ pages="108--118",
 }
 
 @inproceedings{ghaith,
-	author = {S.~Ghaith and M. \'O Cinn\'eide},
+	author = {S.~Ghaith and M.~Ó Cinnéide},
 	year = {2012},
 	pages = {121-135},
 	title = {{Improving Software Security Using Search-Based Refactoring}},
@@ -2029,10 +2070,10 @@ pages="108--118",
 	address = {New York, NY, USA},
 	doi = {10.1145/125826.125848},
 	booktitle = {Proceedings of the 1991 ACM/IEEE Conference on Supercomputing},
-	pages = {4â13},
+	pages = {4–13},
 	numpages = {10},
 	location = {Albuquerque, New Mexico, USA},
-	series = {Supercomputing â91}
+	series = {Supercomputing ’91}
 }
 
 @book{kennedy,
@@ -2498,6 +2539,7 @@ pages="108--118",
 	author = {Petrie, Charles J.},
 	title = {New Algorithms for Dependency-Directed Backtracking (Master's thesis)},
 	year = {1986},
+	source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Autexas_cs%3AUTEXAS_CS%2F%2FAI86-33},
 	publisher = {University of Texas at Austin},
 	address = {Austin, TX, USA},
 }
@@ -2521,7 +2563,7 @@ pages="108--118",
 	year = "1981",
 }
 
-
+% incollection (has an editor, title, and possibly a booktitle)
 @INcollection{KA:2001,
 	author = {Kong, Wei-Chang},
 	Title = {The implementation of electronic commerce in SMEs in Singapore (as Incoll)},
@@ -2536,7 +2578,7 @@ pages="108--118",
 }
 
 
-
+% with bibfield 'type' before chapter (note no editor)
 @INBOOK{KAGM:2001,
 	author = {Kong, Wei-Chang},
 	type = {Name of Chapter:},
@@ -2551,7 +2593,19 @@ pages="108--118",
 	address = {Hershey, PA, USA},
 }
 
+%%% Notes! This is because the atsign-INBOOK citation type specifies EITHER
+%%% editor or author, but not both. In my experiments with the harvard/dcu
+%%% bibtex style (and presumably this applies to other styles too), bibtex
+%%% ignores the editor information if author information exists in an
+%%% atsign-INBOOK entry. atsign-INCOLLECTION is far more commonly used in my references,
+%%% and in the absence of an editor I believe most bibtex styles will just
+%%% ommit the editor from the reference - the chapter information will not
+%%% end up in the in-text citation as you suggest it should be but at least
+%%% there is a place to put the editor if necessary.
 
+
+
+% was 'Inbook' -- changed to incollection - (editor is different to author) - need to tell Asad to codify as such.
 @incollection{Kong:2002:IEC:887006.887010,
 	author =      {Kong, Wei-Chang},
 	editor =      {Theerasak Thanasankit},
@@ -2570,7 +2624,7 @@ pages="108--118",
 	note =        "",
 }
 
-
+% incol when the chapter is 'text' - due to presence of editor (different to author)
 @incollection{Kong:2003:IEC:887006.887011,
 	author = {Kong, Wei-Chang},
 	title = {The implementation of electronic commerce in SMEs in Singapore (Incoll)},
@@ -2585,7 +2639,33 @@ pages="108--118",
 	address = {Hershey, PA, USA},
 }
 
+% ------ test
+%incollection{Kong:2003:IEC:887006.887010,
+	% author = {Kong, Wei-Chang},
+	% chapter = {The implementation of electronic commerce in SMEs in Singapore (Incoll-text-in-chap)},
+	% booktitle = {booktitle E-commerce and cultural values},
+	% title =   {The title},
+	% editor = {Thanasankit, Theerasak},
+	% year = {2003},
+	% isbn = {1-59140-056-2},
+	% pages = {51--74},
+	% numpages = {24},
+	% url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+	% acmid = {887010},
+	% publisher = {IGI Publishing},
+	% address = {Hershey, PA, USA},
+	%}
 
+
+% ---------
+
+
+
+
+
+% Need inbook with num in chapter
+
+% and inbook with number in chapter
 @InBook{Kong:2004:IEC:123456.887010,
 	author =      {Kong, Wei-Chang},
 	editor =      {Theerasak Thanasankit},
@@ -2605,7 +2685,7 @@ pages="108--118",
 }
 
 
-
+% and inbook with text in chapter
 @Inbook{Kong:2005:IEC:887006.887010,
 	author =      {Kong, Wei-Chang},
 	editor =      {Theerasak Thanasankit},
@@ -2625,7 +2705,7 @@ pages="108--118",
 }
 
 
-
+% and inbook with a num and type field
 @Inbook{Kong:2006:IEC:887006.887010,
 	author =      {Kong, Wei-Chang},
 	editor =      {Theerasak Thanasankit},
@@ -2645,7 +2725,25 @@ pages="108--118",
 }
 
 
-
+% and incol coz we have a BLANK chapter - due to presence of editor
+%atIncollection{Kong:2006:IEC:887006.887011,
+	%  author =     {Kong, Wei-Chang},
+	%  editor =     {Theerasak Thanasankit},
+	%  title =      "The title"
+	%  booktitle =  {E-commerce and cultural values (Incol-coz-blank-chap)},
+	%  year =       {2006},
+	%  address =    {Hershey, PA, USA},
+	%  publisher =  {IGI Publishing},
+	%  type =       {Type!},
+	%  chapter =    {},
+	%  pages =      {51--74},
+	%  numpages =   {24},
+	%  acmid =      {887010},
+	%  isbn =       {1-59140-056-2},
+	%  number =     "",
+	%  month =      "",
+	%  note =       "",
+	%}
 
 @article{SaeediMEJ10,
 	author = {Mehdi Saeedi and Morteza Saheb Zamani and Mehdi Sedighi},
@@ -2668,7 +2766,7 @@ pages="108--118",
 	year = {2010}
 }
 
-
+% Asad's new version
 @article{Kirschmer:2010:AEI:1958016.1958018,
 	author = {Kirschmer, Markus and Voight, John},
 	title = {Algorithmic Enumeration of Ideal Classes for Quaternion Orders},
@@ -2689,7 +2787,7 @@ pages="108--118",
 }
 
 
-
+% incol due to presence of booktitle
 @incollection{Hoare:1972:CIN:1243380.1243382,
 	author = {Hoare, C. A. R.},
 	title = {Chapter II: Notes on data structuring},
@@ -2704,7 +2802,7 @@ pages="108--118",
 	address = {London, UK, UK},
 }
 
-
+% incol due to presence of booktitle
 @incollection{Lee:1978:TQA:800025.1198348,
 	author = {Lee, Jan},
 	title = {Transcript of question and answer session},
@@ -2720,7 +2818,7 @@ pages="108--118",
 	address = {New York, NY, USA},
 }
 
-
+% incol due to booktitle
 @incollection{Dijkstra:1979:GSC:1241515.1241518,
 	author = {Dijkstra, E.},
 	title = {Go to statement considered harmful},
@@ -2734,7 +2832,7 @@ pages="108--118",
 	address = {Upper Saddle River, NJ, USA},
 }
 
-
+% incol due to booktitle
 @incollection{Wenzel:1992:TVA:146022.146089,
 	author = {Wenzel, Elizabeth M.},
 	title = {Three-dimensional virtual acoustic displays},
@@ -2749,7 +2847,7 @@ pages="108--118",
 	address = {New York, NY, USA},
 }
 
-
+% incol due to booktitle
 @incollection{Mumford:1987:MES:54905.54911,
 	author = {Mumford, E.},
 	title = {Managerial expert systems and organizational change: some critical research issues},
@@ -2772,7 +2870,7 @@ pages="108--118",
 	address = {New York, NY, USA},
 }
 
-
+% Let's include Boris / BBeeton entries  (multi-volume works)
 
 @book {MR781537,
 	AUTHOR = {H{\"o}rmander, Lars},
@@ -2808,7 +2906,9 @@ pages="108--118",
 	MRREVIEWER = {Min You Qi},
 }
 
+%%%%%%%%%%%%%%%%%%%%%% Start of Aptara sample bib entries
 
+% acmsmall-sam.bib
 @InProceedings{Adya-01,
 	author        = {A. Adya and P. Bahl and J. Padhye and A.Wolman and L. Zhou},
 	title         = {A multi-radio unification protocol for {IEEE} 802.11 wireless networks},
@@ -2911,6 +3011,7 @@ pages="108--118",
 	school = "The University of Texas at Austin",
 	note = "(In preparation)",
 	year = "1994"}
+%month = "dec",}
 
 @PhdThesis{gerndt:89,
 	author =       "Michael Gerndt",
@@ -2986,7 +3087,7 @@ pages="108--118",
 	year = 1985,
 	pages = "359--379"}
 
-
+%testing
 @BOOK{test,
 	author = "Donald E. Knuth",
 	title = "Seminumerical Algorithms",
@@ -3116,7 +3217,7 @@ pages="108--118",
 }
 
 @article{rio:2018,
-	author = {D.~del~Rio and M.~F.~Dolz and L.~M.~SÃ¡nchez and J.~D.~GarcÃ­a and M.~Danelutto and M.~Torquati},
+	author = {D.~del~Rio and M.~F.~Dolz and L.~M.~Sánchez and J.~D.~García and M.~Danelutto and M.~Torquati},
 	title ={{Finding Parallel Patterns Through Static Analysis in C++ Applications}},
 	journal = {ACM HPCA},
 	volume = {32},
@@ -3126,14 +3227,14 @@ pages="108--118",
 }
 
 @Article{Garcia2019,
-	author={J.~D.~Garcia
-	and D.~del Rio, 
+	author="J.~D.~Garcia
+	and D.~del Rio, David
 	and M.~Aldinucci
 	and F.~Tordini
 	and M.~Danelutto
 	and G.~Mencagli
-	and M.~Torquati},
-	title={Challenging the Abstraction Penalty in Parallel Patterns Libraries},
+	and M.~Torquati
+	title="Challenging the Abstraction Penalty in Parallel Patterns Libraries",
 	journal="J. of Supercomputing",
 	year="2019"
 }
@@ -3201,6 +3302,9 @@ pages="108--118",
 @inproceedings{DBLP:conf/IEEEpact/TournavitisF10,
 	author    = {G.~Tournavitis and
 	B.~Franke},
+	%editor    = {Valentina Salapura and
+	%Michael Gschwind and
+	%Jens Knoop},
 	title     = {{Semi-Automatic Extraction and Exploitation of Hierarchical Pipeline
 	Parallelism Using Profiling Information}},
 	booktitle = {Proc.~PACT 2010},
@@ -3228,6 +3332,8 @@ pages="108--118",
 	author    = {S.~Rul and
 	H.~Vandierendonck and
 	K.~De Bosschere},
+%	editor    = {Siddhartha Chatterjee and
+%	Michael L. Scott},
 	title     = {{Extracting Coarse-Grain Parallelism in General-Purpose Programs}},
 	booktitle = {Proc.~PPoPP 2008},
 	pages     = {281--282},
@@ -3337,7 +3443,7 @@ title = {{Theft-Resilient Mobile Wallets: Transparently Authenticating NFC Users
 year = {2016},
 publisher = {ACM},
 booktitle = {Proc.~ACSAC '16},
-pages = {265â276}
+pages = {265–276}
 }
 
 
@@ -3347,7 +3453,7 @@ title = {{Improving Accuracy, Applicability and Usability of Keystroke Biometric
 year = {2015},
 publisher = {ACM},
 booktitle = {Proc.~ACM CHI '15},
-pages = {1393â1402},
+pages = {1393–1402},
 }
 
 @inproceedings{cloudSecurity,
@@ -3478,7 +3584,7 @@ publisher = {IEEE}
 
 
 @misc{duo,
-title={Ciscoâs Duo Security},
+title={Cisco’s Duo Security},
 howpublished={\url{https://duo.com/}}
 }
 
@@ -3521,7 +3627,7 @@ title = {{Blockchain Based Access Control Systems: State of the Art and Challeng
 year = {2019},
 publisher = {ACM},
 booktitle = {Proc. IEEE/WIC/ACM WI '19},
-pages = {423â428}
+pages = {423–428}
 }
 
 @article{10.1145/3316481,
@@ -3539,7 +3645,8 @@ author = {A.~Constantinides and M.~Belk and C.~Fidas and A.~Pitsillides},
 title = {{An Eye Gaze-Driven Metric for Estimating the Strength of Graphical Passwords Based on Image Hotspots}},
 year = {2020},
 publisher = {ACM},
-booktitle = {Proc.~ACM IUI 202}
+booktitle = {Proc.~ACM IUI 202},
+pages = {33–37}.
 }
   
 @inproceedings{10.1145/3379336.3381460,
@@ -3548,7 +3655,7 @@ title = {{CogniKit: An Extensible Tool for Human Cognitive Modeling Based on Eye
 year = {2020},
 publisher = {ACM},
 booktitle = {Proc.~ACM IUI 2020},
-pages = {130â131}
+pages = {130–131}
 }
 
 @inproceedings{10.1145/3320435.3320474,
@@ -3568,7 +3675,7 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3373017.3373027},
 doi = {10.1145/3373017.3373027},
-abstract = {Controlling the access over the stored data in the cloud is one of the fundamental security requirements, especially with the wide usage of cloud storage servers for nearly most of the enterprise applications. Traditional cloud-based access control solutions are based on a centralized approach (i.e. a cloud server becomes the central authority to control accesses to the data), which makes it difficult to prevent malicious cloud servers from disclosing userâs data; and therefore compromising the privacy of the stored data. Additionally, the centralization of authority can cause a single point of failure. Furthermore, to provide confidentiality, which is one of the essential security requirements, userâs data is encrypted before it is stored on the cloud. Most of the cloud servers store the decryption keys, after they encrypt the data, in their premises. This compromises data privacy. In this paper we propose a new model that addresses the aforementioned issues. To address the centralization problem, we distributed the access control tasks to smart contracts over a decentralized network, i.e. blockchain. To address the latter, we used Shamir secret sharing scheme to manage the encryption keys. Then we introduced a new type of node, called master node, to our blockchain platform, to store the decryption key parts. },
+abstract = {Controlling the access over the stored data in the cloud is one of the fundamental security requirements, especially with the wide usage of cloud storage servers for nearly most of the enterprise applications. Traditional cloud-based access control solutions are based on a centralized approach (i.e. a cloud server becomes the central authority to control accesses to the data), which makes it difficult to prevent malicious cloud servers from disclosing user’s data; and therefore compromising the privacy of the stored data. Additionally, the centralization of authority can cause a single point of failure. Furthermore, to provide confidentiality, which is one of the essential security requirements, user’s data is encrypted before it is stored on the cloud. Most of the cloud servers store the decryption keys, after they encrypt the data, in their premises. This compromises data privacy. In this paper we propose a new model that addresses the aforementioned issues. To address the centralization problem, we distributed the access control tasks to smart contracts over a decentralized network, i.e. blockchain. To address the latter, we used Shamir secret sharing scheme to manage the encryption keys. Then we introduced a new type of node, called master node, to our blockchain platform, to store the decryption key parts. },
 booktitle = {Proceedings of the Australasian Computer Science Week Multiconference},
 articleno = {10},
 numpages = {10},
@@ -3580,10 +3687,10 @@ series = {ACSW '20}
 @techreport{iso24772:1,
 type={{Technical Report ISO/IEC 24772:2019-1}},
 author={{ISO/IEC}},
-title={{Programming languages Guidance to avoiding vulnerabilities in programming languages Part 1: Language-independent guidance}},
+title={{Programming languages — Guidance to avoiding vulnerabilities in programming languages — Part 1: Language-independent guidance}},
 institution={{ISO/IEC JTC1/SC22}},
 year=2019,
-month={Dec},
+month=dec,
 }	
 
 @techreport{cert:c,
@@ -3644,7 +3751,7 @@ year={2017}
 }
 
 @article{lopez-gomez:2019,
-author={J. L\'opez-G\'omez and D. Rio and M.~F. Dolz and J. Fern\'andez and J.~D. Garcia},
+author={J. López-Gómez and D. Rio and M.~F. Dolz and J. Fernández and J.~D. Garcia},
 title={{Detecting semantic violations of lock-free data structures through C++ contracts}},
 journal={J.~of Supercomputing},
 volume={76},
